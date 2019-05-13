@@ -75,6 +75,23 @@ function fixAZListingScroll() {
 									<?php the_excerpt(); ?>
 
 								<?php echo get_the_term_list( $post->ID, 'department', '', ', ' ); ?>
+<?php $terms = get_the_terms( get_the_ID(), 'department' );
+                         
+if ( $terms && ! is_wp_error( $terms ) ) : 
+ 
+    $department_links = array();
+ 
+    foreach ( $terms as $term ) {
+        $department_links[] = $term->name;
+    }
+                         
+    $on_department = join( ", ", $department_links );
+    ?>
+ 
+    <p class="beers draught">
+        <?php printf( esc_html__( 'department: <span>%s</span>', 'textdomain' ), esc_html( $on_department ) ); ?>
+    </p>
+<?php endif; ?>
 
 								</li>
 							<?php endwhile; ?>
