@@ -30,20 +30,34 @@ function fixAZListingScroll() {
         });
     });
 }
+
+function toggleDepartment(){
+	jQuery("#az-slider li").hide();
+	var departmentValue = jQuery(this).val();
+	jQuery("#az-slider li" + departmentValue).toggle();
+}
+jQuery(document).ready(function() {
+	jQuery(".smallText").click(function(){
+		toggleDepartment();
+	});
+});
 </script>
 
 <style>
+.smallText{display:block;}
 </style>
 
 <?php
 function get_terms_chekboxes($taxonomies, $args) {
   $terms = get_terms($taxonomies, $args);
   foreach($terms as $term){
-    $output .= '<label for="'.$term->slug.'"><input type="checkbox" id="'.$term->slug.'" name="'.$term->taxonomy.'" value="'.$term->slug.'"> '.$term->name.'</label>';
+    $output .= '<label class="smallText" for="'.$term->slug.'"><input type="checkbox" id="'.$term->slug.'" name="'.$term->taxonomy.'" value="'.$term->slug.'"> '.$term->name.'</label>';
   }
   return $output;
 }
+echo "<div class='two-column department'>";
 echo get_terms_chekboxes('department', $args = array('hide_empty'=>true));
+echo "</div>";
 ?>
 
 <div id="az-tabs">
@@ -84,7 +98,7 @@ echo get_terms_chekboxes('department', $args = array('hide_empty'=>true));
  
 									$department_links = array();
  									foreach ( $terms as $term ) {
-										$department_links[] = $term->name;
+										$department_links[] = $term->slug;
 									}
 									$in_department = join( ", ", $department_links );
 								?>
