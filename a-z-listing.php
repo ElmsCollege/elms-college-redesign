@@ -35,6 +35,17 @@ function fixAZListingScroll() {
 <style>
 </style>
 
+<?php
+function get_terms_chekboxes($taxonomies, $args) {
+  $terms = get_terms($taxonomies, $args);
+  foreach($terms as $term){
+    $output .= '<label for="'.$term->slug.'"><input type="checkbox" id="'.$term->slug.'" name="'.$term->taxonomy.'" value="'.$term->slug.'"> '.$term->name.'</label>';
+  }
+  return $output;
+}
+echo get_terms_chekboxes('department', $args = array('hide_empty'=>true));
+?>
+
 <div id="az-tabs">
 	<div id="letters">
 		<div class="az-letters">
@@ -68,31 +79,24 @@ function fixAZListingScroll() {
 								};
 							?>
 
-								<li class="<?php echo $terms ; ?>">
+								<?php $terms = get_the_terms( get_the_ID(), 'department' );
+								if ( $terms && ! is_wp_error( $terms ) ) : 
+ 
+									$department_links = array();
+ 									foreach ( $terms as $term ) {
+										$department_links[] = $term->name;
+									}
+									$in_department = join( ", ", $department_links );
+								?>
+
+								<li class="<?php printf( esc_html__( '%s','textdomain' ), esc_html( $in_department ) ); ?>">
+								<?php else: ?>
+								<li>
+								<?php endif; ?>
 									<a href="<?php the_permalink(); ?>"><strong><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></strong></a>
 								<?php $prefix = ""; ?>
 								<?php $accred = ""; ?>
-									<?php the_excerpt(); ?>
-
-								<?php echo get_the_term_list( $post->ID, 'department', '', ', ' ); ?>
-<?php $terms = get_the_terms( get_the_ID(), 'department' );
-                         
-if ( $terms && ! is_wp_error( $terms ) ) : 
- 
-    $department_links = array();
- 
-    foreach ( $terms as $term ) {
-        $department_links[] = $term->name;
-    }
-                         
-    $on_department = join( ", ", $department_links );
-    ?>
- 
-    <p class="beers draught">
-        <?php printf( esc_html__( 'department: <span>%s</span>', 'textdomain' ), esc_html( $on_department ) ); ?>
-    </p>
-<?php endif; ?>
-
+								<?php the_excerpt(); ?>
 								</li>
 							<?php endwhile; ?>
 						</ul>
