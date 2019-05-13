@@ -36,11 +36,11 @@ jQuery(document).ready(function() {
 		var departmentValue = jQuery(this).val();
 		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
-		jQuery("#az-slider li."+departmentValue).show();
+		jQuery("li."+departmentValue).show();
 	});
 	jQuery("#resetDepartment").click(function(){
 		jQuery("#az-slider li").show();
-		jQuery("#resetDepartment").removeProp("checked");
+		jQuery(".two-column.department input").removeProp("checked");
 	});
 });
 </script>
@@ -60,7 +60,7 @@ function get_terms_checkboxes($taxonomies, $args) {
 }
 ?>
 <div class="two-column department">
-<label class="smallText" for="resetDepartment"><input type="checkbox" id="resetDepartment" name="department" value="resetDepartment">Reset</label>
+<label class="smallText" for="resetDepartment"><input type="checkbox" id="resetDepartment" name="department" value="resetDepartment"> Reset</label>
 <?php echo get_terms_checkboxes('department', $args = array('hide_empty'=>true)); ?>
 </div>
 
