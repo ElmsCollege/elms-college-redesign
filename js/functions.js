@@ -198,7 +198,7 @@
     });
     
     
-    // inter ior landing page and interior generic mobile dropdowns.
+    // interior landing page and interior generic mobile dropdowns.
 		if( $('ul.opening-menu').length ) {
 			$('<select class="opening-select"></select>').insertAfter( $('ul.opening-menu') );
 
