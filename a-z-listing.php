@@ -33,10 +33,10 @@ function fixAZListingScroll() {
 
 jQuery(document).ready(function() {
 	jQuery(".smallText").click(function(){
-		var departmentValue = jQuery(this).val();
+		var departmentValue = jQuery(this).attr("value");
 		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
-		jQuery("li."+departmentValue).show();
+		jQuery("#az-slider li."+departmentValue).show();
 	});
 	jQuery("#resetDepartment").click(function(){
 		jQuery("#az-slider li").show();
