@@ -34,15 +34,16 @@ function fixAZListingScroll() {
 jQuery(document).ready(function() {
 	jQuery(".smallText").click(function(){
 		var departmentValue = jQuery(this).val();
+		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
-		jQuery("#az-slider li " + departmentValue).toggle();
+		jQuery("#az-slider li." + departmentValue).toggle();
 	});
 });
 </script>
 
 <style>
 .smallText{display:block;}
-.two-column department{margin-bottom:25px;}
+.two-column.department{margin-bottom:25px;}
 </style>
 
 <?php
