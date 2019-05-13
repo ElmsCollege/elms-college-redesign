@@ -823,7 +823,6 @@ body.mobile-or-library header#masthead .site-branding .site-title{height:43px;wi
 @media (min-width: 48em){
 	.section-heading .field-title{
 		font-size:56px;
-		color:red !important;
 	}
 }
 body.page-template-landing-page .section-heading,body.page-template-nursing-landing-page-2 .section-heading, .page-template-nursing-interior-page .section-heading, .single-tribe_events .section-heading{
