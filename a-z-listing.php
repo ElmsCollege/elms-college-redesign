@@ -67,22 +67,25 @@ function fixAZListingScroll() {
 									$accred = ', ' .get_field("accred");
 								};
 
-								$terms = get_field('department');
+								<li>
+<?php foreach($filters as $filter):
+	$filter_fields = get_field('department', $filter);
+	if( $filter_fields ):
+		$filter_fields_slugs = array_column($filter_fields, 'slug');
+        $data_filter_slugs = implode(', ', $filter_fields_slugs);
+	endif;
+	echo $filter;
+	echo $filters
+endforeach;
 
-								if( $terms ){
-									foreach( $terms as $term ) {
-										get_term_link( $term );
-									};
-								};
 
-								?>
-								<li class="<?php echo $terms ; ?>">
 									<a href="<?php the_permalink(); ?>"><strong><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></strong></a>
 								<?php $prefix = ""; ?>
 								<?php $accred = ""; ?>
 									<?php the_excerpt(); ?>
 
-								<?php echo get_the_term_list( $post->ID, 'department', '', ', ' ); ?>
+				<?php echo get_the_term_list( $post->ID, 'department', '<label>Department(s):</label> ', ', ' ); ?>
+
 
 								</li>
 							<?php endwhile; ?>
