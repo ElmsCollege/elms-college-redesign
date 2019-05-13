@@ -41,6 +41,7 @@ function fixAZListingScroll() {
 			<?php $a_z_query->the_letters(); ?>
 		</div>
 	</div>
+	<h3>Advanced Options</h3>
 	<?php if ( $a_z_query->have_letters() ) : ?>
 	<div id="az-slider">
 		<div id="inner-slider">
@@ -60,6 +61,14 @@ function fixAZListingScroll() {
 							while ( $a_z_query->have_items() ) :
 								$a_z_query->the_item();
 								$a_z_query->get_the_item_object( 'I understand the issues!' );
+								if( get_field("department")) {
+									$department = get_field("department");
+									$department = strtolower($department);
+									$department = preg_replace("/[^a-z0-9_\s-]/", "", $department);
+									$department = preg_replace("/[\s-]+/", " ", $department);
+									$department = preg_replace("/[\s_]/", "-", $department);
+									return $department;
+								}
 								if( get_field("prefix") ){
 									$prefix = get_field("prefix") .' ';
 								};
@@ -69,7 +78,7 @@ function fixAZListingScroll() {
 
 
 								?>
-								<li>
+								<li class="<?php print $department; ?>">
 									<a href="<?php the_permalink(); ?>"><strong><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></strong></a>
 								<?php $prefix = ""; ?>
 								<?php $accred = ""; ?>
