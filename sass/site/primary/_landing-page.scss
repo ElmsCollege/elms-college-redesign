@@ -1,0 +1,249 @@
+body.page-template-landing-page .opening-menu, body.page-template-nursing-secondary-landing-page .opening-menu, body.page-template-nursing-landing-page-2 .opening-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: table;
+  background: white;
+  border: 1px solid #dcdcdc;
+  margin: -36px auto $gutter_width*1.5;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  display: none;
+  position: relative;
+  z-index: 1;
+  
+  .menu-item {
+    display: table-cell;
+    border-right: 1px solid #dcdcdc;
+    transition: .25s ease-in-out all;
+    background-color: white;
+    &:last-child {
+      border-right: none;
+    }
+    
+    a {
+      padding: 26px $gutter_width;
+      display: inline-block;
+      color: #333333;
+      text-decoration: none;
+      transition: .25s ease-in-out all;
+      vertical-align: middle;
+    }
+    &:hover {
+      background-color: $color__elms-green;
+      
+      a {
+        color: white;
+      }
+    }
+  }
+  
+  &.fs-dropdown {
+    display: block;
+    margin: -21px $gutter_width*2 $gutter_width*1.5;
+  }
+  .fs-dropdown-item {
+    border: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+  }
+  .fs-dropdown-selected:after {
+      height: auto;
+      width: auto;
+      position: absolute;
+      top: 0;
+      right: 15px;
+      bottom: 0;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      content: '';
+      display: block;
+      margin: auto 0;
+      font-family: "fontawesome";
+  }
+  @media (min-width: 72em) {
+    display: table;
+    &.fs-dropdown {
+      display: none;
+    }
+  }
+}
+.quick-facts {
+  max-width: 1200px;
+  margin: 0 auto;
+  .quick-facts-inner {
+    counter-reset: my-counter;
+    margin-top: $gutter-width;
+    .quick-fact {
+      padding: 0 $gutter_width*2 $gutter_width*2;
+      position: relative;
+      @media (max-width: 47.999em) {
+        padding: 0 47px 32px;
+      }
+      &:before {
+        //content: counter(my-counter);
+        counter-increment: my-counter;
+        position: absolute;
+        left: $gutter_width*1;
+        font-size: 130px;
+        font-weight: 500;
+        color: #ebebeb;
+        font-family: "soleil", sans-serif;
+        z-index: -1;
+        line-height: .5em;
+      }
+      h3.field-title {
+        font-size: 24px;
+        color: $color__elms-green;
+        margin:0;
+      }
+      .field-body {
+        font-size: 18px;
+        
+        p {
+          margin: 0;
+        }
+      }
+      
+      @media (min-width: 48em) {
+        text-align: center;
+        padding: $gutter_width;
+        
+        &:before {
+          line-height: .75em;
+        }
+      }
+    }
+  }
+}
+.short-content {
+  position: relative;
+  max-width: 1200px;
+  
+  margin: 0 auto;
+  padding: 0;
+  .field-background {
+    background-image: url("images/default-header.jpg");
+    display: none;
+    background-size: 100%;
+    background-size: cover;
+  }
+  @media (min-width: 64em) {
+    margin: $gutter_width*2 auto $gutter_width;
+    padding: $gutter_width*2 $gutter_width*12 $gutter_width*2 $gutter_width;
+    .field-background {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      right: 0;
+      top: 0; 
+      bottom: 0;
+    }
+  }
+  .short-content-inner {
+    background: white;
+    padding: $gutter_width $gutter_width;
+    .short {
+      padding: $gutter_width/2;
+      h3.field-title {
+        font-size: 24px;
+        color: $color__elms-green;
+        margin:0;
+      }
+      .field-body {
+        font-size: 18px;
+        
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.page-template-landing-page .stories, .page-template-nursing-landing-page-2 .stories {
+  .field-excerpt, .field-permalink {
+    display: none;
+    a {
+      color: $color__elms-gold;
+      text-decoration: none;
+    }
+  }
+  .show-more {
+    display: block;
+    margin: 1em 0 $gutter_width;
+    font-size: 14px;
+    font-weight: 500;
+    
+    display: inline-block;
+    
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url("images/icon-show-more.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin-left: 1em;
+        
+        
+      }
+      &.open:after {
+        background-image: url("images/icon-show-less.png");
+      }
+    }
+    
+    
+  }
+  
+  .story-feature {
+    padding-bottom: 0;
+  }
+  
+  @media (max-width: 47.999em) {
+    .story-full {
+      display: block;
+    
+      .text-content:after {
+          content: "";
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          border-bottom: 40px solid #115438;
+          left: calc(50% - 40px);
+          top: 90px;
+          top: calc(140px + 32vw - 60px);
+      }
+    }
+  }
+  @media (min-width: 48em) {
+    .story-feature {
+      padding-bottom: $gutter_width;
+    }
+    .story-full {
+      display: none;
+    }
+    .story-full:first-child {
+      display: block;
+    }
+    
+    .show-more {
+      display: none;
+    }
+    
+    .field-excerpt, .field-permalink {
+      display: block;
+      a {
+        color: $color__elms-gold;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  font-family: "soleil", sans-serif;
+  color: #454545;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";
+
+h2 {
+  font-size: 56px;
+  
+  @media all and (max-width: 47.999em) {
+    font-size: 2.5em;
+    line-height: 1;
+  }
+}
+
+.pre-title {
+  font-family: "blackjack", serif;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 36px;
+  color: $color__elms-gold;
+  line-height: 1em;
+  
+  @media all and (max-width: 47.999em) {
+    font-size: 1.3em;
+    line-height: 1;
+  }
+  
+  &:before, &:after {
+    content: "";
+    width: 2em;
+    height: 1px;
+    display: inline-block;
+    line-height: 36px;
+    background-color: $color__elms-gold;
+    vertical-align: middle;
+    @media all and (max-width: 47.999em) {
+      width: 1.5em;
+    }
+  }
+}

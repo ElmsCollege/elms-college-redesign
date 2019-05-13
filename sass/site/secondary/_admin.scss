@@ -1,0 +1,21 @@
+@media screen and (max-width: 782px) {
+  html #wpadminbar {
+      /*height: 46px;
+      min-width: 300px;
+      top: 62px;
+      z-index: 1;*/
+  }
+}
+body.admin-bar {
+  header#masthead, header#masthead.active .main-navigation {
+    margin-top: 32px;
+  
+    @media screen and (max-width: 782px) {
+      margin-top: 46px !important;
+    }
+    
+  }
+}
+#wpadminbar {
+  position: fixed !important;
+}

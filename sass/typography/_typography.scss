@@ -1,0 +1,88 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+@font-face {
+	font-family: 'blackjack';
+	src: url('fonts/blackjack.eot');
+	src: local('☺'), url('fonts/blackjack.woff') format('woff'), url('fonts/blackjack.ttf') format('truetype'), url('fonts/blackjack.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@import "headings";
+
+@import "copy";
+
+.site-main, .page-sidebar {
+  font-size: 18px;
+  line-height: 28px;
+  
+  h2 {
+    color: $color__elms-gold;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: .66666667em;
+    @media (max-width: 47.999em) {
+        font-size: 1.666666667em;
+        line-height: 1;
+        margin-top: 0;
+    }
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color__elms-green;
+    margin-bottom: 0;
+  }
+  a {
+    color: #009bcf;
+    text-decoration: none;
+    
+    &:hover {
+      color: #000000;
+    }
+    
+    &:visited {
+      color: #B88D27;
+    }
+  }
+  p {
+    margin-top: 0;
+    line-height: 1.55555556;
+  }
+}
+.library-footer-info, .site-footer, .tribe-events-sub-nav li {
+  a, a:hover, a:visited {
+    color: #009bcf;
+    text-decoration: none;
+  }
+  a:visited {
+    color: $color__elms-gold-darkest;
+  }
+}
+body:not(.page-template-library-landing-page) main h1 {
+    color: #115438;
+    font-weight: 700; 
+    font-size: 40px;
+}
+h3 + .wc-shortcodes-row.wc-shortcodes-item.wc-shortcodes-clearfix {
+    margin-top: 0;
+}
+
+.site-content .pure-g [class*="pure-u"], .site-footer.pure-g [class*="pure-u"] {
+  font-family: "soleil", sans-serif;
+}
+
+a {
+    transition: all .25s ease-in-out;
+}
