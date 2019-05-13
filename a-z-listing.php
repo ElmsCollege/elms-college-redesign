@@ -66,16 +66,8 @@ function fixAZListingScroll() {
 								if( get_field("accred") ){
 									$accred = ', ' .get_field("accred");
 								};
+							?>
 
-								$terms = get_field('department');
-
-								if( $terms ){
-									foreach( $terms as $term ) {
-										get_term_link( $term );
-									};
-								};
-
-								?>
 								<li class="<?php echo $terms ; ?>">
 									<a href="<?php the_permalink(); ?>"><strong><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></strong></a>
 								<?php $prefix = ""; ?>
