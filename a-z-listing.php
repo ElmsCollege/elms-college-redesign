@@ -74,6 +74,9 @@ function fixAZListingScroll() {
 								<?php $prefix = ""; ?>
 								<?php $accred = ""; ?>
 									<?php the_excerpt(); ?>
+
+								<?php echo get_the_term_list( $post->ID, 'department', '', ', ' ); ?>
+
 								</li>
 							<?php endwhile; ?>
 						</ul>
@@ -86,6 +89,6 @@ function fixAZListingScroll() {
 	</div>
 </div>
 <?php else : ?>
-	<p><?php esc_html_e( 'There are no posts included in this index.', 'a-z-listing' ); ?></p>
+	<p><?php esc_html_e( 'Please try again', 'a-z-listing' ); ?></p>
 	<?php
 endif;
