@@ -6,7 +6,7 @@
   $.fn.getIndex = function(){
   	  var $p=$(this).parent().children();
       return $p.index(this);
-  }
+  };
   
   var createCookie = function (name,value,days) {
       if (days) {
@@ -16,7 +16,7 @@
       }
       else var expires = "";
       document.cookie = name + "=" + value + expires + "; path=/";
-  }
+  };
 
   var readCookie = function (name) {
       var nameEQ = name + "=";
@@ -27,11 +27,11 @@
           if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
       }
       return null;
-  }
+  };
 
   var eraseCookie = function (name) {
       createCookie(name,"",-1);
-  }
+  };
   
   function check_visited_links() {
       var visited_links = JSON.parse(localStorage.getItem('visited_links')) || [];
@@ -44,7 +44,7 @@
                   visited_links.push(clicked_url);
                   localStorage.setItem('visited_links', JSON.stringify(visited_links));
               }
-          }
+          };
           if (visited_links.indexOf(that.href) !== -1) {
               that.className += ' visited';
           }
@@ -59,7 +59,7 @@
       var pWidth = $(e.target).innerWidth(); //use .outerWidth() if you want borders
       var pOffset = $(e.target).offset(); 
       var x = e.pageX - pOffset.left;
-      if (pWidth*.85 < x && $("body").hasClass("mobile-or-library")) {
+      if (pWidth*0.85 < x && $("body").hasClass("mobile-or-library")) {
         e.preventDefault();
         e.stopPropagation();
         $($(e.target).parent()).toggleClass("open");
@@ -94,7 +94,7 @@
     
     $(window).resize(function(){
       $('img.js-focal-point-image').responsify();
-    })
+    });
 
 /*    
     var verticallyCenterStoryContent = function () {
@@ -172,7 +172,7 @@
         $("body, header#masthead, html, .nav-trigger, .link-donate").removeClass("active");
         $(".main-navigation li").removeClass("open");
       }
-    }
+    };
     //resetMenuIfDesktopWidth();
     $(window).resize( function (e) {
       resetMenuIfDesktopWidth();
@@ -192,7 +192,7 @@
     
     // split menu words for styling
     $("#primary-menu > li > a").each( function (index, element) {
-      $(element).addClass("words-"+$(element).text().split(" ").length)
+      $(element).addClass("words-"+$(element).text().split(" ").length);
     });
     
     
@@ -336,7 +336,7 @@
       $(".story-carousel .story-image img").each( function () {
         (new Image()).src = $(this).src;
       });
-    }
+    };
     preloadCarousel();
     //make landingpage student carousel work.
     $(".story-carousel .story-tab:first-child").addClass("active");
@@ -400,7 +400,7 @@
       else {
         columns.css({"min-height": ""});
       }
-    }
+    };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
     
@@ -420,7 +420,7 @@
         $(".hero-column").css({"width": "", "left": ""});
         $(".hero-column").removeClass("open").removeClass("quiet").removeClass("final");
       }
-    }
+    };
     resizeHeroColumns();
     $(window).resize(resizeHeroColumns);
     setInterval(resizeHeroColumns, 500);
@@ -428,7 +428,7 @@
     var big = 30.00;
     var smol = 23.42;
     var duration = 300;
-    var err = .2;
+    var err = 0.2;
     
     var timer;
     //$(".hero-column .bg-wrapper").hide();
@@ -466,7 +466,7 @@
             var that = this;
             timer = setTimeout(function(){
               $(".hero-column:nth-child(1)").velocity({width: smol+"%"}, {easing: "easeInOutCirc", duration: duration});
-              $(".hero-column:nth-child(2)").velocity({width: (big+.5)+"%", left: (smol-err)+"%"}, {easing: "easeInOutCirc", duration: duration, complete: function () {  if (false) { $(".hero-column:nth-child(2)").addClass("final"); }} });
+              $(".hero-column:nth-child(2)").velocity({width: (big+0.5)+"%", left: (smol-err)+"%"}, {easing: "easeInOutCirc", duration: duration, complete: function () {  if (false) { $(".hero-column:nth-child(2)").addClass("final"); }} });
               $(".hero-column:nth-child(3)").velocity({width: smol+"%", left: (smol+big-err)+"%"}, {easing: "easeInOutCirc", duration: duration});
               $(".hero-column:nth-child(4)").velocity({width: smol+"%", left: (smol+big+smol-err)+"%"}, {easing: "easeInOutCirc", duration: duration});
             }, 0);
