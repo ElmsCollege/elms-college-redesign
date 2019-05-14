@@ -32,15 +32,15 @@ function fixAZListingScroll() {
 }
 
 jQuery(document).ready(function() {
-	jQuery(".smallText").click(function(){
-		var departmentValue = jQuery(this).attr("value");
+	jQuery("#departmentList").change(function(){
+		var departmentValue = jQuery("#departmentList").val();
 		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
-		jQuery("#az-slider li."+departmentValue).show();
-	});
-	jQuery("#resetDepartment").click(function(){
-		jQuery("#az-slider li").show();
-		jQuery(".two-column.department input").removeProp("checked");
+		if(departmentValue == "resetDepartment"){
+			jQuery("#az-slider li").show();
+		} else {
+			jQuery("#az-slider li."+departmentValue).show();
+		}
 	});
 });
 </script>
@@ -51,17 +51,21 @@ jQuery(document).ready(function() {
 </style>
 
 <?php
-function get_terms_checkboxes($taxonomies, $args) {
+function build_select_list($taxonomies, $args) {
   $terms = get_terms($taxonomies, $args);
   foreach($terms as $term){
-    $output .= '<label class="smallText" for="'.$term->slug.'"><input type="checkbox" id="'.$term->slug.'" name="'.$term->taxonomy.'" value="'.$term->slug.'"> '.$term->name.'</label>';
+    $output .= '<option value="'.$term->slug.'"> '.$term->name.'</option>';
   }
   return $output;
 }
 ?>
 <div class="two-column department">
-<label class="smallText" for="resetDepartment"><input type="checkbox" id="resetDepartment" name="department" value="resetDepartment"> Reset</label>
-<?php echo get_terms_checkboxes('department', $args = array('hide_empty'=>true)); ?>
+
+<select id="departmentList">
+<option value="resetDepartment">Reset</option>
+<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
+</select>
+
 </div>
 
 
