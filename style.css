@@ -256,7 +256,7 @@ a:hover,a:active{
 	height:60px;
 	content:"";
 	position:absolute;
-	left:-1;
+	left:-1px;
 	top:10px;
 	display:inline-block;
 	width:1px;
