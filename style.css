@@ -256,7 +256,7 @@ a:hover,a:active{
 	height:60px;
 	content:"";
 	position:absolute;
-	left:-1px;
+	left:-1;
 	top:10px;
 	display:inline-block;
 	width:1px;
@@ -415,7 +415,7 @@ a:hover,a:active{
 	display:inline-block
 }
 .menu-special-menu-container>ul>li.search-item .search-icon:after{
-	content:"";
+	content:"";
 	color:transparent;
 	text-shadow:none;
 	background-image:url("images/icon-search.png");
@@ -426,7 +426,7 @@ a:hover,a:active{
 @media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
 	.menu-special-menu-container>ul>li.search-item .search-icon:after{
 		background-image:url("images/icon-search@2x.png");
-		background-image:url("images/icon-search.svg");
+		background-image:url("images/icon-search.svg")
 	}
 }
 .menu-special-menu-container>ul>li.search-item>ul.sub-menu{
@@ -1533,8 +1533,7 @@ p:last-child{
 	margin-bottom:0
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited,.wc-shortcodes-button.wc-shortcodes-button-success{
-	background-color:#004731;
-	background:#004731;
+	color:white !important
 }
 .wc-shortcodes-button,.wc-shortcodes-button-icon-right{
 	line-height:1.5em !important;
