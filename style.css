@@ -256,7 +256,7 @@ a:hover,a:active{
 	height:60px;
 	content:"";
 	position:absolute;
-	left:0;
+	left:-1;
 	top:10px;
 	display:inline-block;
 	width:1px;
@@ -1403,7 +1403,6 @@ body.page-template-home-page .social-media .social-media-inner{
 }
 .stories .story-feature .story-full .story-image{
 	display:block;
-	background-image:url("images/default-header.jpg");
 	height:160px;
 	height:calc(140px + 32vw);
 	background-size:100%;
@@ -1461,7 +1460,54 @@ body.page-template-home-page .social-media .social-media-inner{
 	-moz-transition:.4s ease-in-out all;
 	background-color:#115438;
 }
-.stories .story-carousel .story-tab:focus{outline:0;outline:none}.stories .story-carousel .story-tab .story-image{display:flex;display:block;height:170px;min-height:170px;background-size:100%;background-size:cover;background-repeat:no-repeat;background-position:50%;background-image:url("images/default-header.jpg");flex-grow:0}.stories .story-carousel .story-tab .story-image img{display:none}.stories .story-carousel .story-tab .text-content{padding:16px 32px;border-left:1px solid rgba(255,255,255,0.4);font-size:21px;display:flex;flex-direction:column;flex-grow:2}.stories .story-carousel .story-tab:last-child .text-content{border-right:none}.stories .story-carousel .story-tab .theme{color:#c3a250;font-family:"blackjack", serif}.stories .story-carousel .story-tab .field-title{color:white}.stories .story-carousel .story-tab.active{background:#c3a250}.stories .story-carousel .story-tab.active .text-content{border-left:none}.stories .story-carousel .story-tab.active .text-content .theme{color:#115438}.stories .story-carousel .story-tab.active+li>.text-content{border-left:none}
+.stories .story-carousel .story-tab:focus{
+	outline:0;
+	outline:none
+}
+.stories .story-carousel .story-tab .story-image{
+	display:flex;
+	display:block;
+	height:170px;
+	min-height:170px;
+	background-size:100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:50%;
+	flex-grow:0
+}
+.stories .story-carousel .story-tab .story-image img{
+	display:none
+}
+.stories .story-carousel .story-tab .text-content{
+	padding:16px 32px;
+	border-left:1px solid rgba(255,255,255,0.4);
+	font-size:21px;
+	display:flex;
+	flex-direction:column;
+	flex-grow:2
+}
+.stories .story-carousel .story-tab:last-child .text-content{
+	border-right:none
+}
+.stories .story-carousel .story-tab .theme{
+	color:#c3a250;
+	font-family:"blackjack", serif
+}
+.stories .story-carousel .story-tab .field-title{
+	color:white
+}
+.stories .story-carousel .story-tab.active{
+	background:#c3a250
+}
+.stories .story-carousel .story-tab.active .text-content{
+	border-left:none
+}
+.stories .story-carousel .story-tab.active .text-content .theme{
+	color:#115438
+}
+.stories .story-carousel .story-tab.active+li>.text-content{
+	border-left:none
+}
 /* this deactivates the automatic carousel on small screens on the about elms page */
 @media (max-width: 64em){
 	.page-id-1651 .story-feature .story-full{
@@ -3201,7 +3247,8 @@ body.page-template-program-page .field-required-credits h3:first-child,body.page
 		top:0;
 		margin-left:0;
 	}
-}body.page-template-program-page .lower-story,body.page-template-nursing-program-page .lower-story{
+}
+.lower-story{
 	padding:10px 25px;
 	margin-top:10px;
 	background:#115438;
@@ -3214,20 +3261,17 @@ body.page-template-program-page .field-required-credits h3:first-child,body.page
 .lower-story a:hover{
 	font-weight: bold;
 }
-.lower-story h3{
-	color:#fff;
-}
 .lower-story .field-lower-story-title{
 	font-size:24px;
 	margin:5px 0 0;
 	text-transform:capitalize;
+	line-height: 1.5em;
+	color:#fff;
 }
+
 body.page-template-program-page .lower-story .field-lower-story-content,body.page-template-nursing-program-page .lower-story .field-lower-story-content{
 	min-height:155px;
 	font-size:18px;
-}
-body.page-template-program-page .lower-story .field-lower-story-content p:last-child,body.page-template-nursing-program-page .lower-story .field-lower-story-content p:last-child{
-	margin-bottom:0;
 }
 .section-heading-as-content{
 	margin:0 0 10px auto;
@@ -3614,12 +3658,6 @@ h4#formTrigger.colomat-close{
 }
 .section-heading-as-content .field-related-majors ul li a {
 	padding: 10px 0;
-}
-body.page-template-program-page .lower-story .field-lower-story-title {
-	margin: 5px 0 0;
-	font-size: 24px;
-	text-transform: capitalize;
-	line-height: 1.5em;
 }
 /* END changes for the 2018 revision to program pages */
 @media only screen and (max-width: 1024px) {
