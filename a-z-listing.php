@@ -32,11 +32,11 @@ function fixAZListingScroll() {
 }
 
 jQuery(document).ready(function() {
-	jQuery("#departmentList").change(function(){
-		var departmentValue = jQuery("#departmentList").val();
+	jQuery("#departmentFilter").change(function(){
+		var departmentValue = jQuery("#departmentFilter").val();
 		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
-		if(departmentValue == "resetDepartment"){
+		if(departmentValue == "showAllDepartments"){
 			jQuery("#az-slider li").show();
 		} else {
 			jQuery("#az-slider li."+departmentValue).show();
@@ -46,8 +46,7 @@ jQuery(document).ready(function() {
 </script>
 
 <style>
-.smallText{display:block;}
-.two-column.department{margin-bottom:25px;}
+.department{margin-bottom:25px;}
 </style>
 
 <?php
@@ -59,10 +58,11 @@ function build_select_list($taxonomies, $args) {
   return $output;
 }
 ?>
-<div class="two-column department">
+<div class="department smallText">
 
-<select id="departmentList">
-<option value="resetDepartment">Reset</option>
+<label for="departmentFilter">Filter by Department:</label>
+<select id="departmentFilter">
+<option value="showAllDepartments">Show every department</option>
 <?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
 </select>
 
