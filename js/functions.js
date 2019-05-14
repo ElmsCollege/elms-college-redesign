@@ -307,6 +307,7 @@
     });
     
     //replace search menu text with icon and add dropdown.
+/*
     $('#masthead a[href*="/search/"]').each(function() {
       $($(this).parent()).addClass("search-item");
       $(this).on("click touchstart", function (e) {
@@ -322,7 +323,8 @@
       $("#menu-search-dropdown").show();
       //$("#menu-search-dropdown .search-submit").val("ï€‚");
     });
-    
+*/
+
     // double fake mobile/library menu 
     var updateMenu = function () {
       if (Modernizr.mq("only screen and (max-width: 64em)") || 

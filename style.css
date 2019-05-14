@@ -1533,7 +1533,8 @@ p:last-child{
 	margin-bottom:0
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited,.wc-shortcodes-button.wc-shortcodes-button-success{
-	color:white !important
+	background-color:#004731;
+	background:#004731;
 }
 .wc-shortcodes-button,.wc-shortcodes-button-icon-right{
 	line-height:1.5em !important;
