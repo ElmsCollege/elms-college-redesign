@@ -502,7 +502,6 @@ a:hover,a:active{
 	height:24px
 }
 .menu-special-menu-container>ul>li:last-child{
-	background-color:#c3a250;
 	width:8.5em
 }
 @media all and (min-width: 80em){
@@ -868,13 +867,16 @@ div:not(.menu-main-nav-container)>ul li a br{
 	background-color:#115438;
 	width:100%;
 	padding:0.85em 0.5em;
+	height:50%;
 }
 #interested-in-applying:hover{
 	background-color:#0d4435;
 }
 #link-give{
+	background-color: #c3a250;
 	width:100%;
 	padding:0.8em 0.5em;
+	height:51%;
 }
 #link-give:hover{
 	background-color:#a78c45;

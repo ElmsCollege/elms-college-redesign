@@ -85,9 +85,7 @@
     
     
     var is_iPad = (navigator != null && navigator.userAgent != null && navigator.userAgent.match(/iPad|iPhone|iPod/i) != null);
-    
-//    $("#menu-item-9764").replaceWith('<li id="menu-item-9764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764"><a id="interested-in-applying" href="https://www.elms.edu/interested-in-applying/" style="">Apply</a><a id="link-give" href="https://www.elms.edu/alumni/support-elms/make-a-gift/" style="">Give</a></li>');
-    
+        
     // show more sidebar events 
     $("body").on("click", ".field-related-events .show-more, .field-related-events .show-less", function(e) {
       $(".field-related-events").toggleClass("toggled");
@@ -308,19 +306,12 @@
     
     //replace search menu text with icon and add dropdown.
     $('#masthead a[href*="/search/"]').each(function() {
-//      $($(this).parent()).addClass("search-item");
       $(this).on("click touchstart", function (e) {
         if (Modernizr.mq("only screen and (min-width: 64em)")) {
           e.preventDefault();
           $($(this).parent()).toggleClass("open");
-        }
-        
+        }        
       });
-//      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon'></span>");
-//      $(this).after("<ul class='sub-menu for-search'><li id='menu-item-search' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-search'></li></ul>");
-//      $("#menu-item-search").append($("#menu-search-dropdown"));
-//      $("#menu-search-dropdown").show();
-      //$("#menu-search-dropdown .search-submit").val("ï€‚");
     });
 
     // double fake mobile/library menu 
