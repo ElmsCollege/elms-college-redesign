@@ -45,6 +45,12 @@ jQuery(document).ready(function() {
 });
 </script>
 
+<?php
+global $wp;
+$current_slug = add_query_arg( array(), $wp->request );
+
+if($current_slug == "directory"): ?>
+
 <style>
 .department{margin-bottom:25px;}
 </style>
@@ -59,15 +65,13 @@ function build_select_list($taxonomies, $args) {
 }
 ?>
 <div class="department smallText">
-
-<label for="departmentFilter">Filter by Department:</label>
-<select id="departmentFilter">
-<option value="showAllDepartments">Show every department</option>
-<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
-</select>
-
+	<label for="departmentFilter">Filter by Department:</label>
+	<select id="departmentFilter">
+		<option value="showAllDepartments">Show every department</option>
+		<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
+	</select>
 </div>
-
+<?php endif ?>
 
 <div id="az-tabs">
 	<div id="letters">
