@@ -307,9 +307,8 @@
     });
     
     //replace search menu text with icon and add dropdown.
-/*
     $('#masthead a[href*="/search/"]').each(function() {
-      $($(this).parent()).addClass("search-item");
+//      $($(this).parent()).addClass("search-item");
       $(this).on("click touchstart", function (e) {
         if (Modernizr.mq("only screen and (min-width: 64em)")) {
           e.preventDefault();
@@ -317,13 +316,12 @@
         }
         
       });
-      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon'></span>");
-      $(this).after("<ul class='sub-menu for-search'><li id='menu-item-search' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-search'></li></ul>");
-      $("#menu-item-search").append($("#menu-search-dropdown"));
-      $("#menu-search-dropdown").show();
+//      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon'></span>");
+//      $(this).after("<ul class='sub-menu for-search'><li id='menu-item-search' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-search'></li></ul>");
+//      $("#menu-item-search").append($("#menu-search-dropdown"));
+//      $("#menu-search-dropdown").show();
       //$("#menu-search-dropdown .search-submit").val("ï€‚");
     });
-*/
 
     // double fake mobile/library menu 
     var updateMenu = function () {
