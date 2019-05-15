@@ -851,10 +851,19 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 	width:calc(100% - 68px - 64px);
 	max-width:204px;
 }
-body.mobile-or-library.page-template-nursing-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,body.mobile-or-library.page-template-nursing-intermediary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,body.mobile-or-library.page-template-nursing-secondary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,body.mobile-or-library.page-template-nursing-interior-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,body.mobile-or-library.page-template-nursing-program-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,body.mobile-or-library.page-template-nursing-landing-page-2 .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after{
+body.mobile-or-library.page-template-nursing-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
+body.mobile-or-library.page-template-nursing-intermediary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
+body.mobile-or-library.page-template-nursing-secondary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
+body.mobile-or-library.page-template-nursing-interior-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
+body.mobile-or-library.page-template-nursing-program-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
+body.mobile-or-library.page-template-nursing-landing-page-2 .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after{
 	background-image:url(images/icon-menu-more-white.png);
 }
-body.mobile-or-library.page-template-nursing-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-intermediary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-secondary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-interior-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-program-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-landing-page-2 .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
+body.mobile-or-library.page-template-nursing-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
+body.mobile-or-library.page-template-nursing-intermediary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
+body.mobile-or-library.page-template-nursing-secondary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
+body.mobile-or-library.page-template-nursing-interior-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
+body.mobile-or-library.page-template-nursing-program-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-landing-page-2 .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
 	background-image:url(images/icon-menu-less-white.png);
 }
 .field-sidebar-menu-items{
@@ -941,7 +950,23 @@ header#masthead .site-branding .site-title{
 	background-repeat:no-repeat;
 	margin:0
 }
-body.mobile-or-library header#masthead .site-branding .site-title{height:43px;width:102px}header#masthead .site-branding .site-description{position:absolute;width:0;height:0}header#masthead .site-branding a{color:transparent;position:absolute;top:0;left:0;right:0;bottom:0}
+body.mobile-or-library header#masthead .site-branding .site-title{
+	height:43px;
+	width:102px
+}
+header#masthead .site-branding .site-description{
+	position:absolute;
+	width:0;
+	height:0
+}
+header#masthead .site-branding a{
+	color:transparent;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0
+}
 .alert-bar{
 	background:#004731;
 	padding:1em;color:white;font-weight:bold;text-align:center
@@ -1211,11 +1236,6 @@ body.page-template-home-page .social-media .social-media-inner{
 	color:#115438;
 	text-transform:uppercase;
 	font-size:16px
-}
-.site-footer #utility-menu{
-	padding:0;	
-	margin:0;
-	list-style-type:none
 }
 @media (min-width: 64em){
 	.site-footer #utility-menu{
@@ -1535,8 +1555,12 @@ p:last-child{
 	margin-bottom:0
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited,.wc-shortcodes-button.wc-shortcodes-button-success{
-	background-color:#004731;
+	border-color:#004731;
 	background:#004731;
+}
+.wc-shortcodes-button.wc-shortcodes-button-success:visited:hover,.wc-shortcodes-button.wc-shortcodes-button-success:hover{
+	border-color:#fff;
+	background:#115438;
 }
 .wc-shortcodes-button,.wc-shortcodes-button-icon-right{
 	line-height:1.5em !important;
@@ -1845,7 +1869,12 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover{
 .field-content table:not(.tribe-events-calendar) th,.entry-content table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
-@media (max-width: 47.999em){.calls-to-action .permalink{padding:0}}#tribe-events .tribe-events-content p,.tribe-events-after-html p,.tribe-events-before-html p{margin-bottom:1.5em}.single-tribe_events .tribe-events-venue-map{width:100%;margin:0}.tribe-events-meta-group.tribe-events-meta-group-gmap{padding:0;margin:0}.single-tribe_events .tribe-events-single-event-title{font-size:40px}#tribe-events-content a,.tribe-events-adv-list-widget .tribe-events-widget-link a,.tribe-events-adv-list-widget .tribe-events-widget-link a:hover,.tribe-events-back a,.tribe-events-back a:hover,.tribe-events-event-meta a,.tribe-events-list-widget .tribe-events-widget-link a,.tribe-events-list-widget .tribe-events-widget-link a:hover,ul.tribe-events-sub-nav a,ul.tribe-events-sub-nav a:hover{font-size:1em;font-weight:500}#tribe-events-content .recurring-info-tooltip,#tribe-events-content .tribe-events-calendar .tribe-events-tooltip,#tribe-events-content .tribe-events-shortcode.view-week .tribe-events-tooltip,#tribe-events-content .tribe-events-week .tribe-events-tooltip{padding:.75em 1em}#tribe-events .tribe-events-button:hover,#tribe-events .tribe-events-button:hover,#tribe_events_filters_wrapper input[type=submit]:hover,.tribe-events-button:hover,.tribe-events-button.tribe-active:hover,.tribe-events-button.tribe-inactive:hover,.tribe-events-button:hover,.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]:hover,.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a:hover{background-color:#c3a250;color:#fff}.single-tribe_events .tribe-events-single-event-title+.tribe-events-schedule.tribe-clearfix{margin-top:-8px}@media only screen and (max-width: 768px){.tribe-events-sub-nav li a{background:transparent;color:#7f6932}}
+@media (max-width: 47.999em){
+	.calls-to-action .permalink{
+		padding:0
+	}
+}
+#tribe-events .tribe-events-content p,.tribe-events-after-html p,.tribe-events-before-html p{margin-bottom:1.5em}.single-tribe_events .tribe-events-venue-map{width:100%;margin:0}.tribe-events-meta-group.tribe-events-meta-group-gmap{padding:0;margin:0}.single-tribe_events .tribe-events-single-event-title{font-size:40px}#tribe-events-content a,.tribe-events-adv-list-widget .tribe-events-widget-link a,.tribe-events-adv-list-widget .tribe-events-widget-link a:hover,.tribe-events-back a,.tribe-events-back a:hover,.tribe-events-event-meta a,.tribe-events-list-widget .tribe-events-widget-link a,.tribe-events-list-widget .tribe-events-widget-link a:hover,ul.tribe-events-sub-nav a,ul.tribe-events-sub-nav a:hover{font-size:1em;font-weight:500}#tribe-events-content .recurring-info-tooltip,#tribe-events-content .tribe-events-calendar .tribe-events-tooltip,#tribe-events-content .tribe-events-shortcode.view-week .tribe-events-tooltip,#tribe-events-content .tribe-events-week .tribe-events-tooltip{padding:.75em 1em}#tribe-events .tribe-events-button:hover,#tribe-events .tribe-events-button:hover,#tribe_events_filters_wrapper input[type=submit]:hover,.tribe-events-button:hover,.tribe-events-button.tribe-active:hover,.tribe-events-button.tribe-inactive:hover,.tribe-events-button:hover,.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]:hover,.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a:hover{background-color:#c3a250;color:#fff}.single-tribe_events .tribe-events-single-event-title+.tribe-events-schedule.tribe-clearfix{margin-top:-8px}@media only screen and (max-width: 768px){.tribe-events-sub-nav li a{background:transparent;color:#7f6932}}
 .opening-menu.fs-dropdown{
 	font-weight:bold
 }
@@ -2003,8 +2032,55 @@ body.page-template-landing-page .opening-menu .menu-item:hover,body.page-templat
 .short-content .short-content-inner{
 	background:white;
 }
-.short-content .short-content-inner .short{padding:16px}.short-content .short-content-inner .short h3.field-title{font-size:24px;color:#115438;margin:0}.short-content .short-content-inner .short .field-body{font-size:18px}.short-content .short-content-inner .short .field-body p{margin:0}.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{display:none}.page-template-landing-page .stories .field-excerpt a,.page-template-landing-page .stories .field-permalink a,.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{color:#c3a250;text-decoration:none}.page-template-landing-page .stories .show-more,.page-template-nursing-landing-page-2 .stories .show-more{display:block;margin:1em 0 32px;font-size:14px;font-weight:500;display:inline-block}.page-template-landing-page .stories .show-more a,.page-template-nursing-landing-page-2 .stories .show-more a{text-decoration:none;text-transform:uppercase;color:white}.page-template-landing-page .stories .show-more a:after,.page-template-nursing-landing-page-2 .stories .show-more a:after{content:"";display:inline-block;width:24px;height:24px;background-image:url("images/icon-show-more.png");background-size:100%;background-repeat:no-repeat;vertical-align:middle;margin-left:1em}.page-template-landing-page .stories .show-more a.open:after,.page-template-nursing-landing-page-2 .stories .show-more a.open:after{background-image:url("images/icon-show-less.png")}
-
+.short-content .short-content-inner .short{
+	padding:16px
+}
+.short-content .short-content-inner .short h3.field-title{
+	font-size:24px;
+	color:#115438;
+	margin:0
+}
+.short-content .short-content-inner .short .field-body{
+	font-size:18px
+}
+.short-content .short-content-inner .short .field-body p{
+	margin:0
+}
+.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
+	display:none
+}
+.page-template-landing-page .stories .field-excerpt a,.page-template-landing-page .stories .field-permalink a,.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
+	color:#c3a250;
+	text-decoration:none
+}
+.page-template-landing-page .stories .show-more,
+.page-template-nursing-landing-page-2 .stories .show-more{
+	display:block;
+	margin:1em 0 32px;
+	font-size:14px;
+	font-weight:500;
+	display:inline-block
+}
+.page-template-landing-page .stories .show-more a,
+.page-template-nursing-landing-page-2 .stories .show-more a{
+	text-decoration:none;
+	text-transform:uppercase;
+	color:white
+}
+.page-template-landing-page .stories .show-more a:after,.page-template-nursing-landing-page-2 .stories .show-more a:after{
+	content:"";
+	display:inline-block;
+	width:24px;
+	height:24px;
+	background-image:url("images/icon-show-more.png");
+	background-size:100%;
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	margin-left:1em
+}
+.page-template-landing-page .stories .show-more a.open:after,.page-template-nursing-landing-page-2 .stories .show-more a.open:after{
+	background-image:url("images/icon-show-less.png")
+}
 .page-template-landing-page .stories .story-feature,.page-template-nursing-landing-page-2 .stories .story-feature{
 	padding-bottom:0
 }
@@ -2469,10 +2545,10 @@ body.page-template-library-landing-page .section-heading-as-content .todays-hour
 	}
 }
 @media all and (min-width: 48em){
-	body.page-template-nursing-landing-page .section-mission_statement,body.page-template-nursing-interior-page .section-mission_statement,body.page-template-nursing-intermediary-landing-page .section-mission_statement,body.page-template-nursing-secondary-landing-page .section-mission_statement,body.page-template-nursing-program-page .section-mission_statement,body.page-template-nursing-landing-page-2 .section-mission_statement{
+	#nursingPage .section-mission_statement{
 		text-align:center;
 	}
-	body.page-template-nursing-landing-page .section-mission_statement .field-mission_statement_body,body.page-template-nursing-interior-page .section-mission_statement .field-mission_statement_body,body.page-template-nursing-intermediary-landing-page .section-mission_statement .field-mission_statement_body,body.page-template-nursing-secondary-landing-page .section-mission_statement .field-mission_statement_body,body.page-template-nursing-program-page .section-mission_statement .field-mission_statement_body,body.page-template-nursing-landing-page-2 .section-mission_statement .field-mission_statement_body{
+	#nursingPage .section-mission_statement .field-mission_statement_body{
 		max-width:720px;
 		margin:0 auto;
 	}
@@ -2490,7 +2566,7 @@ body.page-template-library-landing-page .section-heading-as-content .todays-hour
 		font-size:1.8em;
 	}
 }
-body.page-template-nursing-landing-page .section-mission_statement .field-permalink,body.page-template-nursing-interior-page .section-mission_statement .field-permalink,body.page-template-nursing-intermediary-landing-page .section-mission_statement .field-permalink,body.page-template-nursing-secondary-landing-page .section-mission_statement .field-permalink,body.page-template-nursing-program-page .section-mission_statement .field-permalink,body.page-template-nursing-landing-page-2 .section-mission_statement .field-permalink{
+#nursingPage .section-mission_statement .field-permalink{
 	margin-top:1em;
 }
 .section-mission_statement .field-permalink a{
@@ -2647,7 +2723,7 @@ body.page-template-nursing-landing-page .section-mission_statement .field-permal
 		padding:32px 0 32px;
 	}
 }
-body.page-template-nursing-landing-page .story-full .show-more,body.page-template-nursing-interior-page .story-full .show-more,body.page-template-nursing-intermediary-landing-page .story-full .show-more,body.page-template-nursing-secondary-landing-page .story-full .show-more,body.page-template-nursing-program-page .story-full .show-more,body.page-template-nursing-landing-page-2 .story-full .show-more{
+#nursingPage .story-full .show-more{
 	display:none;
 }
 #nursingPage .stories .story-feature{
