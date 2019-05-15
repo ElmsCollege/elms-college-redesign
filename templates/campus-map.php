@@ -54,7 +54,7 @@ jQuery(window).load(function () {
 	jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog({
 		autoOpen: false,
 		modal: true,
-		minWidth: 275;
+		minWidth: 275
 	});
 
 var map = document.getElementById("campusMap");
