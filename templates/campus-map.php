@@ -23,7 +23,6 @@ get_header(); ?>
 }
 #campusMap{
 	width:100%;
-	height:auto;
 }
 .ui-dialog{
 	z-index:10;
