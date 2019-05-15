@@ -13,12 +13,17 @@
  * @package Elms_College_Redesign
  */
 
+wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
 wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/pan-zoom.js' );
 
 get_header(); ?>
 <style>
-.collapseomatic{display:block !important;}
-.ui-accordion .ui-accordion-content{padding: .5em !important;}
+.ui-dialog{
+	z-index:10;
+	width:80% !important;
+	border:2px solid #004731;
+	border-radius:5px;
+}
 </style>
 
 <div class="section-heading">
@@ -48,7 +53,8 @@ jQuery(window).load(function () {
 
 	jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog({
 		autoOpen: false,
-		modal: true
+		modal: true,
+		minWidth: 275;
 	});
 
 var map = document.getElementById("campusMap");
