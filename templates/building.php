@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Campus Map
+ * Template Name: Building Template
  * This template has been customized to display the master tuition table.
  *
  * This is the template that displays all pages by default.
