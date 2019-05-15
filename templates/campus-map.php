@@ -55,6 +55,7 @@ get_header(); ?>
 			<?php the_content() ?>
 
 <div id="Berchmans">
+<?php
 // WP_Query arguments
 $args = array(
 	'post_parent'            => '36506',
@@ -76,6 +77,7 @@ if ( $query->have_posts() ) {
 
 // Restore original Post Data
 wp_reset_postdata();
+?>
 </div>
 
 		</div>
