@@ -13,6 +13,8 @@
  * @package Elms_College_Redesign
  */
 
+wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/pan-zoom.js' );
+
 get_header(); ?>
 <style>
 .collapseomatic{display:block !important;}
