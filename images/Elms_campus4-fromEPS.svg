@@ -109,7 +109,6 @@
 	.st93{fill:#FFFFFF;stroke:#000000;stroke-width:0.7278;stroke-linecap:round;stroke-linejoin:round;}
 	.st94{fill:#939598;stroke:#000000;stroke-width:0.375;}
 	.st95{fill:none;stroke:#FFFFFF;stroke-width:0.375;stroke-linecap:round;stroke-linejoin:round;}
-	.st96{display:none;}
 	.st97{display:inline;fill:#A24641;stroke:#000000;stroke-width:0.75;}
 	.st98{display:inline;fill:#842D2D;stroke:#000000;stroke-width:0.75;}
 	.st99{display:inline;fill:#FFFFFF;stroke:#000000;stroke-width:0.75;}
@@ -218,6 +217,7 @@
 	.st188{letter-spacing:-4;}
 	.st189{letter-spacing:-5;}
 	.st190{font-size:14px;}
+	#labels > * {visibility:hidden;}
 </style>
 <g id="ground">
 	<polyline class="st1" points="488.9,406.7 1471.6,465.5 1482.7,465.5 1632.4,134.5 1502.7,125.3 1439.7,132.3 1189.9,118.2 

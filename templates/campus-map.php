@@ -38,6 +38,7 @@ get_header(); ?>
 	top: 0;
 	width: 100%;
 	height: 100%;
+	opacity:.7;
 }
 </style>
 
@@ -99,14 +100,34 @@ gaylord.addEventListener("click", function(){
 
 jQuery("#hideTrees").click(function() {
 if (jQuery("#hideTrees").prop("checked")) {
-jQuery(svgDoc).find("#Trees1").css("visibility","hidden");
-jQuery(svgDoc).find("#trees2").css("visibility","hidden");
-jQuery(svgDoc).find("#trees3").css("visibility","hidden");
+	jQuery(svgDoc).find("#Trees1").css("visibility","hidden");
+	jQuery(svgDoc).find("#trees2").css("visibility","hidden");
+	jQuery(svgDoc).find("#trees3").css("visibility","hidden");
 }else{
-jQuery(svgDoc).find("#Trees1").css("visibility","visible");
-jQuery(svgDoc).find("#trees2").css("visibility","visible");
-jQuery(svgDoc).find("#trees3").css("visibility","visible");
+	jQuery(svgDoc).find("#Trees1").css("visibility","visible");
+	jQuery(svgDoc).find("#trees2").css("visibility","visible");
+	jQuery(svgDoc).find("#trees3").css("visibility","visible");
 }
+});
+
+jQuery("#showBluePhones").click(function() {
+if (jQuery("#showBluePhones").prop("checked")) {
+	jQuery(svgDoc).find(".st105 .st182").css("visibility","visible");
+	jQuery(svgDoc).find(".st105 .st183").css("visibility","visible");
+	jQuery(svgDoc).find(".st105 .st46").css("visibility","visible");
+}else{
+	jQuery(svgDoc).find(".st105 .st182").css("visibility","hidden");
+	jQuery(svgDoc).find(".st105 .st183").css("visibility","hidden");
+	jQuery(svgDoc).find(".st105 .st46").css("visibility","hidden");
+}}
+});
+
+jQuery("#showStreets").click(function() {
+if (jQuery("#showStreets").prop("checked")) {
+	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","visible");
+}else{
+	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","hidden");
+}}
 });
 
 } );
