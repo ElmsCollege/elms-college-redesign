@@ -24,6 +24,15 @@ get_header(); ?>
 	border:2px solid #004731;
 	border-radius:5px;
 }
+.ui-dialog-content.ui-widget-content{
+	padding:10px;	
+}
+.ui-widget-overlay{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
 </style>
 
 <div class="section-heading">
