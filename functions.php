@@ -516,7 +516,7 @@ add_filter('wpseo_title', 'tribe_add_date_to_title');
 
 add_filter('the_content', 'specific_no_wpautop', 9);
 function specific_no_wpautop($content) {
-    if (is_page (array('10133','10245','16684') )) { // or whatever other condition you like
+    if (is_page (array('10133','10245','16684','36506') )) { // or whatever other condition you like
         remove_filter( 'the_content', 'wpautop' );
         return $content;
     } else {
