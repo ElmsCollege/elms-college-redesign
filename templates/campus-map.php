@@ -46,7 +46,10 @@ jQuery(window).load(function () {
           controlIconsEnabled: true
         });
 
-	jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog({ autoOpen: false });
+	jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog({
+		autoOpen: false,
+		modal: true
+	});
 
 var map = document.getElementById("campusMap");
 var svgDoc = map.contentDocument;
