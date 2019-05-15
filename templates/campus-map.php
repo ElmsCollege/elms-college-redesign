@@ -18,6 +18,9 @@ wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/pan-zoom.js'
 
 get_header(); ?>
 <style>
+#campusMap{
+	width:100%;
+}
 .ui-dialog{
 	z-index:10;
 	width:80% !important;
@@ -42,7 +45,7 @@ get_header(); ?>
 </div>
 
 <div id="primary" class="content-area pure-g">
-	<main id="main" class="site-main pure-u-1 standalone" role="main">
+	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div class="field-content">
 			<?php the_content() ?>
@@ -65,24 +68,28 @@ jQuery(window).load(function () {
 		modal: true,
 		minWidth: 275
 	});
+	jQueryu(".ui-widget-overlay").live("click", function() {
+		jQuery("#your-dialog-id").dialog("close");
+	});
+	//modal has issues in safari
 
 var map = document.getElementById("campusMap");
 var svgDoc = map.contentDocument;
 
 var berchmans = svgDoc.getElementById("Berchmans");
-berchmans.addEventListener("mousedown", function(){
+berchmans.addEventListener("click", function(){
   jQuery("#Berchmans").dialog("open");
 });
 var library = svgDoc.getElementById("Library");
-library.addEventListener("mousedown", function(){
+library.addEventListener("click", function(){
   jQuery("#Library").dialog("open");
 });
 var admissions = svgDoc.getElementById("Spaulding");
-admissions.addEventListener("mousedown", function(){
+admissions.addEventListener("click", function(){
   jQuery("#Spaulding").dialog("open");
 });
 var gaylord = svgDoc.getElementById("Gaylord");
-gaylord.addEventListener("mousedown", function(){
+gaylord.addEventListener("click", function(){
   jQuery("#Gaylord").dialog("open");
 });
 
