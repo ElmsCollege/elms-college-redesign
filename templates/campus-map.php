@@ -53,6 +53,31 @@ get_header(); ?>
 
 		<div class="field-content">
 			<?php the_content() ?>
+
+<div id="Berchmans">
+// WP_Query arguments
+$args = array(
+	'post_parent'            => '36506',
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+// The Loop
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		the_excerpt();
+		echo do_shortcode('[acf_gallery_slider acf_field="building_gallery"]' );
+	}
+} else {
+	// no posts found
+}
+
+// Restore original Post Data
+wp_reset_postdata();
+</div>
+
 		</div>
 
 
