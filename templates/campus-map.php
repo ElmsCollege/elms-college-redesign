@@ -51,31 +51,21 @@ var svgDoc = map.contentDocument;
 
 var berchmans = svgDoc.getElementById("Berchmans");
 berchmans.addEventListener("mousedown", function(){
-  jQuery("#accordion").accordion( "option", "active", 0 );
+  jQuery("#Berchmans").dialog();
 });
 var library = svgDoc.getElementById("Library");
 library.addEventListener("mousedown", function(){
-  jQuery("#accordion").accordion( "option", "active", 1 );
+  jQuery("#Library").dialog();
 });
 var admissions = svgDoc.getElementById("Spaulding");
 admissions.addEventListener("mousedown", function(){
-  jQuery("#accordion").accordion( "option", "active", 2 );
+  jQuery("#Spaulding").dialog();
 });
 var gaylord = svgDoc.getElementById("Gaylord");
 gaylord.addEventListener("mousedown", function(){
-  jQuery("#accordion").accordion( "option", "active", 3 );
-});
-var trees = svgDoc.getElementById("Trees1");
-trees.addEventListener("mousedown", function(){
-  jQuery(this).css("visibility", "hidden");
+  jQuery("#Gaylord").dialog();
 });
 
-jQuery( function() {
-  jQuery( "#accordion" ).accordion({
-    collapsible: true,
-    active: false
-  });
-} );
 
 jQuery("#hideTrees").click(function() {
 if (jQuery("#hideTrees").prop("checked")) {
