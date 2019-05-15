@@ -62,18 +62,20 @@ get_header(); ?>
 <script>
 jQuery(window).load(function () {
 
+	var modalDivs = jQuery("#Berchmans, #Library, #Spaulding, #Gaylord");
+
         svgPanZoom("#campusMap", {
           zoomEnabled: true,
           controlIconsEnabled: true
         });
 
-	jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog({
+	modalDivs.dialog({
 		autoOpen: false,
 		modal: true,
 		minWidth: 275
 	});
 	jQuery(".ui-widget-overlay").live("click", function() {
-		jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog("close");
+		modalDivs.dialog("close");
 	});
 	//modal has issues in safari
 
@@ -114,6 +116,7 @@ jQuery("#showBluePhones").click(function() {
 if (jQuery("#showBluePhones").prop("checked")) {
 	jQuery(svgDoc).find(".st105 .st182").css("visibility","visible");
 	jQuery(svgDoc).find(".st105 .st46").css("visibility","visible");
+	jQuery(svgDoc).find(".st105 .st46.st185.st186").css("visibility","hidden");
 }else{
 	jQuery(svgDoc).find(".st105 .st182").css("visibility","hidden");
 	jQuery(svgDoc).find(".st105 .st46").css("visibility","hidden");
