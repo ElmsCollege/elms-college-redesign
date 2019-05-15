@@ -5974,7 +5974,6 @@
 </g>
 <g id="Berchmans" title="Berchmans Hall">
 	<title>Berchmans Hall</title>
-	<a xlink:href="#berchmans-hall">
 		<polygon class="st50" points="1301.8,250.1 1301.8,289 1281.6,298.8 1263.3,295 		"/>
 		<polygon class="st50" points="1312.3,272.1 1312.3,296.8 1301,305.7 1301,286.2 		"/>
 		<polygon class="st48" points="1288.5,284.9 1301,286.2 1301,305.7 1288.3,303 		"/>
@@ -6210,12 +6209,9 @@
 			<polygon class="st131" points="1173.7,338.5 1169.7,337.9 1169.7,342.6 1173.7,343.1 			"/>
 			<polygon class="st131" points="1178.5,339.1 1174.4,338.5 1174.4,343.2 1178.5,343.7 			"/>
 		</g>
-	</a>
 </g>
 <g id="Library">
 	<title>Alumnae Library</title>
-	<a xlink:href="#alumnae-library">
-
 	<polygon class="st135" points="963.8,404.3 976.5,393.7 963.8,392.2 	"/>
 	<path class="st135" d="M949.2,363.8l-1.7,38.3l-80.9-12.2l-1.1-15.5l71.1-12.2L949.2,363.8z"/>
 	<path class="st75" d="M1000.7,336.5l6.4-5.7l9.8,9.4v8.3l-4.7,4.3l0.2,9.7l-5,5l-6.8-1.3L1000.7,336.5z"/>
@@ -6313,11 +6309,9 @@
 	<polygon class="st76" points="996,341.3 995.9,343.3 993.9,345.3 993,344.3 	"/>
 	<polygon class="st75" points="941.6,364.7 948,361 948,365.7 	"/>
 	<polygon class="st136" points="943.3,365.1 944.8,363.3 948.9,361.2 947.2,360.7 943.6,362.6 941.6,364.7 	"/>
-	</a>
 </g>
 <g id="Gaylord" title="Gaylord Mansion">
 	<title>Gaylord Mansion</title>
-	<a xlink:href="#gaylord-mansion" >
 		<polygon class="st141" points="123.1,345 125,345.4 125,346.2 145.8,347.6 148,346.8 168.2,348.1 238.9,319.6 197.2,316.9 		"/>
 		<polygon class="st142" points="180,361.7 180,323.9 227.2,305.7 227.2,324.1 238.9,319.7 238.9,337.8 227.2,342.9 		"/>
 		<polygon class="st141" points="180,324 119.2,320.7 169.7,302.3 227.5,305.9 		"/>
@@ -6398,11 +6392,9 @@
 			<polygon class="st166" points="207.5,317.7 207.5,327.2 203,327.2 203,317.8 			"/>
 			<polygon class="st166" points="207.5,333.9 207.5,343.4 203,343.4 203,334 			"/>
 		</g>
-	</a>
 </g>
 <g id="Spaulding">
 	<title>Spaulding House</title>
-	<a xlink:href="#spaulding-house" >
 		<polygon class="st167" points="1489.2,446.2 1489.2,437.5 1479.8,437 1470.4,432.6 1459.7,436.1 1439.7,435.1 1439.7,445 		"/>
 		<polygon points="1462.4,437.4 1462.8,439 1462.8,442.5 1457.3,442.4 1440.9,441.9 1440.7,437 1455.6,437.5 		"/>
 		<path class="st46" d="M1449.6,437.2c0,0,1,0.6,1,2c0,1.4,0,3.3,0,3.3h1.2c0,0,0-1.8,0-3.2c0-1.4,1-2.1,1-2.1H1449.6z"/>
@@ -6457,7 +6449,6 @@
 		<rect x="1455.6" y="419.9" width="3.7" height="6.1"/>
 		<rect x="1460" y="419.9" width="3.7" height="6.1"/>
 		<polygon class="st0" points="1445.9,426.3 1440.8,426.3 1440.8,431.9 		"/>
-	</a>
 </g>
 <g id="Trees1">
 	<g>

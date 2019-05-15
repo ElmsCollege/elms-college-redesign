@@ -46,24 +46,26 @@ jQuery(window).load(function () {
           controlIconsEnabled: true
         });
 
+	jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog({ autoOpen: false });
+
 var map = document.getElementById("campusMap");
 var svgDoc = map.contentDocument;
 
 var berchmans = svgDoc.getElementById("Berchmans");
 berchmans.addEventListener("mousedown", function(){
-  jQuery("#Berchmans").dialog();
+  jQuery("#Berchmans").dialog("open");
 });
 var library = svgDoc.getElementById("Library");
 library.addEventListener("mousedown", function(){
-  jQuery("#Library").dialog();
+  jQuery("#Library").dialog("open");
 });
 var admissions = svgDoc.getElementById("Spaulding");
 admissions.addEventListener("mousedown", function(){
-  jQuery("#Spaulding").dialog();
+  jQuery("#Spaulding").dialog("open");
 });
 var gaylord = svgDoc.getElementById("Gaylord");
 gaylord.addEventListener("mousedown", function(){
-  jQuery("#Gaylord").dialog();
+  jQuery("#Gaylord").dialog("open");
 });
 
 
