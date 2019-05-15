@@ -119,7 +119,7 @@ if (jQuery("#showBluePhones").prop("checked")) {
 	jQuery(svgDoc).find(".st105 .st182").css("visibility","hidden");
 	jQuery(svgDoc).find(".st105 .st183").css("visibility","hidden");
 	jQuery(svgDoc).find(".st105 .st46").css("visibility","hidden");
-}}
+}
 });
 
 jQuery("#showStreets").click(function() {
@@ -127,7 +127,7 @@ if (jQuery("#showStreets").prop("checked")) {
 	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","visible");
 }else{
 	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","hidden");
-}}
+}
 });
 
 } );
