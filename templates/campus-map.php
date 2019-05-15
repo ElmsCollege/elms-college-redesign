@@ -58,7 +58,7 @@ get_header(); ?>
 <?php
 // WP_Query arguments
 $args = array(
-	'post_parent'            => '36506',
+	'page_id'                => '36525',
 );
 
 // The Query
