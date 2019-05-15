@@ -58,7 +58,7 @@ get_header(); ?>
 <script>
 jQuery(window).load(function () {
 
-        svgPanZoom('#campusMap', {
+        svgPanZoom("#campusMap", {
           zoomEnabled: true,
           controlIconsEnabled: true
         });
@@ -68,7 +68,7 @@ jQuery(window).load(function () {
 		modal: true,
 		minWidth: 275
 	});
-	jQueryu(".ui-widget-overlay").live("click", function() {
+	jQuery(".ui-widget-overlay").live("click", function() {
 		jQuery("#your-dialog-id").dialog("close");
 	});
 	//modal has issues in safari
