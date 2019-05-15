@@ -18,8 +18,12 @@ wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/pan-zoom.js'
 
 get_header(); ?>
 <style>
+.field-content{
+	min-height:500px;
+}
 #campusMap{
 	width:100%;
+	height:auto;
 }
 .ui-dialog{
 	z-index:10;
@@ -69,7 +73,7 @@ jQuery(window).load(function () {
 		minWidth: 275
 	});
 	jQuery(".ui-widget-overlay").live("click", function() {
-		jQuery("#your-dialog-id").dialog("close");
+		jQuery("#Berchmans, #Library, #Spaulding, #Gaylord").dialog("close");
 	});
 	//modal has issues in safari
 
