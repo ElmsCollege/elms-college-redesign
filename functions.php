@@ -134,6 +134,11 @@ function gs_elms_scripts() {
 
   wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
 
+	wp_enqueue_script( 'slickjs', get_stylesheet_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
+	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.8.1', 'all');
+	wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.8.1', 'all');
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -530,3 +535,27 @@ return '... <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'read
 add_filter('excerpt_more', 'excerpt_readmore');
 
 add_filter('acf/format_value/type=text', 'do_shortcode');
+
+// Add Shortcode that changes the ACF gallery into a slideshow
+function slideshow_shortcode() {
+	//slider_portfolio = Gallery Field
+	$images = get_field('slideshow_gallery');
+	$size = 'large'; // (thumbnail, medium, large, full or custom size)
+	if( $images ): ?>
+	   <div class="slider-for">
+	            <?php foreach( $images as $image ): ?>
+	                <div class="slick-container">
+	                    <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+	                </div>
+	            <?php endforeach; ?>
+	    </div>
+	   <div class="slider-nav">
+	            <?php foreach( $images as $image ): ?>
+	                <div>
+	                    <?php echo wp_get_attachment_image( $image['ID'], "thumbnail" ); ?>
+	                </div>
+	            <?php endforeach; ?>
+	    </div>
+	<?php endif;
+}
+add_shortcode( 'slideshow_gallery', 'slideshow_shortcode' );

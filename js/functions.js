@@ -529,6 +529,26 @@
       $(".hero-column:nth-child(3)").velocity({width: 25+"%", left: (25+25-err)+"%"}, {easing: "easeInOutCirc", duration: duration});
       $(".hero-column:nth-child(4)").velocity({width: (25+err)+"%", left: (25+25+25-err)+"%"}, {easing: "easeInOutCirc", duration: duration});
     });
+
+	  //slick slider initialization
+	jQuery(".slider-for").slick({
+	  	slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav',
+		lazyLoad: 'ondemand',
+	});
+	jQuery(".slider-nav").slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true,
+		arrows: true,
+		autoplay: false
+	});
   });
   
 	$('a[href*="#program-track-anchor"]').click(function(e){
