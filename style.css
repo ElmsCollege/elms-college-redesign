@@ -3732,3 +3732,6 @@ th .smallText{
 	display:table;
 	margin:auto;
 }
+.slick-prev:before,.slick-next:before{
+	color:#004731
+}

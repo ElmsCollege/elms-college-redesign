@@ -534,21 +534,27 @@
 	jQuery(".slider-for").slick({
 	  	slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
+		arrows: true,
 		fade: true,
-		asNavFor: '.slider-nav',
+//		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
+		centerMode: true,
+		variableWidth: true,
+		infinite: true,
 	});
+/*
 	jQuery(".slider-nav").slick({
-		slidesToShow: 2,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		asNavFor: '.slider-for',
-		dots: true,
+		dots: false,
 		centerMode: true,
 		focusOnSelect: true,
 		arrows: true,
-		autoplay: false
+		autoplay: false,
+		lazyLoad: 'ondemand',
 	});
+*/
   });
   
 	$('a[href*="#program-track-anchor"]').click(function(e){
