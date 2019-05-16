@@ -537,6 +537,7 @@ add_filter('acf/format_value/type=text', 'do_shortcode');
 
 // Add Shortcode that changes the ACF gallery into a slideshow
 function slideshow_shortcode() {
+ob_start();
 	//slider_portfolio = Gallery Field
 	$images = get_field('slideshow_gallery');
 	$size = 'large'; // (thumbnail, medium, large, full or custom size)
@@ -556,5 +557,6 @@ function slideshow_shortcode() {
 	            <?php endforeach; ?>
 	    </div>
 	<?php endif;
+return ob_get_clean();
 }
 add_shortcode( 'slideshow_gallery', 'slideshow_shortcode' );

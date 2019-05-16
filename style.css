@@ -3735,3 +3735,10 @@ th .smallText{
 .slick-prev:before,.slick-next:before{
 	color:#004731
 }
+.slider-for .slick-slide img {
+	display: table;
+	margin: 0 auto;
+}
+.slider-nav .slick-slide {
+	padding: 0 10px;
+}
