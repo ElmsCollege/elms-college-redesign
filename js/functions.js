@@ -538,16 +538,17 @@
 		fade: true,
 		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
-		infinite: true
+		infinite: true,
+		variableWidth: true
 	});
 	$('.slider-nav').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		asNavFor: '.slider-for',
- 		dots: true,
 		centerMode: true,
 		focusOnSelect: true,
 		infinite: true,
+		variableWidth: true
 	});
 
   });//end document.ready
