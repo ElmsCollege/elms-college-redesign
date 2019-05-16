@@ -70,11 +70,9 @@ if ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
 		echo do_shortcode("[slideshow_gallery]");
+		return '<a href="'. get_permalink($post->ID) . '">Click here to read more about' . $post->post_title . '</a>';
 	}
-} else {
-	// no posts found
 }
-
 // Restore original Post Data
 wp_reset_postdata();
 ?>
