@@ -99,7 +99,9 @@ jQuery(window).load(function () {
 	modalDivs.dialog({
 		autoOpen: false,
 		modal: true,
-		minWidth: 275
+		minWidth: 275,
+		resizable: false,
+		
 	});
 	jQuery(".ui-widget-overlay").live("click", function() {
 		modalDivs.dialog("close");

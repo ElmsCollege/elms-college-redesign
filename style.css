@@ -3742,3 +3742,17 @@ th .smallText{
 .slider-nav .slick-slide {
 	padding: 0 5px;
 }
+.ui-dialog .slider-nav{
+	width: 80%;
+	margin: 0 auto;
+}
+.ui-widget-content{
+	border:none;
+}
+.ui-widget-header{
+	background-color:unset;
+	border:none;	
+}
+.ui-dialog-titlebar-close{
+	float:right;
+}
