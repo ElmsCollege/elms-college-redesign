@@ -541,6 +541,7 @@
 		centerMode: true,
 		variableWidth: true,
 		infinite: true,
+		autoplay: true,
 	});
 /*
 	jQuery(".slider-nav").slick({

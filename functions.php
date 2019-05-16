@@ -548,13 +548,6 @@ function slideshow_shortcode() {
 	                </div>
 	            <?php endforeach; ?>
 	    </div>
-	   <div class="slider-nav">
-	            <?php foreach( $images as $image ): ?>
-	                <div>
-	                    <?php echo wp_get_attachment_image( $image['ID'], "thumbnail" ); ?>
-	                </div>
-	            <?php endforeach; ?>
-	    </div>
 	<?php endif;
 }
 add_shortcode( 'slideshow_gallery', 'slideshow_shortcode' );
