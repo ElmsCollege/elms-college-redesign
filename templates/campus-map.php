@@ -69,7 +69,6 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
-		echo '<a href="/campus/berchmans/">Learn more about Berchmans</a>';
 		echo do_shortcode("[slideshow_gallery]");
 	}
 }
