@@ -126,6 +126,11 @@ gaylord.addEventListener("click", function(){
   jQuery("#Gaylord").dialog("open");
 });
 
+modalDivs.dialog({
+  open: function( event, ui ) {
+	jQuery(".slider-for, .slider-nav").slick('setPosition');
+  }
+});
 
 jQuery("#hideTrees").click(function() {
 if (jQuery("#hideTrees").prop("checked")) {

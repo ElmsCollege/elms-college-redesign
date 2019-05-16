@@ -538,7 +538,7 @@
 		fade: true,
 		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
-		infinite: false,
+		infinite: true,
 	});
 	$('.slider-nav').slick({
 		slidesToShow: 3,
@@ -546,7 +546,7 @@
 		asNavFor: '.slider-for',
 		centerMode: true,
 		focusOnSelect: true,
-		infinite: false,
+		infinite: true,
 		variableWidth: true
 	});
 
