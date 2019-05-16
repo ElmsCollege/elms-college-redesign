@@ -540,7 +540,8 @@ function slideshow_shortcode() {
 ob_start();
 	//slider_portfolio = Gallery Field
 	$images = get_field('slideshow_gallery');
-	$size = 'large'; // (thumbnail, medium, large, full or custom size)
+//	$size = 'large'; // (thumbnail, medium, large, full or custom size)
+	$size = "medium";
 	if( $images ): ?>
 	   <div class="slider-for">
 	            <?php foreach( $images as $image ): ?>
@@ -549,7 +550,11 @@ ob_start();
 	                </div>
 	            <?php endforeach; ?>
 	    </div>
+	<?php if ($attributes["vert"] != ""): ?>
+	   <div class="slider-nav-vert">
+	<?php else: ?>
 	   <div class="slider-nav">
+	<?php endif; ?>
 	            <?php foreach( $images as $image ): ?>
 	                <div>
 	                    <?php echo wp_get_attachment_image( $image['ID'], "thumbnail" ); ?>
