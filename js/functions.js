@@ -539,7 +539,6 @@
 		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
 		infinite: true,
-		variableWidth: true
 	});
 	$('.slider-nav').slick({
 		slidesToShow: 3,
