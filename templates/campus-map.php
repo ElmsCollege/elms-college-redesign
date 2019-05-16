@@ -111,10 +111,14 @@ jQuery(window).load(function () {
 var map = document.getElementById("campusMap");
 var svgDoc = map.contentDocument;
 
+var openPopup = function (event) {
+    jQuery("#Berchmans").dialog("open");
+};
+
 var berchmans = svgDoc.getElementById("Berchmans");
-berchmans.addEventListener("click", function(){
-  jQuery("#Berchmans").dialog("open");
-});
+berchmans.addEventListener("click", openPopup,false);
+berchmans.addEventListener("touchstart", openPopup,false);
+
 var library = svgDoc.getElementById("Library");
 library.addEventListener("click", function(){
   jQuery("#Library").dialog("open");
