@@ -69,8 +69,8 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
+		return '<a href="/campus/berchmans/">Learn more about Berchmans</a>';
 		echo do_shortcode("[slideshow_gallery]");
-		return '<a href="'. get_permalink($post->ID) . '">Click here to read more about' . $post->post_title . '</a>';
 	}
 }
 // Restore original Post Data
