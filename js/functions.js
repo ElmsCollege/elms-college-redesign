@@ -536,7 +536,7 @@
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
-		asNavFor: '.slider-nav'
+		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
 		infinite: true
 	});
