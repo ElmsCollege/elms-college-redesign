@@ -521,10 +521,5 @@
       $(".hero-column:nth-child(4)").velocity({width: (25+err)+"%", left: (25+25+25-err)+"%"}, {easing: "easeInOutCirc", duration: duration});
     });
   });
-  
-	$('a[href*="#program-track-anchor"]').click(function(e){
-		e.preventDefault();
-		$('html, body').animate({
-		scrollTop: $("#program-track-anchor").offset().top
-	}, 1000);});
+
 })(jQuery, window, document);
