@@ -549,17 +549,6 @@
 		infinite: true,
 		variableWidth: true
 	});
-	$('.slider-nav-vert').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		asNavFor: '.slider-for',
-		centerMode: true,
-		focusOnSelect: true,
-		infinite: true,
-		variableWidth: true,
-		vertical: true,
-		verticalSwiping: true,
-	});
 
   });//end document.ready
   
