@@ -69,7 +69,7 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
-		echo do_shortcode("[slideshow_gallery]");
+		echo do_shortcode("[slideshow_gallery_popup]");
 	}
 }
 // Restore original Post Data
