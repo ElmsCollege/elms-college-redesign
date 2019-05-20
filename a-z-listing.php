@@ -19,11 +19,10 @@ jQuery(document).ready(function(){
 		var departmentValue = jQuery("#departmentFilter").val();
 		jQuery("#az-slider li").hide();
 		if(departmentValue == "showAllDepartments"){
-			jQuery("#az-slider li").css("display","none");
-			jQuery("#resetFilter").css("display","none");
+			jQuery("#resetFilter").hide();
+			jQuery("#az-slider li").css("display","inline-block");
 		} else {
-			jQuery("#az-slider li."+departmentValue).css("display","inline-block");
-			jQuery("#resetFilter").css("display","inline-block");
+			jQuery("#resetFilter, #az-slider li."+departmentValue).css("display","inline-block");
 		}
 	});
 	jQuery("#resetFilter").click(function(){
