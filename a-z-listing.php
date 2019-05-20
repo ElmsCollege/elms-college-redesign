@@ -17,12 +17,13 @@
 jQuery(document).ready(function(){
 	jQuery("#departmentFilter").change(function(){
 		var departmentValue = jQuery("#departmentFilter").val();
-		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
 		if(departmentValue == "showAllDepartments"){
-			jQuery("#resetFilter, #az-slider li").css("display","none");
+			jQuery("#az-slider li").css("display","none");
+			jQuery("#resetFilter").css("display","none");
 		} else {
-			jQuery("#resetFilter, #az-slider li."+departmentValue).css("display","inline-block");
+			jQuery("#az-slider li."+departmentValue).css("display","inline-block");
+			jQuery("#resetFilter").css("display","inline-block");
 		}
 	});
 	jQuery("#resetFilter").click(function(){
