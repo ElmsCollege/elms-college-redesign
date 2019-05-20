@@ -3545,6 +3545,17 @@ body.page-template-landing-page .opening-menu{
 #az-slider .letter-section{
 	margin-bottom:unset;
 }
+#az-slider .filterList{
+	margin-bottom:25px;
+}
+#az-slider .filterList button{
+	padding:2px 2px;
+	margin-left:15px;
+	min-width:unset;
+	font-size:1em;
+	line-height:1em;
+}
+
 /* END styling overrides for the a-z plugin pages (/directory) */
 
 .displayTable{

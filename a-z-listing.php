@@ -14,33 +14,20 @@
 ?>
 
 <script>
-if ( document.readyState === 'loading' ) {
-    document.addEventListener('DOMContentLoaded', fixAZListingScroll);
-} else {
-    fixAZListingScroll();
-}
-function fixAZListingScroll() {
-    document.querySelectorAll( '.az-links a[href^="#letter-"]' )
-    .forEach( function( a ) {
-        a.addEventListener( 'click', function( e ) {
-            e.preventDefault();
-            const selector = this.href.replace( /.*(#letter-.*)/, '$1' );
-            document.querySelector( selector ).scrollIntoView();
-            window.scrollBy( 0, -120 );
-        });
-    });
-}
-
-jQuery(document).ready(function() {
+jQuery(document).ready(function(){
 	jQuery("#departmentFilter").change(function(){
 		var departmentValue = jQuery("#departmentFilter").val();
 		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
 		if(departmentValue == "showAllDepartments"){
-			jQuery("#az-slider li").show();
+			jQuery("#az-slider li").css("display","none");
 		} else {
-			jQuery("#az-slider li."+departmentValue).show();
+			jQuery("#az-slider li."+departmentValue).css("display","inline-block");
 		}
+	});
+	jQuery("#resetFilter").click(function(){
+		jQuery("#az-slider li").css("display","inline-block");
+		jQuery("#departmentFilter").val("showAllDepartments");
 	});
 });
 </script>
@@ -52,7 +39,6 @@ $current_slug = add_query_arg( array(), $wp->request );
 if($current_slug == "directory"): ?>
 
 <style>
-.department{margin-bottom:25px;}
 </style>
 
 <?php
@@ -64,14 +50,15 @@ function build_select_list($taxonomies, $args) {
   return $output;
 }
 ?>
-<div class="department smallText">
+<div class="filterList smallText">
 	<label for="departmentFilter">Filter by Department:</label>
 	<select id="departmentFilter">
 		<option value="showAllDepartments">Show every department</option>
 		<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
 	</select>
+	<button type="button" id="resetFilter">Reset Filter</button> 
 </div>
-<?php endif ?>
+<?php endif ?><!-- end current_slug==directory -->
 
 <div id="az-tabs">
 	<div id="letters">
