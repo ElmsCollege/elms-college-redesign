@@ -14,26 +14,48 @@
 ?>
 
 <script>
-if ( document.readyState === 'loading' ) {
-    document.addEventListener('DOMContentLoaded', fixAZListingScroll);
-} else {
-    fixAZListingScroll();
-}
-function fixAZListingScroll() {
-    document.querySelectorAll( '.az-links a[href^="#letter-"]' )
-    .forEach( function( a ) {
-        a.addEventListener( 'click', function( e ) {
-            e.preventDefault();
-            const selector = this.href.replace( /.*(#letter-.*)/, '$1' );
-            document.querySelector( selector ).scrollIntoView();
-            window.scrollBy( 0, -120 );
-        });
-    });
-}
+jQuery(document).ready(function(){
+	jQuery("#departmentFilter").change(function(){
+		var departmentValue = jQuery("#departmentFilter").val();
+		jQuery("#az-slider li").hide();
+		if(departmentValue == "showAllDepartments"){
+			jQuery("#resetFilter").hide();
+			jQuery("#az-slider li").css("display","inline-block");
+		} else {
+			jQuery("#resetFilter, #az-slider li."+departmentValue).css("display","inline-block");
+		}
+	});
+	jQuery("#resetFilter").click(function(){
+		jQuery("#az-slider li").css("display","inline-block");
+		jQuery("#departmentFilter").val("showAllDepartments");
+	});
+});
 </script>
 
-<style>
-</style>
+<?php
+global $wp;
+$current_slug = add_query_arg( array(), $wp->request );
+
+if($current_slug == "directory"): ?>
+
+<?php
+function build_select_list($taxonomies, $args) {
+  $terms = get_terms($taxonomies, $args);
+  foreach($terms as $term){
+    $output .= '<option value="'.$term->slug.'"> '.$term->name.'</option>';
+  }
+  return $output;
+}
+?>
+<div class="filterList smallText">
+	<label for="departmentFilter">Filter by Department:</label>
+	<select id="departmentFilter">
+		<option value="showAllDepartments">Show all departments</option>
+		<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
+	</select>
+	<button type="button" id="resetFilter" class="greenButton" style="display:none;">Reset Filter</button> 
+</div>
+<?php endif ?><!-- end current_slug==directory -->
 
 <div id="az-tabs">
 	<div id="letters">
@@ -66,14 +88,26 @@ function fixAZListingScroll() {
 								if( get_field("accred") ){
 									$accred = ', ' .get_field("accred");
 								};
+							?>
 
-
+								<?php $terms = get_the_terms( get_the_ID(), 'department' );
+								if ( $terms && ! is_wp_error( $terms ) ) : 
+ 
+									$department_links = array();
+ 									foreach ( $terms as $term ) {
+										$department_links[] = $term->slug;
+									}
+									$in_department = join( " ", $department_links );
 								?>
+
+								<li class="<?php printf( esc_html__( '%s','textdomain' ), esc_html( $in_department ) ); ?>">
+								<?php else: ?>
 								<li>
-									<a href="<?php the_permalink(); ?>"><strong><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></strong></a>
+								<?php endif; ?>
+									<a href="<?php the_permalink(); ?>"><h4 class="noMargins"><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></h4></a>
 								<?php $prefix = ""; ?>
 								<?php $accred = ""; ?>
-									<?php the_excerpt(); ?>
+								<?php the_excerpt(); ?>
 								</li>
 							<?php endwhile; ?>
 						</ul>
@@ -86,6 +120,6 @@ function fixAZListingScroll() {
 	</div>
 </div>
 <?php else : ?>
-	<p><?php esc_html_e( 'There are no posts included in this index.', 'a-z-listing' ); ?></p>
+	<p><?php esc_html_e( 'Please try a different department', 'a-z-listing' ); ?></p>
 	<?php
 endif;
