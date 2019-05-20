@@ -133,11 +133,6 @@ function gs_elms_scripts() {
   wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
 
   wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
-<<<<<<< HEAD
-  wp_enqueue_script( 'feedback2', get_template_directory_uri() . '/js/feedback2.js', array(), '1.0.0', true );
-
-=======
->>>>>>> parent of eee1f55... Enqueuing feedback2.js
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
