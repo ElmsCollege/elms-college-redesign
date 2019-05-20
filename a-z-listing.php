@@ -56,7 +56,7 @@ function build_select_list($taxonomies, $args) {
 		<option value="showAllDepartments">Show every department</option>
 		<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
 	</select>
-	<button type="button" id="resetFilter">Reset Filter</button> 
+	<button type="button" id="resetFilter" class="greenButton">Reset Filter</button> 
 </div>
 <?php endif ?><!-- end current_slug==directory -->
 
