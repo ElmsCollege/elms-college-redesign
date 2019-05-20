@@ -107,7 +107,7 @@ function build_select_list($taxonomies, $args) {
 								<?php else: ?>
 								<li>
 								<?php endif; ?>
-									<a href="<?php the_permalink(); ?>"><strong><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></strong></a>
+									<a href="<?php the_permalink(); ?>"><h4 class="noMargins"><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></h4></a>
 								<?php $prefix = ""; ?>
 								<?php $accred = ""; ?>
 								<?php the_excerpt(); ?>

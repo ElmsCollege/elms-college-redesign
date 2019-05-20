@@ -3697,6 +3697,9 @@ body.page-template-landing-page .opening-menu{
 th .smallText{
 	font-weight:normal;
 }
+.noMargins{
+	margin: 0 0 0 0 !important;
+}
 .noMarginTop{
 	margin-top:0px !important;
 }
