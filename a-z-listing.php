@@ -20,9 +20,9 @@ jQuery(document).ready(function(){
 		console.log(departmentValue);
 		jQuery("#az-slider li").hide();
 		if(departmentValue == "showAllDepartments"){
-			jQuery("#az-slider li").css("display","none");
+			jQuery("#resetFilter, #az-slider li").css("display","none");
 		} else {
-			jQuery("#az-slider li."+departmentValue).css("display","inline-block");
+			jQuery("#resetFilter, #az-slider li."+departmentValue).css("display","inline-block");
 		}
 	});
 	jQuery("#resetFilter").click(function(){
