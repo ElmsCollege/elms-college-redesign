@@ -53,7 +53,7 @@ function build_select_list($taxonomies, $args) {
 <div class="filterList smallText">
 	<label for="departmentFilter">Filter by Department:</label>
 	<select id="departmentFilter">
-		<option value="showAllDepartments">Show every department</option>
+		<option value="showAllDepartments">Show all departments</option>
 		<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
 	</select>
 	<button type="button" id="resetFilter" class="greenButton">Reset Filter</button> 
