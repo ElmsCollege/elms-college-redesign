@@ -38,9 +38,6 @@ $current_slug = add_query_arg( array(), $wp->request );
 
 if($current_slug == "directory"): ?>
 
-<style>
-</style>
-
 <?php
 function build_select_list($taxonomies, $args) {
   $terms = get_terms($taxonomies, $args);
@@ -123,6 +120,6 @@ function build_select_list($taxonomies, $args) {
 	</div>
 </div>
 <?php else : ?>
-	<p><?php esc_html_e( 'Please try again', 'a-z-listing' ); ?></p>
+	<p><?php esc_html_e( 'Please try a different department', 'a-z-listing' ); ?></p>
 	<?php
 endif;
