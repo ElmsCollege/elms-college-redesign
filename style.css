@@ -3530,9 +3530,20 @@ body.page-template-landing-page .opening-menu{
 #az-slider li{
 	margin-bottom:10px;
 	font-size:16px;
-	-webkit-column-break-inside: avoid;
-	page-break-inside: avoid;
-	break-inside: avoid;
+}
+#az-slider  li {
+  /* for Chrome and Edge */
+  break-inside: avoid-column;
+  /* for Firefox */
+  display: inline-grid;
+  page-break-inside: avoid;
+}
+
+/* for Chrome and Edge */
+@supports (break-inside: avoid-column) {
+  #az-slider li  {
+    display: block;
+  }
 }
 #az-slider li:last-child{
 	margin-bottom:unset;
