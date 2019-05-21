@@ -20,13 +20,13 @@ jQuery(document).ready(function(){
 		jQuery("#az-slider li").hide();
 		if(departmentValue == "showAllDepartments"){
 			jQuery("#resetFilter").hide();
-			jQuery("#az-slider li").css("display","inline-block");
+			jQuery("#az-slider li").css("display","list-item");
 		} else {
-			jQuery("#resetFilter, #az-slider li."+departmentValue).css("display","inline-block");
+			jQuery("#resetFilter, #az-slider li."+departmentValue).show();
 		}
 	});
 	jQuery("#resetFilter").click(function(){
-		jQuery("#az-slider li").css("display","inline-block");
+		jQuery("#az-slider li").css("display","list-item");
 		jQuery("#departmentFilter").val("showAllDepartments");
 	});
 });
