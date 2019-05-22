@@ -556,7 +556,7 @@ ob_start();
 	   <div class="slider-modal">
 	            <?php foreach( $images as $image ): ?>
 	                <div class="slick-container">
-	                    <img data-lazy="img/<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+	                    <img data-lazy="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
 	                </div>
 	            <?php endforeach; ?>
 	    </div>
