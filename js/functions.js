@@ -1,4 +1,4 @@
-;(function($, window, document, undefined) {
+(function($, window, document, undefined) {
   var $win = $(window);
   var $doc = $(document);
   var winH = $win.height();
