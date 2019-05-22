@@ -109,8 +109,8 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gs_elms_scripts() {
-	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.8.1', 'all');
 	wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.8.1', 'all');
+	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.8.1', 'all');
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
 
 	wp_enqueue_script( 'gs_elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );

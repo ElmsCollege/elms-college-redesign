@@ -93,8 +93,7 @@ jQuery(window).load(function () {
 		slidesToScroll: 1,
 		fade: true,
 		lazyLoad: 'ondemand',
-		dots: true,
-		variableWidth:true
+		variableWidth: true,
 	});
 
 
