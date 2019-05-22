@@ -87,10 +87,14 @@ wp_reset_postdata();
 jQuery(window).load(function () {
 
 	jQuery(".slider-modal").slick({
+		centerMode: true,
+		centerPadding: '75px',
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		fade: true,
 		lazyLoad: 'ondemand',
+		dots: true,
+		variableWidth:true
 	});
 
 

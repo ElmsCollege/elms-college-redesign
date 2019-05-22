@@ -3764,6 +3764,10 @@ th .smallText{
 .slick-prev:before,.slick-next:before{
 	color:#004731
 }
+.ui-dialog-content .slider-modal{
+	max-width: 85%;
+	margin: 0 auto;
+}
 .slider-for .slick-slide img {
 	display: table;
 	margin: 0 auto;
