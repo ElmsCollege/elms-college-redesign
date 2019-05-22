@@ -90,7 +90,6 @@ jQuery(window).load(function () {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		fade: true,
-		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
 	});
 
