@@ -95,7 +95,9 @@ jQuery(window).load(function () {
 	jQuery(".slider-modal").slick({
 		centerMode: true,
 		centerPadding: '75px',
-		slidesToShow: 1,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		fade: true,
 		lazyLoad: 'ondemand',
 		variableWidth: true,
 	});

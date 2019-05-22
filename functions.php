@@ -552,12 +552,11 @@ function slideshow_shortcode_modal() {
 ob_start();
 	//slider_portfolio = Gallery Field
 	$images = get_field('slideshow_gallery');
-	$size = 'medium'; // (thumbnail, medium, large, full or custom size)
 	if( $images ): ?>
 	   <div class="slider-modal">
 	            <?php foreach( $images as $image ): ?>
 	                <div class="slick-container">
-	                    <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+	                    <img data-lazy="img/<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
 	                </div>
 	            <?php endforeach; ?>
 	    </div>
