@@ -1289,7 +1289,7 @@ module.exports = {
 , getBoundingClientRectNormalized: function(svg) {
     if (svg.clientWidth && svg.clientHeight) {
       return {width: svg.clientWidth, height: svg.clientHeight}
-    } else if (!!svg.getBoundingClientRect()) {
+    } else if (svg.getBoundingClientRect()) {
       return svg.getBoundingClientRect();
     } else {
       throw new Error('Cannot get BoundingClientRect for SVG.');
