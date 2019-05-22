@@ -363,7 +363,7 @@ function gs_is_active_sidebar () {
 }
 
 function rss_link ($query) {
-  return '<a href="'.'/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank">Rss</a>';
+  return '<a href="/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank">RSS</a>';
 }
 
 
@@ -487,19 +487,6 @@ add_filter( 'body_class', function( $classes ) {
     
 } );
 
-
-if (is_admin()) {
-
-    // The path to the configuation is rather long, so let's
-    // make us a shorthand.
-    //class_alias('\GlobalMetaBoxOrder\Config', 'MetaBoxConfig');
-
-    // Add MetaBoxConfig below this line
-    //MetaBoxConfig::$getBlueprintUserId = function () { return 2; };
-
-}
-
-
 add_action("ga_dash_addtrackingcode", "add_optimize_require");
 function add_optimize_require () {
   echo "ga('require', 'GTM-T3ZX2GB');";
@@ -529,7 +516,7 @@ function specific_no_wpautop($content) {
 }
 
 function excerpt_readmore($more) {
-return '... <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'read more' . '</a>';
+return '... <a href="'. get_permalink($post->ID) . '" class="readmore">read more</a>';
 }
 add_filter('excerpt_more', 'excerpt_readmore');
 

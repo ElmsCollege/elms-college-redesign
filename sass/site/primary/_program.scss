@@ -26,7 +26,7 @@ body.page-template-program-page, body.page-template-program-page-test,body.page-
 
   
   .quick-info-container {
-    margin-top: $gutter_width; 
+    margin-top: $gutter_width;
     
   }
   .quick-info {
@@ -110,7 +110,7 @@ body.page-template-program-page, body.page-template-program-page-test,body.page-
     @media (min-width: 1040px) {
       width: $gutter_width * 14;
       margin: 0 0 0 auto;
-    }      
+    }
     
     .intro-text {
       color: $color__elms-gold;
@@ -188,7 +188,7 @@ body.page-template-program-page, body.page-template-program-page-test,body.page-
     
     @media (max-width: 47.999em) {
       padding: 32px;
-    } 
+    }
     a {
       color: #c3a250;
       background-image: linear-gradient(to right, #c3a250 75%, #c3a250 75%);
@@ -262,7 +262,7 @@ body.page-template-program-page, body.page-template-program-page-test,body.page-
         width: $gutter_width * 14;
         padding: $gutter_width * 2;
         margin-bottom: 0;
-      }      
+      }
     
       
       &:after {

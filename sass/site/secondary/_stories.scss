@@ -32,7 +32,7 @@
     padding: 0 0 $gutter_width;
     margin: 0;
     list-style-type: none;
-    //min-height: calc(682px - 6vw); 
+    //min-height: calc(682px - 6vw);
     position: relative;
     @media (min-width: 64em) {
       min-height: 700px;
@@ -250,7 +250,7 @@
       left:0;
       border-left: none;
       &:after {
-        content: "";
+        content: "";
         font-family: "fontawesome";
         color: white;
         display: block;
@@ -267,7 +267,7 @@
       right:0;
       border-right: none;
       &:after {
-        content: "";
+        content: "";
         font-family: "fontawesome";
         color: white;
         display: block;
