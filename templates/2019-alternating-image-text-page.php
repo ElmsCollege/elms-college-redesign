@@ -56,8 +56,6 @@ the_post();
 						echo "</li>";
 
 					endwhile;
-				else :
-				// no rows found
 				endif;
 			?>
 			</ul>

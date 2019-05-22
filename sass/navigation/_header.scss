@@ -34,12 +34,12 @@ header#masthead {
       height: $main_nav_height_mobile;
       overflow: hidden;
       
-      &.active { 
+      &.active {
         overflow: visible;
         .site-branding {
           display: none;
         }
-      }  
+      }
     }
     .site-branding {
         color: transparent;
@@ -86,20 +86,20 @@ header#masthead {
 
 
 
-/* crisis feed  */ 
+/* crisis feed  */
 .alert-bar {
-    background: #004731; 
-    -webkit-animation: colorchange 2s infinite; 
-    animation: colorchange 2s infinite; 
+    background: #004731;
+    -webkit-animation: colorchange 2s infinite;
+    animation: colorchange 2s infinite;
     padding: 1em;
     color: white;
     font-weight: bold;
     text-align: center;
     
     &.emergency {
-      background: #ca2c04; 
-      -webkit-animation: colorchangealert 2s infinite; 
-      animation: colorchangealert 2s infinite; 
+      background: #ca2c04;
+      -webkit-animation: colorchangealert 2s infinite;
+      animation: colorchangealert 2s infinite;
     }
 }
 
@@ -151,7 +151,7 @@ header#masthead {
   }
   
   @media (max-width: 770px) {
-	  padding: 2.5em 0 1.5em 0;
+	  padding: 2.5em 0 1.5em;
   }
   
   
@@ -185,7 +185,7 @@ header#masthead {
         font-family: "fontawesome";
         color: transparent;
         letter-spacing: -.5em;
-        text-shadow: none; 
+        text-shadow: none;
         padding: .5em .5em .5em 0;
         display: inline-block;
       &:after {
@@ -232,10 +232,10 @@ body.page-template-landing-page .section-heading, body.page-template-nursing-lan
 
 .video-bg {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   overflow: hidden;
   background-size: cover;
   background-color: transparent;
@@ -266,10 +266,10 @@ body.page-template-landing-page .section-heading, body.page-template-nursing-lan
   
   &:after {
       position: absolute;
-      top: 0px;
-      left: 0px;
-      bottom: 0px;
-      right: 0px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       background-image: url("images/banner-overlay.png");
       content: "";
       background-size: auto 100%;

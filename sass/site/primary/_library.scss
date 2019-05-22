@@ -11,7 +11,7 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
       width: 9.1em;
       border-left: 1px solid #DCDCDC;
       font-size: 15px;
-      padding-left: 0px;
+      padding-left: 0;
       
   }
   .site-content {
@@ -19,7 +19,7 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
   }
   .section-library-nav .menu-library-nav-container, .section-library-nav .menu-library-menu-container {
     background-color: #EBEBEB;
-    @media all and (max-width:48rem) { 
+    @media all and (max-width:48rem) {
       display: none;
     }
   	> ul#library-menu {
@@ -30,7 +30,7 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
       text-align: center;
       font-size: 14px;
       display: table;
-      text-transform:uppercase; 
+      text-transform:uppercase;
       position: relative;
       z-index: 2;
       > li {
@@ -112,9 +112,9 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
           > ul.sub-menu {
             opacity: 1;
             visibility: visible;
-            -webkit-transform: translateY(0) scaleY(1) translateZ(0px);
-            -ms-transform: translateY(0) scaleY(1) translateZ(0px);
-            transform: translateY(0) scaleY(1) translateZ(0px);
+            -webkit-transform: translateY(0) scaleY(1) translateZ(0);
+            -ms-transform: translateY(0) scaleY(1) translateZ(0);
+            transform: translateY(0) scaleY(1) translateZ(0);
             transition: .3s linear all;
           }
         }
@@ -142,7 +142,7 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
         margin: $gutter_width*.75;
         font-weight: 200;
         border-radius: 0;
-        padding: .8em 2em .7em 2em;
+        padding: .8em 2em .7em;
         font-size: 16px;
         transition: all .25s ease-in-out;
         
@@ -222,13 +222,13 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
       background-color: $color__elms-green;
       position: relative;
       @media (max-width: 47.999em) {
-        padding: 32px 32px 1px 32px;
+        padding: 32px 32px 1px;
       }
       @media (min-width: 48em) {
         width: 476px;
         padding: $gutter_width*2;
         
-      }      
+      }
       
       z-index: 1;
       color: white;
@@ -350,7 +350,7 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
           vertical-align: middle;
           padding-left: 8px;
           @media (min-width: 48em) {
-            padding-left: 0px;
+            padding-left: 0;
           }
         }
         h3 {
@@ -442,5 +442,5 @@ body.page-template-library-landing-page, body.page-template-library-interior-pag
       margin-right: 1em;
     }
   }
-} 
+}
 
