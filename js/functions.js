@@ -545,7 +545,6 @@
 		asNavFor: '.slider-for',
 		centerMode: true,
 		focusOnSelect: true,
-		infinite: false,
 		variableWidth: true,
 		lazyLoad: 'ondemand'
 	});

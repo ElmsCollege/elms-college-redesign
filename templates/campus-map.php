@@ -69,7 +69,7 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
-		echo do_shortcode("[slideshow_gallery]");
+		echo do_shortcode("[slideshow_gallery_modal]");
 	}
 }
 // Restore original Post Data
@@ -85,6 +85,15 @@ wp_reset_postdata();
 
 <script>
 jQuery(window).load(function () {
+
+	jQuery(".slider-modal").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		fade: true,
+		asNavFor: '.slider-nav',
+		lazyLoad: 'ondemand',
+	});
+
 
 	var modalDivs = jQuery("#Berchmans, #Library, #Spaulding, #Gaylord");
 
@@ -131,7 +140,7 @@ gaylord.addEventListener("click", function(){
 
 modalDivs.dialog({
   open: function( event, ui ) {
-	jQuery(".slider-for, .slider-nav").slick('setPosition');
+	jQuery(".slider-modal").slick('setPosition');
   }
 });
 

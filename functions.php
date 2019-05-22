@@ -547,3 +547,21 @@ ob_start();
 return ob_get_clean();
 }
 add_shortcode( 'slideshow_gallery', 'slideshow_shortcode' );
+
+function slideshow_shortcode_modal() {
+ob_start();
+	//slider_portfolio = Gallery Field
+	$images = get_field('slideshow_gallery');
+	$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+	if( $images ): ?>
+	   <div class="slider-modal">
+	            <?php foreach( $images as $image ): ?>
+	                <div class="slick-container">
+	                    <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+	                </div>
+	            <?php endforeach; ?>
+	    </div>
+	<?php endif;
+return ob_get_clean();
+}
+add_shortcode( 'slideshow_gallery_modal', 'slideshow_shortcode_modal' );
