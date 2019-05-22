@@ -99,7 +99,7 @@
           }
         }
         .field-title {
-          font-size: 32px; 
+          font-size: 32px;
           margin: 0 0 .25em;
           color: white;
           text-transform: none;
@@ -131,7 +131,7 @@
             color: $color__elms-gold;
             padding: .5em 1em;
             transition: all .25s ease-in-out;
-            padding: .8em 2em .7em 2em;
+            padding: .8em 2em .7em;
             font-size: 16px;
             
       
@@ -199,7 +199,7 @@
           @media all and (min-width: 768px) {
             display: block;
           }
-        } 
+        }
         .video-bg {
           position: absolute;
           top: 0;
@@ -281,7 +281,7 @@
       }
       
     }
-  } 
+  }
   
   .story-carousel {
     padding: 0;
