@@ -8,21 +8,21 @@ html {
   margin: 0 auto;
 }
 
-body.page-template-default, 
-body.page-template-current-students, 
-body.tribe-theme-gs_elms, 
-body.blog, 
-body.page-template-library-interior-page, 
-body.page-template-nursing-interior-page, 
-body.page-template-program-page, 
-body.page-template-program-page-test, 
-body.page-template-nursing-program-page, 
-body.current-students, 
-body.error404, 
+body.page-template-default,
+body.page-template-current-students,
+body.tribe-theme-gs_elms,
+body.blog,
+body.page-template-library-interior-page,
+body.page-template-nursing-interior-page,
+body.page-template-program-page,
+body.page-template-program-page-test,
+body.page-template-nursing-program-page,
+body.current-students,
+body.error404,
 body.single-student_story,
 body.single-post,
 body.search,
-body.single-tribe_venue, 
+body.single-tribe_venue,
 body.tribe-theme-gs_elms {
   
   p:last-child {
@@ -234,7 +234,7 @@ body.tribe-theme-gs_elms {
           -moz-osx-font-smoothing: grayscale;
           speak: none;
           content: "\f105";
-          margin-right: 0px;
+          margin-right: 0;
           display: block;
           line-height: inherit;
           position: absolute;
@@ -458,7 +458,7 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover {
     
   }
   .fs-dropdown-item {
-        outline: none; 
+        outline: none;
         text-transform: uppercase;
         font-family: "soleil", sans-serif;
   }

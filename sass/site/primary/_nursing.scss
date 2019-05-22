@@ -11,7 +11,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
       width: 9.1em;
       border-left: 1px solid #DCDCDC;
       font-size: 15px;
-      padding-left: 0px;
+      padding-left: 0;
   }
   .site-content {
       padding-top: 56px;
@@ -64,7 +64,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
 		    color: #c3a250;
 		    padding: .5em 1em;
 		    transition: all .25s ease-in-out;
-		    padding: .8em 2em .7em 2em;
+		    padding: .8em 2em .7em;
 		    font-size: 16px;
 		    display: inline-block;
 		    font-weight:bold;
@@ -82,7 +82,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
   }
   .section-nursing-nav .menu-nursing-nav-container, .section-nursing-nav .menu-nursing-menu-container {
     background-color: #EBEBEB;
-    @media all and (max-width:48rem) { 
+    @media all and (max-width:48rem) {
       display: none;
     }
   	> ul#nursing-menu {
@@ -93,7 +93,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
       text-align: center;
       font-size: 14px;
       display: table;
-      text-transform:uppercase; 
+      text-transform:uppercase;
       position: relative;
       z-index: 2;
       > li {
@@ -177,9 +177,9 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
           > ul.sub-menu {
             opacity: 1;
             visibility: visible;
-            -webkit-transform: translateY(0) scaleY(1) translateZ(0px);
-            -ms-transform: translateY(0) scaleY(1) translateZ(0px);
-            transform: translateY(0) scaleY(1) translateZ(0px);
+            -webkit-transform: translateY(0) scaleY(1) translateZ(0);
+            -ms-transform: translateY(0) scaleY(1) translateZ(0);
+            transform: translateY(0) scaleY(1) translateZ(0);
             transition: .3s linear all;
           }
         }
@@ -211,7 +211,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
     .field-calls_to_action_title {
         margin: 0 auto;
         text-align: center;
-        color: white; 
+        color: white;
         font-size: 56px;
         line-height: 1em;
     }
@@ -308,7 +308,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
       text-decoration: none;
       text-transform: uppercase;
       margin: 1.4em auto;
-      padding: .8em 0 .7em 0;
+      padding: .8em 0 .7em;
       font-size: 16px;
       font-weight: 700;
       width: 13em;
@@ -324,7 +324,7 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
           font-size: 1.8em;
       }
       .calls-to-action-title {
-          padding: 32px 0 32px;
+          padding: 32px 0;
       }
     }
   }
@@ -344,8 +344,8 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
     ul.widgets {
       padding: 0;
     }
-    .widget-features .widget-image i { 
-      position: relative; 
+    .widget-features .widget-image i {
+      position: relative;
       display: inline-block;
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -375,5 +375,5 @@ body.page-template-nursing-landing-page, body.page-template-nursing-interior-pag
       margin-right: 1em;
     }
   }
-} 
+}
 
