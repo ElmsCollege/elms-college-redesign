@@ -40,6 +40,12 @@ get_header(); ?>
 	height: 100%;
 	opacity:.7;
 }
+.slick-slide {
+	margin: 0 10px;
+	display: inline-block !important;
+	float: none;
+	vertical-align: middle;
+}
 </style>
 
 <div class="section-heading">
@@ -89,9 +95,7 @@ jQuery(window).load(function () {
 	jQuery(".slider-modal").slick({
 		centerMode: true,
 		centerPadding: '75px',
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		fade: true,
+		slidesToShow: 1,
 		lazyLoad: 'ondemand',
 		variableWidth: true,
 	});
