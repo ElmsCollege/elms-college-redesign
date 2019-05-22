@@ -109,6 +109,8 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gs_elms_scripts() {
+	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.8.1', 'all');
+	wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.8.1', 'all');
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
 
 	wp_enqueue_script( 'gs_elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );
@@ -133,6 +135,8 @@ function gs_elms_scripts() {
   wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
 
   wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
+	wp_enqueue_script( 'slickjs', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -516,7 +520,7 @@ add_filter('wpseo_title', 'tribe_add_date_to_title');
 
 add_filter('the_content', 'specific_no_wpautop', 9);
 function specific_no_wpautop($content) {
-    if (is_page (array('10133','10245','16684') )) { // or whatever other condition you like
+    if (is_page (array('10133','10245','16684','36506') )) { // or whatever other condition you like
         remove_filter( 'the_content', 'wpautop' );
         return $content;
     } else {
@@ -530,3 +534,46 @@ return '... <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'read
 add_filter('excerpt_more', 'excerpt_readmore');
 
 add_filter('acf/format_value/type=text', 'do_shortcode');
+
+// Add Shortcode that changes the ACF gallery into a slideshow
+function slideshow_shortcode() {
+ob_start();
+	//slider_portfolio = Gallery Field
+	$images = get_field('slideshow_gallery');
+	if( $images ): ?>
+	   <div class="slider-for">
+	            <?php foreach( $images as $image ): ?>
+	                <div class="slick-container">
+	                    <?php echo wp_get_attachment_image( $image['ID'], "large" ); ?>
+	                </div>
+	            <?php endforeach; ?>
+	    </div>
+	   <div class="slider-nav">
+	            <?php foreach( $images as $image ): ?>
+	                <div>
+	                    <?php echo wp_get_attachment_image( $image['ID'], "thumbnail" ); ?>
+	                </div>
+	            <?php endforeach; ?>
+	    </div>
+	<?php endif;
+return ob_get_clean();
+}
+add_shortcode( 'slideshow_gallery', 'slideshow_shortcode' );
+
+// Add Shortcode that changes the ACF gallery into a slideshow
+function slideshow_shortcode_popup() {
+ob_start();
+	//slider_portfolio = Gallery Field
+	$images = get_field('slideshow_gallery');
+	if( $images ): ?>
+	   <div class="slider-nav">
+	            <?php foreach( $images as $image ): ?>
+	                <div>
+	                    <?php echo wp_get_attachment_image( $image['ID'], "thumbnail" ); ?>
+	                </div>
+	            <?php endforeach; ?>
+	    </div>
+	<?php endif;
+return ob_get_clean();
+}
+add_shortcode( 'slideshow_gallery_popup', 'slideshow_shortcode_popup' );

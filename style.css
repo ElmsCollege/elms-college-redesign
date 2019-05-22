@@ -3761,3 +3761,23 @@ th .smallText{
 	display:table;
 	margin:auto;
 }
+.slick-prev:before,.slick-next:before{
+	color:#004731
+}
+.slider-for .slick-slide img {
+	display: table;
+	margin: 0 auto;
+}
+.slider-nav .slick-slide {
+	padding: 0 5px;
+}
+.ui-widget-content{
+	border:none;
+}
+.ui-widget-header{
+	background-color:unset;
+	border:none;	
+}
+.ui-dialog-titlebar-close{
+	float:right;
+}
