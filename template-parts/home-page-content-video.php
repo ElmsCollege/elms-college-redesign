@@ -128,7 +128,7 @@ setup_postdata($post);
         </div>
         <?php if( get_field("hero_overlay") ): ?>
             <div id="hero-overlay"><?php the_field("hero_overlay"); ?>
-                <a href="#highlight_news"><i class="fas fa-angle-down"></i></a>
+                <a href="#highlight_news"><i class="fas fa-angle-down" aria-hidden="true"></i></a>
             </div>
         <?php endif; ?>
         

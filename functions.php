@@ -359,7 +359,7 @@ function gs_is_active_sidebar () {
 }
 
 function rss_link ($query) {
-  return '<a href="'.'/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank"><i class="fas fa-rss"></i></a>';
+  return '<a href="'.'/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank" aria-label="RSS link"><i class="fas fa-rss" aria-hidden="true"></i></a>';
 }
 
 
