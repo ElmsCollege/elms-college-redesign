@@ -783,19 +783,10 @@ body.mobile-or-library header#masthead .site-branding .site-title{height:43px;wi
 	}
 }
 .section-heading .field-title .rss-link{
-	font-family:"fontawesome";
-	color:transparent;
 	letter-spacing:-.5em;
 	text-shadow:none;
 	display:inline-block;
-}
-.section-heading .field-title .rss-link:after{
-	content:"";
-	font-size:.5em;
-	line-height:2em;
-	display:inline-block;
-	vertical-align:top;
-	color:white;
+	color: white;
 }
 @media (min-width: 48em){
 	.section-heading .field-title{
