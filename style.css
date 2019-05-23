@@ -2648,15 +2648,8 @@ body.page-template-nursing-secondary-landing-page .calls-to-action a:hover{
 	color:#000000 !important
 }
 body.page-template-nursing-secondary-landing-page .program-link{
-	font-family:"fontawesome";
-	font-size:18px;
-	font-weight:normal;
 	text-transform:uppercase;
 	color:#046B99
-}
-body.page-template-nursing-secondary-landing-page .program-link:after{
-	margin-left:0.5em;
-	content:"\f138"
 }
 body.page-template-nursing-secondary-landing-page .program-track-title{
 	margin:0 auto 32px;
@@ -2682,9 +2675,6 @@ body.page-template-nursing-secondary-landing-page .field-excerpt{
 	body.page-template-nursing-secondary-landing-page .field-excerpt{
 		padding-bottom:32px
 	}
-}
-body.page-template-nursing-secondary-landing-page .elmsFont{
-	font-family:"soleil", sans-serif
 }
 body.page-template-nursing-secondary-landing-page .program-title{
 	color:#115438;
@@ -2770,23 +2760,8 @@ body.page-template-nursing-secondary-landing-page .drop-down-content{
 	position:absolute;
 	width:100%
 }
-body.page-template-nursing-secondary-landing-page .drop-down-content a,body.page-template-nursing-secondary-landing-page .drop-down-button{
-	width:100%;
-	color:black;
-	padding:12px 16px;
-	text-decoration:none;
-	display:block;
-	border:3px solid lightgray;
-	background:white;
-	font-weight:bold
-}
 body.page-template-nursing-secondary-landing-page .drop-down-content a{
 	margin-top:-3px
-}
-body.page-template-nursing-secondary-landing-page .drop-down-button:after{
-	margin-left:6.5em;
-	content:"\f107";
-	font-family:"fontawesome"
 }
 body.page-template-nursing-secondary-landing-page .show{
 	display:block
