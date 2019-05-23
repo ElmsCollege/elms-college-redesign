@@ -1214,7 +1214,61 @@ body.page-template-home-page .social-media .social-media-inner{
 	overflow:hidden;
 	pointer-events:none
 }
-@media all and (min-width: 768px){.stories .story-feature .story-full .story-image .bg-wrapper{display:block}}.stories .story-feature .story-full .story-image .video-bg{position:absolute;top:0;left:0;z-index:1;min-height:100%;min-width:100%;-webkit-transform-style:preserve-3d}.stories .story-feature .story-full .story-image .video-bg video{position:absolute;top:0;left:0;z-index:1;min-height:100%;min-width:100%;height:auto;width:100%;object-fit:cover}.stories .story-feature-nav{display:block;position:absolute;color:transparent;width:64px;height:64px;background:#115438;border:2px solid white;border-sizing:border-box;top:25%;top:calc(70px + 16vw - 32px)}@media (min-width: 64em){.stories .story-feature-nav{display:none}}.stories .story-feature-nav.nav-prev:hover,.stories .story-feature-nav.nav-next:hover{color:transparent}.stories .story-feature-nav.nav-prev{left:0;border-left:none}.stories .story-feature-nav.nav-prev:after{content:"";font-family:"fontawesome";color:white;display:block;position:absolute;width:100%;height:100%;vertical-align:center;text-align:center;font-size:32px;top:6px}.stories .story-feature-nav.nav-next{right:0;border-right:none}.stories .story-feature-nav.nav-next:after{content:"";font-family:"fontawesome";color:white;display:block;position:absolute;width:100%;height:100%;vertical-align:center;text-align:center;font-size:32px;top:6px}
+@media all and (min-width: 768px){.stories .story-feature .story-full .story-image .bg-wrapper{display:block}}.stories .story-feature .story-full .story-image .video-bg{position:absolute;top:0;left:0;z-index:1;min-height:100%;min-width:100%;-webkit-transform-style:preserve-3d}.stories .story-feature .story-full .story-image .video-bg video{position:absolute;top:0;left:0;z-index:1;min-height:100%;min-width:100%;height:auto;width:100%;object-fit:cover}
+.stories .story-feature-nav{
+	display:block;
+	position:absolute;
+	color:transparent;
+	width:64px;
+	height:64px;
+	background:#115438;
+	border:2px solid white;
+	border-sizing:border-box;
+	top:25%;
+	top:calc(70px + 16vw - 32px)
+}
+@media (min-width: 64em){
+	.stories .story-feature-nav{
+		display:none
+	}
+}
+.stories .story-feature-nav.nav-prev:hover,.stories .story-feature-nav.nav-next:hover{
+	color:transparent
+}
+.stories .story-feature-nav.nav-prev{
+	left:0;
+	border-left:none
+}
+.stories .story-feature-nav.nav-prev:after{
+	content:"\f060";
+	font-family:"Font Awesome 5 Free";
+	color:white;
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	vertical-align:center;
+	text-align:center;
+	font-size:32px;
+	top:6px
+}
+.stories .story-feature-nav.nav-next{
+	right:0;
+	border-right:none
+}
+.stories .story-feature-nav.nav-next:after{
+	content:"\f061";
+	font-family:"Font Awesome 5 Free";
+	color:white;
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	vertical-align:center;
+	text-align:center;
+	font-size:32px;
+	top:6px
+}
 .stories .story-carousel{
 	padding:0;
 	margin:0;
