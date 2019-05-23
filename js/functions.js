@@ -316,7 +316,7 @@
         }
         
       });
-      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon'><i class="fas fa-search"></i></span>");
+      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon'><i class='fas fa-search'></i></span>");
       $(this).after("<ul class='sub-menu for-search'><li id='menu-item-search' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-search'></li></ul>");
       $("#menu-item-search").append($("#menu-search-dropdown"));
       $("#menu-search-dropdown").show();
