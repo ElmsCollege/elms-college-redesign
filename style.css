@@ -403,7 +403,7 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li.search-item .search-realtext{
 	display:block;
 	position:absolute;
-	bottom:1.25em;
+	bottom:1em;
 	left:0;
 	width:100%
 }
@@ -412,6 +412,9 @@ a:hover,a:active{
 	line-height:14px;
 	width:2em;
 	display:inline-block
+}
+.menu-special-menu-container>ul>li.search-item .search-icon .fas{
+	padding-bottom:14px;
 }
 .menu-special-menu-container>ul>li.search-item>ul.sub-menu{
 	opacity:1;
@@ -471,7 +474,6 @@ a:hover,a:active{
 	position:absolute;
 	right:8px;
 	top:12px;
-	color:transparent;
 	text-shadow:none;
 	font-size:26px;
 }
