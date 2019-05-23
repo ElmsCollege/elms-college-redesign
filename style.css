@@ -408,26 +408,10 @@ a:hover,a:active{
 	width:100%
 }
 .menu-special-menu-container>ul>li.search-item .search-icon{
-	font-family:"fontawesome";
 	font-size:28px;
 	line-height:14px;
 	width:2em;
 	display:inline-block
-}
-.menu-special-menu-container>ul>li.search-item .search-icon:after{
-	content:"";
-	color:transparent;
-	text-shadow:none;
-	background-image:url("images/icon-search.png");
-	background-image:url("images/icon-search.svg");
-	background-size:100%;
-	background-repeat:no-repeat
-}
-@media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-	.menu-special-menu-container>ul>li.search-item .search-icon:after{
-		background-image:url("images/icon-search@2x.png");
-		background-image:url("images/icon-search.svg")
-	}
 }
 .menu-special-menu-container>ul>li.search-item>ul.sub-menu{
 	opacity:1;
@@ -479,27 +463,17 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li.search-item>ul.sub-menu form .search-submit{
 	border:none;
 	line-height:24px;
-	display:table-cell;
 	border-radius:0;
 	-webkit-appearance:none;
 	-moz-appearance:none;
-	background:transparent;
-	font-family:"fontawesome";
 	box-shadow:none;
 	padding:0;
-	flex-grow:0;
-	margin-right:.5em;
 	position:absolute;
 	right:8px;
 	top:12px;
 	color:transparent;
 	text-shadow:none;
-	background-image:url(images/icon-search@2x.png);
-	background-size:100%;
-	background-repeat:no-repeat;
-	font-size:0;
-	width:24px;
-	height:24px
+	font-size:26px;
 }
 .menu-special-menu-container>ul>li:last-child{
 	background-color:#c3a250;
