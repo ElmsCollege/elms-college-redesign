@@ -1481,28 +1481,22 @@ p:last-child{
 	text-transform:uppercase;
 	font-weight:400;
 	border-top:1px solid white;
-	padding-top:32px;
-	padding-left:32px;
+	padding-top:15px;
 	position:relative
 }
 .field-related-events a.show-more:before,.field-related-events a.show-more:visited:before,.field-related-events a.show-less:before,.field-related-events a.show-less:visited:before{
 	font-family:"Font Awesome 5 Free";
 	font-weight:800;
-	font-size:37px;
+	font-size:30px;
 	text-decoration:inherit;
 	font-style:normal;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
-	speak:none;
 	content:"\f105";
-	margin-right:0px;
-	display:block;
+	display:inline-block;
 	line-height:inherit;
-	position:absolute;
-	left:0;
-	top:32px;
-	bottom:0;
-	width:32px;
+	width:15px;
+	vertical-align:bottom;
 }
 .field-related-events a.show-less{
 	display:none;
@@ -1668,9 +1662,9 @@ button.fs-dropdown-item:hover{
 	border-left:none;
 	border-right:none;
 	border-top:none;
-	content:'/f078';
+	content:"\f078";
 	font-family:"Font Awesome 5 Free";
-	font-size:24px;
+	font-size:20px;
 	color:#fff;
 }
 body.page-template-landing-page .opening-menu,body.page-template-nursing-secondary-landing-page .opening-menu,body.page-template-nursing-landing-page-2 .opening-menu{
