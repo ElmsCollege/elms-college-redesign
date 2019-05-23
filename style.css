@@ -453,7 +453,7 @@ a:hover,a:active{
 	border:none;
 	margin-left:16px;
 	background-color:transparent;
-	width:100%;
+	width:90%;
 	transition:all ease-in-out .5s;
 	border-radius:0;
 	padding:0;
@@ -476,6 +476,7 @@ a:hover,a:active{
 	top:12px;
 	text-shadow:none;
 	font-size:26px;
+	background-color:unset;
 }
 .menu-special-menu-container>ul>li:last-child{
 	background-color:#c3a250;
