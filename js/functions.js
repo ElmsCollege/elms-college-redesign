@@ -230,7 +230,7 @@
         }
       });
       
-			$('<select class="opening-select"></select>').insertBefore( $('.site-main') );
+			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
 
 			$('ul.parent-sidebar-menu li').each(function(index) {
 				var value = $($(this).find('a').get(0)).text();
