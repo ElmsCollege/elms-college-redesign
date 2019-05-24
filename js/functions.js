@@ -200,7 +200,7 @@
     
     // inter ior landing page and interior generic mobile dropdowns.
 		if( $('ul.opening-menu').length ) {
-			$('<select class="opening-select"></select>').insertAfter( $('ul.opening-menu') );
+			$('<select class="opening-select" aria-label="Navigation options"></select>').insertAfter( $('ul.opening-menu') );
 
 			$('ul.opening-menu li').each(function(index) {
 				var value = $(this).find('a').text();
@@ -230,7 +230,7 @@
         }
       });
       
-			$('<select class="opening-select"></select>').insertBefore( $('.site-main') );
+			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
 
 			$('ul.parent-sidebar-menu li').each(function(index) {
 				var value = $($(this).find('a').get(0)).text();
@@ -316,7 +316,7 @@
         }
         
       });
-      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon'></span>");
+      $(this).html("<span class='search-realtext'>"+$(this).text()+"</span><span class='search-icon' aria-label='Open search form'><i class='fas fa-search' aria-hidden='true'></i></span>");
       $(this).after("<ul class='sub-menu for-search'><li id='menu-item-search' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-search'></li></ul>");
       $("#menu-item-search").append($("#menu-search-dropdown"));
       $("#menu-search-dropdown").show();
