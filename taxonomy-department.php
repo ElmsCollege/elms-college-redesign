@@ -29,7 +29,7 @@ get_header(); ?>
 	<div id="primary" class="content-area pure-g">
 		<main id="main" class="program-page-main site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3" role="main">
 <a href="/directory/">
-	<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> Back to the directory
+	<i class="fas fa-chevron-left" aria-hidden="true"></i><i class="fas fa-chevron-left" aria-hidden="true"></i> Back to the directory
 </a>
 
 	<?php echo term_description(); ?>

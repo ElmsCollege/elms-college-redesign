@@ -64,7 +64,7 @@ get_header("nursing");
 		    <div style="display:none" id="mission-statement-pt-2">
 		    </div>
         </div>
-        <p class="program-link mobileOnly" id="read-more-button" onClick="showText()"><span id="read-more-text" class="elmsFont">Read More</span></p>
+        <p class="program-link mobileOnly" id="read-more-button" onClick="showText()"><span id="read-more-text">Read More <i class="fas fa-chevron-circle-right"></i></span></p>
       </div>
       <script>
 	      function showText() {
