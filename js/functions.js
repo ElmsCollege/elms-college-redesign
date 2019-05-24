@@ -200,7 +200,7 @@
     
     // inter ior landing page and interior generic mobile dropdowns.
 		if( $('ul.opening-menu').length ) {
-			$('<select class="opening-select"></select>').insertAfter( $('ul.opening-menu') );
+			$('<select class="opening-select" aria-label="Navigation options"></select>').insertAfter( $('ul.opening-menu') );
 
 			$('ul.opening-menu li').each(function(index) {
 				var value = $(this).find('a').text();
