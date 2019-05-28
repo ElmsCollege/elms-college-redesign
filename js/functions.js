@@ -1,7 +1,6 @@
 (function($, window, document, undefined) {
   var $win = $(window);
   var $doc = $(document);
-  var winH = $win.height();
   
   $.fn.getIndex = function(){
   	  var $p=$(this).parent().children();
@@ -33,25 +32,6 @@
       createCookie(name,"",-1);
   };
   
-  function check_visited_links() {
-      var visited_links = JSON.parse(localStorage.getItem('visited_links')) || [];
-      var links = document.getElementsByTagName('a');
-      for (var i = 0; i < links.length; i++) {
-          var that = links[i];
-          that.onclick = function() {
-              var clicked_url = this.href;
-              if (visited_links.indexOf(clicked_url) == -1) {
-                  visited_links.push(clicked_url);
-                  localStorage.setItem('visited_links', JSON.stringify(visited_links));
-              }
-          };
-          if (visited_links.indexOf(that.href) !== -1) {
-              that.className += ' visited';
-          }
-      }
-  }
-  
-
   $doc.ready(function() {
     
     // mobile menu submenu toggle
@@ -95,27 +75,6 @@
     $(window).resize(function(){
       $('img.js-focal-point-image').responsify();
     });
-
-/*    
-    var verticallyCenterStoryContent = function () {
-      if (Modernizr.mq("only screen and (min-width: 64em)")) {
-        $(".stories .story-feature .story-full .text-content").each ( function () {
-          $(this).css("bottom", (($($(this).parent()).height() - $(this).height())*.325)+"px" );
-        });
-        $(".stories .field-excerpt, .stories .field-permalink").show();
-      }
-      else {
-        $(".stories .story-feature .story-full .text-content").css("bottom", "" );
-        $(".stories.manual .story-feature .story-full").show();
-      }
-    }
-    verticallyCenterStoryContent();
-    $(window).resize(verticallyCenterStoryContent);
-    $(".story-tab").click( function () {
-      setTimeout(verticallyCenterStoryContent, 10);
-    });
-*/
-    
       
     // library menu item copying into main nav
     var libraryItems = [];
@@ -387,8 +346,6 @@
 
     //resize library homepage area on window resize.
     var resizeLibraryHome = function () {
-      
-      var width = $win.width();
       var height = $win.height();
       var columns = $(".page-template-library-landing-page .section-heading-as-content");
       var existingPadding = $('.site-main').offset().top + $(".calls-to-action-feature").height();
