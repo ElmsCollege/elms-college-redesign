@@ -227,7 +227,8 @@ a:hover,a:active{
 	width:100%
 }
 .menu-main-nav-container,.menu-special-menu-container{
-	display:inline-block;
+	float:right;
+	text-align:right
 }
 .menu-main-nav-container>ul,.menu-special-menu-container>ul{
 	list-style:none;
