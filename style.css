@@ -1111,9 +1111,6 @@ body.active,html.active{
 	margin:0 auto;
 	max-width:36em;
 	text-align:center;
-	background: url('images/social-media-icons.png') no-repeat top left;
-	width: 84px;
-	height: 84px;
 }
 .social-media .social-media-icons .social-media-icon-link{
 	text-indent:3000px;
@@ -1126,7 +1123,10 @@ body.active,html.active{
 	border-radius:9000px;
 	background-size:42px;
 	background-repeat:no-repeat;
-	background-position:50%
+	background-position:50%;
+	background: url('images/social-media-icons.png') no-repeat top left;
+	width: 84px;
+	height: 84px;
 }
 .social-media .social-media-icons .social-media-icon-link.facebook{
 	background-position: 0 -188px;
