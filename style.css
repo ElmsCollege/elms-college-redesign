@@ -1124,9 +1124,6 @@ body.active,html.active{
 	background-size:42px;
 	background-repeat:no-repeat;
 	background-position:50%;
-	background: url('images/social-media-icons.png') no-repeat top left;
-	width: 84px;
-	height: 84px;
 }
 .social-media .social-media-icons .social-media-icon-link.facebook{
 	background-image:url("images/icon-facebook.png")
