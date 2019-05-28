@@ -1111,6 +1111,9 @@ body.active,html.active{
 	margin:0 auto;
 	max-width:36em;
 	text-align:center;
+	background: url('images/social-media-icons.png') no-repeat top left;
+	width: 84px;
+	height: 84px;
 }
 .social-media .social-media-icons .social-media-icon-link{
 	text-indent:3000px;
@@ -1126,13 +1129,13 @@ body.active,html.active{
 	background-position:50%
 }
 .social-media .social-media-icons .social-media-icon-link.facebook{
-	background-image:url("images/icon-facebook.png")
+	background-position: 0 -188px;
 }
 .social-media .social-media-icons .social-media-icon-link.twitter{
-	background-image:url("images/icon-twitter.png")
+	background-position: 0 -94px;
 }
 .social-media .social-media-icons .social-media-icon-link.youtube{
-	background-image:url("images/icon-youtube.png")
+	background-position: 0 -282px;
 }
 .social-media .social-media-icons .social-media-icon-link.flickr{
 	background-image:url("images/icon-flickr.png")
@@ -1141,7 +1144,7 @@ body.active,html.active{
 	background-image:url("images/icon-linkedin.png")
 }
 .social-media .social-media-icons .social-media-icon-link.instagram{
-	background-image:url("images/icon-instagram.png")
+	background-position: 0 0;
 }
 .social-media .social-media-icons .social-media-icon-link.pinterest{
 	background-image:url("images/icon-pinterest.png")
