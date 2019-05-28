@@ -829,19 +829,10 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 	width:calc(100% - 68px - 64px);
 	max-width:204px;
 }
-body.mobile-or-library.page-template-nursing-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
-body.mobile-or-library.page-template-nursing-intermediary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
-body.mobile-or-library.page-template-nursing-secondary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
-body.mobile-or-library.page-template-nursing-interior-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
-body.mobile-or-library.page-template-nursing-program-page .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after,
-body.mobile-or-library.page-template-nursing-landing-page-2 .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after{
+#nursingPage .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after{
 	background-image:url(images/icon-menu-more-white.png);
 }
-body.mobile-or-library.page-template-nursing-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
-body.mobile-or-library.page-template-nursing-intermediary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
-body.mobile-or-library.page-template-nursing-secondary-landing-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
-body.mobile-or-library.page-template-nursing-interior-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,
-body.mobile-or-library.page-template-nursing-program-page .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after,body.mobile-or-library.page-template-nursing-landing-page-2 .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
+#nursingPage .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
 	background-image:url(images/icon-menu-less-white.png);
 }
 .field-sidebar-menu-items{
@@ -3472,21 +3463,21 @@ body.page-template-program-page .quick-info h2:before,body.page-template-nursing
 body.page-template-program-page .quick-info p,body.page-template-nursing-program-page .quick-info p{
 	margin:0;
 }
-body.page-template-program-page .field-required-credits,body.page-template-program-page .field-degree-option,body.page-template-program-page .field-program-formats,body.page-template-program-page .field-misc-quick-info,body.page-template-nursing-program-page .field-required-credits,body.page-template-nursing-program-page .field-degree-option,body.page-template-nursing-program-page .field-program-formats,body.page-template-nursing-program-page .field-misc-quick-info{
+.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	font-size:18px;
 	padding:10px 25px;
 }
-body.page-template-program-page .field-required-credits ul:last-child,body.page-template-program-page .field-required-credits ol:last-child,body.page-template-program-page .field-degree-option ul:last-child,body.page-template-program-page .field-degree-option ol:last-child,body.page-template-program-page .field-program-formats ul:last-child,body.page-template-program-page .field-program-formats ol:last-child,body.page-template-program-page .field-misc-quick-info ul:last-child,body.page-template-program-page .field-misc-quick-info ol:last-child,body.page-template-nursing-program-page .field-required-credits ul:last-child,body.page-template-nursing-program-page .field-required-credits ol:last-child,body.page-template-nursing-program-page .field-degree-option ul:last-child,body.page-template-nursing-program-page .field-degree-option ol:last-child,body.page-template-nursing-program-page .field-program-formats ul:last-child,body.page-template-nursing-program-page .field-program-formats ol:last-child,body.page-template-nursing-program-page .field-misc-quick-info ul:last-child,body.page-template-nursing-program-page .field-misc-quick-info ol:last-child{
+.field-required-credits ul:last-child,.field-required-credits ol:last-child,.field-degree-option ul:last-child,.field-degree-option ol:last-child,.field-program-formats ul:last-child,.field-program-formats ol:last-child,.field-misc-quick-info ul:last-child,.field-misc-quick-info ol:last-child{
 	margin-bottom:0
 }
-body.page-template-program-page .field-required-credits h3,body.page-template-program-page .field-degree-option h3,body.page-template-program-page .field-program-formats h3,body.page-template-program-page .field-misc-quick-info h3,body.page-template-nursing-program-page .field-required-credits h3,body.page-template-nursing-program-page .field-degree-option h3,body.page-template-nursing-program-page .field-program-formats h3,body.page-template-nursing-program-page .field-misc-quick-info h3{
+.field-required-credits h3,.field-degree-option h3,.field-program-formats h3,.field-misc-quick-info h3{
 	color:#115438;
 	text-transform:uppercase;
 	font-size:16px;
 	font-weight:bold;
 	margin:1em 0 0
 }
-body.page-template-program-page .field-required-credits h3:first-child,body.page-template-program-page .field-degree-option h3:first-child,body.page-template-program-page .field-program-formats h3:first-child,body.page-template-program-page .field-misc-quick-info h3:first-child,body.page-template-nursing-program-page .field-required-credits h3:first-child,body.page-template-nursing-program-page .field-degree-option h3:first-child,body.page-template-nursing-program-page .field-program-formats h3:first-child,body.page-template-nursing-program-page .field-misc-quick-info h3:first-child{
+.field-required-credits h3:first-child,.field-degree-option h3:first-child,.field-program-formats h3:first-child,.field-misc-quick-info h3:first-child{
 	margin-top:0
 }
 .field-related-majors{
@@ -3536,7 +3527,7 @@ body.page-template-program-page .field-required-credits h3:first-child,body.page
 	margin-left:1em;
 }
 @media (min-width: 48em){
-	body.page-template-program-page .field-related-majors ul li a:after,body.page-template-nursing-program-page .field-related-majors ul li a:after{
+	.field-related-majors ul li a:after{
 		position:relative;
 		right:-3%;
 		top:0;
@@ -3563,8 +3554,7 @@ body.page-template-program-page .field-required-credits h3:first-child,body.page
 	line-height: 1.5em;
 	color:#fff;
 }
-
-body.page-template-program-page .lower-story .field-lower-story-content,body.page-template-nursing-program-page .lower-story .field-lower-story-content{
+.lower-story .field-lower-story-content{
 	min-height:155px;
 	font-size:18px;
 }
@@ -3598,16 +3588,16 @@ body.page-template-program-page .lower-story .field-lower-story-content,body.pag
 	right:calc(50% - 30px);
 	top:-40px;
 }
-body.page-template-program-page .section-heading-as-content .text-content .pre-title,body.page-template-nursing-program-page .section-heading-as-content .text-content .pre-title{
+.section-heading-as-content .text-content .pre-title{
 	font-size:24px;
 	line-height:1em;
 	text-align:left;
 }
-body.page-template-program-page .section-heading-as-content .text-content .pre-title:after,body.page-template-program-page .section-heading-as-content .text-content .pre-title:before,body.page-template-nursing-program-page .section-heading-as-content .text-content .pre-title:after,body.page-template-nursing-program-page .section-heading-as-content .text-content .pre-title:before{
+.section-heading-as-content .text-content .pre-title:after,.section-heading-as-content .text-content .pre-title:before{
 	content:none
 }
 @media (min-width: 1040px){
-	body.page-template-program-page .section-heading-as-content .text-content .pre-title,body.page-template-nursing-program-page .section-heading-as-content .text-content .pre-title{
+	.section-heading-as-content .text-content .pre-title{
 		font-size:28px
 	}
 }
@@ -3618,14 +3608,14 @@ body.page-template-program-page .section-heading-as-content .text-content .pre-t
 .section-heading-as-content .text-content p{
 	margin-bottom:1em;
 }
-body.page-template-program-page .section-heading-as-content .text-content .field-body,body.page-template-nursing-program-page .section-heading-as-content .text-content .field-body{
+.section-heading-as-content .text-content .field-body{
 	font-size:18px;
 }
-body.page-template-program-page .section-heading-as-content .text-content .field-body a,body.page-template-nursing-program-page .section-heading-as-content .text-content .field-body a{
+.section-heading-as-content .text-content .field-body a{
 	color:#c3a250;
 	text-decoration:none;
 }
-body.page-template-program-page .section-heading-as-content .text-content .field-body a:hover,body.page-template-nursing-program-page .section-heading-as-content .text-content .field-body a:hover{
+.section-heading-as-content .text-content .field-body a:hover{
 	color:#fff;
 }
 .section-heading-as-content .text-content ul, .quick-info ul {
@@ -3939,7 +3929,7 @@ a.buttonLink.grouped{
 #primary {
 	padding: 20px 0;
 }
-.page-template-nursing-intermediary-landing-page #primary, .page-template-templatesnursing-secondary-landing-page-php #primary{
+#nursingPage #primary{
 	padding: unset;
 }
 @media only screen and (max-width: 1040px) {
