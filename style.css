@@ -1129,13 +1129,13 @@ body.active,html.active{
 	height: 84px;
 }
 .social-media .social-media-icons .social-media-icon-link.facebook{
-	background-position: 0 -188px;
+	background-image:url("images/icon-facebook.png")
 }
 .social-media .social-media-icons .social-media-icon-link.twitter{
-	background-position: 0 -94px;
+	background-image:url("images/icon-twitter.png")
 }
 .social-media .social-media-icons .social-media-icon-link.youtube{
-	background-position: 0 -282px;
+	background-image:url("images/icon-youtube.png")
 }
 .social-media .social-media-icons .social-media-icon-link.flickr{
 	background-image:url("images/icon-flickr.png")
@@ -1144,7 +1144,7 @@ body.active,html.active{
 	background-image:url("images/icon-linkedin.png")
 }
 .social-media .social-media-icons .social-media-icon-link.instagram{
-	background-position: 0 0;
+	background-image:url("images/icon-instagram.png")
 }
 .social-media .social-media-icons .social-media-icon-link.pinterest{
 	background-image:url("images/icon-pinterest.png")
