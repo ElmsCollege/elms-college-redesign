@@ -638,7 +638,7 @@ a:hover,a:active{
 		font-size:.9em
 	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li>a,body:not(.mobile-or-library) .main-navigation .menu-special-menu-container>ul>li>a{
-		padding:26px .75em;
+		padding:23px .75em;
 		letter-spacing:-.325px;
 		font-size:12px
 	}
