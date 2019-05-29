@@ -32,7 +32,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 .no-touch .fs-dropdown-selected:hover{color:#222222}.no-touch .fs-dropdown-disabled .fs-dropdown-selected:hover{color:#cccccc}.fs-dropdown-options{position:absolute;top:100%;left:0;background-color:#ffffff;display:none;margin:0;overflow:auto;overflow-x:hidden;padding:0;z-index:50}.fs-dropdown-options.fs-scrollbar{position:absolute}.no-opacity .fs-dropdown-options{width:auto}.fs-dropdown-group{border-bottom:1px solid #cccccc;color:#999999;display:block;font-size:11px;padding:10px 15px;text-transform:uppercase}.fs-dropdown-item{width:100%;background:#ffffff;border-bottom:1px solid #cccccc;color:#222222;cursor:pointer;display:block;font-size:14px;margin:0;height:40px;line-height:40px;overflow:hidden;padding:0 15px;text-align:left;text-decoration:none;text-overflow:ellipsis}.fs-dropdown-item_placeholder{display:none}.fs-dropdown-item_selected{background:#eeeeee}.fs-dropdown-item_disabled{color:#999999;cursor:default}.fs-dropdown-item:first-child{border-radius:0}.fs-dropdown-item:last-child{border-bottom:0;border-radius:0 0 3px 3px}.no-touch .fs-dropdown-item:hover,.no-touch .fs-dropdown-item_selected:hover{color:#222222;background-color:#dddddd;border-color:#cccccc}.fs-dropdown-item_disabled,.no-touch .fs-dropdown-item_disabled:hover{color:#cccccc;background-color:#ffffff;border-color:#cccccc}.fs-dropdown-open{z-index:3}.fs-dropdown-open .fs-dropdown-options{display:block;border-radius:0 0 3px 3px}.fs-dropdown-open .fs-dropdown-selected{z-index:51;border-radius:3px 3px 0 0}.fs-dropdown-open .fs-dropdown-selected,.fs-dropdown-focus .fs-dropdown-selected{background-color:#ffffff;box-shadow:0 0 5px rgba(0,0,0,0.1)}.fs-dropdown-cover.fs-dropdown-open .fs-dropdown-selected{z-index:49}.fs-dropdown-cover .fs-dropdown-options{top:0;border-radius:3px;border-width:1px}.fs-dropdown-cover .fs-dropdown-item:first-child{border-radius:3px 3px 0 0}.fs-dropdown-bottom .fs-dropdown-options{top:auto;bottom:100%;border-width:1px 1px 0}.fs-dropdown-bottom .fs-dropdown-item:last-child{border:none}.fs-dropdown-bottom.fs-dropdown-open .fs-dropdown-selected{border-radius:0 0 3px 3px}.fs-dropdown-bottom.fs-dropdown-open .fs-dropdown-options{border-radius:3px 3px 0 0}.fs-dropdown-bottom.fs-dropdown-cover .fs-dropdown-options{top:auto;bottom:0}.fs-dropdown-bottom.fs-dropdown-cover.fs-dropdown-open .fs-dropdown-selected{border-radius:3px}.fs-dropdown-bottom.fs-dropdown-cover.fs-dropdown-open .fs-dropdown-options{border-radius:3px}.fs-dropdown-multiple{border:1px solid #cccccc;border-radius:3px}.fs-dropdown-multiple .fs-dropdown-options{width:100%;position:static;border:none;border-radius:3px;box-shadow:none;display:block}.fs-dropdown-disabled .fs-dropdown-selected{background:#ffffff;border-color:#cccccc;color:#cccccc;cursor:default}.fs-dropdown-disabled .fs-dropdown-options{background:#ffffff;border-color:#cccccc}.fs-dropdown-disabled .fs-dropdown-group,.fs-dropdown-disabled .fs-dropdown-item{border-color:#cccccc;color:#cccccc;cursor:default}.fs-dropdown-disabled .fs-dropdown-item,.no-touch .fs-dropdown-disabled .fs-dropdown-item:hover{color:#cccccc;background-color:#ffffff}.fs-dropdown-disabled .fs-dropdown-item_selected,.no-touch .fs-dropdown-disabled .fs-dropdown-item_selected:hover{background:#fafafa}.fs-dropdown-options.fs-scrollbar{overflow:hidden}.fs-dropdown-options.fs-scrollbar .fs-scrollbar-content{max-height:260px;height:auto}.fs-dropdown-options.fs-scrollbar.fs-scrollbar-active .fs-scrollbar-content{padding:0}.fs-dropdown-options.fs-scrollbar .fs-scrollbar-bar,.fs-dropdown-options.fs-scrollbar .fs-scrollbar-track{border-radius:0 3px 3px 0}body,button,input,select,textarea{color:#404040;font-family:sans-serif;font-size:1rem;line-height:1.5}
 @font-face{
 	font-family:'blackjack';
-	font-display: swap;
+	font-display: auto;
 	src:url("fonts/blackjack.eot");
 	src:local("☺"),url("fonts/blackjack.woff") format("woff"),url("fonts/blackjack.ttf") format("truetype"),url("fonts/blackjack.svg") format("svg");
 	font-weight:normal;
@@ -61,7 +61,7 @@ h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:ital
 	margin-top:0;
 	line-height:1.55555556
 }
-.library-footer-info a,.library-footer-info a:hover,.library-footer-info a:visited,.site-footer a,.site-footer a:hover,.site-footer a:visited,.tribe-events-sub-nav li a,.tribe-events-sub-nav li a:hover,.tribe-events-sub-nav li a:visited{
+.site-footer a,.site-footer a:hover,.site-footer a:visited,.tribe-events-sub-nav li a,.tribe-events-sub-nav li a:hover,.tribe-events-sub-nav li a:visited{
 	color:#046B99;
 	text-decoration:none
 }
@@ -80,6 +80,8 @@ a{
 	transition:all .25s ease-in-out
 }
 html{
+	max-width:100%;
+	overflow-x:hidden;
 	box-sizing:border-box
 }
 *,*:before,*:after{
@@ -760,17 +762,14 @@ body.mobile-or-library .menu-main-nav-container>ul>li.search-item>ul.sub-menu.fo
 body.mobile-or-library .menu-main-nav-container>ul>li #menu-item-search,body.mobile-or-library .menu-special-menu-container>ul>li #menu-item-search{
 	height:50px
 }
-body.mobile-or-library .menu-main-nav-container>ul>li.menu-item-has-children>a:after,body.mobile-or-library .menu-special-menu-container>ul>li.menu-item-has-children>a:after{
-	content:"";
-	width:21px;
-	height:21px;
-	position:absolute;
-	right:32px;
-	top:calc(50% - 11px);
-	background-image:url(images/icon-menu-more.png);
-	background-size:100%;
-	background-size:cover;
-	background-repeat:no-repeat
+body.mobile-or-library .menu-main-nav-container>ul>li.menu-item-has-children>a:after,body.mobile-or-library .menu-special-menu-container>ul>li.menu-item-has-children>a:after {
+  background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
+  content: "";
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: 32px;
+  top: calc(50% - 11px);
 }
 body.mobile-or-library .menu-main-nav-container>ul>li.menu-item-has-children.open>a:after,body.mobile-or-library .menu-special-menu-container>ul>li.menu-item-has-children.open>a:after{
 	background-image:url(images/icon-menu-less.png)
@@ -1010,49 +1009,45 @@ body.page-template-landing-page .section-heading,body.page-template-nursing-land
 	min-height:240px;
 	max-height:540px;
 }
-.video-bg{
-	position:absolute;
-	top:0px;
-	left:0px;
-	bottom:0px;
-	right:0px;
-	overflow:hidden;
-	background-size:cover;
-	background-color:transparent;
-	background-repeat:no-repeat;
-	background-position:50% 50%;
+.video-bg {
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
 }
-.video-bg video,.video-bg object-fit{
-	margin:auto;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	visibility:visible;
-	opacity:1;
-	width:100%;
-	height:100%;
-	display:block !important;
+.video-bg video,.video-bg object-fit {
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  display: block !important;
 }
-.video-bg video{
-	object-fit:cover;
-	object-position:center center;
-	font-family:'object-fit: cover; object-position: center center;'
+.video-bg video {
+  object-fit: cover;
+  object-position: center center;
+  font-family: 'object-fit: cover; object-position: center center;';
 }
 @media all and (max-width: 767px){
 	.video-bg{
 		display:none
 	}
 }
-.video-bg:after{
-	position:absolute;
-	top:0px;
-	left:0px;
-	bottom:0px;
-	right:0px;
-	background-image:url("images/banner-overlay.png");
-	content:"";
-	background-size:auto 100%
+.video-bg:after {
+  background: url("images/banner-overlay.png") 0 0/auto 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  content: "";
 }
 body.active,html.active{
 	overflow:hidden;
@@ -1080,30 +1075,21 @@ body.active,html.active{
 	margin:32px 0 64px;
 	padding:48px 0 0;
 	background:#115438;
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-size:cover
+	text-align:center;
 }
 @media all and (max-width: 64rem){
 	.social-media .social-media-inner{
 		margin:0 0 64px
 	}
 }
-@media all and (max-width: 48rem){
-	.social-media .social-media-inner{
-		margin:0 0 64px
-	}
-}
 .social-media .field-social_media_title{
 	margin:0 auto .35em;
-	text-align:center;
 	color:white
 }
 .social-media .social-media-icons{
 	padding:0 0 40px;
 	margin:0 auto;
 	max-width:36em;
-	text-align:center;
 }
 .social-media .social-media-icons .social-media-icon-link{
 	text-indent:3000px;
@@ -1139,19 +1125,14 @@ body.active,html.active{
 .social-media .social-media-icons .social-media-icon-link.pinterest{
 	background-image:url("images/icon-pinterest.png")
 }
-body.page-template-home-page .social-media .social-media-inner{
-	margin-top:0
-}
 .site-footer .footer-item-inner{
 	padding:0 32px 0;
 	margin-bottom:32px
 }
 @media (min-width: 64em){
 	.site-footer .footer-item-inner{
-		padding:0 32px 32px;
 		min-height:14em;
-		border-right:
-		1px solid #ddd;
+		border-right:1px solid #ddd;
 		margin-bottom:64px
 	}
 }
@@ -1202,7 +1183,6 @@ body.page-template-home-page .social-media .social-media-inner{
 }
 .site-footer #utility-menu a{
 	color:#666;
-	text-decoration:none
 }
 @media (min-width: 64em){
 	.site-footer .site-resources.pure-u-lg-8-24{
@@ -1545,10 +1525,6 @@ body.page-template-home-page .social-media .social-media-inner{
 		justify-content:center;
 	}
 }
-html{
-	max-width:100%;
-	overflow-x:hidden;
-}
 .site-main.standalone{
 	max-width:64em;
 	margin:0 auto;
@@ -1587,9 +1563,6 @@ p:last-child{
 }
 .site-main a{
 	text-decoration:none;
-	background-position:0 24px;
-	background-repeat:repeat-x;
-	background-size:2px 2px;
 	color:#046B99;
 	transition:.25s color ease-in-out, .25s background-color ease-in-out
 }
@@ -1715,19 +1688,16 @@ p:last-child{
 .field-related-events ul a:hover{
 	color:white;
 }
-.field-related-events ul a:after{
-	content:"";
-	display:inline-block;
-	width:24px;
-	height:24px;
-	background-image:url(images/arrow-more.png);
-	background-size:100%;
-	background-repeat:no-repeat;
-	margin-left:1em;
-	position:absolute;
+.field-related-events ul a:after {
+	background: url(images/arrow-more.png) no-repeat 0 0/100%;
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 1em;
+	position: absolute;
 }
 .field-related-events .times{
-	text-transform:uppercase;
 	font-size:16px;
 	color:#B3AEBB;
 }
@@ -1744,12 +1714,9 @@ p:last-child{
 	font-family:"Font Awesome 5 Free";
 	font-weight:800;
 	font-size:30px;
-	text-decoration:inherit;
-	font-style:normal;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 	content:"\f105";
-	display:inline-block;
 	line-height:inherit;
 	width:15px;
 	vertical-align:bottom;
@@ -2064,16 +2031,14 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	text-transform:uppercase;
 	color:white
 }
-.page-template-landing-page .stories .show-more a:after,.page-template-nursing-landing-page-2 .stories .show-more a:after{
-	content:"";
-	display:inline-block;
-	width:24px;
-	height:24px;
-	background-image:url("images/icon-show-more.png");
-	background-size:100%;
-	background-repeat:no-repeat;
-	vertical-align:middle;
-	margin-left:1em
+.page-template-landing-page .stories .show-more a:after,.page-template-nursing-landing-page-2 .stories .show-more a:after {
+	background: url("images/icon-show-more.png") no-repeat 0 0/100%;
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin-left: 1em;
 }
 .page-template-landing-page .stories .show-more a.open:after,.page-template-nursing-landing-page-2 .stories .show-more a.open:after{
 	background-image:url("images/icon-show-less.png")
@@ -2255,16 +2220,13 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	padding:0;
 	margin:0
 }
-.calls-to-action .cta-image{
-	background-color:gray;
-	background-size:100%;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:50%;
-	position:relative;
-	height:460px;
-	display:none
-}@media (min-width: 64em){
+.calls-to-action .cta-image {
+  background: gray;
+  position: relative;
+  height: 460px;
+  display: none;
+}
+@media (min-width: 64em){
 	.calls-to-action .cta-image{
 		display:block
 	}
@@ -3406,33 +3368,25 @@ body.page-template-program-page .site-main article,body.page-template-program-pa
 	font-size:16px;
 	line-height:18px;
 }
-body.page-template-program-page .quick-info-container,body.page-template-nursing-program-page .quick-info-container{
-	margin-top:32px;
+.quick-info-container{
+	margin:32px 0;
 }
-body.page-template-program-page .quick-info,body.page-template-nursing-program-page .quick-info{
-	margin-bottom:32px
-}
-@media all and (max-width: 64em){
-	body.page-template-program-page .quick-info,body.page-template-nursing-program-page .quick-info{
-		order:-1
-	}
-}
-body.page-template-program-page .quick-info .quick-info-inner,body.page-template-nursing-program-page .quick-info .quick-info-inner{
+.quick-info .quick-info-inner{
 	background:#f7f7f7;
 	border:2px solid #dcdcdc;
 	border-top:none
 }
-body.page-template-program-page .quick-info .field-misc-quick-info,body.page-template-nursing-program-page .quick-info .field-misc-quick-info{
+.quick-info .field-misc-quick-info{
 	margin-top:0;
 	color:inherit
 }
-body.page-template-program-page .quick-info .field-misc-quick-info h2,body.page-template-program-page .quick-info .field-misc-quick-info h3,body.page-template-program-page .quick-info .field-misc-quick-info h4,body.page-template-program-page .quick-info .field-misc-quick-info h5,body.page-template-nursing-program-page .quick-info .field-misc-quick-info h2,body.page-template-nursing-program-page .quick-info .field-misc-quick-info h3,body.page-template-nursing-program-page .quick-info .field-misc-quick-info h4,body.page-template-nursing-program-page .quick-info .field-misc-quick-info h5{
+.quick-info .field-misc-quick-info h2,.quick-info .field-misc-quick-info h3,.quick-info .field-misc-quick-info h4,.quick-info .field-misc-quick-info h5{
 	margin-top:0
 }
 .field-misc-quick-info ul {
-	margin:0px;
+	margin:0;
 }
-body.page-template-program-page .quick-info h2,body.page-template-nursing-program-page .quick-info h2{
+.quick-info h2{
 	font-size:21px;
 	color:white;
 	background:#115438;
@@ -3440,35 +3394,24 @@ body.page-template-program-page .quick-info h2,body.page-template-nursing-progra
 	margin:0;
 	vertical-align:middle
 }
-body.page-template-program-page .quick-info h2:before,body.page-template-nursing-program-page .quick-info h2:before{
-	content:"";
-	margin-right:16px;
-	background-image:url("images/icon-info.png");
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-size:cover;
-	display:inline-block;
-	height:29px;
-	width:29px;
-	line-height:29px;
-	vertical-align:middle;
+.quick-info h2:before {
+  background: url("images/icon-info.png") no-repeat 0 0/cover;
+  content: "";
+  margin-right: 16px;
+  display: inline-block;
+  height: 29px;
+  width: 29px;
+  line-height: 29px;
+  vertical-align: middle;
 }
 body.page-template-program-page .quick-info p,body.page-template-nursing-program-page .quick-info p{
 	margin:0;
 }
 .field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
-	font-size:18px;
 	padding:10px 25px;
 }
 .field-required-credits ul:last-child,.field-required-credits ol:last-child,.field-degree-option ul:last-child,.field-degree-option ol:last-child,.field-program-formats ul:last-child,.field-program-formats ol:last-child,.field-misc-quick-info ul:last-child,.field-misc-quick-info ol:last-child{
 	margin-bottom:0
-}
-.field-required-credits h3,.field-degree-option h3,.field-program-formats h3,.field-misc-quick-info h3{
-	color:#115438;
-	text-transform:uppercase;
-	font-size:16px;
-	font-weight:bold;
-	margin:1em 0 0
 }
 .field-required-credits h3:first-child,.field-degree-option h3:first-child,.field-program-formats h3:first-child,.field-misc-quick-info h3:first-child{
 	margin-top:0
@@ -3487,10 +3430,6 @@ body.page-template-program-page .quick-info p,body.page-template-nursing-program
 	margin:0;
 	text-align:center;
 }
-.field-related-majors ul li{
-	display:inline-block;
-	width:100%;
-}
 .field-related-majors ul li:last-child{
 	border-right:none;
 	border-bottom:none;
@@ -3503,21 +3442,18 @@ body.page-template-program-page .quick-info p,body.page-template-nursing-program
 	vertical-align:middle;
 	position:relative;
 }
-.field-related-majors ul li a:after{
-	content:"";
-	background-image:url("images/arrow-more.png");
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-size:cover;
-	display:inline-block;
-	height:24px;
-	width:24px;
-	line-height:24px;
-	vertical-align:bottom;
-	position:relative;
-	right:auto;
-	top:auto;
-	margin-left:1em;
+.field-related-majors ul li a:after {
+  background: url("images/arrow-more.png") no-repeat 0 0/cover;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  vertical-align: bottom;
+  position: relative;
+  right: auto;
+  top: auto;
+  margin-left: 1em;
 }
 @media (min-width: 48em){
 	.field-related-majors ul li a:after{
@@ -3636,7 +3572,6 @@ body.admin-bar header#masthead.active .main-navigation{
 		margin-top:46px !important
 	}
 }
-.infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}.infinity-end.neverending .site-footer{display:block}.page-content .wp-smiley,.entry-content .wp-smiley,.comment-content .wp-smiley{border:none;margin-bottom:0;margin-top:0;padding:0}embed,iframe,object{max-width:100%}.wp-caption{margin-bottom:1.5em;max-width:100%}.wp-caption img[class*="wp-image-"]{display:block;margin-left:auto;margin-right:auto}.wp-caption .wp-caption-text{margin:0.8075em 0}.wp-caption-text{text-align:center}.gallery{margin-bottom:1.5em}.gallery-item{display:inline-block;text-align:center;vertical-align:top;width:100%}.gallery-columns-2 .gallery-item{max-width:50%}.gallery-columns-3 .gallery-item{max-width:33.33%}.gallery-columns-4 .gallery-item{max-width:25%}.gallery-columns-5 .gallery-item{max-width:20%}.gallery-columns-6 .gallery-item{max-width:16.66%}.gallery-columns-7 .gallery-item{max-width:14.28%}.gallery-columns-8 .gallery-item{max-width:12.5%}.gallery-columns-9 .gallery-item{max-width:11.11%}.gallery-caption{display:block}
 /* BEGIN homepage video styling */
 .section-homepage_focus{
 	width: 100%;
@@ -4083,7 +4018,7 @@ body.page-template-landing-page .opening-menu{
 
 /* END styling overrides for the a-z plugin pages (/directory) */
 
-.displayTable{
+.displayTable,.g-recaptcha,#advertising-landing-page footer{
 	display:table;
 	margin:0 auto;
 }
@@ -4234,18 +4169,9 @@ th .smallText{
 	text-align:center;
 	width:100%;
 }
-
-.g-recaptcha{
-	display:table;
-	margin:0 auto;
-}
 /* END generic, reusable styles */
 #advertising-landing-page .section-heading{
 	background-color:unset;
-}
-#advertising-landing-page footer{
-	display:table;
-	margin:0 auto;
 }
 #advertising-landing-page footer.site-footer .site-branding{
 	margin-left:unset;
