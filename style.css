@@ -836,20 +836,19 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 div:not(.menu-main-nav-container)>ul li a br{
 	display:none;
 }
+#interested-in-applying,#link-give{
+	width:100%;
+	padding:0.8em 0.5em;
+	max-height:50%;
+}
 #interested-in-applying{
 	background-color:#115438;
-	width:100%;
-	padding:0.85em 0.5em;
-	height:50%;
 }
 #interested-in-applying:hover{
 	background-color:#0d4435;
 }
 #link-give{
 	background-color: #c3a250;
-	width:100%;
-	padding:0.8em 0.5em;
-	height:51%;
 }
 #link-give:hover{
 	background-color:#a78c45;

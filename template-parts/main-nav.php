@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 		</li>
-		<li id="menu-item-9764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764">
 			<a id="interested-in-applying" href="https://www.elms.edu/interested-in-applying/">Apply</a>
 			<a id="link-give" href="https://www.elms.edu/alumni/support-elms/make-a-gift/">Give</a>
 		</li>
