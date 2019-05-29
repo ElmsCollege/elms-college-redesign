@@ -250,6 +250,9 @@ a:hover,a:active{
 		max-width:13.5em
 	}
 }
+.menu-main-nav-container>ul>li:first-child:after,.menu-special-menu-container>ul>li:first-child:after{
+	left:-1px;
+}
 .menu-main-nav-container>ul>li:after,.menu-special-menu-container>ul>li:after{
 	border-left:1px solid #dcdcdc;
 	height:60px;
