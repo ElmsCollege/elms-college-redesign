@@ -250,7 +250,7 @@ a:hover,a:active{
 		max-width:13.5em
 	}
 }
-.menu-main-nav-container>ul>li:first-child:after,.menu-special-menu-container>ul>li:first-child:after{
+.menu-main-nav-container>ul>li:nth-child(2):after,.menu-special-menu-container>ul>li:nth-child(2):after{
 	left:-1px;
 }
 .menu-main-nav-container>ul>li:after,.menu-special-menu-container>ul>li:after{
