@@ -2586,6 +2586,7 @@ body.page-template-home-page{
 }
 #libraryPage .section-heading-as-content .text-content .field-body a{
 	color:#fff !important;
+	text-decoration:underline;
 }
 #libraryPage .section-heading-as-content .text-content .field-body a:hover{
 	font-weight:bold;
