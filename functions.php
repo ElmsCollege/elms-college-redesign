@@ -111,6 +111,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
 function gs_elms_scripts() {
 	wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.8.1', 'all');
 	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.8.1', 'all');
+
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
 
 	wp_enqueue_script( 'gs_elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );
@@ -135,8 +136,6 @@ function gs_elms_scripts() {
   wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
 
   wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
-	wp_enqueue_script( 'slickjs', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
-
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -286,21 +285,6 @@ function gs_add_typekit () {
 }
 add_action('wp_head', 'gs_add_typekit');
 
-function new_cta () {
-  ?>
-  <script>
-  //jQuery(document).ready( function () {
-    jQuery("#menu-item-9764").replaceWith('<li id="menu-item-9764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764"><a id="interested-in-applying" href="http://www.elms.edu/interested-in-applying/" style="">Apply</a><a id="link-give" href="http://www.elms.edu/alumni/support-elms/make-a-gift/" style="">Give</a></li>');
-    
-    //});
-  </script>
-  <?php
-}
-add_action('wp_footer', 'new_cta');
-
-
-
-
 function render_homepage_event ($event) {
   ?> 
   <div class="event">
@@ -363,7 +347,7 @@ function gs_is_active_sidebar () {
 }
 
 function rss_link ($query) {
-  return '<a href="/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank">RSS</a>';
+  return '<a href="/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank" aria-label="RSS link"><i class="fas fa-rss" aria-hidden="true"></i></a>';
 }
 
 
@@ -399,7 +383,7 @@ function get_todays_library_hours () {
 
 function inject_fontawesome() {
     ?>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <?php
 }
 add_action('wp_footer', 'inject_fontawesome');
@@ -507,7 +491,7 @@ add_filter('wpseo_title', 'tribe_add_date_to_title');
 
 add_filter('the_content', 'specific_no_wpautop', 9);
 function specific_no_wpautop($content) {
-    if (is_page (array('10133','10245','16684','36506') )) { // or whatever other condition you like
+    if (is_page (array('10133','10245','16684') )) { // or whatever other condition you like
         remove_filter( 'the_content', 'wpautop' );
         return $content;
     } else {
@@ -519,6 +503,7 @@ function excerpt_readmore($more) {
 return '... <a href="'. get_permalink($post->ID) . '" class="readmore">read more</a>';
 }
 add_filter('excerpt_more', 'excerpt_readmore');
+
 
 add_filter('acf/format_value/type=text', 'do_shortcode');
 

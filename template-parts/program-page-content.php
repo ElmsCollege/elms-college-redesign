@@ -66,7 +66,7 @@ $lower_story_content = get_field("lower_story_content");
     <?php endif; ?>
     <?php if ($story_body || $story_title) : ?>
       <div class="text-content">
-          <h2 class="field-title">
+          <h2 class="field-title noMarginTop">
             <?php print($story_title) ?>
           </h2>
         <div class="field-body">

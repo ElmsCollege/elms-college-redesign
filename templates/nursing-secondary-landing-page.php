@@ -64,7 +64,7 @@ get_header("nursing");
 		    <div style="display:none" id="mission-statement-pt-2">
 		    </div>
         </div>
-        <p class="program-link mobileOnly" id="read-more-button" onClick="showText()"><span id="read-more-text" class="elmsFont">Read More</span></p>
+        <p class="program-link mobileOnly" id="read-more-button" onClick="showText()"><span id="read-more-text">Read More <i class="fas fa-chevron-circle-right"></i></span></p>
       </div>
       <script>
 	      function showText() {
@@ -99,11 +99,11 @@ get_header("nursing");
 		  };
 	  </script>
       
-      <div class="section-heading">
+      <div class="section-heading" id="program-track-anchor">
           <h2 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
             <?php print($first_field_title) ?>
           </h2>
-          <p class="field-sub-title" id="program-track-anchor"><?php print($first_field_sub_title) ?></p>
+          <p class="field-sub-title"><?php print($first_field_sub_title) ?></p>
       </div>
       
       <div class="section-mission_statement">
