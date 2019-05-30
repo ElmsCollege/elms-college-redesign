@@ -3389,7 +3389,7 @@ body.page-template-program-page .site-main article,body.page-template-program-pa
 }
 .quick-info h2{
 	font-size:21px;
-	color:white;
+	color:#fff !important;
 	background:#115438;
 	padding:16px 32px;
 	margin:0;
@@ -3857,9 +3857,6 @@ a.buttonLink.grouped{
 /* BEGIN changes for the 2018 revision to program pages */
 #primary {
 	padding: 20px 0;
-}
-#nursingPage #primary{
-	padding: unset;
 }
 @media only screen and (max-width: 1040px) {
 	body.page-template-program-page .site-main, main.site-main {
