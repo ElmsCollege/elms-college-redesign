@@ -2617,6 +2617,7 @@ body.page-template-home-page{
 }
 #libraryPage .section-heading-as-content .todays-hours .the-hours{
 	text-transform:uppercase;
+	line-height:1.5em;
 	box-sizing:border-box;
 	vertical-align:top;
 	border-bottom:2px solid #CFB573;
@@ -2688,6 +2689,23 @@ body.page-template-home-page{
 	text-decoration:none;
 	color:white;
 	box-sizing:border-box
+}
+#libraryPage .section-heading-as-content .todays-hours .hours-link:before{
+	content:"";
+	background-image:url("images/icon-arrow-right.png");
+	background-repeat:no-repeat;
+	width:19px;
+	height:26px;
+	background-size:100%;
+	background-size:cover;
+	display:block;
+	margin:0 auto .25em
+}
+@media (max-width: 47.99999em){
+	#libraryPage .section-heading-as-content .todays-hours .hours-link:before{
+		position:absolute;
+		right:0
+	}
 }
 @media (max-width: 47.99999em){
 	#libraryPage .section-heading-as-content .todays-hours .hours-link{
@@ -4026,11 +4044,6 @@ body.page-template-landing-page .opening-menu{
 	display:flex;
 	flex-flow:row nowrap;
 	align-items:flex-start;
-}
-.flexRowWrapCenter{
-	display:flex;
-	flex-flow:row wrap;
-	align-items:center;
 }
 .spaceBetween{
 	justify-content:space-between;
