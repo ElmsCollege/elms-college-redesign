@@ -57,7 +57,7 @@ $site_info = get_field("site_info", "option");
 		<div class="site-resources pure-u-1 pure-u-lg-8-24">
       <div class="footer-item-inner">
         <h3>Resources</h3>
-        <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'ulreset' ) ); ?>
       </div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
