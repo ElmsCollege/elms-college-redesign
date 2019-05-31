@@ -4167,6 +4167,9 @@ th .smallText{
 	text-align:center;
 	width:100%;
 }
+.jt-title{
+	text-align:center;
+}
 /* END generic, reusable styles */
 #advertising-landing-page .section-heading{
 	background-color:unset;
