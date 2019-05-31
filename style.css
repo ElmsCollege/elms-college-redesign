@@ -3745,7 +3745,7 @@ div.collapseomatic_content {
 	border:2px solid #045b99 !important;
 	background-color:#fff !important;
 }
-.buttons.green a,.greenButton,h4#formTrigger{
+.buttons.green a,.greenButton,h4#formTrigger,main .jotform-trigger{
 	background-color: #115438;
 	margin: 5px auto;
 	display: block;
@@ -3767,7 +3767,7 @@ h4#formTrigger{
 h4#formTrigger.colomat-close{
 	display:none;
 }
-.buttons.green a:hover,.greenButton:hover,h4#formTrigger:hover{
+.buttons.green a:hover,.greenButton:hover,h4#formTrigger:hover,main .jotform-trigger:hover{
 	background-color:white!important;
 	color:#115438!important;
 	border:2px solid #115438;
@@ -3802,7 +3802,7 @@ h4#formTrigger.colomat-close{
 #secondary{
 	overflow-x:hidden;
 }
-#secondary #formTrigger,#secondary a.buttonLink{
+#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger{
 	display:block;
 	background-color:#c3a250;
 	width:100%;
@@ -3819,7 +3819,7 @@ h4#formTrigger.colomat-close{
 a.buttonLink.grouped{
 	margin-bottom:16px;
 }
-#secondary #formTrigger:hover,#secondary a.buttonLink:hover{
+#secondary #formTrigger:hover,#secondary a.buttonLink:hover,aside .jotform-trigger:hover{
 	background-color:#c3a250 !important;
 	color:#fff !important;
 }
