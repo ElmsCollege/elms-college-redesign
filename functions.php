@@ -364,20 +364,6 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-function get_todays_library_hours () {
-  $doc = new DOMDocument();
-  $doc->loadHTMLFile("https://api3.libcal.com/api_hours_today.php?iid=1042&lid=0&format=html&systemTime=0");
-  $finder = new DomXPath($doc);
-  $classname="s-lc-time";
-  $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-  $tmp_dom = new DOMDocument(); 
-  foreach ($nodes as $node) {
-    $tmp_dom->appendChild($tmp_dom->importNode($node,true));
-  }
-  $innerHTML=trim($tmp_dom->saveHTML()); 
-  return $innerHTML;
-}
-
 function inject_fontawesome() {
     ?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
