@@ -2601,21 +2601,6 @@ body.page-template-home-page{
 		padding:32px
 	}
 }
-#libraryPage .section-heading-as-content .todays-hours:before{
-	content:none;
-	background-image:url("images/icon-clock.png");
-	background-repeat:no-repeat;
-	width:52px;
-	height:52px;
-	background-size:52px;
-	display:inline-block;
-	vertical-align:middle
-}
-@media (min-width: 48em){
-	#libraryPage .section-heading-as-content .todays-hours:before{
-		content:""
-	}
-}
 #libraryPage .section-heading-as-content .todays-hours .the-hours{
 	text-transform:uppercase;
 	line-height:1.5em;
@@ -2630,7 +2615,7 @@ body.page-template-home-page{
 		vertical-align:middle;
 		padding-bottom:0;
 		display:inline-block;
-		padding-left:32px
+		padding-left:48px
 	}
 }
 .fa-clock{
@@ -2645,23 +2630,12 @@ body.page-template-home-page{
 #libraryPage .section-heading-as-content .todays-hours .the-hours .hours-inner{
 	display:inline-block;
 	vertical-align:middle;
-	padding-left:8px
-}
-@media (min-width: 48em){
-	#libraryPage .section-heading-as-content .todays-hours .the-hours .hours-inner{
-		padding-left:0px
-	}
 }
 #libraryPage .section-heading-as-content .todays-hours .the-hours h3{
 	margin:0;
 	color:#115438;
-	font-size:14px;
+	font-size:16px;
 	font-weight:bold
-}
-@media (min-width: 48em){
-	#libraryPage .section-heading-as-content .todays-hours .the-hours h3{
-		font-size:16px
-	}
 }
 #libraryPage .section-heading-as-content .todays-hours table{
 	margin:0;

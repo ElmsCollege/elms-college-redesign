@@ -37,9 +37,9 @@ get_header("library"); ?>
             <?php the_content() ?>
           </div>
         </div>
-	<i class="fas fa-clock" aria-hidden="true"></i>
         <div class="todays-hours">
           <div class="the-hours">
+		<i class="fas fa-clock" aria-hidden="true"></i>
             <div class="hours-inner">
               <h3>Today's Hours</h3>
               <div id="api_hours_today_iid1042_lid0"></div>
