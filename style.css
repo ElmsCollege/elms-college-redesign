@@ -2626,7 +2626,6 @@ body.page-template-home-page{
 }
 @media (min-width: 48em){
 	#libraryPage .section-heading-as-content .todays-hours .the-hours{
-		width:58%;
 		border-bottom:none;
 		vertical-align:middle;
 		padding-bottom:0;
@@ -2634,20 +2633,14 @@ body.page-template-home-page{
 		padding-left:32px
 	}
 }
-#libraryPage .section-heading-as-content .todays-hours .the-hours:before{
-	content:"";
-	background-image:url("images/icon-clock.png");
-	background-repeat:no-repeat;
-	width:52px;
-	height:52px;
-	background-size:52px;
-	display:inline-block;
-	vertical-align:middle
-}
-@media (min-width: 48em){
-	#libraryPage .section-heading-as-content .todays-hours .the-hours:before{
-		content:none
-	}
+.fa-clock{
+	color:white;
+	font-size:3em;
+	vertical-align:middle;
+	margin-right:32px;
+	border-radius:32px;
+	border:2px solid #115438;
+	background-color:#115438;
 }
 #libraryPage .section-heading-as-content .todays-hours .the-hours .hours-inner{
 	display:inline-block;
@@ -2670,7 +2663,7 @@ body.page-template-home-page{
 		font-size:16px
 	}
 }
-#libraryPage .section-heading-as-content .todays-hours .the-hours span{
+#libraryPage .section-heading-as-content .todays-hours table{
 	margin:0;
 	font-weight:bold;
 	font-size:24px;
@@ -2705,7 +2698,8 @@ body.page-template-home-page{
 @media (max-width: 47.99999em){
 	#libraryPage .section-heading-as-content .todays-hours .hours-link:before{
 		position:absolute;
-		right:0
+		right:0;
+		top:5px;
 	}
 }
 @media (max-width: 47.99999em){

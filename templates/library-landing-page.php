@@ -37,11 +37,12 @@ get_header("library"); ?>
             <?php the_content() ?>
           </div>
         </div>
+	<i class="fas fa-clock" aria-hidden="true"></i>
         <div class="todays-hours">
           <div class="the-hours">
             <div class="hours-inner">
               <h3>Today's Hours</h3>
-              <span><div id="api_hours_today_iid1042_lid0"></div></span>
+              <div id="api_hours_today_iid1042_lid0"></div>
             </div>
           </div>
           <a class="hours-link" href="<?php echo $hours_link ?>">More</a>
