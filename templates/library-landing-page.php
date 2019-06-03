@@ -7,6 +7,8 @@
  * @package Elms_College_Redesign
  */
 
+wp_enqueue_script( 'libcal', 'https://api3.libcal.com/api_hours_today.php?iid=1042&lid=0&format=js&systemTime=0&context=object', array(), '20190602', true );
+
 
 add_filter( 'body_class', function( $classes ) {
   return array_merge( $classes, array( 'mobile-or-library' ) );
@@ -37,9 +39,10 @@ get_header("library"); ?>
         </div>
         <div class="todays-hours">
           <div class="the-hours">
+		<i class="fas fa-clock" aria-hidden="true"></i>
             <div class="hours-inner">
               <h3>Today's Hours</h3>
-              <span><?php print get_todays_library_hours()?> </span>
+              <div id="api_hours_today_iid1042_lid0"></div>
             </div>
           </div>
           <a class="hours-link" href="<?php echo $hours_link ?>">More</a>
