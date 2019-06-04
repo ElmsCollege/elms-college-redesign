@@ -7,9 +7,9 @@
  * @package Elms_College_Redesign
  */
 $has_sidebar = gs_is_active_sidebar();
-if( get_field("hide_sidebar") == "hidden" ){
-	unset($has_sidebar);
-};
+if ( is_active_sidebar( 'sidebar-1' )){
+	$has_sidebar = 1;
+}
 
 $story_title = get_field("story_title");
 $story_body = get_field("story_body");
@@ -153,7 +153,7 @@ $lower_story_content = get_field("lower_story_content");
       
 
 		</main><!-- #main -->
-    <?php if(($has_sidebar) || (is_active_sidebar('sidebar-1'))): ?>
+    <?php if($has_sidebar) : ?>
       <div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
         <?php get_sidebar(); ?>
       </div>
