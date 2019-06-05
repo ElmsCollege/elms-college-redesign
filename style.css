@@ -2983,11 +2983,6 @@ body.page-template-nursing-intermediary-landing-page .cta:nth-child(3):hover .im
 body.page-template-nursing-intermediary-landing-page .cta:nth-child(3):hover .permalink{
 	color:#413556 !important;
 }
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .desktopOnly{
-		display:none
-	}
-}
 body.page-template-nursing-secondary-landing-page .menu-item:hover{
 	color:white
 }
@@ -2998,9 +2993,6 @@ body.page-template-nursing-secondary-landing-page .section-heading{
 	height:auto;
 	max-height:none;
 	padding-top:16px
-}
-body.page-template-nursing-secondary-landing-page .backgroundDesktopOnly{
-	background-color:white
 }
 @media (max-width: 770px){
 	body.page-template-nursing-secondary-landing-page .section-mission_statement{

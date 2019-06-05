@@ -143,7 +143,7 @@ get_header("nursing");
 			  <?php print($program_repeater[$x]["content"])?>
 			</div>
 		</div>
-        <div class="calls-to-action backgroundDesktopOnly desktopOnly">
+        <div>
             <ul class="program-list">
               <?php foreach ($program_repeater[$x]["programs"] as $index=>$program) : 
                 $title = $program["program_title"];
@@ -165,30 +165,6 @@ get_header("nursing");
 		                  <p class="program-title"><?php print $title ?></p>
 		                  <?php print $content ?>
 		                  <a class="program-link" href="<?php echo $link ?>"><span class="elmsFont">Learn More</span></a>
-                  </div>
-                </li>
-              <?php endforeach; ?>
-            </ul>
-        </div>
-        <div class="mobileOnly">
-	        <ul>
-              <?php foreach ($program_repeater[$x]["programs"] as $index=>$program) : 
-                $title = $program["program_title"];
-                if ($program["link_type"] == "internal" && isset($program["internal_link"]->ID)) {
-                  $link = get_the_permalink($program["internal_link"]->ID);
-                  $text = $program["link_text"];
-                  if (!$text || $text == "") {
-                    $text = $program["internal_link"]->post_title;
-                  }
-                }
-                elseif (isset($program["external_link"])) { // external
-                  $link = $program["external_link"];
-                  $text = $program["link_text"];
-                }
-                ?>
-                <li class="program-item-mobile">
-                  <div style="position: relative">
-		                  <a class="program-link" href="<?php echo $link ?>"><span class="elmsFont"><?php print $title ?> Program</span></a>
                   </div>
                 </li>
               <?php endforeach; ?>
