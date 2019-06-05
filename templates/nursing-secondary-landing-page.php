@@ -64,42 +64,9 @@ get_header("nursing");
 		    <div style="display:none" id="mission-statement-pt-2">
 		    </div>
         </div>
-        <p class="program-link mobileOnly" id="read-more-button" onClick="showText()"><span id="read-more-text">Read More <i class="fas fa-chevron-circle-right"></i></span></p>
       </div>
-      <script>
-	      function showText() {
-		      $("#mission-statement-pt-1").text($("#mission-statement-pt-2").text());
-		      $("#read-more-text").text("Show Less");
-		      $("#read-more-button").attr("onclick","hideText()");
-	      }
-	      
-	      function hideText() {
-		      chopText();
-		      $("#read-more-text").text("Read More");
-		      $("#read-more-button").attr("onclick","showText()");
-	      }
-	      
-	      function chopText() {
-			  var text = document.getElementById(("mission-statement-pt-2")).innerHTML;
 
-			  if (text.length > 230) {
-			    for(var i = 230; i > 0; i--) {
-					if (text[i] == " ") {
-			            text = text.slice(0,i);
-			            break;
-			        }
-			    }
-			}
-			document.getElementById("mission-statement-pt-1").innerHTML = text;
-	      }
-	      
-	      if (window.innerWidth < 770) {
-		      $("#mission-statement-pt-2").text($("#mission-statement-pt-1").text());
-		      chopText()
-		  };
-	  </script>
-      
-      <div class="section-heading" id="program-track-anchor">
+			<div class="section-heading" id="program-track-anchor">
           <h2 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
             <?php print($first_field_title) ?>
           </h2>
