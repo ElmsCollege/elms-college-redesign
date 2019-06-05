@@ -164,7 +164,7 @@ get_header("nursing");
                   <div style="">
 		                  <p class="program-title"><?php print $title ?></p>
 		                  <?php print $content ?>
-		                  <a class="program-link" href="<?php echo $link ?>"><span class="elmsFont">Learn More</span></a>
+		                  <a href="<?php echo $link ?>">Learn More</a>
                   </div>
                 </li>
               <?php endforeach; ?>
