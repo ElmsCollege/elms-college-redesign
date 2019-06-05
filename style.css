@@ -3224,14 +3224,6 @@ body.page-template-nursing-secondary-landing-page .drop-down-content a{
 body.page-template-nursing-secondary-landing-page .show{
 	display:block
 }
-body.page-template-nursing-secondary-landing-page .mobileOnly{
-	display:none
-}
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .mobileOnly{
-		display:block
-	}
-}
 body.page-template-nursing-secondary-landing-page .cta3{
 	width:33%
 }
