@@ -14,7 +14,7 @@
  */
 
 wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
-wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/pan-zoom.js' );
+wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
 
 get_header(); ?>
 <style>
