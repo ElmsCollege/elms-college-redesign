@@ -31,11 +31,11 @@ get_header(); ?>
     $al_tax_post_args = array(
         'post_type' => 'personnel',
         'posts_per_page' => -1,
-	'orderby' => 'name',
+		'orderby' => 'name',
         'order' => 'ASC',
         'tax_query' => array(
             array(
-                'taxonomy' => $taxonomyTerm,
+                'taxonomy' => $GLOBALS['taxonomyTerm'],
                 'field' => 'slug',
                 'terms' => $al_cat_slug
             )
