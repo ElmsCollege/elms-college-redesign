@@ -392,11 +392,6 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li.search-item>a{
 	padding:19px 1em
 }
-@media all and (max-width: 96rem){
-	.menu-special-menu-container>ul>li.search-item>a{
-		padding:29px .75em
-	}
-}
 .menu-special-menu-container>ul>li.search-item .search-realtext{
 	display:block;
 	position:absolute;
