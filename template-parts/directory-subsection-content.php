@@ -5,8 +5,9 @@
  * @package Elms_College_Redesign
  */
 
-	wp_enqueue_style( 'a-z-listing-css', '/wp-content/plugins/a-z-listing/css/a-z-listing-default.css', array(), '20190610', true );
 get_header(); ?>
+
+	<link rel='stylesheet' id='a-z-listing-css'  href='https://www.elms.edu/wp-content/plugins/a-z-listing/css/a-z-listing-default.css?ver=4.9.9' type='text/css' media='all' />
 
   <div class="section-heading">
       <h1 class="field-title">
