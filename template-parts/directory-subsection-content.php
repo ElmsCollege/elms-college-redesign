@@ -4,7 +4,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  * @package Elms_College_Redesign
  */
-
+$has_sidebar = gs_is_active_sidebar();
 get_header(); ?>
 
 	<link rel='stylesheet' id='a-z-listing-css'  href='https://www.elms.edu/wp-content/plugins/a-z-listing/css/a-z-listing-default.css?ver=4.9.9' type='text/css' media='all' />
@@ -15,7 +15,7 @@ get_header(); ?>
       </h1>
   </div>
 	<div id="primary" class="content-area pure-g">
-		<main id="main" class="program-page-main site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3" role="main">
+		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 <a href="/directory/">
 	<i class="fas fa-chevron-left" aria-hidden="true"></i><i class="fas fa-chevron-left" aria-hidden="true"></i> Back to the directory
 </a>
@@ -45,11 +45,11 @@ get_header(); ?>
 	the_a_z_listing($al_tax_post_args);
 ?>
 		</main><!-- #main -->
-	<?php if ( is_dynamic_sidebar() ) : ?>
-		<div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
-			<?php get_sidebar(); ?>
-		</div>
-	<?php endif; ?>
+    <?php if ($has_sidebar) : ?>
+      <div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
+        <?php get_sidebar(); ?>
+      </div>
+    <?php endif; ?>
 
 	</div><!-- #primary -->
 
