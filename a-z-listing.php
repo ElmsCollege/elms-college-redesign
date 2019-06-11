@@ -119,8 +119,9 @@ function build_select_list( $taxonomies, $args ) {
 							
 						<? else: //current slug == directory ?>
 							<style>
-								#az-slider li img{padding-right:15px;}
+								#az-slider li img{padding-right:15px;float:left;}
 								#az-slider li .contact p,#az-slider li .collapseomatic_content p{padding-left:0px;}
+								#az-slider li .contact{float:left;}
 							</style>
 		<?php if( get_field('directory_image') ): ?>
 			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
@@ -135,13 +136,17 @@ function build_select_list( $taxonomies, $args ) {
 							<?php $prefix = ""; ?>
 							<?php $accred = ""; ?>
 							<?php the_excerpt(); ?>
-							</div>
 							<?php
-							if( '' !== get_post()->post_content ) {
-								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . get_first_paragraph() . "[/expand]");
-							}
+//							if( '' !== get_post()->post_content ) {
+//								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . //get_first_paragraph() . "[/expand]");
+//							}
+								echo '<span class="collapseomatic" title="Fast Monkey" id="'.get_field("last_name").'">';
 							?>
-							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></a>
+							</div>
+							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
+								<?php get_first_paragraph(); ?>
+							</div>
+							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?></a>
 						<? endif; //current slug == directory?>
 						</li>
 						<?php endwhile; ?>
