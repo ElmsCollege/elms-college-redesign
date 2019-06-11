@@ -119,7 +119,7 @@ function build_select_list( $taxonomies, $args ) {
 							
 						<? else: //current slug == directory ?>
 		<?php if( get_field('directory_image') ): ?>
-			<?php echo wp_get_attachment_image( $image, "thumbnail" ); ?>
+			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
 		<?php endif; ?>
 
 							<a href="<?php the_permalink(); ?>">
@@ -129,8 +129,7 @@ function build_select_list( $taxonomies, $args ) {
 							</a>
 							<?php $prefix = ""; ?>
 							<?php $accred = ""; ?>
-							<?php the_excerpt(); ?>
-							
+							<?php the_excerpt(); ?>							
 						<? endif; //current slug == directory?>
 						</li>
 						<?php endwhile; ?>
