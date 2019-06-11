@@ -122,7 +122,6 @@ function build_select_list( $taxonomies, $args ) {
 								#az-slider li img{padding-right:15px;}
 								#az-slider li .contact p{padding-left:0px;}
 							</style>
-							<div 
 		<?php if( get_field('directory_image') ): ?>
 			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
 		<?php endif; ?>
