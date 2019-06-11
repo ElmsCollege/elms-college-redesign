@@ -78,7 +78,7 @@ function build_select_list( $taxonomies, $args ) {
 							<span><?php $a_z_query->the_letter_title(); ?></span>
 						</h2>
 
-				<ul class="two-column">
+				<ul class="two-column normalText">
 					<?php
 					while ( $a_z_query->have_items() ):
 						$a_z_query->the_item();
@@ -120,7 +120,7 @@ function build_select_list( $taxonomies, $args ) {
 						<? else: //current slug == directory ?>
 							<style>
 								#az-slider li img{padding-right:15px;}
-								#az-slider li .contact p{padding-left:0px;}
+								#az-slider li .contact p,.collapseomatic_content p{padding-left:0px;}
 							</style>
 		<?php if( get_field('directory_image') ): ?>
 			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
@@ -136,8 +136,11 @@ function build_select_list( $taxonomies, $args ) {
 							<?php $accred = ""; ?>
 							<?php the_excerpt(); ?>
 							</div>
-							<?php echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . get_first_paragraph() . "[/expand]"); ?>
-
+							<?php
+							if( '' !== get_post()->post_content ) {
+								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . get_first_paragraph() . "[/expand]");
+							}
+							?>
 							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></a>
 						<? endif; //current slug == directory?>
 						</li>
