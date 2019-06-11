@@ -118,10 +118,16 @@ function build_select_list( $taxonomies, $args ) {
 							<?php the_excerpt(); ?>
 							
 						<? else: //current slug == directory ?>
+							<style>
+								#az-slider li img{padding-right:15px;}
+								#az-slider li .contact p{padding-left:0px;}
+							</style>
+							<div 
 		<?php if( get_field('directory_image') ): ?>
 			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
 		<?php endif; ?>
 
+							<div class="contact">
 							<a href="<?php the_permalink(); ?>">
 								<h4 class="noMargins">
 									<?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?>
@@ -129,7 +135,8 @@ function build_select_list( $taxonomies, $args ) {
 							</a>
 							<?php $prefix = ""; ?>
 							<?php $accred = ""; ?>
-							<?php the_excerpt(); ?>							
+							<?php the_excerpt(); ?>
+							</div>
 						<? endif; //current slug == directory?>
 						</li>
 						<?php endwhile; ?>
