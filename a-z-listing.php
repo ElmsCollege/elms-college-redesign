@@ -140,11 +140,11 @@ function build_select_list( $taxonomies, $args ) {
 //							if( '' !== get_post()->post_content ) {
 //								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . //get_first_paragraph() . "[/expand]");
 //							}
-								echo '<span class="collapseomatic" title="Fast Monkey" id="'.get_field("last_name").'">';
+								echo '<span class="collapseomatic" title="Quick Bio" id="'.get_field("last_name").'">Biography</span>';
 							?>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
-								<?php get_first_paragraph(); ?>
+								<?php echo get_first_paragraph(); ?>
 							</div>
 							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?></a>
 						<? endif; //current slug == directory?>
