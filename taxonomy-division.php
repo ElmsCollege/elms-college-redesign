@@ -14,4 +14,4 @@ function custom_tag_title( $title ) {
 }
 add_filter( 'get_the_archive_title', 'custom_tag_title' );
 
-get_template_part("template-parts/directory-subsection-content");
+get_template_part("template-parts/division-department-page");

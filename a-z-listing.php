@@ -14,37 +14,38 @@
 ?>
 
 <script>
-jQuery(document).ready(function(){
-	jQuery("#departmentFilter").change(function(){
-		var departmentValue = jQuery("#departmentFilter").val();
-		jQuery("#az-slider li").hide();
-		if(departmentValue == "showAllDepartments"){
-			jQuery("#resetFilter").hide();
-			jQuery("#az-slider li").css("display","list-item");
-		} else {
-			jQuery("#resetFilter, #az-slider li."+departmentValue).show();
-		}
-	});
-	jQuery("#resetFilter").click(function(){
-		jQuery("#az-slider li").css("display","list-item");
-		jQuery("#departmentFilter").val("showAllDepartments");
-	});
-});
+	jQuery( document ).ready( function () {
+		jQuery( "#departmentFilter" ).change( function () {
+			var departmentValue = jQuery( "#departmentFilter" ).val();
+			jQuery( "#az-slider li" ).hide();
+			if ( departmentValue == "showAllDepartments" ) {
+				jQuery( "#resetFilter" ).hide();
+				jQuery( "#az-slider li" ).css( "display", "list-item" );
+			} else {
+				jQuery( "#resetFilter, #az-slider li." + departmentValue ).show();
+			}
+		} );
+		jQuery( "#resetFilter" ).click( function () {
+			jQuery( "#az-slider li" ).css( "display", "list-item" );
+			jQuery( "#departmentFilter" ).val( "showAllDepartments" );
+		} );
+	} );
 </script>
 
 <?php
 global $wp;
 $current_slug = add_query_arg( array(), $wp->request );
 
-if($current_slug == "directory"): ?>
+if ( $current_slug == "directory" ): ?>
 
 <?php
-function build_select_list($taxonomies, $args) {
-  $terms = get_terms($taxonomies, $args);
-  foreach($terms as $term){
-    $output .= '<option value="'.$term->slug.'"> '.$term->name.'</option>';
-  }
-  return $output;
+
+function build_select_list( $taxonomies, $args ) {
+	$terms = get_terms( $taxonomies, $args );
+	foreach ( $terms as $term ) {
+		$output .= '<option value="' . $term->slug . '"> ' . $term->name . '</option>';
+	}
+	return $output;
 }
 ?>
 <div class="filterList smallText">
@@ -53,9 +54,9 @@ function build_select_list($taxonomies, $args) {
 		<option value="showAllDepartments">Show all departments</option>
 		<?php echo build_select_list('department', $args = array('hide_empty'=>true)); ?>
 	</select>
-	<button type="button" id="resetFilter" class="greenButton" style="display:none;">Reset Filter</button> 
+	<button type="button" id="resetFilter" class="greenButton" style="display:none;">Reset Filter</button>
 </div>
-<?php endif ?><!-- end current_slug==directory -->
+<?php endif ?> <!-- end current_slug==directory -->
 
 <div id="az-tabs">
 	<div id="letters">
@@ -67,59 +68,37 @@ function build_select_list($taxonomies, $args) {
 	<div id="az-slider">
 		<div id="inner-slider">
 			<?php
-			while ( $a_z_query->have_letters() ) :
+			while ( $a_z_query->have_letters() ):
 				$a_z_query->the_letter();
 
-				?>
-				<?php if ( $a_z_query->have_items() ) : ?>
-					<div class="letter-section" id="<?php $a_z_query->the_letter_id(); ?>">
-						<h2 class="letter-title">
+			?>
+			<?php if ( $a_z_query->have_items() ) : ?>
+			<div class="letter-section" id="<?php $a_z_query->the_letter_id(); ?>">
+				<h2 class="letter-title">
 							<span><?php $a_z_query->the_letter_title(); ?></span>
 						</h2>
+			
 
-						<ul class="two-column">
-							<?php
-							while ( $a_z_query->have_items() ) :
-								$a_z_query->the_item();
-								$a_z_query->get_the_item_object( 'I understand the issues!' );
-								if( get_field("prefix") ){
-									$prefix = get_field("prefix") .' ';
-								};
-								if( get_field("accred") ){
-									$accred = ', ' .get_field("accred");
-								};
-							?>
+				<?php if($current_slug == "directory"){
+							get_template_part("template-parts/directory-page-display-results");
+						}else{
+							get_template_part("template-parts/department-division-page-display-results");
+						}?>
 
-								<?php $terms = get_the_terms( get_the_ID(), 'department' );
-								if ( $terms && ! is_wp_error( $terms ) ) : 
- 
-									$department_links = array();
- 									foreach ( $terms as $term ) {
-										$department_links[] = $term->slug;
-									}
-									$in_department = join( " ", $department_links );
-								?>
-
-								<li class="<?php printf( esc_html__( '%s','textdomain' ), esc_html( $in_department ) ); ?>">
-								<?php else: ?>
-								<li>
-								<?php endif; ?>
-									<a href="<?php the_permalink(); ?>"><h4 class="noMargins"><?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></h4></a>
-								<?php $prefix = ""; ?>
-								<?php $accred = ""; ?>
-								<?php the_excerpt(); ?>
-								</li>
-							<?php endwhile; ?>
-						</ul>
-
-						<div class="back-to-top"><a href="#letters"><?php _e( 'Back to top', 'a-z-listing' ); ?></a></div>
-					</div>
-				<?php endif; ?>
+				<div class="back-to-top">
+					<a href="#letters">
+						<?php _e( 'Back to top', 'a-z-listing' ); ?>
+					</a>
+				</div>
+			</div>
+			<?php endif; ?>
 			<?php endwhile; ?>
 		</div>
 	</div>
 </div>
 <?php else : ?>
-	<p><?php esc_html_e( 'Please try a different department', 'a-z-listing' ); ?></p>
-	<?php
+<p>
+	<?php esc_html_e( 'Please try a different department', 'a-z-listing' ); ?>
+</p>
+<?php
 endif;
