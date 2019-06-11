@@ -120,7 +120,7 @@ function build_select_list( $taxonomies, $args ) {
 						<? else: //current slug == directory ?>
 							<style>
 								#az-slider li img{padding-right:15px;}
-								#az-slider li .contact p,.collapseomatic_content p{padding-left:0px;}
+								#az-slider li .contact p,#az-slider li .collapseomatic_content p{padding-left:0px;}
 							</style>
 		<?php if( get_field('directory_image') ): ?>
 			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
