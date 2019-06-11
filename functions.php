@@ -488,3 +488,11 @@ return '... <a href="'. get_permalink($post->ID) . '" class="readmore">read more
 add_filter('excerpt_more', 'excerpt_readmore');
 
 add_filter('acf/format_value/type=text', 'do_shortcode');
+
+function get_first_paragraph(){
+    global $post;
+    $str = wpautop( get_the_content() );
+    $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+    $str = strip_tags($str, '<a><strong><em>');
+    return '<p>' . $str . '</p>';
+}

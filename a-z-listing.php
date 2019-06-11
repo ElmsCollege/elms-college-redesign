@@ -136,6 +136,9 @@ function build_select_list( $taxonomies, $args ) {
 							<?php $accred = ""; ?>
 							<?php the_excerpt(); ?>
 							</div>
+							<?php echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . get_first_paragraph() . "[/expand]"); ?>
+
+							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?></a>
 						<? endif; //current slug == directory?>
 						</li>
 						<?php endwhile; ?>
