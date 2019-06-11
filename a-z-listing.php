@@ -118,9 +118,9 @@ function build_select_list( $taxonomies, $args ) {
 							<?php the_excerpt(); ?>
 							
 						<? else: //current slug == directory ?>
-					<?php if ( get_field( "directory_image" ) ) {
-						$photo = get_field( "directory_image" );
-					}; ?>
+		<?php if( get_field('directory_image') ): ?>
+			<?php echo wp_get_attachment_image( $image, "thumbnail" ); ?>
+		<?php endif; ?>
 
 							<a href="<?php the_permalink(); ?>">
 								<h4 class="noMargins">
@@ -130,7 +130,6 @@ function build_select_list( $taxonomies, $args ) {
 							<?php $prefix = ""; ?>
 							<?php $accred = ""; ?>
 							<?php the_excerpt(); ?>
-							<?php echo $photo; ?>
 							
 						<? endif; //current slug == directory?>
 						</li>
