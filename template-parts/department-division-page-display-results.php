@@ -14,9 +14,6 @@ controls the directory results on division and department staff pages
 	if ( get_field( "accred" ) ) {
 		$accred = ', ' . get_field( "accred" );
 	};
-	if ( get_field("directory_image") ) {
-		
-	}
 	?>
 
 	<?php $terms = get_the_terms( get_the_ID(), 'department' );
