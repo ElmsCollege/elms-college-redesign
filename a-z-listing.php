@@ -42,7 +42,7 @@
 		min-width:275px;
 		display:flex;
 		flex-flow:row wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-content:baseline;
 	}
 	.division-department li img {
@@ -150,6 +150,7 @@ function build_select_list( $taxonomies, $args ) {
 								<?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?>
 							</h4>
 						</a>
+							<div class="flexRowNowrapStart">
 							<?php if( get_field('directory_image') ): ?>
 								<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
 							<?php endif; ?>
@@ -162,8 +163,10 @@ function build_select_list( $taxonomies, $args ) {
 //							if( '' !== get_post()->post_content ) {
 //								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . //get_first_paragraph() . "[/expand]");
 //							}
-								echo '<span id="'.get_field("last_name").'" class="collapseomatic noarrow" swaptitle="<i class="fas fa-minus" aria-hidden="true"></i>Collapse Title"><i class="fas fa-plus" aria-hidden="true"></i>Expand Bio</span>';
 							?>
+
+								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow" swaptitle="<i class="fas fa-minus" aria-hidden="true"></i>Collapse Title"><i class="fas fa-plus" aria-hidden="true"></i>Expand Bio</span>';
+							</div>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
 								<?php echo get_first_paragraph(); ?>
