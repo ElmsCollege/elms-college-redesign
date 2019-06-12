@@ -165,13 +165,15 @@ function build_select_list( $taxonomies, $args ) {
 //							}
 							?>
 
-								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow" swaptitle="<i class='fas fa-minus' aria-hidden='true'></i>Collapse Title"><i class="fas fa-plus" aria-hidden="true"></i>Expand Bio</span>
+								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
+								<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
+								
 							</div>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
 								<?php echo get_first_paragraph(); ?>
 							</div>
-							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?> <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
 						<? endif; //current slug == directory?>
 						</li>
 						<?php endwhile; ?>
