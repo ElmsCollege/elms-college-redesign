@@ -165,7 +165,7 @@ function build_select_list( $taxonomies, $args ) {
 //							}
 							?>
 
-								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow" swaptitle="<i class="fas fa-minus" aria-hidden="true"></i>Collapse Title"><i class="fas fa-plus" aria-hidden="true"></i>Expand Bio</span>';
+								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow" swaptitle="<i class="fas fa-minus" aria-hidden="true"></i>Collapse Title"><i class="fas fa-plus" aria-hidden="true"></i>Expand Bio</span>
 							</div>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
