@@ -36,14 +36,14 @@
 		display:flex;
 		flex-flow:row wrap;
 		justify-content:space-between;
-		align-content: flex-start;
 	}
 	#az-slider .division-department li{
 		width:48%;
 		min-width:275px;
 		display:flex;
-		flex-flow:row nowrap;
-		justify-content:flex-start;
+		flex-flow:row wrap;
+		justify-content: space-between;
+		align-content:baseline;
 	}
 	.division-department li img {
 		margin-right: 15px;
@@ -53,6 +53,7 @@
 	.division-department p {
 		margin-bottom:0px;
 		padding-left: 0px !important;
+		word-break: break-word;
 	}
 	.nameLink{
 		flex-basis: 100%;
@@ -161,13 +162,13 @@ function build_select_list( $taxonomies, $args ) {
 //							if( '' !== get_post()->post_content ) {
 //								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . //get_first_paragraph() . "[/expand]");
 //							}
-								echo '<span id="'.get_field("last_name").'" class="collapseomatic noarrow" title="Quick Bio">Biography</span>';
+								echo '<span id="'.get_field("last_name").'" class="collapseomatic noarrow" swaptitle="<i class="fas fa-minus" aria-hidden="true"></i>Collapse Title"><i class="fas fa-plus" aria-hidden="true"></i>Expand Bio</span>';
 							?>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
 								<?php echo get_first_paragraph(); ?>
 							</div>
-							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?></a>
+							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
 						<? endif; //current slug == directory?>
 						</li>
 						<?php endwhile; ?>
