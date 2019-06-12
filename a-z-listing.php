@@ -31,7 +31,22 @@
 		} );
 	} );
 </script>
-
+<style>
+	.division-department li img {
+		margin-right: 15px;
+	}
+	
+	.division-department p {
+		padding-left: 0px;
+	}
+	
+	#a-z-slider .division-department li{
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content:flex-start;
+		
+	}
+</style>
 <?php
 global $wp;
 $current_slug = add_query_arg( array(), $wp->request );
@@ -78,7 +93,7 @@ function build_select_list( $taxonomies, $args ) {
 							<span><?php $a_z_query->the_letter_title(); ?></span>
 						</h2>
 
-				<ul class="two-column normalText">
+				<ul class="<?php if($current_slug == "directory"){echo 'two-column';}else{ echo 'division-department normalText';} ?>">
 					<?php
 					while ( $a_z_query->have_items() ):
 						$a_z_query->the_item();
@@ -118,11 +133,6 @@ function build_select_list( $taxonomies, $args ) {
 							<?php the_excerpt(); ?>
 							
 						<? else: //current slug == directory ?>
-							<style>
-								#az-slider li img{padding-right:15px;float:left;}
-								#az-slider li .contact p,#az-slider li .collapseomatic_content p{padding-left:0px;}
-								#az-slider li .contact{float:left;}
-							</style>
 		<?php if( get_field('directory_image') ): ?>
 			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
 		<?php endif; ?>
@@ -140,7 +150,7 @@ function build_select_list( $taxonomies, $args ) {
 //							if( '' !== get_post()->post_content ) {
 //								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . //get_first_paragraph() . "[/expand]");
 //							}
-								echo '<span class="collapseomatic" title="Quick Bio" id="'.get_field("last_name").'">Biography</span>';
+								echo '<span id="'.get_field("last_name").'" class="collapseomatic noarrow" title="Quick Bio">Biography</span>';
 							?>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
