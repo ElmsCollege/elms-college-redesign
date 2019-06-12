@@ -38,7 +38,7 @@
 		justify-content:space-between;
 		align-content: flex-start;
 	}
-	#a-z-slider .division-department li{
+	#az-slider .division-department li{
 		width:48%;
 		min-width:275px;
 		display:flex;
