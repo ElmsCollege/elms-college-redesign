@@ -32,19 +32,30 @@
 	} );
 </script>
 <style>
-	.division-department li img {
-		margin-right: 15px;
+	.division-department{
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-between;
+		align-content: flex-start;
 	}
-	
-	.division-department p {
-		padding-left: 0px;
-	}
-	
 	#a-z-slider .division-department li{
+		width:48%;
+		min-width:275px;
 		display:flex;
 		flex-flow:row nowrap;
 		justify-content:flex-start;
-		
+	}
+	.division-department li img {
+		margin-right: 15px;
+		width:100px;
+		height:100px;
+	}
+	.division-department p {
+		margin-bottom:0px;
+		padding-left: 0px !important;
+	}
+	.nameLink{
+		flex-basis: 100%;
 	}
 </style>
 <?php
@@ -133,16 +144,16 @@ function build_select_list( $taxonomies, $args ) {
 							<?php the_excerpt(); ?>
 							
 						<? else: //current slug == directory ?>
-		<?php if( get_field('directory_image') ): ?>
-			<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
-		<?php endif; ?>
+						<a class="nameLink" href = "<?php the_permalink(); ?>" >
+							<h4 class="noMargins">
+								<?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?>
+							</h4>
+						</a>
+							<?php if( get_field('directory_image') ): ?>
+								<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
+							<?php endif; ?>
 
 							<div class="contact">
-							<a href="<?php the_permalink(); ?>">
-								<h4 class="noMargins">
-									<?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?>
-								</h4>
-							</a>
 							<?php $prefix = ""; ?>
 							<?php $accred = ""; ?>
 							<?php the_excerpt(); ?>
