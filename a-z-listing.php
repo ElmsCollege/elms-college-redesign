@@ -160,14 +160,10 @@ function build_select_list( $taxonomies, $args ) {
 							<?php $accred = ""; ?>
 							<?php the_excerpt(); ?>
 							<?php
-//							if( '' !== get_post()->post_content ) {
-//								echo do_shortcode("[expand title='Quick Bio' swaptitle=' ']" . //get_first_paragraph() . "[/expand]");
-//							}
-							?>
-
+								if( '' !== get_post()->post_content ) : ?>
 								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
 								<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
-								
+							<?php endif; ?>	
 							</div>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
