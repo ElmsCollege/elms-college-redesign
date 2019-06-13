@@ -1325,7 +1325,21 @@ body.active,html.active{
 		width:458px;
 	}
 }
-.stories .story-feature .story-full .text-content:after{position:absolute;width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;border-left:30px solid #115438;right:-29px;top:46%}@media (min-width: 64em){.stories .story-feature .story-full .text-content:after{content:""}}.stories .story-feature .story-full .text-content .year-and-theme{font-size:28px;font-family:"blackjack", serif;color:#c3a250;line-height:1em}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .year-and-theme{font-size:1.5em;line-height:1}}.stories .story-feature .story-full .text-content .field-title{font-size:32px;margin:0 0 .25em;color:white;text-transform:none}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .field-title{font-size:1.5em;line-height:1}}.stories .story-feature .story-full .text-content .field-excerpt{font-size:18px;margin-bottom:32px}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .field-excerpt{font-size:1em;line-height:1.5}}.stories .story-feature .story-full .text-content .field-excerpt a{color:#c3a250;text-decoration:none}
+.stories .story-feature .story-full .text-content:after{position:absolute;width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;border-left:30px solid #115438;right:-29px;top:46%}@media (min-width: 64em){.stories .story-feature .story-full .text-content:after{content:""}}.stories .story-feature .story-full .text-content .year-and-theme{font-size:28px;font-family:"blackjack", serif;color:#c3a250;line-height:1em}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .year-and-theme{font-size:1.5em;line-height:1}}.stories .story-feature .story-full .text-content .field-title{font-size:32px;margin:0 0 .25em;color:white;text-transform:none}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .field-title{font-size:1.5em;line-height:1}}
+.stories .story-feature .story-full .text-content .field-excerpt{
+	font-size:18px;
+	margin-bottom:32px
+}
+@media (max-width: 47.999em){
+	.stories .story-feature .story-full .text-content .field-excerpt{
+		font-size:1em;
+		line-height:1.5
+	}
+}
+.stories .story-feature .story-full .text-content .field-excerpt a{
+	color:#c3a250;
+	text-decoration:none
+}
 .stories .story-feature .story-full .text-content .field-permalink a{
 	display:inline-block;
 	text-decoration:none;
@@ -1826,9 +1840,6 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover{
 	background-color:#eee;
 }
 #tribe-events .tribe-events-content p,.tribe-events-after-html p,.tribe-events-before-html p{margin-bottom:1.5em}.single-tribe_events .tribe-events-venue-map{width:100%;margin:0}.tribe-events-meta-group.tribe-events-meta-group-gmap{padding:0;margin:0}.single-tribe_events .tribe-events-single-event-title{font-size:40px}#tribe-events-content a,.tribe-events-adv-list-widget .tribe-events-widget-link a,.tribe-events-adv-list-widget .tribe-events-widget-link a:hover,.tribe-events-back a,.tribe-events-back a:hover,.tribe-events-event-meta a,.tribe-events-list-widget .tribe-events-widget-link a,.tribe-events-list-widget .tribe-events-widget-link a:hover,ul.tribe-events-sub-nav a,ul.tribe-events-sub-nav a:hover{font-size:1em;font-weight:500}#tribe-events-content .recurring-info-tooltip,#tribe-events-content .tribe-events-calendar .tribe-events-tooltip,#tribe-events-content .tribe-events-shortcode.view-week .tribe-events-tooltip,#tribe-events-content .tribe-events-week .tribe-events-tooltip{padding:.75em 1em}#tribe-events .tribe-events-button:hover,#tribe-events .tribe-events-button:hover,#tribe_events_filters_wrapper input[type=submit]:hover,.tribe-events-button:hover,.tribe-events-button.tribe-active:hover,.tribe-events-button.tribe-inactive:hover,.tribe-events-button:hover,.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]:hover,.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a:hover{background-color:#c3a250;color:#fff}.single-tribe_events .tribe-events-single-event-title+.tribe-events-schedule.tribe-clearfix{margin-top:-8px}@media only screen and (max-width: 768px){.tribe-events-sub-nav li a{background:transparent;color:#7f6932}}
-.opening-menu.fs-dropdown{
-	font-weight:bold
-}
 .opening-menu.fs-dropdown .fs-dropdown-item{
 	border:none;
 	-webkit-appearance:none;
@@ -1883,7 +1894,7 @@ button.fs-dropdown-item:hover{
 	font-size:20px;
 	color:#fff;
 }
-body.page-template-landing-page .opening-menu,body.page-template-nursing-secondary-landing-page .opening-menu,body.page-template-nursing-landing-page-2 .opening-menu{
+.page-template-landing-page .opening-menu,.page-template-nursing-secondary-landing-page .opening-menu,.page-template-nursing-landing-page-2 .opening-menu{
 	padding:0;
 	list-style-type:none;
 	background:white;
@@ -1895,7 +1906,7 @@ body.page-template-landing-page .opening-menu,body.page-template-nursing-seconda
 	text-align:center;
 	width: 100%;
 }
-body.page-template-landing-page .opening-menu.fs-dropdown, body.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown, body.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown {
+.page-template-landing-page .opening-menu.fs-dropdown,.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown,.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown {
 	display: block;
 	margin: 10px 0;
 	padding: 0px 32px;
@@ -1919,7 +1930,21 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	box-shadow:none
 }
 @media (min-width: 72em){
-	body.page-template-landing-page .opening-menu,body.page-template-nursing-secondary-landing-page .opening-menu,body.page-template-nursing-landing-page-2 .opening-menu{display:table}body.page-template-landing-page .opening-menu.fs-dropdown,body.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown,body.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown{display:none}}.quick-facts{max-width:1200px;margin:0 auto}.quick-facts .quick-facts-inner{counter-reset:my-counter;margin-top:32px}
+	.page-template-landing-page .opening-menu,.page-template-nursing-secondary-landing-page .opening-menu,.page-template-nursing-landing-page-2 .opening-menu{
+		display:table
+	}
+	.page-template-landing-page .opening-menu.fs-dropdown,.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown,.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown{
+		display:none
+	}
+}
+.quick-facts{
+	max-width:1200px;
+	margin:0 auto
+}
+.quick-facts .quick-facts-inner{
+	counter-reset:my-counter;
+	margin-top:32px
+}
 .quick-facts .quick-facts-inner .quick-fact{
 	position:relative
 }
@@ -1991,7 +2016,7 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 .short-content .short-content-inner .short{
 	padding:16px
 }
-.short-content .short-content-inner .short h3.field-title{
+.short-content .short-content-inner .short h3{
 	font-size:24px;
 	margin:0
 }
@@ -2714,12 +2739,6 @@ body.page-template-home-page{
 		line-height:1;
 	}
 }
-@media all and (min-width: 48em){
-	#nursingPage .section-mission_statement .field-mission_statement_body{
-		max-width:720px;
-		margin:0 auto;
-	}
-}
 .section-mission_statement .field-mission_statement{
 	color:#115438;
 	font-size:56px;
@@ -2906,14 +2925,6 @@ body.page-template-nursing-intermediary-landing-page .menu-item:hover{
 body.page-template-nursing-intermediary-landing-page .menu-item:hover a:after{
 	background-image:url(images/icon-menu-more-white.png);
 }
-.page-template-nursing-intermediary-landing-page .field-mission_statement_body,.page-template-nursing-secondary-landing-page .field-mission_statement_body{
-	max-width:60%;
-}
-@media (max-width: 64em){
-	.page-template-nursing-intermediary-landing-page .field-mission_statement_body,.page-template-nursing-secondary-landing-page .field-mission_statement_body{
-		max-width:100%;
-	}
-}
 .page-template-nursing-intermediary-landing-page .social-media-inner,.page-template-nursing-secondary-landing-page .social-media-inner{
 	background:linear-gradient(rgba(17,84,56,0.8), rgba(17,84,56,0.8)),url("/wp-content/uploads/2017/02/Postbac-Premed2016-4.jpg");
 }
@@ -3015,9 +3026,6 @@ body.page-template-nursing-secondary-landing-page .top-background-image{
 }
 .page-template-nursing-secondary-landing-page .mission-statement-container{
 	margin-bottom:1.5em
-}
-.page-template-nursing-secondary-landing-page #mission-statement-pt-1 p:last-child{
-	margin-bottom:0
 }
 .page-template-nursing-secondary-landing-page .program-list{
 	max-width:1200px;
@@ -3189,9 +3197,6 @@ body.page-template-nursing-secondary-landing-page .cta:nth-child(4):hover .image
 body.page-template-nursing-secondary-landing-page .cta:nth-child(4):hover .permalink{
 	color:#413556 !important;
 }
-body.page-template-program-page .opening-menu button,body.page-template-nursing-program-page .opening-menu button{
-	text-transform:uppercase;
-}
 body.page-template-program-page .site-main article,body.page-template-program-page .site-main.standalone,body.page-template-nursing-program-page .site-main article,body.page-template-nursing-program-page .site-main.standalone{
 	font-size:16px;
 	line-height:18px;
@@ -3231,9 +3236,6 @@ body.page-template-program-page .site-main article,body.page-template-program-pa
   width: 29px;
   line-height: 29px;
   vertical-align: middle;
-}
-body.page-template-program-page .quick-info p,body.page-template-nursing-program-page .quick-info p{
-	margin:0;
 }
 .field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	padding:10px 25px;
