@@ -46,7 +46,6 @@ function gs_elms_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary (Main)', 'gs_elms' ),
-    'special' => esc_html__( 'Special', 'gs_elms' ),
     'utility' => esc_html__( 'Utility (Footer)', 'gs_elms' ),
     'library' => esc_html__( 'Library', 'gs_elms' ),
     'nursing' => esc_html__( 'Nursing', 'gs_elms' )
@@ -113,33 +112,32 @@ function gs_elms_scripts() {
 
 	wp_enqueue_script( 'gs_elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );
 
-  wp_enqueue_script( 'gs_elms-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20161215', true );
+	wp_enqueue_script( 'gs_elms-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20161215', true );
 	wp_enqueue_script( 'gs_elms-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20161215', true );
-  
-  wp_enqueue_script( 'gs_elms-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20160413', true );
 
-  wp_enqueue_script( 'gs_elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20160413', true );
-  wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20160413', true );
-  wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20160413', true );
-  wp_enqueue_script( 'gs_elms-fitie', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20160413', true );
+	wp_enqueue_script( 'gs_elms-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20160413', true );
 
-  wp_enqueue_script( 'gs_elms-dropdown-core', get_template_directory_uri() . '/js/dropdown/core.js', array(), '20151215', true );
-  wp_enqueue_script( 'gs_elms-dropdown-touch', get_template_directory_uri() . '/js/dropdown/touch.js', array(), '20151215', true );
-  wp_enqueue_script( 'gs_elms-dropdown-main', get_template_directory_uri() . '/js/dropdown/dropdown.js', array(), '20151215', true );
-  
-  wp_enqueue_script( 'gs_elms-what-input', get_template_directory_uri() . '/js/what-input.min.js', array(), '20151215', true );
-  wp_enqueue_script( 'gs_elms-object-fit', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20151215', true );
-  wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20151215', true );
-  wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'gs_elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20160413', true );
+	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20160413', true );
+	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20160413', true );
+	wp_enqueue_script( 'gs_elms-fitie', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20160413', true );
 
-  wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
+	wp_enqueue_script( 'gs_elms-dropdown-core', get_template_directory_uri() . '/js/dropdown/core.js', array(), '20151215', true );
+	wp_enqueue_script( 'gs_elms-dropdown-touch', get_template_directory_uri() . '/js/dropdown/touch.js', array(), '20151215', true );
+	wp_enqueue_script( 'gs_elms-dropdown-main', get_template_directory_uri() . '/js/dropdown/dropdown.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'gs_elms-what-input', get_template_directory_uri() . '/js/what-input.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'gs_elms-object-fit', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20151215', true );
+	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20151215', true );
+	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'gs_elms_scripts' );
-
 /**
  * Implement the Custom Header feature.
  */
