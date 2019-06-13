@@ -584,14 +584,11 @@ a:hover,a:active{
 	left:0;
 	right:0
 }
-.nav-trigger .close-label{
+.nav-trigger .close-label,.nav-trigger.active .open-label{
 	display:none
 }
 .nav-trigger.active .close-label{
 	display:block
-}
-.nav-trigger.active .open-label{
-	display:none
 }
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li>a:not(.words-1){
@@ -1996,11 +1993,7 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 }
 .short-content .short-content-inner .short h3.field-title{
 	font-size:24px;
-	color:#115438;
 	margin:0
-}
-.short-content .short-content-inner .short .field-body{
-	font-size:18px
 }
 .short-content .short-content-inner .short .field-body p{
 	margin:0
@@ -2714,9 +2707,6 @@ body.page-template-home-page{
 #nursingPage .site-content{
 	padding-top:56px
 }
-#nursingPage .section-mission_statement{
-	margin:56px 32px;
-}
 @media all and (max-width: 47.999em){
 	.section-mission_statement .pre-title{
 		text-align:left;
@@ -2725,9 +2715,6 @@ body.page-template-home-page{
 	}
 }
 @media all and (min-width: 48em){
-	#nursingPage .section-mission_statement{
-		text-align:center;
-	}
 	#nursingPage .section-mission_statement .field-mission_statement_body{
 		max-width:720px;
 		margin:0 auto;
@@ -2919,15 +2906,15 @@ body.page-template-nursing-intermediary-landing-page .menu-item:hover{
 body.page-template-nursing-intermediary-landing-page .menu-item:hover a:after{
 	background-image:url(images/icon-menu-more-white.png);
 }
-body.page-template-nursing-intermediary-landing-page .field-mission_statement_body{
+.page-template-nursing-intermediary-landing-page .field-mission_statement_body,.page-template-nursing-secondary-landing-page .field-mission_statement_body{
 	max-width:60%;
 }
 @media (max-width: 64em){
-	body.page-template-nursing-intermediary-landing-page .field-mission_statement_body{
+	.page-template-nursing-intermediary-landing-page .field-mission_statement_body,.page-template-nursing-secondary-landing-page .field-mission_statement_body{
 		max-width:100%;
 	}
 }
-body.page-template-nursing-intermediary-landing-page .social-media-inner{
+.page-template-nursing-intermediary-landing-page .social-media-inner,.page-template-nursing-secondary-landing-page .social-media-inner{
 	background:linear-gradient(rgba(17,84,56,0.8), rgba(17,84,56,0.8)),url("/wp-content/uploads/2017/02/Postbac-Premed2016-4.jpg");
 }
 body.page-template-nursing-intermediary-landing-page .cta{
@@ -2990,25 +2977,9 @@ body.page-template-nursing-secondary-landing-page .menu-item:hover{
 body.page-template-nursing-secondary-landing-page .menu-item:hover a:after{
 	background-image:url(images/icon-menu-more-white.png)
 }
-body.page-template-nursing-secondary-landing-page .section-heading{
-	height:auto;
-	max-height:none;
-	padding-top:16px
-}
 @media (max-width: 770px){
 	body.page-template-nursing-secondary-landing-page .section-mission_statement{
 		margin-bottom:0
-	}
-}
-body.page-template-nursing-secondary-landing-page .program-item-mobile{
-	display:inline-block
-}
-body.page-template-nursing-secondary-landing-page .program-item-mobile a{
-	font-size:1.5em
-}
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .program-item-mobile{
-		margin-bottom:1.5em
 	}
 }
 body.page-template-nursing-secondary-landing-page .stories,body.page-template-nursing-secondary-landing-page .stories-inner{
@@ -3033,65 +3004,43 @@ body.page-template-nursing-secondary-landing-page .top-background-image{
 	background-position:50% 20.5%;
 	background-size:cover
 }
-body.page-template-nursing-secondary-landing-page .top-menu-container{
-	width:86%;
-	margin-left:5%;
-	margin-top:-2em;
-	background-color:
-	white
-}
-body.page-template-nursing-secondary-landing-page .top-menu-link,body.page-template-nursing-secondary-landing-page top-menu-link:visited{
-	color:black
-}
-body.page-template-nursing-secondary-landing-page .mission-statement-body{
+.page-template-nursing-secondary-landing-page .mission-statement-body{
 	width:64%;
 	margin:0 auto
 }
 @media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .mission-statement-body{
+	.page-template-nursing-secondary-landing-page .mission-statement-body{
 		width:100%
 	}
 }
-body.page-template-nursing-secondary-landing-page .mission-statement-container{
+.page-template-nursing-secondary-landing-page .mission-statement-container{
 	margin-bottom:1.5em
 }
-body.page-template-nursing-secondary-landing-page #mission-statement-pt-1 p:last-child,body.page-template-nursing-secondary-landing-page #mission-statement-pt-2 p:last-child{
+.page-template-nursing-secondary-landing-page #mission-statement-pt-1 p:last-child{
 	margin-bottom:0
 }
-body.page-template-nursing-secondary-landing-page .program-list{
-	margin-left:auto;
-	margin-right:auto;
+.page-template-nursing-secondary-landing-page .program-list{
 	max-width:1200px;
 	display:flex;
 	flex-wrap:wrap;
 	padding:0
 }
 @media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .program-list{
+	.page-template-nursing-secondary-landing-page .program-list{
 		display:block
 	}
 }
-body.page-template-nursing-secondary-landing-page .rn-item{
+.page-template-nursing-secondary-landing-page .rn-item{
 	padding:0 2em 2em 2em;
-	display:inline-block;
 	vertical-align:top;
 	flex-grow:1;
 	width:50%;
 	box-sizing:border-box
 }
 @media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .rn-item{
+	.page-template-nursing-secondary-landing-page .rn-item{
 		display:block;width:100%
 	}
-}
-body.page-template-nursing-secondary-landing-page .rn-item>div{
-	position:relative
-}
-body.page-template-nursing-secondary-landing-page .rn-item p{
-	margin-bottom:0
-}
-body.page-template-nursing-secondary-landing-page .calls-to-action a:hover{
-	color:#000000 !important
 }
 body.page-template-nursing-secondary-landing-page .program-track-title{
 	margin:0 auto 32px;
@@ -3123,65 +3072,6 @@ body.page-template-nursing-secondary-landing-page .program-title{
 	font-weight:bold;
 	font-size:24px;
 	text-transform:uppercase;
-}
-body.page-template-nursing-secondary-landing-page .field-mission_statement_body{
-	max-width:60%
-}
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .field-mission_statement_body{
-		max-width:100%;
-		width:100%
-	}
-}
-body.page-template-nursing-secondary-landing-page .bottom-container{
-	position:relative;
-	display:inline-block;
-	margin-bottom:2em
-}
-body.page-template-nursing-secondary-landing-page .bottom-list-container{
-	width:70%;
-	background-color:white;
-	margin-top:5em
-}
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .bottom-list-container{
-		width:90%;
-		margin-top:0
-	}
-	body.page-template-nursing-secondary-landing-page .bottom-list-container ul{
-		padding:0
-	}
-}
-body.page-template-nursing-secondary-landing-page .bottom-list-item{
-	width:44%;
-	margin:32px;
-	display:inline-block;
-	vertical-align:top
-}
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page .bottom-list-item{
-		width:100%
-	}
-}
-body.page-template-nursing-secondary-landing-page .bottom-title{
-	color:#115438;
-	font-size:28px;
-	font-weight:bold;
-	margin-bottom:0
-}
-body.page-template-nursing-secondary-landing-page .bottom-list-item p{
-	margin-bottom:0
-}
-body.page-template-nursing-secondary-landing-page .bottom-image{
-	height:31em;
-	width:30em;
-	position:absolute;
-	top:0;
-	right:7em;
-	z-index:-1
-}
-body.page-template-nursing-secondary-landing-page .social-media-inner{
-	background:linear-gradient(rgba(17,84,56,0.8), rgba(17,84,56,0.8)),url("/wp-content/uploads/2017/02/Postbac-Premed2016-4.jpg")
 }
 body.page-template-nursing-secondary-landing-page .cta-image{
 	height:330px !important
