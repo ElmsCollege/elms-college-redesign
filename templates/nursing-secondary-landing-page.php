@@ -61,8 +61,6 @@ get_header("nursing");
 			<div class="mission-statement-body" id="mission-statement-pt-1">
 		          <?php echo $mission_statement_body?>
 		    </div>
-		    <div style="display:none" id="mission-statement-pt-2">
-		    </div>
         </div>
       </div>
 
@@ -144,7 +142,7 @@ get_header("nursing");
 			</div>
 		</div>
         <div>
-            <ul class="program-list">
+            <ul class="program-list noMargins ulreset">
               <?php foreach ($program_repeater[$x]["programs"] as $index=>$program) : 
                 $title = $program["program_title"];
                 $content = $program["program_content"];
@@ -161,11 +159,9 @@ get_header("nursing");
                 }
                 ?>
                 <li class="rn-item">
-                  <div style="">
-		                  <p class="program-title"><?php print $title ?></p>
+		                  <p class="program-title noMarginBottom"><?php print $title ?></p>
 		                  <?php print $content ?>
 		                  <a href="<?php echo $link ?>">Learn More</a>
-                  </div>
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -181,7 +177,7 @@ get_header("nursing");
           <div class="short-content-inner pure-g">
             <?php foreach ($short_content as $index=>$short) : ?>
               <div class="short pure-u-1 <?php if (sizeof($short_content) != 1) {echo 'pure-u-lg-1-2';}?>">
-                <h3 class="field-title"><?php print($short["title"]) ?></h3>
+                <h3><?php print($short["title"]) ?></h3>
                 <div class="field-body"><?php print($short["body"]) ?></div>
               </div>
             <?php endforeach; ?>

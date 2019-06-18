@@ -85,7 +85,7 @@ while ( have_posts() ) : the_post();
           <div class="short-content-inner pure-g">
             <?php foreach ($short_content as $index=>$short) : ?>
               <div class="short pure-u-1 <?php if (sizeof($short_content) != 1) {echo 'pure-u-lg-1-2';}?>">
-                <h3 class="field-title"><?php print($short["title"]) ?></h3>
+                <h3><?php print($short["title"]) ?></h3>
                 <div class="field-body"><?php print($short["body"]) ?></div>
               </div>
             <?php endforeach; ?>
