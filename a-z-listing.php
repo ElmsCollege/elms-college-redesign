@@ -167,8 +167,8 @@ function build_select_list( $taxonomies, $args ) {
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
 								<?php echo get_first_paragraph(); ?>
+								<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
 							</div>
-							<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio1</span>
 
 							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?> <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
 						<? endif; //current slug == directory?>
