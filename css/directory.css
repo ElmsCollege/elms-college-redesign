@@ -28,8 +28,8 @@
 	margin-bottom:unset;
 	overflow:hidden;
 }
-#az-slider li p{
-	padding-left:20px;
+#az-slider .contact{
+	margin-left:15px;
 }
 #az-slider .letter-section{
 	margin-bottom:unset;
@@ -64,7 +64,6 @@
 	align-content:baseline;
 }
 .division-department li img {
-	margin-right: 15px;
 	width:100px;
 	height:100px;
 }
