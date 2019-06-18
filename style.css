@@ -3782,57 +3782,6 @@ body.page-template-landing-page .opening-menu{
 .textCenter{
 	text-align:center;
 }
-/* BEGIN styling overrides for the a-z plugin pages (/directory) */
-.az-letters{
-	margin-top:-120px;
-	padding:120px 0 30px;
-}
-.az-letters li{
-	padding:6px;
-	font-size:14px;
-}
-#az-slider li{
-	margin-bottom:10px;
-	font-size:16px;
-}
-#az-slider  li {
-  /* for Chrome and Edge */
-  break-inside: avoid-column;
-  /* for Firefox */
-  display: inline-grid;
-  page-break-inside: avoid;
-}
-
-/* for Chrome and Edge */
-@supports (break-inside: avoid-column) {
-  #az-slider li  {
-    display: block;
-  }
-}
-#az-slider li:last-child{
-	margin-bottom:unset;
-	overflow: hidden;
-}
-#az-slider li p{
-	padding-left:20px;
-}
-#az-slider .letter-section{
-	margin-bottom:unset;
-}
-.page-id-22784 .filterList{
-	margin-bottom:25px;
-}
-.page-id-22784 .filterList button{
-	display:inline-block;
-	padding:2px 5px;
-	margin:0 0 0 15px;
-	min-width:unset;
-	font-size:1em;
-	line-height:1em;
-}
-
-/* END styling overrides for the a-z plugin pages (/directory) */
-
 .displayTable,.g-recaptcha,#advertising-landing-page footer{
 	display:table;
 	margin:0 auto;

@@ -11,8 +11,8 @@
  * @package a-z-listing
  */
 
+	wp_enqueue_style( 'directory', get_stylesheet_uri() . '/css/directory.css', array(), '1' );
 ?>
-
 <script>
 	jQuery( document ).ready( function () {
 		jQuery( "#departmentFilter" ).change( function () {
@@ -31,34 +31,7 @@
 		} );
 	} );
 </script>
-<style>
-	.division-department{
-		display:flex;
-		flex-flow:row wrap;
-		justify-content:space-between;
-	}
-	#az-slider .division-department li{
-		width:48%;
-		min-width:275px;
-		display:flex;
-		flex-flow:row wrap;
-		justify-content: flex-start;
-		align-content:baseline;
-	}
-	.division-department li img {
-		margin-right: 15px;
-		width:100px;
-		height:100px;
-	}
-	.division-department p {
-		margin-bottom:0px;
-		padding-left: 0px !important;
-		word-break: break-word;
-	}
-	.nameLink{
-		flex-basis: 100%;
-	}
-</style>
+
 <?php
 global $wp;
 $current_slug = add_query_arg( array(), $wp->request );
