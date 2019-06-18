@@ -3902,7 +3902,7 @@ body.page-template-landing-page .opening-menu{
 	display:block;
 }	
 /* END styles for the President's Blog */
-/* BEGIN generic, reusable styles */
+/* BEGIN generic, universal, reusable styles */
 .two-column{
 	-webkit-columns:300px 2;
 	-moz-columns:300px 2;
@@ -3936,7 +3936,10 @@ th .smallText{
 .jt-title{
 	text-align:center;
 }
-/* END generic, reusable styles */
+.100{
+	width:100%;
+}
+/* END generic, universal, reusable styles */
 #advertising-landing-page .section-heading{
 	background-color:unset;
 }

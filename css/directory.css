@@ -12,21 +12,21 @@
 }
 #az-slider  li {
   /* for Chrome and Edge */
-  break-inside: avoid-column;
+  break-inside:avoid-column;
   /* for Firefox */
-  display: inline-grid;
-  page-break-inside: avoid;
+  display:inline-grid;
+  page-break-inside:avoid;
 }
 
 /* for Chrome and Edge */
 @supports (break-inside: avoid-column) {
   #az-slider li  {
-    display: block;
+    display:block;
   }
 }
 #az-slider li:last-child{
 	margin-bottom:unset;
-	overflow: hidden;
+	overflow:hidden;
 }
 #az-slider li p{
 	padding-left:20px;
@@ -46,9 +46,9 @@
 	line-height:1em;
 }
 .letter-section div.back-to-top a:before,.letter-section div.back-to-top a:after {
-    font-family: "Font Awesome 5 Free" !important;
-    content: "\f077" !important;
-    font-weight: 700;
+    font-family:"Font Awesome 5 Free" !important;
+    content:"\f077" !important;
+    font-weight:700;
 }
 .division-department{
 	display:flex;
@@ -70,11 +70,11 @@
 }
 .division-department p {
 	margin-bottom:0;
-	padding-left: 0 !important;
-	word-break: break-word;
+	padding-left:0 !important;
+	word-break:break-word;
 }
-.nameLink{
-	flex-basis: 100%;
+.flexRowNowrapStart{
+	width:100%;
 }
 @media only screen and (max-width:802px) {
 	#az-slider #inner-slider ul{
