@@ -112,16 +112,10 @@ function build_select_list( $taxonomies, $args ) {
 								</h4>
 							</a>
 							<div class="flexRowNowrapStart">
-								<div class="contact">
-									<?php $prefix = ""; ?>
-									<?php $accred = ""; ?>
-									<?php the_excerpt(); ?>
-								</div>
-							</div>
 
-							<?php if(($current_slug != "directory") and (get_field('directory_image'))) : ?>
-								<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
-							<?php endif; ?>
+								<?php if(($current_slug != "directory") and (get_field('directory_image'))) : ?>
+									<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
+								<?php endif; ?>
 
 								<div class="contact">
 									<?php $prefix = ""; ?>
