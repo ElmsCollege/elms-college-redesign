@@ -73,8 +73,8 @@
 	height:100px;
 }
 .division-department p {
-	margin-bottom:0px;
-	padding-left: 0px !important;
+	margin-bottom:0;
+	padding-left: 0 !important;
 	word-break: break-word;
 }
 .nameLink{

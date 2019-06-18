@@ -127,7 +127,7 @@ function build_select_list( $taxonomies, $args ) {
 									<?php endif; ?>	
 								</div>
 							</div>
-							<?php if($current_slug != "directory") : ?>
+								<?php if(($current_slug != "directory") and ('' !== get_post()->post_content)) : ?>
 								<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
 									<?php echo get_first_paragraph(); ?>
 								</div>
