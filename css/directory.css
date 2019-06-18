@@ -80,7 +80,7 @@
 .nameLink{
 	flex-basis: 100%;
 }
-@media only screen and (max-width:786px) {
+@media only screen and (max-width:802px) {
 	#az-slider #inner-slider ul{
 		-webkit-columns:unset;
 		-moz-columns:unset;

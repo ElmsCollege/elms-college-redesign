@@ -92,59 +92,55 @@ function build_select_list( $taxonomies, $args ) {
 					?>
 
 					<?php $terms = get_the_terms( get_the_ID(), 'department' );
-								if ( $terms && ! is_wp_error( $terms ) ) : 
+						if ( $terms && ! is_wp_error( $terms ) ) : 
  
-									$department_links = array();
- 									foreach ( $terms as $term ) {
-										$department_links[] = $term->slug;
-									}
-									$in_department = join( " ", $department_links );
-								?>
+							$department_links = array();
+ 							foreach ( $terms as $term ) {
+								$department_links[] = $term->slug;
+							}
+							$in_department = join( " ", $department_links );
+							?>
 
-					<li class="<?php printf( esc_html__( '%s','textdomain' ), esc_html( $in_department ) ); ?>">
+							<li class="<?php printf( esc_html__( '%s','textdomain' ), esc_html( $in_department ) ); ?>">
 						<?php else: ?>
-						<li>
-							<?php endif; ?>
+							<li>
+						<?php endif; ?>
 							
-						<?php if($current_slug == "directory") : ?>
-
 							<a href="<?php the_permalink(); ?>">
 								<h4 class="noMargins">
 									<?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?>
 								</h4>
 							</a>
-							<?php $prefix = ""; ?>
-							<?php $accred = ""; ?>
-							<?php the_excerpt(); ?>
-							
-						<? else: //current slug == directory ?>
-						<a class="nameLink" href = "<?php the_permalink(); ?>" >
-							<h4 class="noMargins">
-								<?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ) . $accred ; ?>
-							</h4>
-						</a>
 							<div class="flexRowNowrapStart">
-								<?php if( get_field('directory_image') ): ?>
-									<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
-								<?php endif; ?>
+								<div class="contact">
+									<?php $prefix = ""; ?>
+									<?php $accred = ""; ?>
+									<?php the_excerpt(); ?>
+								</div>
+							</div>
+
+							<?php if(($current_slug != "directory") and (get_field('directory_image'))) : ?>
+								<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
+							<?php endif; ?>
 
 								<div class="contact">
 									<?php $prefix = ""; ?>
 									<?php $accred = ""; ?>
 									<?php the_excerpt(); ?>
-									<?php
-										if( '' !== get_post()->post_content ) : ?>
+									<?php if(($current_slug != "directory") and ('' !== get_post()->post_content)) : ?>
 										<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
 										<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
 									<?php endif; ?>	
 								</div>
 							</div>
-							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
-								<?php echo get_first_paragraph(); ?>
-							</div>
+							<?php if($current_slug != "directory") : ?>
+								<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
+									<?php echo get_first_paragraph(); ?>
+								</div>
+							<?php endif; ?>	
 
 							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?> <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-						<? endif; //current slug == directory?>
+
 						</li>
 						<?php endwhile; ?>
 
