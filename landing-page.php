@@ -85,7 +85,7 @@ get_header(); ?>
         <div class="short-content-inner pure-g">
           <?php foreach ($short_content as $index=>$short) : ?>
             <div class="short pure-u-1 pure-u-lg-1-2">
-              <h3 class="field-title"><?php print($short["title"]) ?></h3>
+              <h3><?php print($short["title"]) ?></h3>
               <div class="field-body"><?php print($short["body"]) ?></div>
             </div>
           <?php endforeach; ?>
