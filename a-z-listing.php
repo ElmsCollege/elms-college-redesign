@@ -11,7 +11,7 @@
  * @package a-z-listing
  */
 
-	wp_enqueue_style( 'directory', get_stylesheet_uri() . '/css/directory.css', array(), '1' );
+	wp_enqueue_style( 'directory', get_template_directory_uri() . '/css/directory.css', array(), '1' );
 ?>
 <script>
 	jQuery( document ).ready( function () {
