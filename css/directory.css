@@ -2,10 +2,6 @@
 * new CSS file that is included by the a-z plugin for the directory (/directory) pages
 * this is enqueued by a-z-listing.php
 */
-.az-letters{
-	margin-top:-120px;
-	padding:120px 0 30px;
-}
 .az-letters li{
 	padding:6px;
 	font-size:14px;
@@ -50,8 +46,8 @@
 	line-height:1em;
 }
 .letter-section div.back-to-top a:before,.letter-section div.back-to-top a:after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f077";
+    font-family: "Font Awesome 5 Free" !important;
+    content: "\f077" !important;
     font-weight: 700;
 }
 .division-department{
