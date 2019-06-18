@@ -2117,7 +2117,8 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 .section-mission_statement .field-mission_statement{
 	color:#115438;
 	font-size:56px;
-	margin:0 auto 32px
+	margin:0 auto 32px;
+	line-height:1em;
 }
 @media all and (max-width: 63.999em){
 	.section-mission_statement .field-mission_statement{
@@ -2737,19 +2738,6 @@ body.page-template-home-page{
 		text-align:left;
 		font-size:1.5em;
 		line-height:1;
-	}
-}
-.section-mission_statement .field-mission_statement{
-	color:#115438;
-	font-size:56px;
-	margin:0 auto 32px;
-	line-height:1em;
-}
-@media all and (max-width: 47.999em){
-	.section-mission_statement .field-mission_statement{
-		line-height:1;
-		margin-top:0;
-		font-size:1.8em;
 	}
 }
 #nursingPage .section-mission_statement .field-permalink{

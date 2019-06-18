@@ -151,23 +151,23 @@ function build_select_list( $taxonomies, $args ) {
 							</h4>
 						</a>
 							<div class="flexRowNowrapStart">
-							<?php if( get_field('directory_image') ): ?>
-								<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
-							<?php endif; ?>
+								<?php if( get_field('directory_image') ): ?>
+									<?php echo wp_get_attachment_image( get_field('directory_image'), 'thumbnail' ); ?>
+								<?php endif; ?>
 
-							<div class="contact">
-							<?php $prefix = ""; ?>
-							<?php $accred = ""; ?>
-							<?php the_excerpt(); ?>
-							<?php
-								if( '' !== get_post()->post_content ) : ?>
-								<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
-							<?php endif; ?>	
-							</div>
+								<div class="contact">
+									<?php $prefix = ""; ?>
+									<?php $accred = ""; ?>
+									<?php the_excerpt(); ?>
+									<?php
+										if( '' !== get_post()->post_content ) : ?>
+										<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
+										<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
+									<?php endif; ?>	
+								</div>
 							</div>
 							<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
 								<?php echo get_first_paragraph(); ?>
-								<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
 							</div>
 
 							<a href="<?php the_permalink(); ?>">Learn more about <?php echo $prefix .get_field("first_name" ). ' '. get_field("last_name" ); ?> <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
