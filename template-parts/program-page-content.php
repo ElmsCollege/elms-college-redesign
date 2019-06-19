@@ -113,19 +113,19 @@ $lower_story_content = get_field("lower_story_content");
             <?php if ($required_credits): ?>
               <div class="field-required-credits">
                 <h3>Required Credits</h3>
-                <p class="noMargins><?php print $required_credits ?></p>
+                <p class="noMargins"><?php print $required_credits ?></p>
               </div>
             <?php endif; ?>
             <?php if ($degree_option): ?>
               <div class="field-degree-option">
                 <h3>Degree Option</h3>
-                <p class="noMargins><?php print $degree_option ?></p>
+                <p class="noMargins"><?php print $degree_option ?></p>
               </div>
             <?php endif; ?>
             <?php if ($program_formats): ?>
               <div class="field-program-formats">
                 <h3>Program Formats</h3>
-                <p class="noMargins><?php print $program_formats ?></p>
+                <p class="noMargins"><?php print $program_formats ?></p>
               </div>
             <?php endif; ?>
             <?php if (!empty($misc_quick_info)): ?>
