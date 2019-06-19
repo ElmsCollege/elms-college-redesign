@@ -1094,20 +1094,20 @@ body.active,html.active{
 	box-sizing:border-box;
 	border-radius:9000px;
 	background:url("images/social-media-sprite.png") no-repeat top left;
-	width:84px;
-	height:84px;
+	width:72px;
+	height:72px;
 }
 .social-media-icons .social-media-icon-link.facebook{
 	background-position:0 0; 
 }
 .social-media-icons .social-media-icon-link.twitter{
-	background-position:0 -188px;
+	background-position:0 -94px;
 }
 .social-media-icons .social-media-icon-link.youtube{
-	background-position: 0 -282px;
+	background-position: 0 -141px;
 }
 .social-media-icons .social-media-icon-link.instagram{
-	background-position:0 -94px; 
+	background-position:0 -47px; 
 }
 /*
 .social-media .social-media-icons .social-media-icon-link.flickr{
