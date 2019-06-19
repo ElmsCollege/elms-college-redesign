@@ -1086,40 +1086,40 @@ body.active,html.active{
 	margin:0 auto;
 	max-width:36em;
 }
-.social-media .social-media-icons .social-media-icon-link{
+.social-media-icons .social-media-icon-link{
 	text-indent:3000px;
 	color:transparent;
 	display:inline-block;
-	width:72px;
-	height:72px;
 	border:1px solid white;
 	box-sizing:border-box;
 	border-radius:9000px;
-	background-size:42px;
-	background-repeat:no-repeat;
-	background-position:50%;
+	background:url("images/social-media-sprite.png") no-repeat top left;
+	width:84px;
+	height:84px;
 }
-.social-media .social-media-icons .social-media-icon-link.facebook{
-	background-image:url("images/icon-facebook.png")
+.social-media-icons .social-media-icon-link.facebook{
+	background-position:0 0; 
 }
-.social-media .social-media-icons .social-media-icon-link.twitter{
-	background-image:url("images/icon-twitter.png")
+.social-media-icons .social-media-icon-link.twitter{
+	background-position:0 -188px;
 }
-.social-media .social-media-icons .social-media-icon-link.youtube{
-	background-image:url("images/icon-youtube.png")
+.social-media-icons .social-media-icon-link.youtube{
+	background-position: 0 -282px;
 }
+.social-media-icons .social-media-icon-link.instagram{
+	background-position:0 -94px; 
+}
+/*
 .social-media .social-media-icons .social-media-icon-link.flickr{
 	background-image:url("images/icon-flickr.png")
 }
 .social-media .social-media-icons .social-media-icon-link.linkedin{
 	background-image:url("images/icon-linkedin.png")
 }
-.social-media .social-media-icons .social-media-icon-link.instagram{
-	background-image:url("images/icon-instagram.png")
-}
 .social-media .social-media-icons .social-media-icon-link.pinterest{
 	background-image:url("images/icon-pinterest.png")
 }
+*/
 .site-footer .footer-item-inner{
 	padding:0 32px 0;
 	margin-bottom:32px
