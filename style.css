@@ -3732,8 +3732,10 @@ body.page-template-landing-page .opening-menu{
 	letter-spacing:normal;
 	font-family: "soleil", sans-serif;
 }
-.section-mission_statement .quick-fact {
-	padding: 0 32px;
+@media all and (min-width:48em){
+	.section-mission_statement .quick-fact {
+		padding: 0 32px;
+	}
 }
 .post-type-archive-tribe_events #primary, .single-tribe_events #primary{
 	padding:30px 68px;
