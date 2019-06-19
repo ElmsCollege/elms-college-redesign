@@ -1098,28 +1098,17 @@ body.active,html.active{
 	height:72px;
 }
 .social-media-icons .social-media-icon-link.facebook{
-	background-position:0 0; 
+	background-position:15px 15px; 
 }
 .social-media-icons .social-media-icon-link.twitter{
-	background-position:0 -114px;
+	background-position:15px -99px;
 }
 .social-media-icons .social-media-icon-link.youtube{
-	background-position: 0 -171px;
+	background-position: 15px -156px;
 }
 .social-media-icons .social-media-icon-link.instagram{
-	background-position:0 -57px; 
+	background-position:15px -42px; 
 }
-/*
-.social-media .social-media-icons .social-media-icon-link.flickr{
-	background-image:url("images/icon-flickr.png")
-}
-.social-media .social-media-icons .social-media-icon-link.linkedin{
-	background-image:url("images/icon-linkedin.png")
-}
-.social-media .social-media-icons .social-media-icon-link.pinterest{
-	background-image:url("images/icon-pinterest.png")
-}
-*/
 .site-footer .footer-item-inner{
 	padding:0 32px 0;
 	margin-bottom:32px
@@ -1131,7 +1120,7 @@ body.active,html.active{
 		margin-bottom:64px
 	}
 }
-.site-footer *:last-child .footer-item-inner{
+.site-footer :last-child .footer-item-inner{
 	border-right:none
 }
 @media (min-width: 64em){
@@ -1178,11 +1167,6 @@ body.active,html.active{
 }
 .site-footer #utility-menu a{
 	color:#666;
-}
-@media (min-width: 64em){
-	.site-footer .site-resources.pure-u-lg-8-24{
-		width:33.0023%
-	}
 }
 .screen-reader-text{
 	clip:rect(1px, 1px, 1px, 1px);
