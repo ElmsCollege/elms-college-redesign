@@ -1065,8 +1065,10 @@ body.active,html.active{
 	max-height:300px;
 	margin-bottom:32px
 }
+.social-media{
+	letter-spacing:normal;
+}
 .social-media .social-media-inner{
-	position:relative;
 	margin:32px 0 64px;
 	padding:48px 0 0;
 	background:#115438;

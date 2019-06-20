@@ -23,26 +23,29 @@ $site_info = get_field("site_info", "option");
 ?>
 
 	</div><!-- #content -->
-<div class="social-media">
-  <div class="social-media-inner">
-    <p class="pre-title">
-      <?php print($social_media_pre_title) ?>
-    </p>
-    <h2 class="field-social_media_title">
-      <?php print($social_media_title) ?>
-    </h2>
-    
-    <ul class="social-media-icons pure-g">
-  
-      <?php foreach ($links as $name=>$link) : ?>
-        <li class="social-media-icon pure-u-1-4">
-          <a target="_blank" rel="noopener" class="social-media-icon-link <?php echo $name ?>" href="<?php echo $link ?>"><?php echo $name ?></a>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-</div>
 	<footer id="colophon" class="site-footer pure-g" role="contentinfo">
+		<div class="fullWidth social-media">
+			<div class="social-media-inner">
+				<p class="pre-title">
+					<?php print($social_media_pre_title) ?>
+				</p>
+				<h2 class="field-social_media_title">
+					<?php print($social_media_title) ?>
+				</h2>
+
+				<ul class="social-media-icons pure-g">
+
+					<?php foreach ($links as $name=>$link) : ?>
+					<li class="social-media-icon pure-u-1-4">
+						<a target="_blank" rel="noopener" class="social-media-icon-link <?php echo $name ?>" href="<?php echo $link ?>">
+							<?php echo $name ?>
+						</a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+
 		<div class="site-identity pure-u-1 pure-u-lg-7-24">
   		<div class="site-branding footer-item-inner">
   				<p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
