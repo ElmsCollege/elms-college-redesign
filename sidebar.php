@@ -49,10 +49,10 @@ else {
   }
 }
 
-
-
 //the_widget( "advanced_sidebar_menu_page", $sidebar_args, array("before_widget" =>"", "after_widget" => "", "before_title" =>"", "after_title" => "")); 
 ?>
+<aside class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3" role="complementary">
+
 <div id="debugger" style="display: none;">
   event sources
   <?php var_dump($event_sources)?>
@@ -167,6 +167,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 <?php //ends is_tax()
 endif; ?>
-<aside id="secondary" class="widget-area" role="complementary">
+<div id="secondary" class="widget-area">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
