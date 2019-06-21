@@ -940,11 +940,6 @@ header#masthead .site-branding a{
 	background-position:50%;
 	width:100%
 }
-@media (max-width: 47.999em){
-	.section-heading{
-		min-height:146px
-	}
-}
 .section-heading .section-heading-inner{
 	display:table-cell;
 	vertical-align:middle;
@@ -978,25 +973,14 @@ header#masthead .site-branding a{
 	text-align:center;
 	margin:0;
 	color:white;
-	font-size:40px;
+	font-size:56px;
 	line-height:1;
-}
-@media (max-width: 47.999em){
-	.section-heading .field-title{
-		font-size:1.8em;
-		line-height:1
-	}
 }
 .section-heading .field-title .rss-link{
 	letter-spacing:-.5em;
 	text-shadow:none;
 	display:inline-block;
 	color: white;
-}
-@media (min-width: 48em){
-	.section-heading .field-title{
-		font-size:56px;
-	}
 }
 body.page-template-landing-page .section-heading,body.page-template-nursing-landing-page-2 .section-heading, .page-template-nursing-interior-page .section-heading, .single-tribe_events .section-heading{
 	height:540px;
@@ -3426,10 +3410,6 @@ body.admin-bar header#masthead.active .main-navigation{
 #highlight_news_link a:visited{
 	color: #046B99;
 }
-#homepage_content {
-	padding-top: 125px;
-	margin-top: -125px;
-}
 @media only screen and (max-width: 850px){
 	#hero-overlay{
 		bottom: 72%;
@@ -3687,10 +3667,7 @@ a.buttonLink.grouped{
 	margin: 0 32px;
 	width: calc(100% - 64px);
 	border:unset!important;
-}
-.page-template-landing-page .opening-menu.fs-dropdown .fs-dropdown-options {
 	z-index:10;
-	position:relative;
 }
 .social-media .pre-title {
 	color: #fff;
