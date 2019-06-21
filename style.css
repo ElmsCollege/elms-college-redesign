@@ -2971,16 +2971,6 @@ body.page-template-nursing-secondary-landing-page .stories,body.page-template-nu
 	margin-bottom:4em;
 	margin:0px
 }
-body.page-template-nursing-secondary-landing-page #top-background-title{
-	color:white;
-	font-size:56px;
-	margin-top:0px
-}
-@media (max-width: 770px){
-	body.page-template-nursing-secondary-landing-page #top-background-title{
-		font-size:1.8em
-	}
-}
 body.page-template-nursing-secondary-landing-page .top-background-image{
 	height:32vw;
 	min-height:240px;

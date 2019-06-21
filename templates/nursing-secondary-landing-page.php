@@ -31,7 +31,7 @@ get_header("nursing");
       ?>
 
       <div class="top-background-image section-heading" style="position:relative; z-index:-1; <?php print_featured_image_style($post->ID) ?>)">
-	        <h1 id="top-background-title" class="field-mission_statement">
+	        <h1 class="field-title">
 	          <?php print(the_title()) ?>
 	        </h1>
       </div>
