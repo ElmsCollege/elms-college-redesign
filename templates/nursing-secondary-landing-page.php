@@ -101,9 +101,11 @@ get_header("nursing");
                   	<a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a>
                   </div>
                   <div style="position: relative">
-	                  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
-	                    <img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
-	                  </div>
+					  <a href="<?php echo $link ?>">
+						  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
+							<img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
+						  </div>
+					  </a>
                   </div>
                 </li>
               <?php endforeach; ?>
