@@ -13,14 +13,10 @@
 .single-tribe_events .tribe-events-single-event-title {
 	font-size: 40px
 }
-#tribe-events-content a, .tribe-events-adv-list-widget .tribe-events-widget-link a, .tribe-events-adv-list-widget .tribe-events-widget-link a:hover, .tribe-events-back a, .tribe-events-back a:hover, .tribe-events-event-meta a, .tribe-events-list-widget .tribe-events-widget-link a, .tribe-events-list-widget .tribe-events-widget-link a:hover, ul.tribe-events-sub-nav a, ul.tribe-events-sub-nav a:hover {
-	font-size: 1em;
-	font-weight: 500
-}
 #tribe-events-content .recurring-info-tooltip, #tribe-events-content .tribe-events-calendar .tribe-events-tooltip, #tribe-events-content .tribe-events-shortcode.view-week .tribe-events-tooltip, #tribe-events-content .tribe-events-week .tribe-events-tooltip {
 	padding: .75em 1em
 }
-#tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit]:hover, .tribe-events-button:hover, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive:hover, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a:hover {
+#tribe-events .tribe-events-button:hover,#tribe-events .tribe-events-button:hover,#tribe_events_filters_wrapper input[type=submit]:hover,.tribe-events-button:hover,.tribe-events-button.tribe-active:hover,.tribe-events-button.tribe-inactive:hover, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a:hover {
 	background-color: #c3a250;
 	color: #fff
 }
@@ -37,6 +33,11 @@
 .post-type-archive-tribe_events #primary, .single-tribe_events #primary {
 	padding: 30px 68px;
 }
+@media all and (max-width: 500px) {
+	.post-type-archive-tribe_events #primary {
+		padding: 0px;
+	}
+}
 .site-main.tribe-events-pg-template {
 	padding: 0px;
 }
@@ -47,9 +48,6 @@
 	min-width: unset;
 	background-color: unset !important;
 }
-
-@media all and (max-width: 500px) {
-.post-type-archive-tribe_events #primary {
-	padding: 0px;
-}
+#tribe-bar-form .tribe-bar-submit input[type=submit],.tribe-events-day-time-slot-heading{
+	background-color:#004731;
 }
