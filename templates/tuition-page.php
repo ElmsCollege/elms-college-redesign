@@ -36,6 +36,9 @@ get_header(); ?>
 	border-left:2px solid #115438;
 width:100px;
 }
+.featured_image_cropped,.sidebar_image_new{
+	display:none; /* hiding fields that shouldn't be here but Ryan can't track down */
+}
 </style>
   <div class="section-heading">
       <h1 class="field-title">
