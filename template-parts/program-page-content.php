@@ -40,7 +40,7 @@ $lower_story_content = get_field("lower_story_content");
         ?>
       </h1>
 	<?php if( function_exists("pll_the_languages"))
-		pll_the_languages( array( 'dropdown' => 1,'hide_if_no_translation' => 1 ) );
+		pll_the_languages( array( 'dropdown' => 1,'hide_if_no_translation' => 1, 'hide_current' => 1 ) );
 	?>	
 								
   </div>
