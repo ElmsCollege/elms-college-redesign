@@ -102,7 +102,7 @@ get_header("nursing");
                   </div>
                   <div style="position: relative">
 					  <a href="<?php echo $link ?>">
-						  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
+						  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>" role="img" aria-label="<?php echo $text ?>">
 							<img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
 						  </div>
 					  </a>

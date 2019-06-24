@@ -16,7 +16,7 @@
 #tribe-events-content .recurring-info-tooltip, #tribe-events-content .tribe-events-calendar .tribe-events-tooltip, #tribe-events-content .tribe-events-shortcode.view-week .tribe-events-tooltip, #tribe-events-content .tribe-events-week .tribe-events-tooltip {
 	padding: .75em 1em
 }
-#tribe-events .tribe-events-button:hover,#tribe-events .tribe-events-button:hover,#tribe_events_filters_wrapper input[type=submit]:hover,.tribe-events-button:hover,.tribe-events-button.tribe-active:hover,.tribe-events-button.tribe-inactive:hover, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a:hover {
+#tribe-events .tribe-events-button:hover,#tribe-events .tribe-events-button:hover,#tribe_events_filters_wrapper input[type=submit]:hover,.tribe-events-button:hover,.tribe-events-button.tribe-active:hover,.tribe-events-button.tribe-inactive:hover, .tribe-events-button:hover,.tribe-events-calendar td.tribe-events-present div:first-of-type:hover,.tribe-events-calendar td.tribe-events-present div>a:hover {
 	background-color: #c3a250;
 	color: #fff
 }
@@ -35,14 +35,14 @@
 }
 @media all and (max-width: 500px) {
 	.post-type-archive-tribe_events #primary {
-		padding: 0px;
+		padding:0;
 	}
 }
 .site-main.tribe-events-pg-template {
-	padding: 0px;
+	padding:0;
 }
 .tribe-events-calendar thead th {
-	padding: 0px !important;
+	padding:0 !important;
 }
 #tribe-bar-views-toggle {
 	min-width: unset;
