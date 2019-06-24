@@ -31,7 +31,7 @@ $lower_story_content = get_field("lower_story_content");
 
 ?>
 
-  <div id="pageHeading" class="section-heading">
+  <div id="pageHeading" class="section-heading" style="display:flex !important;flex-flow:row nowrap;justify-content: center"><div>
       <h1 class="field-title">
         <?php 
         if (get_the_title()) {
@@ -40,11 +40,11 @@ $lower_story_content = get_field("lower_story_content");
         ?>
       </h1>
 	<?php if( function_exists("pll_the_languages"))
-		echo '<ul style="display:block;margin:0 auto;">';
+		echo '<ul class="ulreset">';
 	  	pll_the_languages( array( 'show_flags' => 1,'show_names' => 0,'hide_current' => 1,'hide_if_no_translation' => 1) );
 	  	echo '</ul>';
 	?>	
-								
+	  </div>				
   </div>
 	<div id="primary" class="content-area pure-g"> 
     
