@@ -31,7 +31,7 @@ get_header("nursing");
       ?>
 
       <div class="top-background-image section-heading" style="position:relative; z-index:-1; <?php print_featured_image_style($post->ID) ?>)">
-	        <h1 id="top-background-title" class="field-mission_statement">
+	        <h1 class="field-title">
 	          <?php print(the_title()) ?>
 	        </h1>
       </div>
@@ -101,9 +101,11 @@ get_header("nursing");
                   	<a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a>
                   </div>
                   <div style="position: relative">
-	                  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
-	                    <img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
-	                  </div>
+					  <a href="<?php echo $link ?>">
+						  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>" role="img" aria-label="<?php echo $text ?>">
+							<img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
+						  </div>
+					  </a>
                   </div>
                 </li>
               <?php endforeach; ?>

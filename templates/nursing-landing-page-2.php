@@ -7,11 +7,6 @@
  * @package Elms_College_Redesign
  */
 
-
-
-add_filter( 'body_class', function( $classes ) {
-  return array_merge( $classes, array( 'mobile-or-library' ) );
-});
 get_header("nursing");
 while ( have_posts() ) : the_post();
   

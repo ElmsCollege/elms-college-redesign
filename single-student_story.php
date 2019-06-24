@@ -48,9 +48,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
     <?php if ($has_sidebar) : ?>
-      <div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
         <?php get_sidebar(); ?>
-      </div>
     <?php endif; ?>
     
 	</div><!-- #primary -->

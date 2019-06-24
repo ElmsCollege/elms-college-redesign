@@ -23,7 +23,7 @@ $venue = get_post(tribe_get_venue_id());
 	<dl>
 		<?php do_action( 'tribe_events_single_meta_venue_section_start' ) ?>
 
-		<dd class="tribe-venue"> <a href="/venue/<?php print $venue->post_name ?>"><?php print $venue->post_title ?></a></dd>
+		<dd class="tribe-venue"> <?php print $venue->post_title ?></dd>
 
 		<?php if ( tribe_address_exists() ) : ?>
 			<dd class="tribe-venue-location">
@@ -39,7 +39,7 @@ $venue = get_post(tribe_get_venue_id());
 
 		<?php if ( ! empty( $phone ) ): ?>
 			<dt> <?php esc_html_e( 'Phone:', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-venue-tel"> <?php echo $phone ?> </dd>
+		<dd class="tribe-venue-tel"> <a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a> </dd>
 		<?php endif ?>
 
 		<?php if ( ! empty( $website ) ): ?>
