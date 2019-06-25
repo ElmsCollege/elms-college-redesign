@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * The header for our library pages.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -8,6 +8,10 @@
  *
  * @package Elms_College_Redesign
  */
+
+add_filter( 'body_class', function( $classes ) {
+	return array_merge( $classes, array( 'mobile-or-library' ) );
+});
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

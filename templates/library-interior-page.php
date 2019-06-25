@@ -6,9 +6,6 @@
  */
 
 $has_sidebar = gs_is_active_sidebar();
-add_filter( 'body_class', function( $classes ) {
-  return array_merge( $classes, array( 'mobile-or-library' ) );
-});
 get_header("library");
 
 get_template_part("template-parts/page-heading");

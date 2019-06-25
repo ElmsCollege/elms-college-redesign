@@ -9,12 +9,7 @@
 
 wp_enqueue_script( 'libcal', 'https://api3.libcal.com/api_hours_today.php?iid=1042&lid=0&format=js&systemTime=0&context=object', array(), '20190602', true );
 
-
-add_filter( 'body_class', function( $classes ) {
-  return array_merge( $classes, array( 'mobile-or-library' ) );
-});
 get_header("library"); ?>
-
       
 			<?php
 			while ( have_posts() ) : the_post();
