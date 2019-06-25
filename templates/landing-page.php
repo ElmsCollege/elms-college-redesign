@@ -30,13 +30,10 @@ while ( have_posts() ) : the_post();
 		<?php print_featured_image_style($post->ID) ?>
 	}
 	</style>
-	
-  <div class="section-heading">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-        <?php the_title() ?>
-      </h1>
-  </div>
 
+<?php
+	get_template_part("template-parts/page-heading");
+?>
       <?php if (!empty($opening_menu)) : ?>
         <ul class="opening-menu">
           <?php

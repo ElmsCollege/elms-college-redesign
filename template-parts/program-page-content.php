@@ -29,24 +29,9 @@ $programPageStoryImage	= get_field("story_background-gutenberg");
 $lower_story_title = get_field("lower_story_title");
 $lower_story_content = get_field("lower_story_content");
 
+get_template_part("template-parts/page-heading");
 ?>
 
-  <div id="pageHeading" class="section-heading" style="display:flex !important;flex-flow:row nowrap;justify-content: center">
-      <h1 class="field-title">
-        <?php 
-        if (get_the_title()) {
-          the_title();
-        }
-        ?>
-      </h1>
-	<?php 
-	  if( function_exists("pll_the_languages")){
-		echo '<ul class="ulreset" style="align-self:end;margin-left:5px;">';
-	  	pll_the_languages( array( 'show_flags' => 1,'show_names' => 0,'hide_current' => 1,'hide_if_no_translation' => 1) );
-	  	echo '</ul>';
-	  }
-	?>	
-  </div>
 	<div id="primary" class="content-area pure-g"> 
     
 		<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">

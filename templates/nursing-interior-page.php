@@ -16,7 +16,7 @@ get_header("nursing"); ?>
 
 
   <div class="section-heading">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
+      <h1 class="field-title no-pre-title">
         <?php 
         if (get_the_title()) {
           the_title();

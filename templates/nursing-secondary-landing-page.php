@@ -65,7 +65,7 @@ get_header("nursing");
       </div>
 
 			<div class="section-heading" id="program-track-anchor">
-          <h2 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
+          <h2 class="field-title no-pre-title">
             <?php print($first_field_title) ?>
           </h2>
           <p class="field-sub-title"><?php print($first_field_sub_title) ?></p>

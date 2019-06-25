@@ -21,20 +21,9 @@ get_header("nursing");
 		<?php print_featured_image_style($post->ID) ?>
 	}
 	</style>
-
-      <div class="section-heading">
-          <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-            <?php 
-            if (get_the_title()) {
-              the_title();
-            }
-            else {
-              tribe_events_title(); 
-            } ?>
-            <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
-          </h1>
-      </div>
-
+	<?php
+		get_template_part("template-parts/page-heading");
+	?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
       

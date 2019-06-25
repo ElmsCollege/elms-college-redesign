@@ -23,7 +23,6 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
         
-        $main_pre_title = get_field("main_pre_title");
         $opening_menu = get_field("opening_menu");
         
         $quick_facts = get_field("quick_facts");
@@ -34,15 +33,10 @@ get_header(); ?>
         
         $short_content = get_field("short_content");
         $short_content_background = get_field("short_content_background");
-        
+
+		get_template_part("template-parts/page-heading");
       ?>
-      
-      <div class="section-heading">
-          <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-            <?php the_title() ?>
-          </h1>
-      </div>
-      
+            
       <?php if (!empty($opening_menu)) : ?>
         <ul class="opening-menu">
           <?php
