@@ -210,12 +210,6 @@ get_header("nursing");
           </div><!-- /.shell -->
         </section><!-- /.section section-features -->
       <?php endif;  ?>
-      
-      
-      
-      <?php
-			endwhile; // End of the loop.
-			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
