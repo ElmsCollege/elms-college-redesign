@@ -23,9 +23,8 @@ $program_repeater = get_field("program_repeater");
 
 get_header("nursing");
 ?>
-
 	<style>
-	.section-heading{
+	#imageHeading.section-heading{
 		<?php print_featured_image_style($post->ID) ?>
 	}
 	</style>

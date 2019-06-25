@@ -24,9 +24,8 @@ while ( have_posts() ) : the_post();
 
   $student_stories = get_field("student_stories");
 ?>
-
 	<style>
-	.section-heading{
+	#imageHeading.section-heading{
 		<?php print_featured_image_style($post->ID) ?>
 	}
 	</style>

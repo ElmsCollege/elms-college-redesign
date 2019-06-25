@@ -946,7 +946,7 @@ header#masthead .site-branding a{
 	position:relative;
 	z-index:1
 }
-#pageHeading.section-heading {
+#textHeading.section-heading {
 	display: block !important;
 	height: auto !important;
 	max-height: unset !important;
@@ -982,7 +982,7 @@ header#masthead .site-branding a{
 	display:inline-block;
 	color: white;
 }
-body.page-template-landing-page .section-heading,body.page-template-nursing-landing-page-2 .section-heading, .page-template-nursing-interior-page .section-heading, .single-tribe_events .section-heading{
+#imageHeading.section-heading{
 	height:540px;
 	height:32vw;
 	min-height:240px;

@@ -3,9 +3,9 @@
 //get_template_part("template-parts/page-heading");
 
 if( get_field('featured_image_cropped') ){
-	echo '<div class="section-heading">';
+	echo '<div id="imageHeading" class="section-heading">';
 }else{
-	echo '<div id="pageHeading" class="section-heading">';
+	echo '<div id="textHeading" class="section-heading">';
 }
 ?>
 	<h1 class="field-title">

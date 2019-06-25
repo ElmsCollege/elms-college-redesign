@@ -10,9 +10,8 @@
 
 
 get_header(); ?>
-
 	<style>
-	.section-heading{
+	#imageHeading.section-heading{
 		<?php print_featured_image_style($post->ID) ?>
 	}
 	</style>

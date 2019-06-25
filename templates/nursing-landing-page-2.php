@@ -22,9 +22,8 @@ while ( have_posts() ) : the_post();
   $short_content_background = get_field("short_content_background_new");
   
       ?>
-
 	<style>
-	.section-heading{
+	#imageHeading.section-heading{
 		<?php print_featured_image_style($post->ID) ?>
 	}
 	</style>
