@@ -22,19 +22,17 @@ $program_track_description = get_field("program_track_description");
 $program_repeater = get_field("program_repeater");
 
 get_header("nursing");
- ?>
+?>
 
-			<?php
-			while ( have_posts() ) : the_post(); 
-        $calls_to_action = get_field("calls_to_action");
-        $hours_link = get_field("hours_link");
-      ?>
+	<style>
+	.section-heading{
+		<?php print_featured_image_style($post->ID) ?>
+	}
+	</style>
 
-      <div class="top-background-image section-heading" style="position:relative; z-index:-1; <?php print_featured_image_style($post->ID) ?>)">
-	        <h1 class="field-title">
-	          <?php print(the_title()) ?>
-	        </h1>
-      </div>
+	<?php
+		get_template_part("template-parts/page-heading");
+	?>
 	<?php if (!empty($top_menu)) : ?>
 		        <ul class="opening-menu">
 	            <?php foreach ($top_menu as $index=>$program) : 
