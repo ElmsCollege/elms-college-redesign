@@ -2307,10 +2307,9 @@ body.page-template-home-page{
 	border-left:1px solid #ccc;
 	height:35px;
 	content:"";
-	position:absolute;
 	top:11px;
 }
-#special-section-menu>li:first-child:after{
+#special-section-menu>li:last-child:after{
 	content:none
 }
 #special-section-menu>li>a{
@@ -2333,7 +2332,7 @@ body.page-template-home-page{
 	position:absolute;
 	top:55px;
 	margin:0;
-	padding:32px;
+	padding:32px 24px;
 	list-style-type:none;
 	background:white;
 	min-width:18em;
@@ -2344,7 +2343,7 @@ body.page-template-home-page{
 }
 #special-section-menu>li>ul.sub-menu>li>a{
 	display:block;
-	padding:.5em 1em;
+	padding:.5em 1em .5em 0;
 	text-decoration:none;
 	color:#696969;
 }
