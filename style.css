@@ -2290,10 +2290,8 @@ body.page-template-home-page{
 		display:none
 	}
 }
-#library-menu,#nursing-menu{
-	list-style:none;
+#special-section-menu{
 	margin:0 auto;
-	padding-left:0;
 	vertical-align:middle;
 	text-align:center;
 	display:table;
@@ -2301,45 +2299,35 @@ body.page-template-home-page{
 	position:relative;
 	z-index:2;
 }
-#library-menu>li,#nursing-menu>li{
-	vertical-align:middle;
-	text-align:center;
+#special-section-menu>li{
 	position:relative;
 	display:table-cell
 }
-#library-menu>li:after,#nursing-menu>li:after{
+#special-section-menu>li:after{
 	border-left:1px solid #ccc;
 	height:35px;
 	content:"";
 	position:absolute;
-	left:0;
 	top:11px;
-	display:inline-block;
-	width:1px
 }
-#library-menu>li:first-child:after,#nursing-menu>li:first-child:after{
+#special-section-menu>li:first-child:after{
 	content:none
 }
-#library-menu>li>a,#nursing-menu>li>a{
+#special-section-menu>li>a{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
 	padding:15px 1.5em;
 }
-@media all and (max-width: 96rem){
-	#library-menu>li>a,#nursing-menu>li>a{
-		letter-spacing:-.25px
-	}
-}
-#library-menu>li>a.words-1,#nursing-menu>li>a.words-1{
+#special-section-menu>li>a.words-1{
 	padding:29px 2em
 }
 @media all and (max-width: 96rem){
-#library-menu>li>a.words-1,#nursing-menu>li>a.words-1{
-		padding:29px 1.5em
-	}
+	#special-section-menu>li>a.words-1{
+			padding:29px 1.5em
+		}
 }
-#library-menu>li>ul.sub-menu,#nursing-menu>li>ul.sub-menu{
+#special-section-menu>li>ul.sub-menu{
 	opacity:0;
 	visibility:hidden;
 	position:absolute;
@@ -2347,7 +2335,6 @@ body.page-template-home-page{
 	margin:0;
 	padding:32px;
 	list-style-type:none;
-	text-align:left;
 	background:white;
 	min-width:18em;
 	border-top:8px solid #115438;
@@ -2355,24 +2342,23 @@ body.page-template-home-page{
 	-ms-transform:translateY(-50%) scaleY(0) translateZ(-90px);
 	transform:translateY(-50%) scaleY(0) translateZ(-90px)
 }
-#library-menu>li>ul.sub-menu>li>a,#nursing-menu>li>ul.sub-menu>li>a{
+#special-section-menu>li>ul.sub-menu>li>a{
 	display:block;
-	text-align:left;
 	padding:.5em 1em;
 	text-decoration:none;
 	color:#696969;
 }
-#library-menu>li>ul.sub-menu>li>a:hover,#nursing-menu>li>ul.sub-menu>li>a:hover{
+#special-section-menu>li>ul.sub-menu>li>a:hover{
 	color:#115438;
 }
-#library-menu>li:hover, #library-menu>li.open,#nursing-menu>li:hover,#nursing-menu>li.open{
+#special-section-menu>li:hover,#special-section-menu>li.open{
 	transform:translateZ(1px);
 	z-index:1;
 }
-#library-menu>li:hover>a, #library-menu>li.open>a, #nursing-menu>li:hover>a, #nursing-menu>li.open>a{
+#special-section-menu>li:hover>a, #special-section-menu>li.open>a{
 	color:#115438;
 }
-#library-menu>li:hover>ul.sub-menu,#library-menu>li.open>ul.sub-menu,#nursing-menu>li:hover>ul.sub-menu,#nursing-menu>li.open>ul.sub-menu{
+#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.open>ul.sub-menu{
 	opacity:1;
 	visibility:visible;
 	-webkit-transform:translateY(0) scaleY(1) translateZ(0px);
