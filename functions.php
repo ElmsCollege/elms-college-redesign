@@ -25,9 +25,6 @@ function gs_elms_setup() {
 	 */
 	load_theme_textdomain( 'gs_elms', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -340,11 +337,6 @@ function gs_is_active_sidebar () {
   
   return ( ($sidebar_calls_to_action) || ($sidebar_image) || ($sidebar_content) || ($sidebar_menu_items) || $post->post_parent != 0);
 }
-
-function rss_link ($query) {
-  return '<a href="/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank" aria-label="RSS link"><i class="fas fa-rss" aria-hidden="true"></i></a>';
-}
-
 
 add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
 /*

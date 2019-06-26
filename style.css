@@ -940,12 +940,6 @@ header#masthead .site-branding a{
 	background-position:50%;
 	width:100%
 }
-.section-heading .section-heading-inner{
-	display:table-cell;
-	vertical-align:middle;
-	position:relative;
-	z-index:1
-}
 #textHeading.section-heading {
 	display: block !important;
 	height: auto !important;
@@ -975,12 +969,6 @@ header#masthead .site-branding a{
 	color:white;
 	font-size:56px;
 	line-height:1;
-}
-.section-heading .field-title .rss-link{
-	letter-spacing:-.5em;
-	text-shadow:none;
-	display:inline-block;
-	color: white;
 }
 #imageHeading.section-heading{
 	height:540px;

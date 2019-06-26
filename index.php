@@ -11,12 +11,10 @@
 get_header(); ?>
 
   <div class="section-heading" style=" <?php if (the_post_thumbnail_url()): ?>background-image:url('<?php print the_post_thumbnail_url() ?>');<?php endif;?>">
-    <div class="section-heading-inner">
       <h1 class="field-title no-pre-title">
         News
         <?php print rss_link($GLOBALS['wp_the_query']) ?>
       </h1>
-    </div>
   </div>
 	<div id="primary" class="content-area pure-g">
 		<main id="main" class="site-main pure-u-1 standalone" role="main">
