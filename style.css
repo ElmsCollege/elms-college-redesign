@@ -2332,14 +2332,15 @@ body.page-template-home-page{
 	position:absolute;
 	top:55px;
 	margin:0;
-	padding:32px 24px;
+	padding:15px 24px;
 	list-style-type:none;
 	background:white;
 	min-width:18em;
 	border-top:8px solid #115438;
 	-webkit-transform:translateY(-50%) scaleY(0) translateZ(-90px);
 	-ms-transform:translateY(-50%) scaleY(0) translateZ(-90px);
-	transform:translateY(-50%) scaleY(0) translateZ(-90px)
+	transform:translateY(-50%) scaleY(0) translateZ(-90px);
+	text-align:left;
 }
 #special-section-menu>li>ul.sub-menu>li>a{
 	display:block;
