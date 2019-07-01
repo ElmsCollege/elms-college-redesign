@@ -62,9 +62,9 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php if ( wp_is_mobile() ): ?>
-				<button class="greenButton" data-custom-open="requestInfo" role="button">Request Info</button>
-			<?php endif; ?>
+			<?php if ( wp_is_mobile() ){
+				echo '<button class="greenButton" data-custom-open="requestInfo" role="button">Request Info</button>';
+			} ?>
 		<div class="body-text">
 	      		<?php the_content() ?>
 		</div>
