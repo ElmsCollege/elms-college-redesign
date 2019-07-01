@@ -130,7 +130,8 @@ function gs_elms_scripts() {
 	wp_enqueue_script( 'gs_elms-object-fit', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
-
+	wp_enqueue_script( 'micromodal', get_template_directory_uri() . '/js/micromodal.min.js', array(), '20190701', true );
+	
 	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

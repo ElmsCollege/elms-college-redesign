@@ -360,6 +360,9 @@
     };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
+	  
+	MicroModal.show("requestInfo");
+	MicroModal.close("requestInfo");
     
   });
 

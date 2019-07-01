@@ -3901,3 +3901,11 @@ th .smallText{
 	display:table;
 	margin:auto;
 }
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+        
