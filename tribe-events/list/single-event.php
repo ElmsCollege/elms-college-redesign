@@ -87,7 +87,7 @@ $organizer = tribe_get_organizer();
 
 <!-- Event Content -->
 <?php do_action( 'tribe_events_before_the_content' ); ?>
-<div class="tribe-events-list-event-description tribe-events-content description entry-summary">
+<div class="tribe-events-list-event-description tribe-events-content description entry-summary">AA
 	<?php echo do_shortcode("[expand title='Learn More' swaptitle=' ']" .tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ) ."<a href='" .esc_url( tribe_get_event_link() ) ."' class='tribe-events-read-more'  rel='bookmark'>Find out more &raquo;</a>[/expand]"); ?>
 </div><!-- .tribe-events-list-event-description -->
 <?php
