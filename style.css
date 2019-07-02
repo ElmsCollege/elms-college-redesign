@@ -1810,7 +1810,7 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover{
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe-events{
-	border-bottom:1px solid #ddd;
+	border-bottom:1px solid #ddd !important;
 }
 .opening-menu.fs-dropdown .fs-dropdown-item{
 	border:none;
