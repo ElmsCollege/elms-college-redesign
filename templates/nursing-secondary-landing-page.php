@@ -48,6 +48,8 @@ get_header("nursing");
 	<?php endif; ?>
 
 	<div id="primary" class="content-area">
+		<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
+
 		<main id="main" class="site-main" role="main">
                   
       <div class="section-mission_statement">

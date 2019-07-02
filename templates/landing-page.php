@@ -62,10 +62,10 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<button class="greenButton requestInfo-trigger" data-custom-open="requestInfo" role="button">Request Info</button>
-		<div class="body-text">
-	      		<?php the_content() ?>
-		</div>
+			<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
+			<div class="body-text">
+		      		<?php the_content() ?>
+			</div>
 
       <div class="section-mission_statement">
         <div class="quick-facts-inner pure-g">

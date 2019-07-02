@@ -59,7 +59,7 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            
+			<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
       <div class="quick-facts">
         <div class="quick-facts-inner pure-g">
           <?php foreach ($quick_facts as $index=>$fact) : ?>

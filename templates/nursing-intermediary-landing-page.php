@@ -37,7 +37,7 @@ get_header("nursing");
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-      
+			<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
 			<?php
 			while ( have_posts() ) : the_post(); 
         $calls_to_action = get_field("calls_to_action");

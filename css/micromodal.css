@@ -21,10 +21,10 @@
   box-sizing: border-box;
 }
 .modal_header{
-	text-align: center;
-}
-.modal_title{
-  color: #fff;
+    display: flex;
+    justify-content: center;
+	background-color:#004731;
+	color:#fff;
 }
 .modal_btn{
   font-size: .875rem;
