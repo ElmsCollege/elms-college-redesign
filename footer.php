@@ -70,7 +70,7 @@ $site_info = get_field("site_info", "option");
 <?php wp_footer(); ?>
 
 
-  <div class="modal micromodal-slide" id="modal-2" aria-hidden="true" style="z-index: 10;">
+  <div class="modal micromodal-slide" id="modal-2" aria-hidden="true" style="position:relative;z-index: 10;">
     <div class="modal__overlay" tabindex="-1" data-custom-close>
       <div class="modal__container w-90 w-40-ns" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
           <header class="modal__header">
@@ -79,14 +79,12 @@ $site_info = get_field("site_info", "option");
             </h3>
             <button class="modal__close" aria-label="Close modal" data-custom-close></button>
           </header>
-          <form class="black-80" action="/">
             <div class="modal__content" id="modal-2-content">
-        				<iframe src="https://elmstest.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=9c932f40-f7a6-43da-b650-9b4ffcfa4d65&s=24525250-9880-e811-80db-0a4fbe36cd62" height="300"></iframe>
+        				<iframe src="https://elmstest.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=9c932f40-f7a6-43da-b650-9b4ffcfa4d65&s=24525250-9880-e811-80db-0a4fbe36cd62"></iframe>
             </div>
             <footer class="modal__footer">
               <a class="f6 ml2 dark-blue no-underline underline-hover js-modal-close-trigger" href="#" aria-label="Close this dialog window">Cancel</a>
             </footer>
-          </form>
       </div>
     </div>
   </div>
