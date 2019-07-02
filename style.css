@@ -1761,6 +1761,8 @@ p:last-child{
 }
 .program-page-main .requestInfo-trigger{
 	display:block;
+	max-width:100%;
+	padding: 5px 0;
 }
 @media (min-width: 1040px){
 	.parent-sidebar-menu{
