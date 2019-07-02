@@ -15,7 +15,6 @@
 
 .modal__container {
   background-color: #fff;
-  padding: 30px;
   max-width: 500px;
   max-height: 100vh;
   border-radius: 4px;
@@ -24,13 +23,14 @@
 }
 
 .modal__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#004731;
 }
 
 .modal__title {
-  color: #004731;
+  color: #fff;
 }
 
 .modal__close {
@@ -85,7 +85,10 @@
   color: #fff;
 }
 
-
+.modal__footer{
+	text-align:center;
+	padding:10px 0;
+}
 
 /**************************\
   Demo Animation Style
