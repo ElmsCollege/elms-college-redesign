@@ -70,32 +70,27 @@ $site_info = get_field("site_info", "option");
 <?php wp_footer(); ?>
 
 
-<!-- [1] -->
-<div id="modal-1" aria-hidden="true">
-
-  <!-- [2] -->
-  <div tabindex="-1" data-micromodal-close>
-
-    <!-- [3] -->
-   <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
-
-
-      <header>
-        <h2 id="modal-1-title">
-          Modal Title
-        </h2>
-
-        <!-- [4] -->
-        <button aria-label="Close modal" data-micromodal-close></button>
-      </header>
-
-      <div id="modal-1-content">
+  <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+      <div class="modal__container w-90 w-40-ns" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+          <header class="modal__header">
+            <h3 class="modal__title" id="modal-2-title">
+              🔒 Login
+            </h3>
+            <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+          </header>
+          <form class="black-80" action="/">
+            <div class="modal__content" id="modal-2-content">
         				<iframe src="https://elmstest.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=9c932f40-f7a6-43da-b650-9b4ffcfa4d65&s=24525250-9880-e811-80db-0a4fbe36cd62" height="300"></iframe>
+            </div>
+            <footer class="modal__footer">
+              <input type="submit" class="modal__btn modal__btn-primary" value="Login"/>
+              <a class="f6 ml2 dark-blue no-underline underline-hover js-modal-close-trigger" href="#" aria-label="Close this dialog window">Cancel</a>
+            </footer>
+          </form>
       </div>
-
     </div>
   </div>
-</div>
 
 </body>
 </html>
