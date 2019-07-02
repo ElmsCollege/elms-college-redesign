@@ -1759,11 +1759,14 @@ p:last-child{
 	box-shadow:none;
 	outline:none;
 }
+.program-page-main .requestInfo-trigger{
+	display:block;
+}
 @media (min-width: 1040px){
 	.parent-sidebar-menu{
 		display:block;
 	}
-	.opening-menu{
+	.opening-menu,.program-page-main .requestInfo-trigger{
 		display:none;
 	}
 }
@@ -3901,18 +3904,4 @@ th .smallText{
 	display:table;
 	margin:auto;
 }
-/* BEGIN ellucian modal styles */
-.modal{
-	display:none;	
-}
-.modal.is-open {
-	display: block;
-	position:relative;
-	z-index:10;
-	height:600px;
-}
-#requestInfo-content{
-	border:unset;
-}
-/* END ellucian modal styles */
         

@@ -41,8 +41,9 @@ $lower_story_content = get_field("lower_story_content");
       </h1>
   </div>
 	<div id="primary" class="content-area pure-g"> 
-    
-		<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
+    	<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
+			
+			<button class="greenButton requestInfo-trigger" data-custom-open="requestInfo" role="button">Request Info</button>
 
 <?php if ($story_background || $programImage): ?>
 
