@@ -1759,14 +1759,14 @@ p:last-child{
 	box-shadow:none;
 	outline:none;
 }
-#requstInfoController{
+#requestInfoController{
 	display:block;
 }
 @media (min-width: 1040px){
 	.parent-sidebar-menu{
 		display:block;
 	}
-	.opening-menu,#requstInfoController{
+	.opening-menu,#requestInfoController{
 		display:none;
 	}
 }
