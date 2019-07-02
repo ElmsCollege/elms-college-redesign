@@ -3901,11 +3901,18 @@ th .smallText{
 	display:table;
 	margin:auto;
 }
-.modal {
-  display: none;
+/* BEGIN ellucian modal styles */
+.modal{
+	display:none;	
 }
-
 .modal.is-open {
-  display: block;
+	display: block;
+	position:relative;
+	z-index:10;
+	height:600px;
 }
+#requestInfo-content{
+	border:unset;
+}
+/* END ellucian modal styles */
         

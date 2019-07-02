@@ -62,7 +62,7 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<a id="requestInfoController" class="greenButton js-modal-trigger" data-custom-open="modal-2" role="button" href="javascript:;">Request Info</a>
+			<button id="requestInfoController" class="greenButton requestInfo-trigger" data-custom-open="requestInfo" role="button" href="javascript:;">Request Info</button>
 		<div class="body-text">
 	      		<?php the_content() ?>
 		</div>

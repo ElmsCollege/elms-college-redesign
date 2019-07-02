@@ -360,7 +360,10 @@
     };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
-	      
+	   
+	  jQuery("iframe#requestInfo-content").contents().find("h4").hide();
+	  jQuery("iframe#requestInfo-content").contents().find("html").css("background-color","unset");
+	  jQuery("iframe#requestInfo-content").contents().find(".elcn-content").css({"border-radius":"unset","box-shadow":"unset"});
   });
 
 })(jQuery, window, document);
@@ -373,10 +376,9 @@
   });
 
   // Programmatically show modal
-  document.querySelector('.js-modal-trigger').addEventListener('click', function () {
-    MicroModal.show('modal-2', {
+  document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
+    MicroModal.show('requestInfo', {
       debugMode: true,
-      disableScroll: true,
       onShow: function (modal) { document.querySelector('.page-template').classList.add(modal.id) },
       onClose: function (modal) { document.querySelector('.page-template').classList.remove(modal.id) },
       closeTrigger: 'data-custom-close',
@@ -384,9 +386,9 @@
     })
   });
 
-  document.querySelector('.js-modal-close-trigger').addEventListener('click', function (event) {
+  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function (event) {
     event.preventDefault();
-    MicroModal.close('modal-2')
+    MicroModal.close('requestInfo')
   });
 
   // Scrollspy
