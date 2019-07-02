@@ -70,12 +70,12 @@ $site_info = get_field("site_info", "option");
 <?php wp_footer(); ?>
 
 
-  <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+  <div class="modal micromodal-slide" id="modal-2" aria-hidden="true" style="z-index: 10;">
     <div class="modal__overlay" tabindex="-1" data-custom-close>
       <div class="modal__container w-90 w-40-ns" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
           <header class="modal__header">
             <h3 class="modal__title" id="modal-2-title">
-              🔒 Login
+              Request Info
             </h3>
             <button class="modal__close" aria-label="Close modal" data-custom-close></button>
           </header>
@@ -84,7 +84,6 @@ $site_info = get_field("site_info", "option");
         				<iframe src="https://elmstest.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=9c932f40-f7a6-43da-b650-9b4ffcfa4d65&s=24525250-9880-e811-80db-0a4fbe36cd62" height="300"></iframe>
             </div>
             <footer class="modal__footer">
-              <input type="submit" class="modal__btn modal__btn-primary" value="Login"/>
               <a class="f6 ml2 dark-blue no-underline underline-hover js-modal-close-trigger" href="#" aria-label="Close this dialog window">Cancel</a>
             </footer>
           </form>
