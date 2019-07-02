@@ -1813,7 +1813,7 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover{
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe_events{
-	border-bottom:1px solid #ddd !important;
+	border-bottom:1px solid #ddd;
 }
 .opening-menu.fs-dropdown .fs-dropdown-item{
 	border:none;
