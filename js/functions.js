@@ -361,12 +361,16 @@
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
 	   
-	  jQuery("iframe#requestInfo-content").contents().find("h4").hide();
-	  jQuery("iframe#requestInfo-content").contents().find("html").css("background-color","unset");
-	  jQuery("iframe#requestInfo-content").contents().find(".elcn-content").css({"border-radius":"unset","box-shadow":"unset"});
   });
 
 })(jQuery, window, document);
+
+jQuery("iframe#requestInfo-content").ready(function() {
+	"use strict";
+	jQuery("iframe#requestInfo-content").contents().find("h4").hide();
+	jQuery("iframe#requestInfo-content").contents().find("html").css("background-color","unset");
+	jQuery("iframe#requestInfo-content").contents().find(".elcn-content").css({"border-radius":"unset","box-shadow":"unset"});
+});
 
   // Initial config for setting up modals
   MicroModal.init({
