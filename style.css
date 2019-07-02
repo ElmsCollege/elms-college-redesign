@@ -1812,6 +1812,9 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover{
 .field-content table:not(.tribe-events-calendar) th,.entry-content table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
+.tribe-events-list .type-tribe-events{
+	border-bottom:1px solid #ddd;
+}
 .opening-menu.fs-dropdown .fs-dropdown-item{
 	border:none;
 	-webkit-appearance:none;
