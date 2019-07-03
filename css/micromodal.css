@@ -13,12 +13,14 @@
   align-items: center;
 }
 .modal_container{
-  background-color: #fff;
-  max-width: 500px;
-  max-height: 100vh;
-  border-radius: 4px;
-  overflow-y: auto;
-  box-sizing: border-box;
+	background-color: #fff;
+	max-width: 500px;
+	max-height: 100vh;
+	border-radius: 4px;
+	overflow-y: auto;
+	box-sizing: border-box;
+	top: 50px;
+    position: relative;
 }
 .modal_header{
     display: flex;
