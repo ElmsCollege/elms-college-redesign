@@ -26,7 +26,7 @@ get_header("library"); ?>
       </h1>
   </div>
 	<div id="primary" class="content-area pure-g">
-		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
+		<main id="main" class="site-main pure-u-1 standalone" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -42,11 +42,8 @@ get_header("library"); ?>
 			?>
 
 		</main><!-- #main -->
-    <?php if ($has_sidebar) : ?>
-        <?php get_sidebar(); ?>
-    <?php endif; ?>
-    
-	</div><!-- #primary -->
+
+</div><!-- #primary -->
 
 <?php
 get_footer("library");
