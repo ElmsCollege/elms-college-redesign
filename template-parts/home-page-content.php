@@ -99,15 +99,15 @@ setup_postdata($post);
       
       <div class="news-events">
         <div class="news-events-inner">
-          <p class="pre-title">
+<!--          <p class="pre-title">
             <?php print($news_events_pre_title) ?>
           </p>
           <h2 class="field-news_events_title">
             <?php print($news_events_title) ?>
-          </h2>
+          </h2> -->
           <div class="news-events-feature pure-g">
             <div class="news-events-column pure-u-1 pure-u-lg-1-2">
-              
+              <h2 class="centerText">Events</h2>
               <?php if( isset($events[0])) : ?>
                 <div class="news-item news-item-short">
                   <?php render_homepage_event($events[0])?>
@@ -129,19 +129,25 @@ setup_postdata($post);
                   <?php render_homepage_event($events[3])?>
                 </div>
               <?php endif; ?>
+				<div class="more-button-container">
+					<a class="more-button" href="/events/">
+						More Events
+					</a>
+				</div>
             </div>
-          </div>
-          <div class="news-events-column pure-u-1 pure-u-lg-1-2"><!-- news -->
+            <div class="news-events-column pure-u-1 pure-u-lg-1-2">
+				<h2 class="centerText">News</h2>
 			  <?php echo do_shortcode("[wbcr_snippet id='37228']"); ?>
-			</div>
+				<div class="more-button-container">
+					<a class="more-button" href="/news/">
+						More News
+					</a>
+				</div>
 
+			</div>
+          </div>
         </div>
         
-        <div class="more-button-container">
-          <a class="more-button" href="/events/">
-            More Events
-          </a>
-        </div>
       </div>
       	
       <div class="calls-to-action">
