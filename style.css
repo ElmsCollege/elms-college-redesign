@@ -3868,6 +3868,10 @@ th .smallText{
 }
 .fullWidth{
 	width:100%;
+	flex-basis:100%;
+}
+.flexHalf{
+	flex-basis: 49%;
 }
 /* END generic, universal, reusable styles */
 #advertising-landing-page .section-heading{
