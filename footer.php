@@ -23,7 +23,6 @@
 
 				<ul class="social-media-icons pure-g">
 
-					<?php foreach ($links as $name=>$link) : ?>
 					<li class="social-media-icon pure-u-1-4">
 						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
 							<img src="/wp-content/themes/gs_elms/images/icon-facebook.png" alt="Facebook logo"/>
@@ -45,7 +44,6 @@
 						</a>
 					</li>
 
-					<?php endforeach; ?>
 				</ul>
 			</div>
 		</div>
