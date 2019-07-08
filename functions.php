@@ -283,7 +283,7 @@ add_action('wp_head', 'gs_add_typekit');
 function render_homepage_event ($event) {
   ?> 
   <div class="event">
-    <div class="event-image" style="<?php print_featured_image_style($event->ID, "large") ?>">
+    <div class="event-image" style="<?php print_featured_image_style($event->ID, "medium") ?>">
       <!-- <?php print get_the_post_thumbnail($event->ID) ?> -->
       
       <div class="start-date">
