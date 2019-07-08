@@ -1073,27 +1073,18 @@ body.active,html.active{
 	max-width:36em;
 }
 .social-media-icons .social-media-icon-link{
-	text-indent:3000px;
 	color:transparent;
-	display:inline-block;
+	display:flex;
+	justify-content:center;
+	align-items:center;
 	border:1px solid white;
 	box-sizing:border-box;
 	border-radius:9000px;
-	background:url("images/social-media-sprite.png") no-repeat top left;
 	width:72px;
 	height:72px;
 }
-.social-media-icons .social-media-icon-link.facebook{
-	background-position:15px 15px; 
-}
-.social-media-icons .social-media-icon-link.twitter{
-	background-position:15px -99px;
-}
-.social-media-icons .social-media-icon-link.youtube{
-	background-position: 15px -156px;
-}
-.social-media-icons .social-media-icon-link.instagram{
-	background-position:15px -42px; 
+.social-media-icon-link img{
+	width:50px;
 }
 .site-footer .footer-item-inner{
 	padding:0 32px 0;
