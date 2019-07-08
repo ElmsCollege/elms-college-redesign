@@ -13,7 +13,6 @@ get_header(); ?>
   <div class="section-heading" style="<?php print_featured_image_style(get_the_ID()) ?>">
       <h1 class="field-title no-pre-title">
         <?php the_archive_title( ); ?>
-        <?php if (!is_single()) { print rss_link($GLOBALS['wp_the_query']); } ?>
       </h1>
   </div>
 	<div id="primary" class="content-area pure-g">
@@ -31,8 +30,9 @@ get_header(); ?>
   				 */
           ?>
           <h2><a href="<?php print get_the_permalink()?>"><?php the_title()?></a></h2>
+			<span>Published on: <?php echo get_the_date( 'F, j, Y' ); ?></li></span>
           <?php
-  				echo gs_get_the_excerpt($post->ID);
+  				echo '<p>' .gs_get_the_excerpt($post->ID) . '</p';
 
   			endwhile;
 

@@ -109,7 +109,7 @@ setup_postdata($post);
             <div class="news-events-column pure-u-1 pure-u-lg-1-2">
               
               <?php if( isset($events[0])) : ?>
-                <div class="news-item news-item-long">
+                <div class="news-item news-item-short">
                   <?php render_homepage_event($events[0])?>
                 </div>
               <?php endif; ?>
@@ -118,16 +118,16 @@ setup_postdata($post);
                   <?php render_homepage_event($events[1])?>
                 </div>
               <?php endif; ?>
-            </div>
+<!--            </div>
             
-            <div class="news-events-column pure-u-1 pure-u-lg-1-2">
+            <div class="news-events-column pure-u-1 pure-u-lg-1-2"> -->
               <?php if( isset($events[2])) : ?>
                 <div class="news-item news-item-short">
                   <?php render_homepage_event($events[2])?>
                 </div>
               <?php endif; ?>
               <?php if( isset($events[3])) : ?>
-                <div class="news-item news-item-long">
+                <div class="news-item news-item-short">
                   <?php render_homepage_event($events[3])?>
                 </div>
               <?php endif; ?>
