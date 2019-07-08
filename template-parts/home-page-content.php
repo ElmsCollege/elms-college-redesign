@@ -118,10 +118,8 @@ setup_postdata($post);
                   <?php render_homepage_event($events[1])?>
                 </div>
               <?php endif; ?>
-<!--            </div>
-            
-            <div class="news-events-column pure-u-1 pure-u-lg-1-2"> -->
-              <?php if( isset($events[2])) : ?>
+
+				<?php if( isset($events[2])) : ?>
                 <div class="news-item news-item-short">
                   <?php render_homepage_event($events[2])?>
                 </div>
@@ -133,6 +131,10 @@ setup_postdata($post);
               <?php endif; ?>
             </div>
           </div>
+          <div class="news-events-column pure-u-1 pure-u-lg-1-2"><!-- news -->
+			  <?php echo do_shortcode("[wbcr_snippet id='37228']"); ?>
+			</div>
+
         </div>
         
         <div class="more-button-container">
@@ -141,7 +143,7 @@ setup_postdata($post);
           </a>
         </div>
       </div>
-      
+      	
       <div class="calls-to-action">
         <div class="calls-to-action-title">
           <h2 class="field-calls_to_action_title">

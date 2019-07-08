@@ -32,7 +32,7 @@ get_header(); ?>
   				 */
           ?>
           <h2><a href="<?php print get_the_permalink()?>"><?php the_title()?></a></h2>
-			<span>Published on: <?php echo get_the_date( 'F, j, Y' ); ?></span>
+			<span>Published on: <?php echo get_the_date( 'l, F j, Y' ); ?></span>
           <?php
   				echo '<p>' .gs_get_the_excerpt($post->ID) .'</p>';
 
