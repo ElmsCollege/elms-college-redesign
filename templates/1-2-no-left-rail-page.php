@@ -29,6 +29,7 @@ the_post();
 
 		<div class="field-content flexRowWrapStart spaceBetween">
 			<div class="fullWidth">
+				<?php the_content() ?>
 				<?php if( get_field('commencement_youtube_link') ){
 					the_field('commencement_youtube_link');
 				} else {

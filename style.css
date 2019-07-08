@@ -3871,7 +3871,16 @@ th .smallText{
 	flex-basis:100%;
 }
 .flexHalf{
-	flex-basis: 49%;
+	flex-basis: 48%;
+}
+.flexHalf h2{
+	margin-top:0px;
+}
+.page-template-1-2-no-left-rail-page .fullWidth{
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	text-align:center;
 }
 /* END generic, universal, reusable styles */
 #advertising-landing-page .section-heading{
