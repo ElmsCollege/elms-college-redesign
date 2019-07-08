@@ -137,15 +137,7 @@ setup_postdata($post);
             </div>
             <div class="news-events-column pure-u-1 pure-u-lg-1-2">
 				<h2 class="centerText">News</h2>
-				<?php $i = 1; while (have_posts() && $i < 6) : the_post(); ?>
-				<h3 class="noMarginTop"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-<?php 
-		$post_date = get_the_date( 'l, F j, Y' ); echo '<span class="smallText">Published on ' .$post_date .'</span>';
-		the_excerpt(); ?>
-								<?php $i++; endwhile; ?>
-
-				
-<!--			  <?php echo do_shortcode("[wbcr_snippet id='37228']"); ?> -->
+			  <?php echo do_shortcode("[wbcr_snippet id='37228']"); ?>
 				<div class="more-button-container">
 					<a class="more-button" href="/news/">
 						More News
