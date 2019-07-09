@@ -30,9 +30,6 @@ the_post();
 	<main id="main" class="site-main pure-u-1 standalone" role="main">
 
 		<div class="field-content flexRowWrapStart spaceBetween">
-			<?php if( get_field('commencement_year') ){
-				echo '<h2>Class of ' .get_field('commencement_year') . ': where are you going?';
-			} ?>
 			<div class="fullWidth">
 				<?php the_content() ?>
 				<?php if( get_field('commencement_youtube_link') ){
@@ -45,8 +42,9 @@ the_post();
 				while( have_rows('where_are_they_going_container') ): the_row(); 
 			?>
 				<div id="students" class="fullWidth">
-					
-					<h2>Class of </h2>
+					<?php if( get_field('commencement_year') ){
+						echo '<h2>Class of ' .get_field('commencement_year') . ': where are you going?</h2>';
+					} ?>
 					<?php if( get_sub_field('class_youtube_video-top') ){
 						the_sub_field('class_youtube_video-top');
 					} ?>
