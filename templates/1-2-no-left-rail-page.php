@@ -7,6 +7,8 @@
  * @package Elms_College_Redesign
  */
 
+wp_enqueue_style( 'directory', get_template_directory_uri() . '/css/1-2-no-left-rail-page', array(), '1' );
+
 $permalink = get_permalink();
 if(strpos($permalink,'nursing')){
 	get_header("nursing");
@@ -50,7 +52,7 @@ the_post();
 						$image = get_sub_field( "graduate_image" );
 						$size = "thumbnail";
 
-						echo "<li class='flexRowWrapStart spaceBetween'><div class='listText'><strong>";
+						echo "<li class='spaceAround'><div class='listText'><strong>";
 						the_sub_field( "bolded_text" );
 						echo "</strong><br />";
 						if ( get_sub_field( "plain_text" ) ) {
@@ -62,7 +64,7 @@ the_post();
 							the_sub_field( "italicized_text" );
 							echo "</em>";
 						};
-						the_sub_field( "quote_or_descriptive_text" );
+						echo '<p>' .get_sub_field("quote_or_descriptive_text") . '</p>';
 						echo "</div>";
 						echo wp_get_attachment_image( $image, $size );
 						echo "</li>";
