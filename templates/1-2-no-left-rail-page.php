@@ -36,12 +36,52 @@ the_post();
 					the_field('commencement_week_schedule');
 				}?>
 			</div>
-			<div class="flexHalf">
+			<?php if( have_rows('where_are_they_going_container') ): 
+				while( have_rows('where_are_they_going_container') ): the_row(); 
+			?>
+				<div id="students" class="fullWidth">
+					<?php if( get_sub_field('class_youtube_video-top') ){
+						the_sub_field('class_youtube_video-top');
+					} ?>
+					<ul class="template embedDirectory-image ulreset">
+						<?php
+						if ( have_rows( "where_are_they_going" ) ):
+							while ( have_rows( "where_are_they_going" ) ): the_row();
+						$image = get_sub_field( "graduate_image" );
+						$size = "thumbnail";
+
+						echo "<li class='flexRowWrapStart spaceBetween'><div class='listText'><strong>";
+						the_sub_field( "bolded_text" );
+						echo "</strong><br />";
+						if ( get_sub_field( "plain_text" ) ) {
+							the_sub_field( "plain_text" );
+							echo "<br />";
+						};
+						if ( get_sub_field( "italicized_text" ) ) {
+							echo "<em>";
+							the_sub_field( "italicized_text" );
+							echo "</em>";
+						};
+						the_sub_field( "quote_or_descriptive_text" );
+						echo "</div>";
+						echo wp_get_attachment_image( $image, $size );
+						echo "</li>";
+
+						endwhile;
+						endif;
+						?>
+					</ul>
+					<?php if( get_sub_field('class_youtube_video-bottom') ){
+						the_sub_field('class_youtube_video-bottom');
+					} ?>
+				</div>
+			<?php endwhile; endif; ?>
+			<div id="speaker" class="flexHalf">
 				<?php if( get_field('commencement_speaker_bio') ){
 					the_field('commencement_speaker_bio');
 				}?>
 			</div>
-			<div class="flexHalf">
+			<div id="demographics" class="flexHalf">
 				<?php if( get_field('class_demographics') ){
 					the_field('class_demographics');
 				}?>
