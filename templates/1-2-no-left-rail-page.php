@@ -79,7 +79,7 @@ the_post();
 					<?php if( get_sub_field('class_youtube_video-bottom') ){
 						the_sub_field('class_youtube_video-bottom');
 					} ?>
-				</div><h2>William Lyons III</h2>
+				</div>
 			<?php endwhile; endif; ?>
 			<div id="speaker" class="flexHalf">
 				<h4 class="centerText noMarginTop">Commencement Speaker</h4>
