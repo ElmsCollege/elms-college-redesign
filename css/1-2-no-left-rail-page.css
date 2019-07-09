@@ -1,7 +1,7 @@
 /* styling overrides for the 1-2-no-left-rail-page.php template */
 .embedDirectory-image li{
-	align-items:center;
+	align-items:center !important;
 }
 .template.embedDirectory-image .listText{
-	width:calc(100% - 165px);
+	width:calc(100% - 165px) !important;
 }
