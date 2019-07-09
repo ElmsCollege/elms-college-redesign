@@ -30,14 +30,6 @@ the_post();
 	<main id="main" class="site-main pure-u-1 standalone" role="main">
 
 		<div class="field-content flexRowWrapStart spaceBetween">
-			<div class="fullWidth">
-				<?php the_content() ?>
-				<?php if( get_field('commencement_youtube_link') ){
-					the_field('commencement_youtube_link');
-				} else {
-					the_field('commencement_week_schedule');
-				}?>
-			</div>
 			<?php if( have_rows('where_are_they_going_container') ): 
 				while( have_rows('where_are_they_going_container') ): the_row(); 
 			?>
@@ -81,6 +73,15 @@ the_post();
 					} ?>
 				</div>
 			<?php endwhile; endif; ?>
+						<div class="fullWidth">
+				<?php the_content() ?>
+				<?php if( get_field('commencement_youtube_link') ){
+					the_field('commencement_youtube_link');
+				} else {
+					the_field('commencement_week_schedule');
+				}?>
+			</div>
+
 			<div id="speaker" class="flexHalf">
 				<h4 class="centerText noMarginTop">Commencement Speaker</h4>
 				<h2 class="centerText"><?php the_field('commencement_speaker_name'); ?></h2>
