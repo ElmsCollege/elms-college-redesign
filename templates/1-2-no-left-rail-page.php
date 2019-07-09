@@ -7,7 +7,7 @@
  * @package Elms_College_Redesign
  */
 
-wp_enqueue_style( 'directory', get_template_directory_uri() . '/css/1-2-no-left-rail-page', array(), '1' );
+wp_enqueue_style( '1-2-no-left-rail-page', get_template_directory_uri() . '/css/1-2-no-left-rail-page', array(), '1' );
 
 $permalink = get_permalink();
 if(strpos($permalink,'nursing')){
