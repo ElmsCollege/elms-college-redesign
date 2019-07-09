@@ -1,7 +1,19 @@
 /* styling overrides for the 1-2-no-left-rail-page.php template */
+.page-template-1-2-no-left-rail-page .fullWidth{
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	text-align:center;
+}
 .embedDirectory-image li{
 	align-items:center !important;
+	text-align:right;
+}
+.embedDirectory-image li:nth-child(even){
+	text-align:left;
 }
 .template.embedDirectory-image .listText{
 	width:calc(100% - 165px) !important;
+}
+.speaker h4{
+	line-height: 1em;
 }

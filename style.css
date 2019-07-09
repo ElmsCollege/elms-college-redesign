@@ -3876,12 +3876,6 @@ th .smallText{
 .flexHalf h2{
 	margin-top:0px;
 }
-.page-template-1-2-no-left-rail-page .fullWidth{
-	margin-bottom: 10px;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 10px;
-	text-align:center;
-}
 /* END generic, universal, reusable styles */
 #advertising-landing-page .section-heading{
 	background-color:unset;
