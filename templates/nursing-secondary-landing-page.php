@@ -48,7 +48,9 @@ get_header("nursing");
 	<?php endif; ?>
 
 	<div id="primary" class="content-area">
-		<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
+		<?php if( get_field('control_request_info_button') ): 
+			echo do_shortcode("[sc name='get-info-popup']");
+		endif; ?>
 
 		<main id="main" class="site-main" role="main">
                   

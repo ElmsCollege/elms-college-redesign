@@ -43,7 +43,9 @@ $lower_story_content = get_field("lower_story_content");
 	<div id="primary" class="content-area pure-g"> 
     	<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 			
-		<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
+			<?php if( get_field('control_request_info_button') ): 
+				echo do_shortcode("[sc name='get-info-popup']");
+			endif; ?>
 
 <?php if ($story_background || $programImage): ?>
 

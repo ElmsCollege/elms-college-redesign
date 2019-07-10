@@ -62,10 +62,9 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
-			<?php if( get_field('control_request_info_button') ): ?>
-				<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
-			<?php endif; ?>
+			<?php if( get_field('control_request_info_button') ): 
+				echo do_shortcode("[sc name='get-info-popup']");
+			endif; ?>
 			<div class="body-text">
 		      		<?php the_content() ?>
 			</div>
