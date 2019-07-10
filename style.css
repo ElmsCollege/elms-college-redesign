@@ -3582,7 +3582,7 @@ h4#formTrigger.colomat-close{
 #secondary{
 	overflow-x:hidden;
 }
-#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger{
+#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger,aside .requestInfo-trigger{
 	display:block;
 	background-color:#c3a250;
 	width:100%;
