@@ -3598,6 +3598,8 @@ h4#formTrigger.colomat-close{
 }
 aside .requestInfo-trigger{
 	margin:5px 0;
+	max-width:100% !important;
+	font-size:18px;
 }
 a.buttonLink.grouped{
 	margin-bottom:16px;
