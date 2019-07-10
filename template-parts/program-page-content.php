@@ -42,11 +42,9 @@ $lower_story_content = get_field("lower_story_content");
   </div>
 	<div id="primary" class="content-area pure-g"> 
     	<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
-			
-			<?php if( get_field('control_request_info_button') ): 
-				echo do_shortcode("[sc name='get-info-popup']");
-			endif; ?>
 
+		<?php get_template_part("template-parts/ellucian-modal"); ?>
+			
 <?php if ($story_background || $programImage): ?>
 
   <div class="section-heading-as-content <?php if ($mp4 || $m4v || $ogv || $webm ) { echo "with-video"; }?>" >

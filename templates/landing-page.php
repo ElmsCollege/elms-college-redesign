@@ -62,9 +62,7 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php if( get_field('control_request_info_button') ): 
-				echo do_shortcode("[sc name='get-info-popup']");
-			endif; ?>
+			<?php get_template_part("template-parts/ellucian-modal"); ?>
 			<div class="body-text">
 		      		<?php the_content() ?>
 			</div>
