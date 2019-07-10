@@ -383,11 +383,6 @@
     })
   });
 
-  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function (event) {
-    event.preventDefault();
-    MicroModal.close('requestInfo')
-  });
-
   // Scrollspy
   var section = document.querySelectorAll(".heading");
   var sections = {};
