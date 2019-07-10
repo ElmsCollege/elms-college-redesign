@@ -1763,6 +1763,7 @@ p:last-child{
 	display:block;
 	max-width:100%;
 	padding: 5px 0;
+	width:100%;
 }
 @media (min-width: 1040px){
 	.parent-sidebar-menu{
@@ -3482,7 +3483,7 @@ div.collapseomatic_content {
 	border:2px solid #2786ac;
 	padding:5px 10%;
 	color:#fff!important;
-	border-radius: 5px;
+	border-radius: 3px;
 	font-weight:bold;
 	min-width:200px;
 }
@@ -3499,7 +3500,7 @@ div.collapseomatic_content {
 	padding:16px;
 	color: #fff !important;
 	text-decoration: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	text-align:center;
 	font-weight:bold;
 	border:2px solid;
@@ -3532,7 +3533,7 @@ div.collapseomatic_content {
 	padding:16px;
 	color: #fff !important;
 	text-decoration: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	text-align:center;
 	font-weight:bold;
 	border:2px solid #115438;
