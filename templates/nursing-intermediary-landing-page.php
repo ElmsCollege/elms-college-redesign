@@ -37,7 +37,7 @@ get_header("nursing");
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php get_template_part("template-parts/ellucian-modal"); ?>
+			<?php get_template_part("template-parts/request-info-button"); ?>
 			<?php
 			while ( have_posts() ) : the_post(); 
         $calls_to_action = get_field("calls_to_action");

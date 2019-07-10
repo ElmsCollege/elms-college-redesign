@@ -62,7 +62,7 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php get_template_part("template-parts/ellucian-modal"); ?>
+			<?php get_template_part("template-parts/request-info-button"); ?>
 			<div class="body-text">
 		      		<?php the_content() ?>
 			</div>
