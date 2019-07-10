@@ -3596,6 +3596,9 @@ h4#formTrigger.colomat-close{
 	color:#fff;
 	cursor:pointer;
 }
+aside .requestInfo-trigger{
+	margin:5px 0;
+}
 a.buttonLink.grouped{
 	margin-bottom:16px;
 }
