@@ -62,7 +62,6 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php $colors = get_field("hide_request_info");
 			<?php echo do_shortcode("[sc name='get-info-popup']"); ?>
 			<div class="body-text">
 		      		<?php the_content() ?>
