@@ -1890,14 +1890,20 @@ button.fs-dropdown-item:hover{
 	padding: 0px 32px;
 	border: none;
 }
-body.page-template-landing-page .opening-menu .menu-item,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item,body.page-template-nursing-landing-page-2 .opening-menu .menu-item{display:table-cell;border-right:1px solid #dcdcdc;transition:.25s ease-in-out all;background-color:white}body.page-template-landing-page .opening-menu .menu-item:last-child,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item:last-child,body.page-template-nursing-landing-page-2 .opening-menu .menu-item:last-child{border-right:none}
+body.page-template-landing-page .opening-menu .menu-item,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item,body.page-template-nursing-landing-page-2 .opening-menu .menu-item{
+	display:table-cell;
+	border-right:1px solid #dcdcdc;
+	transition:.25s ease-in-out all;
+	background-color:white;
+	vertical-align:middle;
+}
+body.page-template-landing-page .opening-menu .menu-item:last-child,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item:last-child,body.page-template-nursing-landing-page-2 .opening-menu .menu-item:last-child{border-right:none}
 body.page-template-landing-page .opening-menu .menu-item a,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item a,body.page-template-nursing-landing-page-2 .opening-menu .menu-item a{
 	display:block;
 	padding:15px 10px;
 	color:#333333;
 	text-decoration:none;
 	transition:.25s ease-in-out all;
-	vertical-align:middle
 }
 body.page-template-landing-page .opening-menu .menu-item:hover,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item:hover,body.page-template-nursing-landing-page-2 .opening-menu .menu-item:hover{background-color:#115438}body.page-template-landing-page .opening-menu .menu-item:hover a,body.page-template-nursing-secondary-landing-page .opening-menu .menu-item:hover a,body.page-template-nursing-landing-page-2 .opening-menu .menu-item:hover a{
 	color:white
