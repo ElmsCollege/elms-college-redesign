@@ -371,6 +371,7 @@
 		});
 		jQuery(".schema-faq-answer").each(function (index) {
 			jQuery(this).css("display","none").attr({
+				class: "collapseomatic_content",
 				id: "target-" + index
 			});
 		});
