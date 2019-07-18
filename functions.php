@@ -104,11 +104,18 @@ function gs_elms_widgets_init() {
 }
 add_action( 'widgets_init', 'gs_elms_widgets_init' );
 
+
+$blog_id = get_current_blog_id();
+
+
 /**
  * Enqueue scripts and styles.
  */
 function gs_elms_scripts() {
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
+	if($blog_id == 2){
+		wp_enqueue_style( 'commencement', get_template_directory_uri() . '/css/commencement.css', array(), '1' );
+	}
 
 	wp_enqueue_script( 'gs_elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );
 

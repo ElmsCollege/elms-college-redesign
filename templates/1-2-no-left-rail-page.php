@@ -7,8 +7,6 @@
  * @package Elms_College_Redesign
  */
 
-wp_enqueue_style( 'commencement', get_template_directory_uri() . '/css/commencement.css', array(), '1' );
-
 $permalink = get_permalink();
 if(strpos($permalink,'nursing')){
 	get_header("nursing");
@@ -30,8 +28,12 @@ the_post();
 	<main id="main" class="site-main pure-u-1 standalone" role="main">
 
 		<div class="field-content flexRowWrapStart spaceBetween">
-			<?php if( have_rows('where_are_they_going_container') ): 
-				while( have_rows('where_are_they_going_container') ): the_row(); 
+			<?php the_content() ?>
+			
+			<?php 
+				$commencementGroup = get_field('where_are_they_going_container');
+
+				if ($commencementGroup['class_youtube_video-top'] || $commencementGroup['class_youtube_video-bottom'] || $commencementGroup['where_are_they_going']):
 			?>
 				<div id="students" class="fullWidth">
 					<?php if( get_field('commencement_year') ){
@@ -71,10 +73,11 @@ the_post();
 					<?php if( get_sub_field('class_youtube_video-bottom') ){
 						the_sub_field('class_youtube_video-bottom');
 					} ?>
+
 				</div>
-			<?php endwhile; endif; ?>
-						<div class="fullWidth">
-				<?php the_content() ?>
+			<?php endif; ?>
+
+			<div class="fullWidth">
 				<?php if( get_field('commencement_youtube_link') ){
 					the_field('commencement_youtube_link');
 				} else {
