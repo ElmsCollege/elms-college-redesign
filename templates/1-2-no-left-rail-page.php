@@ -73,8 +73,7 @@ the_post();
 					} ?>
 
 				</div>
-			<?php endif; ?>
-
+			
 			<div class="fullWidth">
 				<?php if( get_field('commencement_youtube_link') ){
 					the_field('commencement_youtube_link');
