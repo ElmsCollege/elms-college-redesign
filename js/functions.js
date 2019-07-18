@@ -370,8 +370,7 @@
 			});
 		});
 		jQuery(".schema-faq-answer").each(function (index) {
-			jQuery(this).attr({
-				class: "collapseomatic_content",
+			jQuery(this).css("display","none").attr({
 				id: "target-" + index
 			});
 		});
