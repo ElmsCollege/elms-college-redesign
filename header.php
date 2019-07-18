@@ -10,6 +10,10 @@
  */
 
 //redirect_if_homepage_cookie();
+$blog_id = get_current_blog_id();
+if( 2 == $blog_id){//commencement subsite
+	wp_enqueue_style( 'commencement', get_template_directory_uri() . '/css/commencement.css', array(), '1' );
+}
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
