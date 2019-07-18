@@ -30,17 +30,15 @@ the_post();
 		<div class="field-content flexRowWrapStart spaceBetween">
 			<?php the_content() ?>
 			
-			<?php 
-				$commencementGroup = get_field('where_are_they_going_container');
-echo "<!--" .$commencementGroup . "-->";
-				if ($commencementGroup['class_youtube_video-top'] || $commencementGroup['class_youtube_video-bottom'] || $commencementGroup['where_are_they_going']):
-			?>
 				<div id="students" class="fullWidth">
-					<?php if( get_field('commencement_year') ){
-						echo '<h2>Class of ' .get_field('commencement_year') . ': where are you going?</h2>';
-					} ?>
-					<?php if($commencementGroup['class_youtube_video-top'] ){
-						the_sub_field('class_youtube_video-top');
+					<?php if(get_field('class_youtube_video-top') || get_field('class_youtube_video-bottom') || have_rows( "where_are_they_going" ) ) {
+						if( get_field('commencement_year') ){
+							echo '<h2>Class of ' .get_field('commencement_year') . ': where are you going?</h2>';
+						}
+					}
+					?>
+					<?php if(get_field('class_youtube_video-top') ){
+						the_field('class_youtube_video-top');
 					} ?>
 					<ul class="template embedDirectory-image ulreset">
 						<?php
@@ -70,8 +68,8 @@ echo "<!--" .$commencementGroup . "-->";
 						endif;
 						?>
 					</ul>
-					<?php if($commencementGroup['class_youtube_video-top']){
-						the_sub_field('class_youtube_video-bottom');
+					<?php if(get_field('class_youtube_video-top') ){
+						the_field('class_youtube_video-bottom');
 					} ?>
 
 				</div>
