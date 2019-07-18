@@ -365,13 +365,13 @@
 		  jQuery(this).addClass("normalText");
 		jQuery(".schema-faq-question").each(function (index) {
 			jQuery(this).attr({
-				class: "collapseomatic noarrow",
+				class: "schema-faq-question collapseomatic noarrow",
 				id: index
 			});
 		});
 		jQuery(".schema-faq-answer").each(function (index) {
 			jQuery(this).css("display","none").attr({
-				class: "collapseomatic_content",
+				class: "schema-faq-answer collapseomatic_content",
 				id: "target-" + index
 			});
 		});

@@ -3904,6 +3904,7 @@ th .smallText{
 }
 .schema-faq-section{
 	margin-bottom:10px;
+	padding-bottom:5px;
 }
 .schema-faq-answer{
 	border-bottom:1px solid #ccc;
