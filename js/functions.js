@@ -361,10 +361,11 @@
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
     
-	  jQuery(".schema-faq-section").each(function (index) {
+	  jQuery(".schema-faq-section").each(function() {
+		  jQuery(this).addClass("normalText");
 		jQuery(".schema-faq-question").each(function (index) {
 			jQuery(this).attr({
-				class: "collapseomatic",
+				class: "collapseomatic noarrow",
 				id: index
 			});
 		});
