@@ -361,6 +361,21 @@
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
     
+	  jQuery(".schema-faq-section").each(function (index) {
+		jQuery(".schema-faq-question").each(function (index) {
+			jQuery(this).attr({
+				class: "collapseomatic",
+				id: index
+			});
+		});
+		jQuery(".schema-faq-answer").each(function (index) {
+			jQuery(this).attr({
+				class: "collapseomatic_content",
+				id: "target-" + index
+			});
+		});
+	  });
+  
   });
 
 })(jQuery, window, document);
