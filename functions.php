@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
 
 $blog_id = get_current_blog_id();
 
-
+echo "<!--" .$blog_id . "-->";
 /**
  * Enqueue scripts and styles.
  */

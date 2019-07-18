@@ -32,14 +32,14 @@ the_post();
 			
 			<?php 
 				$commencementGroup = get_field('where_are_they_going_container');
-
+echo "<!--" .$commencementGroup . "-->";
 				if ($commencementGroup['class_youtube_video-top'] || $commencementGroup['class_youtube_video-bottom'] || $commencementGroup['where_are_they_going']):
 			?>
 				<div id="students" class="fullWidth">
 					<?php if( get_field('commencement_year') ){
 						echo '<h2>Class of ' .get_field('commencement_year') . ': where are you going?</h2>';
 					} ?>
-					<?php if( get_sub_field('class_youtube_video-top') ){
+					<?php if($commencementGroup['class_youtube_video-top'] ){
 						the_sub_field('class_youtube_video-top');
 					} ?>
 					<ul class="template embedDirectory-image ulreset">
@@ -70,7 +70,7 @@ the_post();
 						endif;
 						?>
 					</ul>
-					<?php if( get_sub_field('class_youtube_video-bottom') ){
+					<?php if($commencementGroup['class_youtube_video-top']){
 						the_sub_field('class_youtube_video-bottom');
 					} ?>
 
