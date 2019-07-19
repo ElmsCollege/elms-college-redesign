@@ -361,8 +361,15 @@
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
     
-	  jQuery(".schema-faq-section").each(function() {
-		  jQuery(this).addClass("normalText");
+	//JS for the Gutenberg FAQ blocks
+	jQuery(".schema-faq-section").each(function() {
+		jQuery(this).addClass("normalText");
+		jQuery("img").each(function () {
+			var src = jQuery(this).attr("src").split('.');
+			jQuery(this).attr({
+				id: src[1]
+			});
+		});
 		jQuery(".schema-faq-question").each(function (index) {
 			jQuery(this).attr({
 				class: "schema-faq-question collapseomatic noarrow",
