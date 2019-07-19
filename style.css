@@ -3907,6 +3907,7 @@ th .smallText{
 	padding-bottom:5px;
 }
 .schema-faq-question img{
+	display:block;
 	margin-top:-130px;
 	padding-top:130px;
 }
