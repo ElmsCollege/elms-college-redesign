@@ -9,14 +9,6 @@
  * @package Elms_College_Redesign
  */
 
-//redirect_if_homepage_cookie();
-$blog_id = get_current_blog_id();
-if( 2 == $blog_id){//commencement subsite
-	wp_dequeue_style('gs_elms-style');
-	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
-	wp_enqueue_style( 'commencement', get_template_directory_uri() . '/css/commencement.css', array(), '1' );
-}
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
