@@ -364,7 +364,7 @@
 	//JS for the Gutenberg FAQ blocks
 	jQuery(".schema-faq-section").each(function() {
 		jQuery(this).addClass("normalText");
-		jQuery("img").each(function () {
+		jQuery(".schema-faq-question img").each(function () {
 			var src = jQuery(this).attr("src").split("/");
 			var file = src[src.length-1];
 			var name = file.split(".")[0];
