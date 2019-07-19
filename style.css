@@ -3906,6 +3906,10 @@ th .smallText{
 	margin-bottom:10px;
 	padding-bottom:5px;
 }
+.schema-faq-question img{
+	margin-top:-130px;
+	padding-top:130px;
+}
 .schema-faq-answer{
 	border-bottom:1px solid #ccc;
 }
