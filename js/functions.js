@@ -365,7 +365,7 @@
 	jQuery(".schema-faq-section").each(function() {
 		jQuery(this).addClass("normalText");
 		jQuery(".schema-faq-question img").each(function () {
-			jQuery(this).css("border","2px solid red");
+			jQuery(this).addClass("faqImage");
 			var src = jQuery(this).attr("src");
 			var split = src.split("/");
 			var file = split[split.length-1];
