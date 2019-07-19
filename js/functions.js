@@ -365,9 +365,11 @@
 	jQuery(".schema-faq-section").each(function() {
 		jQuery(this).addClass("normalText");
 		jQuery(".schema-faq-question img").each(function () {
-			var src = jQuery(this).attr("src").split("/");
-			var file = src[src.length-1];
+			var src = jQuery(this).attr("src");
+			var split = src.split("/");
+			var file = split[split.length-1];
 			var name = file.split(".")[0];
+			console.log ("src = " + src + " | split = " + split + " | file = " + file + " | name = " + name);
 			jQuery(this).attr({
 				id: name
 			});
