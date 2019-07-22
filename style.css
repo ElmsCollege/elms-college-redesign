@@ -976,11 +976,10 @@ header#masthead .site-branding a{
 	font-size:56px;
 	line-height:1;
 }
-.section-heading .field-title .rss-link{
-	letter-spacing:-.5em;
-	text-shadow:none;
-	display:inline-block;
-	color: white;
+@media all and (max-width:505px){
+	.section-heading .field-title{
+		font-size:42px;
+	}
 }
 body.page-template-landing-page .section-heading,body.page-template-nursing-landing-page-2 .section-heading, .page-template-nursing-interior-page .section-heading, .single-tribe_events .section-heading{
 	height:540px;
