@@ -21,7 +21,7 @@
 					Connect With Us
 				</h2>
 
-				<ul class="social-media-icons pure-g">
+				<ul class="social-media-icons pure-g flexRowWrapStart">
 
 					<li class="social-media-icon pure-u-1-4">
 						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">

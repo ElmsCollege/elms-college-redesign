@@ -1070,6 +1070,11 @@ body.active,html.active{
 	padding:0 0 40px;
 	margin:0 auto;
 	max-width:36em;
+	justify-content:center;
+}
+.social-media-icon{
+	margin:0 10px;
+	width:72px;
 }
 .social-media-icons .social-media-icon-link{
 	color:transparent;
