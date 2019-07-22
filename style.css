@@ -3908,8 +3908,9 @@ th .smallText{
 }
 .schema-faq-question img{
 	display:block;
-	margin-top:-130px;
-	padding-top:130px;
+	margin:-130px 0 -20px;
+	padding-top:140px;
+	width:auto !important;
 }
 .schema-faq-answer{
 	border-bottom:1px solid #ccc;
