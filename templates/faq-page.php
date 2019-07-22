@@ -16,7 +16,6 @@ get_header();the_post();
 jQuery(document).ready(function() {
 	//JS for the Gutenberg FAQ blocks
 	jQuery(".schema-faq-section").each(function() {
-		jQuery(this).addClass("normalText");
 		jQuery(".schema-faq-question img").each(function () {
 			var src = jQuery(this).attr("data-src");
 			var split = src.split("/");
