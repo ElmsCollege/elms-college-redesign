@@ -2177,6 +2177,8 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	.news-events .news-item-short .event .event-image{
 		width:230px;
 		height:150px;
+		float:left;
+		overflow:hidden;
 	}
 	.news-events .news-item-short .event .start-date{
 		top:0;
@@ -2197,13 +2199,13 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 .news-events .news-events-column:nth-child(1) .news-item:nth-child(1) .event,.news-events .news-events-column:nth-child(1) .news-item:nth-child(1) .event .start-date{
 	background-color:#c3a250
 }
-.news-events .news-events-column:nth-child(1) .news-item:nth-child(2) .event,.news-events .news-events-column:nth-child(1) .news-item:nth-child(2) .event .start-date{
+.news-events .news-item:nth-child(2) .event,.news-events .news-item:nth-child(2) .event .start-date{
 	background-color:#046B99
 }
-.news-events .news-events-column:nth-child(2) .news-item:nth-child(1) .event,.news-events .news-events-column:nth-child(2) .news-item:nth-child(1) .event .start-date{
+.news-events .news-item:nth-child(3) .event,.news-events .news-item:nth-child(3) .event .start-date{
 	background-color:#115438
 }
-.news-events .news-events-column:nth-child(2) .news-item:nth-child(2) .event,.news-events .news-events-column:nth-child(2) .news-item:nth-child(2) .event .start-date{
+.news-events .news-item:nth-child(4) .event,.news-events .news-item:nth-child(4) .event .start-date{
 	background-color:#413556
 }
 .more-button-container{
