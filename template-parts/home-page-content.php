@@ -98,14 +98,13 @@ setup_postdata($post);
       <?php get_template_part("template-parts/story-carousel", "student") ?>
       
       <div class="news-events">
-        <div class="news-events-inner">
 <!--          <p class="pre-title">
             <?php print($news_events_pre_title) ?>
           </p>
           <h2 class="field-news_events_title">
             <?php print($news_events_title) ?>
           </h2> -->
-          <div class="news-events-feature pure-g">
+          <div class="flexRowWrapStart spaceBetween news-events-feature pure-g">
             <div class="news-events-column pure-u-1 pure-u-lg-1-2">
               <h2 class="centerText">Events</h2>
               <?php if( isset($events[0])) : ?>
@@ -146,7 +145,6 @@ setup_postdata($post);
 
 			</div>
           </div>
-        </div>
         
       </div>
       	
