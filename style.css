@@ -2261,7 +2261,6 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	float:left;
 	overflow:hidden;
 }
-@media (min-width: 64em){
 	.news-events .news-item-short .event{
 		height:150px
 	}
@@ -2280,7 +2279,6 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 		display:table;
 		table-layout:fixed
 	}
-}
 .news-events .news-item .event,.news-events .news-item .event .start-date{
 	background-color:#c3a250
 }
