@@ -345,14 +345,16 @@ function display_homepage_event ($event) {
 			</div>
 			<div class="month2"><?php print tribe_get_start_date($event, false, "M")?></div>
 		  </div>
+		<div class="eventDetails2">
 		  <div class="times2">
 			<span class="start-time2"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
 			<span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
 		  </div>
 		  <a class="permalink2" href="<?php print get_the_permalink($event) ?>">
-			<h3 class="field-title2"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
+			<h3 class="field-title2 noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
 			Read More
 		  </a>
+			</div>
 		</div>
   	</div>
   <?php

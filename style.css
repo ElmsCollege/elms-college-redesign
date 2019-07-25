@@ -2310,6 +2310,33 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	background-color:#c3a250;
 	border-color:#c3a250
 }
+/* BEGIN TEST SECTION */
+.event2{
+	display:flex;
+	background-color:#004731;
+	color:white;
+}
+.main-event-content2{
+	display:flex;
+	justify-content:space-between;
+	position: relative;
+}
+.start-date2{
+	position:absolute;
+	left:-50px;
+	background-color:#004731;
+	padding:5px 10px;
+	font-size:1.5em;
+	width:50px;
+	font-weight:bold;
+}
+.eventDetails2{
+	padding:32px 32px 0;
+}
+a.permalink2,a.permalink2:visited,.field-title2{
+	color:white;
+}
+/* END TEST SECTION */
 @media (max-width: 63.999em){
 	.calls-to-action{
 		background-color:#115438
