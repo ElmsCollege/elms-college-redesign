@@ -536,19 +536,7 @@ function get_first_paragraph(){
     global $post;
     $str = wpautop( get_the_content() );
     $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
-    $str = strip_tags($str, '<a><strong><em>');
 	$str = preg_replace("/<img[^>]+\>/i", "", $str); 
-    return '<p>' . $str . '</p>';
+    $str = strip_tags($str, '<a><strong><em>');
+    return '<p>' . $str . '</p>a';
 }
-/*
-function awesome_excerpt($text, $raw_excerpt) {
-    if( ! $raw_excerpt ) {
-        $content = apply_filters( 'the_content', get_the_content() );
-        $text = substr( $content, 0, strpos( $content, '</p>' ) + 4 );
-
-    }
-    $text = preg_replace("/<img[^>]+\>/i", "", $text); 
-    $buttonmore = '<p><a href="'. get_permalink($post->ID) . '"> Read the full article...</a></p>';
-    return $text . " " . $buttonmore;
-}
-*/
