@@ -324,6 +324,41 @@ function render_homepage_event ($event) {
   <?php
 }
 
+function display_homepage_event ($event) {
+  ?> 
+  <div class="event2">
+    <div class="event-image2" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
+      <?php print get_the_post_thumbnail($event->ID) ?>
+      
+      <div class="start-date2">
+        <div class="day2">
+          <?php 
+          if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
+            print date("j"); //print today's date
+          }
+          else {
+            print tribe_get_start_date($event, false, "j");
+          }
+          ?>
+        </div>
+        <div class="month2"><?php print tribe_get_start_date($event, false, "M")?></div>
+      </div>
+    </div>
+    
+    <div class="main-event-content2">
+      <div class="times2">
+        <span class="start-time2"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
+        <span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
+      </div>
+      <a class="permalink2" href="<?php print get_the_permalink($event) ?>">
+      	<h3 class="field-title2"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
+      	Read More
+      </a>
+    </div>
+  </div>
+  <?php
+}
+
 // a homepage link that factors in the cookie
 function real_homepage_link () {
   if (isset($_COOKIE["homepage"])) {
