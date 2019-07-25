@@ -2361,24 +2361,9 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 a.permalink2,a.permalink2:visited,.field-title2{
 	color:white !important;
 }
-@media (max-width:775px){
+@media (max-width:1024px){
 	.news-events-feature .flexHalf{
-		flex-basis:unset;
-	}
-	.event2{
-		display:block;
-		max-height:unset;
-	}
-	.main-event-content2{
-		width:100%;
-	}
-	.start-date2{
-		left:unset;
-		top:-70px;
-	}
-	.eventDetails2{
-		padding-top:unset;
-		margin-left:85px;
+		flex-basis:100%;
 	}
 }
 /* END TEST SECTION */
