@@ -2356,7 +2356,7 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 .eventDetails2{
 	display:table;
 	margin:0 auto;
-	padding-top:15%;
+	padding-top:10%;
 }
 a.permalink2,a.permalink2:visited,.field-title2{
 	color:white !important;
@@ -2364,7 +2364,12 @@ a.permalink2,a.permalink2:visited,.field-title2{
 @media (max-width:1024px){
 	.news-events-feature .flexHalf{
 		flex-basis:100%;
+		padding:0 32px;
 	}
+	.eventDetails2{
+		padding-top:8%;
+	}
+	
 }
 /* END TEST SECTION */
 @media (max-width: 63.999em){
