@@ -328,7 +328,7 @@ function display_homepage_event ($event) {
   ?> 
   <div class="event2">
     <div class="event-image2" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
-      <?php print get_the_post_thumbnail($event->ID, "thumbnail") ?>
+      <?php print get_the_post_thumbnail($event->ID, "medium") ?>
     </div>
     
     <div class="main-event-content2">
