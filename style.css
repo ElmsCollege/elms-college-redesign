@@ -2311,27 +2311,40 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	border-color:#c3a250
 }
 /* BEGIN TEST SECTION */
+.event .event2:nth-of-type(2n),.event .event2 .start-date2:nth-of-type(2n){
+	background-color:#c3a250;
+}
+.event .event2:nth-of-type(3n),.event .event2 .start-date2:nth-of-type(3n){
+	background-color:#046b99;
+}
+.event .event2:nth-of-type(4n),.event .event2 .start-date2:nth-of-type(4n){
+	background-color:#413556;
+}
 .event2{
 	display:flex;
+	margin:10px 0;
 	background-color:#004731;
 	color:white;
+	max-height:150px;
 }
 .main-event-content2{
 	display:flex;
 	justify-content:space-between;
 	position: relative;
+	align-self:flex-start;
 }
 .start-date2{
 	position:absolute;
-	left:-50px;
+	left:-70px;
 	background-color:#004731;
-	padding:5px 10px;
+	padding:5px 10px 10px;
 	font-size:1.5em;
-	width:50px;
+	width:75px;
 	font-weight:bold;
+	align-self:inherit;
 }
 .eventDetails2{
-	padding:32px 32px 0;
+	padding:32px 32px 32px 75px;
 }
 a.permalink2,a.permalink2:visited,.field-title2{
 	color:white;
