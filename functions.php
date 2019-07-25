@@ -536,7 +536,6 @@ function get_first_paragraph(){
     global $post;
     $str = wpautop( get_the_content() );
     $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
-	$str = preg_replace("/<img[^>]+\>/i", "", $str); 
     $str = strip_tags($str, '<a><strong><em>');
-    return '<p>' . $str . '</p>a';
+    return '<p>' . $str . '</p>';
 }
