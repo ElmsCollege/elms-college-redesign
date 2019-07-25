@@ -343,7 +343,7 @@ function display_homepage_event ($event) {
 			  }
 			  ?>
 			</div>
-			<div class="month2"><?php print strtoupper(tribe_get_start_date($event, false, "M"))?></div>
+			<div class="month2"><?php print tribe_get_start_date($event, false, "M")?></div>
 		  </div>
 		<div class="eventDetails2">
 		  <div class="times2">
