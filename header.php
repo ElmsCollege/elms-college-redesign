@@ -9,8 +9,6 @@
  * @package Elms_College_Redesign
  */
 
-//redirect_if_homepage_cookie();
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
