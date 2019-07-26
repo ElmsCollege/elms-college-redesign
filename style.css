@@ -2254,6 +2254,7 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	.event2{
 		display:block;
 		max-height:unset;
+		max-width:80%;
 	}
 	.event-image2{
 		width:100%;
