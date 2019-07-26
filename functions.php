@@ -293,7 +293,7 @@ function display_homepage_event ($event) {
   ?> 
   <a class="event2" href="<?php print get_the_permalink($event) ?>">
     <div class="event-image2" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
-      <?php print get_the_post_thumbnail($event->ID, "medium") ?>
+      <?php print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" )) ?>
     </div>
     
     <div class="main-event-content2">
