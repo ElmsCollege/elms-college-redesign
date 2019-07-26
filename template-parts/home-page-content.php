@@ -163,8 +163,13 @@ setup_postdata($post);
 					<?php if( isset($events[3])) : ?>
                 		<?php display_homepage_event($events[3])?>
               		<?php endif; ?>
+					<div class="more-button-container">
+						<a class="more-button" href="/events/">
+							More Events
+						</a>
+					</div>
 				</div>
-				<div class="news flexHalf">
+				<div class="news flexHalf listText">
 					<h2 class="centerText">News</h2>
 			  		<?php echo do_shortcode("[wbcr_snippet id='37228']"); ?>
 					<div class="more-button-container">
