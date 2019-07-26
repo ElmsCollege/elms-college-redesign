@@ -289,44 +289,9 @@ function gs_add_typekit () {
 }
 add_action('wp_head', 'gs_add_typekit');
 
-function render_homepage_event ($event) {
-  ?> 
-  <div class="event">
-    <div class="event-image" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
-      <?php print get_the_post_thumbnail($event->ID) ?>
-      
-      <div class="start-date">
-        <div class="day">
-          <?php 
-          if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
-            print date("j"); //print today's date
-          }
-          else {
-            print tribe_get_start_date($event, false, "j");
-          }
-          ?>
-        </div>
-        <div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
-      </div>
-    </div>
-    
-    <div class="main-event-content">
-      <div class="times">
-        <span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
-        <span class="end-time"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
-      </div>
-      <a class="permalink" href="<?php print get_the_permalink($event) ?>">
-      	<h3 class="field-title"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
-      	Read More
-      </a>
-    </div>
-  </div>
-  <?php
-}
-
 function display_homepage_event ($event) {
   ?> 
-  <div class="event2">
+  <a class="event2" href="<?php print get_the_permalink($event) ?>">
     <div class="event-image2" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
       <?php print get_the_post_thumbnail($event->ID, "medium") ?>
     </div>
@@ -350,13 +315,13 @@ function display_homepage_event ($event) {
 			<span class="start-time2"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
 			<span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
 		  </div>
-		  <a class="permalink2" href="<?php print get_the_permalink($event) ?>">
+		  <span class="permalink2">
 			<h3 class="field-title2 noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
 			Read More
-		  </a>
+		  </span>
 			</div>
 		</div>
-  	</div>
+  	</a>
   <?php
 }
 
@@ -539,7 +504,7 @@ function get_first_paragraph(){
 		$str = apply_filters('the_content', $str);
 		$str = str_replace(']]>', ']]>', $str);
 		$str = substr ( $str, 0, strpos( $str, '</p>' ) + 4 );
-		$str = strip_tags($str, '<a><strong>');
+		$str = strip_tags($str, '');
 		return '<p>' . $str . '</p>';
 }
 

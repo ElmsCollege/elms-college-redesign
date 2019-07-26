@@ -2148,149 +2148,6 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 		margin:-64px 22.5px 16em 22.5px
 	}
 }
-.news-events{
-	max-width:1200px;
-	margin:0 auto
-}
-.news-events .field-news_events_title{
-	text-align:center;
-	color:#115438;
-	font-size:56px;
-	margin:0 auto 32px;
-	padding:0 32px 32px;
-	line-height:1em
-}
-@media all and (max-width: 63.999em){
-	.news-events .field-news_events_title{
-		font-size:1.8em;
-		line-height:1;
-		margin-top:0;
-		margin-bottom:0
-	}
-}
-.news-events .event{
-	color:white;
-	margin-bottom:32px;
-	background:#115438
-}
-.news-events .event .event-image{
-	background-size:100%;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:50%;
-	position:relative
-}
-.news-events .event .times{
-	font-weight:bold
-}
-.news-events .event .field-title{
-	margin:0 0 .5em;
-	font-size:21px;
-	font-weight:bold;
-	color:white
-}
-@media all and (min-width: 64em) and (max-width: 68em){
-	.news-events .event .field-title{
-		font-size:18px
-	}
-}
-.news-events .event .permalink{
-	text-decoration:none;
-	text-transform:uppercase;
-	color:white;
-	font-size:14px;
-	font-weight:500;
-	vertical-align:top;
-	line-height:1.5em
-}
-.news-events .event .permalink:visited{
-	color:white}
-.news-events .event .permalink:after{
-	content:"";
-	display:inline-block;
-	width:24px;
-	height:24px;
-	background-image:url("images/arrow-more.png");
-	background-size:100%;
-	background-repeat:no-repeat;
-	margin-left:1em;
-	position:absolute
-}
-@media all and (max-width: 63.999em){
-	.news-events .more-button-container{
-		margin-bottom:0
-	}
-}
-.news-events .news-events-column{
-	flex-basis:49%;
-	min-width:250px;
-}
-@media (max-width: 64em){
-	.news-events .news-events-column .news-item{
-		padding:0 32px
-	}
-}
-.news-events .main-event-content{
-	margin:32px;
-}
-.news-events .start-date{
-	position:absolute;
-	background-color:#115438;
-	text-align:center;
-	width:78px;
-	height:78px;
-	padding-top:15px
-}
-.news-events .start-date .day{
-	font-weight:500;
-	font-size:32px;
-	line-height:1em
-}
-.news-events .start-date .month{
-	font-size:14px;
-	text-transform:uppercase;
-	line-height:1em
-}
-.news-events .news-item-short .event .start-date{
-	bottom:0;
-	left:0
-}
-.news-events .news-item-short .event .event-image{
-	width:230px;
-	height:150px;
-	float:left;
-	overflow:hidden;
-}
-	.news-events .news-item-short .event{
-		height:150px
-	}
-	.news-events .news-item-short .event .start-date{
-		top:0;
-		right:0;
-		bottom:auto;
-		left:auto
-	}
-	.news-events .news-item-short .event .main-event-content{
-		float:left;
-		width:calc(100% - 294px)
-	}
-	.news-events .news-item-short .event:after{
-		content:"";
-		display:table;
-		table-layout:fixed
-	}
-.news-events .news-item .event,.news-events .news-item .event .start-date{
-	background-color:#c3a250
-}
-.news-events .news-item:nth-child(2) .event,.news-events .news-item:nth-child(2) .event .start-date{
-	background-color:#046B99
-}
-.news-events .news-item:nth-child(3) .event,.news-events .news-item:nth-child(3) .event .start-date{
-	background-color:#115438
-}
-.news-events .news-item:nth-child(4) .event,.news-events .news-item:nth-child(4) .event .start-date{
-	background-color:#413556
-}
 .more-button-container{
 	text-align:center;
 	margin-bottom:64px
@@ -2326,7 +2183,7 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 .event2{
 	display:flex;
 	margin-bottom:20px;
-	color:white;
+	color:white !important;
 	max-height:145px;
 	overflow-y:hidden;
 	background-color:#004731;
@@ -2358,8 +2215,24 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	margin:0 auto;
 	padding-top:10%;
 }
-a.permalink2,a.permalink2:visited,.field-title2{
-	color:white !important;
+.event2 .permalink2{
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:14px;
+	font-weight:500;
+	vertical-align:top;
+	line-height:1.5em
+}
+.event2 .permalink2:after{
+	content:"";
+	display:inline-block;
+	width:24px;
+	height:24px;
+	background-image:url("images/arrow-more.png");
+	background-size:100%;
+	background-repeat:no-repeat;
+	margin-left:1em;
+	position:absolute
 }
 @media (max-width:1024px){
 	.news-events-feature .flexHalf{
@@ -3998,6 +3871,7 @@ body.page-template-landing-page .opening-menu{
 }
 .listText p{
 	font-size:14px;
+	padding-top:.25em;
 }
 .template.embedDirectory-image .listText{
 	width:58%;
