@@ -505,6 +505,6 @@ function get_first_paragraph(){
 		$str = str_replace(']]>', ']]>', $str);
 		$str = substr ( $str, 0, strpos( $str, '</p>' ) + 4 );
 		$str = strip_tags($str);
-		return '<p>' . $str . '</p>';
+		return $str;
 }
 
