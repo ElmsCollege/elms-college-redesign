@@ -95,7 +95,7 @@ setup_postdata($post);
         </ul>
       </div>
       
-		<div class="flexRowWrapStart spaceBetween news-events-feature">
+		<div id="news" class="flexRowWrapStart spaceBetween news-events-feature">
 			<div class="events flexHalf">
 				<h2 class="centerText">Events</h2>
 				<?php if( isset($events[0])) : ?>
