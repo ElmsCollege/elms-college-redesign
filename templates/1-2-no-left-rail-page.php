@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 1-2, no left rail
+ * Template Name: 1-2- no left rail
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

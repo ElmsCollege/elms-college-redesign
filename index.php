@@ -14,7 +14,6 @@ get_header(); ?>
     <div class="section-heading-inner">
       <h1 class="field-title no-pre-title">
         News
-        <?php print rss_link($GLOBALS['wp_the_query']) ?>
       </h1>
     </div>
   </div>
@@ -33,8 +32,9 @@ get_header(); ?>
   				 */
           ?>
           <h2><a href="<?php print get_the_permalink()?>"><?php the_title()?></a></h2>
+			<span>Published on: <?php echo get_the_date( 'l, F j, Y' ); ?></span>
           <?php
-  				echo gs_get_the_excerpt($post->ID);
+  				echo '<p>' .gs_get_the_excerpt($post->ID) .'</p>';
 
   			endwhile;
 
