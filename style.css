@@ -1797,11 +1797,11 @@ body.page-template-default .parent-sidebar-menu .page_item a:hover{
 	padding:.25em;
 	border:1px solid #CCC
 }
-.field-content table:not(.tribe-events-calendar) th,
-.entry-content table:not(.tribe-events-calendar) th{
-	font-weight:bold
+table:not(.tribe-events-calendar) th{
+	font-weight:700;
+	font-size:16px;
 }
-.field-content table:not(.tribe-events-calendar) th,.entry-content table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
+table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe_events{

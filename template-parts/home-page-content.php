@@ -95,8 +95,6 @@ setup_postdata($post);
         </ul>
       </div>
       
-      <?php get_template_part("template-parts/story-carousel", "student") ?>
-      
 		<div class="flexRowWrapStart spaceBetween news-events-feature">
 			<div class="events flexHalf">
 				<h2 class="centerText">Events</h2>
@@ -129,6 +127,8 @@ setup_postdata($post);
 			</div>
 		</div>
       	
+      <?php get_template_part("template-parts/story-carousel", "student") ?>
+      
       <div class="calls-to-action">
         <div class="calls-to-action-title">
           <h2 class="field-calls_to_action_title">
