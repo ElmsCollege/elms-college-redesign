@@ -6,6 +6,7 @@
  */
 
 $has_sidebar = gs_is_active_sidebar();
+
 get_header("library");
 
 get_template_part("template-parts/page-heading");
@@ -27,11 +28,8 @@ get_template_part("template-parts/page-heading");
 			?>
 
 		</main><!-- #main -->
-    <?php if ($has_sidebar) : ?>
-        <?php get_sidebar(); ?>
-    <?php endif; ?>
-    
-	</div><!-- #primary -->
+
+</div><!-- #primary -->
 
 <?php
 get_footer("library");

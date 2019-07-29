@@ -130,11 +130,20 @@ function gs_elms_scripts() {
 
 	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+//	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+//		wp_enqueue_script( 'comment-reply' );
+//	}
+}
+add_action( 'wp_enqueue_scripts', 'gs_elms_scripts');
+
+function multisite_scripts() {
+	$blog_id = get_current_blog_id();
+	if( 2 == $blog_id){//commencement subsite
+	wp_enqueue_style( 'commencement', get_template_directory_uri() . '/css/commencement.css', array(), '1' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gs_elms_scripts' );
+add_action( 'wp_enqueue_scripts', 'multisite_scripts', 20 );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -277,38 +286,39 @@ function gs_add_typekit () {
 }
 add_action('wp_head', 'gs_add_typekit');
 
-function render_homepage_event ($event) {
+function display_homepage_event ($event) {
   ?> 
-  <div class="event">
-    <div class="event-image" style="<?php print_featured_image_style($event->ID, "large") ?>">
-      <?php print get_the_post_thumbnail($event->ID) ?>
-      
-      <div class="start-date">
-        <div class="day">
-          <?php 
-          if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
-            print date("j"); //print today's date
-          }
-          else {
-            print tribe_get_start_date($event, false, "j");
-          }
-          ?>
-        </div>
-        <div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
-      </div>
+  <a class="event" href="<?php print get_the_permalink($event) ?>">
+    <div class="event-image" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
+      <?php print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" )) ?>
     </div>
     
     <div class="main-event-content">
-      <div class="times">
-        <span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
-        <span class="end-time"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
-      </div>
-      <a class="permalink" href="<?php print get_the_permalink($event) ?>">
-      	<h3 class="field-title"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
-      	Read More
-      </a>
-    </div>
-  </div>
+		<div class="start-date">
+			<div class="day">
+			  <?php 
+			  if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
+				print date("j"); //print today's date
+			  }
+			  else {
+				print tribe_get_start_date($event, false, "j");
+			  }
+			  ?>
+			</div>
+			<div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
+		  </div>
+		<div class="eventDetails">
+		  <div class="times">
+			<span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
+			<span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
+		  </div>
+		  <span class="permalink">
+			<h3 class="field-title noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
+			Read More
+		  </span>
+			</div>
+		</div>
+  	</a>
   <?php
 }
 
@@ -481,8 +491,12 @@ add_filter('acf/format_value/type=text', 'do_shortcode');
 
 function get_first_paragraph(){
     global $post;
-    $str = wpautop( get_the_content() );
-    $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
-    $str = strip_tags($str, '<a><strong><em>');
-    return '<p>' . $str . '</p>';
+		$str = get_the_content();
+		$str = preg_replace("/<img[^>]+>/i", " ", $str);          
+		$str = apply_filters('the_content', $str);
+		$str = str_replace(']]>', ']]>', $str);
+		$str = substr ( $str, 0, strpos( $str, '</p>' ) + 4 );
+		$str = strip_tags($str);
+		return $str;
 }
+

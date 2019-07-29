@@ -128,8 +128,8 @@ function build_select_list( $taxonomies, $args ) {
 								</div>
 							</div>
 								<?php if(($current_slug != "directory") and ('' !== get_post()->post_content)) : ?>
-								<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content">
-									<?php echo get_first_paragraph(); ?>
+								<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content"><p><?php echo get_first_paragraph(); ?></p>
+									
 								</div>
 							<?php endif; ?>	
 

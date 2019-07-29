@@ -360,7 +360,7 @@
     };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
-    
+      
   });
 
 })(jQuery, window, document);
