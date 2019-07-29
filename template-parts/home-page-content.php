@@ -119,6 +119,7 @@ setup_postdata($post);
 			<div class="news flexHalf listText">
 				<h2 class="centerText">News</h2>
 		  		<?php echo do_shortcode("[wbcr_snippet id='37228']"); ?>
+				<?php echo do_shortcode("[wbcr_snippet id='37429']"); ?>
 				<div class="more-button-container">
 					<a class="more-button" href="/news/">
 						More News

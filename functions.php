@@ -291,14 +291,14 @@ add_action('wp_head', 'gs_add_typekit');
 
 function display_homepage_event ($event) {
   ?> 
-  <a class="event2" href="<?php print get_the_permalink($event) ?>">
-    <div class="event-image2" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
+  <a class="event" href="<?php print get_the_permalink($event) ?>">
+    <div class="event-image" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
       <?php print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" )) ?>
     </div>
     
-    <div class="main-event-content2">
-		<div class="start-date2">
-			<div class="day2">
+    <div class="main-event-content">
+		<div class="start-date">
+			<div class="day">
 			  <?php 
 			  if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
 				print date("j"); //print today's date
@@ -308,15 +308,15 @@ function display_homepage_event ($event) {
 			  }
 			  ?>
 			</div>
-			<div class="month2"><?php print tribe_get_start_date($event, false, "M")?></div>
+			<div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
 		  </div>
-		<div class="eventDetails2">
-		  <div class="times2">
-			<span class="start-time2"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
+		<div class="eventDetails">
+		  <div class="times">
+			<span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
 			<span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
 		  </div>
-		  <span class="permalink2">
-			<h3 class="field-title2 noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
+		  <span class="permalink">
+			<h3 class="field-title noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
 			Read More
 		  </span>
 			</div>
