@@ -824,7 +824,7 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 #nursingPage .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
 	background-image:url(images/icon-menu-less-white.png);
 }
-.field-sidebar-menu-items{
+#nursingPage .library-mobile-menu-item,#libraryPage .nursing-mobile-menu-item,.field-sidebar-menu-items{
 	display:none;
 }
 div:not(.menu-main-nav-container)>ul li a br{
