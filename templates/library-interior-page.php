@@ -5,28 +5,14 @@
  * @package Elms_College_Redesign
  */
 
-$main_pre_title = get_field("main_pre_title");
-
 $has_sidebar = gs_is_active_sidebar();
-add_filter( 'body_class', function( $classes ) {
-  return array_merge( $classes, array( 'mobile-or-library' ) );
-});
-get_header("library"); ?>
 
-  <div class="section-heading" style=" <?php print_featured_image_style(get_the_ID()) ?>">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-        <?php 
-        if (get_the_title()) {
-          the_title();
-        }
-        else {
-          tribe_events_title(); 
-        } ?>
-        <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
-      </h1>
-  </div>
-	<div id="primary" class="content-area pure-g">
-		<main id="main" class="site-main pure-u-1 standalone" role="main">
+get_header("library");
+
+get_template_part("template-parts/page-heading");
+?>
+<div id="primary" class="content-area pure-g">
+		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();

@@ -117,7 +117,7 @@ else {
 <?php if ($events) : ?>
 <div class="field-related-events">
   <h3>Events</h3>
-  <ul>
+  <ul class="ulreset">
     <?php foreach ($events as $index=>$event) : ?>
       <li>
         <div class="times">
@@ -132,7 +132,7 @@ else {
   </ul>
   <?php if (sizeof($events) > 1) : ?>
     <a href="#" class="show-more">See More Events</a>
-    <a href="#" class="show-less">See Less Events</a>
+    <a href="#" class="show-less">See Fewer Events</a>
   <?php endif; ?>
 </div>
 <?php endif; ?>

@@ -40,12 +40,11 @@ width:100px;
 	display:none; /* hiding fields that shouldn't be here but Ryan can't track down */
 }
 </style>
-  <div class="section-heading">
-      <h1 class="field-title">
-	<?php the_title() ;?>
-      </h1>
-  </div>
-	<div id="primary" class="content-area pure-g">
+
+<?php
+	get_template_part("template-parts/page-heading");
+?>
+<div id="primary" class="content-area pure-g">
 
 		<main id="main" class="site-main pure-u-1 standalone" role="main">
 
