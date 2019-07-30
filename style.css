@@ -970,6 +970,11 @@ body.mobile-or-library #masthead .site-branding .site-title{
 	font-size:56px;
 	line-height:1;
 }
+@media all and (max-width:505px){
+	.section-heading .field-title{
+		font-size:42px;
+	}
+}
 #imageHeading.section-heading{
 	height:540px;
 	height:32vw;
