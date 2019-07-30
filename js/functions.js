@@ -80,7 +80,7 @@
     var libraryItems = [];
     var specialtyAreas = ["library", "nursing"];
     for (var i in specialtyAreas) {
-      $("#" + specialtyAreas[i] + "-menu > li").each( function (index, element) {
+      $("#special-section-menu > li").each( function (index, element) {
         console.log($(this));
         var clone = $(this).clone();
         clone = $(clone); 
