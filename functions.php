@@ -294,10 +294,9 @@ function display_homepage_event ($event) {
 			if ( has_post_thumbnail() ) {
 				print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" ));
 			}else{
-				print "<img class='grey-to-color' src='/wp-content/uploads/2018/10/Elms-Campus_aerial-view-300x169.jpg' alt='Photo of Elms College campus'>";
-			}
+				echo "<img class='grey-to-color' src='/wp-content/uploads/2018/10/Elms-Campus_aerial-view-300x169.jpg' alt='Photo of Elms College campus'>;"
+			};
 		?>
-      <?php  ?>
     </div>
     
     <div class="main-event-content">
