@@ -3,6 +3,9 @@
 //get_template_part("template-parts/page-heading");
 
 if( get_field('featured_image_cropped') ){
+	echo '<style>#imageHeading.section-heading{';
+		print_featured_image_style($post->ID);
+	echo '}</style>';
 	echo '<div id="imageHeading" class="section-heading">';
 }else{
 	echo '<div id="textHeading" class="section-heading">';
