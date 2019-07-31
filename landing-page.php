@@ -10,11 +10,6 @@
 
 
 get_header(); ?>
-	<style>
-	#imageHeading.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

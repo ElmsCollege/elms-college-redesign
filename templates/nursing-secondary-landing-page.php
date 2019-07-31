@@ -22,15 +22,8 @@ $program_track_description = get_field("program_track_description");
 $program_repeater = get_field("program_repeater");
 
 get_header("nursing");
-?>
-	<style>
-	#imageHeading.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
 
-	<?php
-		get_template_part("template-parts/page-heading");
+	get_template_part("template-parts/page-heading");
 	?>
 	<?php if (!empty($top_menu)) : ?>
 		        <ul class="opening-menu">

@@ -23,14 +23,7 @@ while ( have_posts() ) : the_post();
   $short_content_background = get_field("short_content_background_new");
 
   $student_stories = get_field("student_stories");
-?>
-	<style>
-	#imageHeading.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
 
-<?php
 	get_template_part("template-parts/page-heading");
 ?>
       <?php if (!empty($opening_menu)) : ?>

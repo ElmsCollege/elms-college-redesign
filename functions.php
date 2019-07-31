@@ -289,8 +289,14 @@ add_action('wp_head', 'gs_add_typekit');
 function display_homepage_event ($event) {
   ?> 
   <a class="event" href="<?php print get_the_permalink($event) ?>">
-    <div class="event-image" style="<?php //print_featured_image_style($event->ID, "medium") ?>">
-      <?php print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" )) ?>
+    <div class="event-image">
+		<?php
+			if ( has_post_thumbnail($event->ID) ) {
+				print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" ));
+			}else{
+				echo "<img class='grey-to-color' src='/wp-content/uploads/2018/10/Elms-Campus_aerial-view-300x169.jpg' alt='Photo of Elms College campus'>";
+			};
+		?>
     </div>
     
     <div class="main-event-content">
