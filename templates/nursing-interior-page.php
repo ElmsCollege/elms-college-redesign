@@ -6,15 +6,9 @@
  */
 
 $has_sidebar = gs_is_active_sidebar();
-get_header("nursing"); ?>
-	<style>
-	#imageHeading.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
+get_header("nursing"); 
 
-	<?php
-		get_template_part("template-parts/page-heading");
+	get_template_part("template-parts/page-heading");
 	?>
 
 	<div id="primary" class="content-area pure-g">
