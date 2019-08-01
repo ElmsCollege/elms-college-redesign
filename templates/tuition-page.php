@@ -195,11 +195,12 @@ width:100px;
 
 <h4>
 	<?php
-		if( get_field("show_next_fiscal_year") == "show" ){
-			echo 'Next years ( ' . the_field("next_academic_year_title") . ', ' . the_field("next_fiscal_year_title") . ') is being shown.';
-		}else{
-			echo 'Next years ( ' . the_field("next_academic_year_title") . ', ' . the_field("next_fiscal_year_title") . ') is being hidden.';
-		}
+		echo 'Next years ( ' . get_field("next_academic_year_title") . ', ' . get_field("next_fiscal_year_title") . ') is being';
+			if(get_field("show_next_fiscal_year") == "show" ){
+				echo "shown";
+			}else{
+				echo "hidden";
+			};
 	?>
 </h4>
 <table id="tuitionTable">
