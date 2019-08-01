@@ -193,7 +193,15 @@ width:100px;
 </table>
 </div><!-- end .field-content -->
 
-<h4><?php the_field("show_next_fiscal_year"); ?></h4>
+<h4>
+	<?php
+		if( get_field("show_next_fiscal_year") == "show" ){
+			echo "Next years ( " . the_field('next_academic_year_title') . ", " . the_field('next_fiscal_year_title') . "is being shown.";
+		}else{
+			echo "Next years ( " . the_field('next_academic_year_title') . ", " . the_field('next_fiscal_year_title') . "is being hidden.";			
+		}
+	?>
+</h4>
 <table id="tuitionTable">
 <thead>
 	<tr>
