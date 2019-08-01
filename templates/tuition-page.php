@@ -193,13 +193,28 @@ width:100px;
 </table>
 </div><!-- end .field-content -->
 
+<h4>
+	<?php
+		echo 'Next years ( ' . get_field("next_academic_year_title") . ', ' . get_field("next_fiscal_year_title") . ') is being ';
+			if(get_field("show_next_fiscal_year") == "show" ){
+				echo "shown";
+			}else{
+				echo "hidden";
+			};
+	?>
+</h4>
 <table id="tuitionTable">
 <thead>
-<tr>
-<th style="text-align:right;padding-right:10px;">Fee</th>
-<th class="borderRL centerText"><?php the_field('this_fiscal_year_title'); ?></th>
-<th class="centerText" style="width:100px;"><?php the_field('next_fiscal_year_title'); ?></th>
-</tr>
+	<tr>
+		<th style="text-align:right;padding-right:10px;">&nbsp;</th>
+		<th class="borderRL centerText"><?php the_field('this_fiscal_year_title'); ?></th>
+		<th class="centerText" style="width:100px;"><?php the_field('next_fiscal_year_title'); ?></th>
+	</tr>
+	<tr>
+		<th style="text-align:right;padding-right:10px;">Fee</th>
+		<th class="borderRL centerText"><?php the_field('this_academic_year_title'); ?></th>
+		<th class="centerText" style="width:100px;"><?php the_field('next_academic_year_title'); ?></th>
+	</tr>
 </thead>
 <tbody>
 <?php 
@@ -220,10 +235,10 @@ if( $fields ): ?>
 			        the_sub_field('tuition_explanation');
 				echo '</td><td class="borderRL centerText">';
 			        $thisFiscalYear = get_sub_field('this_fiscal_year');
-				echo '$' .number_format($thisFiscalYear);
+				echo '$' .number_format($thisFiscalYear, 2, '.', ',');
 				echo '</td><td class="centerText" style="width:100px;">';
 			        $nextFiscalYear = get_sub_field('next_fiscal_year');
-				echo '$' .number_format($nextFiscalYear);
+				echo '$' .number_format($nextFiscalYear, 2, '.', ',');
 				
 				echo '</td></tr>';
 			    endwhile;
