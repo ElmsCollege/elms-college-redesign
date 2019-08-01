@@ -235,10 +235,10 @@ if( $fields ): ?>
 			        the_sub_field('tuition_explanation');
 				echo '</td><td class="borderRL centerText">';
 			        $thisFiscalYear = get_sub_field('this_fiscal_year');
-				echo '$' .number_format($thisFiscalYear);
+				echo '$' .number_format($thisFiscalYear, 2, '.', '');
 				echo '</td><td class="centerText" style="width:100px;">';
 			        $nextFiscalYear = get_sub_field('next_fiscal_year');
-				echo '$' .number_format($nextFiscalYear);
+				echo '$' .number_format($nextFiscalYear, 2, '.', '');
 				
 				echo '</td></tr>';
 			    endwhile;
