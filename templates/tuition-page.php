@@ -196,9 +196,9 @@ width:100px;
 <h4>
 	<?php
 		if( get_field("show_next_fiscal_year") == "show" ){
-			echo 'Next years ( ' . the_field('next_academic_year_title') . ', ' . the_field('next_fiscal_year_title') . 'is being shown.';
+			echo 'Next years ( ' . the_field("next_academic_year_title") . ', ' . the_field("next_fiscal_year_title") . ') is being shown.';
 		}else{
-			echo 'Next years ( ' . the_field('next_academic_year_title') . ', ' . the_field('next_fiscal_year_title') . 'is being hidden.';			
+			echo 'Next years ( ' . the_field("next_academic_year_title") . ', ' . the_field("next_fiscal_year_title") . ') is being hidden.';
 		}
 	?>
 </h4>
