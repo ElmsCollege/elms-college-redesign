@@ -195,7 +195,7 @@ width:100px;
 
 <h4>
 	<?php
-		echo 'Next years ( ' . get_field("next_academic_year_title") . ', ' . get_field("next_fiscal_year_title") . ') is being';
+		echo 'Next years ( ' . get_field("next_academic_year_title") . ', ' . get_field("next_fiscal_year_title") . ') is being ';
 			if(get_field("show_next_fiscal_year") == "show" ){
 				echo "shown";
 			}else{
