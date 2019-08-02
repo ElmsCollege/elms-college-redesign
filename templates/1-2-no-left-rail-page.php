@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 1-2, no left rail
+ * Template Name: 1-2- no left rail
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -14,15 +14,10 @@ if(strpos($permalink,'nursing')){
 	get_header();
 }
 the_post();
+
+get_template_part("template-parts/page-heading");
 ?>
 
-<div id="pageHeading" class="section-heading">
-	<h1 class="field-title">
-		<?php 
-			if (get_the_title()) { the_title(); }
-		?>
-	</h1>
-</div>
 <div id="primary" class="content-area pure-g">
 
 	<main id="main" class="site-main pure-u-1 standalone" role="main">

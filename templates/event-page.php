@@ -15,7 +15,7 @@ get_header();
 if (!is_single()) :
  ?>
   <div class="section-heading" style=" <?php if (get_the_post_thumbnail_url()): ?>background-image:url('<?php print get_the_post_thumbnail_url() ?>');<?php endif;?>">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
+      <h1 class="field-title no-pre-title">
         <?php 
         if (get_the_title()) {
           the_title();

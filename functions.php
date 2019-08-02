@@ -25,9 +25,6 @@ function gs_elms_setup() {
 	 */
 	load_theme_textdomain( 'gs_elms', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -292,38 +289,45 @@ function gs_add_typekit () {
 }
 add_action('wp_head', 'gs_add_typekit');
 
-function render_homepage_event ($event) {
+function display_homepage_event ($event) {
   ?> 
-  <div class="event">
-    <div class="event-image" style="<?php print_featured_image_style($event->ID, "large") ?>">
-      <?php print get_the_post_thumbnail($event->ID) ?>
-      
-      <div class="start-date">
-        <div class="day">
-          <?php 
-          if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
-            print date("j"); //print today's date
-          }
-          else {
-            print tribe_get_start_date($event, false, "j");
-          }
-          ?>
-        </div>
-        <div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
-      </div>
+  <a class="event" href="<?php print get_the_permalink($event) ?>">
+    <div class="event-image">
+		<?php
+			if ( has_post_thumbnail($event->ID) ) {
+				print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" ));
+			}else{
+				echo "<img class='grey-to-color' src='/wp-content/uploads/2018/10/Elms-Campus_aerial-view-300x169.jpg' alt='Photo of Elms College campus'>";
+			};
+		?>
     </div>
     
     <div class="main-event-content">
-      <div class="times">
-        <span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
-        <span class="end-time"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
-      </div>
-      <a class="permalink" href="<?php print get_the_permalink($event) ?>">
-      	<h3 class="field-title"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
-      	Read More
-      </a>
-    </div>
-  </div>
+		<div class="start-date">
+			<div class="day">
+			  <?php 
+			  if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
+				print date("j"); //print today's date
+			  }
+			  else {
+				print tribe_get_start_date($event, false, "j");
+			  }
+			  ?>
+			</div>
+			<div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
+		  </div>
+		<div class="eventDetails">
+		  <div class="times">
+			<span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
+			<span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
+		  </div>
+		  <span class="permalink">
+			<h3 class="field-title noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
+			Read More
+		  </span>
+			</div>
+		</div>
+  	</a>
   <?php
 }
 
@@ -352,11 +356,6 @@ function gs_is_active_sidebar () {
   
   return ( ($sidebar_calls_to_action) || ($sidebar_image) || ($sidebar_content) || ($sidebar_menu_items) || $post->post_parent != 0);
 }
-
-function rss_link ($query) {
-  return '<a href="/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank" aria-label="RSS link"><i class="fas fa-rss" aria-hidden="true"></i></a>';
-}
-
 
 add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
 /*
@@ -501,8 +500,12 @@ add_filter('acf/format_value/type=text', 'do_shortcode');
 
 function get_first_paragraph(){
     global $post;
-    $str = wpautop( get_the_content() );
-    $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
-    $str = strip_tags($str, '<a><strong><em>');
-    return '<p>' . $str . '</p>';
+		$str = get_the_content();
+		$str = preg_replace("/<img[^>]+>/i", " ", $str);          
+		$str = apply_filters('the_content', $str);
+		$str = str_replace(']]>', ']]>', $str);
+		$str = substr ( $str, 0, strpos( $str, '</p>' ) + 4 );
+		$str = strip_tags($str);
+		return $str;
 }
+

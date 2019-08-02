@@ -15,26 +15,10 @@ $short_content = get_field("short_content");
 $short_content_background = get_field("short_content_background");
 $action_columns = get_field("action_columns");
 
-get_header("nursing"); ?>
+get_header("nursing");
 
-	<style>
-	.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
-
-      <div class="section-heading">
-          <h1 class="field-title no-pre-title">
-            <?php 
-            if (get_the_title()) {
-              the_title();
-            }
-            else {
-              tribe_events_title(); 
-            } ?>
-            <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
-          </h1>
-      </div>
+	get_template_part("template-parts/page-heading");
+	?>
 
 	<?php
 			while ( have_posts() ) : the_post(); 

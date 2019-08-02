@@ -29,17 +29,9 @@ $programPageStoryImage	= get_field("story_background-gutenberg");
 $lower_story_title = get_field("lower_story_title");
 $lower_story_content = get_field("lower_story_content");
 
+get_template_part("template-parts/page-heading");
 ?>
 
-  <div id="pageHeading" class="section-heading">
-      <h1 class="field-title">
-        <?php 
-        if (get_the_title()) {
-          the_title();
-        }
-        ?>
-      </h1>
-  </div>
 	<div id="primary" class="content-area pure-g"> 
     	<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 

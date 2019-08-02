@@ -6,27 +6,11 @@
  */
 
 $has_sidebar = gs_is_active_sidebar();
-get_header("nursing"); ?>
+get_header("nursing"); 
 
-	<style>
-	.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
+	get_template_part("template-parts/page-heading");
+	?>
 
-
-  <div class="section-heading">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-        <?php 
-        if (get_the_title()) {
-          the_title();
-        }
-        else {
-          tribe_events_title(); 
-        } ?>
-        <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
-      </h1>
-  </div>
 	<div id="primary" class="content-area pure-g">
 		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 

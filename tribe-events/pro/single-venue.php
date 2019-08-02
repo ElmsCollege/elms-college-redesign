@@ -31,13 +31,11 @@ global $wp_query;
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
     <div class="section-heading" style=" <?php if (get_the_post_thumbnail_url()): ?>background-image:url('<?php print get_the_post_thumbnail_url() ?>');<?php endif;?>">
-      <div class="section-heading-inner">
-        <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
+        <h1 class="field-title no-pre-title">
           <?php 
           the_title(); ?>
           <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
         </h1>
-      </div>
     </div>
   	<div id="primary" class="content-area pure-g">
   		<main id="main" class="site-main pure-u-1" role="main">

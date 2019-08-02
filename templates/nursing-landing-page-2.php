@@ -21,19 +21,8 @@ while ( have_posts() ) : the_post();
   $short_content = get_field("short_content");
   $short_content_background = get_field("short_content_background_new");
   
-      ?>
-
-	<style>
-	.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
-
-  <div class="section-heading">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-        <?php the_title() ?>
-      </h1>
-  </div>
+	get_template_part("template-parts/page-heading");
+	?>
       <?php if (!empty($opening_menu)) : ?>
         <ul class="opening-menu">
           <?php

@@ -18,11 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header(); ?>
 
 <?php if ( is_single() ) : ?>
-  <div class="section-heading" style="<?php print_featured_image_style($event_id) ?>">
-      <h1 class="field-title no-pre-title">
-        <?php the_title(); ?>
-      </h1>
-  </div> 
+	<?php get_template_part("template-parts/page-heading"); ?>
 <?php endif ; ?>
 
 	<div id="primary" class="content-area">
