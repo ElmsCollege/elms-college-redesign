@@ -80,7 +80,7 @@
     var libraryItems = [];
     var specialtyAreas = ["library", "nursing"];
     for (var i in specialtyAreas) {
-      $("#" + specialtyAreas[i] + "-menu > li").each( function (index, element) {
+      $("#special-section-menu > li").each( function (index, element) {
         console.log($(this));
         var clone = $(this).clone();
         clone = $(clone); 
@@ -96,14 +96,14 @@
     }
     
     // handle keyboard focus in main menu
-    $("#primary-menu > .menu-item > a, #library-menu  > .menu-item > a, #nursing-menu  > .menu-item > a").focus(function (e) {
+    $("#primary-menu > .menu-item > a, #special-section-menu  > .menu-item > a").focus(function (e) {
       console.log(whatInput.ask());
       if (whatInput.ask() === 'keyboard') {
-        $("#primary-menu > .menu-item, #library-menu > .menu-item, #nursing-menu > .menu-item").removeClass("open");
+        $("#primary-menu > .menu-item, #special-section-menu > .menu-item").removeClass("open");
         $(this).parent().addClass("open");
       }
     });
-    $("#primary-menu > .menu-item > a, #library-menu > .menu-item > a, #nursing-menu > .menu-item > a").blur(function (e) {
+    $("#primary-menu > .menu-item > a, #special-section-menu > .menu-item > a").blur(function (e) {
       if (whatInput.ask() === 'keyboard') {
         var children = $(this).parent().find(".sub-menu a");
         if (children.length) {
@@ -360,9 +360,34 @@
     };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
-	   
-  });
 
+	//JS for the Gutenberg FAQ blocks
+	jQuery(".schema-faq-section").each(function() {
+		jQuery(".schema-faq-question img").each(function () {
+			var src = jQuery(this).attr("data-src");
+			var split = src.split("/");
+			var file = split[split.length-1];
+			var name = file.split(".")[0];
+			jQuery(this).attr({
+				id: name
+			});
+		});
+		jQuery(".schema-faq-question").each(function (index) {
+			jQuery(this).attr({
+				class: "schema-faq-question collapseomatic noarrow",
+				id: index
+			});
+		});
+		jQuery(".schema-faq-answer").each(function (index) {
+			jQuery(this).css("display","none").attr({
+				class: "schema-faq-answer collapseomatic_content",
+				id: "target-" + index
+			});
+		});
+	});//end JS for the Gutenberg FAQ blocks
+
+  });//end doc.ready
+	   
 })(jQuery, window, document);
 
   // Initial config for setting up modals
