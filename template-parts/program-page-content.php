@@ -29,17 +29,9 @@ $programPageStoryImage	= get_field("story_background-gutenberg");
 $lower_story_title = get_field("lower_story_title");
 $lower_story_content = get_field("lower_story_content");
 
+get_template_part("template-parts/page-heading");
 ?>
 
-  <div id="pageHeading" class="section-heading">
-      <h1 class="field-title">
-        <?php 
-        if (get_the_title()) {
-          the_title();
-        }
-        ?>
-      </h1>
-  </div>
 	<div id="primary" class="content-area pure-g"> 
     
 		<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
@@ -113,19 +105,19 @@ $lower_story_content = get_field("lower_story_content");
             <?php if ($required_credits): ?>
               <div class="field-required-credits">
                 <h3>Required Credits</h3>
-                <p class="noMargins><?php print $required_credits ?></p>
+                <p class="noMargins"><?php print $required_credits ?></p>
               </div>
             <?php endif; ?>
             <?php if ($degree_option): ?>
               <div class="field-degree-option">
                 <h3>Degree Option</h3>
-                <p class="noMargins><?php print $degree_option ?></p>
+                <p class="noMargins"><?php print $degree_option ?></p>
               </div>
             <?php endif; ?>
             <?php if ($program_formats): ?>
               <div class="field-program-formats">
                 <h3>Program Formats</h3>
-                <p class="noMargins><?php print $program_formats ?></p>
+                <p class="noMargins"><?php print $program_formats ?></p>
               </div>
             <?php endif; ?>
             <?php if (!empty($misc_quick_info)): ?>
@@ -154,9 +146,7 @@ $lower_story_content = get_field("lower_story_content");
 
 		</main><!-- #main -->
     <?php if($has_sidebar) : ?>
-      <div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
         <?php get_sidebar(); ?>
-      </div>
     <?php endif; ?>
     
 	</div><!-- #primary -->

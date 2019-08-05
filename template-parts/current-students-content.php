@@ -9,15 +9,9 @@ else {
 }
 
 setup_postdata($post);
-$main_pre_title = get_field("main_pre_title", $fake_id);
 
+get_template_part("template-parts/page-heading");
 ?>
-
-   <div class="section-heading" style=" <?php print_featured_image_style($fake_id) ?>">
-       <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-         <?php the_title() ?>
-       </h1>
-   </div>
 
  	<div id="primary" class="content-area pure-g">
  		<main id="main" class="site-main pure-u-1" role="main">

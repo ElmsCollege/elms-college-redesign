@@ -22,19 +22,9 @@ $program_track_description = get_field("program_track_description");
 $program_repeater = get_field("program_repeater");
 
 get_header("nursing");
- ?>
 
-			<?php
-			while ( have_posts() ) : the_post(); 
-        $calls_to_action = get_field("calls_to_action");
-        $hours_link = get_field("hours_link");
-      ?>
-
-      <div class="top-background-image section-heading" style="position:relative; z-index:-1; <?php print_featured_image_style($post->ID) ?>)">
-	        <h1 id="top-background-title" class="field-mission_statement">
-	          <?php print(the_title()) ?>
-	        </h1>
-      </div>
+	get_template_part("template-parts/page-heading");
+	?>
 	<?php if (!empty($top_menu)) : ?>
 		        <ul class="opening-menu">
 	            <?php foreach ($top_menu as $index=>$program) : 
@@ -65,7 +55,7 @@ get_header("nursing");
       </div>
 
 			<div class="section-heading" id="program-track-anchor">
-          <h2 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
+          <h2 class="field-title no-pre-title">
             <?php print($first_field_title) ?>
           </h2>
           <p class="field-sub-title"><?php print($first_field_sub_title) ?></p>
@@ -101,9 +91,11 @@ get_header("nursing");
                   	<a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a>
                   </div>
                   <div style="position: relative">
-	                  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
-	                    <img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
-	                  </div>
+					  <a href="<?php echo $link ?>">
+						  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>" role="img" aria-label="<?php echo $text ?>">
+							<img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
+						  </div>
+					  </a>
                   </div>
                 </li>
               <?php endforeach; ?>
@@ -210,12 +202,6 @@ get_header("nursing");
           </div><!-- /.shell -->
         </section><!-- /.section section-features -->
       <?php endif;  ?>
-      
-      
-      
-      <?php
-			endwhile; // End of the loop.
-			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -50,11 +50,10 @@ get_header(); ?>
 }
 </style>
 
-  <div class="section-heading">
-      <h1 class="field-title">
-	<?php the_title() ;?>
-      </h1>
-  </div>
+	<?php
+		get_template_part("template-parts/page-heading");
+	?>
+
 	<div id="primary" class="content-area pure-g">
 		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 
@@ -120,9 +119,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
     <?php if ($has_sidebar) : ?>
-      <div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
         <?php get_sidebar(); ?>
-      </div>
     <?php endif; ?>
     
 	</div><!-- #primary -->

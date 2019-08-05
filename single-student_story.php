@@ -12,25 +12,14 @@
  * @package Elms_College_Redesign
  */
 
-$main_pre_title = get_field("main_pre_title");
-
 $has_sidebar = gs_is_active_sidebar();
 
-get_header(); ?>
+get_header();
 
-  <div class="section-heading">
-      <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-        <?php 
-        if (get_the_title()) {
-          the_title();
-        }
-        else {
-          tribe_events_title(); 
-        } ?>
-        <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
-      </h1>
-  </div>
-	<div id="primary" class="content-area pure-g">
+get_template_part("template-parts/page-heading");
+ ?>
+
+<div id="primary" class="content-area pure-g">
 		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 
 			<?php
@@ -48,9 +37,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
     <?php if ($has_sidebar) : ?>
-      <div class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3">
         <?php get_sidebar(); ?>
-      </div>
     <?php endif; ?>
     
 	</div><!-- #primary -->

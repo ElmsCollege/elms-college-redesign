@@ -15,26 +15,9 @@ $short_content_background = get_field("short_content_background");
 $action_columns = get_field("action_columns");
 
 get_header("nursing");
- ?>
-	<style>
-	.section-heading{
-		<?php print_featured_image_style($post->ID) ?>
-	}
-	</style>
 
-      <div class="section-heading">
-          <h1 class="field-title <?php if (!$main_pre_title): ?>no-pre-title<?php endif;?>">
-            <?php 
-            if (get_the_title()) {
-              the_title();
-            }
-            else {
-              tribe_events_title(); 
-            } ?>
-            <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
-          </h1>
-      </div>
-
+	get_template_part("template-parts/page-heading");
+	?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
       
@@ -80,12 +63,14 @@ get_header("nursing");
                   	<a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a>
                   </div>
                   <div style="position: relative">
-	                  <div class="image-tint">
-		                  <p><?php print $title ?></p>
-		              </div>
-	                  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
-	                    <img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
-	                  </div>
+					  <a href="<?php echo $link ?>">
+						  <div class="image-tint">
+							  <p><?php print $title ?></p>
+						  </div>
+						  <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
+							<img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
+						  </div>
+					  </a>
                   </div>
                 </li>
               <?php endforeach; ?>
