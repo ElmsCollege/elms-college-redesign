@@ -738,7 +738,7 @@ wp_reset_postdata();
 
 <script>
 jQuery(window).load(function () {
-
+/*
 	jQuery(".slider-modal").slick({
 		slidesToShow: 3,
 		lazyLoad: 'ondemand',
@@ -764,7 +764,7 @@ jQuery(window).load(function () {
 	//modal has issues in safari
 
 var map = document.getElementById("campusMap");
-//var svgDoc = map.contentDocument;
+var svgDoc = map.contentDocument;
 
 var openPopup = function (event) {
     jQuery("#Berchmans").dialog("open");
@@ -823,7 +823,7 @@ if (jQuery("#showStreets").prop("checked")) {
 	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","hidden");
 }
 });
-
+*/
 } );
 </script>
 
