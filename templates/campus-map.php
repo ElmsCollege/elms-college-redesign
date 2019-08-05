@@ -46,6 +46,10 @@ get_header(); ?>
 	float: none;
 	vertical-align: middle;
 }
+	svg{
+		background-image:url("/images/Elms-campus3d.jpg");
+		background-size:cover;
+	}
 </style>
 
 <?php get_template_part("template-parts/page-heading"); ?>
