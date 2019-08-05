@@ -739,20 +739,22 @@ wp_reset_postdata();
 <script>
 jQuery(window).load(function () {
 
+	jQuery("#gaylordmansion").click(function({
+		alert("you just clicked on gaylord mansion");
+	});
+	
+/*
 	jQuery(".slider-modal").slick({
 		slidesToShow: 3,
 		lazyLoad: 'ondemand',
 	});
 
-	jQuery("#gaylordmansion").click(function({
-		alert("you just clicked on gaylord mansion");
-	});
-	
 	modalDivs.dialog({
   		open: function( event, ui ) {
 			jQuery(".slider-modal").slick('setPosition');
   		}
 	});
+*/
 
 } );
 </script>
