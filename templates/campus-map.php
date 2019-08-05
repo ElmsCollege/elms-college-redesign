@@ -23,7 +23,7 @@ get_header(); ?>
 }
 #campusMap{
 	width:100%;
-	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d.jpg");
+	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
 	background-size:cover;
 }
 .ui-dialog{
