@@ -738,92 +738,22 @@ wp_reset_postdata();
 
 <script>
 jQuery(window).load(function () {
-/*
+
 	jQuery(".slider-modal").slick({
 		slidesToShow: 3,
 		lazyLoad: 'ondemand',
 	});
 
-	var modalDivs = jQuery("#Berchmans, #Library, #Spaulding, #Gaylord");
-
-        svgPanZoom("#campusMap", {
-          zoomEnabled: true,
-          controlIconsEnabled: true
-        });
-
+	jQuery("#gaylordmansion").click(function({
+		alerT("you just clicked on gaylord mansion");
+	});
+	
 	modalDivs.dialog({
-		autoOpen: false,
-		modal: true,
-		minWidth: 275,
-		resizable: false,
-		
+  		open: function( event, ui ) {
+			jQuery(".slider-modal").slick('setPosition');
+  		}
 	});
-	jQuery(".ui-widget-overlay").live("click", function() {
-		modalDivs.dialog("close");
-	});
-	//modal has issues in safari
 
-var map = document.getElementById("campusMap");
-var svgDoc = map.contentDocument;
-
-var openPopup = function (event) {
-    jQuery("#Berchmans").dialog("open");
-};
-
-var berchmans = svgDoc.getElementById("Berchmans");
-berchmans.addEventListener("click", openPopup,false);
-berchmans.addEventListener("touchstart", openPopup,false);
-
-var library = svgDoc.getElementById("Library");
-library.addEventListener("click", function(){
-  jQuery("#Library").dialog("open");
-});
-var admissions = svgDoc.getElementById("Spaulding");
-admissions.addEventListener("click", function(){
-  jQuery("#Spaulding").dialog("open");
-});
-var gaylord = svgDoc.getElementById("Gaylord");
-gaylord.addEventListener("click", function(){
-  jQuery("#Gaylord").dialog("open");
-});
-
-modalDivs.dialog({
-  open: function( event, ui ) {
-	jQuery(".slider-modal").slick('setPosition');
-  }
-});
-
-jQuery("#hideTrees").click(function() {
-if (jQuery("#hideTrees").prop("checked")) {
-	jQuery(svgDoc).find("#Trees1").css("visibility","hidden");
-	jQuery(svgDoc).find("#trees2").css("visibility","hidden");
-	jQuery(svgDoc).find("#trees3").css("visibility","hidden");
-}else{
-	jQuery(svgDoc).find("#Trees1").css("visibility","visible");
-	jQuery(svgDoc).find("#trees2").css("visibility","visible");
-	jQuery(svgDoc).find("#trees3").css("visibility","visible");
-}
-});
-
-jQuery("#showBluePhones").click(function() {
-if (jQuery("#showBluePhones").prop("checked")) {
-	jQuery(svgDoc).find(".st105 .st182").css("visibility","visible");
-	jQuery(svgDoc).find(".st105 .st46").css("visibility","visible");
-	jQuery(svgDoc).find(".st105 .st46.st185.st186").css("visibility","hidden");
-}else{
-	jQuery(svgDoc).find(".st105 .st182").css("visibility","hidden");
-	jQuery(svgDoc).find(".st105 .st46").css("visibility","hidden");
-}
-});
-
-jQuery("#showStreets").click(function() {
-if (jQuery("#showStreets").prop("checked")) {
-	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","visible");
-}else{
-	jQuery(svgDoc).find(".st179.st180.st181").css("visibility","hidden");
-}
-});
-*/
 } );
 </script>
 
