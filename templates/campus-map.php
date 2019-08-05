@@ -745,7 +745,7 @@ jQuery(window).load(function () {
 	});
 
 	jQuery("#gaylordmansion").click(function({
-		alerT("you just clicked on gaylord mansion");
+		alert("you just clicked on gaylord mansion");
 	});
 	
 	modalDivs.dialog({
