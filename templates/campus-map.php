@@ -47,7 +47,7 @@ get_header(); ?>
 	vertical-align: middle;
 }
 	#campusMap{
-		background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d.jpg");
+		background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
 		background-size:cover;
 	}
 </style>
@@ -739,6 +739,10 @@ wp_reset_postdata();
 <script>
 jQuery(window).load(function () {
 
+	svgPanZoom("#campusMap", {
+    	zoomEnabled: true,
+		controlIconsEnabled: true
+	});
 	jQuery("#gaylordmansion").click(function(){
 		alert("you just clicked on gaylord mansion");
 	});
