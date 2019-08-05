@@ -23,6 +23,8 @@ get_header(); ?>
 }
 #campusMap{
 	width:100%;
+	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
+	background-size:cover;
 }
 .ui-dialog{
 	z-index:10;
@@ -46,10 +48,6 @@ get_header(); ?>
 	float: none;
 	vertical-align: middle;
 }
-	#campusMap{
-		background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
-		background-size:cover;
-	}
 </style>
 
 <?php get_template_part("template-parts/page-heading"); ?>
