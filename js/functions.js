@@ -386,7 +386,7 @@
 		});
 	});//end JS for the Gutenberg FAQ blocks
 
-  });//end doc.ready
+  //});//end doc.ready
 
 	//slick slider initialization
 	$('.slider-for').slick({
