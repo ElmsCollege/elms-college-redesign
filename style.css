@@ -2429,7 +2429,7 @@ body.page-template-home-page{
 	content:"";
 	top:11px;
 	position:absolute;
-	left:0;
+	right:0;
 }
 #special-section-menu>li:last-child:after{
 	content:none
