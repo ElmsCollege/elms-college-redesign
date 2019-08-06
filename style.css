@@ -2425,7 +2425,7 @@ body.page-template-home-page{
 }
 #special-section-menu>li:after{
 	border-left:1px solid #ccc;
-	height:35px;
+	height:26px;
 	content:"";
 	top:11px;
 	position:absolute;
@@ -2439,6 +2439,8 @@ body.page-template-home-page{
 	text-decoration:none;
 	color:#696969;
 	padding:15px 1.5em;
+	vertical-align:middle;
+	line-height:1em;
 }
 #special-section-menu>li>a.words-1{
 	padding:29px 2em
