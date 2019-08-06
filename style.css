@@ -2428,6 +2428,8 @@ body.page-template-home-page{
 	height:35px;
 	content:"";
 	top:11px;
+	position:absolute;
+	right:0;
 }
 #special-section-menu>li:last-child:after{
 	content:none
@@ -2963,9 +2965,6 @@ body.page-template-nursing-intermediary-landing-page .menu-item:hover{
 }
 body.page-template-nursing-intermediary-landing-page .menu-item:hover a:after{
 	background-image:url(images/icon-menu-more-white.png);
-}
-.page-template-nursing-intermediary-landing-page .social-media-inner,.page-template-nursing-secondary-landing-page .social-media-inner{
-	background:linear-gradient(rgba(17,84,56,0.8), rgba(17,84,56,0.8)),url("/wp-content/uploads/2017/02/Postbac-Premed2016-4.jpg");
 }
 body.page-template-nursing-intermediary-landing-page .cta{
 	background:#046B99 !important;
