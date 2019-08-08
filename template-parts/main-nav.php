@@ -39,6 +39,19 @@
 	</ul>
 </div>
 
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+<?php	
+/* We are switching to global blog menu for local,
+ * it will be easy for admin to add or delete menu which apply across to the site
+ */
+global $blog_id;
+$current_blog_id = $blog_id;
+switch_to_blog(1);
+    wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_id'        => 'primary-menu',
+    ) );
+
+switch_to_blog($current_blog_id); 
+?>
   
 </nav><!-- #site-navigation -->
