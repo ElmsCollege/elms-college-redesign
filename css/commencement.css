@@ -41,3 +41,16 @@
 #menu-commencement-left-nav .current_page_item a{
 	color:#046B99
 }
+#commencementPage .site-branding:after{
+	content:"Commencement";
+}
+
+#commencementPage .menu-nursing-menu-container{
+	position:relative;
+	z-index:50;
+	background-color:#ebebeb;
+}
+#special-section-menu > li {
+	position: relative;
+	display:table-cell;
+}
