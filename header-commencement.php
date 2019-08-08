@@ -24,7 +24,7 @@ add_filter( 'body_class', function( $classes ) {
 <?php the_field("head_code", "option") ?>
 </head>
 
-<body id="commencementPage" <?php body_class(); ?>>
+<body id="nursingPage" <?php body_class(); ?>>
 <?php the_field("body_code", "option") ?>
 
 <div id="page" class="site">
@@ -36,7 +36,7 @@ add_filter( 'body_class', function( $classes ) {
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="https://www.elms.edu/" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
 
