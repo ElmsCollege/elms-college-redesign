@@ -279,7 +279,7 @@
       $("body").hasClass("page-template-library-landing-page") || 
       $("body").hasClass("page-template-library-interior-page") ||
       (document.location.pathname.indexOf("/school-of-nursing/") === 0) ||
-		window.location.split('.')[0].split('//')[1] === "commencement" ) {
+		(window.location.split('.')[0].split('//')[1] === "commencement" ) ) {
         $("body").addClass("mobile-or-library");
       }
       else {
