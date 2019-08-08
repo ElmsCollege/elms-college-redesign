@@ -24,7 +24,8 @@ add_filter( 'body_class', function( $classes ) {
 <?php the_field("head_code", "option") ?>
 </head>
 
-<body id="commencementPage" <?php body_class(); ?>>
+<body id="commencementPage" class="mobile-or-library">
+<!--	<body id="commencementPage" <?php body_class(); ?>>-->
 <?php the_field("body_code", "option") ?>
 
 <div id="page" class="site">
