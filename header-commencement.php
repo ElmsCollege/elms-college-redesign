@@ -24,8 +24,7 @@ add_filter( 'body_class', function( $classes ) {
 <?php the_field("head_code", "option") ?>
 </head>
 
-<body id="commencementPage" class="mobile-or-library">
-<!--	<body id="commencementPage" <?php body_class(); ?>>-->
+<body id="commencementPage" <?php body_class(); ?>>
 <?php the_field("body_code", "option") ?>
 
 <div id="page" class="site">
@@ -54,5 +53,5 @@ add_filter( 'body_class', function( $classes ) {
 	<div id="content" class="site-content">
     <?php get_template_part("template-parts/alert-bar")?>
     <div class="section-nursing-nav">
-      <?php wp_nav_menu( array( 'theme_location' => 'main', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset'/*, 'depth' => 1*/ ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset'/*, 'depth' => 1*/ ) ); ?>
     </div>
