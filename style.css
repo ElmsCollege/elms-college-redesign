@@ -2406,7 +2406,7 @@ body.page-template-home-page{
 	background-color:#ebebeb;
 }
 @media all and (max-width: 48rem){
-#libraryPage .section-library-nav .menu-library-nav-container,#libraryPage .section-library-nav .menu-library-menu-container,#nursingPage .section-nursing-nav .menu-nursing-menu-container{
+#libraryPage .section-library-nav .menu-library-nav-container,#libraryPage .section-library-nav .menu-library-menu-container,#nursingPage .section-nursing-nav .menu-nursing-menu-container,.special-section-nav .menu-commencement-menu-container{
 		display:none
 	}
 }
