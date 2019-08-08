@@ -45,7 +45,8 @@ function gs_elms_setup() {
 		'primary' => esc_html__( 'Primary (Main)', 'gs_elms' ),
     'utility' => esc_html__( 'Utility (Footer)', 'gs_elms' ),
     'library' => esc_html__( 'Library', 'gs_elms' ),
-    'nursing' => esc_html__( 'Nursing', 'gs_elms' )
+    'nursing' => esc_html__( 'Nursing', 'gs_elms' ),
+    'subdomain' => esc_html__( 'Subdomain', 'gs_elms' )
 	) );
 
 	/*
@@ -505,4 +506,17 @@ function get_first_paragraph(){
 		$str = strip_tags($str);
 		return $str;
 }
+
+/* We are switching to global blog menu for local,
+ * it will be easy for admin to add or delete menu which apply across to the site
+ */
+global $blog_id;
+$current_blog_id = $blog_id;
+switch_to_blog(1);
+    wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_id'        => 'primary-menu',
+    ) );
+
+switch_to_blog($current_blog_id); 
 
