@@ -45,7 +45,7 @@
 	margin-left:0;
 	list-style:none;
 }
-#secondary #menu-commencement-nav li:last-child,#secondary  .sub-menu li:last-child{
+#secondary #menu-commencement-nav li:last-child a,#secondary  .sub-menu li:last-child a{
 	border-bottom:none;
 }
 #commencementPage .site-branding:after{
