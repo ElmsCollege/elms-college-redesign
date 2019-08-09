@@ -76,20 +76,20 @@
       $('img.js-focal-point-image').responsify();
     });
       
-    // library menu item copying into main nav
+    // copying special section nav (library, school of nursing, subdomains) into the mobile menu
     var libraryItems = [];
-    var specialtyAreas = ["library", "nursing"];
-    for (var i in specialtyAreas) {
-      $("#special-section-menu > li").each( function (index, element) {
+    //var specialtyAreas = ["library", "nursing"];
+    //for (var i in specialtyAreas) {
+      $("#special-section-menu > li").each( function () {
         console.log($(this));
         var clone = $(this).clone();
         clone = $(clone); 
-        clone.addClass(specialtyAreas[i] + "-mobile-menu-item");
+        //clone.addClass(specialtyAreas[i] + "-mobile-menu-item");
         clone.removeAttr("id");
         $(clone.find("li")).removeAttr("id");
         libraryItems.push(clone);
       });
-    }
+    //}
     var count;
     for(count = libraryItems.length; count >= 0; count--){
       $("#special-menu").prepend(libraryItems[count]);
