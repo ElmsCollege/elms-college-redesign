@@ -44,13 +44,3 @@
 #commencementPage .site-branding:after{
 	content:"Commencement";
 }
-
-#commencementPage .menu-nursing-menu-container{
-	position:relative;
-	z-index:50;
-	background-color:#ebebeb;
-}
-#special-section-menu > li {
-	position: relative;
-	display:table-cell;
-}

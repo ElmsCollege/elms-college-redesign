@@ -1,4 +1,4 @@
-<?php
+s<?php
 /**
  * Elms College Redesign functions and definitions.
  *
@@ -46,7 +46,7 @@ function gs_elms_setup() {
     'utility' => esc_html__( 'Utility (Footer)', 'gs_elms' ),
     'library' => esc_html__( 'Library', 'gs_elms' ),
     'nursing' => esc_html__( 'Nursing', 'gs_elms' ),
-    'subdomain' => esc_html__( 'Subdomain', 'gs_elms' )
+    'special-nav' => esc_html__( 'Special Nav', 'gs_elms' )
 	) );
 
 	/*

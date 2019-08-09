@@ -2402,11 +2402,13 @@ body.page-template-home-page{
 #libraryPage .site-content{
 	padding-top:56px
 }
-#libraryPage .menu-library-nav-container,#libraryPage .menu-library-menu-container{
+.special-section-nav .special-nav-container{
+	position:relative;
+	z-index:50;
 	background-color:#ebebeb;
 }
 @media all and (max-width: 48rem){
-#libraryPage .section-library-nav .menu-library-nav-container,#libraryPage .section-library-nav .menu-library-menu-container,#nursingPage .section-nursing-nav .menu-nursing-menu-container,.special-section-nav .menu-commencement-menu-container{
+.special-section-nav .special-nav-container{
 		display:none
 	}
 }
@@ -2812,11 +2814,6 @@ body.page-template-home-page{
 .section-mission_statement .field-permalink a:hover{
 	color:#115438;
 	background:#115438
-}
-#nursingPage .menu-nursing-menu-container{
-	position:relative;
-	z-index:50;
-	background-color:#ebebeb;
 }
 @media (max-width: 47.999em){
 	#nursingPage .calls-to-action{
