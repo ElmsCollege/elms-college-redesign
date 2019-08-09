@@ -20,7 +20,7 @@
 .parent-sidebar-menu,.field-sidebar_calls_to_action{
 	display:none;
 }
-#menu-commencement-left-nav{
+#menu-commencement-left-nav,#secondary #menu-commencement-nav{
 	padding:0;
 	list-style-type:none;
 	background:white;
@@ -30,7 +30,7 @@
 	box-shadow:0 1px 2px rgba(0,0,0,0.1);
 	font-weight:bold;
 }
-#menu-commencement-left-nav a{
+#menu-commencement-left-nav a,#secondary #menu-commencement-nav a{
 	display:block;
 	padding:6px;
 	color:#333333;
@@ -38,7 +38,7 @@
 	width:100%;
 	border-bottom:1px solid #dcdcdc;
 }
-#menu-commencement-left-nav .current_page_item a{
+#menu-commencement-left-nav .current_page_item a,#secondary #menu-commencement-nav .current_page_item a{
 	color:#046B99
 }
 #commencementPage .site-branding:after{
@@ -55,7 +55,4 @@
 }
 #commencementPage .site-branding:after{
 	content:"Commencement";
-}
-#secondary .parent-sidebar-menu{
-	display:block;
 }
