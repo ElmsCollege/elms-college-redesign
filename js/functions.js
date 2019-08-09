@@ -77,22 +77,18 @@
     });
       
     // copying special section nav (library, school of nursing, subdomains) into the mobile menu
-    var libraryItems = [];
-    //var specialtyAreas = ["library", "nursing"];
-    //for (var i in specialtyAreas) {
+    var specialNavItems = [];
       $("#special-section-menu > li").each( function () {
         console.log($(this));
         var clone = $(this).clone();
         clone = $(clone); 
-        //clone.addClass(specialtyAreas[i] + "-mobile-menu-item");
         clone.removeAttr("id");
         $(clone.find("li")).removeAttr("id");
-        libraryItems.push(clone);
+        specialNavItems.push(clone);
       });
-    //}
     var count;
-    for(count = libraryItems.length; count >= 0; count--){
-      $("#special-menu").prepend(libraryItems[count]);
+    for(count = specialNavItems.length; count >= 0; count--){
+      $("#special-menu").prepend(specialNavItems[count]);
     }
     
     // handle keyboard focus in main menu

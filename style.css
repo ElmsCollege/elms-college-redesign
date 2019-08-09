@@ -362,26 +362,24 @@ a:hover,a:active{
 	content:none
 }
 .menu-special-menu-container>ul>li{
-	height:87px
-}
-.menu-special-menu-container>ul>li.library-mobile-menu-item{
+	height:87px;
 	display:none;
 	background:#F5F5F5;
 	border-bottom:1px solid #DCDCDC !important;
 	font-size:21px
 }
 @media all and (max-width: 64rem){
-	.menu-special-menu-container>ul>li.library-mobile-menu-item{
+	.menu-special-menu-container>ul>li{
 		display:block
 	}
 }
-.menu-special-menu-container>ul>li.library-mobile-menu-item:first-child{
+.menu-special-menu-container>ul>li:first-child{
 	border-top:1px solid #DCDCDC !important
 }
-.menu-special-menu-container>ul>li.library-mobile-menu-item>a:hover,.menu-special-menu-container>ul>li.library-mobile-menu-item:hover>a,.menu-special-menu-container>ul>li.library-mobile-menu-item.open a,.menu-special-menu-container>ul>li.library-mobile-menu-item:focus a{
+.menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li.open a,.menu-special-menu-container>ul>li:focus a{
 	color:#115438
 }
-.menu-special-menu-container>ul>li.library-mobile-menu-item>ul.sub-menu,.menu-special-menu-container>ul>li.library-mobile-menu-item.open>ul.sub-menu{
+.menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:white !important;
 	border-top:1px solid #DCDCDC
 }
@@ -824,7 +822,7 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 #nursingPage .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
 	background-image:url(images/icon-menu-less-white.png);
 }
-#nursingPage .library-mobile-menu-item,#libraryPage .nursing-mobile-menu-item,.field-sidebar-menu-items{
+.field-sidebar-menu-items{
 	display:none;
 }
 div:not(.menu-main-nav-container)>ul li a br{
