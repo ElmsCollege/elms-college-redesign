@@ -42,5 +42,20 @@
 	color:#046B99
 }
 #commencementPage .site-branding:after{
+	position:absolute;
+	top:8px;
+	color:#696969;
+	display:block;
+	height:42px;
+	line-height:42px;
+	left:121px;
+	width:9.1em;
+	border-left:1px solid #CCC;
+	padding-left:0;
+}
+#commencementPage .site-branding:after{
 	content:"Commencement";
+}
+#secondary .parent-sidebar-menu{
+	display:block;
 }
