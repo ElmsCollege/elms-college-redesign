@@ -1,4 +1,4 @@
-s<?php
+<?php
 /**
  * Elms College Redesign functions and definitions.
  *
