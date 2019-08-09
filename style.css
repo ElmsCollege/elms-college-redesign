@@ -362,7 +362,9 @@ a:hover,a:active{
 	content:none
 }
 .menu-special-menu-container>ul>li{
-	height:87px;
+	height:87px
+}
+body:not(.mobile-or-library) .menu-special-menu-container>ul>li{
 	display:none;
 	background:#F5F5F5;
 	border-bottom:1px solid #DCDCDC !important;
@@ -487,7 +489,7 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li:last-child:after{
 	content:none
 }
-.menu-item-9764{/* this reduces the font size of the apply/give buttons */
+.menu-special-menu-container li.menu-item-9764{/* this reduces the font size of the apply/give buttons */
 	font-size:14px;
 	border:unset;
 }
@@ -703,6 +705,7 @@ body.mobile-or-library .menu-main-nav-container>ul>li,body.mobile-or-library .me
 	text-align:left;
 	display:block;
 	border:1px solid #f5f5f5;
+	line-height:1em;
 	height:auto;
 	-webkit-transform:translateX(50%) translateZ(0);
 	-ms-transform:translateX(50%) translateZ(0);
@@ -712,6 +715,9 @@ body.mobile-or-library .menu-main-nav-container>ul>li,body.mobile-or-library .me
 	opacity:0;
 	-webkit-transition:-webkit-transform 200ms ease-out 100ms, opacity 200ms ease-out 100ms;
 	transition:transform 200ms ease-out 200ms, opacity 200ms ease-out 200ms
+}
+.menu-special-menu-container>ul>li:first-child{
+	border-top:2px solid #f5f5f5;
 }
 body.mobile-or-library .menu-main-nav-container>ul>li:after,body.mobile-or-library .menu-special-menu-container>ul>li:after{
 	content:none
@@ -2399,9 +2405,6 @@ body.page-template-home-page{
 }
 
 #libraryPage .site-content,#nursingPage .site-content,#commencementPage .site-content{
-	padding-top:56px
-}
-{
 	padding-top:56px
 }
 .special-section-nav .special-nav-container{
