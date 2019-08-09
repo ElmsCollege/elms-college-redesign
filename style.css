@@ -364,7 +364,7 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li{
 	height:87px
 }
-body:not(.mobile-or-library) .menu-special-menu-container>ul>li{
+.mobile-or-library .menu-special-menu-container>ul>li{
 	display:none;
 	background:#F5F5F5;
 	border-bottom:1px solid #DCDCDC !important;
