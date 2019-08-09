@@ -2399,7 +2399,10 @@ body.page-template-home-page{
 	content:"School of Nursing";
 }
 
-#libraryPage .site-content{
+#libraryPage .site-content,#nursingPage .site-content,#commencementPage .site-content{
+	padding-top:56px
+}
+{
 	padding-top:56px
 }
 .special-section-nav .special-nav-container{
@@ -2786,9 +2789,6 @@ body.page-template-home-page{
 }
 #libraryPage .library-footer-info strong{
 	margin-right:1em
-}
-#nursingPage .site-content{
-	padding-top:56px
 }
 @media all and (max-width: 47.999em){
 	.section-mission_statement .pre-title{
