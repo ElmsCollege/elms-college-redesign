@@ -4019,12 +4019,16 @@ th .smallText{
 .wp-block-pullquote cite,.wp-block-quote cite{
 	font-weight:300
 }
-.quick-info-inner h4{
+#courses h4{
 	border:unset;
 	padding-left:0;
 	color:#004731;
 	font-weight:bold;
+	padding-left:25px;
 }
-.quick-info-inner .collapseomatic_content{
+#courses .collapseomatic_content{
 	border:unset;
+}
+#courses table,#courses th,#courses td{
+	border:1px solid grey;
 }
