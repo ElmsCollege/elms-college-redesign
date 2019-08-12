@@ -4035,3 +4035,6 @@ th .smallText{
 	padding:0 5px;
 	text-align:center;
 }
+#courses tbody td:nth-child(3){
+	text-align:left;
+}
