@@ -112,9 +112,6 @@ get_header(); ?>
 	.st47{mask:url(#gate_1_);}
 	.st48{filter:url(#Adobe_OpacityMaskFilter_24_);}
 	.st49{mask:url(#keatingquadrangle_1_);fill:#ABABAB;}
-	text{opacity:0}
-	text:hover{opacity:1}
-	.polygon{cursor:pointer;}
 </style>
 <defs>
 	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="723.2" y="1373.1" width="559.4" height="373.5">
@@ -304,11 +301,11 @@ get_header(); ?>
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="1851.4" y="1702.8" width="370.1" height="326.6" id="gaylordmansion_1_" alt="Gaylord Mansion">
+<mask maskUnits="userSpaceOnUse" x="1851.4" y="1702.8" width="370.1" height="326.6" id="gaylordmansion_1_" title="Gaylord Mansion">
 	<g class="st14">
 	</g>
 </mask>
-<polygon id="gaylordmansion" class="st15" alt="Gaylord Mansion" points="2203.8,1747.3 2221.4,1732.9 2190.6,1712.7 2173.3,1702.8 2157.2,1715.9 
+<polygon id="gaylordmansion" class="st15" title="Gaylord Mansion" points="2203.8,1747.3 2221.4,1732.9 2190.6,1712.7 2173.3,1702.8 2157.2,1715.9 
 	2110.7,1750.6 2084.1,1735.8 2043.7,1766.9 2028.1,1779.2 2027.4,1778.8 2027.4,1775.9 2027.8,1775.6 2028.2,1775.2 2028.4,1774.4 
 	2028.3,1774.1 2028.5,1773.8 2028.5,1773.4 2031.3,1771.2 2014.6,1753.6 2014.6,1753.1 2010.2,1750.6 1996.8,1761.2 1988.7,1756.5 
 	1985.2,1754.4 1969.7,1745.5 1965.4,1748.9 1949.1,1739.4 1946,1741.9 1946,1742.2 1933.2,1757.1 1935.6,1758.5 1935.6,1758.7 
@@ -324,7 +321,6 @@ get_header(); ?>
 	1998.5,2010.8 2002.1,2012.9 2022.3,1996.9 2030.8,2001.8 2065.3,1974.6 2064.4,1973.4 2065.9,1973.4 2065.9,1962.5 2075,1955.3 
 	2104.3,1953 2125.5,1936.3 2124.5,1935.1 2126,1935.1 2126,1900.9 2126.6,1900.5 2127.1,1900 2127.4,1898.8 2127.4,1898.1 
 	2197,1843.1 2196,1841.9 2197.5,1841.9 2197.5,1807.6 2198.5,1806.9 2200.9,1803.2 2174.5,1787.2 2133.4,1763.5 2174.7,1730.6 "/>
-	<text>Gaylord Mansion</text>
 <defs>
 	<filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="653.7" y="1353.4" width="275.6" height="219.6">
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
