@@ -4029,10 +4029,7 @@ th .smallText{
 	border:unset;
 }
 #courses th{
-	-webkit-position:sticky;
-	-moz-position:sticky;
-	-o-position:sticky;
-	-ms-position:sticky;
+	position:-webkit-sticky;
 	position:sticky;
 }
 #courses table,#courses th,#courses td{
