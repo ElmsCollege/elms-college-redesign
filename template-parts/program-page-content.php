@@ -125,6 +125,19 @@ get_template_part("template-parts/page-heading");
                 <p class="noMargins"><?php print $misc_quick_info ?></p>
               </div>
             <?php endif; ?>
+			  <?php
+			  if( have_rows('curriculum') ):
+			  ?>
+			  <div id="courses">
+			  	<?php
+			  	while ( have_rows('curriculum') ) : the_row();
+        			echo do_shortcode("[expand title='Click to view course requirements for the" .get_sub_field('curriculum_program_name') ."']" .get_sub_field('curriculum_course_requirements') . "[/expand]");
+			  	endwhile;
+				?>
+			  </div>
+			  <?php
+			  endif;
+			  ?>
           </div>
         </div>
         

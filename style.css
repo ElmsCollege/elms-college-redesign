@@ -4019,3 +4019,12 @@ th .smallText{
 .wp-block-pullquote cite,.wp-block-quote cite{
 	font-weight:300
 }
+.quick-info-inner h4{
+	border:unset;
+	padding-left:0;
+	color:#004731;
+	font-weight:bold;
+}
+.quick-info-inner .collapseomatic_content{
+	border:unset;
+}
