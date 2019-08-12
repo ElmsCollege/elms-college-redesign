@@ -4033,8 +4033,8 @@ th .smallText{
 }
 #courses td{
 	padding:0 5px;
-	text-align:center;
-}
-#courses tbody td:nth-child(3){
 	text-align:left;
+}
+#courses tbody td:nth-child(4){
+	text-align:center;
 }
