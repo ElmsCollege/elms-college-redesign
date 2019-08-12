@@ -4021,7 +4021,6 @@ th .smallText{
 }
 #courses h4{
 	border:unset;
-	padding-left:0;
 	color:#004731;
 	font-weight:bold;
 	padding-left:25px;
@@ -4031,4 +4030,8 @@ th .smallText{
 }
 #courses table,#courses th,#courses td{
 	border:1px solid grey;
+}
+#courses td{
+	padding:0 5px;
+	text-align:center;
 }
