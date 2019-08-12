@@ -48,6 +48,9 @@ get_header(); ?>
 	float: none;
 	vertical-align: middle;
 }
+.polygon{
+	cursor:pointer;
+}
 </style>
 
 <?php get_template_part("template-parts/page-heading"); ?>
