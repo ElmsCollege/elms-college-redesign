@@ -4028,10 +4028,6 @@ th .smallText{
 #courses .collapseomatic_content{
 	border:unset;
 }
-#courses th{
-	position:-webkit-sticky;
-	position:sticky;
-}
 #courses table,#courses th,#courses td{
 	border:1px solid grey;
 }
