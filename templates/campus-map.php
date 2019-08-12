@@ -48,9 +48,6 @@ get_header(); ?>
 	float: none;
 	vertical-align: middle;
 }
-.polygon{
-	cursor:pointer;
-}
 </style>
 
 <?php get_template_part("template-parts/page-heading"); ?>
@@ -115,6 +112,9 @@ get_header(); ?>
 	.st47{mask:url(#gate_1_);}
 	.st48{filter:url(#Adobe_OpacityMaskFilter_24_);}
 	.st49{mask:url(#keatingquadrangle_1_);fill:#ABABAB;}
+	text{opacity:0}
+	text:hover{opacity:1}
+	.polygon{cursor:pointer;}
 </style>
 <defs>
 	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="723.2" y="1373.1" width="559.4" height="373.5">
@@ -324,6 +324,7 @@ get_header(); ?>
 	1998.5,2010.8 2002.1,2012.9 2022.3,1996.9 2030.8,2001.8 2065.3,1974.6 2064.4,1973.4 2065.9,1973.4 2065.9,1962.5 2075,1955.3 
 	2104.3,1953 2125.5,1936.3 2124.5,1935.1 2126,1935.1 2126,1900.9 2126.6,1900.5 2127.1,1900 2127.4,1898.8 2127.4,1898.1 
 	2197,1843.1 2196,1841.9 2197.5,1841.9 2197.5,1807.6 2198.5,1806.9 2200.9,1803.2 2174.5,1787.2 2133.4,1763.5 2174.7,1730.6 "/>
+	<text>Gaylord Mansion</text>
 <defs>
 	<filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="653.7" y="1353.4" width="275.6" height="219.6">
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
