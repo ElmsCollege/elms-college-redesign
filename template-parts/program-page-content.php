@@ -123,8 +123,8 @@ get_template_part("template-parts/page-heading");
               <div class="field-misc-quick-info">
                 <p class="noMargins"><?php print $misc_quick_info ?></p>
               </div>
-            <?php endif; ?>
-			  <?php
+            <?php 
+				endif;
 			  if( have_rows('curriculum') ):
 			  ?>
 			  <div id="courses">
@@ -149,10 +149,7 @@ get_template_part("template-parts/page-heading");
 				  		endwhile;
 				  ?>
 			  </div>
-			  <?php
-			  endif;
-			  ?>			  <div style="display: none"><!-- display none 2 -->
-			  </div><!-- display none 2 -->
+			  <?php endif; ?>
           </div>
         </div>
         
