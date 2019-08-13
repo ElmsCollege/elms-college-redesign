@@ -98,7 +98,7 @@ get_template_part("template-parts/page-heading");
             <img src="<?php print $quick_info_image["url"] ?>" alt="<?php print $quick_info_image["alt"] ?>">
           </div>
         <?php endif; ?>
-        <div id="#quickinfo" class="quick-info">
+        <div id="quickinfo" class="quick-info">
           <h2>Quick Info</h2>
           <div class="quick-info-inner">
             <?php if ($required_credits): ?>
