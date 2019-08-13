@@ -93,13 +93,13 @@ get_template_part("template-parts/page-heading");
         
       <?php if ($required_credits || $degree_option || $program_formats || $misc_quick_info || get_field('curriculum')) : ?>
       <div class="pure-g quick-info-container">
-        
         <?php if ($quick_info_image) : ?>
           <div class="field-sidebar-image pure-u-1 pure-u-lg-1-2" style="<?php print_acf_image_as_background_style($quick_info_image) ?>">
             <img src="<?php print $quick_info_image["url"] ?>" alt="<?php print $quick_info_image["alt"] ?>">
           </div>
         <?php endif; ?>
         <div class="quick-info">
+          <a id="#quick-info"></a>
           <h2>Quick Info</h2>
           <div class="quick-info-inner">
             <?php if ($required_credits): ?>
