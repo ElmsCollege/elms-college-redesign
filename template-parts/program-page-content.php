@@ -136,9 +136,8 @@ get_template_part("template-parts/page-heading");
 				?>
 				  <div style="display:none;">
 				  <?php
-				  	if( have_rows('curriculum') ):
+$courses = <<<TABLE
 			  			while ( have_rows('curriculum') ) : the_row();
-				  			echo "Click to view course requirements for the " .get_sub_field('curriculum_program_name');
 				  			the_sub_field("curriculum_text");
 				  			if( have_rows('course_requirements_table_name') ):
 				  				while ( have_rows('course_requirements_table_name') ) : the_row();
@@ -153,7 +152,10 @@ get_template_part("template-parts/page-heading");
 				  				endwhile;
 				  			endif;
 				  		endwhile;
-				  	endif;
+TABLE;
+					  while ( have_rows('curriculum') ) : the_row();
+	          			echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .$courses . "[/expand]");
+					  endwhile;
 				  ?>
 				  </div>
 			  </div>
