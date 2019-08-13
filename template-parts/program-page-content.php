@@ -139,7 +139,7 @@ get_template_part("template-parts/page-heading");
 			  			while ( have_rows('curriculum') ) : the_row();
 				  			$courseID=preg_replace('/\s+/', '', get_sub_field('curriculum_program_name'));
 				  			echo "<div id='" .$courseID . "' class='collapseomatic'>Click to view course requirements for the " .get_sub_field('curriculum_program_name');
-				  			echo "</div><div id=''>";
+				  			echo ".</div><div id='target-'>";
 				  			the_sub_field("curriculum_text");
 				  			if( have_rows('course_requirements_table_name') ):
 				  				while ( have_rows('course_requirements_table_name') ) : the_row();
