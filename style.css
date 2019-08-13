@@ -4044,6 +4044,9 @@ th .smallText{
 #courses tbody td:nth-child(4){
 	text-align:center;
 }
-#course .collapseomatic_content{
+#courses .collapseomatic_content{
 	padding-top:unset;
+}
+#courses .collapseomatic_content h4{
+	padding-left:unset;
 }
