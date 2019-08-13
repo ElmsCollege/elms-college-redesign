@@ -4027,6 +4027,8 @@ th .smallText{
 	color:#004731;
 	font-weight:bold;
 	padding-left:25px;
+	margin-top:0;
+	padding-top:10px;
 }
 #courses .collapseomatic_content{
 	border:unset;
