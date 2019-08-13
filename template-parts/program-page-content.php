@@ -140,7 +140,7 @@ get_template_part("template-parts/page-heading");
 				  					echo "<h4>" .get_sub_field('course_list_table_label') ."</h4><table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
 				  					if( have_rows('course-list-repeater') ):
 				  						while ( have_rows('course-list-repeater') ) : the_row();
-				  							echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td><ttr>";
+				  							echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td></tr>";
 				  						endwhile;
 				  					endif;
 			  						echo "</tbody></table>";
