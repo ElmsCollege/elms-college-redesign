@@ -99,7 +99,7 @@ get_template_part("template-parts/page-heading");
           </div>
         <?php endif; ?>
         <div class="quick-info">
-          <a id="#quick-info"></a>
+          <a id="#quickinfo"></a>
           <h2>Quick Info</h2>
           <div class="quick-info-inner">
             <?php if ($required_credits): ?>
