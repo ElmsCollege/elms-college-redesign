@@ -4053,3 +4053,13 @@ th .smallText{
 #courses .collapseomatic_content h4{
 	padding-left:unset;
 }
+@media all and (max-width: 445px) {
+	.collapseomatic_content{
+		padding:0 0 20px 0;
+	}
+	#courses table{
+		font-size:.7em;
+	}
+}
+
+#courses table
