@@ -134,37 +134,13 @@ get_template_part("template-parts/page-heading");
         			echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .get_sub_field('curriculum_course_requirements') . "[/expand]");
 			  	endwhile;
 				?>
-				  <div style="display:none;">
-				  <?php
-$courses = <<<TABLE
-			  			while ( have_rows('curriculum') ) : the_row();
-				  			the_sub_field("curriculum_text");
-				  			if( have_rows('course_requirements_table_name') ):
-				  				while ( have_rows('course_requirements_table_name') ) : the_row();
-				  					echo "<h4>" .get_sub_field('course_list_table_label') ."</h4>";
-				  					if( have_rows('course-list-repeater') ):
-	  				  					echo "<table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
-				  						while ( have_rows('course-list-repeater') ) : the_row();
-				  							echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td><ttr>";
-				  						endwhile;
-				  						echo "</tbody></table>";
-				  					endif;
-				  				endwhile;
-				  			endif;
-				  		endwhile;
-TABLE;
-					  while ( have_rows('curriculum') ) : the_row();
-	          			echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .$courses . "[/expand]");
-					  endwhile;
-				  ?>
-				  </div><!-- end display:none -->
 			  </div>
 			  <?php
 			  endif;
 			  ?>
 			  <div style="display: none"><!-- display none 2 -->
 				  <?php
-$courseData = function(){
+function get_course_table(){
 	if( have_rows('curriculum') ):
 	  while ( have_rows('curriculum') ) : the_row();
 		the_sub_field('curriculum_text');
@@ -185,7 +161,7 @@ $courseData = function(){
 };
 if( have_rows('curriculum') ):
 	while ( have_rows('curriculum') ) : the_row();
-		echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .$courseData . "[/expand]");
+		echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" . get_course_table() . "[/expand]");
 	endwhile;
 endif;
 
