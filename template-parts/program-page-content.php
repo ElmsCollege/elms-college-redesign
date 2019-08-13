@@ -134,6 +134,7 @@ get_template_part("template-parts/page-heading");
         			echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .get_sub_field('curriculum_course_requirements') . "[/expand]");
 			  	endwhile;
 				?>
+				  <div style="display:none;">
 				  <?php
 				  	if( have_rows('curriculum') ):
 			  			while ( have_rows('curriculum') ) : the_row();
@@ -154,6 +155,7 @@ get_template_part("template-parts/page-heading");
 				  		endwhile;
 				  	endif;
 				  ?>
+				  </div>
 			  </div>
 			  <?php
 			  endif;
