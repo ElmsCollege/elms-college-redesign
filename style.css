@@ -4019,6 +4019,9 @@ th .smallText{
 .wp-block-pullquote cite,.wp-block-quote cite{
 	font-weight:300
 }
+#courses .collapseomatic{
+	padding-bottom:0;
+} 
 #courses h4{
 	border:unset;
 	color:#004731;
@@ -4040,4 +4043,7 @@ th .smallText{
 }
 #courses tbody td:nth-child(4){
 	text-align:center;
+}
+#course .collapseomatic_content{
+	padding-top:unset;
 }

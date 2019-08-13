@@ -137,14 +137,13 @@ get_template_part("template-parts/page-heading");
 				  			the_sub_field("curriculum_text");
 				  			if( have_rows('course_requirements_table_name') ):
 				  				while ( have_rows('course_requirements_table_name') ) : the_row();
-				  					echo "<h4>" .get_sub_field('course_list_table_label') ."</h4>";
+				  					echo "<h4>" .get_sub_field('course_list_table_label') ."</h4><table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
 				  					if( have_rows('course-list-repeater') ):
-	  				  					echo "<table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
 				  						while ( have_rows('course-list-repeater') ) : the_row();
 				  							echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td><ttr>";
 				  						endwhile;
-				  						echo "</tbody></table>";
 				  					endif;
+			  						echo "</tbody></table>";
 				  				endwhile;
 				  			endif;
 				  			echo "</div>";
