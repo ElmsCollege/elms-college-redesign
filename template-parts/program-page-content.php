@@ -129,17 +129,11 @@ get_template_part("template-parts/page-heading");
 			  if( have_rows('curriculum') ):
 			  ?>
 			  <div id="courses">
-			  	<?php
-			  	while ( have_rows('curriculum') ) : the_row();
-        			echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .get_sub_field('curriculum_course_requirements') . "[/expand]");
-			  	endwhile;
-				?>
 				  <?php
-				  	if( have_rows('curriculum') ):
 			  			while ( have_rows('curriculum') ) : the_row();
 				  			$courseID=preg_replace("/\W+/", "_", get_sub_field('curriculum_program_name'));
-				  			echo "<div id='" .$courseID . "' class='collapseomatic'>Click to view course requirements for the " .get_sub_field('curriculum_program_name');
-				  			echo ".</div><div id='target-" .$courseID . "'>";
+				  			echo "<div id='" .$courseID . "' class='collapseomatic noarrow'><h4>Click to view course requirements for the " .get_sub_field('curriculum_program_name');
+				  			echo ".</h4></div><div class='collapseomatic_content' id='target-" .$courseID . "'>";
 				  			the_sub_field("curriculum_text");
 				  			if( have_rows('course_requirements_table_name') ):
 				  				while ( have_rows('course_requirements_table_name') ) : the_row();
@@ -155,7 +149,6 @@ get_template_part("template-parts/page-heading");
 				  			endif;
 				  			echo "</div>";
 				  		endwhile;
-				  	endif;
 				  ?>
 			  </div>
 			  <?php
