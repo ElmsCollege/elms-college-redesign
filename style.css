@@ -4054,7 +4054,7 @@ th .smallText{
 	padding-left:unset;
 }
 @media all and (max-width: 445px) {
-	.collapseomatic_content{
+	#courses .collapseomatic_content{
 		padding:0 0 20px 0;
 	}
 	#courses table{
