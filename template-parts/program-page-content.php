@@ -157,11 +157,40 @@ TABLE;
 	          			echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .$courses . "[/expand]");
 					  endwhile;
 				  ?>
-				  </div>
+				  </div><!-- end display:none -->
 			  </div>
 			  <?php
 			  endif;
 			  ?>
+			  <div style="display: none"><!-- display none 2 -->
+				  <?php
+$courseData = function(){
+	if( have_rows('curriculum') ):
+	  while ( have_rows('curriculum') ) : the_row();
+		the_sub_field('curriculum_text');
+		if( have_rows('course_requirements_table_name') ):
+			while ( have_rows('course_requirements_table_name') ) : the_row();
+				echo "<h4>" .get_sub_field('course_list_table_label') ."</h4>";
+				if( have_rows('course-list-repeater') ):
+	  				echo "<table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
+				  	while ( have_rows('course-list-repeater') ) : the_row();
+				  		echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td><ttr>";
+				  	endwhile;
+				  	echo "</tbody></table>";
+				endif;
+			endwhile;
+		endif;
+	  endwhile;
+	endif;
+};
+if( have_rows('curriculum') ):
+	while ( have_rows('curriculum') ) : the_row();
+		echo do_shortcode("[expand title='Click to view course requirements for the " .get_sub_field('curriculum_program_name') ."']" .$courseData . "[/expand]");
+	endwhile;
+endif;
+
+				  ?>				  
+			  </div><!-- display none 2 -->
           </div>
         </div>
         
