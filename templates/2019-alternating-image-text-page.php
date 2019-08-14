@@ -9,8 +9,11 @@
 
 $has_sidebar = gs_is_active_sidebar();
 
+$blog_id = get_current_blog_id();
 $permalink = get_permalink();
-if(strpos($permalink,'nursing')){
+if( 2 == $blog_id){
+	get_header("commencement");
+} elseif(strpos($permalink,'nursing')){
 	get_header("nursing");
 } else{
 	get_header();
