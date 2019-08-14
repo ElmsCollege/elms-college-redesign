@@ -4018,3 +4018,47 @@ th .smallText{
 .wp-block-pullquote cite,.wp-block-quote cite{
 	font-weight:300
 }
+#courses .collapseomatic{
+	padding-bottom:0;
+} 
+#courses h4{
+	border:unset;
+	color:#004731;
+	font-weight:bold;
+	padding-left:25px;
+	margin-top:0;
+	padding-top:10px;
+}
+#courses .collapseomatic_content{
+	border:unset;
+}
+#courses table,#courses th,#courses td{
+	border:1px solid grey;
+}
+#courses td{
+	padding:0 5px;
+	text-align:left;
+}
+#courses tbody tr:nth-child(odd){
+	background-color:#fff;
+}
+#courses tbody tr:nth-child(even){
+	background-color:#f7f7f7;
+}
+#courses tbody td:nth-child(4){
+	text-align:center;
+}
+#courses .collapseomatic_content{
+	padding-top:unset;
+}
+#courses .collapseomatic_content h4{
+	padding-left:unset;
+}
+@media all and (max-width: 445px) {
+	#courses .collapseomatic_content{
+		padding:0 0 20px 0;
+	}
+	#courses table{
+		font-size:.7em;
+	}
+}
