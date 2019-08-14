@@ -5,6 +5,9 @@
 	justify-content:space-between;
 	text-align:left;
 }
+.nav-trigger.active{
+	top:unset;
+}
 .page-template-1-2-no-left-rail-page .fullWidth{
 	margin-bottom: 10px;
 	padding-bottom: 10px;
