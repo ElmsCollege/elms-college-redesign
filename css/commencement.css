@@ -1,4 +1,10 @@
 /* styling overrides for the 1-2-no-left-rail-page.php template */
+#masthead{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	text-align:left;
+}
 .page-template-1-2-no-left-rail-page .fullWidth{
 	margin-bottom: 10px;
 	padding-bottom: 10px;
@@ -45,21 +51,6 @@
 	margin-left:0;
 	list-style:none;
 }
-/*
-#commencementPage .site-branding:after{
-	position:absolute;
-	top:8px;
-	color:#696969;
-	display:block;
-	height:42px;
-	line-height:42px;
-	left:121px;
-	width:9.1em;
-	border-left:1px solid #CCC;
-	padding-left:0;
-	content:"Commencement";
-}
-*/
 .specialsectionlink{
 	float:left;
 	margin:11px 0 0 120px;
@@ -70,4 +61,5 @@
 	color:#696969;
 	text-decoration:none;
 	padding-left:10px;
+	font-size:1.1em;
 }
