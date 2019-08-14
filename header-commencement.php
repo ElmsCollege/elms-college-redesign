@@ -49,7 +49,7 @@ add_filter( 'body_class', function( $classes ) {
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
+		<div class="specialsectionlink"><a href="https://commencement.elms.edu/" title="Return to Commencement Homepage">Commencement</a></div>
 		<?php get_template_part("template-parts/main-nav")?>
 	</header><!-- #masthead -->
   

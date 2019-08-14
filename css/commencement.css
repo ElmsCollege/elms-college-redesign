@@ -45,6 +45,7 @@
 	margin-left:0;
 	list-style:none;
 }
+/*
 #commencementPage .site-branding:after{
 	position:absolute;
 	top:8px;
@@ -56,7 +57,15 @@
 	width:9.1em;
 	border-left:1px solid #CCC;
 	padding-left:0;
-}
-#commencementPage .site-branding:after{
 	content:"Commencement";
+}
+*/
+.specialsectionlink{
+	float:left;
+	margin:15px 0 0 125px;
+	border-left:1px solid #CCC;
+}
+.specialsectionlink a,.specialsectionlink a:visited{
+	color:#696969;
+	text-decoration:none;
 }
