@@ -17,8 +17,9 @@
 .embedDirectory-image li:nth-child(even){
 	text-align:left;
 }
-.template.embedDirectory-image .listText{
-	width:calc(100% - 165px) !important;
+iframe{
+	max-width:95%;
+	height:auto;
 }
 .speaker h4{
 	line-height: 1em;
@@ -62,4 +63,7 @@
 	text-decoration:none;
 	padding-left:10px;
 	font-size:1.1em;
+}
+#speaker,#demographics{
+	min-width:300px;
 }
