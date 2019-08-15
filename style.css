@@ -716,9 +716,6 @@ body.mobile-or-library .menu-main-nav-container>ul>li,body.mobile-or-library .me
 	-webkit-transition:-webkit-transform 200ms ease-out 100ms, opacity 200ms ease-out 100ms;
 	transition:transform 200ms ease-out 200ms, opacity 200ms ease-out 200ms
 }
-.menu-special-menu-container>ul>li:first-child{
-	border-top:2px solid #dcdcdc;
-}
 body.mobile-or-library .menu-main-nav-container>ul>li:after,body.mobile-or-library .menu-special-menu-container>ul>li:after{
 	content:none
 }

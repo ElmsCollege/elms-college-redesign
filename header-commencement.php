@@ -38,7 +38,7 @@ add_filter( 'body_class', function( $classes ) {
 					<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
 					<p class="site-title">
-						<a href="https://www.elms.edu" rel="home" alt="Return to homepage">Elms College</a>
+						<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a>
 					</p>
 				<?php
 				endif;
