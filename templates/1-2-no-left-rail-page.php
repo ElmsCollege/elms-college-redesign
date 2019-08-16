@@ -28,7 +28,9 @@ get_template_part("template-parts/page-heading");
 					}
 					?>
 					<?php if(get_field('class_youtube_video-top') ){
-						the_field('class_youtube_video-top');
+						echo "<div class='embed-container'>";
+							the_field('class_youtube_video-top');
+						echo "</div>";
 					} ?>
 					<ul class="template embedDirectory-image ulreset">
 						<?php
@@ -59,14 +61,18 @@ get_template_part("template-parts/page-heading");
 						?>
 					</ul>
 					<?php if(get_field('class_youtube_video-top') ){
-						the_field('class_youtube_video-bottom');
+						echo "<div class='embed-container'>";
+							the_field('class_youtube_video-bottom');
+						echo "</div>";
 					} ?>
 
 				</div>
 			
 			<div class="fullWidth">
 				<?php if( get_field('commencement_youtube_link') ){
-					the_field('commencement_youtube_link');
+					echo "<div class='embed-container'>";
+						the_field('commencement_youtube_link');
+					echo "</div>";
 				} else {
 					the_field('commencement_week_schedule');
 				}?>
