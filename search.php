@@ -24,6 +24,7 @@ get_header(); ?>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+			switch_to_blog($post->blog_id);
 
 				/**
 				 * Run the loop for the search to output the results.
@@ -31,7 +32,7 @@ get_header(); ?>
 				 * called content-search.php and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', 'search' );
-
+			restore_current_blog();
 			endwhile;
 
 			the_posts_navigation(array("prev_text" => "Show More", "next_text" => "Show Less"));
