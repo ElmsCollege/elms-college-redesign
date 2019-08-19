@@ -9,12 +9,7 @@
 
 $has_sidebar = gs_is_active_sidebar();
 
-$permalink = get_permalink();
-if(strpos($permalink,'nursing')){
-	get_header("nursing");
-} else{
-	get_header();
-}
+get_template_part("template-parts/header-selector");
 the_post();
 
 get_template_part("template-parts/page-heading");
