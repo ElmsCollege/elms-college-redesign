@@ -66,18 +66,9 @@ get_header("library"); ?>
         </ul>
       <?php endif; ?>
       
-      
-      
-      
       <?php
 			endwhile; // End of the loop.
 			?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_footer("library");

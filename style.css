@@ -823,12 +823,6 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 	width:calc(100% - 68px - 64px);
 	max-width:204px;
 }
-#nursingPage .menu-special-menu-container>ul>li.menu-item-has-children:hover>a:after{
-	background-image:url(images/icon-menu-more-white.png);
-}
-#nursingPage .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
-	background-image:url(images/icon-menu-less-white.png);
-}
 .field-sidebar-menu-items{
 	display:none;
 }
@@ -2097,7 +2091,7 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	}
 }
 .section-statistics{
-	margin:0 auto 0;
+	margin:0 auto;
 	padding:0;
 	max-width:1600px
 }
@@ -2113,7 +2107,6 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	color:#c3a250;
 	font-size:56px;
 	font-weight:700;
-	font-family:"soleil",sans-serif;
 	margin-bottom:0
 }
 .section-statistics .field-statistic_explanation{
@@ -2123,8 +2116,6 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	.section-statistics .statistic{
 		display:flex
 	}
-}
-@media (min-width: 64em){
 	.section-statistics{
 		margin:128px auto 0;
 		padding:0 16px
@@ -2361,9 +2352,6 @@ body.page-template-landing-page .opening-menu .fs-dropdown-item,body.page-templa
 	font-weight:700;
 	width:13em;
 	transition:all .25s ease-in-out
-}
-#nursingPage .calls-to-action .permalink{
-	border:2px solid white;
 }
 @media (min-width: 64em){
 	.calls-to-action .permalink{
@@ -3711,9 +3699,6 @@ body.page-template-landing-page .opening-menu{
 .calls-to-action .cta-image{
 	z-index:8 !important
 }
-#nursing-menu .sub-menu li {
-	z-index: 80 
-}
 .quick-info{
 	width:100%;
 	letter-spacing:normal;
@@ -3770,6 +3755,7 @@ body.page-template-landing-page .opening-menu{
 .flex-column{
 	min-width:300px;
 	max-width:48%;
+	margin-bottom:15px;
 }
 
 /* BEGIN styles for the embedded directory listing with images and bios*/
