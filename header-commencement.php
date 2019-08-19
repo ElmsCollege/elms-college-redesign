@@ -57,5 +57,5 @@ add_filter( 'body_class', function( $classes ) {
 	<div id="content" class="site-content">
     <?php get_template_part("template-parts/alert-bar")?>
     <div class="special-section-nav">
-      <?php wp_nav_menu( array( 'theme_location' => 'subdomain', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset', 'container_class' => 'special-nav-container' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'special-nav', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset', 'container_class' => 'special-nav-container' ) ); ?>
     </div>
