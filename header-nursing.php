@@ -37,7 +37,7 @@ add_filter( 'body_class', function( $classes ) {
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a></p>
 			<?php
 			endif;
 
@@ -53,6 +53,6 @@ add_filter( 'body_class', function( $classes ) {
   
 	<div id="content" class="site-content">
     <?php get_template_part("template-parts/alert-bar")?>
-    <div class="section-nursing-nav">
-      <?php wp_nav_menu( array( 'theme_location' => 'nursing', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset'/*, 'depth' => 1*/ ) ); ?>
+    <div class="special-section-nav">
+      <?php wp_nav_menu( array( 'theme_location' => 'nursing', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset', 'container_class' => 'special-nav-container' ) ); ?>
     </div>

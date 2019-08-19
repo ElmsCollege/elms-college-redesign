@@ -76,23 +76,19 @@
       $('img.js-focal-point-image').responsify();
     });
       
-    // library menu item copying into main nav
-    var libraryItems = [];
-    var specialtyAreas = ["library", "nursing"];
-    for (var i in specialtyAreas) {
-      $("#special-section-menu > li").each( function (index, element) {
+    // copying special section nav (library, school of nursing, subdomains) into the mobile menu
+    var specialNavItems = [];
+      $("#special-section-menu > li").each( function () {
         console.log($(this));
         var clone = $(this).clone();
         clone = $(clone); 
-        clone.addClass(specialtyAreas[i] + "-mobile-menu-item");
         clone.removeAttr("id");
         $(clone.find("li")).removeAttr("id");
-        libraryItems.push(clone);
+        specialNavItems.push(clone);
       });
-    }
     var count;
-    for(count = libraryItems.length; count >= 0; count--){
-      $("#special-menu").prepend(libraryItems[count]);
+    for(count = specialNavItems.length; count >= 0; count--){
+      $("#special-menu").prepend(specialNavItems[count]);
     }
     
     // handle keyboard focus in main menu
@@ -278,7 +274,8 @@
       if (Modernizr.mq("only screen and (max-width: 64em)") || 
       $("body").hasClass("page-template-library-landing-page") || 
       $("body").hasClass("page-template-library-interior-page") ||
-      (document.location.pathname.indexOf("/school-of-nursing/") == 0) ) {
+      (document.location.pathname.indexOf("/school-of-nursing/") === 0) ||
+      (jQuery("body").is("#commencementPage")) ) {
         $("body").addClass("mobile-or-library");
       }
       else {

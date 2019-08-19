@@ -45,7 +45,8 @@ function gs_elms_setup() {
 		'primary' => esc_html__( 'Primary (Main)', 'gs_elms' ),
     'utility' => esc_html__( 'Utility (Footer)', 'gs_elms' ),
     'library' => esc_html__( 'Library', 'gs_elms' ),
-    'nursing' => esc_html__( 'Nursing', 'gs_elms' )
+    'nursing' => esc_html__( 'Nursing', 'gs_elms' ),
+    'special-nav' => esc_html__( 'Special Nav', 'gs_elms' )
 	) );
 
 	/*
