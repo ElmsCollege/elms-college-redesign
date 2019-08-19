@@ -7,7 +7,8 @@
  * @package Elms_College_Redesign
  */
 
-get_header();the_post(); 
+get_template_part("template-parts/header-selector");
+the_post(); 
 
 get_template_part("template-parts/program-page-content");
 ?>

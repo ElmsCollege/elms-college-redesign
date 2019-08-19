@@ -317,16 +317,16 @@ a:hover,a:active{
 		content:none
 	}
 }
-.menu-main-nav-container>ul>li:hover,.menu-main-nav-container>ul>li.open,.menu-main-nav-container>ul>li:focus,.menu-special-menu-container>ul>li:hover,.menu-special-menu-container>ul>li.open,.menu-special-menu-container>ul>li:focus{
+.menu-main-nav-container>ul>li:hover,.menu-main-nav-container>ul>li.open,.menu-main-nav-container>ul>li:focus{
 	background-color:#115438;
 	color:white;
 	transform:translateZ(1px);
 	z-index:1
 }
-.menu-main-nav-container>ul>li:hover:after,.menu-main-nav-container>ul>li.open:after,.menu-main-nav-container>ul>li:focus:after,.menu-special-menu-container>ul>li:hover:after,.menu-special-menu-container>ul>li.open:after,.menu-special-menu-container>ul>li:focus:after{
+.menu-main-nav-container>ul>li:hover:after,.menu-main-nav-container>ul>li.open:after,.menu-main-nav-container>ul>li:focus:after{
 	content:none
 }
-.menu-main-nav-container>ul>li:hover>a,.menu-main-nav-container>ul>li.open>a,.menu-main-nav-container>ul>li:focus>a,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li.open>a,.menu-special-menu-container>ul>li:focus>a{
+.menu-main-nav-container>ul>li:hover>a,.menu-main-nav-container>ul>li.open>a,.menu-main-nav-container>ul>li:focus>a{
 	color:white
 }
 .menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-main-nav-container>ul>li.open.search-item .search-icon:after,.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-special-menu-container>ul>li.open.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
@@ -364,24 +364,21 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li{
 	height:87px
 }
-.menu-special-menu-container>ul>li.library-mobile-menu-item{
+.mobile-or-library .menu-special-menu-container>ul>li{
 	display:none;
 	background:#F5F5F5;
 	border-bottom:1px solid #DCDCDC !important;
 	font-size:21px
 }
 @media all and (max-width: 64rem){
-	.menu-special-menu-container>ul>li.library-mobile-menu-item{
+	.menu-special-menu-container>ul>li{
 		display:block
 	}
 }
-.menu-special-menu-container>ul>li.library-mobile-menu-item:first-child{
-	border-top:1px solid #DCDCDC !important
-}
-.menu-special-menu-container>ul>li.library-mobile-menu-item>a:hover,.menu-special-menu-container>ul>li.library-mobile-menu-item:hover>a,.menu-special-menu-container>ul>li.library-mobile-menu-item.open a,.menu-special-menu-container>ul>li.library-mobile-menu-item:focus a{
+.menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li.open a,.menu-special-menu-container>ul>li:focus a{
 	color:#115438
 }
-.menu-special-menu-container>ul>li.library-mobile-menu-item>ul.sub-menu,.menu-special-menu-container>ul>li.library-mobile-menu-item.open>ul.sub-menu{
+.menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:white !important;
 	border-top:1px solid #DCDCDC
 }
@@ -491,6 +488,10 @@ a:hover,a:active{
 }
 .menu-special-menu-container>ul>li:last-child:after{
 	content:none
+}
+.menu-special-menu-container li.menu-item-9764,#special-menu .menu-item-9764{/* this reduces the font size of the apply/give buttons */
+	font-size:14px;
+	border:unset;
 }
 @media screen and (min-width: 76em){
 	.menu-special-menu-container{
@@ -703,7 +704,8 @@ body.mobile-or-library .menu-main-nav-container>ul>li,body.mobile-or-library .me
 	max-width:none;
 	text-align:left;
 	display:block;
-	border-bottom:1px solid #f5f5f5;
+	border:1px solid #f5f5f5;
+	line-height:1.2em;
 	height:auto;
 	-webkit-transform:translateX(50%) translateZ(0);
 	-ms-transform:translateX(50%) translateZ(0);
@@ -824,7 +826,7 @@ body.mobile-or-library .menu-special-menu-container>ul>li:last-child{
 #nursingPage .menu-special-menu-container>ul>li.menu-item-has-children.open:hover>a:after{
 	background-image:url(images/icon-menu-less-white.png);
 }
-#nursingPage .library-mobile-menu-item,#libraryPage .nursing-mobile-menu-item,.field-sidebar-menu-items{
+.field-sidebar-menu-items{
 	display:none;
 }
 div:not(.menu-main-nav-container)>ul li a br{
@@ -2399,14 +2401,16 @@ body.page-template-home-page{
 	content:"School of Nursing";
 }
 
-#libraryPage .site-content{
+#libraryPage .site-content,#nursingPage .site-content,#commencementPage .site-content{
 	padding-top:56px
 }
-#libraryPage .menu-library-nav-container,#libraryPage .menu-library-menu-container{
+.special-section-nav .special-nav-container{
+	position:relative;
+	z-index:50;
 	background-color:#ebebeb;
 }
 @media all and (max-width: 48rem){
-#libraryPage .section-library-nav .menu-library-nav-container,#libraryPage .section-library-nav .menu-library-menu-container,#nursingPage .section-nursing-nav .menu-nursing-menu-container{
+.special-section-nav .special-nav-container{
 		display:none
 	}
 }
@@ -2454,7 +2458,7 @@ body.page-template-home-page{
 	opacity:0;
 	visibility:hidden;
 	position:absolute;
-	top:55px;
+	top:46px;
 	margin:0;
 	padding:15px 24px;
 	list-style-type:none;
@@ -2785,9 +2789,6 @@ body.page-template-home-page{
 #libraryPage .library-footer-info strong{
 	margin-right:1em
 }
-#nursingPage .site-content{
-	padding-top:56px
-}
 @media all and (max-width: 47.999em){
 	.section-mission_statement .pre-title{
 		text-align:left;
@@ -2812,11 +2813,6 @@ body.page-template-home-page{
 .section-mission_statement .field-permalink a:hover{
 	color:#115438;
 	background:#115438
-}
-#nursingPage .menu-nursing-menu-container{
-	position:relative;
-	z-index:50;
-	background-color:#ebebeb;
 }
 @media (max-width: 47.999em){
 	#nursingPage .calls-to-action{
@@ -4046,4 +4042,48 @@ th .smallText{
 }
 .wp-block-pullquote cite,.wp-block-quote cite{
 	font-weight:300
+}
+#courses .collapseomatic{
+	padding-bottom:0;
+} 
+#courses h4{
+	border:unset;
+	color:#004731;
+	font-weight:bold;
+	padding-left:25px;
+	margin-top:0;
+	padding-top:10px;
+}
+#courses .collapseomatic_content{
+	border:unset;
+}
+#courses table,#courses th,#courses td{
+	border:1px solid grey;
+}
+#courses td{
+	padding:0 5px;
+	text-align:left;
+}
+#courses tbody tr:nth-child(odd){
+	background-color:#fff;
+}
+#courses tbody tr:nth-child(even){
+	background-color:#f7f7f7;
+}
+#courses tbody td:nth-child(4){
+	text-align:center;
+}
+#courses .collapseomatic_content{
+	padding-top:unset;
+}
+#courses .collapseomatic_content h4{
+	padding-left:unset;
+}
+@media all and (max-width: 445px) {
+	#courses .collapseomatic_content{
+		padding:0 0 20px 0;
+	}
+	#courses table{
+		font-size:.7em;
+	}
 }

@@ -91,15 +91,14 @@ get_template_part("template-parts/page-heading");
         </div>
         
         
-      <?php if ($required_credits || $degree_option || $program_formats || $misc_quick_info) : ?>
+      <?php if ($required_credits || $degree_option || $program_formats || $misc_quick_info || get_field('curriculum')) : ?>
       <div class="pure-g quick-info-container">
-        
         <?php if ($quick_info_image) : ?>
           <div class="field-sidebar-image pure-u-1 pure-u-lg-1-2" style="<?php print_acf_image_as_background_style($quick_info_image) ?>">
             <img src="<?php print $quick_info_image["url"] ?>" alt="<?php print $quick_info_image["alt"] ?>">
           </div>
         <?php endif; ?>
-        <div class="quick-info">
+        <div id="quickinfo" class="quick-info">
           <h2>Quick Info</h2>
           <div class="quick-info-inner">
             <?php if ($required_credits): ?>
@@ -124,7 +123,33 @@ get_template_part("template-parts/page-heading");
               <div class="field-misc-quick-info">
                 <p class="noMargins"><?php print $misc_quick_info ?></p>
               </div>
-            <?php endif; ?>
+            <?php 
+				endif;
+			  if( have_rows('curriculum') ):
+			  ?>
+			  <div id="courses">
+				  <?php
+			  			while ( have_rows('curriculum') ) : the_row();
+				  			$courseID=preg_replace("/\W+/", "_", get_sub_field('curriculum_program_name'));
+				  			echo "<div id='" .$courseID . "' class='collapseomatic noarrow'><h4>Click to view course requirements for the " .get_sub_field('curriculum_program_name');
+				  			echo ".</h4></div><div class='collapseomatic_content' id='target-" .$courseID . "'>";
+				  			the_sub_field("curriculum_text");
+				  			if( have_rows('course_requirements_table_name') ):
+				  				while ( have_rows('course_requirements_table_name') ) : the_row();
+				  					echo "<h4 class='noMarginBottom noMarginTop'>" .get_sub_field('course_list_table_label') ."</h4><table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
+				  					if( have_rows('course-list-repeater') ):
+				  						while ( have_rows('course-list-repeater') ) : the_row();
+				  							echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td></tr>";
+				  						endwhile;
+				  					endif;
+			  						echo "</tbody></table>";
+				  				endwhile;
+				  			endif;
+				  			echo "</div>";
+				  		endwhile;
+				  ?>
+			  </div>
+			  <?php endif; ?>
           </div>
         </div>
         
