@@ -80,7 +80,7 @@ get_template_part("template-parts/page-heading");
 
 			<div id="speaker" class="flexHalf">
 				<h4 class="centerText noMarginTop">Commencement Speaker</h4>
-				<h2 class="centerText"><?php the_field('commencement_speaker_name'); ?></h2>
+				<h2 class="centerText noMarginTop"><?php the_field('commencement_speaker_name'); ?></h2>
 				<?php if( get_field('commencement_speaker_bio') ){
 					the_field('commencement_speaker_bio');
 				}?>

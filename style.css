@@ -2502,22 +2502,22 @@ body.page-template-home-page{
 	transform:translateY(0) scaleY(1) translateZ(0px);
 	transition:.3s linear all
 }
-#libraryPage ul.calls-to-action-feature{
+#libraryPage .calls-to-action-feature{
 	padding:0;
 	margin:0 0 64px;
 	text-align:center
 }
 @media all and (max-width: 48rem){
-	#libraryPage ul.calls-to-action-feature{
+	#libraryPage .calls-to-action-feature{
 		background:white;
 		margin:32px
 	}
 }
-#libraryPage ul.calls-to-action-feature li{
+#libraryPage .calls-to-action-feature li{
 	background:black;
 	text-transform:uppercase
 }
-#libraryPage ul.calls-to-action-feature li a{
+#libraryPage .calls-to-action-feature li a{
 	border:2.6px solid white;
 	color:#fff;
 	text-decoration:none;
@@ -2529,49 +2529,49 @@ body.page-template-home-page{
 	font-size:16px;
 	transition:all .25s ease-in-out
 }
-#libraryPage ul.calls-to-action-feature li a:hover{
+#libraryPage .calls-to-action-feature li a:hover{
 	background-color:white
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(1){
+#libraryPage .calls-to-action-feature li:nth-child(1){
 	background-color:#115438
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(1) a:hover{
+#libraryPage .calls-to-action-feature li:nth-child(1) a:hover{
 	color:#115438
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(2){
+#libraryPage .calls-to-action-feature li:nth-child(2){
 	background-color:#c3a250
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(2) a:hover{
+#libraryPage .calls-to-action-feature li:nth-child(2) a:hover{
 	color:#c3a250
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(3){
+#libraryPage .calls-to-action-feature li:nth-child(3){
 	background-color:#046B99
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(3) a:hover{
+#libraryPage .calls-to-action-feature li:nth-child(3) a:hover{
 	color:#046B99
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(4){
+#libraryPage .calls-to-action-feature li:nth-child(4){
 	background-color:#413556
 }
-#libraryPage ul.calls-to-action-feature li:nth-child(4) a:hover{
+#libraryPage .calls-to-action-feature li:nth-child(4) a:hover{
 	color:#413556
 }
 @media all and (min-width: 48em){
-	#libraryPage ul.calls-to-action-feature li{
+	#libraryPage .calls-to-action-feature li{
 		vertical-align:middle;
 		display:flex;
 		text-align:center;
 		padding:0 32px;
 	}
-	#libraryPage ul.calls-to-action-feature li a{
+	#libraryPage .calls-to-action-feature li a{
 		vertical-align:middle;
 	}
 }
 @media all and (max-width: 48em){
-	#libraryPage ul.calls-to-action-feature li{
+	#libraryPage .calls-to-action-feature li{
 		margin-bottom:32px
 	}
-	#libraryPage ul.calls-to-action-feature li a{
+	#libraryPage .calls-to-action-feature li a{
 		border:none;
 		border-radius:0;
 		margin:.5em;
@@ -2632,15 +2632,6 @@ body.page-template-home-page{
 		border-right:none;
 		right:-29px;
 		top:40%
-	}
-}
-#libraryPage .section-heading-as-content .text-content .field-title{
-	font-size:24px;
-	margin:0
-}
-@media (min-width: 48em){
-	#libraryPage .section-heading-as-content .text-content .field-title{
-		font-size:32px
 	}
 }
 #libraryPage .section-heading-as-content .text-content .field-body{
@@ -2779,9 +2770,6 @@ body.page-template-home-page{
 	#libraryPage .section-heading-as-content>img{
 		display:none
 	}
-}
-#libraryPage .library-footer-info strong{
-	margin-right:1em
 }
 @media all and (max-width: 47.999em){
 	.section-mission_statement .pre-title{
@@ -3388,9 +3376,6 @@ body.page-template-program-page .site-main article,body.page-template-program-pa
 		padding:0;
 	}
 }
-.page-template-library-landing-page .section-heading-as-content {
-	margin-bottom:0;
-}
 .admin-bar #masthead{
 	margin-top:32px;
 }
@@ -3886,7 +3871,7 @@ th .smallText{
 	font-weight:normal;
 }
 .noMargins{
-	margin: 0 0 0 0 !important;
+	margin: 0!important;
 }
 .noMarginTop{
 	margin-top:0 !important;
@@ -3910,9 +3895,6 @@ th .smallText{
 }
 .flexHalf{
 	flex-basis: 48%;
-}
-.flexHalf h2{
-	margin-top:0px;
 }
 .grey-to-color,.color-to-grey:hover{
 	-webkit-filter: grayscale();
