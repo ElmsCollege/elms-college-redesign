@@ -721,6 +721,8 @@ body.mobile-or-library .menu-main-nav-container>ul>li:after,body.mobile-or-libra
 }
 body.mobile-or-library .menu-main-nav-container>ul>li>a,body.mobile-or-library .menu-special-menu-container>ul>li>a{
 	display:block;
+	position:relative;
+	letter-spacing:0
 }
 body.mobile-or-library .menu-main-nav-container>ul>li>a br,body.mobile-or-library .menu-special-menu-container>ul>li>a br{
 	display:none
@@ -753,6 +755,9 @@ body.mobile-or-library .menu-main-nav-container>ul>li.open>ul.sub-menu,body.mobi
 }
 body.mobile-or-library .menu-main-nav-container>ul>li.search-item>ul.sub-menu.for-search,body.mobile-or-library .menu-special-menu-container>ul>li.search-item>ul.sub-menu.for-search{
 	background-color:white
+}
+body.mobile-or-library .menu-main-nav-container>ul>li #menu-item-search,body.mobile-or-library .menu-special-menu-container>ul>li #menu-item-search{
+	height:50px
 }
 body.mobile-or-library .menu-main-nav-container>ul>li.menu-item-has-children>a:after,body.mobile-or-library .menu-special-menu-container>ul>li.menu-item-has-children>a:after {
   background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
