@@ -14,8 +14,7 @@ $short_content = get_field("short_content");
 $short_content_background = get_field("short_content_background");
 $action_columns = get_field("action_columns");
 
-get_header("nursing");
-
+	get_template_part("template-parts/header-selector");
 	get_template_part("template-parts/page-heading");
 	?>
 	<div id="primary" class="content-area">
