@@ -9,7 +9,8 @@
 
 
 
-get_header();
+get_template_part("template-parts/header-selector");
+
 while ( have_posts() ) : the_post();
 
   $opening_menu = get_field("opening_menu");
