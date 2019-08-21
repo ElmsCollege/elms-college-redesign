@@ -6,7 +6,7 @@
  */
 
 $has_sidebar = gs_is_active_sidebar();
-if(is_page( array( 5398, 5453, 5480, 5485, 7558) )){
+if(is_page( array( 5398, 5453, 5480, 5485, 7588) )){
 	$has_sidebar=false;
 };
 
