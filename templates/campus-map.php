@@ -13,11 +13,17 @@
  * @package Elms_College_Redesign
  */
 
-wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
-wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
+//wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
+//wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
+
+wp_enqueue_script('d3-js','https://d3js.org/d3.v5.min.js');
 
 get_header(); ?>
 <style>
+	#primary{
+		max-width:100%;
+		padding-top:0;
+	}
 .field-content{
 	min-height:500px;
 }
