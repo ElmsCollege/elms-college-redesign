@@ -393,11 +393,8 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-var element = document.getElementById('campusMap')
-
-// and forward it it to panzoom.
-panzoom(element)    
-
+var area = document.getElementById('campusMap')
+window.pz = panzoom(area, {autocenter: true, bounds: true})
 </script>
 <?php
 get_footer();
