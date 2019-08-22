@@ -684,23 +684,23 @@ svg{
 <script type="text/javascript">
 	console.log("cachebuster4");
 	
-var svg = d3.select("svg"),
+var campusMap = d3.select("#campusMap"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-var randomX = d3.randomNormal(width / 2, 80),
-    randomY = d3.randomNormal(height / 2, 80),
-    data = d3.range(2000).map(function() { return [randomX(), randomY()]; });
+//var randomX = d3.randomNormal(width / 2, 80),
+//    randomY = d3.randomNormal(height / 2, 80),
+//    data = d3.range(2000).map(function() { return [randomX(), randomY()]; });
 
-var g = svg.append("g");
+var g = campusMap.append("g");
 
-var circle = g.selectAll("circle")
-  .data(data)
-  .enter().append("circle")
-    .attr("r", 2.5)
-    .attr("transform", function(d) { return "translate(" + d + ")"; });
+//var circle = g.selectAll("circle")
+//  .data(data)
+//  .enter().append("circle")
+//    .attr("r", 2.5)
+//    .attr("transform", function(d) { return "translate(" + d + ")"; });
 
-svg.append("rect")
+campusMap.append("rect")
     .attr("fill", "none")
     .attr("pointer-events", "all")
     .attr("width", width)
