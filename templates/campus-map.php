@@ -743,12 +743,7 @@ wp_reset_postdata();
 <script>
 jQuery(window).load(function () {
 
-	window.zoomMap = svgPanZoom('#campusMap', {
-		zoomEnabled: true,
-        controlIconsEnabled: true,
-		fit: true,
-        center: true,
-    });
+	var panZoomMap = svgPanZoom('#campusMap');
 
 	jQuery("#gaylordmansion").click(function(){
 		alert("you just clicked on gaylord mansion");
