@@ -685,9 +685,12 @@ svg{
 	//console.log("cachebuster");
 	
 	var campusMap = d3.select("#campusMap");
-	campusMap.style("stroke", "black");
-    campusMap.style("fill", "orange");
+	//campusMap.style("stroke", "black");
+    //campusMap.style("fill", "orange");
 
+	function zoom() {
+		campusMap.attr("transform", d3.event.transform);
+	}
 </script>
 <?php
 get_footer();
