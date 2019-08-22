@@ -22,7 +22,7 @@ get_header(); ?>
 
 	<main id="main" class="site-main pure-u-1" role="main">
 
-		<div id="svg-container" class="field-content" style="width:100%; height:auto; border:1px solid black; ">
+		<div id="svg-container" class="field-content" style="width:1000px; height:500px; border:1px solid black; ">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit; ">
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
@@ -397,7 +397,6 @@ get_header(); ?>
         // Expose to window namespase for testing purposes
         window.zoomTiger = svgPanZoom('#Layer_1', {
           zoomEnabled: true,
-          controlIconsEnabled: true,
           fit: true,
           center: true,
           // viewportSelector: document.getElementById('demo-tiger').querySelector('#g4') // this option will make library to misbehave. Viewport should have no transform attribute
