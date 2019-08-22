@@ -116,7 +116,6 @@ get_header(); ?>
 	.st48{filter:url(#Adobe_OpacityMaskFilter_24_);}
 	.st49{mask:url(#keatingquadrangle_1_);fill:#ABABAB;}
 </style>
-	<g class="svg-pan-zoom_viewport">
 <defs>
 	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="723.2" y="1373.1" width="559.4" height="373.5">
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
@@ -709,7 +708,6 @@ get_header(); ?>
 	c0,0,0.1,0,0.1,0c0.1,0,0.2-0.1,0.3-0.1c0,0,0.1,0,0.1-0.1c0.1-0.1,0.1-0.1,0.2-0.2c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0-0.1
 	c0.1-0.1,0.1-0.2,0.2-0.3c0,0,0,0,0,0l2-4.7c0-0.1,0-0.1,0.1-0.2l1.9-6.4c0-0.1,0-0.1,0-0.2l1-6.4c0-0.1,0-0.1,0-0.2l0.2-6.5v-1
 	C5606.9,2801.3,5606.9,2801.3,5606.9,2801.2z"/>
-</g>
 </svg>
 
 <div id="Berchmans">
@@ -744,18 +742,13 @@ wp_reset_postdata();
 <script>
 jQuery(window).load(function () {
 
-jQuery(function() {
-  panZoomInstance = svgPanZoom('#campusMap', {
-    zoomEnabled: true,
-    controlIconsEnabled: false,
-    fit: true,
-    center: true,
-    minZoom: 0.1
-  });
-  
-  // zoom out
-  panZoomInstance.zoom(0.2)
-})
+	document.getElementById("campusMap").addEventListener('load', function(){
+  	// Will get called after embed element was loaded
+		svgPanZoom(document.getElementById("campusMap"));
+	})
+
+	
+	
 	jQuery("#gaylordmansion").click(function(){
 		alert("you just clicked on gaylord mansion");
 	});
