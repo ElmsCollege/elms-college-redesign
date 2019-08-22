@@ -753,11 +753,6 @@ jQuery(function() {
   
   // zoom out
   panZoomInstance.zoom(0.2)
-
-  $("#move").on("click", function() {
-    // Pan by any values from -80 to 80
-    panZoomInstance.panBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
-  });
 })
 	jQuery("#gaylordmansion").click(function(){
 		alert("you just clicked on gaylord mansion");
