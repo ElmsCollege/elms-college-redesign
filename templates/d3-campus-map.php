@@ -682,17 +682,19 @@ svg{
 	</main><!-- #main -->    
 
 <script type="text/javascript">
-	console.log("cachebuster");
+	console.log("cachebuster1");
 	
-	var campusMap = d3.select("#campusMap");
-	campusMap.call(zoom);
-//    campusMap.call(d3.zoom()
-        //.scaleExtent([1, 8])
-//        .on("zoom", zoom));
+	var campusMap = d3.select("#campusMap")
+		.attr("width", width)
+		.attr("height", height);
 
-//	function zoom() {
-//		campusMap.attr("transform", d3.event.transform);
-//	}
+    campusMap.call(d3.zoom()
+        .on("zoom", zoom));
+
+	function zoom() {
+		campusMap.attr("transform", "translate(" + width / 2 + "," + height * .52 + ")")
+		.call(zoom);
+	}
 </script>
 <?php
 get_footer();
