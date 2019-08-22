@@ -15,8 +15,9 @@
 
 //wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
 //wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
-wp_enqueue_script ('panzoom2', 'https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js');
 get_header(); ?>
+
+<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js'></script>
 
 <?php get_template_part("template-parts/page-heading"); ?>
 
