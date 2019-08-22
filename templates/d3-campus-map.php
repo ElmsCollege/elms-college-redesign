@@ -21,7 +21,6 @@ get_header(); ?>
 
 <style>
 svg{
-	width:100%;
 	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
 	background-size:cover;
 }
@@ -688,13 +687,14 @@ svg{
 	</main><!-- #main -->    
 
 <script type="text/javascript">
-	var svg = d3.select("svg");
-	
-	var g = svg.append("g");
-
-	function zoom() {
-		g.attr("transform", d3.event.transform);
-	}
+	var svg = d3 . select( "svg" )
+	.append( "svg" )
+		.attr( "width", "100%" )
+		.attr( "height", "100%" )
+		.call( d3.zoom().on( "zoom", function () {
+			svg.attr( "transform", d3.event.transform )
+		} ) )
+		.append( "g" );
 </script>
 
 <?php
