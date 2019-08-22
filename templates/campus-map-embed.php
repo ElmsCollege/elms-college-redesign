@@ -32,7 +32,7 @@ get_header(); ?>
 <script>
       // Don't use window.onLoad like this in production, because it can only listen to one function.
       window.onload = function() {
-        svgPanZoom('#campusMap', {
+        svgPanZoom('#campus-map', {
           zoomEnabled: true,
         })
 	  };
