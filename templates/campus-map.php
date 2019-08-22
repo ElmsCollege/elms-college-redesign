@@ -62,9 +62,7 @@ get_header(); ?>
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div class="field-content">
-			<?php the_content() ?>
 
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="campusMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve">
 <style type="text/css">
@@ -713,29 +711,6 @@ get_header(); ?>
 	C5606.9,2801.3,5606.9,2801.3,5606.9,2801.2z"/>
 </svg>
 
-<div id="Berchmans">
-<?php
-// WP_Query arguments
-$args = array(
-	'page_id'                => '36525',
-);
-
-// The Query
-$query = new WP_Query( $args );
-
-// The Loop
-if ( $query->have_posts() ) {
-	while ( $query->have_posts() ) {
-		$query->the_post();
-		the_excerpt();
-		echo do_shortcode("[slideshow_gallery_modal]");
-	}
-}
-// Restore original Post Data
-wp_reset_postdata();
-?>
-</div>
-
 		</div>
 
 
@@ -743,16 +718,16 @@ wp_reset_postdata();
 </div><!-- #primary -->
 
 <script>
-jQuery(window).load(function () {
+//jQuery(window).load(function () {
 
 //	svgPanZoom("#campusMap", {
 //    	zoomEnabled: true,
 //		controlIconsEnabled: true
 //	});
 
-	jQuery("#gaylordmansion").click(function(){
-		alert("you just clicked on gaylord mansion");
-	});
+//	jQuery("#gaylordmansion").click(function(){
+//		alert("you just clicked on gaylord mansion");
+//	});
 	
 /*
 	jQuery(".slider-modal").slick({
@@ -767,7 +742,7 @@ jQuery(window).load(function () {
 	});
 */
 
-} );
+// } );
 </script>
 
 <?php
