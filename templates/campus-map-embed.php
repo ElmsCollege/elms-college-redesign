@@ -393,7 +393,7 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-var element = document.getElementById('#Layer_1')
+var element = document.getElementById('#campusMap')
 
 // and forward it it to panzoom.
 panzoom(element)    
