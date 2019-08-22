@@ -23,9 +23,9 @@ get_header(); ?>
 
 	<main id="main" class="site-main pure-u-1" role="main">
 
-		<div id="svg-container" class="field-content" style="width:1000px; height:500px; border:1px solid black; ">
+		<div id="svg-container" class="field-content">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 10000 auto" style="enable-background:new 0 0 10000 4500;" xml:space="preserve">
+	 viewBox="0 0 10000 auto" xml:space="preserve">
 	<g id="campusMap">
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
 	c0,0-0.1-0.1-0.1-0.1c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.1-0.2-0.2c0,0,0,0,0,0l0,0c0,0,0,0,0,0l-170-123.1c-0.5-0.4-1.2-0.4-1.7-0.1
