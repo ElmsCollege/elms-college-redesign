@@ -26,7 +26,6 @@ get_header(); ?>
 	min-height:500px;
 }
 #campusMap{
-	width:100%;
 	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
 	background-size:cover;
 }
@@ -63,8 +62,8 @@ get_header(); ?>
 			<?php the_content() ?>
 
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="campusMap" class="svg-pan-zoom_viewport" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve">
+<svg version="1.1" id="campusMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve" width="1000" height="500">
 <style type="text/css">
 	.st0{filter:url(#Adobe_OpacityMaskFilter);}
 	.st1{mask:url(#bluehouselot_1_);fill:#ABABAB;}
@@ -743,8 +742,23 @@ wp_reset_postdata();
 <script>
 jQuery(window).load(function () {
 
-	var panZoomMap = svgPanZoom('#campusMap');
+jQuery(function() {
+  panZoomInstance = svgPanZoom('#campusMap', {
+    zoomEnabled: true,
+    controlIconsEnabled: true,
+    fit: true,
+    center: true,
+    minZoom: 0.1
+  });
+  
+  // zoom out
+  panZoomInstance.zoom(0.2)
 
+  $("#move").on("click", function() {
+    // Pan by any values from -80 to 80
+    panZoomInstance.panBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
+  });
+})
 	jQuery("#gaylordmansion").click(function(){
 		alert("you just clicked on gaylord mansion");
 	});
