@@ -88,7 +88,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="723.2" y="1373.1" width="559.4" height="373.5" id="bluehouselot_1_">
-	<g class="st0">
+	<g class="st0 mapObject">
 	</g>
 </mask>
 <path id="bluehouselot" class="st1 mapObject" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1
@@ -109,7 +109,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6139.7" y="2811.5" width="2140.4" height="1260.3" id="admissionsaccessiblevisitorsapermitlot_1_">
-	<g class="st2">
+	<g class="st2 mapObject">
 	</g>
 </mask>
 <polygon id="admissionsaccessiblevisitorsapermitlot" class="st3 mapObject" points="8083.8,2937.3 7953.1,2846.5 7933.8,2832.2 
@@ -145,7 +145,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="3735.6" y="2822.5" width="830.5" height="348.3" id="libraryparkinglot_1_">
-	<g class="st4">
+	<g class="st4 mapObject">
 	</g>
 </mask>
 <polygon id="libraryparkinglot" class="st5 mapObject" points="4541.7,3017.3 4566.1,2980.2 4555.9,2972.9 4457.2,2902.8 4452.9,2899 
@@ -163,7 +163,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6516.9" y="1021.5" width="2431.5" height="1066.7" id="maguireberchmanspermitparking_1_">
-	<g class="st6">
+	<g class="st6 mapObject">
 	</g>
 </mask>
 <polygon id="maguireberchmanspermitparking" class="st7 mapObject" points="8829,1597.8 8873.5,1553.1 8873.5,1551.3 8682.1,1466.7 
@@ -190,7 +190,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="1959.2" y="1169.8" width="1435.8" height="1161.5" id="permitparkinglot_1_">
-	<g class="st8">
+	<g class="st8 mapObject">
 	</g>
 </mask>
 <path id="permitparkinglot" class="st9 mapObject" d="M3395,1828.6c0-0.1,0-0.2,0-0.3c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1
@@ -244,7 +244,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="8540.6" y="1783.6" width="1347.6" height="689.5" id="cherylcondonsoftballfield_1_">
-	<g class="st10">
+	<g class="st10 mapObject">
 	</g>
 </mask>
 <path id="cherylcondonsoftballfield" class="st11 mapObject" d="M9888.2,2066.6l-20.2-24.5l-6.2-6.9l-6-6.5l-6.1-6.4l-6.2-6.3l-6.3-6.2
@@ -258,7 +258,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="7122.3" y="1593.1" width="1744.2" height="1204.9" id="learyfield_1_">
-	<g class="st12">
+	<g class="st12 mapObject">
 	</g>
 </mask>
 <path id="learyfield" class="st13 mapObject" d="M8771.9,2300.4l-901.4-667.1l-53.5-39.6l-1.1-0.5l-1.8,0l-17.7,10.8l-0.6-0.1l-0.9,0.1
@@ -271,7 +271,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="1851.4" y="1702.8" width="370.1" height="326.6" id="gaylordmansion_1_" title="Gaylord Mansion">
-	<g class="st14">
+	<g class="st14 mapObject">
 	</g>
 </mask>
 <polygon id="gaylordmansion" class="st15 mapObject" points="2203.8,1747.3 2221.4,1732.9 2190.6,1712.7 2173.3,1702.8 2157.2,1715.9 
@@ -298,7 +298,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="653.7" y="1353.4" width="275.6" height="219.6" id="bluehouse_1_">
-	<g class="st16">
+	<g class="st16 mapObject">
 	</g>
 </mask>
 <polygon id="bluehouse" class="st17 mapObject" points="928.4,1474 918.5,1466.8 917.5,1466.2 909.2,1461.3 909.2,1450.6 909.6,1450.4 
@@ -316,7 +316,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="4417.3" y="2051.3" width="951" height="726.9" id="marydooleycollegecenter_1_">
-	<g class="st18">
+	<g class="st18 mapObject">
 	</g>
 </mask>
 <polygon id="marydooleycollegecenter" class="st19 mapObject" points="5368.3,2414.5 5187,2283.2 5158.2,2301.3 4847,2075.9 4745.8,2139.6 
@@ -333,7 +333,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="3264.9" y="2122.6" width="327.7" height="244.8" id="brickhouse_1_">
-	<g class="st20">
+	<g class="st20 mapObject">
 	</g>
 </mask>
 <polygon id="brickhouse" class="st21 mapObject" points="3587.6,2231.1 3592.5,2228.1 3447,2122.6 3338.3,2190.1 3319.5,2176.4 3264.9,2210.8 
@@ -351,7 +351,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="4493.9" y="2780.9" width="752.9" height="567.7" id="alumnaelibrary_1_">
-	<g class="st22">
+	<g class="st22 mapObject">
 	</g>
 </mask>
 <polygon id="alumnaelibrary" class="st23 mapObject" points="5246.7,3035.6 5151.8,2966.8 5151.8,2954.7 5151.9,2954.7 5153.8,2953.5 
@@ -369,7 +369,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="3939" y="1706.8" width="356.2" height="306.2" id="yellowhouse_1_">
-	<g class="st24">
+	<g class="st24 mapObject">
 	</g>
 </mask>
 <polygon id="yellowhouse" class="st25 mapObject" points="4291.5,1909.5 4291.5,1906.5 4295.2,1904.2 4295.2,1902.8 4268.5,1883.4 
@@ -416,7 +416,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6356.8" y="3931.2" width="315.2" height="308.5" id="spauldinghouse_1_">
-	<g class="st26">
+	<g class="st26 mapObject">
 	</g>
 </mask>
 <polygon id="spauldinghouse" class="st27 mapObject" points="6671.2,4018.8 6672,4018.1 6671.2,4016.5 6671.2,4000.8 6671.2,4000.8 
@@ -445,7 +445,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="5641.5" y="1264.3" width="216.3" height="216" id="marianhall_1_">
-	<g class="st28">
+	<g class="st28 mapObject">
 	</g>
 </mask>
 <polygon id="marianhall" class="st29 mapObject" points="5854.5,1352.4 5857.7,1350.3 5830,1306.9 5812.9,1279.7 5769.1,1285.3 5759.4,1278.3 
@@ -461,7 +461,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="5241.2" y="1562.4" width="858.4" height="471.6" id="rosewilliamhall_1_">
-	<g class="st30">
+	<g class="st30 mapObject">
 	</g>
 </mask>
 <polygon id="rosewilliamhall" class="st31 mapObject" points="6099.6,1927.1 6024.6,1601.1 5921.2,1612 5921.8,1570.4 5921.8,1565.9 
@@ -477,7 +477,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="7495.6" y="2920.2" width="477.2" height="361.5" id="devinehall_1_">
-	<g class="st32">
+	<g class="st32 mapObject">
 	</g>
 </mask>
 <polygon id="devinehall" class="st33 mapObject" points="7965.2,3027.4 7971.4,3023.5 7972.8,3020.5 7881.2,2954.1 7855.8,2960.1 
@@ -492,7 +492,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6753.6" y="2227.2" width="1115" height="875.4" id="maguirecenter_1_">
-	<g class="st34">
+	<g class="st34 mapObject">
 	</g>
 </mask>
 <polygon id="maguirecenter" class="st35 mapObject" points="7853.1,2668.2 7853.1,2633.8 7679.1,2507.8 7679.1,2442.6 7603.6,2387.9 
@@ -514,7 +514,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6027.8" y="1891.8" width="694.2" height="679" id="olearyhall_1_">
-	<g class="st36">
+	<g class="st36 mapObject">
 	</g>
 </mask>
 <polygon id="olearyhall" class="st37 mapObject" points="6722,2089.3 6720.5,2089.3 6721.8,2088.5 6663.5,1981.6 6604.6,2004.3 6605.1,2005.7 
@@ -543,7 +543,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6822.5" y="1913.2" width="263.1" height="212.9" id="facilitiesgarage_1_">
-	<g class="st38">
+	<g class="st38 mapObject">
 	</g>
 </mask>
 <polygon id="facilitiesgarage" class="st39 mapObject" points="7085.6,1984 7084,1982.8 7084,1978.2 7085.5,1977.2 7085.5,1973.2 
@@ -556,7 +556,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6909.7" y="1285.7" width="307.4" height="360.8" id="physicalplant_1_">
-	<g class="st40">
+	<g class="st40 mapObject">
 	</g>
 </mask>
 <polygon id="physicalplant" class="st41 mapObject" points="7215.8,1480.4 7217.1,1479.6 7148.7,1378.2 7148.1,1377.5 7147.3,1376.3 
@@ -587,7 +587,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="6112.2" y="2484.8" width="380" height="456.6" id="lyoncenter_1_">
-	<g class="st42">
+	<g class="st42 mapObject">
 	</g>
 </mask>
 <polygon id="lyoncenter" class="st43 mapObject" points="6449.4,2537.4 6426,2484.8 6418.9,2489.2 6395.6,2507.7 6364.8,2527.1 6355.3,2533.1 
@@ -602,7 +602,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="5680.3" y="2649" width="1082.5" height="982.1" id="berchmanshall_1_">
-	<g class="st44">
+	<g class="st44 mapObject">
 	</g>
 </mask>
 <polygon id="berchmanshall" class="st45 mapObject" points="6697.5,3138.5 6687.2,3131 6758.4,3086.2 6758.4,2982.9 6762.9,2980.1 
@@ -628,7 +628,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="5274.8" y="3714.6" width="147.5" height="126.4" id="gate_1_">
-	<g class="st46">
+	<g class="st46 mapObject">
 	</g>
 </mask>
 <path id="gate" class="st47 mapObject" d="M5421.7,3799.6l-1.6-5.2l-2.6-5l-3.5-4.7l-4.4-4.4l-1.2-0.9v-1.5l0.6-0.2l-0.6-0.7v-10.8l0.6-0.2
@@ -654,7 +654,7 @@ svg{
 	</filter>
 </defs>
 <mask maskUnits="userSpaceOnUse" x="5138.7" y="2720.7" width="468.2" height="316.7" id="keatingquadrangle_1_">
-	<g class="st48">
+	<g class="st48 mapObject">
 	</g>
 </mask>
 <path id="keatingquadrangle" class="st49 mapObject" d="M5606.9,2801.2l-0.6-6.5c0-0.1,0-0.1,0-0.2l-1.5-6.4c0-0.1,0-0.1-0.1-0.2l-2.3-6.3
@@ -681,6 +681,7 @@ svg{
 	</main><!-- #main -->    
 
 <script type="text/javascript">
+	console.log("cachebuster1");
 	var svg = d3.select("#campusMap");
 
 	var mapObjects = d3.select('.mapObject');
