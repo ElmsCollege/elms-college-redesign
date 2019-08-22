@@ -63,7 +63,7 @@ get_header(); ?>
 			<?php the_content() ?>
 
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="campusMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="campusMap" class="svg-pan-zoom_viewport" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve">
 <style type="text/css">
 	.st0{filter:url(#Adobe_OpacityMaskFilter);}
