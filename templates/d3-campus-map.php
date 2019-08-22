@@ -682,11 +682,12 @@ svg{
 	</main><!-- #main -->    
 
 <script type="text/javascript">
-	//console.log("cachebuster");
+	console.log("cachebuster");
 	
 	var campusMap = d3.select("#campusMap");
-	//campusMap.style("stroke", "black");
-    //campusMap.style("fill", "orange");
+    campusMap.call(d3.zoom()
+        .scaleExtent([1, 8])
+        .on("zoom", zoom));
 
 	function zoom() {
 		campusMap.attr("transform", d3.event.transform);
