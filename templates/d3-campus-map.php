@@ -684,18 +684,34 @@ svg{
 <script type="text/javascript">
 	console.log("cachebuster4");
 	
-	var campusMap = d3.select("#campusMap"),
-    width = +campusMap.attr("width"),
-    height = +campusMap.attr("height");
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
 
-    campusMap.call(d3.zoom()
-        //.scaleExtent([1, 8])
+var randomX = d3.randomNormal(width / 2, 80),
+    randomY = d3.randomNormal(height / 2, 80),
+    data = d3.range(2000).map(function() { return [randomX(), randomY()]; });
+
+var g = svg.append("g");
+
+var circle = g.selectAll("circle")
+  .data(data)
+  .enter().append("circle")
+    .attr("r", 2.5)
+    .attr("transform", function(d) { return "translate(" + d + ")"; });
+
+svg.append("rect")
+    .attr("fill", "none")
+    .attr("pointer-events", "all")
+    .attr("width", width)
+    .attr("height", height)
+    .call(d3.zoom()
+        .scaleExtent([1, 8])
         .on("zoom", zoom));
 
-	function zoom() {
-    campusMap.attr("transform", "translate(" + width / 2 + "," + height * .52 + ")")
-    .call(zoom);
-	}
+function zoom() {
+  g.attr("transform", d3.event.transform);
+}
 </script>
 <?php
 get_footer();
