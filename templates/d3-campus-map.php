@@ -685,13 +685,14 @@ svg{
 	console.log("cachebuster");
 	
 	var campusMap = d3.select("#campusMap");
-    campusMap.call(d3.zoom()
-        .scaleExtent([1, 8])
-        .on("zoom", zoom));
+	campusMap.call(zoom);
+//    campusMap.call(d3.zoom()
+        //.scaleExtent([1, 8])
+//        .on("zoom", zoom));
 
-	function zoom() {
-		campusMap.attr("transform", d3.event.transform);
-	}
+//	function zoom() {
+//		campusMap.attr("transform", d3.event.transform);
+//	}
 </script>
 <?php
 get_footer();
