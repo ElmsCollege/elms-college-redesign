@@ -17,7 +17,7 @@
 //wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
 get_header(); ?>
 
-<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js' query='#campusMap' name='pz' pz-bounds='true' pz-autocenter='true'></script>
+<!--<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js' query='#campusMap' name='pz' pz-bounds='true' pz-autocenter='true'></script>-->
 
 <style>
 	svg{
