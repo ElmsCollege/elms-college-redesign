@@ -29,7 +29,7 @@ svg{
 			<?php the_content() ?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="campusMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve" width="1000" height="500">
+	 viewBox="0 0 10000 4500" style="enable-background:new 0 0 10000 4500;" xml:space="preserve">
 <style type="text/css">
 	.st0{filter:url(#Adobe_OpacityMaskFilter);}
 	.st1{mask:url(#bluehouselot_1_);}
@@ -685,8 +685,8 @@ svg{
 	console.log("cachebuster2");
 	
 	var campusMap = d3.select("#campusMap")
-	    .attr("width", width)
-    .attr("height", height);
+	    .attr("width", "1000")
+    .attr("height", "500");
 
     campusMap.call(d3.zoom()
         //.scaleExtent([1, 8])
