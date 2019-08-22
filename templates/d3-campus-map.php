@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Campus Map
+ * Template Name: d3 Campus Map
  * This template has been customized to display the SVG-based campus map.
  *
  * This is the template that displays all pages by default.
@@ -13,50 +13,12 @@
  * @package Elms_College_Redesign
  */
 
-wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
-wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
+wp_enqueue_script('d3-js','https://d3js.org/d3.v5.min.js');
 
 get_header(); ?>
-<style>
-	#primary{
-		max-width:100%;
-		padding-top:0;
-	}
-.field-content{
-	min-height:500px;
-}
-#campusMap{
-	width:100%;
-	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
-	background-size:cover;
-}
-.ui-dialog{
-	z-index:10;
-	width:80% !important;
-	border:2px solid #004731;
-	border-radius:5px;
-}
-.ui-dialog-content.ui-widget-content{
-	padding:10px;	
-}
-.ui-widget-overlay{
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	opacity:.7;
-}
-.slick-slide {
-	margin: 0 10px;
-	display: inline-block !important;
-	float: none;
-	vertical-align: middle;
-}
-</style>
 
 <?php get_template_part("template-parts/page-heading"); ?>
 
-<div id="primary" class="content-area pure-g">
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div class="field-content">
@@ -711,61 +673,22 @@ get_header(); ?>
 	C5606.9,2801.3,5606.9,2801.3,5606.9,2801.2z"/>
 </svg>
 
-<div id="Berchmans">
-<?php
-// WP_Query arguments
-$args = array(
-	'page_id'                => '36525',
-);
-
-// The Query
-$query = new WP_Query( $args );
-
-// The Loop
-if ( $query->have_posts() ) {
-	while ( $query->have_posts() ) {
-		$query->the_post();
-		the_excerpt();
-		echo do_shortcode("[slideshow_gallery_modal]");
-	}
-}
-// Restore original Post Data
-wp_reset_postdata();
-?>
-</div>
 
 		</div>
 
 
 	</main><!-- #main -->    
-</div><!-- #primary -->
 
-<script>
-jQuery(window).load(function () {
-
-//	svgPanZoom("#campusMap", {
-//    	zoomEnabled: true,
-//		controlIconsEnabled: true
-//	});
-
-	jQuery("#gaylordmansion").click(function(){
-		alert("you just clicked on gaylord mansion");
-	});
+<script type="text/javascript">
+	var svg = d3.select("body").select("svg");
+    var circle = svg.append("circle")
+		.attr("cx", 50)
+		.attr("cy", 50)
+		.attr("r", 20)
+		.style("color", "green")
+		.attr("xlink:href", "/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg")
+	;
 	
-/*
-	jQuery(".slider-modal").slick({
-		slidesToShow: 3,
-		lazyLoad: 'ondemand',
-	});
-
-	modalDivs.dialog({
-  		open: function( event, ui ) {
-			jQuery(".slider-modal").slick('setPosition');
-  		}
-	});
-*/
-
-} );
 </script>
 
 <?php
