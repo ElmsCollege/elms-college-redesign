@@ -19,6 +19,14 @@ get_header(); ?>
 
 <?php get_template_part("template-parts/page-heading"); ?>
 
+<style>
+svg{
+	width:100%;
+	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
+	background-size:cover;
+}
+
+</style>
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div class="field-content">
@@ -680,15 +688,13 @@ get_header(); ?>
 	</main><!-- #main -->    
 
 <script type="text/javascript">
-	var svg = d3.select("body").select("svg");
-    var circle = svg.append("circle")
-		.attr("cx", 50)
-		.attr("cy", 50)
-		.attr("r", 20)
-		.style("color", "green")
-		.attr("xlink:href", "/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg")
-	;
+	var svg = d3.select("svg");
 	
+	var g = svg.append("g");
+
+	function zoom() {
+		g.attr("transform", d3.event.transform);
+	}
 </script>
 
 <?php
