@@ -17,7 +17,7 @@
 //wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
 get_header(); ?>
 
-<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js'></script>
+<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js' query='campusMap' name='pz' pz-bounds='true' pz-autocenter='true'></script>
 
 <?php get_template_part("template-parts/page-heading"); ?>
 
@@ -25,7 +25,7 @@ get_header(); ?>
 
 		<div id="svg-container" class="field-content">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 10000 auto" xml:space="preserve">
+	 viewBox="0 0 10000 auto" xml:space="preserve" width="1000" height="500">
 	<g id="campusMap">
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
 	c0,0-0.1-0.1-0.1-0.1c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.1-0.2-0.2c0,0,0,0,0,0l0,0c0,0,0,0,0,0l-170-123.1c-0.5-0.4-1.2-0.4-1.7-0.1
@@ -394,8 +394,6 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-var area = document.getElementById('campusMap')
-window.pz = panzoom(area, {autocenter: true, bounds: true})
 </script>
 <?php
 get_footer();
