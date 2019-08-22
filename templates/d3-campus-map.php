@@ -87,7 +87,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="723.2" y="1373.1" width="559.4" height="373.5" id="bluehouselot_1_">
+<mask maskUnits="userSpaceOnUse" x="723.2" y="1373.1" width="559.4" height="373.5" id="bluehouselot_1_" class="mapObject">
 	<g class="st0 mapObject">
 	</g>
 </mask>
@@ -108,7 +108,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6139.7" y="2811.5" width="2140.4" height="1260.3" id="admissionsaccessiblevisitorsapermitlot_1_">
+<mask maskUnits="userSpaceOnUse" x="6139.7" y="2811.5" width="2140.4" height="1260.3" id="admissionsaccessiblevisitorsapermitlot_1_" class="mapObject">
 	<g class="st2 mapObject">
 	</g>
 </mask>
@@ -144,7 +144,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="3735.6" y="2822.5" width="830.5" height="348.3" id="libraryparkinglot_1_">
+<mask maskUnits="userSpaceOnUse" x="3735.6" y="2822.5" width="830.5" height="348.3" id="libraryparkinglot_1_" class="mapObject">
 	<g class="st4 mapObject">
 	</g>
 </mask>
@@ -162,7 +162,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6516.9" y="1021.5" width="2431.5" height="1066.7" id="maguireberchmanspermitparking_1_">
+<mask maskUnits="userSpaceOnUse" x="6516.9" y="1021.5" width="2431.5" height="1066.7" id="maguireberchmanspermitparking_1_" class="mapObject">
 	<g class="st6 mapObject">
 	</g>
 </mask>
@@ -189,7 +189,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="1959.2" y="1169.8" width="1435.8" height="1161.5" id="permitparkinglot_1_">
+<mask maskUnits="userSpaceOnUse" x="1959.2" y="1169.8" width="1435.8" height="1161.5" id="permitparkinglot_1_" class="mapObject">
 	<g class="st8 mapObject">
 	</g>
 </mask>
@@ -243,7 +243,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="8540.6" y="1783.6" width="1347.6" height="689.5" id="cherylcondonsoftballfield_1_">
+<mask maskUnits="userSpaceOnUse" x="8540.6" y="1783.6" width="1347.6" height="689.5" id="cherylcondonsoftballfield_1_" class="mapObject">
 	<g class="st10 mapObject">
 	</g>
 </mask>
@@ -257,7 +257,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="7122.3" y="1593.1" width="1744.2" height="1204.9" id="learyfield_1_">
+<mask maskUnits="userSpaceOnUse" x="7122.3" y="1593.1" width="1744.2" height="1204.9" id="learyfield_1_" class="mapObject">
 	<g class="st12 mapObject">
 	</g>
 </mask>
@@ -270,7 +270,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="1851.4" y="1702.8" width="370.1" height="326.6" id="gaylordmansion_1_" title="Gaylord Mansion">
+<mask maskUnits="userSpaceOnUse" x="1851.4" y="1702.8" width="370.1" height="326.6" id="gaylordmansion_1_" title="Gaylord Mansion" class="mapObject">
 	<g class="st14 mapObject">
 	</g>
 </mask>
@@ -297,7 +297,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="653.7" y="1353.4" width="275.6" height="219.6" id="bluehouse_1_">
+<mask maskUnits="userSpaceOnUse" x="653.7" y="1353.4" width="275.6" height="219.6" id="bluehouse_1_" class="mapObject">
 	<g class="st16 mapObject">
 	</g>
 </mask>
@@ -315,7 +315,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="4417.3" y="2051.3" width="951" height="726.9" id="marydooleycollegecenter_1_">
+<mask maskUnits="userSpaceOnUse" x="4417.3" y="2051.3" width="951" height="726.9" id="marydooleycollegecenter_1_" class="mapObject">
 	<g class="st18 mapObject">
 	</g>
 </mask>
@@ -332,7 +332,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="3264.9" y="2122.6" width="327.7" height="244.8" id="brickhouse_1_">
+<mask maskUnits="userSpaceOnUse" x="3264.9" y="2122.6" width="327.7" height="244.8" id="brickhouse_1_" class="mapObject">
 	<g class="st20 mapObject">
 	</g>
 </mask>
@@ -350,7 +350,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="4493.9" y="2780.9" width="752.9" height="567.7" id="alumnaelibrary_1_">
+<mask maskUnits="userSpaceOnUse" x="4493.9" y="2780.9" width="752.9" height="567.7" id="alumnaelibrary_1_" class="mapObject">
 	<g class="st22 mapObject">
 	</g>
 </mask>
@@ -368,7 +368,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="3939" y="1706.8" width="356.2" height="306.2" id="yellowhouse_1_">
+<mask maskUnits="userSpaceOnUse" x="3939" y="1706.8" width="356.2" height="306.2" id="yellowhouse_1_" class="mapObject">
 	<g class="st24 mapObject">
 	</g>
 </mask>
@@ -415,7 +415,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6356.8" y="3931.2" width="315.2" height="308.5" id="spauldinghouse_1_">
+<mask maskUnits="userSpaceOnUse" x="6356.8" y="3931.2" width="315.2" height="308.5" id="spauldinghouse_1_" class="mapObject">
 	<g class="st26 mapObject">
 	</g>
 </mask>
@@ -444,7 +444,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="5641.5" y="1264.3" width="216.3" height="216" id="marianhall_1_">
+<mask maskUnits="userSpaceOnUse" x="5641.5" y="1264.3" width="216.3" height="216" id="marianhall_1_" class="mapObject">
 	<g class="st28 mapObject">
 	</g>
 </mask>
@@ -460,7 +460,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="5241.2" y="1562.4" width="858.4" height="471.6" id="rosewilliamhall_1_">
+<mask maskUnits="userSpaceOnUse" x="5241.2" y="1562.4" width="858.4" height="471.6" id="rosewilliamhall_1_" class="mapObject">
 	<g class="st30 mapObject">
 	</g>
 </mask>
@@ -476,7 +476,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="7495.6" y="2920.2" width="477.2" height="361.5" id="devinehall_1_">
+<mask maskUnits="userSpaceOnUse" x="7495.6" y="2920.2" width="477.2" height="361.5" id="devinehall_1_" class="mapObject">
 	<g class="st32 mapObject">
 	</g>
 </mask>
@@ -491,7 +491,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6753.6" y="2227.2" width="1115" height="875.4" id="maguirecenter_1_">
+<mask maskUnits="userSpaceOnUse" x="6753.6" y="2227.2" width="1115" height="875.4" id="maguirecenter_1_" class="mapObject">
 	<g class="st34 mapObject">
 	</g>
 </mask>
@@ -513,7 +513,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6027.8" y="1891.8" width="694.2" height="679" id="olearyhall_1_">
+<mask maskUnits="userSpaceOnUse" x="6027.8" y="1891.8" width="694.2" height="679" id="olearyhall_1_" class="mapObject">
 	<g class="st36 mapObject">
 	</g>
 </mask>
@@ -542,7 +542,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6822.5" y="1913.2" width="263.1" height="212.9" id="facilitiesgarage_1_">
+<mask maskUnits="userSpaceOnUse" x="6822.5" y="1913.2" width="263.1" height="212.9" id="facilitiesgarage_1_" class="mapObject">
 	<g class="st38 mapObject">
 	</g>
 </mask>
@@ -555,7 +555,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6909.7" y="1285.7" width="307.4" height="360.8" id="physicalplant_1_">
+<mask maskUnits="userSpaceOnUse" x="6909.7" y="1285.7" width="307.4" height="360.8" id="physicalplant_1_" class="mapObject">
 	<g class="st40 mapObject">
 	</g>
 </mask>
@@ -586,7 +586,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="6112.2" y="2484.8" width="380" height="456.6" id="lyoncenter_1_">
+<mask maskUnits="userSpaceOnUse" x="6112.2" y="2484.8" width="380" height="456.6" id="lyoncenter_1_" class="mapObject">
 	<g class="st42 mapObject">
 	</g>
 </mask>
@@ -601,7 +601,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="5680.3" y="2649" width="1082.5" height="982.1" id="berchmanshall_1_">
+<mask maskUnits="userSpaceOnUse" x="5680.3" y="2649" width="1082.5" height="982.1" id="berchmanshall_1_" class="mapObject">
 	<g class="st44 mapObject">
 	</g>
 </mask>
@@ -627,7 +627,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="5274.8" y="3714.6" width="147.5" height="126.4" id="gate_1_">
+<mask maskUnits="userSpaceOnUse" x="5274.8" y="3714.6" width="147.5" height="126.4" id="gate_1_" class="mapObject">
 	<g class="st46 mapObject">
 	</g>
 </mask>
@@ -653,7 +653,7 @@ svg{
 		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 	</filter>
 </defs>
-<mask maskUnits="userSpaceOnUse" x="5138.7" y="2720.7" width="468.2" height="316.7" id="keatingquadrangle_1_">
+<mask maskUnits="userSpaceOnUse" x="5138.7" y="2720.7" width="468.2" height="316.7" id="keatingquadrangle_1_" class="mapObject">
 	<g class="st48 mapObject">
 	</g>
 </mask>
