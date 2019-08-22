@@ -13,9 +13,9 @@
  * @package Elms_College_Redesign
  */
 
-wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
-wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
-
+//wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
+//wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
+wp_enqueue_script ('panzoom2', 'https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js');
 get_header(); ?>
 
 <?php get_template_part("template-parts/page-heading"); ?>
@@ -392,16 +392,11 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-      // Don't use window.onLoad like this in production, because it can only listen to one function.
-      window.onload = function() {
-        // Expose to window namespase for testing purposes
-        window.zoomTiger = svgPanZoom('#Layer_1', {
-          zoomEnabled: true,
-          fit: true,
-          center: true,
-          // viewportSelector: document.getElementById('demo-tiger').querySelector('#g4') // this option will make library to misbehave. Viewport should have no transform attribute
-        });
-      };
-    </script>
+var element = document.getElementById('#Layer_1')
+
+// and forward it it to panzoom.
+panzoom(element)    
+
+</script>
 <?php
 get_footer();
