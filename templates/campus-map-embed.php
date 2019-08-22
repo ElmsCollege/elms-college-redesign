@@ -19,6 +19,12 @@ get_header(); ?>
 
 <script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js' query='#campusMap' name='pz' pz-bounds='true' pz-autocenter='true'></script>
 
+<style>
+	svg{
+		width:100%;
+		height:100%;
+	}
+</style>
 <?php get_template_part("template-parts/page-heading"); ?>
 
 	<main id="main" class="site-main pure-u-1" role="main">
