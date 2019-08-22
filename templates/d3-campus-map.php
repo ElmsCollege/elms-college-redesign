@@ -693,8 +693,8 @@ svg{
         .on("zoom", zoom));
 
 	function zoom() {
-		campusMap.attr("transform", "translate(" + width / 2 + "," + height * .52 + ")")
-    .call(zoom);
+		campusMap.    svg.attr("transform", "translate(" + d3.event.translate +
+        ")scale(" + d3.event.scale + ")");
 	}
 </script>
 <?php
