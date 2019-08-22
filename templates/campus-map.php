@@ -744,13 +744,13 @@ wp_reset_postdata();
 <script>
 jQuery(window).load(function () {
 
-	alert("testing");
+	alert("testing1");
 	
 	var panZoomMap = svgPanZoom('#campusMap');
 	
 	panZoomMap('#campusMap', {
 		viewportSelector: '.testing'
-	};
+	});
 	
 	jQuery("#gaylordmansion").click(function(){
 		alert("you just clicked on gaylord mansion");
