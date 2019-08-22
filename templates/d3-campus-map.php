@@ -685,12 +685,7 @@ svg{
 	//console.log("cachebuster");
 	//var svg = d3.select("#campusMap");
 	
-	    var svg = d3.select("body")
-             .append("svg")
-             .attr("style", "outline: thin solid red;")   //This will do the job
-             //.attr("width", w)
-             //.attr("height", h);
-</script>
-
+	var map = d3.select("#campusMap");
+	alert(map);
 <?php
 get_footer();
