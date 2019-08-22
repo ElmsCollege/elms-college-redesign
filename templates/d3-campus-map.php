@@ -682,11 +682,11 @@ svg{
 	</main><!-- #main -->    
 
 <script type="text/javascript">
-	console.log("cachebuster3");
+	console.log("cachebuster4");
 	
 	var campusMap = d3.select("#campusMap"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+    width = +campusMap.attr("width"),
+    height = +campusMap.attr("height");
 
     campusMap.call(d3.zoom()
         //.scaleExtent([1, 8])
