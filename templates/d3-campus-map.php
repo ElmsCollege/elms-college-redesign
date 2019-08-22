@@ -688,8 +688,8 @@ svg{
 	    var svg = d3.select("body")
              .append("svg")
              .attr("style", "outline: thin solid red;")   //This will do the job
-             .attr("width", w)
-             .attr("height", h);
+             //.attr("width", w)
+             //.attr("height", h);
 </script>
 
 <?php
