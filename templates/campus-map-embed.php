@@ -23,7 +23,7 @@ get_header(); ?>
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div class="field-content">
-			<embed id="campus-map" type="image/svg+xml" style="width:1000px; height:500px; border:1px solid black;" src="/images/campus3d.svg" />
+			<embed id="campus-map" type="image/svg+xml" style="width:1000px; height:500px; border:1px solid black;" src="/wp-content/themes/gs_elms/images/campus3d.svg" />
 		</div>
 
 
@@ -34,7 +34,9 @@ get_header(); ?>
       window.onload = function() {
         svgPanZoom('#campusMap', {
           zoomEnabled: true,
-        });</script>
+        })
+	  };
+</script>
 
 <?php
 get_footer();
