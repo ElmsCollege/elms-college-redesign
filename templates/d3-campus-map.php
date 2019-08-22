@@ -683,10 +683,10 @@ svg{
 
 <script type="text/javascript">
 	//console.log("cachebuster");
-	//var svg = d3.select("#campusMap");
 	
-	var map = d3.select("#campusMap");
-	alert(map);
+	var campusMap = d3.select("#campusMap");
+	campusMap.style("stroke", "black");
+    campusMap.style("fill", "orange");
 
 </script>
 <?php
