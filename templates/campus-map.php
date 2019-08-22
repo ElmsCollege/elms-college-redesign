@@ -27,7 +27,8 @@ get_header(); ?>
 .field-content{
 	min-height:500px;
 }
-#campusMap{
+/*
+	#campusMap{
 	width:100%;
 	background-image:url("/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg");
 	background-size:cover;
@@ -54,6 +55,8 @@ get_header(); ?>
 	float: none;
 	vertical-align: middle;
 }
+	*/
+	
 </style>
 
 <?php get_template_part("template-parts/page-heading"); ?>
@@ -717,32 +720,10 @@ get_header(); ?>
 	</main><!-- #main -->    
 </div><!-- #primary -->
 
-<script>
-//jQuery(window).load(function () {
-
-//	svgPanZoom("#campusMap", {
-//    	zoomEnabled: true,
-//		controlIconsEnabled: true
-//	});
-
-//	jQuery("#gaylordmansion").click(function(){
-//		alert("you just clicked on gaylord mansion");
-//	});
+<script type="text/javascript">
+	var svg = d3.select('svg');
+	.attr('xlink:href', '/wp-content/themes/gs_elms/images/Elms-campus3d-min.jpg')
 	
-/*
-	jQuery(".slider-modal").slick({
-		slidesToShow: 3,
-		lazyLoad: 'ondemand',
-	});
-
-	modalDivs.dialog({
-  		open: function( event, ui ) {
-			jQuery(".slider-modal").slick('setPosition');
-  		}
-	});
-*/
-
-// } );
 </script>
 
 <?php
