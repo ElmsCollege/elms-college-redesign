@@ -687,5 +687,7 @@ svg{
 	
 	var map = d3.select("#campusMap");
 	alert(map);
+
+</script>
 <?php
 get_footer();
