@@ -682,7 +682,7 @@ svg{
 	</main><!-- #main -->    
 
 <script type="text/javascript">
-	console.log("cachebuster2");
+	console.log("cachebuster3");
 	
 	var campusMap = d3.select("#campusMap")
 	    .attr("width", "1000")
@@ -693,7 +693,7 @@ svg{
         .on("zoom", zoom));
 
 	function zoom() {
-		campusMap.    svg.attr("transform", "translate(" + d3.event.translate +
+		campusMap.attr("transform", "translate(" + d3.event.translate +
         ")scale(" + d3.event.scale + ")");
 	}
 </script>
