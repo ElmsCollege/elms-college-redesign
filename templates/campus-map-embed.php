@@ -413,7 +413,7 @@ get_header(); ?>
 <?php
 // WP_Query arguments
 $args = array(
-	'page_id'                => '37788',
+	'page_id'                => '37804',//page id for the Berchmans page
 );
 
 // The Query
@@ -424,7 +424,6 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
-		echo ('a');
 		echo be_display_post_blockquote();
 	}
 }
@@ -438,7 +437,7 @@ wp_reset_postdata();
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test");
+		console.log("cache test -2");
 </script>
 <?php
 get_footer();
