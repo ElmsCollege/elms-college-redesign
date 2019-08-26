@@ -385,32 +385,6 @@
 
   //});//end doc.ready
 
-	//slick slider initialization
-	$('.wp-block-gallery').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		lazyLoad: 'ondemand',
-	});
-	$('.slider-for').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.slider-nav',
-		lazyLoad: 'ondemand',
-	});
-	$('.slider-nav').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		asNavFor: '.slider-for',
-		centerMode: true,
-		focusOnSelect: true,
-		variableWidth: true,
-		lazyLoad: 'ondemand'
-	});
-
   });//end document.ready
 
 })(jQuery, window, document);

@@ -17,3 +17,6 @@ svg{
 #index{
 	min-width:300px;
 }
+.buildingContent{
+	max-width:50%;
+}

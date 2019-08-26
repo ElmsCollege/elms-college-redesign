@@ -106,10 +106,6 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gs_elms_scripts() {
-
-	wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.8.1', 'all');
-	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.8.1', 'all');
-
 	wp_enqueue_style( 'wp-block-library-css', '/wp-includes/css/dist/block-library/style.min.css', array() );
 	
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
@@ -502,50 +498,7 @@ add_filter('excerpt_more', 'excerpt_readmore');
 
 add_filter('acf/format_value/type=text', 'do_shortcode');
 
-// Add Shortcode that changes the ACF gallery into a slideshow
-function slideshow_shortcode() {
-ob_start();
-	//slider_portfolio = Gallery Field
-	$images = get_field('slideshow_gallery');
-	$size = 'large'; // (thumbnail, medium, large, full or custom size)
-	if( $images ): ?>
-	   <div class="slider-for">
-	            <?php foreach( $images as $image ): ?>
-	                <div class="slick-container">
-	                    <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-	                </div>
-	            <?php endforeach; ?>
-	    </div>
-	   <div class="slider-nav">
-	            <?php foreach( $images as $image ): ?>
-	                <div>
-	                    <?php echo wp_get_attachment_image( $image['ID'], "thumbnail" ); ?>
-	                </div>
-	            <?php endforeach; ?>
-	    </div>
-	<?php endif;
-return ob_get_clean();
-}
-add_shortcode( 'slideshow_gallery', 'slideshow_shortcode' );
-
-function slideshow_shortcode_modal() {
-ob_start();
-	//slider_portfolio = Gallery Field
-	$images = get_field('slideshow_gallery');
-	if( $images ): ?>
-	   <div class="slider-modal">
-	            <?php foreach( $images as $image ): ?>
-	                <div class="slick-container">
-	                    <img data-lazy="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-	                </div>
-	            <?php endforeach; ?>
-	    </div>
-	<?php endif;
-return ob_get_clean();
-}
-add_shortcode( 'slideshow_gallery_modal', 'slideshow_shortcode_modal' );
-
-function display_post_gallery() {
+function display_post_carousel() {
   global $post;
   $blocks = parse_blocks( $post->post_content );
   foreach( $blocks as $block ) {

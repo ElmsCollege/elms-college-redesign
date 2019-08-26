@@ -425,7 +425,7 @@ if ( $query->have_posts() ) {
 		$query->the_post();
 		echo '<div id="" class="buildingContent">';
 		the_excerpt();
-		echo display_post_gallery();
+		echo display_post_carousel();
 		echo '</div>';
 	}
 }
