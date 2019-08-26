@@ -410,33 +410,15 @@ get_header(); ?>
 </svg>
 			<div id="index">
 				<h4>Index</h4>
-
-				<?php 
-
-$images = get_field('berchmans_gallery');
-
-if( $images ): ?>
-    <div id="slider" class="flexslider">
-        <ul class="slides">
-            <?php foreach( $images as $image ): ?>
-                <li>
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                    <p><?php echo $image['caption']; ?></p>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-    <div id="carousel" class="flexslider">
-        <ul class="slides">
-            <?php foreach( $images as $image ): ?>
-                <li>
-                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-<?php endif; ?>
-				
+				<?php
+  $blocks = parse_blocks( $post->post_content );
+  foreach( $blocks as $block ) {
+    if( 'BerchmansGallery' === $block['blockName'] ) {
+      echo render_block( $block );
+      break;
+    }
+  }
+				?>
 			</div>
 		</div>
 
