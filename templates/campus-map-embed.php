@@ -13,23 +13,15 @@
  * @package Elms_College_Redesign
  */
 
-//wp_enqueue_style ( 'jquery-ui', get_template_directory_uri() . '/jquery-ui.theme.min.css' );
-//wp_enqueue_script ( 'pan-zoom', get_template_directory_uri() . '/js/svg-pan-zoom.min.js' );
+wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
+
 get_header(); ?>
 
 <script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js' query='#campusMap' name='pz' pz-bounds='true' pz-autocenter='true'></script>
 
-<style>
-	svg{
-		width:100%;
-		height:100%;
-	}
-</style>
-<?php get_template_part("template-parts/page-heading"); ?>
-
 	<main id="main" class="site-main pure-u-1" role="main">
 
-		<div id="svg-container" class="field-content">
+		<div id="svg-container" class="flexRowWrapStart spaceBetween">
 <svg id="Layer_1" viewBox="0 0 10000 4500" xml:space="preserve" preserveAspectRatio="xMidYMid meet" width="1280" height="576" >
 	<g id="campusMap">
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
@@ -416,13 +408,16 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 	</g>
 </svg>
+			<div id="index">
+				<h4>Index</h4>
+			</div>
 		</div>
 
 
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test");
+//		console.log("cache test");
 </script>
 <?php
 get_footer();

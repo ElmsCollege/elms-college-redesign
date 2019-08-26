@@ -1,0 +1,18 @@
+/* stylesheet for the campus map page */
+.fullWidth.social-media{
+	display:none;
+}
+footer{
+	border-top:2px solid #115438;
+}
+#svg-container{
+}
+svg{
+	width:70%;
+	height:auto;
+	min-width:300px;
+}
+#index{
+	border-right:5px solid black;
+	min-width:300px;
+}
