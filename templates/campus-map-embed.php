@@ -413,7 +413,7 @@ get_header(); ?>
 <?php
 // WP_Query arguments
 $args = array(
-	'page_id'                => '37804',//page id for the Berchmans page
+	'page_id'                => '37804,37814',
 );
 
 // The Query
@@ -424,6 +424,7 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		echo '<div id="" class="buildingContent">';
+		echo '<h4>' .the_title() .'</h4>';
 		the_excerpt();
 		echo display_post_carousel();
 		echo '</div>';
