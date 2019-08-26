@@ -354,7 +354,7 @@ get_header(); ?>
 	6226.2,2525.4 6206.3,2563.8 6192.4,2572.6 6193.9,2573.7 6193.9,2634.7 6158.1,2657.2 6156.8,2654.2 6149.7,2658.7 6112.2,2688.4 
 	6128.7,2726.5 6180,2763.7 6180,2925.5 6192.4,2934.4 6195.6,2937.2 6195.6,2941.4 6491.5,2754.7 6492.2,2754.7 6492.3,2568.4 ">
 		<title>Lyons Center</title></polygon>
-<polygon points="6697.5,3138.5 6687.2,3131 6758.4,3086.2 6758.4,2982.9 6762.9,2980.1 6759.4,2977.6 6759.4,2972.9 6754.4,2969.2 
+<polygon id="berchmans" points="6697.5,3138.5 6687.2,3131 6758.4,3086.2 6758.4,2982.9 6762.9,2980.1 6759.4,2977.6 6759.4,2972.9 6754.4,2969.2 
 	6754.4,2968.8 6754.1,2969 6722,2945.8 6722,2878.8 6725.4,2876.7 6626.1,2698.3 6586.9,2711.9 6581.6,2699 6570.8,2705.8 
 	6558.2,2649 6555.3,2649 6536.2,2727.5 6529.9,2731.6 6529.9,2731.8 6529.8,2731.9 6527,2732.9 6195.6,2941.4 6195.6,2937.2 
 	6192.4,2934.4 6180,2925.5 6180,2763.7 6128.7,2726.5 6109.7,2682.6 6033.2,2730.7 6033.2,2719.9 6033.9,2719.4 6032.3,2716.5 
@@ -411,12 +411,26 @@ get_header(); ?>
 			<div id="index">
 				<h4>Index</h4>
 				<?php
-				$args = array(
-    'category' => 1112,
-    'post_type' => 'attachment'
+				$query_images_args = array(
+    'post_type' => 'attachment',
+    'post_mime_type' =>'image',
+    'post_status' => 'inherit',
+    'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'attachment_category',
+            'field'    => 'term_id',
+            'terms'    => '1112',
+        ),
+    ),
 );
-
-$attachments = get_posts($args);
+$query_images = new WP_Query( $query_images_args );
+				
+$query_images = new WP_Query( $query_images_args );
+$images = array();
+foreach ( $query_images->posts as $image) {
+    $images[]= wp_get_attachment_url( $image->ID );
+}
 				?>
 			</div>
 		</div>
