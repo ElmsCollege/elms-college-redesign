@@ -411,6 +411,7 @@ get_header(); ?>
 			<div id="index">
 				<h4>Index</h4>
 				<?php
+				global $post;
   $blocks = parse_blocks( $post->post_content );
   foreach( $blocks as $block ) {
     if( 'BerchmansGallery' === $block['blockName'] ) {
