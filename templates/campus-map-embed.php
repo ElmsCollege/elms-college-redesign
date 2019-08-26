@@ -437,7 +437,7 @@ wp_reset_postdata();
 	</main><!-- #main -->
 
     <script>
-//		console.log("cache test");
+		console.log("cache test");
 </script>
 <?php
 get_footer();
