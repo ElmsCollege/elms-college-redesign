@@ -549,11 +549,9 @@ function be_display_post_blockquote() {
   global $post;
   $blocks = parse_blocks( $post->post_content );
   foreach( $blocks as $block ) {
-	  if ( has_block( 'gallery', $post ) ) {
-    //if( 'core/gallery' === $block['blockName'] ) {
-		$post_blocks = parse_blocks($post->post_content);
-		$ids = $post_blocks[0][attrs][ids];
-		break;
+    if( 'core/gallery' === $block['blockName'] ) {
+      echo render_block( $block );
+      break;
     }
   }
 }

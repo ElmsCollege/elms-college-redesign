@@ -424,6 +424,7 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		the_excerpt();
+		echo ('a');
 		echo be_display_post_blockquote();
 	}
 }
