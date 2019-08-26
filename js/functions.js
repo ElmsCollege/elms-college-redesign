@@ -391,7 +391,6 @@
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
-		asNavFor: '.slider-nav',
 		lazyLoad: 'ondemand',
 	});
 	$('.slider-for').slick({
