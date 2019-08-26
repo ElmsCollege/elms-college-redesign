@@ -416,14 +416,16 @@ get_header(); ?>
     'post_mime_type' =>'image',
     'post_status' => 'inherit',
     'posts_per_page' => -1,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'attachment_category',
-            'field'    => 'term_id',
-            'terms'    => '1112',
-        ),
-    ),
-);
+'tax_query' => array(
+    array(
+        'taxonomy' => 'media_category',
+        'terms' => 'berchmans',
+        'field' => 'slug',
+        'include_children' => true,
+        'operator' => 'IN'
+    )
+),);
+				
 $query_images = new WP_Query( $query_images_args );
 				
 $query_images = new WP_Query( $query_images_args );
