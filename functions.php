@@ -550,8 +550,9 @@ function be_display_post_blockquote() {
   $blocks = parse_blocks( $post->post_content );
   foreach( $blocks as $block ) {
     if( 'core/gallery' === $block['blockName'] ) {
-      echo render_block( $block );
-      break;
+		$post_blocks = parse_blocks($post->post_content);
+		$ids = $post_blocks[0][attrs][ids];
+		break;
     }
   }
 }
