@@ -549,7 +549,7 @@ function display_post_gallery() {
   global $post;
   $blocks = parse_blocks( $post->post_content );
   foreach( $blocks as $block ) {
-    if( 'core/gallery' === $block['blockName'] ) {
+    if( 'cb/carousel' === $block['blockName'] ) {
       echo render_block( $block );
       break;
     }
