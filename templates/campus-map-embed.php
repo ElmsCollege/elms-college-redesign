@@ -410,6 +410,14 @@ get_header(); ?>
 </svg>
 			<div id="index">
 				<h4>Index</h4>
+				<?php
+				$args = array(
+    'category' => 1112,
+    'post_type' => 'attachment'
+);
+
+$attachments = get_posts($args);
+				?>
 			</div>
 		</div>
 
