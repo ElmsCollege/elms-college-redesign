@@ -423,8 +423,10 @@ $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post();
+		echo '<div id="" class="buildingContent">';
 		the_excerpt();
-		echo be_display_post_blockquote();
+		echo display_post_gallery();
+		echo '</div>';
 	}
 }
 // Restore original Post Data

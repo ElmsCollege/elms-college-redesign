@@ -386,6 +386,14 @@
   //});//end doc.ready
 
 	//slick slider initialization
+	$('.wp-block-gallery').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav',
+		lazyLoad: 'ondemand',
+	});
 	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,

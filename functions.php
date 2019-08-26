@@ -545,7 +545,7 @@ return ob_get_clean();
 }
 add_shortcode( 'slideshow_gallery_modal', 'slideshow_shortcode_modal' );
 
-function be_display_post_blockquote() {
+function display_post_gallery() {
   global $post;
   $blocks = parse_blocks( $post->post_content );
   foreach( $blocks as $block ) {
