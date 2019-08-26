@@ -545,6 +545,17 @@ return ob_get_clean();
 }
 add_shortcode( 'slideshow_gallery_modal', 'slideshow_shortcode_modal' );
 
+function be_display_post_blockquote() {
+  global $post;
+  $blocks = parse_blocks( $post->post_content );
+  foreach( $blocks as $block ) {
+    if( 'core/gallery' === $block['blockName'] ) {
+      echo render_block( $block );
+      break;
+    }
+  }
+}
+
 add_filter('acf/format_value/type=text', 'do_shortcode');
 
 function get_first_paragraph(){

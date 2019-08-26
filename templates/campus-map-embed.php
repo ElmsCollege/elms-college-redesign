@@ -410,16 +410,26 @@ get_header(); ?>
 </svg>
 			<div id="index">
 				<h4>Index</h4>
-				<?php
-				global $post;
-  $blocks = parse_blocks( $post->post_content );
-  foreach( $blocks as $block ) {
-    if( 'BerchmansGallery' === $block['blockName'] ) {
-      echo render_block( $block );
-      break;
-    }
-  }
-				?>
+<?php
+// WP_Query arguments
+$args = array(
+	'page_id'                => '37788',
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+// The Loop
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		the_excerpt();
+		echo be_display_post_blockquote();
+	}
+}
+// Restore original Post Data
+wp_reset_postdata();
+?>
 			</div>
 		</div>
 
