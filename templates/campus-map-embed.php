@@ -410,30 +410,33 @@ get_header(); ?>
 </svg>
 			<div id="index">
 				<h4>Index</h4>
-				<?php
-				$query_images_args = array(
-    'post_type' => 'attachment',
-    'post_mime_type' =>'image',
-    'post_status' => 'inherit',
-    'posts_per_page' => -1,
-'tax_query' => array(
-    array(
-        'taxonomy' => 'media_category',
-        'terms' => 'berchmans',
-        'field' => 'slug',
-        'include_children' => true,
-        'operator' => 'IN'
-    )
-),);
+
+				<?php 
+
+$images = get_field('berchmans_gallery');
+
+if( $images ): ?>
+    <div id="slider" class="flexslider">
+        <ul class="slides">
+            <?php foreach( $images as $image ): ?>
+                <li>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <p><?php echo $image['caption']; ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <div id="carousel" class="flexslider">
+        <ul class="slides">
+            <?php foreach( $images as $image ): ?>
+                <li>
+                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
 				
-$query_images = new WP_Query( $query_images_args );
-				
-$query_images = new WP_Query( $query_images_args );
-$images = array();
-foreach ( $query_images->posts as $image) {
-    $images[]= wp_get_attachment_url( $image->ID );
-}
-				?>
 			</div>
 		</div>
 
