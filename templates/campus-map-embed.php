@@ -422,9 +422,8 @@ get_header(); ?>
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			$title = preg_replace('Private ', '', get_the_title(get_the_ID()));
-			echo '<div id="' .$title . '" class="buildingContent">';
-			echo '<h4>' .$title .'</h4>';
+			echo '<div id="' .get_the_title() . '" class="buildingContent">';
+			echo '<h4>' .get_the_title() .'</h4>';
 			the_excerpt();
 			echo display_post_carousel();
 			echo '</div>';
@@ -440,7 +439,7 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test - 5");
+		console.log("cache test - 6");
 </script>
 <?php
 get_footer();
