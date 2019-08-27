@@ -23,3 +23,6 @@ svg{
 .buildingContent{
 	max-width:50%;
 }
+.ui-accordion-header{
+	width:100%;
+}
