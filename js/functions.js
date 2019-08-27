@@ -386,6 +386,7 @@
 	jQuery('.carousel').slick({
 		dots: true,
 		arrows: true,
+		centerMode: true
 	});
 
 //	jQuery( "#index" ).accordion({
