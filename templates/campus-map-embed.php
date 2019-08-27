@@ -446,7 +446,7 @@ if( have_rows('building_info_container') ):
 
 $images = get_sub_field('building_gallery');
 ?>
-<div class="modal micromodal-slide" aria-hidden="true">
+<div class="modal micromodal-slide" id="<?php print the_sub_field('building_name_short'); ?>" aria-hidden="true">
 	<div class="modal_overlay" tabindex="-1" data-custom-close>
 		<div class="modal_container" role="dialog" aria-modal="true" aria-labelledby="<?php print the_sub_field('building_name_short'); ?>-title">
 			<header class="modal_header">
