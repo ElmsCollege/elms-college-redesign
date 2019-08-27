@@ -411,7 +411,30 @@ get_header(); ?>
 			<div id="index">
 				<h4>Index</h4>
 <?php
-?>
+// check if the repeater field has rows of data
+if( have_rows('building_field') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('building_field') ) : the_row();
+
+$images = get_sub_field('building_gallery');
+
+		if( $images ): ?>
+			<ul>
+				<?php 
+				the_sub_field('building_name_short');
+				foreach( $images as $image ): ?>
+					<li>
+							 <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<p><?php echo $image['caption']; ?></p>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; 
+
+    endwhile;
+endif;
+				?>
 			</div>
 		</div>
 
