@@ -388,3 +388,10 @@
   });//end document.ready
 
 })(jQuery, window, document);
+
+// Initial config for setting up modals
+MicroModal.init({
+	openTrigger: 'data-custom-open',
+	disableScroll: false,
+	awaitCloseAnimation: true
+});
