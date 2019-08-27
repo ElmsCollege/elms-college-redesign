@@ -389,7 +389,9 @@
 		collapsible:true
 	});
 	jQuery('.carousel').slick({
-		variableWidth: true
+		variableWidth: true,
+		slidesToShow: 1,
+		centerMode: true,
 	});
 
   });//end document.ready
