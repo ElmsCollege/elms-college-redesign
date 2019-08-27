@@ -383,7 +383,7 @@
 		});
 	});//end JS for the Gutenberg FAQ blocks
 
-	jQuery('#accordion h3').click(function() {
+	jQuery('#index h3').click(function() {
 		jQuery(".carousel").slick("refresh");
 		console.log("click test - 1");
 
