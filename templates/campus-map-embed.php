@@ -443,7 +443,7 @@ endif;
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test - 12");
+		console.log("cache test - 13");
 
 	</script>
 
