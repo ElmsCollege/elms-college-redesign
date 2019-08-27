@@ -413,8 +413,8 @@ get_header(); ?>
 <?php
 	// WP_Query arguments
 	$args = array(
-		'page_id'                => '37804,37814',
-		'post_type'              => array( 'page' ),
+		'post__in' => array(37804, 37814),
+		'post_type' => array( 'page' ),
 	);
 	// The Query
 	$query = new WP_Query( $args );
@@ -423,8 +423,7 @@ get_header(); ?>
 		while ( $query->have_posts() ) {
 			$query->the_post();
 					echo '<div id="" class="buildingContent">';
-			$title = get_the_title();
-			$title = str_replace('Private ', '');
+			$title = preg_replace('Private ', '', get_the_title());
 			echo '<h4>' .$title .'</h4>';
 			the_excerpt();
 			echo display_post_carousel();
@@ -441,7 +440,7 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test -4");
+		console.log("cache test - 5");
 </script>
 <?php
 get_footer();
