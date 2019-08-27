@@ -12,7 +12,6 @@
  *
  * @package Elms_College_Redesign
  */
-
 wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri(). '/css/slick.css', '1.8.1', 'all');
 wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri(). '/css/slick-theme', '1.8.1', 'all');
 wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
