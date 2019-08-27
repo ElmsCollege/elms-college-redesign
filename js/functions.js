@@ -383,7 +383,7 @@
 		});
 	});//end JS for the Gutenberg FAQ blocks
 
-  //});//end doc.ready
+	$('.carousel').slick();
 
   });//end document.ready
 

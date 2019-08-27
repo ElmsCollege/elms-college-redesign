@@ -13,7 +13,11 @@
  * @package Elms_College_Redesign
  */
 
+wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri(). '/css/slick.css', '1.8.1', 'all');
+wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri(). '/css/slick-theme', '1.8.1', 'all');
+
 wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
+wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array(), '1.8.1', 'all');
 
 get_header(); ?>
 
@@ -420,16 +424,16 @@ if( have_rows('building_field') ):
 $images = get_sub_field('building_gallery');
 
 		if( $images ): ?>
-			<ul>
+				<h4><?php print the_sub_field('building_name_short'); ?></h4>
+			<div class="carousel" data-slick='{"slidesToShow": 1, "slidesToScroll": 4}'>
 				<?php 
-				the_sub_field('building_name_short');
 				foreach( $images as $image ): ?>
-					<li>
+					<div>
 							 <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<p><?php echo $image['caption']; ?></p>
-					</li>
+					</div>
 				<?php endforeach; ?>
-			</ul>
+			</div>
 		<?php endif; 
 
     endwhile;
@@ -442,7 +446,7 @@ endif;
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test - 7");
+		console.log("cache test - 8");
 </script>
 <?php
 get_footer();
