@@ -389,11 +389,11 @@
 		centerMode: true
 	});
 
-//	jQuery( "#index" ).accordion({
-//		heightStyle:"content",
-//		active:false,
-//		collapsible:true,
-//	});
+	jQuery( "#index" ).accordion({
+		heightStyle:"content",
+		active:false,
+		collapsible:true,
+	});
 
   });//end document.ready
 

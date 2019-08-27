@@ -426,7 +426,7 @@ if( have_rows('building_info_container') ):
 						foreach( $images as $image ): ?>
 							<div>
 								<img class="carouselImage" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-								<p><?php echo $image['caption']; ?></p>
+								<figcaption><?php echo $image['caption']; ?></figcaption>
 							</div>
 						<?php endforeach; ?>
 					</div>
