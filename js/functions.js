@@ -388,7 +388,9 @@
 		active:false,
 		collapsible:true
 	});
-	jQuery('.carousel').slick();
+	jQuery('.carousel').slick({
+		variableWidth: true
+	});
 
   });//end document.ready
 
