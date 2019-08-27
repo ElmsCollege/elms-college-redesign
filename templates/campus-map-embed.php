@@ -443,12 +443,9 @@ endif;
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test - 11");
+		console.log("cache test - 12");
 
-		jQuery('#accordion h3').on('click', function(e) {
-			jQuery(".carousel").slick("refresh");
-		});
-</script>
+	</script>
 
 <?php
 get_footer();
