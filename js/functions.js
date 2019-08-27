@@ -383,16 +383,19 @@
 		});
 	});//end JS for the Gutenberg FAQ blocks
 
-	jQuery('.carousel').slick({
+	  jQuery('.carousel').slick({
 		dots: true,
 		arrows: true,
 		centerMode: true
-	});
+	  });
 
 	jQuery( "#index" ).accordion({
 		heightStyle:"content",
 		active:false,
 		collapsible:true,
+		activate: function( event, ui ) {
+			jQuery('.carousel').slick('refresh');
+		}
 	});
 
   });//end document.ready
