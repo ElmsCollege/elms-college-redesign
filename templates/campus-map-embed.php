@@ -425,7 +425,7 @@ $images = get_sub_field('building_gallery');
 
 		if( $images ): ?>
 				<h4><?php print the_sub_field('building_name_short'); ?></h4>
-			<div class="carousel" data-slick='{"slidesToShow": 1, "slidesToScroll": 4}'>
+			<div class="carousel" style="width:50%;">
 				<?php 
 				foreach( $images as $image ): ?>
 					<div>
