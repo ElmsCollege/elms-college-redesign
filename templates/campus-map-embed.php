@@ -429,7 +429,7 @@ $images = get_sub_field('building_gallery');
 				<?php 
 				foreach( $images as $image ): ?>
 					<div>
-							 <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+							 <img class="carouselImage" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<p><?php echo $image['caption']; ?></p>
 					</div>
 				<?php endforeach; ?>
