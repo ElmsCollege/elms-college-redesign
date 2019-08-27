@@ -387,9 +387,9 @@
 		heightStyle:"content",
 		active:false,
 		collapsible:true,
-		beforeActivate: function(event, ui) {
-        	jQuery('.carousel').slick('unslick');
-		},
+//		beforeActivate: function(event, ui) {
+//      	jQuery('.carousel').slick('unslick');
+//		},
 		activate: function(event, ui) {
 			jQuery('.carousel').slick({
 				variableWidth: true,
