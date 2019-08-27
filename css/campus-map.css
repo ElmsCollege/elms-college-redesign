@@ -14,9 +14,11 @@ svg{
 #index{
 	min-width:300px;
 	max-width: 30%;
-	display:flex;
+/*
+	index: 	display:flex;
 	flex-flow:column nowrap;
 	align-items:center;
+*/
 }
 .buildingContent{
 	max-width:50%;
