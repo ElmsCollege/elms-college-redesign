@@ -439,6 +439,39 @@ endif;
 		console.log("cache test - 9");
 </script>
 
-
 <?php
-get_footer("map");
+
+if( have_rows('building_info_container') ):
+	while ( have_rows('building_info_container') ) : the_row();
+
+$images = get_sub_field('building_gallery');
+?>
+<div class="modal micromodal-slide" id="<?php print the_sub_field('building_name_short'); ?>" aria-hidden="true">
+	<div class="modal_overlay" tabindex="-1" data-custom-close>
+		<div class="modal_container" role="dialog" aria-modal="true" aria-labelledby="<?php print the_sub_field('building_name_short'); ?>-title">
+			<header class="modal_header">
+				<h3 class="modal_title" id="<?php print the_sub_field('building_name_short'); ?>-title">
+              		<?php print the_sub_field('building_name_full'); ?>
+            	</h3>
+			</header>
+			<div class="carousel" style="width:50%;">
+				<?php 
+				foreach( $images as $image ): ?>
+					<div>
+						<img class="carouselImage" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<p><?php echo $image['caption']; ?></p>
+					</div>
+				<?php endforeach; ?>
+			</div>
+			<footer class="modal_footer">
+				<button class="<?php print the_sub_field('building_name_short'); ?>-close-trigger" aria-label="Close this dialog window" data-micromodal-close="">Cancel</button>
+			</footer>
+		</div>
+	</div>
+</div>
+<?php
+    endwhile;
+endif;
+?>
+<?php
+get_footer();
