@@ -411,26 +411,6 @@ get_header(); ?>
 			<div id="index">
 				<h4>Index</h4>
 <?php
-	// WP_Query arguments
-	$args = array(
-		'post__in' => array(37804, 37814),
-		'post_type' => array( 'page' ),
-	);
-	// The Query
-	$query = new WP_Query( $args );
-	// The Loop
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			echo '<div id="' .get_the_title() . '" class="buildingContent">';
-			echo '<h4>' .get_the_title() .'</h4>';
-			the_excerpt();
-			echo display_post_carousel();
-			echo '</div>';
-		}
-	}
-	// Restore original Post Data
-	wp_reset_postdata();
 ?>
 			</div>
 		</div>
@@ -439,7 +419,7 @@ get_header(); ?>
 	</main><!-- #main -->
 
     <script>
-		console.log("cache test - 6");
+		console.log("cache test - 7");
 </script>
 <?php
 get_footer();
