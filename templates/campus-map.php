@@ -443,8 +443,8 @@ get_header(); ?>
 			jQuery(accordionPanel).attr({
 				"aria-hidden":"false",
 			});
-		})
-	}
+		});
+	});
 </script>
 
 <?php
