@@ -437,6 +437,13 @@ get_header(); ?>
 			5. provide a way to close the tabs when the user clicks on the next building
 		*/
 		jQuery('svg g').click(function(){
+			jQuery('.js-accordion__header').attr({
+				"aria-expanded":"false",
+				"aria-selected":"false"
+			});
+			jQuery('.js-accordion__panel').attr({
+				"aria-hidden":"true"
+			});
 			var buildingId = this.id;
 			console.log('building id= ' + buildingId);
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion__panel');
