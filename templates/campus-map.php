@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Campus Map - Embed
+ * Template Name: Campus Map template
  * This template has been customized to display the SVG-based campus map.
  *
  * This is the template that displays all pages by default.
