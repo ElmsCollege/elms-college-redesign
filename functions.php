@@ -108,7 +108,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
 function gs_elms_scripts() {
 	wp_enqueue_style( 'wp-block-library-css', '/wp-includes/css/dist/block-library/style.min.css', array() );
 
-	wp_enqueue_style( 'jquery-ui-css', get_stylesheet_directory_uri(). '/css/jquery-ui.min.css', '', 'all');
+//	wp_enqueue_style( 'jquery-ui-css', get_stylesheet_directory_uri(). '/css/jquery-ui.min.css', '', 'all');
 
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
 
@@ -119,7 +119,7 @@ function gs_elms_scripts() {
 
 	wp_enqueue_script( 'gs_elms-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20160413', true );
 
-	wp_enqueue_script( 'gs_elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20160413', true );
+//	wp_enqueue_script( 'gs_elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20160413', true );
 	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20160413', true );
 	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20160413', true );
 	wp_enqueue_script( 'gs_elms-fitie', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20160413', true );
@@ -132,7 +132,7 @@ function gs_elms_scripts() {
 	wp_enqueue_script( 'gs_elms-object-fit', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'slickjs', get_stylesheet_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
+//	wp_enqueue_script( 'slickjs', get_stylesheet_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
 	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
 
 //	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
