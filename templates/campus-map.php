@@ -410,52 +410,19 @@ get_header(); ?>
 	</g>
 </svg>
 			<div id="index" class="js-accordion">
-				<div class="js-accordion__panel">
+				<div class="berchmans js-accordion__panel">
    					<h3 class="js-accordion__header">Berchmans Hall</h3>
   						<?php echo do_shortcode('[metaslider id="37870"]'); ?>
  				</div>
-				<div class="js-accordion__panel">
+				<div class="library js-accordion__panel">
    					<h3 class="js-accordion__header">Alumnae Library</h3>
   						<?php echo do_shortcode('[metaslider id="37876"]'); ?>
  				</div>
- <div class="js-accordion__panel">
-   <h3 class="js-accordion__header">Third tab</h3>
-   <p>Content of 3rd tab</p>
- </div>
-<!--
-<?php
-// check if the repeater field has rows of data
-if( have_rows('building_info_container') ):
-
- 	// loop through the rows of data
-    while ( have_rows('building_info_container') ) : the_row(); ?>
-				<h3><?php print the_sub_field('building_name_full'); ?></h3>
-				<div>
-					<div class="carousel">
-					<?php
-						$images = get_sub_field('building_gallery');
-						foreach( $images as $image ): ?>
-							<div>
-								<img class="carouselImage" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-								<figcaption><?php echo $image['caption']; ?></figcaption>
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-	<?php
-	endwhile;
-endif;?>
--->
 			</div>
 		</div>
 
 
 	</main><!-- #main -->
-
-    <script>
-		console.log("cache test - 14");
-
-	</script>
 
 <?php
 get_footer();
