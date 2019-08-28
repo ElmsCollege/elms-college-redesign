@@ -412,6 +412,7 @@ get_header(); ?>
 	</g>
 </svg>
 			<div id="index">
+<!--
 <?php
 // check if the repeater field has rows of data
 if( have_rows('building_info_container') ):
@@ -433,9 +434,16 @@ if( have_rows('building_info_container') ):
 				</div>
 	<?php
 	endwhile;
-endif;
-				?>
-
+endif;?>
+-->
+					<h3>Berchmans Hall</h3>
+					<div id="berchmans">
+						<?php echo do_shortcode('[metaslider id="37870"]'); ?>
+					</div>
+					<h3>Alumnae Library</h3>
+					<div id="library">
+						<?php echo do_shortcode('[metaslider id="37876"]'); ?>
+					</div>
 			</div>
 		</div>
 
