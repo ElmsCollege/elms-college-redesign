@@ -35,7 +35,7 @@ svg {
 .js-accordion__panel[aria-hidden=true] {
   display: none;
 }
-
+/*
 .js-accordion__panel[role="tabpanel"] .js-accordion__header {
   display: none;
 }
@@ -57,4 +57,5 @@ button.js-accordion__header {
 .js-accordion__header[aria-selected="false"]:after {
   content: " (unselected)";
 }
+*/
 /* END styles for the aria-accordion JS library */

@@ -384,7 +384,7 @@
 	});//end JS for the Gutenberg FAQ blocks
 
 	  jQuery(function () {
-		  jQuery('#index').accordion();
+		  jQuery('.js-accordion').accordion();
 	  });
 
   });//end document.ready

@@ -409,7 +409,19 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 	</g>
 </svg>
-			<div id="index">
+			<div id="index" class="js-accordion">
+				<div class="js-accordion__panel">
+   					<h3 class="js-accordion__header">Berchmans Hall</h3>
+  						<?php echo do_shortcode('[metaslider id="37870"]'); ?>
+ 				</div>
+				<div class="js-accordion__panel">
+   					<h3 class="js-accordion__header">Alumnae Library</h3>
+  						<?php echo do_shortcode('[metaslider id="37876"]'); ?>
+ 				</div>
+ <div class="js-accordion__panel">
+   <h3 class="js-accordion__header">Third tab</h3>
+   <p>Content of 3rd tab</p>
+ </div>
 <!--
 <?php
 // check if the repeater field has rows of data
@@ -434,14 +446,6 @@ if( have_rows('building_info_container') ):
 	endwhile;
 endif;?>
 -->
-					<h3>Berchmans Hall</h3>
-					<div id="berchmans">
-						<?php echo do_shortcode('[metaslider id="37870"]'); ?>
-					</div>
-					<h3>Alumnae Library</h3>
-					<div id="library">
-						<?php echo do_shortcode('[metaslider id="37876"]'); ?>
-					</div>
 			</div>
 		</div>
 
