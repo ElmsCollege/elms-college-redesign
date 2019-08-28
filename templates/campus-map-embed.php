@@ -12,11 +12,9 @@
  *
  * @package Elms_College_Redesign
  */
-wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri(). '/css/slick.css', '1.8.1', 'all');
-wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.8.1', 'all');
 wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
 
-wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array(), '1.8.1', 'all');
+wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-accordion.js', array(), '1', 'all');
 
 get_header(); ?>
 
