@@ -18,7 +18,7 @@ wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-ac
 
 get_header(); ?>
 
-<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js' query='#campusMap' name='pz' pz-bounds='true' pz-autocenter='true'></script>
+<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js'></script>
 
 	<main id="main" class="site-main pure-u-1" role="main">
 
@@ -429,6 +429,8 @@ get_header(); ?>
 
 <script>
 	jQuery(document).ready(function(){
+		var area = document.querySelector('#Layer_1')
+		panzoom(area)
 		/* jquery plan:
 			1. find id of clicked element in svg
 			2. use find() to find the accordion section with that class
