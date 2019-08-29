@@ -456,7 +456,7 @@ get_header(); ?>
 			jQuery('.close').click(function(){
 				jQuery(accordionPanel).removeClass('visible');
 			});
-			panLeft(400);
+			instance.panLeft(400);
 
 			/*
 			jQuery('.js-accordion__header').attr({
