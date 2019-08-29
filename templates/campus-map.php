@@ -449,11 +449,11 @@ get_header(); ?>
 			jQuery('.js-accordion').hide();
 			var buildingId = this.id;
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
-			jQuery(accordionPanel).slideToggle(animate({
+			jQuery(accordionPanel).animate({
       			left: '550px',
 				height: '+=150px',
 				width: '+=150px'
-			}));
+			});
 			/*
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
