@@ -444,6 +444,8 @@ get_header(); ?>
 			jQuery('.js-accordion__panel').attr({
 				"aria-hidden":"true"
 			});
+			console.log("trying to increase the time between closing the panels and opening the new ones");
+			jQuery(this).delay(200);
 			var buildingId = this.id;
 			console.log('building id= ' + buildingId);
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion__panel');
