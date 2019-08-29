@@ -17,6 +17,10 @@ footer {
 .js-accordion__panel{
 	padding:15px;
 }
+.close{
+	display:block;
+	margin:0 auto;
+}
 /* BEGIN attempts to slide content */
 #index{
 	background-color:white;

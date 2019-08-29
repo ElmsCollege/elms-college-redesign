@@ -453,7 +453,10 @@ get_header(); ?>
 			var buildingId = this.id;
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
 			jQuery(accordionPanel).toggleClass('visible');
-			jQuery('.close').removeClass('visible');			
+			jQuery('.close').click(function(){
+				jQuery(accordionPanel).removeClass('visible');
+			});
+			panLeft(400);
 
 			/*
 			jQuery('.js-accordion__header').attr({
