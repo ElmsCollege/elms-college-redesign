@@ -16,11 +16,19 @@ footer {
 }
 /* BEGIN attempts to slide content */
 #index{
-    position:relative;
-    right:-520px;
+	width:275px;
+    position:absolute;
+	top:50px;
+    right:-300px;
 }
 .visible{
 	right:0px !important;
+}
+.transition{
+  -webkit-transition: right 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: right 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: right 0.3s ease-out;  /* Opera 10.50–12.00 */
+          transition: right 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 /* END attempts to slide content */
 /* BEGIN styles for the aria-accordion JS library */

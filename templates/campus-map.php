@@ -414,7 +414,7 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 </svg>
 		</div><!-- end #svg-container -->
-		<div id="index" class="js-accordion">
+		<div id="index" class="transition js-accordion">
 			<div class="berchmans js-accordion__panel">
    				<h3 class="berchmans js-accordion__header">Berchmans Hall</h3>
   					<?php echo do_shortcode('[metaslider id="37870"]'); ?>
