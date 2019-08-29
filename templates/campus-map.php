@@ -16,6 +16,7 @@ wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map
 
 wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-accordion.js', array(), '1', 'all');
 wp_enqueue_script( 'svgjs', 'https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.13/svg.min.js', array(), '1', 'all');
+wp_enqueue_script( 'svgselect', get_template_directory_uri() . '/js/svg.panzoom.js', array(), '1', 'all');
 wp_enqueue_script( 'svgpanzoom', get_template_directory_uri() . '/js/svg.panzoom.js', array(), '1', 'all');
 
 
