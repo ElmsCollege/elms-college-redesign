@@ -23,8 +23,8 @@ get_header(); ?>
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
-<svg id="campusMap" viewBox="0 0 10000 4500" xml:space="preserve" preserveAspectRatio="xMidYMid meet" width="1280" height="576" >
-	<!--<g id=""> -->
+<svg id="Layer_1" viewBox="0 0 10000 4500" xml:space="preserve" preserveAspectRatio="xMidYMid meet" width="1280" height="576" >
+	<g id="campusMap">
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
 	c0,0-0.1-0.1-0.1-0.1c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.1-0.2-0.2c0,0,0,0,0,0l0,0c0,0,0,0,0,0l-170-123.1c-0.5-0.4-1.2-0.4-1.7-0.1
 	l-63.6,40l-28.9-21l84.9-53.4c0.2,0.2,0.5,0.3,0.8,0.3c0.8,0,1.5-0.7,1.5-1.5v-1c0,0,0,0,0-0.1c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1
@@ -412,7 +412,7 @@ get_header(); ?>
 	c0,0,0.1,0,0.1-0.1c0.1-0.1,0.1-0.1,0.2-0.2c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0-0.1c0.1-0.1,0.1-0.2,0.2-0.3c0,0,0,0,0,0l2-4.7
 	c0-0.1,0-0.1,0.1-0.2l1.9-6.4c0-0.1,0-0.1,0-0.2l1-6.4c0-0.1,0-0.1,0-0.2l0.2-6.5v-1C5606.9,2801.3,5606.9,2801.3,5606.9,2801.2z">
 	<title>Keating Quadrangle</title></path>
-	<!--</g>-->
+	</g>
 </svg>
 			<div id="index" class="js-accordion">
 				<div class="berchmans js-accordion__panel">
@@ -436,7 +436,7 @@ get_header(); ?>
 			4. set the aria elements to the appropriate settings to they open
 			5. provide a way to close the tabs when the user clicks on the next building
 		*/
-		jQuery('svg g').click(function(){
+		jQuery('svg g:not(#campusMap)').click(function(){
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
 				"aria-selected":"false"
