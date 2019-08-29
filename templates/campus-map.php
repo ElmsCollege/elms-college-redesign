@@ -435,7 +435,7 @@ get_header(); ?>
 <script>
 	jQuery(document).ready(function(){
 		svgEle = SVG.adopt(document.getElementById('Layer_1'))
-		svgEle.select("#berchmans").stroke('yellow')
+		svgEle.selectize("#berchmans").stroke('yellow')
 //		var area = document.querySelector('#campusMap')
 //		panzoom(area)
 		/* jquery plan:
