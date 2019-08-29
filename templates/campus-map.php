@@ -15,10 +15,7 @@
 wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
 
 wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-accordion.js', array(), '1', 'all');
-wp_enqueue_script( 'svgjs', 'https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.13/svg.min.js', array(), '1', 'all');
-wp_enqueue_script( 'svgselect', get_template_directory_uri() . '/js/svg.select.js', array(), '1', 'all');
-wp_enqueue_script( 'svgpanzoom', get_template_directory_uri() . '/js/svg.panzoom.js', array(), '1', 'all');
-
+wp_enqueue_script( 'SVGPanZoom', get_template_directory_uri() . '/js/SVGPanZoom.js', array(), '1', 'all');
 
 get_header(); ?>
 
@@ -435,8 +432,9 @@ get_header(); ?>
 
 <script>
 	jQuery(document).ready(function(){
-		svgEle = SVG.adopt(document.getElementById('Layer_1'))
-		svgEle.selectize("#berchmans").stroke('yellow')
+		var instance = new SVGPanZoom($('#Layer_1')[0], {
+			eventMagnet: '.zoomThisSide'
+		});
 //		var area = document.querySelector('#campusMap')
 //		panzoom(area)
 		/* jquery plan:
