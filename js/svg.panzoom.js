@@ -1,5 +1,3 @@
-import { Svg, on, off, extend, Matrix, Box } from '@svgdotjs/svg.js'
-
 const normalizeEvent = (ev) =>
   ev.touches || [{ clientX: ev.clientX, clientY: ev.clientY }]
 
