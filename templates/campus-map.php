@@ -448,8 +448,12 @@ get_header(); ?>
 		jQuery('svg g:not(#campusMap)').on('click touch',function(){
 			jQuery('.js-accordion').hide();
 			var buildingId = this.id;
-			var accordionPanel = jQuery('.' +buildingId + '.js-accordion__panel');
-			jQuery(accordionPanel).slideToggle('slow');
+			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
+			jQuery(accordionPanel).slideToggle(animate({
+      			left: '550px',
+				height: '+=150px',
+				width: '+=150px'
+			});
 			/*
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
