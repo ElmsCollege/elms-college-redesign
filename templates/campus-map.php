@@ -23,6 +23,7 @@ get_header(); ?>
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
+			<div class="zoomThisSide">
 <svg id="Layer_1" viewBox="0 0 10000 4500" xml:space="preserve" preserveAspectRatio="xMidYMid meet" width="1280" height="576" >
 	<g id="campusMap">
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
@@ -414,6 +415,7 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 	</g>
 </svg>
+			</div>
 			<div id="index" class="js-accordion">
 				<div class="berchmans js-accordion__panel">
    					<h3 class="berchmans js-accordion__header">Berchmans Hall</h3>
@@ -429,7 +431,7 @@ get_header(); ?>
 
 <script>
 	jQuery(document).ready(function(){
-		var area = document.querySelector('#Layer_1')
+		var area = document.querySelector('.zoomThisSide')
 		panzoom(area)
 		/* jquery plan:
 			1. find id of clicked element in svg
