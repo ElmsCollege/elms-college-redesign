@@ -14,7 +14,7 @@
  */
 wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
 
-wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-accordion.js', array(), '1', 'all');
+//wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-accordion.js', array(), '1', 'all');
 wp_enqueue_script( 'SVGPanZoom', get_template_directory_uri() . '/js/SVGPanZoom.js', array(), '1', 'all');
 
 get_header(); ?>
@@ -433,6 +433,7 @@ get_header(); ?>
 		var instance = new SVGPanZoom(jQuery('#campusMap')[0], {
 			eventMagnet: '#svg-container'
 		});
+		
 //		var area = document.querySelector('#campusMap')
 //		panzoom(area)
 		/* jquery plan:
@@ -442,7 +443,13 @@ get_header(); ?>
 			4. set the aria elements to the appropriate settings to they open
 			5. provide a way to close the tabs when the user clicks on the next building
 		*/
+		jQuery('js-accordion').hide();
+		
 		jQuery('svg g:not(#campusMap)').on('click touch',function(){
+			var buildingId = this.id;
+			var accordionPanel = jQuery('.' +buildingId + '.js-accordion__panel');
+			jQuery(accordionPanel).slideToggle('slow');
+			/*
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
 				"aria-selected":"false"
@@ -462,6 +469,7 @@ get_header(); ?>
 				"aria-hidden":"false",
 			});
 			jQuery('#index').toggleClass('visible');
+			*/
 		});
 	});
 </script>
