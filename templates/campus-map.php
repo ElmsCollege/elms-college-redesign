@@ -452,17 +452,17 @@ get_header(); ?>
 			//jQuery('.js-accordion').hide();
 			jQuery('svg g').removeClass('hilite');
 			jQuery('.js-accordion').removeClass('visible');
-			instance.panLeft(600);
+			//instance.panLeft(600);
 			var buildingId = this.id;
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
 			jQuery(accordionPanel).toggleClass('visible');
 			jQuery('.close').click(function(){
 				jQuery(accordionPanel).removeClass('visible');
 				jQuery('svg g').removeClass('hilite');
-				instance.panLeft(600);
+				//instance.panLeft(600);
 			});
 			instance.panRight(600);
-			jQuery(this).addClass('hilite');
+			//jQuery(this).addClass('hilite');
 
 			/*
 			jQuery('.js-accordion__header').attr({

@@ -45,7 +45,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (!$) {
         throw new Error("Dependencies not met - jQuery is not defined");
-    };
+    }
 
     //Polyfill for AnimationFrame
     var requestAnimationFrame = window.requestAnimationFrame;
@@ -482,8 +482,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return callback(focalPoint, amount, animationTime);
                 };
 
-                ;
-
                 this.zoomIn = zoomMethod.bind(this, function (focalPoint, amount, animationTime) {
                     return _this2.zoomOut(focalPoint, -amount, animationTime);
                 });
@@ -719,12 +717,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             pinchDistance = 0;
                         };
 
-                        domBody.addEventListener("mousemove", mouseMoveCallback, true);
-                        domBody.addEventListener("touchmove", mouseMoveCallback, true);
-                        domBody.addEventListener("mouseup", mouseUpCallback, true);
-                        domBody.addEventListener("touchend", mouseUpCallback, true);
-                        domBody.addEventListener("touchcancel", mouseUpCallback, true);
-                        domBody.addEventListener("mouseout", mouseUpCallback, true);
+                        domBody.addEventListener("mousemove", mouseMoveCallback, {passive: true});
+                        domBody.addEventListener("touchmove", mouseMoveCallback, {passive: true});
+                        domBody.addEventListener("mouseup", mouseUpCallback, {passive: true});
+                        domBody.addEventListener("touchend", mouseUpCallback, {passive: true});
+                        domBody.addEventListener("touchcancel", mouseUpCallback, {passive: true});
+                        domBody.addEventListener("mouseout", mouseUpCallback, {passive: true});
                     };
                 }
 
