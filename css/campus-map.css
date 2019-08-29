@@ -4,32 +4,13 @@ footer {
 	padding-top: 25px;
 }
 #svg-container {
-}
-.zoomThisSide {
-	width: 70%;
+	width: 100%;
 	height: auto;
-	min-width: 300px;
-	border-right: 2px solid #115438;
 }
 #index {
-	min-width: 300px;
-	max-width: 30%;
-	width:100%;/*
-	index: 	display:flex;
-	flex-flow:column nowrap;
-	align-items:center;
-*/
 }
 .buildingContent {
 	max-width: 50%;
-}
-.ui-accordion {
-	width: 100%;
-}
-.carousel img {
-	width: auto;
-	margin: 0 auto;
-	max-width: 300px;
 }
 /* BEGIN styles for the aria-accordion JS library */
 .js-accordion__panel[aria-hidden=true] {

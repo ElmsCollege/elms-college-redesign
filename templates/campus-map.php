@@ -24,9 +24,7 @@ get_header(); ?>
 	<main id="main" class="site-main pure-u-1" role="main">
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
-			<div class="zoomThisSide">
-<svg id="Layer_1" viewBox="0 0 10000 4500" xml:space="preserve" preserveAspectRatio="xMidYMid meet" width="1280" height="576" >
-	<g id="campusMap">
+<svg id="campusMap" viewBox="0 0 10000 4500" xml:space="preserve" preserveAspectRatio="xMidYMid meet" width="1280" height="576" >
 <path class="st0" d="M1282.5,1626c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1c0-0.1,0-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1
 	c0,0-0.1-0.1-0.1-0.1c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.1-0.2-0.2c0,0,0,0,0,0l0,0c0,0,0,0,0,0l-170-123.1c-0.5-0.4-1.2-0.4-1.7-0.1
 	l-63.6,40l-28.9-21l84.9-53.4c0.2,0.2,0.5,0.3,0.8,0.3c0.8,0,1.5-0.7,1.5-1.5v-1c0,0,0,0,0-0.1c0-0.1,0-0.2,0-0.2c0,0,0-0.1,0-0.1
@@ -414,26 +412,24 @@ get_header(); ?>
 	c0,0,0.1,0,0.1-0.1c0.1-0.1,0.1-0.1,0.2-0.2c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0-0.1c0.1-0.1,0.1-0.2,0.2-0.3c0,0,0,0,0,0l2-4.7
 	c0-0.1,0-0.1,0.1-0.2l1.9-6.4c0-0.1,0-0.1,0-0.2l1-6.4c0-0.1,0-0.1,0-0.2l0.2-6.5v-1C5606.9,2801.3,5606.9,2801.3,5606.9,2801.2z">
 	<title>Keating Quadrangle</title></path>
-	</g>
 </svg>
-			</div>
-			<div id="index" class="js-accordion">
-				<div class="berchmans js-accordion__panel">
-   					<h3 class="berchmans js-accordion__header">Berchmans Hall</h3>
-  						<?php echo do_shortcode('[metaslider id="37870"]'); ?>
- 				</div>
-				<div class="library js-accordion__panel">
-   					<h3 class="js-accordion__header">Alumnae Library</h3>
-  						<?php echo do_shortcode('[metaslider id="37876"]'); ?>
- 				</div>
-			</div>
+		</div><!-- end #svg-container -->
+		<div id="index" class="js-accordion">
+			<div class="berchmans js-accordion__panel">
+   				<h3 class="berchmans js-accordion__header">Berchmans Hall</h3>
+  					<?php echo do_shortcode('[metaslider id="37870"]'); ?>
+ 			</div>
+			<div class="library js-accordion__panel">
+   				<h3 class="js-accordion__header">Alumnae Library</h3>
+  					<?php echo do_shortcode('[metaslider id="37876"]'); ?>
+ 			</div>
 		</div>
 	</main><!-- #main -->
 
 <script>
 	jQuery(document).ready(function(){
-		var instance = new SVGPanZoom(jQuery('#Layer_1')[0], {
-			eventMagnet: '.zoomThisSide'
+		var instance = new SVGPanZoom(jQuery('#campusMap')[0], {
+			eventMagnet: '#svg-container'
 		});
 //		var area = document.querySelector('#campusMap')
 //		panzoom(area)
