@@ -16,13 +16,16 @@ footer {
 }
 /* BEGIN attempts to slide content */
 #index{
+	background-color:white;
+}
+.accordion__header, .accordion__panel{
 	width:275px;
     position:absolute;
 	top:150px;
     right:-300px;
 }
 .visible{
-	right:0px !important;
+	right:20px !important;
 }
 .transition{
   -webkit-transition: right 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */

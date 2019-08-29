@@ -414,6 +414,7 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 </svg>
 		</div><!-- end #svg-container -->
+
 		<div id="index" class="transition js-accordion">
 			<div class="berchmans js-accordion__panel">
    				<h3 class="berchmans js-accordion__header">Berchmans Hall</h3>
@@ -443,7 +444,7 @@ get_header(); ?>
 		console.log("cachebuster");
 //		jQuery('svg g:not(#campusMap)').on('click touch',function(){
 		jQuery('svg g:not(#campusMap)').click(function(){
-
+			jQuery('.accordion__header, .accordion__panel').removeClass('visible');
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
 				"aria-selected":"false"
@@ -462,7 +463,7 @@ get_header(); ?>
 			jQuery(accordionPanel).attr({
 				"aria-hidden":"false",
 			});
-			jQuery('#index').toggleClass('visible');
+			jQuery(controlButton,accordionPanel).toggleClass('visible');
 		});
 	});
 </script>
