@@ -453,9 +453,9 @@ get_header(); ?>
 				"aria-hidden":"true"
 			});
 			var buildingId = this.id;
-			console.log('building id= ' + buildingId);
+			//console.log('building id= ' + buildingId);
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion__panel');
-			console.log('accordion panel ' + accordionPanel);
+			//console.log('accordion panel ' + accordionPanel);
 			var controlButton = jQuery(accordionPanel).prev();
 			jQuery(controlButton).attr({
 				"aria-expanded":"true",
