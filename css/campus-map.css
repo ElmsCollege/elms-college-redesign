@@ -31,6 +31,10 @@ footer {
 	right:-600px;
 	max-width:400px;
 	visibility:hidden;
+	background-color:#fff;
+}
+.js-accordion h3{
+	text-align:center;
 }
 .visible{
 	right:20px !important;
@@ -43,45 +47,3 @@ footer {
           transition: right 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 /* END attempts to slide content */
-/* BEGIN styles for the aria-accordion JS library */
-.js-accordion__panel[aria-hidden=true] {
-	display: none;
-}
-.js-accordion__panel[role="tabpanel"] .js-accordion__header {
-	display: none;
-}
-button.js-accordion__header {
-	display:block !important;
-	width:100%;
-	border:unset;
-	background-color:unset;
-	color:#115438;
-	font-weight:700;
-	text-align:left;
-	font-size:1.2em;
-}
-.animated-accordion__panel {
- display: block;
- overflow: hidden;
- opacity: 1;
- transition: visibility 0s ease, max-height 1s ease, opacity 1s ease ;
- max-height: 100em;
- /* magic number for max-height = enough height */
- visibility: visible;
- transition-delay: 0s;
- margin: 0;
- padding: 0;
-}
-/* This is the hidden state */
-[aria-hidden=true].animated-accordion__panel {
- display: block;
- max-height: 0;
- opacity: 0;
- visibility: hidden;
- transition-delay: 1s, 0s, 0s;
- margin: 0;
- padding: 0;
-}
-/* END styles for the aria-accordion JS library */
-
-

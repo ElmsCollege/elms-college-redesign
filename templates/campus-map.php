@@ -419,12 +419,15 @@ get_header(); ?>
    				<h3 class="js-accordion__header">Berchmans Hall</h3>
   					<?php echo do_shortcode('[metaslider id="37870"]'); ?>
  			</div>
+			<button class="close">Close</button>
+
 		</div>
 		<div class="transition library js-accordion">
 			<div class="js-accordion__panel">
    				<h3 class="js-accordion__header">Alumnae Library</h3>
   					<?php echo do_shortcode('[metaslider id="37876"]'); ?>
  			</div>
+			<button class="close">Close</button>
 		</div>
 	</main><!-- #main -->
 
@@ -445,16 +448,12 @@ get_header(); ?>
 		*/
 		//jQuery('.js-accordion').hide();
 		
-		jQuery('svg g:not(#campusMap)').on('click touch',function(){
+		jQuery('svg g').on('click touch',function(){
 			//jQuery('.js-accordion').hide();
 			var buildingId = this.id;
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
-			jQuery(accordionPanel).animate({
-      			left: '550px',
-				height: '+=150px',
-				width: '+=150px'
-			});
 			jQuery(accordionPanel).toggleClass('visible');
+			jQuery('.close').removeClass('visible');			
 
 			/*
 			jQuery('.js-accordion__header').attr({
