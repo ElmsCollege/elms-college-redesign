@@ -21,6 +21,10 @@ footer {
 	display:block;
 	margin:0 auto;
 }
+.hilite{
+	stroke:yellow;
+	stroke-width:2;
+}
 /* BEGIN attempts to slide content */
 #index{
 	background-color:white;

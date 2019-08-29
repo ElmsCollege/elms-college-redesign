@@ -450,13 +450,15 @@ get_header(); ?>
 		
 		jQuery('svg g').on('click touch',function(){
 			//jQuery('.js-accordion').hide();
+			jQuery('svg g').removeClass('hilite');
 			var buildingId = this.id;
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
 			jQuery(accordionPanel).toggleClass('visible');
 			jQuery('.close').click(function(){
 				jQuery(accordionPanel).removeClass('visible');
 			});
-			instance.panLeft(400);
+			instance.panRight(600);
+			jQuery(this).addClass('hilite');
 
 			/*
 			jQuery('.js-accordion__header').attr({
