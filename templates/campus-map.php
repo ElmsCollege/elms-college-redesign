@@ -446,7 +446,7 @@ get_header(); ?>
 		jQuery('.js-accordion').hide();
 		
 		jQuery('svg g:not(#campusMap)').on('click touch',function(){
-			jQuery('.js-accordion').hide();
+			//jQuery('.js-accordion').hide();
 			var buildingId = this.id;
 			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
 			jQuery(accordionPanel).animate({
