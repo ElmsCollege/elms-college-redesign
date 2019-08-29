@@ -459,6 +459,7 @@ get_header(); ?>
 			jQuery(accordionPanel).attr({
 				"aria-hidden":"false",
 			});
+			jQuery('#index').toggleClass('visible');
 		});
 	});
 </script>

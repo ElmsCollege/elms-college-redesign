@@ -1,17 +1,28 @@
 /* stylesheet for the campus map page */
+.social-media{
+	display:none;
+}
 footer {
 	border-top: 2px solid #115438;
 	padding-top: 25px;
 }
-#svg-container {
+#svg-container{
 	width: 100%;
 	height: auto;
 }
-#index {
+#campusMap{
+	width:100% !important;
+	height:auto !important;
 }
-.buildingContent {
-	max-width: 50%;
+/* BEGIN attempts to slide content */
+#index{
+    position:relative;
+    right:-520px;
 }
+.visible{
+	right:0px !important;
+}
+/* END attempts to slide content */
 /* BEGIN styles for the aria-accordion JS library */
 .js-accordion__panel[aria-hidden=true] {
 	display: none;
