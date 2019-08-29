@@ -432,7 +432,7 @@ get_header(); ?>
 
 <script>
 	jQuery(document).ready(function(){
-		var instance = new SVGPanZoom($('#Layer_1')[0], {
+		var instance = new SVGPanZoom(jQuery('#Layer_1')[0], {
 			eventMagnet: '.zoomThisSide'
 		});
 //		var area = document.querySelector('#campusMap')
