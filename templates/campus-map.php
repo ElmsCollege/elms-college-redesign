@@ -453,7 +453,7 @@ get_header(); ?>
       			left: '550px',
 				height: '+=150px',
 				width: '+=150px'
-			});
+			}));
 			/*
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
