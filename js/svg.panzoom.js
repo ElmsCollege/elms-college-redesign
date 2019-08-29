@@ -1,163 +1,174 @@
-const normalizeEvent = (ev) =>
-  ev.touches || [{ clientX: ev.clientX, clientY: ev.clientY }]
+/*!
+* @svgdotjs/svg.panzoom.js - A plugin for svg.js that enables panzoom for viewport elements
+* @version 2.0.3
+* https://github.com/svgdotjs/svg.panzoom.js#readme
+*
+* @copyright undefined
+* @license MIT
+*
+* BUILT: Tue Jun 11 2019 11:19:25 GMT+0200 (GMT+02:00)
+*/;
+(function (svg_js) {
+  'use strict';
 
-extend(Svg, {
-  panZoom (options) {
-    this.off('.panZoom')
+  var normalizeEvent = function normalizeEvent(ev) {
+    return ev.touches || [{
+      clientX: ev.clientX,
+      clientY: ev.clientY
+    }];
+  };
 
-    // when called with false, disable panZoom
-    if (options === false) return this
+  svg_js.extend(svg_js.Svg, {
+    panZoom: function panZoom(options) {
+      this.off('.panZoom'); // when called with false, disable panZoom
 
-    options = options || {}
-    const zoomFactor = options.zoomFactor || 0.03
-    const zoomMin = options.zoomMin || Number.MIN_VALUE
-    const zoomMax = options.zoomMax || Number.MAX_VALUE
+      if (options === false) return this;
+      options = options || {};
+      var zoomFactor = options.zoomFactor || 0.03;
+      var zoomMin = options.zoomMin || Number.MIN_VALUE;
+      var zoomMax = options.zoomMax || Number.MAX_VALUE;
+      var lastP;
+      var lastTouches;
+      var zoomInProgress = false;
 
-    let lastP; let lastTouches; let zoomInProgress = false
+      var wheelZoom = function wheelZoom(ev) {
+        ev.preventDefault(); // touchpads can give ev.deltaY == 0, which skrews the lvl calculation
 
-    var wheelZoom = function (ev) {
-      ev.preventDefault()
+        if (ev.deltaY === 0) return;
+        var lvl = this.zoom() - zoomFactor * ev.deltaY / Math.abs(ev.deltaY);
+        var p = this.point(ev.clientX, ev.clientY);
 
-      // touchpads can give ev.deltaY == 0, which skrews the lvl calculation
-      if (ev.deltaY === 0) return
+        if (lvl > zoomMax) {
+          lvl = zoomMax;
+        }
 
-      let lvl = this.zoom() - zoomFactor * ev.deltaY / Math.abs(ev.deltaY)
-      const p = this.point(ev.clientX, ev.clientY)
+        if (lvl < zoomMin) {
+          lvl = zoomMin;
+        }
 
-      if (lvl > zoomMax) { lvl = zoomMax }
+        if (this.dispatch('zoom', {
+          level: lvl,
+          focus: p
+        }).defaultPrevented) {
+          return this;
+        }
 
-      if (lvl < zoomMin) { lvl = zoomMin }
+        this.zoom(lvl, p);
+      };
 
-      if (this.dispatch('zoom', { level: lvl, focus: p }).defaultPrevented) { return this }
+      var pinchZoomStart = function pinchZoomStart(ev) {
+        lastTouches = normalizeEvent(ev);
+        if (lastTouches.length < 2) return;
+        ev.preventDefault();
 
-      this.zoom(lvl, p)
+        if (this.dispatch('pinchZoomStart', {
+          event: ev
+        }).defaultPrevented) {
+          return;
+        }
+
+        this.off('touchstart.panZoom', pinchZoomStart);
+        zoomInProgress = true;
+        svg_js.on(document, 'touchmove.panZoom', pinchZoom, this, {
+          passive: false
+        });
+        svg_js.on(document, 'touchend.panZoom', pinchZoomStop, this, {
+          passive: false
+        });
+      };
+
+      var pinchZoomStop = function pinchZoomStop(ev) {
+        ev.preventDefault();
+        zoomInProgress = false;
+        this.dispatch('pinchZoomEnd', {
+          event: ev
+        });
+        svg_js.off(document, 'touchmove.panZoom', pinchZoom);
+        svg_js.off(document, 'touchend.panZoom', pinchZoomStop);
+        this.on('touchstart.panZoom', pinchZoomStart);
+      };
+
+      var pinchZoom = function pinchZoom(ev) {
+        ev.preventDefault();
+        var currentTouches = normalizeEvent(ev);
+        var zoom = this.zoom(); // Distance Formula
+
+        var lastDelta = Math.sqrt(Math.pow(lastTouches[0].clientX - lastTouches[1].clientX, 2) + Math.pow(lastTouches[0].clientY - lastTouches[1].clientY, 2));
+        var currentDelta = Math.sqrt(Math.pow(currentTouches[0].clientX - currentTouches[1].clientX, 2) + Math.pow(currentTouches[0].clientY - currentTouches[1].clientY, 2));
+        var zoomAmount = lastDelta / currentDelta;
+
+        if (zoom < zoomMin && zoomAmount > 1 || zoom > zoomMax && zoomAmount < 1) {
+          zoomAmount = 1;
+        }
+
+        var currentFocus = {
+          x: currentTouches[0].clientX + 0.5 * (currentTouches[1].clientX - currentTouches[0].clientX),
+          y: currentTouches[0].clientY + 0.5 * (currentTouches[1].clientY - currentTouches[0].clientY)
+        };
+        var lastFocus = {
+          x: lastTouches[0].clientX + 0.5 * (lastTouches[1].clientX - lastTouches[0].clientX),
+          y: lastTouches[0].clientY + 0.5 * (lastTouches[1].clientY - lastTouches[0].clientY)
+        };
+        var p = this.point(currentFocus.x, currentFocus.y);
+        var focusP = this.point(2 * currentFocus.x - lastFocus.x, 2 * currentFocus.y - lastFocus.y);
+        var box = new svg_js.Box(this.viewbox()).transform(new svg_js.Matrix().translate(p.x, p.y).scale(zoomAmount, 0, 0).translate(-focusP.x, -focusP.y));
+        this.viewbox(box);
+        lastTouches = currentTouches;
+        this.dispatch('zoom', {
+          box: box,
+          focus: focusP
+        });
+      };
+
+      var panStart = function panStart(ev) {
+        ev.preventDefault();
+        this.off('mousedown.panZoom', panStart);
+        lastTouches = normalizeEvent(ev);
+        if (zoomInProgress) return;
+        this.dispatch('panStart', {
+          event: ev
+        });
+        lastP = {
+          x: lastTouches[0].clientX,
+          y: lastTouches[0].clientY
+        };
+        svg_js.on(document, 'mousemove.panZoom', panning, this);
+        svg_js.on(document, 'mouseup.panZoom', panStop, this);
+      };
+
+      var panStop = function panStop(ev) {
+        ev.preventDefault();
+        svg_js.off(document, 'mousemove.panZoom', panning);
+        svg_js.off(document, 'mouseup.panZoom', panStop);
+        this.on('mousedown.panZoom', panStart);
+        this.dispatch('panEnd', {
+          event: ev
+        });
+      };
+
+      var panning = function panning(ev) {
+        ev.preventDefault();
+        var currentTouches = normalizeEvent(ev);
+        var currentP = {
+          x: currentTouches[0].clientX,
+          y: currentTouches[0].clientY
+        };
+        var p1 = this.point(currentP.x, currentP.y);
+        var p2 = this.point(lastP.x, lastP.y);
+        var deltaP = [p2.x - p1.x, p2.y - p1.y];
+        var box = new svg_js.Box(this.viewbox()).transform(new svg_js.Matrix().translate(deltaP[0], deltaP[1]));
+        this.viewbox(box);
+        lastP = currentP;
+      };
+
+      this.on('wheel.panZoom', wheelZoom);
+      this.on('touchstart.panZoom', pinchZoomStart, this, {
+        passive: false
+      });
+      this.on('mousedown.panZoom', panStart, this);
+      return this;
     }
+  });
 
-    const pinchZoomStart = function (ev) {
-      lastTouches = normalizeEvent(ev)
-
-      if (lastTouches.length < 2) return
-      ev.preventDefault()
-
-      if (this.dispatch('pinchZoomStart', { event: ev }).defaultPrevented) { return }
-
-      this.off('touchstart.panZoom', pinchZoomStart)
-
-      zoomInProgress = true
-      on(document, 'touchmove.panZoom', pinchZoom, this, { passive: false })
-      on(document, 'touchend.panZoom', pinchZoomStop, this, { passive: false })
-    }
-
-    const pinchZoomStop = function (ev) {
-      ev.preventDefault()
-      zoomInProgress = false
-
-      this.dispatch('pinchZoomEnd', { event: ev })
-
-      off(document, 'touchmove.panZoom', pinchZoom)
-      off(document, 'touchend.panZoom', pinchZoomStop)
-      this.on('touchstart.panZoom', pinchZoomStart)
-    }
-
-    const pinchZoom = function (ev) {
-      ev.preventDefault()
-
-      const currentTouches = normalizeEvent(ev)
-      const zoom = this.zoom()
-
-      // Distance Formula
-      const lastDelta = Math.sqrt(
-        Math.pow(lastTouches[0].clientX - lastTouches[1].clientX, 2)
-        + Math.pow(lastTouches[0].clientY - lastTouches[1].clientY, 2)
-      )
-
-      const currentDelta = Math.sqrt(
-        Math.pow(currentTouches[0].clientX - currentTouches[1].clientX, 2)
-        + Math.pow(currentTouches[0].clientY - currentTouches[1].clientY, 2)
-      )
-
-      let zoomAmount = lastDelta / currentDelta
-
-      if ((zoom < zoomMin && zoomAmount > 1) || (zoom > zoomMax && zoomAmount < 1)) {
-        zoomAmount = 1
-      }
-
-      const currentFocus = {
-        x: currentTouches[0].clientX + 0.5 * (currentTouches[1].clientX - currentTouches[0].clientX),
-        y: currentTouches[0].clientY + 0.5 * (currentTouches[1].clientY - currentTouches[0].clientY)
-      }
-
-      const lastFocus = {
-        x: lastTouches[0].clientX + 0.5 * (lastTouches[1].clientX - lastTouches[0].clientX),
-        y: lastTouches[0].clientY + 0.5 * (lastTouches[1].clientY - lastTouches[0].clientY)
-      }
-
-      const p = this.point(currentFocus.x, currentFocus.y)
-      const focusP = this.point(2 * currentFocus.x - lastFocus.x, 2 * currentFocus.y - lastFocus.y)
-      const box = new Box(this.viewbox()).transform(
-        new Matrix()
-          .translate(p.x, p.y)
-          .scale(zoomAmount, 0, 0)
-          .translate(-focusP.x, -focusP.y)
-      )
-
-      this.viewbox(box)
-
-      lastTouches = currentTouches
-
-      this.dispatch('zoom', { box: box, focus: focusP })
-    }
-
-    const panStart = function (ev) {
-      ev.preventDefault()
-
-      this.off('mousedown.panZoom', panStart)
-
-      lastTouches = normalizeEvent(ev)
-
-      if (zoomInProgress) return
-
-      this.dispatch('panStart', { event: ev })
-
-      lastP = { x: lastTouches[0].clientX, y: lastTouches[0].clientY }
-
-      on(document, 'mousemove.panZoom', panning, this)
-      on(document, 'mouseup.panZoom', panStop, this)
-    }
-
-    const panStop = function (ev) {
-      ev.preventDefault()
-
-      off(document, 'mousemove.panZoom', panning)
-      off(document, 'mouseup.panZoom', panStop)
-      this.on('mousedown.panZoom', panStart)
-
-      this.dispatch('panEnd', { event: ev })
-    }
-
-    const panning = function (ev) {
-      ev.preventDefault()
-
-      const currentTouches = normalizeEvent(ev)
-
-      const currentP = { x: currentTouches[0].clientX, y: currentTouches[0].clientY }
-
-      const p1 = this.point(currentP.x, currentP.y)
-
-      const p2 = this.point(lastP.x, lastP.y)
-
-      const deltaP = [p2.x - p1.x, p2.y - p1.y]
-
-      const box = new Box(this.viewbox()).transform(new Matrix().translate(deltaP[0], deltaP[1]))
-
-      this.viewbox(box)
-      lastP = currentP
-    }
-
-    this.on('wheel.panZoom', wheelZoom)
-    this.on('touchstart.panZoom', pinchZoomStart, this, { passive: false })
-    this.on('mousedown.panZoom', panStart, this)
-
-    return this
-  }
-})
+}(SVG));
+//# sourceMappingURL=svg.panzoom.js.map
