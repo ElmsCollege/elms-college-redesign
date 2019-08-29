@@ -454,6 +454,8 @@ get_header(); ?>
 				height: '+=150px',
 				width: '+=150px'
 			});
+			jQuery(accordionPanel).toggleClass('visible');
+
 			/*
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
