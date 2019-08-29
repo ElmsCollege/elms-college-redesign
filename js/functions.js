@@ -383,12 +383,14 @@
 		});
 	});//end JS for the Gutenberg FAQ blocks
 
+	  /*
 	  jQuery(function () {
 		  jQuery('.js-accordion').accordion({
 			  multiselectable:false,
 			  buttonsGeneratedContent:'html'
 		  });
 	  });
+	  */
 
   });//end document.ready
 
