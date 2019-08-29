@@ -440,7 +440,10 @@ get_header(); ?>
 			4. set the aria elements to the appropriate settings to they open
 			5. provide a way to close the tabs when the user clicks on the next building
 		*/
-		jQuery('svg g:not(#campusMap)').on('click touch',function(){
+		console.log("cachebuster");
+//		jQuery('svg g:not(#campusMap)').on('click touch',function(){
+		jQuery('svg g:not(#campusMap)').click(function(){
+
 			jQuery('.js-accordion__header').attr({
 				"aria-expanded":"false",
 				"aria-selected":"false"

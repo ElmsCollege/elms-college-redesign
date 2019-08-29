@@ -7,8 +7,8 @@ footer {
 	padding-top: 25px;
 }
 #svg-container{
-	width: 100%;
-	height: auto;
+	width:100%;
+	height:auto;
 }
 #campusMap{
 	width:100% !important;
@@ -18,7 +18,7 @@ footer {
 #index{
 	width:275px;
     position:absolute;
-	top:50px;
+	top:150px;
     right:-300px;
 }
 .visible{
