@@ -414,14 +414,14 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 </svg>
 		</div><!-- end #svg-container -->
-		<div class="transition js-accordion">
-			<div class="berchmans js-accordion__panel">
-   				<h3 class="berchmans js-accordion__header">Berchmans Hall</h3>
+		<div class="transition berchmans js-accordion">
+			<div class="js-accordion__panel">
+   				<h3 class="js-accordion__header">Berchmans Hall</h3>
   					<?php echo do_shortcode('[metaslider id="37870"]'); ?>
  			</div>
 		</div>
-		<div class="transition js-accordion">
-			<div class="library js-accordion__panel">
+		<div class="transition library js-accordion">
+			<div class="js-accordion__panel">
    				<h3 class="js-accordion__header">Alumnae Library</h3>
   					<?php echo do_shortcode('[metaslider id="37876"]'); ?>
  			</div>
