@@ -14,19 +14,16 @@ footer {
 	width:100% !important;
 	height:auto !important;
 }
-.js-accordion__panel{
-	padding:5px;
-}
 /* BEGIN attempts to slide content */
-.hidden{
+#index{
 	background-color:white;
-	width:350px;
+	width:275px;
     position:absolute;
-    right:-400px;
-	z-index:10;
+	top:150px;
+    right:-300px;
 }
 .visible{
-	right:20px !important;
+	right:0px !important;
 }
 .transition{
   -webkit-transition: right 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
