@@ -7,7 +7,7 @@
 * @license MIT
 *
 * BUILT: Tue Jun 11 2019 11:19:25 GMT+0200 (GMT+02:00)
-*/;
+*/
 (function (svg_js) {
   'use strict';
 
