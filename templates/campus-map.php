@@ -14,12 +14,9 @@
  */
 wp_enqueue_style( 'campus-map', get_stylesheet_directory_uri(). '/css/campus-map.css', '1.0.0', 'all');
 
-//wp_enqueue_script( 'aria-accordion', get_template_directory_uri() . '/js/aria-accordion.js', array(), '1', 'all');
 wp_enqueue_script( 'SVGPanZoom', get_template_directory_uri() . '/js/SVGPanZoom.js', array(), '1', 'all');
 
 get_header(); ?>
-
-<!--<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js'></script>-->
 
 	<main id="main" class="site-main pure-u-1" role="main">
 
@@ -436,18 +433,7 @@ get_header(); ?>
 		var instance = new SVGPanZoom(jQuery('#campusMap')[0], {
 			eventMagnet: '#svg-container'
 		});
-		
-//		var area = document.querySelector('#campusMap')
-//		panzoom(area)
-		/* jquery plan:
-			1. find id of clicked element in svg
-			2. use find() to find the accordion section with that class
-			3. use prev() to get the button above that (because it will always be the controller button)
-			4. set the aria elements to the appropriate settings to they open
-			5. provide a way to close the tabs when the user clicks on the next building
-		*/
-		//jQuery('.js-accordion').hide();
-		
+
 		jQuery('svg g').on('click touch',function(){
 			//jQuery('.js-accordion').hide();
 			jQuery('svg g').removeClass('hilite');
@@ -461,30 +447,8 @@ get_header(); ?>
 				jQuery('svg g').removeClass('hilite');
 				//instance.panLeft(600);
 			});
-			instance.panRight(600);
-			//jQuery(this).addClass('hilite');
-
-			/*
-			jQuery('.js-accordion__header').attr({
-				"aria-expanded":"false",
-				"aria-selected":"false"
-			});
-			jQuery('.js-accordion__panel').attr({
-				"aria-hidden":"true"
-			});
-			var buildingId = this.id;
-			//console.log('building id= ' + buildingId);
-			var accordionPanel = jQuery('.' +buildingId + '.js-accordion__panel');
-			//console.log('accordion panel ' + accordionPanel);
-			var controlButton = jQuery(accordionPanel).prev();
-			jQuery(controlButton).attr({
-				"aria-expanded":"true",
-			});
-			jQuery(accordionPanel).attr({
-				"aria-hidden":"false",
-			});
-			jQuery('#index').toggleClass('visible');
-			*/
+			//instance.panRight(600);
+			jQuery(this).addClass('hilite');
 		});
 	});
 </script>

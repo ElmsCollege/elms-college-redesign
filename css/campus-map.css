@@ -22,7 +22,7 @@ footer {
 	margin:0 auto;
 }
 .hilite{
-	stroke:red;
+	stroke:#115438;
 	stroke-width:25;
 }
 /* BEGIN attempts to slide content */
@@ -40,6 +40,7 @@ footer {
 	max-width:400px;
 	visibility:hidden;
 	background-color:#fff;
+	z-index:10;
 }
 .js-accordion h3{
 	text-align:center;
