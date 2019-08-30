@@ -411,19 +411,16 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 </svg>
 		</div><!-- end #svg-container -->
-		<div id="slideshowContainer">
 		<div class="transition berchmans slideshow">
    				<h3 class="slideshow_header">Berchmans Hall</h3>
-  					<?php echo do_shortcode('[metaslider id="37870"]'); ?>
-			<button class="close">Close</button>
-
+  				<?php echo do_shortcode('[metaslider id="37870"]'); ?>
+				<button class="close">Close</button>
 		</div>
 		<div class="transition library slideshow">
    				<h3 class="slideshow_header">Alumnae Library</h3>
-  					<?php echo do_shortcode('[metaslider id="37876"]'); ?>
-			<button class="close">Close</button>
+  				<?php echo do_shortcode('[metaslider id="37876"]'); ?>
+				<button class="close">Close</button>
 		</div>
-			</div>
 	</main><!-- #main -->
 
 <script>
@@ -431,24 +428,29 @@ get_header(); ?>
 		var instance = new SVGPanZoom(document.getElementById('campusMap'), {
 			eventMagnet: document.getElementById('svg-container')
         });
+		
+		function hideSlideshow(){
+			jQuery('svg').removeClass('hilite');
+			jQuery('.slideshow').removeClass('visible');
+			//instance.panRight(600);
+		}
+		function showSlideshow(){
+			hideSlideshow();
+			var buildingId = this.id;
+			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
+			jQuery(slideshowBlock).toggleClass('visible');
+			jQuery(this).addClass('hilite');
+			//instance.panLeft(600);
+		}
 
 		jQuery('svg g').on('click touch',function(){
-			jQuery('svg g').removeClass('hilite');
-			jQuery('.slideshow').removeClass('visible');
-			//instance.panLeft(600);
-			var buildingId = this.id;
-			var accordionPanel = jQuery('.' +buildingId + '.slideshow');
-			jQuery(accordionPanel).toggleClass('visible');
+			showSlideshow();
 			jQuery('.close').click(function(){
-				jQuery(accordionPanel).removeClass('visible');
-				jQuery('svg g').removeClass('hilite');
-				//instance.panLeft(600);
+				hideSlideshow();
 			});
-			//instance.panRight(600);
-			jQuery(this).addClass('hilite');
 		});
 	});
-	alert("test 3");
+	alert("test 4");
 </script>
 
 <?php

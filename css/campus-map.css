@@ -23,8 +23,6 @@ footer {
 	stroke-width:25;
 }
 /* BEGIN attempts to slide content */
-#slideshowContainer{
-}
 .slideshow{
 	display:none;
 	position:absolute;
