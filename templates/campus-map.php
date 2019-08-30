@@ -434,16 +434,16 @@ get_header(); ?>
 			console.log('show function triggered');
 			hideSlideshow();
 			console.log('show function after hide');
-			var buildingId = this.id;
-			console.log(buildingId);
-			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
-			console.log(slideshowBlock);
+			console.log('within function' + buildingId);
+			console.log('within function' + slideshowBlock);
 			jQuery(slideshowBlock).toggleClass('visible');
 			jQuery(this).addClass('hilite');
 			//instance.panLeft(600);
 		}
 
 		jQuery('svg g').on('click touch',function(){
+			var buildingId = this.id;
+			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 			showSlideshow();
 			jQuery('.close').click(function(){
 				console.log('closing it')
@@ -451,7 +451,7 @@ get_header(); ?>
 			});
 		});
 	});
-	alert("test 4");
+	alert("test 5");
 </script>
 
 <?php
