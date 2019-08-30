@@ -26,11 +26,11 @@ footer {
 #slideshowContainer{
 }
 .slideshow{
+	display:none;
 	position:absolute;
 	top:100px;
 	right:-600px;
 	max-width:400px;
-	visibility:hidden;
 	background-color:#fff;
 	z-index:10;
 }
@@ -39,7 +39,7 @@ footer {
 }
 .visible{
 	right:20px !important;
-	visibility:visible;
+	display:unset;
 }
 .transition{
   -webkit-transition: right 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */

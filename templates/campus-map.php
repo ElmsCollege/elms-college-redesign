@@ -448,7 +448,7 @@ get_header(); ?>
 			jQuery(this).addClass('hilite');
 		});
 	});
-	console.log("test 2");
+	alert("test 3");
 </script>
 
 <?php
