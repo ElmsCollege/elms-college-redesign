@@ -425,7 +425,7 @@ get_header(); ?>
         });
 		
 		function hideSlideshow(){
-			jQuery('svg').removeClass('hilite');
+			//jQuery('svg g').removeClass('hilite');
 			jQuery('.slideshow').removeClass('visible');
 			//instance.panRight(600);
 		}
@@ -435,13 +435,13 @@ get_header(); ?>
 			var buildingId = this.id;
 			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 			jQuery(slideshowBlock).toggleClass('visible');
-			jQuery(this).addClass('hilite');
+			//jQuery(this).addClass('hilite');
 			jQuery('.close').click(function(){
 				hideSlideshow();
 			});
 		});
 	});
-	alert("test 6");
+	//alert("test 6");
 </script>
 
 <?php

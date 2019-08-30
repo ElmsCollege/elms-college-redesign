@@ -18,7 +18,7 @@ footer {
 	display:block;
 	margin:0 auto;
 }
-.hilite{
+svg g:hover{
 	stroke:#115438;
 	stroke-width:25;
 }
@@ -26,24 +26,27 @@ footer {
 	display:none;
 	position:absolute;
 	top:20%;
-	right:-600px;
 	max-width:400px;
 	background-color:#fff;
 	z-index:10;
 	border:5px solid #dedede;
 	border-radius:5px;
 }
-.slideshow h3{
+.site-main .slideshow h3{
 	text-align:center;
 	font-size:1.2em;
+	margin-bottom:2px;
 }
 .visible{
-	right:20px !important;
+	right:20px;
 	display:unset;
 	-webkit-transition: right 0.3s ease-out;
 	-moz-transition: right 0.3s ease-out;
 	-o-transition: right 0.3s ease-out;
 	transition: right 0.3s ease-out;
 }
-.transition{
+@media all and (max-width:600px){
+	.visible{
+		right:50%;
+	}
 }
