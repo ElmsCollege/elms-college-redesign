@@ -22,27 +22,28 @@ footer {
 	stroke:#115438;
 	stroke-width:25;
 }
-/* BEGIN attempts to slide content */
 .slideshow{
 	display:none;
 	position:absolute;
-	top:100px;
+	top:20%;
 	right:-600px;
 	max-width:400px;
 	background-color:#fff;
 	z-index:10;
+	border:5px solid #dedede;
+	border-radius:5px;
 }
 .slideshow h3{
 	text-align:center;
+	font-size:1.2em;
 }
 .visible{
 	right:20px !important;
 	display:unset;
+	-webkit-transition: right 0.3s ease-out;
+	-moz-transition: right 0.3s ease-out;
+	-o-transition: right 0.3s ease-out;
+	transition: right 0.3s ease-out;
 }
 .transition{
-  -webkit-transition: right 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
-     -moz-transition: right 0.3s ease-out;  /* Firefox 4-15 */
-       -o-transition: right 0.3s ease-out;  /* Opera 10.50–12.00 */
-          transition: right 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
-/* END attempts to slide content */
