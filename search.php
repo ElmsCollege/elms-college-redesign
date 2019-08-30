@@ -7,12 +7,10 @@
  * @package Elms_College_Redesign
  */
 
-get_header(); ?>
+get_template_part("template-parts/header-selector");
 
-  <div class="section-heading" style=" <?php print_featured_image_style(get_the_ID()) ?>">
-      <h1 class="page-title field-title no-pre-title"><?php printf( esc_html__( 'Search Results for: %s', 'gs_elms' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-  </div>
-
+get_template_part("template-parts/page-heading");
+?>
     
 	<section id="primary" class="content-area pure-g">
 		<main id="main" class="site-main pure-u-1 standalone" role="main">
