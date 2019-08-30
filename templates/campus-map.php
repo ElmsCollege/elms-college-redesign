@@ -430,9 +430,9 @@ get_header(); ?>
 
 <script>
 	jQuery(document).ready(function(){
-		var instance = new SVGPanZoom(jQuery('#campusMap')[0], {
-			eventMagnet: '#svg-container'
-		});
+		var instance = new SVGPanZoom(document.getElementById('campusMap'), {
+			eventMagnet: document.getElementById('svg-container')
+        });
 
 		jQuery('svg g').on('click touch',function(){
 			//jQuery('.js-accordion').hide();
