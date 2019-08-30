@@ -14,9 +14,6 @@ footer {
 	width:100% !important;
 	height:auto !important;
 }
-.js-accordion__panel{
-	padding:15px;
-}
 .close{
 	display:block;
 	margin:0 auto;
@@ -26,15 +23,12 @@ footer {
 	stroke-width:25;
 }
 /* BEGIN attempts to slide content */
-#index{
-	background-color:white;
-	width:350px;
-    position:absolute;
-	top:150px;
-    right:-400px;
-}
-.js-accordion{
+#slideshowContainer{
 	position:absolute;
+	overflow:hidden;
+}
+.slideshow{
+	position:relative;
 	top:100px;
 	right:-600px;
 	max-width:400px;
@@ -42,7 +36,7 @@ footer {
 	background-color:#fff;
 	z-index:10;
 }
-.js-accordion h3{
+.slideshow h3{
 	text-align:center;
 }
 .visible{

@@ -411,21 +411,19 @@ get_header(); ?>
 	<title>Keating Quadrangle</title></path>
 </svg>
 		</div><!-- end #svg-container -->
-		<div class="transition berchmans js-accordion">
-			<div class="js-accordion__panel">
-   				<h3 class="js-accordion__header">Berchmans Hall</h3>
+		<div id="slideshowContainer">
+		<div class="transition berchmans slideshow">
+   				<h3 class="slideshow_header">Berchmans Hall</h3>
   					<?php echo do_shortcode('[metaslider id="37870"]'); ?>
- 			</div>
 			<button class="close">Close</button>
 
 		</div>
-		<div class="transition library js-accordion">
-			<div class="js-accordion__panel">
-   				<h3 class="js-accordion__header">Alumnae Library</h3>
+		<div class="transition library slideshow">
+   				<h3 class="slideshow_header">Alumnae Library</h3>
   					<?php echo do_shortcode('[metaslider id="37876"]'); ?>
- 			</div>
 			<button class="close">Close</button>
 		</div>
+			</div>
 	</main><!-- #main -->
 
 <script>
@@ -435,12 +433,11 @@ get_header(); ?>
         });
 
 		jQuery('svg g').on('click touch',function(){
-			//jQuery('.js-accordion').hide();
 			jQuery('svg g').removeClass('hilite');
-			jQuery('.js-accordion').removeClass('visible');
+			jQuery('.slideshow').removeClass('visible');
 			//instance.panLeft(600);
 			var buildingId = this.id;
-			var accordionPanel = jQuery('.' +buildingId + '.js-accordion');
+			var accordionPanel = jQuery('.' +buildingId + '.slideshow');
 			jQuery(accordionPanel).toggleClass('visible');
 			jQuery('.close').click(function(){
 				jQuery(accordionPanel).removeClass('visible');
@@ -451,6 +448,7 @@ get_header(); ?>
 			jQuery(this).addClass('hilite');
 		});
 	});
+	console.log("test 1");
 </script>
 
 <?php
