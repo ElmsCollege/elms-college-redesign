@@ -24,11 +24,9 @@ footer {
 }
 /* BEGIN attempts to slide content */
 #slideshowContainer{
-	position:absolute;
-	overflow:hidden;
 }
 .slideshow{
-	position:relative;
+	position:absolute;
 	top:100px;
 	right:-600px;
 	max-width:400px;
