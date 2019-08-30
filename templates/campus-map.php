@@ -425,33 +425,23 @@ get_header(); ?>
         });
 		
 		function hideSlideshow(){
-			console.log('hide function triggered');
 			jQuery('svg').removeClass('hilite');
 			jQuery('.slideshow').removeClass('visible');
 			//instance.panRight(600);
 		}
-		function showSlideshow(){
-			console.log('show function triggered');
-			hideSlideshow();
-			console.log('show function after hide');
-			console.log('within function' + buildingId);
-			console.log('within function' + slideshowBlock);
-			jQuery(slideshowBlock).toggleClass('visible');
-			jQuery(this).addClass('hilite');
-			//instance.panLeft(600);
-		}
 
 		jQuery('svg g').on('click touch',function(){
+			hideSlideshow();
 			var buildingId = this.id;
 			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
-			showSlideshow();
+			jQuery(slideshowBlock).toggleClass('visible');
+			jQuery(this).addClass('hilite');
 			jQuery('.close').click(function(){
-				console.log('closing it')
 				hideSlideshow();
 			});
 		});
 	});
-	alert("test 5");
+	alert("test 6");
 </script>
 
 <?php
