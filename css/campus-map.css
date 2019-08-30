@@ -14,11 +14,14 @@ footer {
 	width:100% !important;
 	height:auto !important;
 }
+svg g:hover{
+	cursor:pointer;
+}
 .close{
 	display:block;
 	margin:0 auto;
 }
-svg g:hover{
+.hilite{
 	stroke:#115438;
 	stroke-width:25;
 }
