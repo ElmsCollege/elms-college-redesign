@@ -3,11 +3,6 @@
  * Template Name: Campus Map template
  * This template has been customized to display the SVG-based campus map.
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Elms_College_Redesign
@@ -430,14 +425,19 @@ get_header(); ?>
         });
 		
 		function hideSlideshow(){
+			console.log('hide function triggered');
 			jQuery('svg').removeClass('hilite');
 			jQuery('.slideshow').removeClass('visible');
 			//instance.panRight(600);
 		}
 		function showSlideshow(){
+			console.log('show function triggered');
 			hideSlideshow();
+			console.log('show function after hide');
 			var buildingId = this.id;
+			console.log(buildingId);
 			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
+			console.log(slideshowBlock);
 			jQuery(slideshowBlock).toggleClass('visible');
 			jQuery(this).addClass('hilite');
 			//instance.panLeft(600);
@@ -446,6 +446,7 @@ get_header(); ?>
 		jQuery('svg g').on('click touch',function(){
 			showSlideshow();
 			jQuery('.close').click(function(){
+				console.log('closing it')
 				hideSlideshow();
 			});
 		});
