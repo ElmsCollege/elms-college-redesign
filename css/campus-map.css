@@ -50,6 +50,8 @@ svg g:hover{
 }
 @media all and (max-width:600px){
 	.visible{
-		right:50%;
+		right:0;
+		top:unset;
+		width:100%;
 	}
 }
