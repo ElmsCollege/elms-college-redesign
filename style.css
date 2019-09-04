@@ -1745,6 +1745,12 @@ p:last-child{
 	padding: 5px 0;
 	width:100%;
 }
+@media (max-width:768px){
+	.page-template-landing-page .requestInfo-trigger,.page-template-nursing-secondary-landing-page .requestInfo-trigger,.page-template-nursing-intermediary-landing-page .requestInfo-trigger{
+		max-width: 100%;
+    	width: 90%;
+	}
+}
 @media (min-width: 1040px){
 	.parent-sidebar-menu{
 		display:block;
