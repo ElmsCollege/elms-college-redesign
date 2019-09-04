@@ -1736,6 +1736,9 @@ p:last-child{
 	box-shadow:none;
 	outline:none;
 }
+.requestInfo-close-trigger.greenButton{
+	cursor:pointer;
+}
 .program-page-main .requestInfo-trigger{
 	display:block;
 	max-width:100%;
