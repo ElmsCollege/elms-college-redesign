@@ -15,7 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="preconnect" href="https://elmstest.elluciancrmrecruit.com">
+<link rel="preconnect" href="https://elms.elluciancrmrecruit.com/">
 
 <?php 
 if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type()) && !is_singular( )) :
