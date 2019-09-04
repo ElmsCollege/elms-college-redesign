@@ -3630,6 +3630,7 @@ aside .requestInfo-trigger:hover{
 	background-color:#c3a250 !important;
 	color:#fff !important;
 	border:unset !important;
+	box-shadow:unset !important;
 }
 a.buttonLink.grouped{
 	margin-bottom:16px;
