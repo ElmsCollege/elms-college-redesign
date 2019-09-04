@@ -398,7 +398,7 @@
   // Programmatically show modal
   document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
 	"use strict";
-    MicroModal.show('#requestInfo');
+    MicroModal.show('requestInfo');
   });
 
   // Scrollspy
