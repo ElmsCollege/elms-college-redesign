@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
  */
 function gs_elms_scripts() {
 	wp_enqueue_style( 'wp-block-library-css', '/wp-includes/css/dist/block-library/style.min.css', array() );
-	wp_enqueue_style( 'micromodal', get_template_directory_uri() . '/css/micromodal.css', array(), '20190701');
+	wp_enqueue_style( 'micromodal', get_template_directory_uri() . '/css/micromodal.css', array(), '20190904');
 	
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
 
