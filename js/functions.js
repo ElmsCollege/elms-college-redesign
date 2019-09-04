@@ -389,18 +389,15 @@
 
   // Initial config for setting up modals
   MicroModal.init({
-    openTrigger: 'data-custom-open',
-    disableScroll: false,
-    awaitCloseAnimation: true
+	openTrigger: 'data-custom-open',
+	closeTrigger: 'data-custom-close',
+	disableScroll: false,
+	awaitCloseAnimation: true
   });
 
   // Programmatically show modal
   document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
     MicroModal.show('requestInfo', {
-      debugMode: true,
-      onShow: function (modal) { document.querySelector('.page-template').classList.add(modal.id) },
-      onClose: function (modal) { document.querySelector('.page-template').classList.remove(modal.id) },
-      closeTrigger: 'data-custom-close',
       awaitCloseAnimation: true
     })
   });
