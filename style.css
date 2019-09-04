@@ -3595,7 +3595,7 @@ h4#formTrigger.colomat-close{
 #secondary{
 	overflow-x:hidden;
 }
-#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger,aside .requestInfo-trigger{
+#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger{
 	display:block;
 	background-color:#c3a250;
 	width:100%;
@@ -3610,13 +3610,26 @@ h4#formTrigger.colomat-close{
 	cursor:pointer;
 }
 aside .requestInfo-trigger{
+	display:block;
+	background-color:#c3a250;
+	width:100%;
+	border-radius:unset;
+	border:unset;
+	font-family:"soleil", sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	text-align:center;
+	padding:16px;
+	color:#fff;
+	cursor:pointer;
 	margin:5px 0;
 	max-width:100% !important;
 	font-size:18px;
 }
 aside .requestInfo-trigger:hover{
-	background-color:#c3a250;
-	border:unset;
+	background-color:#c3a250 !important;
+	color:#fff !important;
+	border:unset !important;
 }
 a.buttonLink.grouped{
 	margin-bottom:16px;
