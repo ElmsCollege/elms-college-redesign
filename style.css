@@ -3614,6 +3614,10 @@ aside .requestInfo-trigger{
 	max-width:100% !important;
 	font-size:18px;
 }
+aside .requestInfo-trigger:hover{
+	background-color:#c3a250;
+	border:unset;
+}
 a.buttonLink.grouped{
 	margin-bottom:16px;
 }

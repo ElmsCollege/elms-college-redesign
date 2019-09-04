@@ -402,7 +402,9 @@
   });
   document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
   	"use strict";
+	  alert("before close");
     MicroModal.close('requestInfo');
+	  alert("after close");
   });
 
   // Scrollspy
