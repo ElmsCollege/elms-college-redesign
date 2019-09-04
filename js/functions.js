@@ -384,6 +384,7 @@
 	});//end JS for the Gutenberg FAQ blocks
 	jQuery('.requestInfo-close-trigger').click(function(){
 		$('#requestInfo').removeClass('is-open').attr("aria-hidden","true");
+		console.log('close trigger activated');
 	})
 
   });//end doc.ready
