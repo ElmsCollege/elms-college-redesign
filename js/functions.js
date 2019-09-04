@@ -398,9 +398,11 @@
   // Programmatically show modal
   document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
 	"use strict";
-    MicroModal.show('requestInfo',{
-	  	closeTrigger: 'data-custom-close',
-	});
+    MicroModal.show('requestInfo');
+  });
+  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
+  	"use strict";
+    MicroModal.close('requestInfo');
   });
 
   // Scrollspy
