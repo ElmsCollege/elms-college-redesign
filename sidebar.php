@@ -59,6 +59,10 @@ else {
   events
   <?php var_dump($events)?>
 </div>
+	
+	<?php
+the_field('control_request_info_button');
+?>
 
 <?php if(!is_tax()) :?>
 
