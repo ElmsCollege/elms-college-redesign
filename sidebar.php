@@ -59,16 +59,6 @@ else {
   events
   <?php var_dump($events)?>
 </div>
-	
-<?php
-	if(get_field('control_request_info_button') == "show"){
-		echo 'code will be shown';
-	} else if(get_field('control_request_info_button') == "hide"){
-		echo 'code will be hidden';
-	} else {
-		echo 'value is not set';
-	}
-?>
 
 <?php if(!is_tax()) :?>
 
