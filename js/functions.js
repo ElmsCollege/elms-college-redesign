@@ -382,6 +382,9 @@
 			});
 		});
 	});//end JS for the Gutenberg FAQ blocks
+	jQuery('.requestInfo-close-trigger').click(function(){
+		$('#requestInfo').removeClass('is-open').attr("aria-hidden","true");
+	})
 
   });//end doc.ready
 	   
@@ -399,9 +402,9 @@
   document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
     MicroModal.show('requestInfo');
   });
-  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
-    MicroModal.close('requestInfo');
-  });
+//  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
+//    MicroModal.close('requestInfo');
+//  });
 
   // Scrollspy
   var section = document.querySelectorAll(".heading");
