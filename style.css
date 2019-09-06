@@ -3872,6 +3872,7 @@ body.page-template-landing-page .opening-menu{
 }	
 /* END styles for the President's Blog */
 /* BEGIN generic, universal, reusable styles */
+.small{font-size:.8em;}
 .two-column{
 	-webkit-columns:300px 2;
 	-moz-columns:300px 2;
