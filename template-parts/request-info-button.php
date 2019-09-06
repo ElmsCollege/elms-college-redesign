@@ -17,6 +17,6 @@
 	}
 
 	if($showRequestInfo === true){
-		echo do_shortcode("[sc name='get-info-popup']");		
+		echo do_shortcode("[sc name='crm-get-info-popup']");
 	}
 ?>
