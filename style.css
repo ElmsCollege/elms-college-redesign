@@ -2522,7 +2522,7 @@ body.page-template-home-page{
 	color:#fff;
 	text-decoration:none;
 	display:inline-block;
-	margin:24px;
+	margin:24px auto;
 	font-weight:200;
 	border-radius:0;
 	padding:.8em 2em .7em 2em;
