@@ -2,11 +2,6 @@
 /**
  * This template is used for the "blog" content type. Primarily used for the President's blog.
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * Created in March 2019 by Ryan Millner

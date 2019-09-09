@@ -2,9 +2,9 @@
 /*
 Template Name: Search Page
 */
+
+get_template_part("template-parts/header-selector");
 ?>
-<?php
-get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
