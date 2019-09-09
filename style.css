@@ -3197,10 +3197,6 @@ body.page-template-nursing-secondary-landing-page .cta:nth-child(4):hover .image
 body.page-template-nursing-secondary-landing-page .cta:nth-child(4):hover .permalink{
 	color:#413556 !important;
 }
-body.page-template-program-page .site-main article,body.page-template-program-page .site-main.standalone,body.page-template-nursing-program-page .site-main article,body.page-template-nursing-program-page .site-main.standalone{
-	font-size:16px;
-	line-height:18px;
-}
 .quick-info-container{
 	margin:32px 0;
 }

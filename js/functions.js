@@ -341,8 +341,9 @@
 		}
 	}, 5000);
 
+	  
     //resize library homepage area on window resize.
-    var resizeLibraryHome = function () {
+	var resizeLibraryHome = function () {
       var height = $win.height();
       var columns = $(".page-template-library-landing-page .section-heading-as-content");
       var existingPadding = $('.site-main').offset().top + $(".calls-to-action-feature").height();
@@ -400,9 +401,13 @@
   });
 
   // Programmatically show modal
-  document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
-    MicroModal.show('requestInfo');
-  });
+	var buttonExists = document.getElementsByClassName("requestInfo-trigger");
+	if(buttonExists){
+		document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
+			"use strict";
+			MicroModal.show('requestInfo');
+		});
+	}
 //  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
 //    MicroModal.close('requestInfo');
 //  });
