@@ -401,13 +401,17 @@
   });
 
   // Programmatically show modal
-	var buttonExists = document.getElementsByClassName("requestInfo-trigger");
-	if(buttonExists){
+	var selection = document.querySelector('.requestInfo-trigger') !== null;
+	if (selection) {
 		document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
 			"use strict";
 			MicroModal.show('requestInfo');
+			console.log("exists");
 		});
+	} else {
+		console.log('does not exist');
 	}
+
 //  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
 //    MicroModal.close('requestInfo');
 //  });
