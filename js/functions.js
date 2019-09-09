@@ -406,10 +406,7 @@
 		document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
 			"use strict";
 			MicroModal.show('requestInfo');
-			console.log("exists");
 		});
-	} else {
-		console.log('does not exist');
 	}
 
 //  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
