@@ -11,6 +11,8 @@
 			$showRequestInfo = false;
 		} else if(strpos($permalink,'/student-life/')){
 			$showRequestInfo = false;
+		} else if(strpos($permalink,'/library/')){
+			$showRequestInfo = false;
 		} else{
 			$showRequestInfo = true;
 		}	
