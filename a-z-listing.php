@@ -122,13 +122,13 @@ function build_select_list( $taxonomies, $args ) {
 									<?php $accred = ""; ?>
 									<?php the_excerpt(); ?>
 									<?php if(($current_slug != "directory") and ('' !== get_post()->post_content)) : ?>
-										<span id="<?php echo get_field("last_name"); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
-										<span id="swap-<?php echo get_field("last_name"); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
+										<span id="<?php echo preg_replace("/[^A-Za-z0-9 ]/", '', get_field('last_name')); ?>" class="collapseomatic noarrow"><i class="fas fa-plus" aria-hidden="true"></i> Expand Bio</span>
+										<span id="swap-<?php echo preg_replace("/[^A-Za-z0-9 ]/", '', get_field('last_name')); ?>" style="display:none;"><i class="fas fa-minus" aria-hidden="true"></i> Collapse Bio</span>
 									<?php endif; ?>	
 								</div>
 							</div>
 								<?php if(($current_slug != "directory") and ('' !== get_post()->post_content)) : ?>
-								<div id="target-<?php echo get_field('last_name'); ?>" class="collapseomatic_content"><p><?php echo get_first_paragraph(); ?></p>
+								<div id="target-<?php echo preg_replace("/[^A-Za-z0-9 ]/", '', get_field('last_name')); ?>" class="collapseomatic_content"><p><?php echo get_first_paragraph(); ?></p>
 									
 								</div>
 							<?php endif; ?>	
