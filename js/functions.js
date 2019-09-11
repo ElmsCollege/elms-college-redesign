@@ -341,8 +341,9 @@
 		}
 	}, 5000);
 
+	  
     //resize library homepage area on window resize.
-    var resizeLibraryHome = function () {
+	var resizeLibraryHome = function () {
       var height = $win.height();
       var columns = $(".page-template-library-landing-page .section-heading-as-content");
       var existingPadding = $('.site-main').offset().top + $(".calls-to-action-feature").height();
@@ -357,7 +358,7 @@
     };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
-    
+
 	//JS for the Gutenberg FAQ blocks
 	jQuery(".schema-faq-section").each(function() {
 		jQuery(".schema-faq-question img").each(function () {
@@ -382,7 +383,51 @@
 			});
 		});
 	});//end JS for the Gutenberg FAQ blocks
+	jQuery('.requestInfo-close-trigger').click(function(){
+		jQuery('#requestInfo').removeClass('is-open').attr("aria-hidden","true");
+		console.log('close trigger activated. for real this time');
+	});
 
   });//end doc.ready
-
+	   
 })(jQuery, window, document);
+
+  // Initial config for setting up modals
+  MicroModal.init({
+	openTrigger: 'data-custom-open',
+	closeTrigger: 'data-custom-close',
+	disableScroll: false,
+	awaitCloseAnimation: true
+  });
+
+  // Programmatically show modal
+	var selection = document.querySelector('.requestInfo-trigger') !== null;
+	if (selection) {
+		document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
+			"use strict";
+			MicroModal.show('requestInfo');
+		});
+	}
+
+//  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
+//    MicroModal.close('requestInfo');
+//  });
+
+  // Scrollspy
+  var section = document.querySelectorAll(".heading");
+  var sections = {};
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  window.onscroll = function() {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        document.querySelector('.active').classList.remove('blue', 'fw6', 'active');
+        document.querySelector('a[href*=' + i + ']').classList.add('blue', 'fw6', 'active');
+      }
+    }
+  };

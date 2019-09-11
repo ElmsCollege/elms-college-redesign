@@ -107,6 +107,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
  */
 function gs_elms_scripts() {
 	wp_enqueue_style( 'wp-block-library-css', '/wp-includes/css/dist/block-library/style.min.css', array() );
+	wp_enqueue_style( 'micromodal', get_template_directory_uri() . '/css/micromodal.css', array(), '20190904');
 	
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '40' );
 
@@ -130,7 +131,8 @@ function gs_elms_scripts() {
 	wp_enqueue_script( 'gs_elms-object-fit', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
-
+	wp_enqueue_script( 'micromodal', get_template_directory_uri() . '/js/micromodal.min.js', array(), '20190701', true );
+	
 	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
 
 //	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

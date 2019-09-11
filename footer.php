@@ -68,10 +68,14 @@
         <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'ulreset' ) ); ?>
       </div>
 		</div><!-- .site-info -->
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
+<?php
+	wp_footer(); 
+	get_template_part("template-parts/ellucian-modal");
+?>
 
 </body>
 </html>

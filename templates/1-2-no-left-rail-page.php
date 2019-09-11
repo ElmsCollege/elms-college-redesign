@@ -78,14 +78,14 @@ get_template_part("template-parts/page-heading");
 				}?>
 			</div>
 
-			<div id="speaker" class="flexHalf">
+			<div id="speaker" class="flex-column">
 				<h4 class="centerText noMarginTop">Commencement Speaker</h4>
-				<h2 class="centerText"><?php the_field('commencement_speaker_name'); ?></h2>
+				<h2 class="centerText noMarginTop"><?php the_field('commencement_speaker_name'); ?></h2>
 				<?php if( get_field('commencement_speaker_bio') ){
 					the_field('commencement_speaker_bio');
 				}?>
 			</div>
-			<div id="demographics" class="flexHalf">
+			<div id="demographics" class="flex-column">
 				<?php if( get_field('class_demographics') ){
 					the_field('class_demographics');
 				}?>

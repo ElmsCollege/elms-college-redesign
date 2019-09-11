@@ -97,7 +97,7 @@ setup_postdata($post);
       
 		<div id="news" class="flexRowWrapStart spaceBetween news-events-feature">
 			<div class="events flexHalf">
-				<h2 class="centerText">Events</h2>
+				<h2 class="centerText noMarginTop">Events</h2>
 				<?php if( isset($events[0])) : ?>
                		<?php display_homepage_event($events[0])?>
            		<?php endif; ?>
@@ -117,7 +117,7 @@ setup_postdata($post);
 				</div>
 			</div>
 			<div class="news flexHalf listText">
-				<h2 class="centerText">News</h2>
+				<h2 class="centerText noMarginTop">News</h2>
 				<?php 
 					$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 					if (strpos($url,'staging') !== false) {

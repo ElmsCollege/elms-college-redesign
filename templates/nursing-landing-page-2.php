@@ -48,8 +48,9 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            
-      <div class="quick-facts">
+			<?php get_template_part("template-parts/request-info-button"); ?>
+
+			<div class="quick-facts">
         <div class="quick-facts-inner pure-g">
           <?php foreach ($quick_facts as $index=>$fact) : ?>
             <div class="quick-fact pure-u-1 pure-u-md-1-3">
