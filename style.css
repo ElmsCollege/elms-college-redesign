@@ -1762,6 +1762,10 @@ iframe{
 		display:none;
 	}
 }
+.field-content .requestInfo-trigger{
+	display:block !important;
+	max-width:300px;
+}
 .entry-content ul,.entry-content ol{
 	margin-left:0;
 	padding-left:1em
@@ -3610,6 +3614,7 @@ h4#formTrigger.colomat-close{
 }
 aside .requestInfo-trigger{
 	display:block;
+	margin-top:1.5em;
 	background-color:#c3a250;
 	width:100%;
 	border-radius:unset;
