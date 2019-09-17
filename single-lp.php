@@ -49,7 +49,7 @@ get_header("advertising");
 				<?php endif; ?>
 				<?php echo do_shortcode("[expand title='Get Information' id='formTrigger' swaptitle=' Close']" . get_template_part("template-parts/ellucian-modal") . "[/expand]"); ?>
 				</div>
-<?php echo do_shortcode( '[expand title="Get Information" id="formTrigger" swaptitle= "Close"]' . get_template_part("template-parts/ellucian-modal") . '[/expand]' ); ?>
+<?php echo do_shortcode( '[expand title="Get Information" id="formTrigger" swaptitle= "Close"]' . locate_template( "ellucian-modal.php", true, true ) . '[/expand]' ); ?>
 			</div>
 		</div>
 	</main><!-- #main -->    
