@@ -594,6 +594,9 @@ a:hover,a:active{
 .nav-trigger.active .close-label{
 	display:block
 }
+/* we don't want any navigation item to have a grey background on /info (page-id-38313) */
+.page-id-38313:not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
+.page-id-38313:not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438 !important}
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li>a:not(.words-1){
 		height:87px
@@ -1762,9 +1765,15 @@ iframe{
 		display:none;
 	}
 }
-.field-content .requestInfo-trigger{
+.field-content button.requestInfo-trigger{
 	display:block !important;
 	max-width:300px;
+}
+a.text.requestInfo-trigger{
+	display:inline-block !important;
+	max-width:unset;
+	width:auto;
+	cursor:pointer !important;
 }
 .entry-content ul,.entry-content ol{
 	margin-left:0;
@@ -4023,3 +4032,36 @@ th .smallText{
 		font-size:.7em;
 	}
 }
+/* BEGIN customizations from within the admin section */
+.nav-trigger, .pointer, .menu-item a{cursor:pointer;}
+#menu-item-21808 a, #menu-item-21806 a {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	height:auto;
+}
+body.mobile-or-library .main-navigation {height:auto;}
+
+.page-id-37120 #textHeading.section-heading,.page-id-37120 #pageHeading.section-heading{background-color:#003d79 !important;}	 
+.page-id-37120 #primary h2,.page-id-37120 #primary h3,.page-id-37120 #primary h4,.page-id-37120 #primary h5,.page-id-37120 #primary h6,.page-id-37120 #primary hr{color:#003d79 !important;}
+.page-id-37120 .social-media .social-media-inner{background-color:#003d79 !important;}
+.page-id-37120 #primary a{color:black;text-decoration:underline;}
+.main-event-content{padding-left:10px}
+.page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
+.small a{font-size:100%;}
+.field-sidebar-content .field-sidebar-content{padding:unset;margin-bottom:unset;line-height:inherit;}
+.small{font-size:.8em;}
+.small label{display:block;}
+.field-content button.requestInfo-trigger{
+	display:block !important;
+	max-width:300px;
+}
+a.text.requestInfo-trigger{
+	display:inline-block !important;
+	max-width:unset;
+	width:auto;
+	cursor:pointer !important;
+}
+.focal-image-container{display:none;}
+.page-id-38313:not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
+.page-id-38313:not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438 !important}
+/* END customizations from within the admin section */
