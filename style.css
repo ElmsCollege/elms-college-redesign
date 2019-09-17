@@ -594,6 +594,9 @@ a:hover,a:active{
 .nav-trigger.active .close-label{
 	display:block
 }
+/* we don't want any navigation item to have a grey background on /info (page-id-38313) */
+.page-id-38313:not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
+.page-id-38313:not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438 !important}
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li>a:not(.words-1){
 		height:87px
@@ -1762,9 +1765,15 @@ iframe{
 		display:none;
 	}
 }
-.field-content .requestInfo-trigger{
+.field-content button.requestInfo-trigger{
 	display:block !important;
 	max-width:300px;
+}
+a.text.requestInfo-trigger{
+	display:inline-block !important;
+	max-width:unset;
+	width:auto;
+	cursor:pointer !important;
 }
 .entry-content ul,.entry-content ol{
 	margin-left:0;
