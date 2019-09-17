@@ -18,7 +18,7 @@ if(get_field("advertising_right_column_text") ){
 	$rightText = get_field("advertising_right_column_text");
 }
 
-$formCode = get_field("advertising_ninja_form_shortcode");
+//$formCode = get_field("advertising_ninja_form_shortcode");
 
 get_header("advertising");
 ?>
@@ -47,9 +47,9 @@ get_header("advertising");
 						<a href="<?php the_field('advertising_application_link_url'); ?>" target="_blank" rel="noopener"><?php the_field('advertising_application_link_text'); ?></a>
 					</div>
 				<?php endif; ?>
-				<?php echo do_shortcode("[expand title='Get Information' id='formTrigger' swaptitle=' ']" .$formCode . "[/expand]"); ?>
+				<?php echo do_shortcode("[expand title='Get Information' id='formTrigger' swaptitle=' Close']" . get_template_part("template-parts/ellucian-modal") . "[/expand]"); ?>
 				</div>
-
+<?php echo do_shortcode( '[expand title="Get Information" id="formTrigger" swaptitle= "Close"]' . get_template_part("template-parts/ellucian-modal") . '[/expand]' ); ?>
 			</div>
 		</div>
 	</main><!-- #main -->    

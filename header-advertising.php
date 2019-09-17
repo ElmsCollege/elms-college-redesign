@@ -25,4 +25,3 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
   
 	<div id="content" class="site-content" style="padding-top:0;">
-    <?php get_template_part("template-parts/alert-bar")?>
