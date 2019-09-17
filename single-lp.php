@@ -7,9 +7,7 @@
  * @package Elms_College_Redesign
  */
 
-
 $bannerImage = get_field("advertising_banner_image");
-//$size = "full";
 
 if(get_field("advertising_right_column_header") ){
 	$rightHeader = get_field("advertising_right_column_header");
@@ -17,8 +15,6 @@ if(get_field("advertising_right_column_header") ){
 if(get_field("advertising_right_column_text") ){
 	$rightText = get_field("advertising_right_column_text");
 }
-
-//$formCode = get_field("advertising_ninja_form_shortcode");
 
 get_header("advertising");
 ?>
