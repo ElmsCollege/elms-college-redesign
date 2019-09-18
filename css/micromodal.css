@@ -4,7 +4,7 @@
 	left:0;
 	right:0;
 	bottom:0;
-	background:rgba(0,0,0,0.6);
+	background:rgba(0,0,0,.6);
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -97,13 +97,13 @@
 	}
 }
 .micromodal-slide[aria-hidden="false"] .modal_overlay {
-	animation:mmfadeIn .3s cubic-bezier(0.0,0.0,0.2,1);
+	animation:mmfadeIn .3s cubic-bezier(0,0,.2,1);
 }
 .micromodal-slide[aria-hidden="false"] .modal_container {
 	animation:mmslideIn .3s cubic-bezier(0,0,.2,1);
 }
 .micromodal-slide[aria-hidden="true"] .modal_overlay {
-	animation:mmfadeOut .3s cubic-bezier(0.0,0.0,0.2,1);
+	animation:mmfadeOut .3s cubic-bezier(0,0,.2,1);
 }
 .micromodal-slide[aria-hidden="true"] .modal_container {
 	animation:mmslideOut .3s cubic-bezier(0,0,.2,1);
