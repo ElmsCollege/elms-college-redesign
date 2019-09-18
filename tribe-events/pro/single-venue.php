@@ -34,7 +34,6 @@ global $wp_query;
         <h1 class="field-title no-pre-title">
           <?php 
           the_title(); ?>
-          <?php if (!is_single() && !is_page()) { print rss_link($GLOBALS['wp_the_query']); } ?>
         </h1>
     </div>
   	<div id="primary" class="content-area pure-g">

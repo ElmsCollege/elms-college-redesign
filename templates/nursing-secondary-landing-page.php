@@ -38,6 +38,8 @@ get_header("nursing");
 	<?php endif; ?>
 
 	<div id="primary" class="content-area">
+		<?php get_template_part("template-parts/request-info-button"); ?>
+
 		<main id="main" class="site-main" role="main">
                   
       <div class="section-mission_statement">

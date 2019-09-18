@@ -19,12 +19,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p class="textCenter"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'gs_elms' ); ?></p>
+			<p class="centerText"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'gs_elms' ); ?></p>
 <p>
 	<form role="search" method="get" class="search-form" action="/?">
 		<label>
 			<span class="screen-reader-text">Search for:</span>
-			<input type="search" class="search-field textCenter" placeholder="What are you trying to find?" value="" name="s" title="Search for:" style="display:block;margin:5px auto;width:95%;font-size:18px;"/>
+			<input type="search" class="search-field centerText" placeholder="What are you trying to find?" value="" name="s" title="Search for:" style="display:block;margin:5px auto;width:95%;font-size:18px;"/>
 		</label>
 		<input type="submit" class="ninjaSubmit" value="Search Again" />
 	</form>

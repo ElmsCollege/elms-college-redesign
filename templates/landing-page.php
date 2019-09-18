@@ -52,10 +52,10 @@ while ( have_posts() ) : the_post();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-      
-		<div class="body-text">
-	      		<?php the_content() ?>
-		</div>
+			<?php get_template_part("template-parts/request-info-button"); ?>
+			<div class="body-text">
+		      		<?php the_content() ?>
+			</div>
 
       <div class="section-mission_statement">
         <div class="quick-facts-inner pure-g">

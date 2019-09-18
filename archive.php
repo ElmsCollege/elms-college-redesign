@@ -13,7 +13,6 @@ get_header(); ?>
   <div class="section-heading" style="<?php print_featured_image_style(get_the_ID()) ?>">
       <h1 class="field-title no-pre-title">
         <?php the_archive_title( ); ?>
-        <?php if (!is_single()) { print rss_link($GLOBALS['wp_the_query']); } ?>
       </h1>
   </div>
 	<div id="primary" class="content-area pure-g">

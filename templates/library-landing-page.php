@@ -20,12 +20,12 @@ get_header("library"); ?>
       ?>
       
       
-      <div class="section-heading-as-content" style=" <?php print_featured_image_style(get_the_ID()) ?>">
+      <div class="section-heading-as-content noMarginBottom" style=" <?php print_featured_image_style(get_the_ID()) ?>">
         <?php if (get_the_post_thumbnail_url()): ?>
           <?php the_post_thumbnail() ?>
         <?php endif;?>
         <div class="text-content">
-          <h1 class="field-title">
+          <h1 class="noMargins">
             <?php the_title() ?>
           </h1>
           <div class="field-body">
@@ -66,18 +66,9 @@ get_header("library"); ?>
         </ul>
       <?php endif; ?>
       
-      
-      
-      
       <?php
 			endwhile; // End of the loop.
 			?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_footer("library");
