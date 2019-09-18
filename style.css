@@ -594,9 +594,6 @@ a:hover,a:active{
 .nav-trigger.active .close-label{
 	display:block
 }
-/* we don't want any navigation item to have a grey background on /info (page-id-38313) */
-.page-id-38313:not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
-.page-id-38313:not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438 !important}
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li>a:not(.words-1){
 		height:87px
@@ -2538,7 +2535,7 @@ body.page-template-home-page{
 	margin:24px auto;
 	font-weight:200;
 	border-radius:0;
-	padding:.8em 2em .7em 2em;
+	padding:.8em 2em .7em;
 	font-size:16px;
 	transition:all .25s ease-in-out
 }
@@ -2607,7 +2604,7 @@ body.page-template-home-page{
 	display:block
 }
 #libraryPage .section-heading-as-content .text-content{
-	padding:56px 64px .1px 64px;
+	padding:56px 64px .1px;
 	background-color:#115438;
 	position:relative;
 	z-index:1;
@@ -2615,7 +2612,7 @@ body.page-template-home-page{
 }
 @media (max-width: 47.999em){
 	#libraryPage .section-heading-as-content .text-content{
-		padding:32px 32px 1px 32px
+		padding:32px 32px 1px
 	}
 }
 @media (min-width: 48em){
@@ -2647,13 +2644,6 @@ body.page-template-home-page{
 		top:40%
 	}
 }
-#libraryPage .section-heading-as-content .text-content .field-body{
-	font-size:18px;
-	margin-bottom:32px
-}
-#libraryPage .section-heading-as-content .text-content .field-body p:first-child{
-	margin-top:.5em
-}
 #libraryPage .section-heading-as-content .text-content .field-body a{
 	color:#fff !important;
 	text-decoration:underline;
@@ -2664,7 +2654,7 @@ body.page-template-home-page{
 #libraryPage .section-heading-as-content .todays-hours{
 	background:#c3a250;
 	position:relative;
-	padding:32px 32px 48px 32px
+	padding:32px 32px 48px
 }
 @media (max-width: 47.99999em){
 	#libraryPage .section-heading-as-content .todays-hours{
@@ -3659,7 +3649,7 @@ a.buttonLink.grouped{
 	border: #e9e9e9 1px solid;
 }
 .w3card{
-	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+	box-shadow:0 4px 8px 0 rgba(0,0,0,.2);
 	transition:.3s;
 	display:block;
 	margin:auto auto 20px;
@@ -4047,10 +4037,6 @@ th .smallText{
 	height:auto;
 }
 
-.page-id-37120 #textHeading.section-heading,.page-id-37120 #pageHeading.section-heading{background-color:#003d79 !important;}	 
-.page-id-37120 #primary h2,.page-id-37120 #primary h3,.page-id-37120 #primary h4,.page-id-37120 #primary h5,.page-id-37120 #primary h6,.page-id-37120 #primary hr{color:#003d79 !important;}
-.page-id-37120 .social-media .social-media-inner{background-color:#003d79 !important;}
-.page-id-37120 #primary a{color:#000;text-decoration:underline;}
 .main-event-content{padding-left:10px}
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
 .small a{font-size:100%;}
@@ -4068,6 +4054,4 @@ a.text.requestInfo-trigger{
 	cursor:pointer !important;
 }
 .focal-image-container{display:none;}
-.page-id-38313:not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
-.page-id-38313:not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438 !important}
 /* END customizations from within the admin section */
