@@ -42,7 +42,9 @@ get_header(); ?>
 			//instance.panRight(600);
 		}
 
-		jQuery('svg g').on('click touch',function(){
+		jQuery('svg g.cls-2').on('click touch',function(){
+			alert(jQuery(this).attr('id'));
+/*
 			console.log(this);
 			hideSlideshow();
 			var buildingId = this.id;
@@ -53,6 +55,7 @@ get_header(); ?>
 			jQuery('.close').click(function(){
 				hideSlideshow();
 			});
+*/
 		});
 	});
 </script>
