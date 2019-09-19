@@ -62,7 +62,7 @@ get_header(); ?>
 			//instance.panRight(600);
 		}
 
-		jQuery('svg g.cls-2 path').on('click touch',function(){
+		jQuery('svg g.cls-2 polygon,svg g.cls-2 path').on('click touch',function(){
 			console.log(jQuery(this).attr('id'));
 			hideSlideshow();
 			var buildingId = this.id;
