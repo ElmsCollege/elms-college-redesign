@@ -42,7 +42,7 @@ get_header(); ?>
 			//instance.panRight(600);
 		}
 
-		jQuery('svg g.cls-2').on('click touch',function(){
+		jQuery('svg g.cls-2 polygon').on('click touch',function(){
 			alert(jQuery(this).attr('id'));
 /*
 			console.log(this);
