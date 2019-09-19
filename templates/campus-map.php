@@ -35,7 +35,7 @@ get_header(); ?>
 				)
 			);
 			foreach($slideshows as $slide) {
-				echo '<div class="transition' . $slide['div'] . ' slideshow">';
+				echo '<div class="transition ' . $slide['div'] . ' slideshow">';
 				echo '<h3 class="slideshow_header">' . $slide['title'] . '</h3>';
 				echo do_shortcode($slide['metaslidershortcode']);
 				echo '<button class="close">Close</button></div>';
@@ -63,7 +63,6 @@ get_header(); ?>
 		}
 
 		jQuery('svg g.cls-2 path').on('click touch',function(){
-			alert();
 			console.log(jQuery(this).attr('id'));
 			hideSlideshow();
 			var buildingId = this.id;
