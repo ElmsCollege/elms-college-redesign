@@ -35,9 +35,8 @@ get_header(); ?>
 				)
 			);
 			foreach($slideshows as $slide) {
-				echo '<div class="transition"' . $slide['div'] . '"slideshow">
-';
-				echo '<h3 class="slideshow_header">' . $slide['title'] . '"</h3>"';
+				echo '<div class="transition' . $slide['div'] . ' slideshow">';
+				echo '<h3 class="slideshow_header">' . $slide['title'] . '</h3>';
 				echo do_shortcode($slide['metaslidershortcode']);
 				echo '<button class="close">Close</button></div>';
 			}
