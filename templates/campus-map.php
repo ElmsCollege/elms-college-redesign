@@ -43,6 +43,7 @@ get_header(); ?>
 		}
 
 		jQuery('svg g').on('click touch',function(){
+			console.log(this);
 			hideSlideshow();
 			var buildingId = this.id;
 			console.log(buildingId);
