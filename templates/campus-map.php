@@ -51,7 +51,7 @@ get_header(); ?>
 		jQuery('svg g.cls-2 polygon,svg g.cls-2 path').on('click touch',function(){
 			hideSlideshow();
 			var buildingId = this.id;
-			if(buildingId.length){
+			if(buildingId.length > 0){
 				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 				jQuery(slideshowBlock).toggleClass('visible');
 				jQuery(this).addClass('hilite');
