@@ -45,6 +45,7 @@ get_header(); ?>
 		jQuery('svg g').on('click touch',function(){
 			hideSlideshow();
 			var buildingId = this.id;
+			console.log(buildingId);
 			var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 			jQuery(slideshowBlock).toggleClass('visible');
 			jQuery(this).addClass('hilite');
