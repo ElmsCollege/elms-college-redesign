@@ -45,10 +45,6 @@ get_header(); ?>
 			jQuery('.slideshow').removeClass('visible');
 		}
 
-		jQuery('svg g').on('click touch',function(){
-			hideSlideshow();
-		});
-
 		jQuery('svg polygon,svg path').on('click touch',function(){
 			var buildingId = this.id;
 			if(buildingId){
@@ -61,7 +57,7 @@ get_header(); ?>
 			}
 		});
 	});
-	console.log("cachebuster -2");
+	console.log("cachebuster -3");
 </script>
 
 <?php
