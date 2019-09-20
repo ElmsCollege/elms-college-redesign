@@ -39,14 +39,17 @@ get_header(); ?>
 		var instance = new SVGPanZoom(document.getElementById('campusMap'), {
 			eventMagnet: document.getElementById('svg-container')
         });
-		
+
 		function hideSlideshow(){
 			jQuery('svg g').removeClass('hilite');
 			jQuery('.slideshow').removeClass('visible');
-			//instance.panRight(600);
 		}
-		jQuery('svg polygon,svg path').on('click touch',function(){
+
+		jQuery('svg g').on('click touch',function(){
 			hideSlideshow();
+		});
+
+		jQuery('svg polygon,svg path').on('click touch',function(){
 			var buildingId = this.id;
 			if(buildingId){
 				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
@@ -58,7 +61,7 @@ get_header(); ?>
 			}
 		});
 	});
-	console.log("cachebuster -1");
+	console.log("cachebuster -2");
 </script>
 
 <?php
