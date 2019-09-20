@@ -47,6 +47,7 @@ get_header(); ?>
 
 		jQuery('svg polygon,svg path').on('click touch',function(){
 			var buildingId = this.id;
+			hideSlideshow();
 			if(buildingId){
 				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 				jQuery(slideshowBlock).toggleClass('visible');
@@ -55,9 +56,27 @@ get_header(); ?>
 					hideSlideshow();
 				});
 			}
+		//BEGIN attempt to center map when clicked
+			if ( jQuery( this ) . attr( "transform" ) ) {
+				jQuery( this ) . removeAttr( "transform" );
+				jQuery( ".cls-1 polygon:not([transform])" ) . show();
+			} else {
+				var objRect = this . getBoundingClientRect();
+				var svgRect = jQuery( "#campusMap" )[ 0 ] . getBoundingClientRect();
+				var scaleX = svgRect . width / 10000;
+				var scaleY = svgRect . height / 4500;
+				var newX = ( svgRect . left - objRect . left ) / scaleX;
+				var newY = ( svgRect . top - objRect . top ) / scaleY;
+				var xScale = svgRect . width / objRect . width;
+				var yScale = svgRect . height / objRect . height;
+				jQuery( this ) . attr( "transform", "matrix(" + xScale + " 0 0 " + yScale + " " + newX * xScale + " " + newY * yScale + ")" );
+				jQuery( ".cls-1 polygon path:not([transform])" ) . hide();
+			}
+		//END attempt to center map when clicked
+		
 		});
 	});
-	console.log("cachebuster -3");
+	console.log("cachebuster -4");
 </script>
 
 <?php
