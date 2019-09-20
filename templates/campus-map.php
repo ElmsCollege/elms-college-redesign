@@ -45,22 +45,20 @@ get_header(); ?>
 			jQuery('.slideshow').removeClass('visible');
 			//instance.panRight(600);
 		}
-		jQuery('svg g').on('click touch',function(){
-				hideSlideshow();
-		});
 		jQuery('svg g.cls-2 polygon,svg g.cls-2 path').on('click touch',function(){
 			hideSlideshow();
 			var buildingId = this.id;
-			//if(buildingId.length > 0){
+			if(buildingId){
 				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 				jQuery(slideshowBlock).toggleClass('visible');
 				jQuery(this).addClass('hilite');
 				jQuery('.close').on('click touch',function(){
 					hideSlideshow();
 				});
-			//}
+			}
 		});
 	});
+	console.log("cachebuster");
 </script>
 
 <?php
