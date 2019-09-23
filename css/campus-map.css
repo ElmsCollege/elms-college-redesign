@@ -33,10 +33,10 @@ svg path:hover,svg polygon:hover{
 	max-width:400px;
 	background-color:#fff;
 	z-index:10;
-	border:5px solid #dedede;
+	border:2px solid #dedede;
 	border-radius:5px;
 }
-.site-main .slideshow h3{
+.slideshow_header{
 	text-align:center;
 	font-size:1.2em;
 	margin-bottom:2px;
