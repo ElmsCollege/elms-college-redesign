@@ -15,7 +15,7 @@ footer {
 	width:100% !important;
 	height:auto !important;
 }
-svg g:hover{
+svg path:hover,svg polygon:hover{
 	cursor:pointer;
 }
 .close{
