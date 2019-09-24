@@ -3768,7 +3768,7 @@ body.page-template-landing-page .opening-menu{
 .spaceAround{
 	justify-content:space-around;
 }
-.flexCenter{
+.justifyCenter{
 	justify-content:center;
 }
 .flex-column{
