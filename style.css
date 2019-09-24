@@ -2400,25 +2400,18 @@ body.page-template-home-page{
 	width:100%;
 	overflow-x:hidden
 }
-#libraryPage .site-branding:after,#nursingPage .site-branding:after{
-	position:absolute;
-	top:8px;
-	color:#696969;
-	display:block;
-	height:42px;
-	line-height:42px;
-	left:121px;
-	width:9.1em;
+.specialsectionlink{
+	float:left;
+	margin:11px 0 0 120px;
 	border-left:1px solid #CCC;
-	padding-left:0;
+	padding: 5px 0;
 }
-#libraryPage .site-branding:after{
-	content:"Alumnae Library";
+.specialsectionlink a,.specialsectionlink a:visited{
+	color:#696969;
+	text-decoration:none;
+	padding-left:10px;
+	font-size:1.1em;
 }
-#nursingPage .site-branding:after{
-	content:"School of Nursing";
-}
-
 #libraryPage .site-content,#nursingPage .site-content,#commencementPage .site-content{
 	padding-top:56px
 }

@@ -61,15 +61,3 @@
 	margin-left:0;
 	list-style:none;
 }
-.specialsectionlink{
-	float:left;
-	margin:11px 0 0 120px;
-	border-left:1px solid #CCC;
-	padding: 5px 0;
-}
-.specialsectionlink a,.specialsectionlink a:visited{
-	color:#696969;
-	text-decoration:none;
-	padding-left:10px;
-	font-size:1.1em;
-}
