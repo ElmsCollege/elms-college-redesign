@@ -2427,16 +2427,12 @@ body.page-template-home-page{
 }
 #special-section-menu{
 	margin:0 auto;
-	vertical-align:middle;
-	text-align:center;
-	display:table;
 	text-transform:uppercase;
 	position:relative;
 	z-index:2;
 }
 #special-section-menu>li{
 	position:relative;
-	display:table-cell
 }
 #special-section-menu>li:after{
 	border-left:1px solid #ccc;
@@ -3771,6 +3767,9 @@ body.page-template-landing-page .opening-menu{
 }
 .spaceAround{
 	justify-content:space-around;
+}
+.flexCenter{
+	justify-content:center;
 }
 .flex-column{
 	min-width:300px;
