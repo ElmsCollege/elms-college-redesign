@@ -37,38 +37,6 @@ get_header(); ?>
 		?>
 	</main><!-- #main -->
 
-<script>
-	var SVGobject = document.getElementById("svg-object");
-//	var mapSVG;
- 	mapSVG.addEventListener("load",function() {
-    	mapSVG = SVGobject.contentDocument;
- 	
-		var instance = new SVGPanZoom(object.contentDocument.getElementById('campusMap'), {
-		eventMagnet: document.getElementById('svg-object')
-        });
-
-		function hideSlideshow(){
-			jQuery('svg g').removeClass('hilite');
-			jQuery('.slideshow').removeClass('visible');
-		}
-
-		jQuery('svg polygon,svg path').on('click touch',function(){
-			var buildingId = this.id;
-			hideSlideshow();
-			if(buildingId){
-				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
-				jQuery(slideshowBlock).toggleClass('visible');
-				jQuery(this).addClass('hilite');
-				jQuery('.close').on('click touch',function(){
-					hideSlideshow();
-				});
-			}		
-		});
-
-	}, false);
-
-</script>
-
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer pure-g" role="contentinfo">
 		<div class="fullWidth social-media">

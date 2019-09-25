@@ -87,3 +87,29 @@
     </path>
   </g>
 </svg>
+<script>
+	jQuery(document).ready(function() {
+		var instance = new SVGPanZoom(object.contentDocument.getElementById('campusMap'), {
+		eventMagnet: document.getElementById('svg-object')
+        });
+
+		function hideSlideshow(){
+			jQuery('svg g').removeClass('hilite');
+			jQuery('.slideshow').removeClass('visible');
+		}
+
+		jQuery('svg polygon,svg path').on('click touch',function(){
+			var buildingId = this.id;
+			hideSlideshow();
+			if(buildingId){
+				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
+				jQuery(slideshowBlock).toggleClass('visible');
+				jQuery(this).addClass('hilite');
+				jQuery('.close').on('click touch',function(){
+					hideSlideshow();
+				});
+			}		
+		});
+	});
+</script>
+
