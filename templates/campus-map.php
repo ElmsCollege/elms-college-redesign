@@ -16,7 +16,6 @@ get_header(); ?>
 	<main id="main" class="pure-u-1" role="main">
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
-			<object type="image/svg+xml" data="/wp-content/themes/gs_elms/images/Elms-campus3d.svg" id="svg-object"></object>
 		</div><!-- end #svg-container -->
 		
 		<?php
@@ -37,7 +36,35 @@ get_header(); ?>
 		?>
 	</main><!-- #main -->
 
-	</div><!-- #content -->
+<script>
+	jQuery(document).ready(function(){
+		jQuery("#svg-container").load("/wp-content/themes/gs_elms/images/Elms-campus3d.svg", function(){
+			var instance = new SVGPanZoom(document.getElementById('campusMap'),{
+				eventMagnet: document.getElementById('svg-container')
+			});
+		});
+		
+		function hideSlideshow(){
+			jQuery('svg g').removeClass('hilite');
+			jQuery('.slideshow').removeClass('visible');
+		}
+		jQuery('svg polygon,svg path').on('click touch',function(){
+			var buildingId = this.id;
+			hideSlideshow();
+			if(buildingId){
+				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
+				jQuery(slideshowBlock).toggleClass('visible');
+				jQuery(this).addClass('hilite');
+				jQuery('.close').on('click touch',function(){
+					hideSlideshow();
+				});
+			}		
+		});
+	});
+	console.log("cachebuster -7");
+</script>
+
+</div><!-- #content -->
 	<footer id="colophon" class="site-footer pure-g" role="contentinfo">
 		<div class="fullWidth social-media">
 			<div class="social-media-inner">
