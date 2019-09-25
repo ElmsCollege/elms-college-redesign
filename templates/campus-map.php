@@ -16,7 +16,7 @@ get_header(); ?>
 	<main id="main" class="pure-u-1" role="main">
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
-			<object type="image/svg+xml" data="/images/Elms-campus3d.svg" id="svg-object"></object>
+			<object type="image/svg+xml" data="/wp-content/themes/gs_elms/images/Elms-campus3d.svg" id="svg-object"></object>
 		</div><!-- end #svg-container -->
 		
 		<?php
