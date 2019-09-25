@@ -6,7 +6,8 @@ footer {
 #svg-container{
 	width:100%;
 	height:auto;
-	background-color:#A3BC9F
+	background-color:#A3BC9F;
+	min-height:350px;
 }
 #campusMap{
 	width:100% !important;
@@ -51,5 +52,6 @@ svg path:hover,svg polygon:hover{
 		right:0;
 		top:unset;
 		width:100%;
+		bottom:15px;
 	}
 }
