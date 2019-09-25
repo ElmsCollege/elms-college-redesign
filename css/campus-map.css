@@ -7,11 +7,11 @@ footer {
 	width:100%;
 	height:auto;
 	background-color:#A3BC9F;
-	min-height:350px;
 }
 #campusMap{
 	width:100% !important;
 	height:auto !important;
+	min-height:350px;
 }
 svg path:hover,svg polygon:hover{
 	cursor:pointer;
