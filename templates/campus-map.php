@@ -39,12 +39,12 @@ get_header(); ?>
 
 <script>
 	var SVGobject = document.getElementById("svg-object");
-	var mapSVG = SVGobject.contentDocument;
+//	var mapSVG;
  	mapSVG.addEventListener("load",function() {
     	mapSVG = SVGobject.contentDocument;
  	
-		var instance = new SVGPanZoom(document.getElementById('campusMap'), {
-		eventMagnet: document.getElementById('svg-container')
+		var instance = new SVGPanZoom(object.contentDocument.getElementById('campusMap'), {
+		eventMagnet: document.getElementById('svg-object')
         });
 
 		function hideSlideshow(){
