@@ -1,4 +1,4 @@
-s<?php
+<?php
 /**
  * Template Name: Campus Map template
  * This template has been customized to display the SVG-based campus map.
