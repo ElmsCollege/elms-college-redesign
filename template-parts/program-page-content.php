@@ -43,7 +43,7 @@ get_template_part("template-parts/page-heading");
     <?php if ($programPageStoryImage): ?>
 	<?php echo wp_get_attachment_image( $programPageStoryImage, "large" ); ?>
     <?php elseif ($programImage): ?>
-	<img class="energetic" src="<?php print $programImage["url"] ?>" alt="<?php print($programImage["alt"]) ?>" />  
+	<img src="<?php print $programImage["url"] ?>" alt="<?php print($programImage["alt"]) ?>" />  
     <?php else: ?>
 	<img src="<?php print $story_background["url"] ?>" alt="<?php print($story_background["alt"]) ?>" />              
     <?php endif;?>
