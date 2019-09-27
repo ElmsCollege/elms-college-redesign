@@ -42,26 +42,27 @@ get_header(); ?>
 			var instance = new SVGPanZoom(document.getElementById('campusMap'),{
 				eventMagnet: document.getElementById('svg-container')
 			});
-		});
 		
-		function hideSlideshow(){
-			jQuery('svg g').removeClass('hilite');
-			jQuery('.slideshow').removeClass('visible');
-		}
-		jQuery('svg polygon,svg path').on('click touch',function(){
-			var buildingId = this.id;
-			hideSlideshow();
-			if(buildingId){
-				var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
-				jQuery(slideshowBlock).toggleClass('visible');
-				jQuery(this).addClass('hilite');
-				jQuery('.close').on('click touch',function(){
-					hideSlideshow();
-				});
-			}		
+			function hideSlideshow(){
+				jQuery('svg g').removeClass('hilite');
+				jQuery('.slideshow').removeClass('visible');
+			}
+
+			jQuery('svg polygon,svg path').on('click touch',function(){
+				var buildingId = this.id;
+				hideSlideshow();
+				if(buildingId){
+					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
+					jQuery(slideshowBlock).toggleClass('visible');
+					jQuery(this).addClass('hilite');
+					jQuery('.close').on('click touch',function(){
+						hideSlideshow();
+					});
+				}
+			});
 		});
 	});
-	console.log("cachebuster -7");
+	console.log("cachebuster -8");
 </script>
 
 </div><!-- #content -->
