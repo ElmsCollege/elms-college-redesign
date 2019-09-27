@@ -24,8 +24,17 @@ get_header(); ?>
 				"berchmans" => array("div" => "berchmanshall","title" => "Berchmans Hall","metaslidershortcode" => '[metaslider id="38345"]'),
 				"library" => array("div" => "alumnaelibrary","title" => "Alumnae Library","metaslidershortcode" => '[metaslider id="38346"]'),
 				"dooley" => array("div" => "marydooleycollegecenter","title" => "Mary Dooley College Center","metaslidershortcode" => '[metaslider id="38347"]'),
+				"rosewilliam" => array("div" => "rosewilliamhall","title" => "Rose William Hall","metaslidershortcode" => '[metaslider id="38348"]'),
+				"oleary" => array("div" => "olearyhall","title" => "O'Leary Hall","metaslidershortcode" => '[metaslider id="38349"]'),
 				"devine" => array("div" => "devinehall","title" => "Devine Hall","metaslidershortcode" => '[metaslider id="38350"]'),
-				"spaulding" => array("div" => "spauldinghouse","title" => "Spaulding House","metaslidershortcode" => '[metaslider id="38351"]')
+				"spaulding" => array("div" => "spauldinghouse","title" => "Spaulding House","metaslidershortcode" => '[metaslider id="38351"]'),
+				"lyons" => array("div" => "lyonscenter","title" => "Lyons Center for Natural and Health Sciences","metaslidershortcode" => '[metaslider id="38352"]'),
+				"bluehouse" => array("div" => "bluehouse","title" => "Blue House (147 Grape Street)","metaslidershortcode" => '[metaslider id="38353"]'),
+				"brickhouse" => array("div" => "brickhouse","title" => "Brick House (15 Gaylord Street)","metaslidershortcode" => '[metaslider id="38354"]'),
+				"marian" => array("div" => "marianhall","title" => "Marian Hall","metaslidershortcode" => '[metaslider id="38356"]'),
+				"maguire" => array("div" => "maguirecenter","title" => "Maguire Center","metaslidershortcode" => '[metaslider id="38357"]'),
+				"gaylord" => array("div" => "gaylordmansion","title" => "Gaylord Mansion","metaslidershortcode" => '[metaslider id="38510"]'),
+				"quad" => array("div" => "keatingquad","title" => "Keating Quadrangle","metaslidershortcode" => '[metaslider id="38634"]')
 			);
 			foreach($slideshows as $slide) {
 				echo '<div class="transition ' . $slide['div'] . ' slideshow">';
