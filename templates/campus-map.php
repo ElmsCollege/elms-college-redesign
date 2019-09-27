@@ -48,6 +48,7 @@ get_header(); ?>
 				jQuery('.slideshow').removeClass('visible');
 			}
 
+
 			jQuery('svg polygon,svg path').on('click touch',function(){
 				var buildingId = this.id;
 				hideSlideshow();
@@ -63,46 +64,11 @@ get_header(); ?>
 		});
 	});
 	console.log("cachebuster -8");
+
 </script>
 
 </div><!-- #content -->
 	<footer id="colophon" class="site-footer pure-g" role="contentinfo">
-		<div class="fullWidth social-media">
-			<div class="social-media-inner">
-				<p class="pre-title">
-					Stay Connected
-				</p>
-				<h2 class="field-social_media_title">
-					Connect With Us
-				</h2>
-
-				<ul class="social-media-icons pure-g flexRowWrapStart">
-
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
-							<img src="/wp-content/themes/gs_elms/images/icon-facebook.png" alt="Facebook logo"/>
-						</a>
-					</li>
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://twitter.com/elmscollege">
-							<img src="/wp-content/themes/gs_elms/images/icon-twitter.png" alt="Twitter logo"/>
-						</a>
-					</li>
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.instagram.com/elmscollege/">
-							<img src="/wp-content/themes/gs_elms/images/icon-instagram.png" alt="Instagram logo"/>
-						</a>
-					</li>
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.youtube.com/user/ElmsCollegeVideo">
-							<img src="/wp-content/themes/gs_elms/images/icon-youtube.png" alt="YouTube logo"/>
-						</a>
-					</li>
-
-				</ul>
-			</div>
-		</div>
-
 		<div class="site-identity pure-u-1 pure-u-lg-7-24">
   			<div class="site-branding footer-item-inner">
   				<p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>

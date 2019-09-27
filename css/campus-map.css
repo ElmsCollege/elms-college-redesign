@@ -1,7 +1,4 @@
 /* stylesheet for the campus map page */
-.social-media{
-	display:none;
-}
 footer {
 	border-top: 2px solid #115438;
 	padding-top: 25px;
@@ -9,11 +6,12 @@ footer {
 #svg-container{
 	width:100%;
 	height:auto;
-	background-color:#A3BC9F
+	background-color:#A3BC9F;
 }
 #campusMap{
 	width:100% !important;
 	height:auto !important;
+	min-height:350px;
 }
 svg path:hover,svg polygon:hover{
 	cursor:pointer;
@@ -54,5 +52,6 @@ svg path:hover,svg polygon:hover{
 		right:0;
 		top:unset;
 		width:100%;
+		bottom:15px;
 	}
 }
