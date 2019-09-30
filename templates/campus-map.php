@@ -41,8 +41,26 @@ get_header(); ?>
 					});
 				}
 			});
+			jQuery('#reset').on('click touch',function(){
+				instance.reset;
+			});
 			jQuery('#zoomin').on('click touch',function(){
 				instance.zoomIn(null,0.4);
+			});
+			jQuery('#zoomOut').on('click touch',function(){
+				instance.zoomOut(null,0.4);
+			});
+			jQuery('#panLeft').on('click touch',function(){
+				instance.panLeft(200);
+			});
+			jQuery('#panRight').on('click touch',function(){
+				instance.panRight(200);
+			});
+			jQuery('#panUp').on('click touch',function(){
+				instance.panUp(200);
+			});
+			jQuery('#panDown').on('click touch',function(){
+				instance.panDown(200);
 			});
 		});
 	});
@@ -50,7 +68,7 @@ get_header(); ?>
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
 		</div><!-- end #svg-container -->
-		<div id="controls">
+		<div class="flexRowWrapStart justifyCenter">
 			<button id="reset">Reset Map</button>
 			<button id="zoomin">Zoom In</button>
 			<button id="zoomout">Zoom Out</button>
