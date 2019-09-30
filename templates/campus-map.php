@@ -24,11 +24,13 @@ get_header();
 			function hideSlideshow(){
 				jQuery('svg g').removeClass('hilite');
 				jQuery('.slideshow').removeClass('visible');
+				jQuery('svg').removeClass('slideshowOpen');
 			}
 			jQuery('svg polygon,svg path').on('click touch',function(){
 				var buildingId = this.id;
 				hideSlideshow();
 				if(buildingId){
+					jQuery('svg').addClass('slideshowOpen');
 					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 					jQuery(slideshowBlock).toggleClass('visible');
 					jQuery(this).addClass('hilite');
@@ -36,6 +38,9 @@ get_header();
 						hideSlideshow();
 					});
 				}
+			});
+			jQuery('svg.slideshowOpen').on('click touch',function(){
+				hideSlideshow();
 			});
 			jQuery('#reset').on('click touch',function(){
 				instance.reset();
