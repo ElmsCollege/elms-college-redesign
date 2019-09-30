@@ -26,9 +26,9 @@ get_header(); ?>
 				jQuery('svg g').removeClass('hilite');
 				jQuery('.slideshow').removeClass('visible');
 			}
-			jQuery('svg').on('click touch',function(){
-				hideSlideshow();
-			});
+//			jQuery('svg').on('click touch',function(){
+//				hideSlideshow();
+//			});
 			jQuery('svg polygon,svg path').on('click touch',function(){
 				var buildingId = this.id;
 				hideSlideshow();
