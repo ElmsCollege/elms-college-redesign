@@ -44,7 +44,7 @@ get_header(); ?>
 			jQuery('#reset').on('click touch',function(){
 				instance.reset;
 			});
-			jQuery('#zoomin').on('click touch',function(){
+			jQuery('#zoomIn').on('click touch',function(){
 				instance.zoomIn(null,0.4);
 			});
 			jQuery('#zoomOut').on('click touch',function(){
@@ -70,8 +70,8 @@ get_header(); ?>
 		</div><!-- end #svg-container -->
 		<div class="flexRowWrapStart justifyCenter">
 			<button id="reset">Reset Map</button>
-			<button id="zoomin">Zoom In</button>
-			<button id="zoomout">Zoom Out</button>
+			<button id="zoomIn">Zoom In</button>
+			<button id="zoomOut">Zoom Out</button>
 			<button id="panLeft">Left</button>
 			<button id="panRight">Right</button>
 			<button id="panUp">Up</button>
