@@ -39,24 +39,31 @@ get_header();
 			});
 			jQuery('#reset').on('click touch',function(){
 				instance.reset();
+				hideSlideshow();
 			});
 			jQuery('#zoomIn').on('click touch',function(){
 				instance.zoomIn(null,0.4);
+				hideSlideshow();
 			});
 			jQuery('#zoomOut').on('click touch',function(){
 				instance.zoomOut(null,0.4);
+				hideSlideshow();
 			});
 			jQuery('#panLeft').on('click touch',function(){
 				instance.panLeft(200);
+				hideSlideshow();
 			});
 			jQuery('#panRight').on('click touch',function(){
 				instance.panRight(200);
+				hideSlideshow();
 			});
 			jQuery('#panUp').on('click touch',function(){
 				instance.panUp(200);
+				hideSlideshow();
 			});
 			jQuery('#panDown').on('click touch',function(){
 				instance.panDown(200);
+				hideSlideshow();
 			});
 		});
 	});
