@@ -26,6 +26,9 @@ get_header(); ?>
 				jQuery('svg g').removeClass('hilite');
 				jQuery('.slideshow').removeClass('visible');
 			}
+			jQuery('svg').on('click touch',function(){
+				hideSlideshow();
+			});
 			jQuery('svg polygon,svg path').on('click touch',function(){
 				var buildingId = this.id;
 				hideSlideshow();
@@ -38,13 +41,24 @@ get_header(); ?>
 					});
 				}
 			});
+			jQuery('#zoomin').on('click touch',function(){
+				instance.zoomIn(null,0.4);
+			});
 		});
 	});
 </script>
 
 		<div id="svg-container" class="flexRowWrapStart spaceBetween">
 		</div><!-- end #svg-container -->
-		
+		<div id="controls">
+			<button id="reset">Reset Map</button>
+			<button id="zoomin">Zoom In</button>
+			<button id="zoomout">Zoom Out</button>
+			<button id="panLeft">Left</button>
+			<button id="panRight">Right</button>
+			<button id="panUp">Up</button>
+			<button id="panDown">Down</button>
+		</div>
 		<?php
 			$slideshows = array(
 				//"generic name" => array("div" => "<name of layer from svg>","title" => "<title for slideshow window>","metaslidershortcode" => '<metaslider shortcode from admin>'),
