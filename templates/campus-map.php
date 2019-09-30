@@ -25,9 +25,6 @@ get_header();
 				jQuery('svg g').removeClass('hilite');
 				jQuery('.slideshow').removeClass('visible');
 			}
-			document.getElementById("svg-container").addEventListener("click", function () {
-				hideSlideshow();
-			})			
 			jQuery('svg polygon,svg path').on('click touch',function(){
 				var buildingId = this.id;
 				hideSlideshow();
