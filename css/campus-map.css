@@ -27,7 +27,7 @@ svg path:hover,svg polygon:hover{
 	display:none;
 	position:absolute;
 	top:20%;
-	max-width:400px;
+/*	max-width:400px; */
 	background-color:#fff;
 	z-index:10;
 	border:2px solid #dedede;
@@ -39,7 +39,7 @@ svg path:hover,svg polygon:hover{
 	margin-bottom:2px;
 }
 .visible{
-	right:20px;
+	/*right:20px;*/
 	display:unset;
 	-webkit-transition: right .3s ease-out;
 	-moz-transition: right .3s ease-out;
@@ -48,9 +48,9 @@ svg path:hover,svg polygon:hover{
 }
 @media all and (max-width:600px){
 	.visible{
-		right:0;
+		/* right:0; 
 		top:unset;
 		width:100%;
-		bottom:15px;
+		bottom:15px; */ 
 	}
 }
