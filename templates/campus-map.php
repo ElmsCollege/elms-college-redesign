@@ -37,7 +37,7 @@ get_header();
 					});
 				}
 			});
-document.querySelector("polygon").addEventListener("click", (e) => {
+document.getElementById("campusMap").addEventListener("click", (e) => {
 	console.log("clicked");
 });
 			jQuery('svg.slideshowOpen').on('click touch',function(){
