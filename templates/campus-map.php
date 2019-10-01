@@ -73,6 +73,7 @@ get_header();
 		});
 	});
 </script>
+	<div id="pageContainer">
   <div id="svg-container" class="flexRowWrapStart spaceBetween"> </div>
   <!-- end #svg-container -->
   <div class="flexRowWrapStart justifyCenter">
@@ -109,6 +110,7 @@ get_header();
     echo '<button class="close">Close</button></div>';
   }
   ?>
+	</div><!-- end pageContainer-->
 </main>
 <!-- #main -->
 

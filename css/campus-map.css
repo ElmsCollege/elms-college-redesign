@@ -3,6 +3,9 @@ footer {
 	border-top: 2px solid #115438;
 	padding-top: 25px;
 }
+#pageContainer{
+	position:relative;
+}
 #svg-container{
 	width:100%;
 	height:auto;
@@ -45,11 +48,10 @@ svg path:hover,svg polygon:hover{
 	-moz-transition: right .3s ease-out;
 	-o-transition: right .3s ease-out;
 	transition: right .3s ease-out;
-	top:50%;
-	margin-top:-200px;
+	top:0;
 }
 @media all and (max-width:600px){
 	.visible{
-		top:300px;
+		width:100%;
 	}
 }
