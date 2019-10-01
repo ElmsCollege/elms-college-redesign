@@ -32,7 +32,6 @@ svg path:hover,svg polygon:hover{
 	z-index:10;
 	border:2px solid #dedede;
 	border-radius:5px;
-	max-height:450px;
 }
 .slideshow_header{
 	text-align:center;
