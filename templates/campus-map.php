@@ -20,10 +20,10 @@ get_header();
 			var instance = new SVGPanZoom(document.getElementById('campusMap'),{
 				eventMagnet: document.getElementById('svg-container')
 			});
-document.getElementById("campusMap").addEventListener("click", (e) => {
-	console.log("clicked. should close slideshow");
-				hideSlideshow();
-});
+//document.getElementById("campusMap").addEventListener("click", (e) => {
+	//console.log("clicked. should close slideshow");
+		//		hideSlideshow();
+//});
 		
 			function hideSlideshow(){
 				jQuery('.slideshow').removeClass('visible');
