@@ -42,9 +42,6 @@ get_header();
 				}
 				console.log('open slideshow');
 			});
-//			jQuery('svg.slideshowOpen').on('click touch',function(){
-//				hideSlideshow();
-//			});
 			jQuery('#reset').on('click touch',function(){
 				instance.reset();
 				hideSlideshow();
