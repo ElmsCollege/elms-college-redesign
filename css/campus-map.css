@@ -26,12 +26,13 @@ svg path:hover,svg polygon:hover{
 .slideshow{
 	display:none;
 	position:absolute;
-/*	top:20%;
-	max-width:400px; */
+	top:9%;
+/*	max-width:400px; */
 	background-color:#fff;
 	z-index:10;
 	border:2px solid #dedede;
 	border-radius:5px;
+	max-height:450px;
 }
 .slideshow_header{
 	text-align:center;
