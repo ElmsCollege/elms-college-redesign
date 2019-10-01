@@ -13,16 +13,12 @@ footer {
 	height:auto !important;
 	min-height:350px;
 }
-svg path:hover,svg polygon:hover{
-	cursor:pointer;
+svg path,svg polygon{
+	pointer-events:visible;
 }
 .close{
 	display:block;
 	margin:0 auto;
-}
-.hilite{
-	stroke:#115438;
-	stroke-width:25;
 }
 .slideshow{
 	display:none;

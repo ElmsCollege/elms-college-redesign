@@ -22,7 +22,6 @@ get_header();
 			});
 		
 			function hideSlideshow(){
-				jQuery('svg g').removeClass('hilite');
 				jQuery('.slideshow').removeClass('visible');
 				jQuery('#svg-container').removeClass('slideshowOpen');
 			}
@@ -33,7 +32,6 @@ get_header();
 					jQuery('#svg-container').addClass('slideshowOpen');
 					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 					jQuery(slideshowBlock).toggleClass('visible');
-					jQuery(this).addClass('hilite');
 					jQuery('.close').on('click touch',function(){
 						hideSlideshow();
 					});
