@@ -37,9 +37,8 @@ get_header();
 					});
 				}
 			});
-			document.querySelector("polygon").addEventListener("click", (e) => {
-  const randomColour = Math.round(Math.random() * 0xFFFFFF);  
-  e.target.style.stroke = `#${randomColour.toString(16).padStart(6,"0")}`;
+document.querySelector("polygon").addEventListener("click", (e) => {
+	console.log("clicked");
 });
 			jQuery('svg.slideshowOpen').on('click touch',function(){
 				hideSlideshow();
