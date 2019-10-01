@@ -39,17 +39,17 @@ svg path:hover,svg polygon:hover{
 	margin-bottom:2px;
 }
 .visible{
-	/*right:20px;*/
+	right:50%;
 	display:block;
 	-webkit-transition: right .3s ease-out;
 	-moz-transition: right .3s ease-out;
 	-o-transition: right .3s ease-out;
 	transition: right .3s ease-out;
+	top:50%;
+	margin-top:-200px;
 }
 @media all and (max-width:600px){
 	.visible{
-		/* right:0; 
-		width:100%;
-		bottom:15px; */ 
+		top:300px;
 	}
 }
