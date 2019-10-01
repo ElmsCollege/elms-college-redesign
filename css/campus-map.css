@@ -13,8 +13,11 @@ footer {
 	height:auto !important;
 	min-height:350px;
 }
-svg path,svg polygon{
-	pointer-events:visible;
+svg path,svg polyon{
+	pointer-events:visiblePoint;
+}
+svg path:hover,svg polygon:hover{
+	cursor:pointer;
 }
 .close{
 	display:block;
