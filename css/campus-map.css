@@ -39,7 +39,7 @@ svg path:hover,svg polygon:hover{
 	margin-bottom:2px;
 }
 .visible{
-	right:50%;
+	left:0;
 	display:block;
 	-webkit-transition: right .3s ease-out;
 	-moz-transition: right .3s ease-out;
