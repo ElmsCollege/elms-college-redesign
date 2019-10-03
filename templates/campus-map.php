@@ -26,6 +26,7 @@ get_header();
 //});
 		
 			function hideSlideshow(){
+				console.log("hide slideshow triggered");
 				jQuery('.slideshow').removeClass('visible');
 				jQuery('#svg-overlay').remove();
 			}
@@ -43,7 +44,9 @@ get_header();
 				console.log('open slideshow');
 			});
 			jQuery('#overlay').on('click touch',function(){
+				console.log("overlay clicked pre slideshow");
 				hideSlideshow();
+				console.log("overlay clicked AFTER slideshow");
 			});
 			jQuery('#reset').on('click touch',function(){
 				instance.reset();
