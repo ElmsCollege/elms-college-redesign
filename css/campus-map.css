@@ -10,6 +10,10 @@ footer {
 	width:100%;
 	height:auto;
 	background-color:#A3BC9F;
+	min-height:300px;
+}
+.flexRowWrapStart{
+	background-color:#A3BC9F;
 }
 #overlay{
 	position:absolute;

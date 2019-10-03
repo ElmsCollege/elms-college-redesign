@@ -33,7 +33,7 @@ get_header();
 				var buildingId = this.id;
 				hideSlideshow();
 				if(buildingId){
-					jQuery('#svg-container').prepend('<div id="overlay"></div>');
+					jQuery('#pageContainer').prepend('<div id="overlay"></div>');
 					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 					jQuery(slideshowBlock).toggleClass('visible');
 					jQuery('.close').on('click touch',function(){
