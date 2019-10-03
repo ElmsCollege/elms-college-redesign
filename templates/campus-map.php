@@ -27,13 +27,13 @@ get_header();
 		
 			function hideSlideshow(){
 				jQuery('.slideshow').removeClass('visible');
-				jQuery('#svg-container').removeClass('slideshowOpen');
+				jQuery('#svg-overlay').remove();
 			}
 			jQuery('svg polygon,svg path').on('click touch',function(){
 				var buildingId = this.id;
 				hideSlideshow();
 				if(buildingId){
-					jQuery('#svg-container').addClass('slideshowOpen');
+					jQuery('#svg-container').prepend('<div id="overlay"></div>');
 					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 					jQuery(slideshowBlock).toggleClass('visible');
 					jQuery('.close').on('click touch',function(){
@@ -41,6 +41,9 @@ get_header();
 					});
 				}
 				console.log('open slideshow');
+			});
+			jQuery('#overlay').on('click touch',function(){
+				hideSlideshow();
 			});
 			jQuery('#reset').on('click touch',function(){
 				instance.reset();

@@ -11,6 +11,11 @@ footer {
 	height:auto;
 	background-color:#A3BC9F;
 }
+#overlay{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
 #campusMap{
 	width:100% !important;
 	height:auto !important;
