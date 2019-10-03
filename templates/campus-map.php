@@ -34,7 +34,7 @@ get_header();
 				var buildingId = this.id;
 				hideSlideshow();
 				if(buildingId){
-					jQuery('#pageContainer').prepend('<div id="overlay"></div>');
+					//jQuery('#pageContainer').prepend('<div id="overlay"></div>');
 					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 					jQuery(slideshowBlock).toggleClass('visible');
 					jQuery('.close').on('click touch',function(){
@@ -43,7 +43,8 @@ get_header();
 				}
 				console.log('open slideshow');
 			});
-			jQuery('#overlay').on('click touch',function(){
+//			jQuery('#overlay').on('click touch',function(){
+			jQuery('#svg-container').on('click touch',function(){
 				console.log("overlay clicked pre slideshow");
 				hideSlideshow();
 				console.log("overlay clicked AFTER slideshow");
