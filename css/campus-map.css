@@ -63,3 +63,14 @@ svg path:hover,svg polygon:hover{
 		width:100%;
 	}
 }
+noscript div{
+	display:table;
+	margin:0 auto;
+}
+noscript p{
+	color:#fff;
+}
+noscript a,noscript a:hover,noscript a:visited{
+	color:#fff;
+	text-decoration:underline;
+}

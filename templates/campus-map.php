@@ -73,8 +73,10 @@ get_header();
 	<div id="pageContainer">
   	<div id="svg-container" class="flexRowWrapStart spaceBetween">
 		<noscript>
-			<p style="color:#fff;">The campus map requires JavaScript to be enabled.</p>
-			<p style="color:#fff;">Click <a href="https://elms-staging.r6a5yukd-liquidwebsites.com/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">here</a> to download the map as a PDF file.</p>
+			<div>
+				<p>The campus map requires JavaScript to be enabled.</p>
+				<p>Click <a href="https://elms-staging.r6a5yukd-liquidwebsites.com/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">here</a> to download the map as a PDF file.</p>
+			</div>
 		</noscript>
 	</div>
   <!-- end #svg-container -->
