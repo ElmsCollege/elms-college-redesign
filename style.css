@@ -1425,6 +1425,10 @@ div:not(.menu-main-nav-container)>ul li a br{
 	-webkit-transition:.4s ease-in-out all;
 	-moz-transition:.4s ease-in-out all;
 	background-color:#115438;
+	width:25%;
+}
+.story-tab.active{
+	width:25%;
 }
 .stories .story-carousel .story-tab:focus{
 	outline:0;
