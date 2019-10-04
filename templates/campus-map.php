@@ -75,7 +75,7 @@ get_header();
 		<noscript>
 			<div>
 				<p>The campus map requires JavaScript to be enabled.</p>
-				<p>Click <a href="https://elms-staging.r6a5yukd-liquidwebsites.com/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">here</a> to download the map as a PDF file.</p>
+				<p><a href="https://elms-staging.r6a5yukd-liquidwebsites.com/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">Click here to download the map as a PDF file.</a></p>
 			</div>
 		</noscript>
 	</div>
