@@ -934,7 +934,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 .section-heading{
 	position:relative;
 	background-color:#115438;
-	background-size:100%;
 	background-size:cover;
 	background-position:50%;
 	width:100%
@@ -1325,7 +1324,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 	display:block;
 	height:160px;
 	height:calc(140px + 32vw);
-	background-size:100%;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:50%
@@ -1352,7 +1350,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 	margin:0;
 	background:#fff;
 	background-repeat:no-repeat;
-	background-size:100%;
 	background-size:cover;
 	will-change:transform;
 	z-index:0;
@@ -1438,7 +1435,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 	display:block;
 	height:170px;
 	min-height:170px;
-	background-size:100%;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:50%;
@@ -1573,7 +1569,6 @@ p:last-child{
 .field-sidebar-image{
 	display:block;
 	margin-bottom:32px;
-	background-size:100%;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:50%;
@@ -2534,7 +2529,6 @@ button.fs-dropdown-item:hover{
 }
 #libraryPage .section-heading-as-content{
 	background-color:#115438;
-	background-size:100%;
 	background-size:cover;
 	background-position:50%;
 	padding:0;
@@ -2667,7 +2661,6 @@ button.fs-dropdown-item:hover{
 	background-repeat:no-repeat;
 	width:19px;
 	height:26px;
-	background-size:100%;
 	background-size:cover;
 	display:block;
 	margin:0 auto .25em
@@ -2695,9 +2688,6 @@ button.fs-dropdown-item:hover{
 		position:inherit;
 		display:inline-block;
 		top:auto;
-		left:auto;
-		right:auto;
-		bottom:auto;
 		opacity:1;
 		float:right;
 		border-left:2px solid #CFB573
@@ -2765,7 +2755,6 @@ button.fs-dropdown-item:hover{
 }
 #nursingPage .calls-to-action .cta-image{
 	background-color:gray;
-	background-size:100%;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:50%;
