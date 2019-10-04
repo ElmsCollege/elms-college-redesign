@@ -7,6 +7,11 @@
  * @package Elms_College_Redesign
  */
 
+$has_sidebar = gs_is_active_sidebar();
+if ( is_active_sidebar( 'sidebar-1' )){
+	$has_sidebar = 1;
+}
+
 get_template_part( "template-parts/header-selector" );
 the_post();
 
