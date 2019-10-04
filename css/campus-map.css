@@ -26,7 +26,7 @@ footer {
 	min-height:350px;
 }
 svg path,svg polyon{
-	pointer-events:visiblePoint;
+	pointer-events:visiblePainted;
 }
 svg path:hover,svg polygon:hover{
 	cursor:pointer;
@@ -68,6 +68,7 @@ noscript{
 }
 noscript div{
 	padding:10px 10px 0;
+	font-weight:700;
 }
 noscript p{
 	color:#fff;
