@@ -20,54 +20,24 @@ get_header();
 			var instance = new SVGPanZoom(document.getElementById('campusMap'),{
 				eventMagnet: document.getElementById('svg-container')
 			});
-//document.getElementById("campusMap").addEventListener("click", (e) => {
-	//console.log("clicked. should close slideshow");
-		//		hideSlideshow();
-//});
-		
+
 			function hideSlideshow(){
 				console.log("hide slideshow triggered");
 				jQuery('.slideshow').removeClass('visible');
 				jQuery('#svg-overlay').remove();
 			}
-/*
-			jQuery('svg polygon,svg path').on('click touch',function(){
-				var buildingId = this.id;
+
+			jQuery("#svg-container").on('mousedown touchstart',function(event){
 				hideSlideshow();
+				var buildingId = event.target.id;
 				if(buildingId){
-					//jQuery('#pageContainer').prepend('<div id="overlay"></div>');
 					var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
 					jQuery(slideshowBlock).toggleClass('visible');
 					jQuery('.close').on('click touch',function(){
 						hideSlideshow();
 					});
 				}
-				console.log('open slideshow');
 			});
-*/
-//			jQuery('#overlay').on('click touch',function(){
-/*
-			jQuery('#svg-container').on('click touch',function(){
-				console.log("overlay clicked pre slideshow");
-				hideSlideshow();
-				console.log("overlay clicked AFTER slideshow");
-			});
-*/
-			alert("cachebuster");
-jQuery("#svg-container").click(function(event) {
-	hideSlideshow();
-	var buildingId = event.target.id;
-	if(buildingId){
-		var slideshowBlock = jQuery('.' +buildingId + '.slideshow');
-		jQuery(slideshowBlock).toggleClass('visible');
-		jQuery('.close').on('click touch',function(){
-			hideSlideshow();
-		});
-		console.log("click function if statement");
-	}else{
-		console.log("hit the else statement inside the click function");
-	}
-});
 
 			jQuery('#reset').on('click touch',function(){
 				instance.reset();
