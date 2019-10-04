@@ -522,7 +522,7 @@ a:hover,a:active{
 	font-size:14px;
 	position:absolute;
 	background:transparent;
-	width:68px;
+	width:68px !important;
 	height:54px;
 	right:0;
 	top:0;
@@ -1917,52 +1917,6 @@ button.fs-dropdown-item:hover{
 	}
 	.page-template-landing-page .opening-menu.fs-dropdown,.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown,.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown{
 		display:none
-	}
-}
-.quick-facts{
-	max-width:1200px;
-	margin:0 auto
-}
-.quick-facts .quick-facts-inner{
-	counter-reset:my-counter;
-	margin-top:32px
-}
-.quick-facts .quick-facts-inner .quick-fact{
-	position:relative
-}
-@media (max-width: 47.999em){
-	.quick-facts .quick-facts-inner .quick-fact{
-		padding-bottom:32px;
-	}
-}
-.quick-facts .quick-facts-inner .quick-fact:before{
-	counter-increment:my-counter;
-	position:absolute;
-	left:32px;
-	font-weight:500;
-	color:#ebebeb;
-	font-family:"soleil", sans-serif;
-	z-index:-1;
-	line-height:.5em;
-}
-.quick-facts .quick-facts-inner .quick-fact h3.field-title{
-	font-size:24px;
-	color:#115438;
-	margin:0;
-}
-.quick-facts .quick-facts-inner .quick-fact .field-body{
-	font-size:18px
-}
-.quick-facts .quick-facts-inner .quick-fact .field-body p{
-	margin:0
-}
-@media (min-width: 48em){
-	.quick-facts .quick-facts-inner .quick-fact{
-		text-align:center;
-		padding:10px 25px
-	}
-	.quick-facts .quick-facts-inner .quick-fact:before{
-		line-height:.75em
 	}
 }
 .short-content{
