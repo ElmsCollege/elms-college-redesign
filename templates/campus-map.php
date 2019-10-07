@@ -16,7 +16,7 @@ get_header();
 <main id="main" class="pure-u-1" role="main"> 
   <script>
 	jQuery(document).ready(function(){
-		jQuery("#svg-container").load("/wp-content/themes/gs_elms/images/Artboard1.svg", function(){
+		jQuery("#svg-container").load("/wp-content/themes/gs_elms/images/Elms-campus3d-final.svg", function(){
 			var instance = new SVGPanZoom(document.getElementById('campusMap'),{
 				eventMagnet: document.getElementById('svg-container')
 			});
