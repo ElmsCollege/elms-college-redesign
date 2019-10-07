@@ -380,7 +380,7 @@ var SVGPanZoom = function () {
         }
 
         // Option validations
-        options: {
+        {
             var _options = void 0;
             Object.defineProperty(this, 'options', {
                 get: function get() {
@@ -395,7 +395,7 @@ var SVGPanZoom = function () {
             });
         }
 
-        setOptions: {
+        {
             var self = this;
             var _initialViewBox = void 0,
                 _animationTime = void 0,
@@ -441,14 +441,14 @@ var SVGPanZoom = function () {
                     _limits = {};
                     var directionalLimits = ((value ? value : value === 0 ? 0 : 15) + '').trim().split(' ');
 
-                    horizontal: {
+                    {
                         var multiplier = Number((directionalLimits[1] || directionalLimits[0]).replace(/%/g, '')) / 100;
                         var horizontalSizeIncrement = viewBox.height * multiplier;
                         _limits.minX = viewBox.x - horizontalSizeIncrement;
                         _limits.maxX = viewBox.x + horizontalSizeIncrement;
                     }
 
-                    vertical: {
+                    {
                         var _multiplier = Number(directionalLimits[0].replace(/%/g, '')) / 100;
                         var verticalSizeIncrement = viewBox.width * _multiplier;
                         _limits.minY = viewBox.y - verticalSizeIncrement;
@@ -502,7 +502,7 @@ var SVGPanZoom = function () {
         };
 
         // Pan methods
-        pan: {
+        {
             var panMethod = function panMethod(callback, amount, animationTime) {
                 if (!this.options.pan) {
                     return this;
@@ -542,7 +542,7 @@ var SVGPanZoom = function () {
         }
 
         // Zoom methods
-        zoom: {
+        {
             var zoomMethod = function zoomMethod(callback, focalPoint, amount, animationTime) {
                 if (!this.options.zoom) {
                     return this;
@@ -703,7 +703,7 @@ var SVGPanZoom = function () {
                 }
             };
 
-            touchEvents: {
+            {
                 var dragStarted = false;
                 var scaleStarted = false;
                 var preventClick = false;
