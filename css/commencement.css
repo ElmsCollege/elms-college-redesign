@@ -43,8 +43,8 @@
 	border:1px solid #dcdcdc;
 	border-bottom:none;
 	margin:0 auto 16px;
-	box-shadow:0 1px 2px rgba(0,0,0,0.1);
-	font-weight:bold;
+	box-shadow:0 1px 2px rgba(0,0,0,.1);
+	font-weight:700;
 }
 #secondary #menu-commencement-nav a{
 	display:block;
@@ -60,16 +60,4 @@
 #secondary #menu-commencement-nav .sub-menu{
 	margin-left:0;
 	list-style:none;
-}
-.specialsectionlink{
-	float:left;
-	margin:11px 0 0 120px;
-	border-left:1px solid #CCC;
-	padding: 5px 0;
-}
-.specialsectionlink a,.specialsectionlink a:visited{
-	color:#696969;
-	text-decoration:none;
-	padding-left:10px;
-	font-size:1.1em;
 }

@@ -343,6 +343,7 @@
 
 	  
     //resize library homepage area on window resize.
+/*
 	var resizeLibraryHome = function () {
       var height = $win.height();
       var columns = $(".page-template-library-landing-page .section-heading-as-content");
@@ -358,7 +359,8 @@
     };
     resizeLibraryHome();
     $(window).resize(resizeLibraryHome);
-
+*/
+	  
 	//JS for the Gutenberg FAQ blocks
 	jQuery(".schema-faq-section").each(function() {
 		jQuery(".schema-faq-question img").each(function () {

@@ -119,12 +119,7 @@ setup_postdata($post);
 			<div class="news flexHalf listText">
 				<h2 class="centerText noMarginTop">News</h2>
 				<?php 
-					$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-					if (strpos($url,'staging') !== false) {
-						echo do_shortcode("[wbcr_snippet id='37228']");
-					} else {
-    					echo do_shortcode("[wbcr_snippet id='37429']");
-					}
+					echo do_shortcode("[wbcr_snippet id='37429']");
 				?>
 				<div class="more-button-container">
 					<a class="more-button" href="/news/">

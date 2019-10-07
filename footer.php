@@ -73,7 +73,7 @@
 </div><!-- #page -->
 
 <?php
-	wp_footer(); 
+	wp_footer();
 	get_template_part("template-parts/ellucian-modal");
 ?>
 

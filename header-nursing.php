@@ -32,21 +32,23 @@ add_filter( 'body_class', function( $classes ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a></p>
-			<?php
-			endif;
+			<div class="site-branding">
+				<?php
+				if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a></p>
+				<?php
+				endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
+			</div><!-- .site-branding -->
+		<div class="specialsectionlink"><a href="/school-of-nursing/" title="Return to the School of Nursing homepage">School of Nursing</a></div>
+		</div>
 
 		<?php get_template_part("template-parts/main-nav")?>
 	</header><!-- #masthead -->
@@ -54,5 +56,5 @@ add_filter( 'body_class', function( $classes ) {
 	<div id="content" class="site-content">
     <?php get_template_part("template-parts/alert-bar")?>
     <div class="special-section-nav">
-      <?php wp_nav_menu( array( 'theme_location' => 'nursing', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset', 'container_class' => 'special-nav-container' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'nursing', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset flexRowNowrapStart justifyCenter', 'container_class' => 'special-nav-container' ) ); ?>
     </div>
