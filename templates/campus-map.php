@@ -70,54 +70,54 @@ get_header();
 		});
 	});
 </script>
-	<div id="pageContainer">
-  	<div id="svg-container" class="flexRowWrapStart spaceBetween">
-		<noscript>
-			<div>
-				<p>The campus map requires JavaScript to be enabled.</p>
-				<p><a href="https://elms-staging.r6a5yukd-liquidwebsites.com/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">Click here to download the map as a PDF file.</a></p>
-			</div>
-		</noscript>
-	</div>
-  <!-- end #svg-container -->
-  <div class="flexRowWrapStart justifyCenter">
-    <button id="reset">Reset Map</button>
-    <button id="zoomIn">Zoom In</button>
-    <button id="zoomOut">Zoom Out</button>
-    <button id="panLeft">Left</button>
-    <button id="panRight">Right</button>
-    <button id="panUp">Up</button>
-    <button id="panDown">Down</button>
+  <div id="pageContainer">
+    <div class="flexRowWrapStart justifyCenter">
+      <button id="reset">Reset Map</button>
+      <button id="zoomIn">Zoom In</button>
+      <button id="zoomOut">Zoom Out</button>
+      <button id="panLeft">Left</button>
+      <button id="panRight">Right</button>
+      <button id="panUp">Up</button>
+      <button id="panDown">Down</button>
+    </div>
+    <div id="svg-container" class="flexRowWrapStart spaceBetween">
+      <noscript>
+      <div>
+        <p>The campus map requires JavaScript to be enabled.</p>
+        <p><a href="https://elms-staging.r6a5yukd-liquidwebsites.com/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">Click here to download the map as a PDF file.</a></p>
+      </div>
+      </noscript>
+    </div>
+    <!-- end #svg-container -->
+    <?php
+    $slideshows = array(
+      //"generic name" => array("div" => "<name of layer from svg>","title" => "<title for slideshow window>","metaslidershortcode" => '<metaslider shortcode from admin>'),
+      "berchmans" => array( "div" => "berchmanshall", "title" => "Berchmans Hall", "metaslidershortcode" => '[metaslider id="38345"]' ),
+      "library" => array( "div" => "alumnaelibrary", "title" => "Alumnae Library", "metaslidershortcode" => '[metaslider id="38346"]' ),
+      "dooley" => array( "div" => "marydooleycollegecenter", "title" => "Mary Dooley College Center", "metaslidershortcode" => '[metaslider id="38347"]' ),
+      "rosewilliam" => array( "div" => "rosewilliamhall", "title" => "Rose William Hall", "metaslidershortcode" => '[metaslider id="38348"]' ),
+      "oleary" => array( "div" => "olearyhall", "title" => "O'Leary Hall", "metaslidershortcode" => '[metaslider id="38349"]' ),
+      "devine" => array( "div" => "devinehall", "title" => "Devine Hall", "metaslidershortcode" => '[metaslider id="38350"]' ),
+      "spaulding" => array( "div" => "spauldinghouse", "title" => "Spaulding House", "metaslidershortcode" => '[metaslider id="38351"]' ),
+      "lyons" => array( "div" => "lyonscenter", "title" => "Lyons Center for Natural and Health Sciences", "metaslidershortcode" => '[metaslider id="38352"]' ),
+      "bluehouse" => array( "div" => "bluehouse", "title" => "Blue House (147 Grape Street)", "metaslidershortcode" => '[metaslider id="38353"]' ),
+      "brickhouse" => array( "div" => "brickhouse", "title" => "Brick House (15 Gaylord Street)", "metaslidershortcode" => '[metaslider id="38354"]' ),
+      "marian" => array( "div" => "marianhall", "title" => "Marian Hall", "metaslidershortcode" => '[metaslider id="38356"]' ),
+      "maguire" => array( "div" => "maguirecenter", "title" => "Maguire Center", "metaslidershortcode" => '[metaslider id="38357"]' ),
+      "gaylord" => array( "div" => "gaylordmansion", "title" => "Gaylord Mansion", "metaslidershortcode" => '[metaslider id="38510"]' ),
+      "quad" => array( "div" => "keatingquad", "title" => "Keating Quadrangle", "metaslidershortcode" => '[metaslider id="38634"]' )
+    );
+    foreach ( $slideshows as $slide ) {
+      echo '<div class="transition ' . $slide[ 'div' ] . ' slideshow">';
+      echo '<h3 class="slideshow_header">' . $slide[ 'title' ] . '</h3>';
+      echo do_shortcode( $slide[ 'metaslidershortcode' ] );
+      echo '<button class="close">Close</button></div>';
+    }
+    ?>
   </div>
-  <?php
-  $slideshows = array(
-    //"generic name" => array("div" => "<name of layer from svg>","title" => "<title for slideshow window>","metaslidershortcode" => '<metaslider shortcode from admin>'),
-    "berchmans" => array( "div" => "berchmanshall", "title" => "Berchmans Hall", "metaslidershortcode" => '[metaslider id="38345"]' ),
-    "library" => array( "div" => "alumnaelibrary", "title" => "Alumnae Library", "metaslidershortcode" => '[metaslider id="38346"]' ),
-    "dooley" => array( "div" => "marydooleycollegecenter", "title" => "Mary Dooley College Center", "metaslidershortcode" => '[metaslider id="38347"]' ),
-    "rosewilliam" => array( "div" => "rosewilliamhall", "title" => "Rose William Hall", "metaslidershortcode" => '[metaslider id="38348"]' ),
-    "oleary" => array( "div" => "olearyhall", "title" => "O'Leary Hall", "metaslidershortcode" => '[metaslider id="38349"]' ),
-    "devine" => array( "div" => "devinehall", "title" => "Devine Hall", "metaslidershortcode" => '[metaslider id="38350"]' ),
-    "spaulding" => array( "div" => "spauldinghouse", "title" => "Spaulding House", "metaslidershortcode" => '[metaslider id="38351"]' ),
-    "lyons" => array( "div" => "lyonscenter", "title" => "Lyons Center for Natural and Health Sciences", "metaslidershortcode" => '[metaslider id="38352"]' ),
-    "bluehouse" => array( "div" => "bluehouse", "title" => "Blue House (147 Grape Street)", "metaslidershortcode" => '[metaslider id="38353"]' ),
-    "brickhouse" => array( "div" => "brickhouse", "title" => "Brick House (15 Gaylord Street)", "metaslidershortcode" => '[metaslider id="38354"]' ),
-    "marian" => array( "div" => "marianhall", "title" => "Marian Hall", "metaslidershortcode" => '[metaslider id="38356"]' ),
-    "maguire" => array( "div" => "maguirecenter", "title" => "Maguire Center", "metaslidershortcode" => '[metaslider id="38357"]' ),
-    "gaylord" => array( "div" => "gaylordmansion", "title" => "Gaylord Mansion", "metaslidershortcode" => '[metaslider id="38510"]' ),
-    "quad" => array( "div" => "keatingquad", "title" => "Keating Quadrangle", "metaslidershortcode" => '[metaslider id="38634"]' )
-  );
-  foreach ( $slideshows as $slide ) {
-    echo '<div class="transition ' . $slide[ 'div' ] . ' slideshow">';
-    echo '<h3 class="slideshow_header">' . $slide[ 'title' ] . '</h3>';
-    echo do_shortcode( $slide[ 'metaslidershortcode' ] );
-    echo '<button class="close">Close</button></div>';
-  }
-  ?>
-	</div><!-- end pageContainer-->
+  <!-- end pageContainer--> 
 </main>
 <!-- #main -->
-
 
 </div>
 <!-- #content -->
