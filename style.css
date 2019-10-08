@@ -273,13 +273,6 @@ a:hover,a:active{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
-	padding:23px 2em
-}
-@media all and (max-width: 96rem){
-	.menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
-		padding:23px 1.5em;
-		letter-spacing:-.25px
-	}
 }
 .menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu{
 	visibility:hidden;
@@ -386,9 +379,6 @@ a:hover,a:active{
 		background-image:url("images/icon-search-white@2x.png");
 		background-image:url("images/icon-search-white.svg")
 	}
-}
-.menu-special-menu-container>ul>li.search-item>a{
-	padding:19px 1em
 }
 .menu-special-menu-container>ul>li.search-item .search-realtext{
 	display:block;
