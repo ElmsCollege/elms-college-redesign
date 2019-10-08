@@ -406,7 +406,6 @@ a:hover,a:active{
 }
 .menu-special-menu-container>ul>li.search-item .search-icon{
 	font-size:28px;
-	line-height:14px;
 	width:2em;
 	display:inline-block
 }
@@ -474,9 +473,6 @@ a:hover,a:active{
 	text-shadow:none;
 	font-size:26px;
 	background-color:unset;
-}
-.menu-special-menu-container>ul>li:last-child{
-	width:8.5em
 }
 @media all and (min-width: 80em){
 	.menu-special-menu-container>ul>li:last-child{
@@ -607,32 +603,6 @@ a:hover,a:active{
 	}
 	body:not(.mobile-or-library).current-menu-item+li:after{
 		content:none
-	}
-}
-@media all and (max-width: 92rem) and (min-width: 64rem){
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li>a,body:not(.mobile-or-library) .main-navigation .menu-special-menu-container>ul>li>a{
-		padding:23px 1em;
-		letter-spacing:-.15px
-	}
-}
-@media all and (max-width: 80rem) and (min-width: 64rem){
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul,body:not(.mobile-or-library) .main-navigation .menu-special-menu-container>ul{
-		height:87px;
-		vertical-align:middle;
-		text-align:center;
-		font-size:14px
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li,body:not(.mobile-or-library) .main-navigation .menu-special-menu-container>ul>li{
-		max-width:11em;
-		font-size:.9em
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li>a,body:not(.mobile-or-library) .main-navigation .menu-special-menu-container>ul>li>a{
-		padding:23px .65em;
-		letter-spacing:-.325px;
-		font-size:12px
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-special-menu-container>ul>li{
-		max-width:8em
 	}
 }
 .mobile-or-library .nav-trigger{
@@ -900,11 +870,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 .mobile-or-library #masthead .site-branding .site-title{
 	height:43px;
 	width:102px
-}
-#masthead .site-branding .site-description{
-	position:absolute;
-	width:0;
-	height:0
 }
 #masthead .site-branding a{
 	color:transparent;

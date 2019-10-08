@@ -41,12 +41,6 @@ add_filter( 'body_class', function( $classes ) {
 						<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a>
 					</p>
 				<?php
-				endif;
-
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
 				endif; ?>
 			</div><!-- .site-branding -->
 			<div class="specialsectionlink"><a href="https://commencement.elms.edu/" title="Return to Commencement Homepage">Commencement</a></div>
