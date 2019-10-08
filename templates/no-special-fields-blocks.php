@@ -19,8 +19,9 @@ get_template_part( "template-parts/page-heading" );
 ?>
 	<div id="primary" class="content-area pure-g"> 
     	<main id="main" class="program-page-main site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
-
+			<div class="field-content">
     <?php the_content() ?>
+				</div>
   </main>
   <!-- #main -->
   
