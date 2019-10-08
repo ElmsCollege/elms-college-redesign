@@ -827,36 +827,10 @@ div:not(.menu-main-nav-container)>ul li a br{
 	display:none
 }
 #masthead .site-branding{
-	color:transparent;
-	position:absolute;
-	margin:0;
 	padding:12px
 }
 .mobile-or-library #masthead .site-branding{
 	padding:8px
-}
-#masthead .site-branding .site-title{
-	background-image:url(images/logo-main.png);
-	background-image:url(images/logo-main.svg);
-	background-position:center center;
-	background-size:100%;
-	background-size:contain;
-	width:145px;
-	height:64px;
-	background-repeat:no-repeat;
-	margin:0
-}
-.mobile-or-library #masthead .site-branding .site-title{
-	height:43px;
-	width:102px
-}
-#masthead .site-branding a{
-	color:transparent;
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0
 }
 .alert-bar{
 	background:#004731;

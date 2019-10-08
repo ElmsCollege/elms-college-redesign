@@ -34,14 +34,11 @@ if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() ||
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a></p>
-			<?php
-			endif;
-			?>
+			<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">
+				<svg width="145" height="64">
+					<image xlink:href="/wp-content/themes/gs_elms/images/logo-main.svg" src="/wp-content/themes/gs_elms/images/logo-main.svg" width="145" height="64" />
+				</svg>
+			</a>
 		</div><!-- .site-branding -->
 
 		<?php get_template_part("template-parts/main-nav")?>
