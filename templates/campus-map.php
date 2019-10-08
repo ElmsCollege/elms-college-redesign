@@ -22,7 +22,6 @@ get_header();
 			});
 
 			function hideSlideshow(){
-				console.log("hide slideshow triggered");
 				jQuery('.slideshow').removeClass('visible');
 				jQuery('#svg-overlay').remove();
 			}
