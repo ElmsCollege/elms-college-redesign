@@ -400,7 +400,6 @@ a:hover,a:active{
 }
 .menu-special-menu-container>ul>li.search-item .search-realtext{
 	display:block;
-	position:absolute;
 	bottom:1em;
 	left:0;
 	width:100%
@@ -497,10 +496,6 @@ a:hover,a:active{
 	border:unset;
 }
 @media screen and (min-width: 76em){
-	.menu-special-menu-container{
-		position:absolute;
-		right:0
-	}
 	.menu-main-nav-container{
 		float:none;
 		margin:0 auto;
@@ -595,9 +590,6 @@ a:hover,a:active{
 	display:block
 }
 @media all and (min-width: 64rem){
-	.menu-main-nav-container>ul>li>a:not(.words-1){
-		height:87px
-	}
 	.menu-main-nav-container>ul>li:hover+li:after,.menu-main-nav-container>ul>li.open+li:after,.menu-main-nav-container>ul>li.current-menu-item+li:after{
 		content:none
 	}
