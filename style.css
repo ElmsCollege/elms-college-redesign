@@ -601,6 +601,12 @@ a:hover,a:active{
 .mobile-or-library .menu-main-nav-container{
 	order:2;
 }
+.mobile-or-library .menu-main-nav-container,.mobile-or-library .menu-special-menu-container{
+	width:100%;
+}
+.mobile-or-library .active #site-navigation{
+	justify-content:unset;
+}
 .mobile-or-library .menu-main-nav-container>ul>li{
 		max-width:none;
 		text-align:left;
