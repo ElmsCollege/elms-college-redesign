@@ -5,7 +5,7 @@
   <div class="open-label">Menu</div>
   <div class="close-label">Close</div>
 </div>
-<nav id="site-navigation" class="main-navigation flexRowNoWrapStart" role="navigation">
+<nav id="site-navigation" class="main-navigation flexRowNowrapStart" role="navigation">
 
 <?php	
 /* We are switching to global blog menu for local,
