@@ -262,12 +262,12 @@ a:hover,a:active{
 	}
 }
 .menu-main-nav-container>ul>li:after,.menu-special-menu-container>ul>li:after{
-	border-left:1px solid #dcdcdc;
-	height:60px;
+	border-right:1px solid #dcdcdc;
+	height:100%;
 	content:"";
 	position:absolute;
-	left:0;
-	top:10px;
+	right:0;
+	padding:0 5px;
 }
 .menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
 	display:inline-block;
@@ -299,11 +299,6 @@ a:hover,a:active{
 }
 .menu-main-nav-container>ul>li>ul.sub-menu>li>a:hover,.menu-main-nav-container>ul>li>ul.sub-menu>li>a:focus,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:hover,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:focus{
 	color:#115438
-}
-@media screen and (min-width: 76em){
-	.menu-main-nav-container>ul>li:first-child:after,.menu-special-menu-container>ul>li:first-child:after{
-		content:none
-	}
 }
 .menu-main-nav-container>ul>li:hover,.menu-main-nav-container>ul>li.open,.menu-main-nav-container>ul>li:focus{
 	background-color:#115438;
@@ -346,7 +341,7 @@ a:hover,a:active{
 		transform:none
 	}
 }
-.menu-main-nav-container>ul>li:first-child:after{
+.menu-main-nav-container>ul>li:last-child:after{
 	content:none
 }
 .menu-special-menu-container>ul>li{
@@ -569,6 +564,7 @@ a:hover,a:active{
 	}
 }
 .mobile-or-library .nav-trigger{
+	display:inline-block;
 	margin:8px 20px 0 0;
 }
 .mobile-or-library .main-navigation{
@@ -3587,6 +3583,11 @@ a.buttonLink.grouped{
 	display:flex;
 	flex-flow:row nowrap;
 	align-items:flex-start;
+}
+.flexRowNowrapCenter{
+	display:flex;
+	flex-flow:row nowrap;
+	align-items:center;
 }
 .spaceBetween{
 	justify-content:space-between;

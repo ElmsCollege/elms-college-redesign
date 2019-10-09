@@ -17,6 +17,7 @@ switch_to_blog(1);
     wp_nav_menu( array(
         'theme_location' => 'primary',
         'menu_id'        => 'primary-menu',
+		'menu_class' => 'ulreset flexRowNowrapCenter'
     ) );
 
 switch_to_blog($current_blog_id); 
