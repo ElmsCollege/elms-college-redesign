@@ -261,13 +261,15 @@ a:hover,a:active{
 		max-width:13.5em
 	}
 }
-.menu-main-nav-container>ul>li:after,.menu-special-menu-container>ul>li:after{
+.menu-main-nav-container>ul>li:after{
 	border-right:1px solid #dcdcdc;
 	height:100%;
 	content:"";
-	position:absolute;
 	right:0;
 	padding:0 5px;
+}
+.menu-main-nav-container>ul>li>a{
+	padding:0 10px;
 }
 .menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
 	display:inline-block;
@@ -478,9 +480,6 @@ a:hover,a:active{
 @media screen and (min-width: 37.5em){
 	.menu-toggle{
 		display:none
-	}
-	.main-navigation ul{
-		display:block
 	}
 }
 .nav-trigger{
