@@ -231,12 +231,10 @@ a:hover,a:active{
 	font-weight:700
 }
 .main-navigation{
-	clear:both;
 	display:block;
 	width:100%
 }
 .menu-main-nav-container,.menu-special-menu-container{
-	float:right;
 	text-align:right
 }
 .menu-main-nav-container>ul,.menu-special-menu-container>ul{
@@ -484,7 +482,7 @@ a:hover,a:active{
 }
 .nav-trigger{
 	font-size:14px;
-	width:68px !important;
+	width:45px !important;
 	height:54px;
 	display:none;
 	z-index:55;
@@ -496,10 +494,10 @@ a:hover,a:active{
 	margin-bottom:10px;
 	height:2px;
 	width:100%;
-	color:#696969;
+	color:#fff;
 	transition:top .2s .25s, left .2s .25s, opacity .2s .25s, -webkit-transform .2s 0s;
 	transition:top .2s .25s, left .2s .25s, opacity .2s .25s, transform .2s 0s;
-	background-color:#fff;
+	background-color:#696969;
 }
 .nav-trigger span:nth-child(3){
 	margin-bottom:0;
@@ -564,7 +562,7 @@ a:hover,a:active{
 }
 .mobile-or-library .nav-trigger{
 	display:inline-block;
-	margin:8px 20px 0 0;
+	margin:8px 20px 0 auto;
 }
 .mobile-or-library .main-navigation{
 	background:#fff;
@@ -600,8 +598,8 @@ a:hover,a:active{
 	-moz-opacity:1;
 	opacity:1
 }
-.mobile-or-library .menu-main-nav-container,.mobile-or-library .menu-special-menu-container{
-	text-align:left;
+.mobile-or-library .menu-main-nav-container{
+	order:2;
 }
 .mobile-or-library .menu-main-nav-container>ul>li{
 		max-width:none;
@@ -761,11 +759,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 }
 #link-give:hover{
 	background-color:#a78c45;
-}
-@media (max-width: 1280px) and (min-width: 1024px){
-	#interested-in-applying,#link-give{
-		padding:1.05em .5em;
-	}
 }
 .site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation{
 	margin:0 0 1.5em;
