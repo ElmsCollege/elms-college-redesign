@@ -32,7 +32,7 @@ if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() ||
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header flexRowNoWrapStart spaceBetween" role="banner">
 		<div class="site-branding">
 			<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">
 				<svg width="145" height="64">
