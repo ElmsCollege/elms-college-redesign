@@ -49,6 +49,9 @@ svg path:hover,svg polygon:hover{
 	font-size:1.2em;
 	margin-bottom:2px;
 }
+.slideshow p{
+	max-width:700px;
+}
 .visible{
 	left:0;
 	display:block;
