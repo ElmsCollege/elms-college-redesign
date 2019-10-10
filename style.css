@@ -3716,6 +3716,10 @@ a.buttonLink.grouped{
 .justifyCenter{
 	justify-content:center;
 }
+.justifyEnd{
+	justify-content:end;
+}
+
 .flex-column{
 	min-width:300px;
 	max-width:48%;
