@@ -51,6 +51,7 @@ svg path:hover,svg polygon:hover{
 }
 .slideshow p{
 	max-width:700px;
+	padding:0 20px;
 }
 .visible{
 	left:0;

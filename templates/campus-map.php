@@ -70,7 +70,7 @@ get_header();
 	});
 </script>
   <div id="pageContainer">
-    <div class="flexRowWrapStart justifyCenter">
+    <div class="flexRowWrapStart justifyEnd">
       <button id="reset">Reset Map</button>
       <button id="zoomIn">Zoom In</button>
       <button id="zoomOut">Zoom Out</button>
