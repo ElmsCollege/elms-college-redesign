@@ -407,6 +407,7 @@
 		document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
 			"use strict";
 			MicroModal.show('requestInfo');
+			fbq('trackCustom', 'RequestInfo');
 		});
 	}
 
