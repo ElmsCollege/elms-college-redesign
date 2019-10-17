@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Interior Landing Page (blocks editor)
+ * Template Name: Simple Interior Landing Page (blocks editor)
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
