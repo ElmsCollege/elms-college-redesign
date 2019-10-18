@@ -498,20 +498,23 @@ a:hover,a:active{
 }
 .nav-trigger{
 	display:none;
-	cursor:pointer;
+	z-index:10;
+	width:45px;
+	overflow:unset;
 }
 .nav-trigger .close-label,.nav-trigger.active .open-label{
-	display:none
+	display:none;
+	color:#696969;
 }
 .nav-trigger.active .close-label{
 	display:block;
 }
 .nav-trigger span {
-	width: 35px;
-	height: 5px;
-	background-color: #333;
-	margin: 6px 0;
-	transition: 0.4s;
+	display:block;
+	height:5px;
+	background-color:#696969;
+	margin:6px 0;
+	transition:0.4s;
 }
 .nav-trigger.active span:nth-child(1){
 	 -webkit-transform: rotate(-45deg) translate(-9px, 6px);
