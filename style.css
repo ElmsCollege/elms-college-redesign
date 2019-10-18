@@ -504,8 +504,7 @@ a:hover,a:active{
 }
 .nav-trigger.active{
 	background-color:#fff;
-	height:64px;
-	z-index:100;
+	height:auto;
 	overflow:visible;
 }
 .nav-trigger.active span{
@@ -597,7 +596,8 @@ a:hover,a:active{
 	transform:translateX(0) translateZ(0);
 	-webkit-opacity:1;
 	-moz-opacity:1;
-	opacity:1
+	opacity:1;
+	padding-left:35px;
 }
 .mobile-or-library .menu-main-nav-container{
 	order:2;
@@ -608,17 +608,12 @@ a:hover,a:active{
 .mobile-or-library .active #site-navigation{
 	justify-content:unset;
 }
-.mobile-or-library .menu-main-nav-container>ul>li{
-		max-width:none;
-		text-align:left;
-		display:block
-}
 .mobile-or-library .menu-main-nav-container>ul>li>a{
-		font-size:21px;
-		color:#115438;
-		text-transform:uppercase;
-		font-weight:700;
-		padding-right:3em
+	font-size:21px;
+	line-height:2em;
+	color:#115438;
+	text-transform:uppercase;
+	font-weight:700;
 }
 .mobile-or-library .menu-main-nav-container>ul,.mobile-or-library .menu-special-menu-container>ul{
 	height:auto;
@@ -803,12 +798,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 }
 .mobile-or-library #masthead.active .site-branding{
 	display:none
-}
-#masthead .site-branding{
-	padding:12px
-}
-.mobile-or-library #masthead .site-branding{
-	padding:8px
 }
 .alert-bar{
 	background:#004731;
