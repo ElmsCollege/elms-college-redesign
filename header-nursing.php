@@ -32,15 +32,11 @@ add_filter( 'body_class', function( $classes ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-				<div style="margin-right:auto;">
+		<div id="specialLogo">
 			<div class="site-branding">
-				<?php
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a></p>
-				<?php
-				endif; ?>
+				<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">
+					<image id="headerLogo" src="/wp-content/themes/gs_elms/images/logo-main.svg" />
+				</a>
 			</div><!-- .site-branding -->
 		<div class="specialsectionlink"><a href="/school-of-nursing/" title="Return to the School of Nursing homepage">School of Nursing</a></div>
 		</div>

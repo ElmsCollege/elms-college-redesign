@@ -237,11 +237,17 @@ a:hover,a:active{
 #headerLogo{
 	width:145px;
 	height:auto;
-	padding:12px;
+	margin:12px;
 }
 .mobile-or-library #headerLogo{
-	width:188px;
+	width:118px;
 	height:auto;
+	margin:2px;
+}
+#specialLogo{
+	margin-right:auto;
+	display:flex;
+	align-items:center;
 }
 .menu-main-nav-container,.menu-special-menu-container{
 	text-align:right

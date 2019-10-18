@@ -32,7 +32,7 @@ add_filter( 'body_class', function( $classes ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div style="margin-right:auto;">
+		<div id="specialLogo">
 			<div class="site-branding">
 				<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">
 					<image id="headerLogo" src="/wp-content/themes/gs_elms/images/logo-main.svg" />
