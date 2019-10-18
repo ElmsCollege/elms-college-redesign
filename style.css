@@ -576,6 +576,11 @@ a:hover,a:active{
 		content:none
 	}
 }
+.mobile-or-library #masthead{
+	display:flex;
+	justify-content:space-between;
+	align-items:baseline;
+}
 .mobile-or-library .nav-trigger{
 	display:inline-block;
 }
@@ -2242,10 +2247,8 @@ button.fs-dropdown-item:hover{
 	overflow-x:hidden
 }
 .specialsectionlink{
-	float:left;
-	margin:11px 0 0 120px;
+	margin-left:10px;
 	border-left:1px solid #CCC;
-	padding: 5px 0;
 }
 .specialsectionlink a,.specialsectionlink a:visited{
 	color:#696969;
