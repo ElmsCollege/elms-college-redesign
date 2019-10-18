@@ -479,6 +479,7 @@ a:hover,a:active{
 .menu-special-menu-container li.menu-item-9764,#special-menu .menu-item-9764{/* this reduces the font size of the apply/give buttons */
 	font-size:14px;
 	border:unset;
+	text-align:center;
 }
 @media screen and (min-width: 76em){
 	.menu-main-nav-container{
@@ -495,6 +496,35 @@ a:hover,a:active{
 		display:none
 	}
 }
+.nav-trigger{
+	display:none;
+	cursor:pointer;
+}
+.nav-trigger .close-label,.nav-trigger.active .open-label{
+	display:none
+}
+.nav-trigger.active .close-label{
+	display:block;
+}
+.nav-trigger span {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+.nav-trigger.active span:nth-child(1){
+	 -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.nav-trigger.active span:nth-child(2){
+	opacity:0;
+}
+.nav-trigger.active span:nth-child(3){
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/*
 .nav-trigger{
 	font-size:14px;
 	width:45px !important;
@@ -556,6 +586,7 @@ a:hover,a:active{
 	display:block;
 	margin-top:10px;
 }
+*/
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li:hover+li:after,.menu-main-nav-container>ul>li.open+li:after,.menu-main-nav-container>ul>li.current-menu-item+li:after{
 		content:none
@@ -659,11 +690,6 @@ a:hover,a:active{
 }
 .mobile-or-library .menu-main-nav-container>ul>li:after,.mobile-or-library .menu-special-menu-container>ul>li:after{
 	content:none
-}
-.mobile-or-library .menu-main-nav-container>ul>li>a,.mobile-or-library .menu-special-menu-container>ul>li>a{
-	display:block;
-	position:relative;
-	letter-spacing:0
 }
 .mobile-or-library .menu-main-nav-container>ul>li>a br,.mobile-or-library .menu-special-menu-container>ul>li>a br{
 	display:none
