@@ -617,7 +617,6 @@ a:hover,a:active{
 	-webkit-opacity:1;
 	-moz-opacity:1;
 	opacity:1;
-	padding-left:35px;
 }
 .mobile-or-library .menu-main-nav-container{
 	order:2;
@@ -748,9 +747,6 @@ a:hover,a:active{
 .mobile-or-library .menu-main-nav-container>ul>li:nth-child(9),.mobile-or-library .menu-special-menu-container>ul>li:nth-child(9){
 	-webkit-transition:-webkit-transform 200ms ease-out 1180ms, opacity 200ms ease-out 1180ms;
 	transition:transform 200ms ease-out 1180ms, opacity 200ms ease-out 1180ms;
-}
-.mobile-or-library .menu-special-menu-container>ul>li>a{
-	text-align:center;
 }
 .mobile-or-library .menu-main-nav-container>ul>li.open,.mobile-or-library .menu-main-nav-container>ul>li:hover{
 	background-color:inherit;
