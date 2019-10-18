@@ -515,7 +515,7 @@ a:hover,a:active{
 }
 .nav-trigger span {
 	display:block;
-	height:5px;
+	height:3px;
 	background-color:#696969;
 	margin:6px 0;
 	transition:0.4s;
@@ -530,6 +530,9 @@ a:hover,a:active{
 .nav-trigger.active span:nth-child(3){
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
+}
+.nav-trigger .open-label,.nav-trigger .close-label{
+	margin-top:-2px;
 }
 /*
 .nav-trigger{
@@ -621,6 +624,7 @@ a:hover,a:active{
 }
 .mobile-or-library .nav-trigger{
 	display:inline-block;
+	width:50px;
 }
 .mobile-or-library .main-navigation{
 	background:#fff;
@@ -3725,7 +3729,7 @@ a.buttonLink.grouped{
 }	
 /* END styles for the President's Blog */
 /* BEGIN generic, universal, reusable styles */
-.small{font-size:.8em;}
+.small{font-size:.8em;line-height:1em !important;}
 .small label{display:block;}
 .two-column{
 	-webkit-columns:300px 2;
@@ -3920,9 +3924,7 @@ a.text.requestInfo-trigger{
 	width: 300px;
 	height: 200px;
 	perspective: 1000px;
-	margin-bottom:10px;
-	position:relative;
-	border-radius:3px;
+	margin:10px 0;
 }
 .program-inner {
  	position: relative;
