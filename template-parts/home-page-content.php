@@ -55,7 +55,7 @@ setup_postdata($post);
             </video>
         </div>
         <?php if( get_field("hero_overlay") ): ?>
-            <div id="hero-overlay"><?php the_field("hero_overlay"); ?>
+            <div id="hero-overlay" class="traced"><?php the_field("hero_overlay"); ?>
                 <a href="#homepage_content">&#8964;</a>
             </div>
         <?php endif; ?>

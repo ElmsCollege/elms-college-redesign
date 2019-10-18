@@ -130,7 +130,7 @@ li>ul,li>ol{
 	margin-bottom:0;
 	margin-left:1.5em
 }
-dt{
+dt,.bold{
 	font-weight:700
 }
 dd{
@@ -238,6 +238,7 @@ a:hover,a:active{
 	width:145px;
 	height:auto;
 	margin:12px;
+	max-width:100%;
 }
 .mobile-or-library #headerLogo{
 	width:118px;
@@ -379,6 +380,9 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:#fff !important;
 	border-top:1px solid #DCDCDC
+}
+.menu-item.search-item{
+	padding-right:15px;
 }
 .menu-special-menu-container>ul>li.search-item:not(.open):hover .search-icon:after{
 	background-image:url("images/icon-search-white.png");
@@ -3244,12 +3248,12 @@ button.fs-dropdown-item:hover{
 }
 #hero-overlay h1{
 	color:#fff;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	line-height: 1em;
 	margin: 10px 0;
 }
 #hero-overlay p{
 	margin-bottom: 0;
+	font-size:1.1em;
 }
 #hero-overlay a{
 	font-size: 45px;
@@ -3778,6 +3782,9 @@ th .smallText{
 	filter: grayscale(0);	
 }
 .hidden,[hidden]{display:none !important}
+.trace{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 /* END generic, universal, reusable styles */
 #advertising-landing-page .section-heading{
 	background-color:unset;
@@ -3907,3 +3914,61 @@ a.text.requestInfo-trigger{
 }
 .focal-image-container{display:none;}
 /* END customizations from within the admin section */
+/* BEGIN the flip card styles for the /academics pages */
+.program {
+	background-color: transparent;
+	width: 300px;
+	height: 200px;
+	perspective: 1000px;
+	margin-bottom:10px;
+	position:relative;
+	border-radius:3px;
+}
+.program-inner {
+ 	position: relative;
+ 	width: 100%;
+ 	height: 100%;
+	transition: transform 400ms linear;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.program:hover .program-inner {
+	transform: rotateX(180deg);
+}
+.program-front h2 {
+	color: white;
+}
+.program-front,.program-back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  	backface-visibility: hidden;
+	padding:5px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	border-radius:4px;
+}
+.program-front{
+	background-color:#c3a250;
+}
+.program-back {
+	background-color:#115438;
+	color:#fff;
+	transform: rotateX(180deg);
+}
+.program-back h3{
+	color:#fff;
+}
+.program:nth-child(odd) .program-front{
+	background-color:#115438;
+}
+.program:nth-child(odd) .program-back{
+	background-color:#c3a250;
+	color:#000;
+}
+.program:nth-child(odd) .program-back h3{
+	color:#000
+}
+/* END the flip card styles for the /academics pages */
