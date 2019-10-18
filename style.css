@@ -234,6 +234,15 @@ a:hover,a:active{
 	display:block;
 	width:100%
 }
+#headerLogo{
+	width:145px;
+	height:auto;
+	padding:12px;
+}
+.mobile-or-library #headerLogo{
+	width:188px;
+	height:auto;
+}
 .menu-main-nav-container,.menu-special-menu-container{
 	text-align:right
 }

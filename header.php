@@ -35,7 +35,7 @@ if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() ||
 	<header id="masthead" class="site-header flexRowNowrapCenter spaceBetween" role="banner">
 		<div class="site-branding">
 			<a href="https://www.elms.edu/" rel="home" alt="Return to homepage">
-				<image src="/wp-content/themes/gs_elms/images/logo-main.svg" />
+				<image id="headerLogo" src="/wp-content/themes/gs_elms/images/logo-main.svg" />
 			</a>
 		</div><!-- .site-branding -->
 
