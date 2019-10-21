@@ -411,9 +411,15 @@
 		});
 	}
 
-//  document.querySelector('.requestInfo-close-trigger').addEventListener('click', function () {
-//    MicroModal.close('requestInfo');
-//  });
+	  /* begin extra FB tracking for specific events */
+	document.querySelector('.UGviewbook').addEventListener('click',function(){
+		fbq('trackCustom', 'UG-viewbook');
+	});
+  	document.querySelector('a.UGvisit, .UGvisit a').addEventListener('click',function(){
+		fbq('trackCustom', 'UG-visit');
+	});
+	  /* end extra FB tracking for specific events */
+
 
   // Scrollspy
   var section = document.querySelectorAll(".heading");

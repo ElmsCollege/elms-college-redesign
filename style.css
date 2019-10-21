@@ -1804,11 +1804,11 @@ a.text.requestInfo-trigger{
 	padding:.25em;
 	border:1px solid #CCC
 }
-table:not(.tribe-events-calendar) th{
+table:not(.tribe-events-calendar) th,.wp-block-advgb-table thead td{
 	font-weight:700;
 	font-size:16px;
 }
-table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
+table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd),.wp-block-advgb-table thead td{
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe_events{
@@ -3829,10 +3829,10 @@ th .smallText{
 .noMargins{
 	margin: 0!important;
 }
-.noMarginTop{
+.noMarginTop,.wp-block-image{
 	margin-top:0 !important;
 }
-.noMarginBottom{
+.noMarginBottom,.wp-block-image{
 	margin-bottom:0 !important;
 }
 .noMarginLeft{
