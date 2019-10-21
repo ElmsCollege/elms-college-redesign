@@ -389,17 +389,6 @@
 		jQuery('#requestInfo').removeClass('is-open').attr("aria-hidden","true");
 	});
 
-	  /* begin extra FB tracking for specific events */
-	jQuery('.UGviewbook').addEventListener('click',function(){
-		fbq('trackCustom', 'UG-viewbook');
-		console.log('viewbook link clicked')
-	});
-  	jQuery('.UGvisit').addEventListener('click',function(){
-		fbq('trackCustom', 'UG-visit');
-		console.log('visit link clicked')
-	});
-	  /* end extra FB tracking for specific events */
-
   });//end doc.ready
 	   
 })(jQuery, window, document);
@@ -421,6 +410,18 @@
 			fbq('trackCustom', 'RequestInfo');
 		});
 	}
+
+	  /* begin extra FB tracking for specific events */
+	document.querySelector('.UGviewbook').addEventListener('click',function(){
+		fbq('trackCustom', 'UG-viewbook');
+		console.log('viewbook link clicked')
+	});
+  	document.querySelector('.UGvisit').addEventListener('click',function(){
+		fbq('trackCustom', 'UG-visit');
+		console.log('visit link clicked')
+	});
+	  /* end extra FB tracking for specific events */
+
 
   // Scrollspy
   var section = document.querySelectorAll(".heading");
