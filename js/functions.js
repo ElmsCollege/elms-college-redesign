@@ -413,11 +413,9 @@
 
 	  /* begin extra FB tracking for specific events */
 	document.querySelector('.UGviewbook').addEventListener('click',function(){
-		console.log('viewbook link clicked');
 		fbq('trackCustom', 'UG-viewbook');
 	});
-  	document.querySelector('.UGvisit').addEventListener('click',function(){
-		console.log('visit link clicked');
+  	document.querySelector('a.UGvisit, .UGvisit a').addEventListener('click',function(){
 		fbq('trackCustom', 'UG-visit');
 	});
 	  /* end extra FB tracking for specific events */
