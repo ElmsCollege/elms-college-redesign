@@ -413,12 +413,12 @@
 
 	  /* begin extra FB tracking for specific events */
 	document.querySelector('.UGviewbook').addEventListener('click',function(){
+		console.log('viewbook link clicked');
 		fbq('trackCustom', 'UG-viewbook');
-		console.log('viewbook link clicked')
 	});
   	document.querySelector('.UGvisit').addEventListener('click',function(){
+		console.log('visit link clicked');
 		fbq('trackCustom', 'UG-visit');
-		console.log('visit link clicked')
 	});
 	  /* end extra FB tracking for specific events */
 
