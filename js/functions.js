@@ -397,7 +397,7 @@
 	  });
 	}
 	if (jQuery('.UGvisit').length) {
-	  document.querySelector('a.UGvisit, .UGvisit a').addEventListener('click', function () {
+	  document.querySelector('.UGvisit a').addEventListener('click', function () {
 		fbq('trackCustom', 'UG-visit');
 		  		  console.log("TEST2");
 	  });
