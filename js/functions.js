@@ -393,13 +393,11 @@
 	if (jQuery('.UGviewbook').length) {
 	  document.querySelector('.UGviewbook').addEventListener('click', function () {
 		fbq('trackCustom', 'UG-viewbook');
-		  console.log("TEST");
 	  });
 	}
 	if (jQuery('.UGvisit').length) {
 	  document.querySelector('.UGvisit a').addEventListener('click', function () {
 		fbq('trackCustom', 'UG-visit');
-		  		  console.log("TEST2");
 	  });
 	}
 	/* end extra FB tracking for specific events */
