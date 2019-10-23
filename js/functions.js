@@ -390,13 +390,13 @@
 	});
 
 	  /* begin extra FB tracking for specific events */
-	if (('.UGviewbook').length) {
+	if (jQuery('.UGviewbook').length) {
 	  document.querySelector('.UGviewbook').addEventListener('click', function () {
 		fbq('trackCustom', 'UG-viewbook');
 		  console.log("TEST");
 	  });
 	}
-	if (('.UGvisit').length) {
+	if (jQuery('.UGvisit').length) {
 	  document.querySelector('a.UGvisit, .UGvisit a').addEventListener('click', function () {
 		fbq('trackCustom', 'UG-visit');
 		  		  console.log("TEST2");
