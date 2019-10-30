@@ -10,7 +10,7 @@ if(is_page( array( 5398, 5453, 5480, 5485, 7588) )){
 	$has_sidebar=false;
 };
 
-get_header("library");
+get_template_part("template-parts/header-selector");
 
 get_template_part("template-parts/page-heading");
 ?>
