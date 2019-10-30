@@ -103,7 +103,7 @@ get_header();
       "brickhouse" => array( "div" => "brickhouse", "title" => "Brick House (15 Gaylord Street)", "metaslidershortcode" => '[metaslider id="38354"]', "descriptionField" => "brick_house_description" ),
       "marian" => array( "div" => "marianhall", "title" => "Marian Hall", "metaslidershortcode" => '[metaslider id="38356"]', "descriptionField" => "marian_hall_description" ),
       "maguire" => array( "div" => "maguirecenter", "title" => "Maguire Center", "metaslidershortcode" => '[metaslider id="38357"]', "descriptionField" => "maguire_center_description" ),
-      "gaylord" => array( "div" => "gaylordmansion", "title" => "Gaylord Mansion", "metaslidershortcode" => '[metaslider id="38510"]', "descriptionField" => "gaylord_mansion_description" ),
+      "gaylord" => array( "div" => "gaylord", "title" => "Gaylord Living Learning Community", "metaslidershortcode" => '[metaslider id="38510"]', "descriptionField" => "gaylord_description" ),
       "quad" => array( "div" => "keatingquad", "title" => "Keating Quadrangle", "metaslidershortcode" => '[metaslider id="38634"]', "descriptionField" => "keating_quadrangle_description" ),
       "condonField" => array( "div" => "cherylcondonsoftballfield", "title" => "Condon Field", "metaslidershortcode" => '[metaslider id="38950"]', "descriptionField" => "cheryl_condon_field_description" ),
       "learyField" => array( "div" => "learyfield", "title" => "Timothy J. Leary Field", "metaslidershortcode" => '[metaslider id="38958"]', "descriptionField" => "leary_field_description" )
