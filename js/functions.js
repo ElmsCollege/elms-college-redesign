@@ -144,13 +144,7 @@
       }
       window.location.href = "/";
     });
-    
-    // split menu words for styling
-    $("#primary-menu > li > a").each( function (index, element) {
-      $(element).addClass("words-"+$(element).text().split(" ").length);
-    });
-    
-    
+	  
     // interior landing page and interior generic mobile dropdowns.
 		if( $('ul.opening-menu').length ) {
 			$('<select class="opening-select" aria-label="Navigation options"></select>').insertAfter( $('ul.opening-menu') );
