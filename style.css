@@ -281,14 +281,6 @@ a:hover,a:active{
 		letter-spacing:-.25px
 	}
 }
-.menu-main-nav-container>ul>li>a.words-1,.menu-special-menu-container>ul>li>a.words-1{
-	padding:29px 2em
-}
-@media all and (max-width: 96rem){
-	.menu-main-nav-container>ul>li>a.words-1,.menu-special-menu-container>ul>li>a.words-1{
-		padding:29px 1.5em
-	}
-}
 .menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu{
 	visibility:hidden;
 	opacity:.3;
@@ -595,9 +587,6 @@ a:hover,a:active{
 	display:block
 }
 @media all and (min-width: 64rem){
-	.menu-main-nav-container>ul>li>a:not(.words-1){
-		height:87px
-	}
 	.menu-main-nav-container>ul>li:hover+li:after,.menu-main-nav-container>ul>li.open+li:after,.menu-main-nav-container>ul>li.current-menu-item+li:after{
 		content:none
 	}
@@ -2403,14 +2392,6 @@ button.fs-dropdown-item:hover{
 	padding:15px 1.5em;
 	vertical-align:middle;
 	line-height:1em;
-}
-#special-section-menu>li>a.words-1{
-	padding:29px 2em
-}
-@media all and (max-width: 96rem){
-	#special-section-menu>li>a.words-1{
-			padding:29px 1.5em
-		}
 }
 #special-section-menu>li>ul.sub-menu{
 	opacity:0;
