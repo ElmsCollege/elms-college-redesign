@@ -715,7 +715,7 @@ a:hover,a:active{
 .mobile-or-library .menu-main-nav-container>ul>li #menu-item-search,.mobile-or-library .menu-special-menu-container>ul>li #menu-item-search{
 	height:50px
 }
-.mobile-or-library .menu-item-has-children>a:after {
+.active .mobile-or-library .menu-item-has-children>a:after {
   background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
   content: "";
   width: 21px;
@@ -724,7 +724,7 @@ a:hover,a:active{
   right: 32px;
   top: calc(50% - 11px);
 }
-.mobile-or-library .menu-item-has-children.open>a:after{
+.active .mobile-or-library .menu-item-has-children.open>a:after{
 	background-image:url(images/icon-menu-less.png)
 }
 .mobile-or-library .menu-main-nav-container>ul>li,.mobile-or-library .menu-special-menu-container>ul>li{
@@ -2314,7 +2314,7 @@ button.fs-dropdown-item:hover{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
-	padding:15px 1.5em;
+	padding:15px 1em;
 	vertical-align:middle;
 	line-height:1em;
 }
