@@ -1777,52 +1777,56 @@ button.fs-dropdown-item:hover{
 	font-size:20px;
 	color:#fff;
 }
-.page-template-landing-page .opening-menu,.page-template-nursing-secondary-landing-page .opening-menu,.page-template-nursing-landing-page-2 .opening-menu{
+.opening-menu{
 	padding:0;
 	list-style-type:none;
 	background:#fff;
-	border:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
 	display:none;
 	position:relative;
 	margin:0 auto;
-	border-top:none;
 	text-align:center;
 	width: 100%;
 }
-.page-template-landing-page .opening-menu.fs-dropdown,.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown,.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown {
+.opening-menu.fs-dropdown {
 	display:block;
 	margin:10px 0;
 	padding:0 32px;
 	border:none;
 }
-.page-template-landing-page .opening-menu .menu-item,.page-template-nursing-secondary-landing-page .opening-menu .menu-item,.page-template-nursing-landing-page-2 .opening-menu .menu-item{
+.opening-menu .menu-item{
 	display:table-cell;
 	border-right:1px solid #dcdcdc;
 	transition:.25s ease-in-out all;
 	background-color:#fff;
 	vertical-align:middle;
 }
-.page-template-landing-page .opening-menu .menu-item:last-child,.page-template-nursing-secondary-landing-page .opening-menu .menu-item:last-child,.page-template-nursing-landing-page-2 .opening-menu .menu-item:last-child{border-right:none}
-.page-template-landing-page .opening-menu .menu-item a,.page-template-nursing-secondary-landing-page .opening-menu .menu-item a,.page-template-nursing-landing-page-2 .opening-menu .menu-item a{
+.opening-menu .menu-item:last-child{
+	border-right:none;
+}
+.opening-menu .menu-item a{
 	display:block;
 	padding:15px 10px;
 	color:#333;
 	text-decoration:none;
 	transition:.25s ease-in-out all;
 }
-.page-template-landing-page .opening-menu .menu-item:hover,.page-template-nursing-secondary-landing-page .opening-menu .menu-item:hover,.page-template-nursing-landing-page-2 .opening-menu .menu-item:hover{background-color:#115438}.page-template-landing-page .opening-menu .menu-item:hover a,.page-template-nursing-secondary-landing-page .opening-menu .menu-item:hover a,.page-template-nursing-landing-page-2 .opening-menu .menu-item:hover a{
+.opening-menu .menu-item:hover{
+	background-color:#115438
+}
+.opening-menu .menu-item:hover a{
 	color:#fff
 }
-.page-template-landing-page .opening-menu .fs-dropdown-item,.page-template-nursing-secondary-landing-page .opening-menu .fs-dropdown-item,.page-template-nursing-landing-page-2 .opening-menu .fs-dropdown-item{
+.opening-menu .fs-dropdown-item{
 	border:none;
 	-webkit-appearance:none;
 	box-shadow:none
 }
 @media (min-width: 72em){
-	.page-template-landing-page .opening-menu,.page-template-nursing-secondary-landing-page .opening-menu,.page-template-nursing-landing-page-2 .opening-menu{
+	.opening-menu{
 		display:table
 	}
-	.page-template-landing-page .opening-menu.fs-dropdown,.page-template-nursing-secondary-landing-page .opening-menu.fs-dropdown,.page-template-nursing-landing-page-2 .opening-menu.fs-dropdown{
+	.opening-menu.fs-dropdown{
 		display:none
 	}
 }
@@ -2065,6 +2069,7 @@ button.fs-dropdown-item:hover{
 	align-self:flex-start;
 	width:45%;
 	background-color:inherit;
+	padding-left:10px;
 }
 .start-date{
 	position:absolute;
@@ -2709,7 +2714,6 @@ button.fs-dropdown-item:hover{
 }
 #nursingPage .calls-to-action .cta{
 	background:#c3a250;
-
 	margin:0;
 }
 #nursingPage .calls-to-action .cta:hover .permalink{
@@ -2776,12 +2780,6 @@ button.fs-dropdown-item:hover{
 }
 #nursingPage .nursing-footer-info strong{
 	margin-right:1em;
-}
-.page-template-nursing-intermediary-landing-page .menu-item:hover{
-	color:#fff;
-}
-.page-template-nursing-intermediary-landing-page .menu-item:hover a:after{
-	background-image:url(images/icon-menu-more-white.png);
 }
 .page-template-nursing-intermediary-landing-page .cta{
 	background:#046B99 !important;
@@ -2895,22 +2893,12 @@ button.fs-dropdown-item:hover{
 .page-template-nursing-secondary-landing-page .field-sub-title{
 	color:#fff;
 	text-align:center;
-	font-size:32px;
+	font-size:28px;
 	font-weight:700;
 	margin-top:.5em
 }
-@media (max-width: 770px){
-	.page-template-nursing-secondary-landing-page .field-sub-title{
-		font-size:24px
-	}
-}
 .page-template-nursing-secondary-landing-page .field-excerpt{
 	margin:0
-}
-@media (max-width: 770px){
-	.page-template-nursing-secondary-landing-page .field-excerpt{
-		padding-bottom:32px
-	}
 }
 .page-template-nursing-secondary-landing-page .program-title{
 	color:#115438;
@@ -3546,17 +3534,9 @@ a.buttonLink.grouped{
 .social-media .social-media-icons a.social-media-icon-link:hover {
 	border: 2px solid #c3a250;
 }
-.page-template-landing-page .opening-menu{
-	border-top:none;
-	border-right:none;
-	border-left:none;
-	text-align:center;
-	width: 100%;
-}
 .field-body a {
 	color: #046b99 !important;
 }
-
 .calls-to-action .cta-image{
 	z-index:8 !important
 }
@@ -3570,12 +3550,8 @@ a.buttonLink.grouped{
 		padding: 0 32px;
 	}
 }
-
 .program-page-main{
 	padding-right:30px;
-}
-.page-template-current-students #main{
-	padding:15px 25px;
 }
 .dean-message a:hover{
 	color:#fff !important;
@@ -3619,7 +3595,6 @@ a.buttonLink.grouped{
 .justifyEnd{
 	justify-content:end;
 }
-
 .flex-column{
 	min-width:300px;
 	max-width:48%;
@@ -3712,6 +3687,7 @@ a.buttonLink.grouped{
 /* BEGIN generic, universal, reusable styles */
 .small{font-size:.8em;}
 .small label{display:block;}
+.small a{font-size:100%;}
 .two-column{
 	-webkit-columns:300px 2;
 	-moz-columns:300px 2;
@@ -3878,12 +3854,8 @@ th .smallText{
 	height:auto;
 }
 
-.main-event-content{padding-left:10px}
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
-.small a{font-size:100%;}
 .field-sidebar-content .field-sidebar-content{padding:unset;margin-bottom:unset;line-height:inherit;}
-.small{font-size:.8em;}
-.small label{display:block;}
 .field-content button.requestInfo-trigger{
 	display:block !important;
 	max-width:300px;
