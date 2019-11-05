@@ -306,7 +306,6 @@ a:hover,a:active{
 .menu-main-nav-container>ul>li:hover,.menu-main-nav-container>ul>li.open,.menu-main-nav-container>ul>li:focus{
 	background-color:#115438;
 	color:#fff;
-	transform:translateZ(1px);
 	z-index:1;
 	border-bottom:1px solid #115438;
 }
@@ -367,7 +366,7 @@ a:hover,a:active{
 }
 .menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:#fff !important;
-	border-top:1px solid #DCDCDC
+	border-top:1px solid #dcdcdc
 }
 .menu-special-menu-container>ul>li.search-item:not(.open):hover .search-icon:after{
 	background-image:url("images/icon-search-white.png");
@@ -379,26 +378,26 @@ a:hover,a:active{
 		background-image:url("images/icon-search-white.svg")
 	}
 }
-.menu-special-menu-container>ul>li.search-item>a{
+.menu-special-menu-container .search-item>a{
 	padding:19px 1em
 }
-.menu-special-menu-container>ul>li.search-item .search-realtext{
+.menu-special-menu-container .search-item .search-realtext{
 	display:block;
 	position:absolute;
 	bottom:1em;
 	left:0;
 	width:100%
 }
-.menu-special-menu-container>ul>li.search-item .search-icon{
+.menu-special-menu-container .search-item .search-icon{
 	font-size:28px;
 	line-height:14px;
 	width:2em;
 	display:inline-block
 }
-.menu-special-menu-container>ul>li.search-item .search-icon .fas{
+.menu-special-menu-container .search-item .search-icon .fas{
 	padding-bottom:14px;
 }
-.menu-special-menu-container>ul>li.search-item>ul.sub-menu{
+.menu-special-menu-container .search-item .sub-menu{
 	opacity:1;
 	visibility:visible;
 	border-top:1px solid #dcdcdc;
@@ -407,29 +406,24 @@ a:hover,a:active{
 	width:48em
 }
 @media all and (max-width: 64rem){
-	.menu-special-menu-container>ul>li.search-item>ul.sub-menu{
+	.menu-special-menu-container .search-item .sub-menu{
 		width:100%;
 		right:auto
 	}
 }
-.menu-special-menu-container>ul>li.search-item>ul.sub-menu form{
+.menu-special-menu-container .search-item form{
 	position:relative;
-	border-bottom:1px solid #969696;
+	border:1px solid #969696;
 	color:#969696
 }
-@media all and (max-width: 64rem){
-	.menu-special-menu-container>ul>li.search-item>ul.sub-menu form{
-		border:1px solid #969696
-	}
-}
-.menu-special-menu-container>ul>li.search-item>ul.sub-menu form label{
+.menu-special-menu-container .search-item form label{
 	min-width:90%;
 	overflow:visible;
 	visibility:visible;	
 	opacity:1;
 	flex-grow:1
 }
-.menu-special-menu-container>ul>li.search-item>ul.sub-menu form .search-field{
+.menu-special-menu-container .search-item form .search-field{
 	line-height:48px;
 	height:48px;
 	border:none;
@@ -442,10 +436,10 @@ a:hover,a:active{
 	-webkit-appearance:none;
 	-moz-appearance:none
 }
-.menu-special-menu-container>ul>li.search-item>ul.sub-menu form .search-field:focus{
+.menu-special-menu-container .search-item form .search-field:focus{
 	outline:none
 }
-.menu-special-menu-container>ul>li.search-item>ul.sub-menu form .search-submit{
+.menu-special-menu-container .search-item form .search-submit{
 	border:none;
 	line-height:24px;
 	border-radius:0;
@@ -683,7 +677,8 @@ a:hover,a:active{
 	letter-spacing:0;
 	line-height:1em;
 }
-.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
+.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,
+.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
 	display:none
 }
 .mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,
