@@ -104,19 +104,19 @@ get_template_part("template-parts/page-heading");
           <div class="quick-info-inner">
             <?php if ($required_credits): ?>
               <div class="field-required-credits">
-                <h3>Required Credits</h3>
+                <h3 class="noMarginTop">Required Credits</h3>
                 <p class="noMargins"><?php print $required_credits ?></p>
               </div>
             <?php endif; ?>
             <?php if ($degree_option): ?>
               <div class="field-degree-option">
-                <h3>Degree Option</h3>
+                <h3 class="noMarginTop">Degree Option</h3>
                 <p class="noMargins"><?php print $degree_option ?></p>
               </div>
             <?php endif; ?>
             <?php if ($program_formats): ?>
               <div class="field-program-formats">
-                <h3>Program Formats</h3>
+                <h3 class="noMarginTop">Program Formats</h3>
                 <p class="noMargins"><?php print $program_formats ?></p>
               </div>
             <?php endif; ?>

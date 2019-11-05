@@ -1555,15 +1555,6 @@ p:last-child{
 .field-related-events ul a:hover{
 	color:#fff;
 }
-.field-related-events ul a:after {
-	background: url(images/arrow-more.png) no-repeat 0 0/100%;
-	content: "";
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	margin-left: 1em;
-	position: absolute;
-}
 .field-related-events .times{
 	font-size:16px;
 	color:#B3AEBB;
@@ -2098,17 +2089,6 @@ button.fs-dropdown-item:hover{
 	font-weight:500;
 	vertical-align:top;
 	line-height:1.5em
-}
-.event .permalink:after{
-	content:"";
-	display:inline-block;
-	width:24px;
-	height:24px;
-	background-image:url("images/arrow-more.png");
-	background-size:100%;
-	background-repeat:no-repeat;
-	margin-left:1em;
-	position:absolute
 }
 @media (max-width:1024px){
 	.news-events-feature .flexHalf{
@@ -3061,12 +3041,6 @@ button.fs-dropdown-item:hover{
 .field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	padding:10px 25px;
 }
-.field-required-credits ul:last-child,.field-required-credits ol:last-child,.field-degree-option ul:last-child,.field-degree-option ol:last-child,.field-program-formats ul:last-child,.field-program-formats ol:last-child,.field-misc-quick-info ul:last-child,.field-misc-quick-info ol:last-child{
-	margin-bottom:0
-}
-.field-required-credits h3:first-child,.field-degree-option h3:first-child,.field-program-formats h3:first-child,.field-misc-quick-info h3:first-child{
-	margin-top:0
-}
 .field-related-majors{
 	position:relative;
 	text-transform:uppercase;
@@ -3093,18 +3067,21 @@ button.fs-dropdown-item:hover{
 	vertical-align:middle;
 	position:relative;
 }
+.field-related-majors ul li a:after,.event .permalink:after,.field-related-events ul a:after{
+	background: url("images/arrow-more.png") no-repeat 0 0/cover;
+	content: "";
+	width: 24px;
+	height: 24px;
+	margin-left: 1em;
+	display: inline-block;
+	position:absolute
+}
 .field-related-majors ul li a:after {
-  background: url("images/arrow-more.png") no-repeat 0 0/cover;
-  content: "";
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-  line-height: 24px;
-  vertical-align: bottom;
-  position: relative;
-  right: auto;
-  top: auto;
-  margin-left: 1em;
+	line-height: 24px;
+	vertical-align: bottom;
+	position: relative;
+	right: auto;
+	top: auto;
 }
 @media (min-width: 48em){
 	.field-related-majors ul li a:after{
@@ -3815,6 +3792,7 @@ th .smallText{
 }
 #courses .collapseomatic_content{
 	border:unset;
+	padding-top:unset;
 }
 #courses table,#courses th,#courses td{
 	border:1px solid grey;
@@ -3831,9 +3809,6 @@ th .smallText{
 }
 #courses tbody td:nth-child(4){
 	text-align:center;
-}
-#courses .collapseomatic_content{
-	padding-top:unset;
 }
 #courses .collapseomatic_content h4{
 	padding-left:unset;
