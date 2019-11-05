@@ -268,7 +268,7 @@ a:hover,a:active{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
-	padding:32px 2em
+	padding:32px 1em
 }
 .menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu{
 	visibility:hidden;
@@ -346,7 +346,7 @@ a:hover,a:active{
 	content:none
 }
 .menu-special-menu-container>ul>li{
-	height:87px
+	height:86px
 }
 .mobile-or-library .menu-special-menu-container>ul>li{
 	display:none;
@@ -820,7 +820,7 @@ div:not(.menu-main-nav-container)>ul li a br{
 	top:0;
 	box-shadow:0 0 4px rgba(0,0,0,0.2);
 	text-align:center;
-	height:87px;
+	height:86px;
 	background:#fff
 }
 .mobile-or-library #masthead{
