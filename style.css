@@ -273,7 +273,7 @@ a:hover,a:active{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
-	padding:23px 2em
+	padding:32px 2em
 }
 @media all and (max-width: 96rem){
 	.menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
@@ -597,7 +597,8 @@ a:hover,a:active{
 		color:#696969
 	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover{
-		background-color:#115438
+		background-color:#115438;
+		border-bottom:1px solid #115438;
 	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover>a,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover>a{
 		color:#fff
