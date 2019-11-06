@@ -40,7 +40,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 	font-family:'blackjack';
 	src:url("fonts/blackjack.eot");
 	src:local("☺"),url("fonts/blackjack.woff") format("woff"),url("fonts/blackjack.ttf") format("truetype"),url("fonts/blackjack.svg") format("svg");
-	font-weight:normal;
+	font-weight:400;
 	font-style:normal;
 }
 h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:italic}blockquote{margin:0 1.5em}address{margin:0 0 1.5em}pre{background:#eee;font-family:"Courier 10 Pitch",Courier,monospace;font-size:15px;font-size:.9375rem;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em}code,kbd,tt,var{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;font-size:15px;font-size:.9375rem}abbr,acronym{border-bottom:1px dotted #666;cursor:help}mark,ins{background:#fff9c0;text-decoration:none}big{font-size:125%}.site-main,.page-sidebar{font-size:18px;line-height:28px}
@@ -112,7 +112,7 @@ hr{
 	margin-bottom:1.5em
 }
 ul,ol{
-	margin:0 0 1.5em 0
+	margin:0 0 1.5em
 }
 ul{
 	list-style:disc;
@@ -332,7 +332,7 @@ a:hover,a:active{
 	-webkit-transform:translateY(0) scaleY(1) translateZ(0px);
 	-ms-transform:translateY(0) scaleY(1) translateZ(0px);
 	transform:translateY(0) scaleY(1) translateZ(0px);
-	top:80px;
+	top:79px;
 	transition:.365s ease-in-out all
 }
 @media all and (max-width: 64rem){
@@ -750,6 +750,7 @@ a:hover,a:active{
 }
 #interested-in-applying,#link-give{
 	width:100%;
+	height:50%;
 	padding:.8em .5em;
 }
 #interested-in-applying{
@@ -1998,14 +1999,13 @@ button.fs-dropdown-item:hover{
 		padding:0 16px
 	}
 	.section-statistics .statistic .statistic-inner{
-		margin:-64px 16px 16em;
-		margin-bottom:32vw;
+		margin:-64px 16px 32vw;
 		padding:10px 32px 28px
 	}
 }
 @media (min-width: 72em){
 	.section-statistics .statistic .statistic-inner{
-		margin:-64px 22.5px 16em 22.5px
+		margin:-64px 22.5px 16em
 	}
 }
 .more-button-container{
@@ -2016,7 +2016,7 @@ button.fs-dropdown-item:hover{
 	text-transform:uppercase;
 	color:#115438 !important;
 	border:2px solid #115438;
-	padding:.8em 2em .7em 2em;
+	padding:8em 2em .7em;
 	font-size:16px;
 	transition:all .25s ease-in-out;
 	display:inline-block
@@ -2214,7 +2214,7 @@ button.fs-dropdown-item:hover{
 	text-decoration:none;
 	text-transform:uppercase;
 	margin:1.4em auto;
-	padding:.8em 0 .7em 0;
+	padding:.8em 0 .7em;
 	font-size:16px;
 	font-weight:700;
 	width:13em;
@@ -2238,7 +2238,7 @@ button.fs-dropdown-item:hover{
 		font-size:1.8em
 	}
 	.calls-to-action .calls-to-action-title{
-		padding:32px 0 32px
+		padding:32px 0
 	}
 }
 .page-template-home-page{
@@ -2715,7 +2715,7 @@ button.fs-dropdown-item:hover{
 }
 @media (max-width: 48em){
 	#nursingPage .calls-to-action .calls-to-action-title{
-		padding:32px 0 32px;
+		padding:32px 0;
 	}
 }
 #nursingPage .story-full .show-more{
@@ -2853,7 +2853,7 @@ button.fs-dropdown-item:hover{
 	}
 }
 .page-template-nursing-secondary-landing-page .rn-item{
-	padding:0 2em 2em 2em;
+	padding:0 2em 2em;
 	vertical-align:top;
 	flex-grow:1;
 	width:50%;
@@ -3198,7 +3198,7 @@ button.fs-dropdown-item:hover{
 }
 #hero-overlay h1{
 	color:#fff;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 	line-height: 1em;
 	margin: 10px 0;
 }
@@ -3275,20 +3275,20 @@ button.fs-dropdown-item:hover{
 }
 @media screen and (orientation: landscape) {
 	#hero-overlay a{
-		display: block;
+		display:block;
 	}
 }
 /* END homepage video styling */
 /* BEGIN styling for the collapse-o-matic accordions */
 h4.collapseomatic,.schema-faq-question {
-	background: none;
-	display: block;
-	padding: 10px 20px;
-	cursor: pointer;
-	color: #046B99;
-	font-weight:normal;
-	border: 1px solid #ccc;
-	margin: 4px 0 -1px 0;
+	background:none;
+	display:block;
+	padding:10px 20px;
+	cursor:pointer;
+	color:#046B99;
+	font-weight:400;
+	border:1px solid #ccc;
+	margin:4px 0 -1px;
 }
 h4.collapseomatic:hover,.schema-faq-question:hover {
 	color:#000;
@@ -3676,7 +3676,7 @@ a.buttonLink.grouped{
 	line-height:1em;
 }
 th .smallText{
-	font-weight:normal;
+	font-weight:400;
 }
 .noMargins{
 	margin: 0!important;
@@ -3814,7 +3814,7 @@ th .smallText{
 }
 @media all and (max-width: 445px) {
 	#courses .collapseomatic_content{
-		padding:0 0 20px 0;
+		padding:0 0 20px;
 	}
 	#courses table{
 		font-size:.7em;
@@ -3823,8 +3823,8 @@ th .smallText{
 /* BEGIN customizations from within the admin section */
 .nav-trigger, .pointer, .menu-item a{cursor:pointer;}
 #menu-item-21808 a, #menu-item-21806 a {
-	padding-top: 0px !important;
-	padding-bottom: 0px !important;
+	padding-top:0 !important;
+	padding-bottom:0 !important;
 	height:auto;
 }
 
