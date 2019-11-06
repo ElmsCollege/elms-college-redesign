@@ -307,7 +307,6 @@ a:hover,a:active{
 	background-color:#115438;
 	color:#fff;
 	z-index:1;
-	border-bottom:1px solid #115438;
 }
 .menu-main-nav-container>ul>li:hover:after,.menu-main-nav-container>ul>li.open:after,.menu-main-nav-container>ul>li:focus:after{
 	content:none
@@ -348,7 +347,7 @@ a:hover,a:active{
 	content:none
 }
 .menu-special-menu-container>ul>li{
-	height:87px
+	height:86px
 }
 .mobile-or-library .menu-special-menu-container>ul>li{
 	display:none;
@@ -787,7 +786,7 @@ a:hover,a:active{
 	top:0;
 	box-shadow:0 0 4px rgba(0,0,0,0.2);
 	text-align:center;
-	height:87px;
+	height:86px;
 	background:#fff
 }
 .mobile-or-library #masthead{
@@ -939,7 +938,7 @@ a:hover,a:active{
 	overflow-y:visible
 }
 .site-content{
-	padding-top:87px
+	padding-top:86px
 }
 @media all and (max-width: 64rem){
 	.site-content{
