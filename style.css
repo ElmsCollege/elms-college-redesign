@@ -2016,7 +2016,7 @@ button.fs-dropdown-item:hover{
 	text-transform:uppercase;
 	color:#115438 !important;
 	border:2px solid #115438;
-	padding:8em 2em .7em;
+	padding:.8em 2em .7em;
 	font-size:16px;
 	transition:all .25s ease-in-out;
 	display:inline-block
