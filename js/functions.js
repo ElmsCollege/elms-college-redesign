@@ -334,26 +334,6 @@
 			$(".story-tab:first").addClass("active");
 		}
 	}, 5000);
-
-	  
-    //resize library homepage area on window resize.
-/*
-	var resizeLibraryHome = function () {
-      var height = $win.height();
-      var columns = $(".page-template-library-landing-page .section-heading-as-content");
-      var existingPadding = $('.site-main').offset().top + $(".calls-to-action-feature").height();
-      
-      console.log(existingPadding);
-      if (Modernizr.mq("only screen and (min-width: 64em)")) {
-        columns.css("min-height", (parseInt(height) - parseInt(existingPadding)) + "px");
-      }
-      else {
-        columns.css({"min-height": ""});
-      }
-    };
-    resizeLibraryHome();
-    $(window).resize(resizeLibraryHome);
-*/
 	  
 	//JS for the Gutenberg FAQ blocks
 	jQuery(".schema-faq-section").each(function() {
