@@ -954,14 +954,9 @@ li.current-menu-ancestor + li::after{
 }
 .social-media .social-media-inner{
 	margin:32px 0;
-	padding:30px 0 0;
+	padding:30px 0;
 	background:#115438;
 	text-align:center;
-}
-@media all and (max-width: 64rem){
-	.social-media .social-media-inner{
-		margin:0 0 64px
-	}
 }
 .social-media .field-social_media_title{
 	margin:0 auto .35em;
