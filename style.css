@@ -683,7 +683,7 @@ li.current-menu-ancestor + li::after{
 .mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
 	position:relative;
 	margin:0;
-	padding:16px 32px;
+	padding:16px 21px;
 	border:none;
 	background:#fff;
 	max-width:100%;
@@ -953,8 +953,8 @@ li.current-menu-ancestor + li::after{
 	letter-spacing:normal;
 }
 .social-media .social-media-inner{
-	margin:32px 0 64px;
-	padding:48px 0 0;
+	margin:32px 0;
+	padding:30px 0 0;
 	background:#115438;
 	text-align:center;
 }
@@ -968,7 +968,6 @@ li.current-menu-ancestor + li::after{
 	color:#fff
 }
 .social-media .social-media-icons{
-	padding:0 0 40px;
 	margin:0 auto;
 	max-width:36em;
 	justify-content:center;
@@ -3767,17 +3766,17 @@ th .smallText{
 	padding-top:140px;
 	width:auto !important;
 }
-.wp-block-pullquote,.wp-block-quote{
+.wp-block-pullquote{
 	background-color:#f2f2f2 !important;
 	padding:1em 0;
 	font-weight:700;
 	color:#004731;
 	border-left:10px solid #004731;
 }
-.wp-block-pullquote p,.wp-block-quote p{
+.wp-block-pullquote p{
 	margin-bottom:.5em;
 }
-.wp-block-pullquote cite,.wp-block-quote cite{
+.wp-block-pullquote cite{
 	font-weight:300
 }
 #courses .collapseomatic{
