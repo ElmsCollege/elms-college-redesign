@@ -225,10 +225,6 @@ a:focus{
 a:hover,a:active{
 	outline:0
 }
-.nav-links{
-	margin-top:32px;
-	font-weight:700
-}
 .main-navigation{
 	clear:both;
 	display:block;
@@ -262,6 +258,9 @@ a:hover,a:active{
 	position:absolute;
 	left:0;
 	top:10px;
+}
+li.current-menu-ancestor + li::after{
+	border:0 !important;
 }
 .menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
 	display:inline-block;
