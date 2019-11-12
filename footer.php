@@ -24,22 +24,22 @@
 				<ul class="social-media-icons pure-g flexRowWrapStart ulreset">
 
 					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
+						<a rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
 							<img src="/wp-content/themes/gs_elms/images/icon-facebook.png" alt="Facebook logo"/>
 						</a>
 					</li>
 					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://twitter.com/elmscollege">
+						<a rel="noopener" class="social-media-icon-link" href="https://twitter.com/elmscollege">
 							<img src="/wp-content/themes/gs_elms/images/icon-twitter.png" alt="Twitter logo"/>
 						</a>
 					</li>
 					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.instagram.com/elmscollege/">
+						<a rel="noopener" class="social-media-icon-link" href="https://www.instagram.com/elmscollege/">
 							<img src="/wp-content/themes/gs_elms/images/icon-instagram.png" alt="Instagram logo"/>
 						</a>
 					</li>
 					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.youtube.com/user/ElmsCollegeVideo">
+						<a rel="noopener" class="social-media-icon-link" href="https://www.youtube.com/user/ElmsCollegeVideo">
 							<img src="/wp-content/themes/gs_elms/images/icon-youtube.png" alt="YouTube logo"/>
 						</a>
 					</li>

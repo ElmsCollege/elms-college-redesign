@@ -2611,11 +2611,6 @@ button.fs-dropdown-item:hover{
 	color:#115438;
 	background:#115438
 }
-@media (max-width: 47.999em){
-	#nursingPage .calls-to-action{
-		background-color:#115438;
-	}
-}
 #nursingPage .calls-to-action .calls-to-action-title{
 	position:relative;
 	margin:32px 0 0;
@@ -2730,7 +2725,6 @@ button.fs-dropdown-item:hover{
 	position:relative;
 	display:inline-block;
 	background-repeat:no-repeat;
-	background-size:100% 100%;
 	background-size:contain;
 	background-position:center center;
 	width:58px;
