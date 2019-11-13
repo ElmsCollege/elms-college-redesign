@@ -271,7 +271,7 @@ li.current-menu-ancestor + li::after{
 .menu-special-menu-container>ul>li>a{
 	padding:15px 1em;
 }
-.menu-main-nav-container .sub-menu,.menu-special-menu-container .sub-menu,#special-section-menu .sub-menu{
+.menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu,#special-section-menu>li>ul.sub-menu{
 	visibility:hidden;
 	list-style:none;
 	margin:7px 0 0;
@@ -282,26 +282,26 @@ li.current-menu-ancestor + li::after{
 	-ms-transform:translateY(-50%) scaleY(0) translateZ(-90px);
 	transform:translateY(-50%) scaleY(0) translateZ(-90px)
 }
-.menu-main-nav-container .sub-menu,.menu-special-menu-container .sub-menu{
+.menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu{
 	opacity:.3;
 	top:80px;
 	z-index:1;
 	width:18.5em;
 	background:#f5f5f5;
 }
-#special-section-menu .sub-menu{
+#special-section-menu>li>ul.sub-menu{
 	opacity:0;
 	top:39px;
 	min-width:18em;
 	background:#fff;
 }
-.menu-main-nav-container .sub-menu a,.menu-special-menu-container .sub-menu a,#special-section-menu .sub-menu a{
+.menu-main-nav-container>ul>li>ul.sub-menu>li>a,.menu-special-menu-container>ul>li>ul.sub-menu>li>a,#special-section-menu>li>ul.sub-menu>li>a{
 	display:block;
 	padding:.5em 0;
 	text-decoration:none;
 	color:#696969;
 }
-.menu-main-nav-container .sub-menu a:hover,.menu-main-nav-container .sub-menu a:focus,.menu-special-menu-container .sub-menu a:hover,.menu-special-menu-container .sub-menu a:focus,#special-section-menu .sub-menu a:hover{
+.menu-main-nav-container>ul>li>ul.sub-menu>li>a:hover,.menu-main-nav-container>ul>li>ul.sub-menu>li>a:focus,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:hover,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:focus,#special-section-menu>li>ul.sub-menu>li>a:hover{
 	color:#115438;
 }
 @media screen and (min-width: 76em){
@@ -332,20 +332,19 @@ li.current-menu-ancestor + li::after{
 		background-image:url("images/icon-close.svg");
 	}
 }
-.menu-main-nav-container :not(.search-item):hover .sub-menu,.menu-main-nav-container .open .sub-menu,.menu-main-nav-container :not(.search-item):focus .sub-menu,.menu-special-menu-container :not(.search-item):hover .sub-menu,.menu-special-menu-container .open .sub-menu,.menu-special-menu-container :not(.search-item):focus .sub-menu,#special-section-menu :hover .sub-menu,#special-section-menu .open .sub-menu{
+.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.open>ul.sub-menu{
 	opacity:1;
 	visibility:visible;
 	-webkit-transform:translateY(0) scaleY(1) translateZ(0px);
 	-ms-transform:translateY(0) scaleY(1) translateZ(0px);
 	transform:translateY(0) scaleY(1) translateZ(0px);
-	transition:.365s ease-in-out all;
-	text-align:left;
+	transition:.365s ease-in-out all
 }
-.menu-main-nav-container :not(.search-item):hover .sub-menu,.menu-main-nav-container .open .sub-menu,.menu-main-nav-container :not(.search-item):focus .sub-menu,.menu-special-menu-container :not(.search-item):hover .sub-menu,.menu-special-menu-container .open .sub-menu,.menu-special-menu-container :not(.search-item):focus .sub-menu{
+.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 	top:79px;
 }
 @media all and (max-width: 64rem){
-	.menu-main-nav-container :not(.search-item):hover .sub-menu,.menu-main-nav-container .open .sub-menu,.menu-main-nav-container :not(.search-item):focus .sub-menu,.menu-special-menu-container :not(.search-item):hover .sub-menu,.menu-special-menu-container .open .sub-menu,.menu-special-menu-container :not(.search-item):focus .sub-menu{
+	.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 		top:0;
 		-webkit-transform:none;
 		-ms-transform:none;
@@ -372,7 +371,7 @@ li.current-menu-ancestor + li::after{
 .menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li.open a,.menu-special-menu-container>ul>li:focus a{
 	color:#115438
 }
-.menu-special-menu-container .sub-menu,.menu-special-menu-container .open .sub-menu{
+.menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:#fff !important;
 	border-top:1px solid #dcdcdc
 }
@@ -689,7 +688,8 @@ li.current-menu-ancestor + li::after{
 .mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
 	display:none
 }
-.mobile-or-library .sub-menu{
+.mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,
+.mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
 	position:relative;
 	margin:0;
 	padding:16px 21px;
@@ -705,13 +705,13 @@ li.current-menu-ancestor + li::after{
 	opacity:1;
 	display:none
 }
-.mobile-or-library .open .sub-menu,.mobile-or-library .sub-menu.for-search{
+.mobile-or-library .menu-main-nav-container>ul>li.open>ul.sub-menu,.mobile-or-library .menu-main-nav-container>ul>li.search-item>ul.sub-menu.for-search,.mobile-or-library .menu-special-menu-container>ul>li.open>ul.sub-menu,.mobile-or-library .menu-special-menu-container>ul>li.search-item>ul.sub-menu.for-search{
 	display:block;
 	background-color:#f5f5f5;
 	border-bottom:0;
 	top:0
 }
-.mobile-or-library .sub-menu.for-search{
+.mobile-or-library .menu-main-nav-container>ul>li.search-item>ul.sub-menu.for-search,.mobile-or-library .menu-special-menu-container>ul>li.search-item>ul.sub-menu.for-search{
 	background-color:#fff
 }
 .mobile-or-library .menu-main-nav-container>ul>li #menu-item-search,.mobile-or-library .menu-special-menu-container>ul>li #menu-item-search{
@@ -3447,6 +3447,11 @@ a.buttonLink.grouped{
 	padding: 10px 0;
 }
 /* END changes for the 2018 revision to program pages */
+@media only screen and (max-width: 1024px) {
+	ul.sub-menu {
+		font-size:18px;
+	}
+}
 .site-main h2,.field-content h2{
 	color: #115438;
 }
