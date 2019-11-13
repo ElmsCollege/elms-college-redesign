@@ -11,9 +11,6 @@ if( get_field('featured_image_cropped') ){
 	echo '<div id="textHeading" class="section-heading">';
 }
 ?>
-<style>
-	.languageSwitcher a,.languageSwitcher a:visited{color:white;}
-</style>
 	<h1 class="field-title">
 		<?php 
 			echo esc_html( get_the_title() );

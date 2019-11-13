@@ -8,10 +8,12 @@
  */
 
 get_header();
-
-get_template_part("template-parts/page-heading");
 ?>
-    
+    <div id="textHeading" class="section-heading">
+		<h1 class="field-title">
+			Search Results:
+		</h1>
+	</div>
 	<section id="primary" class="content-area pure-g">
 		<main id="main" class="site-main pure-u-1 standalone" role="main">
       
