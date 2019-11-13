@@ -301,7 +301,7 @@ li.current-menu-ancestor + li::after{
 	text-decoration:none;
 	color:#696969;
 }
-.menu-main-nav-container .sub-menu a:hover,.menu-main-nav-container .sub-menu a:focus,.menu-special-menu-container .sub-menu a:hover,.menu-special-menu-container .sub-menu a:focus,#special-section-menu .sub-menu a:hover{
+.menu-main-nav-container>ul>li>ul.sub-menu>li>a:hover,.menu-main-nav-container>ul>li>ul.sub-menu>li>a:focus,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:hover,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:focus,#special-section-menu>li>ul.sub-menu>li>a:hover{
 	color:#115438;
 }
 @media screen and (min-width: 76em){
@@ -332,7 +332,7 @@ li.current-menu-ancestor + li::after{
 		background-image:url("images/icon-close.svg");
 	}
 }
-.menu-main-nav-container :not(.search-item):hover .sub-menu,.menu-main-nav-container .open .sub-menu,.menu-main-nav-container :not(.search-item):focus .sub-menu,.menu-special-menu-container :not(.search-item):hover .sub-menu,.menu-special-menu-container .open .sub-menu,.menu-special-menu-container :not(.search-item):focus .sub-menu,#special-section-menu :hover .sub-menu,#special-section-menu .open .sub-menu{
+.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.open>ul.sub-menu{
 	opacity:1;
 	visibility:visible;
 	-webkit-transform:translateY(0) scaleY(1) translateZ(0px);
@@ -341,7 +341,7 @@ li.current-menu-ancestor + li::after{
 	transition:.365s ease-in-out all;
 	text-align:left;
 }
-.menu-main-nav-container :not(.search-item):hover .sub-menu,.menu-main-nav-container .open .sub-menu,.menu-main-nav-container :not(.search-item):focus .sub-menu,.menu-special-menu-container :not(.search-item):hover .sub-menu,.menu-special-menu-container .open .sub-menu,.menu-special-menu-container :not(.search-item):focus .sub-menu{
+.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 	top:79px;
 }
 @media all and (max-width: 64rem){
@@ -472,7 +472,7 @@ li.current-menu-ancestor + li::after{
 		transform:translateY(-1px);
 	}
 }
-.menu-special-menu-container>ul>li:last-child a{
+.menu-special-menu-container>ul>li:last-child a.languageSwitcher a,.languageSwitcher a:visited{
 	color:#fff
 }
 .menu-special-menu-container>ul>li:last-child:after{
