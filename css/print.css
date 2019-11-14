@@ -11,6 +11,7 @@ main,aside{
 	padding:0 20px !important;
 	height:auto !important;
 	overflow:visible !important;
+	display:block !important;
 }
 aside{
 	margin-top:20px;
