@@ -2,7 +2,7 @@
 #masthead{
 	position:unset;
 }
-html,#content,#main{
+body{
 	height:auto;
 }
 .site-content{
