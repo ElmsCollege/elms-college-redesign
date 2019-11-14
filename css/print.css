@@ -2,8 +2,8 @@
 #masthead{
 	position:unset;
 }
-#content,#main{
-	height:100%;
+html,#content,#main{
+	height:auto;
 }
 .site-content{
 	padding-top:unset;
