@@ -11,3 +11,9 @@
 .collapseomatic_content{
 	display:block !important;
 }
+a{
+	padding:0 10px;
+}
+.social-media-icons{
+	display:none;
+}
