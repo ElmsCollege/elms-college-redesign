@@ -1,0 +1,13 @@
+/* styling overrides used for printing pages off the website */
+#masthead{
+	position:unset;
+}
+.site-content{
+	padding-top:unset;
+}
+.page-sidebar{
+	margin-top:10px;
+}
+.collapseomatic_content{
+	display:block;
+}

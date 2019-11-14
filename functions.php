@@ -133,7 +133,13 @@ function gs_elms_scripts() {
 	wp_enqueue_script( 'micromodal', get_template_directory_uri() . '/js/micromodal.min.js', array(), '20190701', true );
 	
 	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
-
+    wp_enqueue_style(
+        'wpa-print-style', 
+        get_template_directory_uri() . '/css/print.css', 
+        array(), 
+        '20191114', 
+        'print' // print styles only
+    );
 //	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 //		wp_enqueue_script( 'comment-reply' );
 //	}
