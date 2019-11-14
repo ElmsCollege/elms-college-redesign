@@ -1,14 +1,16 @@
 /* styling overrides used for printing pages off the website */
 header,footer{
-	display:none;
+	display:none !important;
 }
 #primary{
-	display:block;
+	display:block !important;
+	overflow:visible !important;
 }
 main,aside{
 	width:100% !important;
 	padding:0 20px !important;
 	height:auto !important;
+	overflow:visible !important;
 }
 aside{
 	margin-top:20px;
