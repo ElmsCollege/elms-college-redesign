@@ -1,19 +1,14 @@
 /* styling overrides used for printing pages off the website */
-#masthead{
-	position:unset;
-}
-body{
-	height:auto;
-}
-.site-content{
-	padding-top:unset;
-}
-.page-sidebar{
-	margin-top:10px;
-}
-a{
-	padding:0 10px;
-}
-.social-media-icons{
+header,footer{
 	display:none;
+}
+#primary{
+	display:block;
+}
+main,aside{
+	width:100%;
+	padding:0 20px;
+}
+aside{
+	margin-top:20px;
 }
