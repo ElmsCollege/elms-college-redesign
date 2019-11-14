@@ -2,14 +2,14 @@
 #masthead{
 	position:unset;
 }
+#content,#main{
+	height:100%;
+}
 .site-content{
 	padding-top:unset;
 }
 .page-sidebar{
 	margin-top:10px;
-}
-.collapseomatic_content{
-	display:block !important;
 }
 a{
 	padding:0 10px;
