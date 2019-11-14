@@ -9,5 +9,5 @@
 	margin-top:10px;
 }
 .collapseomatic_content{
-	display:block;
+	display:block !important;
 }
