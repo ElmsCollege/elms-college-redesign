@@ -133,7 +133,7 @@ get_template_part("template-parts/page-heading");
 			  			while ( have_rows('curriculum') ) : the_row();
 				  			$courseID=preg_replace("/\W+/", "_", get_sub_field('curriculum_program_name'));
 				  			echo "<div id='" .$courseID . "' class='collapseomatic noarrow'><h4>Click to view course requirements for the " .get_sub_field('curriculum_program_name');
-				  			echo ".</h4></div><div id='swap-" .$courseID . "' class='collapseomatic noarrow'><h4>Click to collapse the course requirements for the " .get_sub_field('curriculum_program_name');
+				  			echo ".</h4></div><div id='swap-" .$courseID . "' class='collapseomatic noarrow' style='display: none;'><h4>Click to collapse the course requirements for the " .get_sub_field('curriculum_program_name');
 				  			echo ".</h4></div><div class='collapseomatic_content' id='target-" .$courseID . "'>";
 				  			the_sub_field("curriculum_text");
 				  			if( have_rows('course_requirements_table_name') ):
