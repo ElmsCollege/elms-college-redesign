@@ -3939,9 +3939,11 @@ th .smallText{
 }
 #courses .collapseomatic_content{
 	border:unset;
+	border-bottom:1px solid #dcdcdc;
 }
 #courses table,#courses th,#courses td{
 	border:1px solid grey;
+	font-size:16px;
 }
 #courses td{
 	padding:0 5px;
@@ -3965,9 +3967,6 @@ th .smallText{
 @media all and (max-width: 445px) {
 	#courses .collapseomatic_content{
 		padding:0 0 20px 0;
-	}
-	#courses table{
-		font-size:.7em;
 	}
 }
 /* BEGIN customizations from within the admin section */
