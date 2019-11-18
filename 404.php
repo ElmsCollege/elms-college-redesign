@@ -7,9 +7,11 @@
  * @package Elms_College_Redesign
  */
 
-get_template_part("template-parts/header-selector");
-get_template_part("template-parts/page-heading");
-?>
+get_header(); ?>
+
+    <div id="textHeading" class="section-heading">
+		<h1 class="field-title"><?php the_field('not_found_title', 'option'); ?></h1>
+	</div>
 
  	<div id="primary" class="content-area pure-g">
  		<main id="main" class="site-main pure-u-1 standalone" role="main">
@@ -17,8 +19,7 @@ get_template_part("template-parts/page-heading");
 			<section class="error-404 not-found">
 
 				<div class="page-content centerText">
-					<?php print get_field("not_found_message", "option")?>
-
+					<<?php the_field('not_found_message', 'option'); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
