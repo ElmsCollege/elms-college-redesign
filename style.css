@@ -280,7 +280,8 @@ li.current-menu-ancestor + li::after{
 	border-top:8px solid #115438;
 	-webkit-transform:translateY(-50%) scaleY(0) translateZ(-90px);
 	-ms-transform:translateY(-50%) scaleY(0) translateZ(-90px);
-	transform:translateY(-50%) scaleY(0) translateZ(-90px)
+	transform:translateY(-50%) scaleY(0) translateZ(-90px);
+	text-align:left;
 }
 .menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu{
 	opacity:.3;
@@ -896,11 +897,6 @@ li.current-menu-ancestor + li::after{
 	height:32vw;
 	min-height:240px;
 	max-height:540px;
-}
-video {
-	object-fit: cover;
-	object-position: center center;
-	font-family: 'object-fit: cover; object-position: center center;';
 }
 .active,html.active{
 	overflow:hidden;

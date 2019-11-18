@@ -55,9 +55,6 @@
         }
     });
     
-    //check_visited_links();
-    
-    
     var is_iPad = (navigator != null && navigator.userAgent != null && navigator.userAgent.match(/iPad|iPhone|iPod/i) != null);
         
     // show more sidebar events 
