@@ -251,9 +251,8 @@
     // double fake mobile/library menu 
     var updateMenu = function () {
       if (Modernizr.mq("only screen and (max-width: 64em)") || 
-      $("body").hasClass("page-template-library-landing-page") || 
-      $("body").hasClass("page-template-library-interior-page") ||
-      (document.location.pathname.indexOf("/school-of-nursing/") === 0) ||
+      (jQuery("body").is("#nursingPage")) ||
+      (jQuery("body").is("#libraryPage")) ||
       (jQuery("body").is("#commencementPage")) ) {
         $("body").addClass("mobile-or-library");
       }
