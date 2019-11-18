@@ -21,7 +21,7 @@ $program_track_title = get_field("program_track_title");
 $program_track_description = get_field("program_track_description");
 $program_repeater = get_field("program_repeater");
 
-get_header("nursing");
+get_template_part("template-parts/header-selector");
 
 	get_template_part("template-parts/page-heading");
 	?>
