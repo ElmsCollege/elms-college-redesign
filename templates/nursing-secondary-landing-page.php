@@ -49,11 +49,9 @@ get_header("nursing");
         <h2 class="field-mission_statement">
           <?php print($mission_statement) ?>
         </h2>
-        <div class="mission-statement-container">
-			<div class="mission-statement-body" id="mission-statement-pt-1">
-		          <?php echo $mission_statement_body?>
-		    </div>
-        </div>
+		<div class="field-mission_statement_body">
+	          <?php echo $mission_statement_body?>
+	    </div>
       </div>
 
 			<div class="section-heading" id="program-track-anchor">

@@ -1611,9 +1611,6 @@ a.text.requestInfo-trigger{
 	margin-left:0;
 	padding-left:1em
 }
-.page-template-default .parent-sidebar-menu .page_item a:hover{
-	color:#046B99
-}
 .field-content table:not(.tribe-events-calendar),
 .entry-content table:not(.tribe-events-calendar){
 	text-align:center;
@@ -2624,11 +2621,9 @@ button.fs-dropdown-item:hover{
 #nursingPage .stories .story-feature .field-permalink{
 	padding-bottom:32px;
 }
-#nursingPage .action-columns{
-	text-align:center;
-}
 #nursingPage .action-columns ul.widgets{
 	padding:0;
+	text-align:center;
 }
 #nursingPage .action-columns .widget-features .widget-image i{
 	position:relative;
@@ -2652,9 +2647,6 @@ button.fs-dropdown-item:hover{
 	padding:0 32px;
 	max-width:520px;
 	margin:0 auto;
-}
-#nursingPage .nursing-footer-info strong{
-	margin-right:1em;
 }
 .page-template-nursing-intermediary-landing-page .cta{
 	background:#046B99 !important;
@@ -2725,32 +2717,12 @@ button.fs-dropdown-item:hover{
 	margin-bottom:4em;
 	margin:0
 }
-.page-template-nursing-secondary-landing-page .mission-statement-body{
-	width:64%;
-	margin:0 auto
-}
-@media (max-width: 770px){
-	.page-template-nursing-secondary-landing-page .mission-statement-body{
-		width:100%
-	}
-}
-.page-template-nursing-secondary-landing-page .mission-statement-container{
-	margin-bottom:1.5em
-}
 .page-template-nursing-secondary-landing-page .program-list{
-	max-width:1200px;
 	display:flex;
-	flex-wrap:wrap;
-	padding:0
-}
-@media (max-width: 770px){
-	.page-template-nursing-secondary-landing-page .program-list{
-		display:block
-	}
+	flex-flow:row wrap;
 }
 .page-template-nursing-secondary-landing-page .rn-item{
 	padding:0 2em 2em;
-	vertical-align:top;
 	flex-grow:1;
 	width:50%;
 	box-sizing:border-box
@@ -2794,14 +2766,6 @@ button.fs-dropdown-item:hover{
 	display:inline-block;
 	width:70%;
 	margin-left:15%
-}
-.page-template-nursing-secondary-landing-page .drop-down-content{
-	display:none;
-	position:absolute;
-	width:100%
-}
-.page-template-nursing-secondary-landing-page .drop-down-content a{
-	margin-top:-3px
 }
 .page-template-nursing-secondary-landing-page .show{
 	display:block
