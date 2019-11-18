@@ -1001,9 +1001,6 @@ li.current-menu-ancestor + li::after{
 		border-right:1px solid #ddd;
 	}
 }
-.site-footer :last-child .footer-item-inner{
-	border-right:none
-}
 @media (min-width: 64em){
 	.site-footer .site-branding{
 		margin-left:10%
@@ -1360,7 +1357,7 @@ li.current-menu-ancestor + li::after{
 	flex-direction:column;
 	flex-grow:2
 }
-.stories .story-carousel .story-tab:last-child .text-content{
+.stories .story-carousel .story-tab:last-child .text-content,.opening-menu .menu-item:last-child,.site-footer :last-child .footer-item-inner{
 	border-right:none
 }
 .stories .story-carousel .story-tab .theme{
@@ -1399,8 +1396,8 @@ li.current-menu-ancestor + li::after{
 	max-width:64em;
 	margin:0 auto;
 }
-p:last-child{
-	margin-bottom:0
+p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
+	margin-bottom:0;
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited,.wc-shortcodes-button.wc-shortcodes-button-success{
 	border-color:#004731;
@@ -1788,9 +1785,6 @@ button.fs-dropdown-item:hover{
 	transition:.25s ease-in-out all;
 	background-color:#fff;
 	vertical-align:middle;
-}
-.opening-menu .menu-item:last-child{
-	border-right:none;
 }
 .opening-menu .menu-item a{
 	display:block;
@@ -3122,9 +3116,6 @@ button.fs-dropdown-item:hover{
 }
 .section-heading-as-content .text-content ul, .quick-info ul {
 	padding-left: 20px;
-}
-.section-heading-as-content .text-content .field-body *:last-child{
-	margin-bottom:0;
 }
 @media all and (min-width: 1040px){
 	.section-heading-as-content {
