@@ -19,7 +19,7 @@ get_header(); ?>
 			<section class="error-404 not-found">
 
 				<div class="page-content centerText">
-					<<?php the_field('not_found_message', 'option'); ?>
+					<?php the_field('not_found_message', 'option'); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
