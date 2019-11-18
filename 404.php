@@ -7,8 +7,9 @@
  * @package Elms_College_Redesign
  */
 
-get_header(); ?>
-   <div class="section-heading" style=" <?php print_featured_image_style(get_the_ID()) ?>">
+get_template_part("template-parts/header-selector");
+?>
+<div id="textHeading" class="section-heading">
        <h1 class="field-title"><?php print get_field("not_found_title", "option")?></h1>
    </div>
 
