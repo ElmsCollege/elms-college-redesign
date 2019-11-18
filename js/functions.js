@@ -46,12 +46,6 @@
       }
     });
     
-    
-    // load video if window is big enough
-    if ($('.video-bg video').length && $(window).width() >= 768 && !(/Mobi/.test(navigator.userAgent))) {
-      $('.video-bg video').get(0).play();
-    }
-    
     // ensure ada compliance border outline only appears on keyboard focus not mouse focus
     $("body").on("mousedown", "*", function(e) {
         if (($(this).is(":focus") || $(this).is(e.target)) && $(this).css("outline-style") == "none") {
@@ -233,12 +227,6 @@
         $(".fs-dropdown").removeClass("fs-dropdown-open");
       });
 		}
-    
-    // mobile background fix
-    if (/Mobi/.test(navigator.userAgent) && $(".bg-wrapper video").length > 0) {
-        //$(".bg-wrapper").backstretch($(".bg-wrapper video").attr("poster"));
-    }
-    
     
     //interior landing page story expander.
     $(".page-template-landing-page .show-more a").on( "click touchstart", function (e) {

@@ -39,7 +39,7 @@ get_template_part("template-parts/page-heading");
 			
 <?php if ($story_background || $programImage): ?>
 
-  <div class="section-heading-as-content <?php if ($mp4 || $m4v || $ogv || $webm ) { echo "with-video"; }?>" >
+  <div class="section-heading-as-content" >
     <?php if ($programPageStoryImage): ?>
 	<?php echo wp_get_attachment_image( $programPageStoryImage, "large" ); ?>
     <?php elseif ($programImage): ?>
@@ -47,16 +47,6 @@ get_template_part("template-parts/page-heading");
     <?php else: ?>
 	<img src="<?php print $story_background["url"] ?>" alt="<?php print($story_background["alt"]) ?>" />              
     <?php endif;?>
-    <?php if ($mp4 || $m4v || $ogv || $webm ) : ?>
-      <div class="video-bg">
-        <video loop muted preload="false" poster="<?php print $story_background["url"] ?>">
-          <source src="<?php print $mp4["url"]?>" type="video/mp4">
-          <source src="<?php print $m4v["url"]?>" type="video/mp4">
-          <source src="<?php print $webm["url"]?>" type="video/webm">
-          <source src="<?php print $ogv["url"]?>" type="video/ogg">
-        </video>  
-      </div>
-    <?php endif; ?>
     <?php if ($story_body || $story_title) : ?>
       <div class="text-content">
           <h2 class="field-title noMarginTop">
