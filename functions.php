@@ -145,7 +145,13 @@ function multisite_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'multisite_scripts', 20 );
-
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+    if ( ! is_user_logged_in() ) {
+        wp_deregister_style( 'dashicons' );
+    }
+}
 /**
  * Implement the Custom Header feature.
  */

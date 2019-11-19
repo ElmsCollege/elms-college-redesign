@@ -14,7 +14,7 @@ if (!empty($stories)):
     
     <ul class="story-feature">
       <?php foreach ($stories as $index=>$story) : 
-        if ($story["link_type"] = "internal") {
+        if ($story["link_type"] == "internal") {
           $story_link = get_the_permalink($story["internal_link"]);
         }
         else {
