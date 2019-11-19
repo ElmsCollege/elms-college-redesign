@@ -551,7 +551,9 @@ function cptui_register_my_cpts_lp() {
           array( 'core/heading', array('level' => '2') ),
           array( 'core/paragraph', array() ),
           array( 'core/html', array('content' => '<div class="buttons blue"><a href="https://elms.elluciancrmrecruit.com/Apply/Account/Login" rel="noopener">Apply Now</a></div>') ),
-          array( 'core/shortcode', array('content' => '[expand title="Get Information" id="formTrigger" trigclass="requestInfo-trigger" swaptitle= "Close"]<iframe src="https://elms.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=0428151b-96a8-4fc4-912f-850a80b3c16a&s=24525250-9880-e811-80db-0a4fbe36cd62" height="700" style="max-width:95%"></iframe>[/expand]' ) ),
+          array( 'core/shortcode', array('content' => '[expand title="Get Information" id="formTrigger" trigclass="requestInfo-trigger" swaptitle= "Close"]' ) ),
+          array( 'core/html', array('content' => '<iframe src="https://elms.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=0428151b-96a8-4fc4-912f-850a80b3c16a&s=24525250-9880-e811-80db-0a4fbe36cd62" height="700" style="max-width:95%"></iframe>' ) ),
+          array( 'core/shortcode', array('content' => '[/expand]' ) ),
         ) ),
       ) )
     ),
