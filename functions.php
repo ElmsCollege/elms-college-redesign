@@ -61,6 +61,7 @@ function gs_elms_setup() {
 		'caption',
 	) );
 
+	add_theme_support( 'wp-block-styles' );
 	// Set up the WordPress core custom background feature.
   /*
 	add_theme_support( 'custom-background', apply_filters( 'gs_elms_custom_background_args', array(
