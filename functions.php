@@ -543,7 +543,7 @@ function cptui_register_my_cpts_lp() {
     "supports" => [ "title", "editor" ],
     'template' => array(
       array( 'core/image', array() ),
-      array( 'core/columns', array(), array(
+      array( 'core/columns', array('columns' => '2'), array(
         array( 'core/column', array(), array(
           array( 'core/paragraph', array() ),
         ) ),
