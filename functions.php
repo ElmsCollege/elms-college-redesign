@@ -510,3 +510,52 @@ function get_first_paragraph(){
 		return $str;
 }
 
+function cptui_register_my_cpts_lp() {
+  /**
+   * Post Type: Advertising Landing Page.
+   */
+  $labels = [
+    "name" => __( "Advertising Landing Page", "gs_elms" ),
+    "singular_name" => __( "Advertising Landing Page", "gs_elms" ),
+  ];
+  $args = [
+    "label" => __( "Advertising Landing Page", "gs_elms" ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "delete_with_user" => false,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "rest_controller_class" => "WP_REST_Posts_Controller",
+    "has_archive" => false,
+    "show_in_menu" => true,
+    "show_in_nav_menus" => true,
+    "delete_with_user" => false,
+    "exclude_from_search" => true,
+    "capability_type" => "page",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => [ "slug" => "lp", "with_front" => true ],
+    "query_var" => true,
+    "menu_icon" => "dashicons-admin-page",
+    "supports" => [ "title", "editor" ],
+    'template' => array(
+      array( 'core/image', array() ),
+      array( 'core/columns', array(), array(
+        array( 'core/column', array(), array(
+          array( 'core/paragraph', array() ),
+        ) ),
+        array( 'core/column', array(), array(
+          array( 'core/heading', array('level' => '2') ),
+          array( 'core/paragraph', array() ),
+          array( 'core/html', array('content' => '<div class="buttons blue"><a href="https://elms.elluciancrmrecruit.com/Apply/Account/Login" rel="noopener">Apply Now</a></div>') ),
+          array( 'core/shortcode', array('content' => '[expand title="Get Information" id="formTrigger" trigclass="requestInfo-trigger" swaptitle= "Close"]<iframe src="https://elms.elluciancrmrecruit.com/Apply/Account/ProspectInquiryWidget?f=5dc21e7b-aa4f-4979-a72b-47f4a48c9901&o=0428151b-96a8-4fc4-912f-850a80b3c16a&s=24525250-9880-e811-80db-0a4fbe36cd62" height="700" style="max-width:95%"></iframe>[/expand]' ) ),
+        ) ),
+      ) )
+    ),
+  ];
+  register_post_type( "lp", $args );
+}
+add_action( 'init', 'cptui_register_my_cpts_lp' );
