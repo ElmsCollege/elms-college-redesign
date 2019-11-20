@@ -20,8 +20,8 @@ get_header("advertising");
 ?>
 
 <style>
-	#primary{padding:unset;}
-	.site-main.standalone{padding-top:0px;}
+	.advgb-columns-wrapper{max-width: 1200px;margin: 0 auto;width:70%;padding-top:32px;}
+	.advgb-column-inner:last-of-type{background-color:#f1f1f1;}
 </style>
 
 <!--

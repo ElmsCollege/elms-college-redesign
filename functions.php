@@ -548,7 +548,7 @@ function cptui_register_my_cpts_lp() {
           array( 'core/paragraph', array() ),
         ) ),
         array( 'advgb/column', array(), array(
-          array( 'core/heading', array('level' => '2') ),
+          array( 'core/heading', array('level' => '2','className' => 'noMarginTop') ),
           array( 'core/paragraph', array() ),
           array( 'core/block', array('ref' => 39731) ),
         ) ),
@@ -556,5 +556,7 @@ function cptui_register_my_cpts_lp() {
     ),
   ];
   register_post_type( "lp", $args );
+	
+  update_option('image_default_size', 'full' );
 }
 add_action( 'init', 'cptui_register_my_cpts_lp' );
