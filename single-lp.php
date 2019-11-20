@@ -19,13 +19,18 @@ if(get_field("advertising_right_column_text") ){
 get_header("advertising");
 ?>
 
+<style>
+	#primary{padding:unset;}
+	.site-main.standalone{padding-top:0px;}
+</style>
 
-<div id="primary" class="content-area pure-g">
+<!--
+<div id="primary" class="pure-g">
 	<main id="main" class="site-main pure-u-1 standalone" role="main">
-
+-->
 				<?php the_content(); ?>
-	</main><!-- #main -->    
-</div><!-- #primary -->
+	<!-- </main> -->    
+<!-- </div> -->
 <hr />
 <?php
 get_footer("advertising");
