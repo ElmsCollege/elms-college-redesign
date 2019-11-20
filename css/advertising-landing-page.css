@@ -1,0 +1,33 @@
+/* CSS Document for the advertising landing page content type */
+.wp-block-image img{
+	display:table;
+	margin:0 auto;
+}
+.advgb-columns-wrapper{
+	max-width:1200px !important;
+	margin:0 auto 25px;
+	width:70% !important;
+	padding-top:32px;
+}
+.advgb-column:last-of-type .advgb-column-inner{
+	background-color:#f1f1f1;
+	text-align:center;
+	padding-bottom:15px;
+}
+#colophon .site-title{
+	display:table;
+	margin:0 auto;
+}
+#advertising-landing-page .section-heading{
+	background-color:unset;
+}
+#advertising-landing-page footer{
+	display:table;
+	margin:0 auto;
+}
+#advertising-landing-page footer.site-footer .site-branding{
+	margin-left:unset;
+}
+#advertising-landing-page footer .footer-item-inner{
+	margin-bottom:0;
+}
