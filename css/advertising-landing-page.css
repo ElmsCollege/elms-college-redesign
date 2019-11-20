@@ -3,6 +3,9 @@
 	display:table;
 	margin:0 auto;
 }
+.site-main.standalone{
+	padding-top:unset;
+}
 .advgb-column{
 	margin:20px;
 	min-width:275px;
@@ -12,7 +15,7 @@
 		margin:20px 0;
 	}
 }
-	.advgb-column:last-of-type .advgb-column-inner{
+.advgb-column:last-of-type .advgb-column-inner{
 	background-color:#f1f1f1;
 	padding:0 15px 15px;
 }
