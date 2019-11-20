@@ -20,8 +20,20 @@ get_header("advertising");
 ?>
 
 <style>
-	.advgb-columns-wrapper{max-width: 1200px;margin: 0 auto;width:70%;padding-top:32px;}
-	.advgb-column-inner:last-of-type{background-color:#f1f1f1;}
+	.wp-block-image image{
+		display:table;
+		margin:0 auto;
+	}
+	.advgb-columns-wrapper{
+		max-width:1200px !important;
+		margin:0 auto;
+		width:70% !important;
+		padding-top:32px;
+	}
+	.advgb-columns:last-of-type .advgb-column-inner{
+		background-color:#f1f1f1;
+		text-align:center;
+	}
 </style>
 
 <!--

@@ -545,7 +545,7 @@ function cptui_register_my_cpts_lp() {
       array( 'core/image', array() ),
       array( 'advgb/columns', array(), array(
         array( 'advgb/column', array(), array(
-          array( 'core/paragraph', array() ),
+          array( 'core/paragraph', array('className' => 'noMarginTop') ),
         ) ),
         array( 'advgb/column', array(), array(
           array( 'core/heading', array('level' => '2','className' => 'noMarginTop') ),
