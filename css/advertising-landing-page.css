@@ -15,8 +15,10 @@
 		margin:20px 0;
 	}
 }
-.advgb-column:last-of-type .advgb-column-inner{
+.advgb-column:last-of-type{
 	background-color:#f1f1f1;
+}
+.advgb-column:last-of-type .advgb-column-inner{
 	padding:0 15px 15px;
 }
 #colophon .site-title{
