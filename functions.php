@@ -543,7 +543,7 @@ function cptui_register_my_cpts_lp() {
     "supports" => [ "title", "editor" ],
     'template' => array(
       array( 'core/image', array() ),
-      array( 'advgb/columns', array(), array(
+      array( 'advgb/columns', array('className' => 'site-main standalone'), array(
         array( 'advgb/column', array(), array() ),
         array( 'advgb/column', array(), array(
           array( 'core/heading', array('level' => 3,'className' => 'noMarginTop','placeholder' => 'Classes start...' ) ),

@@ -3,16 +3,16 @@
 	display:table;
 	margin:0 auto;
 }
-.advgb-columns-wrapper{
-	max-width:1200px !important;
-	margin:0 auto 25px;
-	width:70% !important;
-	padding-top:32px;
-}
 .advgb-column{
 	margin:20px;
+	min-width:275px;
 }
-.advgb-column:last-of-type .advgb-column-inner{
+@media all and (max-width:654px){
+	.advgb-column{
+		margin:20px 0;
+	}
+}
+	.advgb-column:last-of-type .advgb-column-inner{
 	background-color:#f1f1f1;
 	padding:0 15px 15px;
 }
@@ -32,8 +32,4 @@
 }
 #advertising-landing-page footer .footer-item-inner{
 	margin-bottom:0;
-}
-h3{
-	color:#115438;
-	font-size:26px;
 }
