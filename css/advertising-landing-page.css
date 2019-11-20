@@ -11,8 +11,7 @@
 }
 .advgb-column:last-of-type .advgb-column-inner{
 	background-color:#f1f1f1;
-	text-align:center;
-	padding-bottom:15px;
+	padding:0 15px 15px;
 }
 #colophon .site-title{
 	display:table;
@@ -30,4 +29,8 @@
 }
 #advertising-landing-page footer .footer-item-inner{
 	margin-bottom:0;
+}
+h3{
+	color:#115438;
+	font-size:26px;
 }
