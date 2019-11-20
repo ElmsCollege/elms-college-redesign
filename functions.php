@@ -543,12 +543,12 @@ function cptui_register_my_cpts_lp() {
     "supports" => [ "title", "editor" ],
     'template' => array(
       array( 'core/image', array() ),
-      array( 'advgb/columns', array(), array(
+      array( 'advgb/columns', array('gutter' => '20'), array(
         array( 'advgb/column', array(), array(
           array( 'core/paragraph', array('className' => 'noMarginTop') ),
         ) ),
         array( 'advgb/column', array(), array(
-          array( 'core/heading', array('level' => '2','className' => 'noMarginTop') ),
+          array( 'core/heading', array('level' => '3','className' => 'noMarginTop') ),
           array( 'core/paragraph', array() ),
           array( 'core/block', array('ref' => 39731) ),
         ) ),

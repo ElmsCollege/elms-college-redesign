@@ -20,7 +20,7 @@ get_header("advertising");
 ?>
 
 <style>
-	.wp-block-image image{
+	.wp-block-image img{
 		display:table;
 		margin:0 auto;
 	}
@@ -30,19 +30,35 @@ get_header("advertising");
 		width:70% !important;
 		padding-top:32px;
 	}
-	.advgb-columns:last-of-type .advgb-column-inner{
+	.advgb-column{
+		margin:0 20px;
+	}
+	.advgb-column:last-of-type .advgb-column-inner{
 		background-color:#f1f1f1;
 		text-align:center;
 	}
+	#colophon .site-title{
+		display:table;
+		margin:0 auto;
+	}
+	#advertising-landing-page .section-heading{
+		background-color:unset;
+	}
+	#advertising-landing-page footer{
+		display:table;
+		margin:0 auto;
+	}
+	#advertising-landing-page footer.site-footer .site-branding{
+		margin-left:unset;
+	}
+	#advertising-landing-page footer .footer-item-inner{
+		margin-bottom:0;
+	}
+
 </style>
 
-<!--
-<div id="primary" class="pure-g">
-	<main id="main" class="site-main pure-u-1 standalone" role="main">
--->
-				<?php the_content(); ?>
-	<!-- </main> -->    
-<!-- </div> -->
+	<?php the_content(); ?>
+
 <hr />
 <?php
 get_footer("advertising");
