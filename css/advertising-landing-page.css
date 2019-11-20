@@ -9,6 +9,9 @@
 	width:70% !important;
 	padding-top:32px;
 }
+.advgb-column{
+	margin:20px;
+}
 .advgb-column:last-of-type .advgb-column-inner{
 	background-color:#f1f1f1;
 	padding:0 15px 15px;

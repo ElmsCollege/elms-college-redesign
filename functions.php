@@ -543,12 +543,12 @@ function cptui_register_my_cpts_lp() {
     "supports" => [ "title", "editor" ],
     'template' => array(
       array( 'core/image', array() ),
-      array( 'advgb/columns', array('gutter' => '20'), array(
+      array( 'advgb/columns', array(), array(
         array( 'advgb/column', array(), array(
           array( 'core/paragraph', array() ),
 		) ),
         array( 'advgb/column', array(), array(
-          array( 'core/heading', array('level' => '3','className' => 'noMarginTop','placeholder' => 'Classes start...' ) ),
+          array( 'core/heading', array('level' => 3,'className' => 'noMarginTop','placeholder' => 'Classes start...' ) ),
           array( 'core/paragraph', array('content' => 'Applying to Elms College is easier than you think, and there’s no fee to apply.') ),
           array( 'core/block', array('ref' => 39731) ),
         ) ),
