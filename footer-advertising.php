@@ -20,7 +20,7 @@ $address = get_field("address", "option");
 	<div class="site-identity pure-u-1 pure-u-lg-7-24 centerText">
   		<div class="site-branding footer-item-inner noMarginLeft">
   				<p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					291 Springfield Street, Chicopee, MA 01013-2839 | <a href="tel:4135942761">413-594-2761</a>
+					<p>291 Springfield Street<br />Chicopee, MA 01013-2839<br /><a href="tel:4135942761">413-594-2761</a></p>
   		</div><!-- .site-branding -->
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
