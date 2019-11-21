@@ -3389,7 +3389,7 @@ a.buttonLink.grouped{
 .dean-message a:hover{
 	color:#fff !important;
 }
-.displayTable,.g-recaptcha,#advertising-landing-page footer{
+.displayTable,.g-recaptcha{
 	display:table;
 	margin:0 auto;
 }
@@ -3580,15 +3580,6 @@ th .smallText{
 }
 .hidden,[hidden]{display:none !important}
 /* END generic, universal, reusable styles */
-#advertising-landing-page .section-heading{
-	background-color:unset;
-}
-#advertising-landing-page footer.site-footer .site-branding{
-	margin-left:unset;
-}
-#advertising-landing-page footer .footer-item-inner{
-	margin-bottom:0;
-}
 .page-id-4728 .section-heading h1{
 	position:absolute;
 	bottom:15px;
