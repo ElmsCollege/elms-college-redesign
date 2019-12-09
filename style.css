@@ -319,7 +319,8 @@ li.current-menu-ancestor + li::after{
 	content:none
 }
 .menu-main-nav-container>ul>li:hover>a,.menu-main-nav-container>ul>li.open>a,.menu-main-nav-container>ul>li:focus>a{
-	color:#fff
+	color:#fff;
+	border-bottom:1px solid #115438;
 }
 .menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-main-nav-container>ul>li.open.search-item .search-icon:after,.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-special-menu-container>ul>li.open.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
 	background-image:url("images/icon-close.png");
@@ -369,7 +370,7 @@ li.current-menu-ancestor + li::after{
 		display:block
 	}
 }
-.menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li.open a,.menu-special-menu-container>ul>li:focus a{
+.menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li:focus a{
 	color:#115438
 }
 .menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
