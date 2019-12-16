@@ -106,7 +106,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gs_elms_scripts() {
-	wp_enqueue_style( 'micromodal', get_template_directory_uri() . '/css/micromodal.css', array(), filemtime(get_template_directory() . '/css/micromodal.css'));
+	wp_enqueue_style( 'micromodal', get_stylesheet_directory() . '/css/micromodal.css', array(), filemtime(get_stylesheet_directory() . '/css/micromodal.css'));
 	
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_uri()) );
 
