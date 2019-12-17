@@ -18,7 +18,6 @@ setup_postdata($post);
  */
 $sidebar_calls_to_action = get_field("sidebar_calls_to_action", $fake_id);
 $sidebar_image = get_field("sidebar_image", $fake_id);
-$sidebar_image_new = get_field("sidebar_image_new", $fake_id);
 $sidebar_content = get_field("sidebar_content", $fake_id);
 $sidebar_menu_items = get_field("sidebar_menu_items", $fake_id);
 
@@ -37,7 +36,7 @@ else {
   $generated_menu_items[]= $post->ID;
   $kids = new WP_Query(
     array(
-      "post_parent" => $post->ID, 
+      "post_parent" => $post->ID,
       'post_type' => "page",
       'order'          => 'ASC',
       'orderby'        => 'menu_order'
@@ -49,7 +48,7 @@ else {
   }
 }
 
-//the_widget( "advanced_sidebar_menu_page", $sidebar_args, array("before_widget" =>"", "after_widget" => "", "before_title" =>"", "after_title" => "")); 
+//the_widget( "advanced_sidebar_menu_page", $sidebar_args, array("before_widget" =>"", "after_widget" => "", "before_title" =>"", "after_title" => ""));
 ?>
 <aside class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3" role="complementary">
 
@@ -64,8 +63,8 @@ else {
 
 <?php if ( !empty($generated_menu_items) ) : ?>
 <ul class="parent-sidebar-menu">
-  <?php foreach ($generated_menu_items as $item) : 
-    
+  <?php foreach ($generated_menu_items as $item) :
+
     $text = get_the_title($item);
     if (!empty($sidebar_menu_items)) {
       foreach ($sidebar_menu_items as $sideitem) {
@@ -84,7 +83,7 @@ else {
 
 <ul class="field-sidebar-menu-items">
   <?php if (!empty($sidebar_menu_items)) :
-    foreach ($sidebar_menu_items as $index=>$item) : 
+    foreach ($sidebar_menu_items as $index=>$item) :
     if ($item["link_type"] == "internal" && isset($item["internal_link"]->ID)) {
       $link = get_the_permalink($item["internal_link"]->ID);
       $text = $item["link_text"];
@@ -102,11 +101,6 @@ else {
     </li>
   <?php  endforeach; endif; ?>
 </ul>
-<?php if ($sidebar_image_new && strpos($sidebar_image_new, '://') !== false) : ?>
-  <div class="focal-image-container">
-    <?php print $sidebar_image_new; ?>
-  </div>
-<?php endif; ?>
 
 <?php if ($sidebar_content) : ?>
   <div class="field-sidebar-content fromField">
@@ -121,13 +115,13 @@ else {
     <?php foreach ($events as $index=>$event) : ?>
       <li>
         <div class="times">
-          <span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "M d, g:i A"))?></span> - 
+          <span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "M d, g:i A"))?></span> -
           <span class="end-time"><?php print str_ireplace(tribe_get_start_date($event, false, "M d,"), "", str_ireplace(":00", "", tribe_get_end_date($event, false, "M d, g:i A"))) ?></span>
         </div>
         <h4 class="field-title"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h4>
         <a class="permalink" href="<?php print get_the_permalink($event) ?>">Read More</a>
       </li>
-    
+
     <?php endforeach; ?>
   </ul>
   <?php if (sizeof($events) > 1) : ?>
@@ -138,7 +132,7 @@ else {
 <?php endif; ?>
 <ul class="field-sidebar_calls_to_action">
   <?php if (!empty($sidebar_calls_to_action)) :
-    foreach ($sidebar_calls_to_action as $index=>$cta) : 
+    foreach ($sidebar_calls_to_action as $index=>$cta) :
     //var_dump($cta);
     if ($cta["link_type"] == "internal" && isset($cta["internal_link"])) {
       $link = get_the_permalink($cta["internal_link"]);

@@ -441,7 +441,7 @@ a:hover,a:active{
 .menu-special-menu-container>ul>li.search-item>ul.sub-menu form label{
 	min-width:90%;
 	overflow:visible;
-	visibility:visible;	
+	visibility:visible;
 	opacity:1;
 	flex-grow:1
 }
@@ -1035,10 +1035,6 @@ div:not(.menu-main-nav-container)>ul li a br{
 	.site-content{
 		padding-top:56px
 	}
-}
-.focal-image-container{
-	max-height:300px;
-	margin-bottom:32px
 }
 .social-media{
 	letter-spacing:normal;
@@ -1851,7 +1847,7 @@ button.fs-dropdown-item{
 button.fs-dropdown-item:hover{
 	color:#046b99 !important;
 	background-color:#fff !important;
-	
+
 }
 .opening-menu.fs-dropdown .fs-dropdown-selected:after{
 	height:auto;
@@ -3508,7 +3504,7 @@ h4#formTrigger.colomat-close{
 	background-color:#046B99!important;
 	color:#fff!important;
 	text-decoration: none!important;
-	border:2px solid #046B99!important; 
+	border:2px solid #046B99!important;
 	border-radius: 5px!important;
 	text-align:center!important;
 	font-weight:700!important;
@@ -3761,7 +3757,7 @@ a.buttonLink.grouped{
 }
 @media only screen and (max-width: 1040px) {
 	.listText{
-		width:100%;	
+		width:100%;
 	}
 }
 .listText p{
@@ -3773,7 +3769,7 @@ a.buttonLink.grouped{
 }
 @media only screen and (max-width: 1040px) {
 	.template.embedDirectory-image .listText{
-		width:100%;	
+		width:100%;
 	}
 }
 .template.embedDirectory-image li:first-child{
@@ -3797,7 +3793,7 @@ a.buttonLink.grouped{
 	display:block;
 }
 .page-id-34843 .field-sidebar_calls_to_action,.paged.page-id-34843 .field-sidebar_calls_to_action,.single-blog .field-sidebar_calls_to_action{
-	display:none;	
+	display:none;
 }
 #presidentsblog h3{
 	font-size:1.2em;
@@ -3807,7 +3803,7 @@ a.buttonLink.grouped{
 }
 .prev.page-numbers,.next.page-numbers{
 	display:block;
-}	
+}
 /* END styles for the President's Blog */
 /* BEGIN generic, universal, reusable styles */
 .small{font-size:.8em;}
@@ -3864,7 +3860,7 @@ th .smallText{
 	-moz-filter: grayscale(0);
 	-o-filter: grayscale(0);
 	-ms-filter: grayscale(0);
-	filter: grayscale(0);	
+	filter: grayscale(0);
 }
 .hidden,[hidden]{display:none !important}
 /* END generic, universal, reusable styles */
@@ -3889,7 +3885,7 @@ th .smallText{
 }
 .ui-widget-header{
 	background-color:unset;
-	border:none;	
+	border:none;
 }
 .ui-dialog-titlebar-close{
 	float:right;
@@ -3919,7 +3915,7 @@ th .smallText{
 }
 #courses .collapseomatic{
 	padding-bottom:0;
-} 
+}
 #courses h4{
 	border:unset;
 	color:#004731;
