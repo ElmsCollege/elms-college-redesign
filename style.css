@@ -3626,13 +3626,13 @@ th .smallText{
 .program-front{
 	background-color:#c3a250;
 }
-a.program-back {
+#programIconList a.program-back {
 	background-color:#115438;
 	color:#fff;
 	transform: rotateX(180deg);
 	border:3px solid #dadada;
 }
-a.program-back:visited,a.program-back:active{
+#programIconList a.program-back:visited,#programIconList a.program-back:active{
 	color:#fff;
 }
 .program-back h3{
@@ -3641,11 +3641,11 @@ a.program-back:visited,a.program-back:active{
 .program:nth-child(odd) .program-front{
 	background-color:#115438;
 }
-.program:nth-child(odd) .program-back{
+#programIconList .program:nth-child(odd) .program-back{
 	background-color:#c3a250;
 	color:#000;
 }
-a.program-back:nth-child(odd):visited,a.program-back:nth-child(odd):active{
+#programIconList a.program-back:nth-child(odd):visited,#programIconList a.program-back:nth-child(odd):active{
 	color:#000;
 }
 .program:nth-child(odd) .program-back h3{
