@@ -3632,6 +3632,9 @@ th .smallText{
 	transform: rotateX(180deg);
 	border:3px solid #dadada;
 }
+.program-back:visited,.program-back:active{
+	color:#fff;
+}
 .program-back h3{
 	color:#fff;
 }
@@ -3642,19 +3645,11 @@ th .smallText{
 	background-color:#c3a250;
 	color:#000;
 }
+.program-back:nth-child(odd):visited,.program-back:nth-child(odd):active{
+	color:#000;
+}
 .program:nth-child(odd) .program-back h3{
 	color:#000
-}
-#minors .minor{
-    flex: 1 1 auto;
-    position: relative;
-    text-align: center;
-    line-height: 40px;
-	color:#115438;
-	font-weight:bold;
-}
-.minor + .minor {
-    border-left: solid 1px #cecece
 }
 /* END the flip card styles for the /academics pages */
 .page-id-4728 .section-heading h1{
