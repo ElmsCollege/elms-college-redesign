@@ -7,31 +7,6 @@
       return $p.index(this);
   };
   
-  var createCookie = function (name,value,days) {
-      if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + (days*24*60*60*1000));
-          var expires = "; expires=" + date.toUTCString();
-      }
-      else var expires = "";
-      document.cookie = name + "=" + value + expires + "; path=/";
-  };
-
-  var readCookie = function (name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0;i < ca.length;i++) {
-          var c = ca[i];
-          while (c.charAt(0)==' ') c = c.substring(1,c.length);
-          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-      }
-      return null;
-  };
-
-  var eraseCookie = function (name) {
-      createCookie(name,"",-1);
-  };
-  
   $doc.ready(function() {
     
     // mobile menu submenu toggle
@@ -123,19 +98,7 @@
     $(window).resize( function (e) {
       resetMenuIfDesktopWidth();
     });
-    
-    $(".home-page-setter").on("click touchstart", function () {
-      var homepageCookie = readCookie("homepage");
-      console.log(homepageCookie);
-      if (homepageCookie != "current-students") {
-        createCookie('homepage','current-students',9999);
-      }
-      else {
-        eraseCookie('homepage');
-      }
-      window.location.href = "/";
-    });
-	  
+    	  
     // interior landing page and interior generic mobile dropdowns.
 		if( $('ul.opening-menu').length ) {
 			$('<select class="opening-select" aria-label="Navigation options"></select>').insertAfter( $('ul.opening-menu') );

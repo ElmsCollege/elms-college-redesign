@@ -346,12 +346,6 @@ function real_homepage_link () {
   }
 }
 
-function redirect_if_homepage_cookie () {
-  if (isset($_COOKIE["homepage"]) && is_front_page()) {
-    wp_safe_redirect( $_COOKIE["homepage"] );
-  }
-}
-
 function gs_is_active_sidebar () {
   global $post;
   $sidebar_calls_to_action = get_field("sidebar_calls_to_action");
