@@ -3626,13 +3626,13 @@ th .smallText{
 .program-front{
 	background-color:#c3a250;
 }
-.program-back {
+a.program-back {
 	background-color:#115438;
 	color:#fff;
 	transform: rotateX(180deg);
 	border:3px solid #dadada;
 }
-.program-back:visited,.program-back:active{
+a.program-back:visited,a.program-back:active{
 	color:#fff;
 }
 .program-back h3{
@@ -3645,7 +3645,7 @@ th .smallText{
 	background-color:#c3a250;
 	color:#000;
 }
-.program-back:nth-child(odd):visited,.program-back:nth-child(odd):active{
+a.program-back:nth-child(odd):visited,a.program-back:nth-child(odd):active{
 	color:#000;
 }
 .program:nth-child(odd) .program-back h3{
