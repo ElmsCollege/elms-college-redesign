@@ -3598,8 +3598,15 @@ th .smallText{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	border-radius:15px;
 }
-.program:hover .program-inner {
-	transform: rotateX(180deg);
+@media (hover) {
+	.program:hover .program-inner {
+		transform: rotateX(180deg);
+	}
+}
+@media(pointer: coarse){
+	.program:focus .program-inner {
+		transform: rotateX(180deg);
+	}	
 }
 .program-front h2 {
 	color: white;
