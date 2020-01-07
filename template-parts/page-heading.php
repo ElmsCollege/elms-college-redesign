@@ -4,7 +4,7 @@
 
 if( get_field('header_background_image') ){
 	echo '<style>#imageHeading.section-heading{';
-		echo wp_get_attachment_image( $image, 'full' );;
+		echo wp_get_attachment_image( get_field('header_background_image'), 'full' );;
 	echo '}</style>';
 	echo '<div id="imageHeading" class="section-heading">';
 }elseif( get_field('featured_image_cropped') ){
