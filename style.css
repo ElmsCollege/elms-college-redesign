@@ -3499,34 +3499,17 @@ a.buttonLink.grouped{
     padding: 10px 0;
 }
 /* END styles for the embedded directory listing with images and bios*/
-/* BEGIN styles for the President's Blog */
-.page-id-34843 .parent-sidebar-menu,.paged.page-id-34843 .parent-sidebar-menu,.single-blog .parent-sidebar-menu,.page-id-35626 .parent-sidebar-menu{
+.page-id-35626 .parent-sidebar-menu{
 	display:none;
 }
-.page-id-34843 #secondary .parent-sidebar-menu,.paged.page-id-34843 #secondary .parent-sidebar-menu,.single-blog #secondary .parent-sidebar-menu{
-	display:block;
-}
-.page-id-34843 .field-sidebar_calls_to_action,.paged.page-id-34843 .field-sidebar_calls_to_action,.single-blog .field-sidebar_calls_to_action{
-	display:none;
-}
-#presidentsblog h3{
-	font-size:1.2em;
-}
-.page-numbers{
-	display:none;
-}
-.prev.page-numbers,.next.page-numbers{
-	display:block;
-}
-/* END styles for the President's Blog */
 /* BEGIN generic, universal, reusable styles */
 .small{font-size:.8em;}
 .small label{display:block;}
 .small a{font-size:100%;}
 .two-column{
-	-webkit-columns:300px 2;
-	-moz-columns:300px 2;
-	columns:300px 2;
+  -webkit-column-count:2;
+  -moz-column-count:2;
+  column-count:2;
 }
 .smallText,.nf-form-fields-required,.nf-field-description{
 	display:block;
@@ -3580,11 +3563,6 @@ th .smallText{
 .hidden,[hidden]{display:none !important}
 .trace{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.two-column{
-  -webkit-column-count:2;
-  -moz-column-count:2;
-  column-count:2;
 }
 /* END generic, universal, reusable styles */
 .page-id-4728 .section-heading h1{
