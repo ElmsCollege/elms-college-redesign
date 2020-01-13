@@ -557,28 +557,3 @@ if($GLOBALS["blog_id"] == 1){
 	}
 	add_action( 'init', 'cptui_register_my_cpts_lp' );
 }
-
-//BEGIN section for custom blocks
-add_action('acf/init', 'elms_custom_acf_blocks');
-function elms_custom_acf_blocks() {
-	// check function exists
-	if( function_exists('acf_register_block') ) {
-		// register a testimonial block
-		acf_register_block(array(
-			'name'				=> 'student_stories_carousel_block',
-			'title'				=> __('Student Stories Carousel'),
-			'description'		=> __('Allows the student story carousel to be used on pages that use the blocks editor.'),
-			'render_callback'	=> 'student_stories_carousel_render_callback',
-			'category'			=> 'common',
-			'icon'				=> 'slides',
-			'keywords'			=> array( 'carousel', 'slideshow', 'slides', 'student story', 'student stories' ),
-		));
-	}
-}
-function student_stories_carousel_render_callback( $block ) {
-	// include a template part from within the "template-parts/block" folder
-	if( file_exists( get_theme_file_path("/template-parts/block/content-student-stories-carousel.php") ) ) {
-		include( get_theme_file_path("/template-parts/block/content-student-stories-carousel.php") );
-	}
-}
-//END section for custom blocks
