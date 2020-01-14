@@ -41,6 +41,7 @@
 }
 .program-front{
 	background-color:#c3a250;
+	background-size:cover;
 }
 #programIconList a.program-back {
 	background-color:#115438;
