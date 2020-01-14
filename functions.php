@@ -404,8 +404,6 @@ function hide_domain_in_permalink_on_admin () {
   <?php
 }
 
-add_editor_style( 'style-editor.css' );
-
  add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
  function wpdocs_theme_setup() {
      add_image_size( 'hero-story', 896, 1886, false ); // 300 pixels wide (and unlimited  height)
