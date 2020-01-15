@@ -3564,6 +3564,9 @@ th .smallText{
 .trace{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.wp-block-media-text a img{
+	line-height:1em;
+}
 /* END generic, universal, reusable styles */
 .page-id-4728 .section-heading h1{
 	position:absolute;
