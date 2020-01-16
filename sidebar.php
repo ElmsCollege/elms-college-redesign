@@ -84,7 +84,8 @@ else {
 <!-- BEGIN hardcoded sibling page nav bar test -->
 	
 <?php
-	wp_reset_query();
+	//wp_reset_query();
+	wp_reset_postdata();
 $parentId = wp_get_post_parent_id( get_the_ID() );
 
 $children = get_posts( [
