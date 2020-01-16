@@ -84,26 +84,21 @@ else {
 <!-- BEGIN hardcoded sibling page nav bar test -->
 	
 <?php
-	//wp_reset_query();
-	wp_reset_postdata();
-$parentId = wp_get_post_parent_id( get_the_ID() );
-
-$children = get_posts( [
-  'posts_per_page' => -1,
-  'post_parent' => $parentId,
-  'post__not_in' => [ get_the_ID() ] // exclude current page
-] );
-?>
-<ul id="siblings" class="section-nav">
-  <?php foreach( $children as $child ): ?>
-  <li class="section-nav-item"> <a href="<?= get_the_permalink( $child->ID ); ?>">
-    <?= get_the_title( $child->ID ); ?>
-    </a> </li>
-  <?php endforeach; ?>
-</ul>
+$output = wp_list_pages('echo=0&depth=1&title_li=<h2>Top Level Pages </h2>' );
+if (is_page( )) {
+  $page = $post->ID;
+  if ($post->post_parent) {
+    $page = $post->post_parent;
+  }
+  $children=wp_list_pages( 'echo=0&child_of=' . $page . '&title_li=' );
+  if ($children) {
+    $output = wp_list_pages ('echo=0&child_of=' . $page . '&title_li=<h2>Child Pages</h2>');
+  }
+}
+echo $output;
+?>	
 <!-- END hardcoded sibling page nav bar test -->
 	
-
 <ul class="field-sidebar-menu-items">
   <?php if (!empty($sidebar_menu_items)) :
     foreach ($sidebar_menu_items as $index=>$item) :
