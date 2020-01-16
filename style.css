@@ -3499,9 +3499,6 @@ a.buttonLink.grouped{
     padding: 10px 0;
 }
 /* END styles for the embedded directory listing with images and bios*/
-.page-id-35626 .parent-sidebar-menu{
-	display:none;
-}
 /* BEGIN generic, universal, reusable styles */
 .small{font-size:.8em;}
 .small label{display:block;}
@@ -3564,7 +3561,7 @@ th .smallText{
 .trace{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-.wp-block-media-text a img{
+.wp-block-media-text .wp-block-media-text__media{
 	line-height:1em;
 }
 /* END generic, universal, reusable styles */
