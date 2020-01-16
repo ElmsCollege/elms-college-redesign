@@ -82,7 +82,9 @@ else {
 <?php  endif; ?>
 
 <!-- BEGIN hardcoded sibling page nav bar test -->
+	
 <?php
+	wp_reset_query();
 $parentId = wp_get_post_parent_id( get_the_ID() );
 
 $children = get_posts( [
@@ -91,7 +93,7 @@ $children = get_posts( [
   'post__not_in' => [ get_the_ID() ] // exclude current page
 ] );
 ?>
-<ul class="section-nav">
+<ul id="siblings" class="section-nav">
   <?php foreach( $children as $child ): ?>
   <li class="section-nav-item"> <a href="<?= get_the_permalink( $child->ID ); ?>">
     <?= get_the_title( $child->ID ); ?>
