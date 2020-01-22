@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:ital
 }
 .site-main p,.page-sidebar p{
 	margin-top:0;
-	line-height:1.55555556
+	line-height:1.5556
 }
 .site-footer a,.site-footer a:hover,.site-footer a:visited,.tribe-events-sub-nav li a,.tribe-events-sub-nav li a:hover,.tribe-events-sub-nav li a:visited{
 	color:#046B99;
@@ -116,7 +116,7 @@ ul,ol{
 }
 ul{
 	list-style:disc;
-	line-height:1.55555556
+	line-height:1.5556
 }
 ol{
 	list-style:decimal
@@ -266,7 +266,7 @@ li.current-menu-ancestor + li::after{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
-	padding:32px 1em 33px;
+	padding:32px 1em;
 }
 .menu-special-menu-container>ul>li>a{
 	padding:15px 1em;
@@ -3208,7 +3208,7 @@ div.collapseomatic_content,.schema-faq-answer{
 h4#formTrigger{
 	width:49%;
 	padding:5px 0;
-	line-height:1.55555556;
+	line-height:1.5556;
 }
 h4#formTrigger.colomat-close{
 	display:none;
