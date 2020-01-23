@@ -3134,6 +3134,11 @@ button.fs-dropdown-item:hover{
 		display:block;
 	}
 }
+@media screen and (max-width:600px){
+	#homepageAwardIcons{
+		display:none;
+	}
+}
 /* END homepage video styling */
 /* BEGIN styling for the collapse-o-matic accordions */
 h4.collapseomatic,.schema-faq-question {
