@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:ital
 }
 .site-main p,.page-sidebar p{
 	margin-top:0;
-	line-height:1.5556
+	line-height:1.5;
 }
 .site-footer a,.site-footer a:hover,.site-footer a:visited,.tribe-events-sub-nav li a,.tribe-events-sub-nav li a:hover,.tribe-events-sub-nav li a:visited{
 	color:#046B99;
@@ -116,7 +116,7 @@ ul,ol{
 }
 ul{
 	list-style:disc;
-	line-height:1.5556
+	line-height:1.5;
 }
 ol{
 	list-style:decimal
@@ -266,7 +266,7 @@ li.current-menu-ancestor + li::after{
 	display:inline-block;
 	text-decoration:none;
 	color:#696969;
-	padding:32px 1em;
+	padding:32px 1em 33px;
 }
 .menu-special-menu-container>ul>li>a{
 	padding:15px 1em;
@@ -1719,7 +1719,7 @@ button.fs-dropdown-item:hover{
 	border:none;
 }
 .opening-menu .menu-item{
-	display:table-cell;
+	display:inline-block;
 	border-right:1px solid #dcdcdc;
 	transition:.25s ease-in-out all;
 	background-color:#fff;
