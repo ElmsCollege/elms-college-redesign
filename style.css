@@ -989,16 +989,6 @@ li.current-menu-ancestor + li::after{
 	text-transform:uppercase;
 	font-size:16px
 }
-@media (min-width: 64em){
-	.site-footer #utility-menu{
-		-webkit-column-count:2;
-		-moz-column-count:2;
-		column-count:2;
-		min-height:6em;
-		column-fill:auto;
-		-moz-column-fill:balance
-	}
-}
 .site-footer #utility-menu a{
 	color:#666;
 }
@@ -3496,22 +3486,24 @@ a.buttonLink.grouped{
 	padding-top:15px;
 }
 .embedDirectory-image .collapseomatic,.normalText .collapseomatic {
-    padding: 2px 20px 2px 0;
-    border: none;
+    padding:2px 20px 2px 0;
+    border:none;
 }
 .embedDirectory-image .collapseomatic_content,.normalText .collapseomatic_content {
-    border: 0;
-    padding: 10px 0;
+    border:0;
+    padding:10px 0;
 }
 /* END styles for the embedded directory listing with images and bios*/
 /* BEGIN generic, universal, reusable styles */
 .small{font-size:.8em;}
 .small label{display:block;}
 .small a{font-size:100%;}
-.two-column{
-  -webkit-column-count:2;
-  -moz-column-count:2;
-  column-count:2;
+.two-column {
+	-webkit-column-count:2;
+	-moz-column-count:2;
+	column-count:2;
+	column-fill:auto;
+	-moz-column-fill:balance;
 }
 .smallText,.nf-form-fields-required,.nf-field-description{
 	display:block;
@@ -3523,7 +3515,7 @@ th .smallText{
 	font-weight:400;
 }
 .noMargins{
-	margin: 0!important;
+	margin:0!important;
 }
 .noMarginTop,.wp-block-image{
 	margin-top:0 !important;

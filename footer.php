@@ -65,7 +65,7 @@
 		<div class="site-resources pure-u-1 pure-u-lg-8-24">
       <div class="footer-item-inner">
         <h3>Resources</h3>
-        <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'ulreset' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'ulreset two-column' ) ); ?>
       </div>
 		</div><!-- .site-info -->
 		
