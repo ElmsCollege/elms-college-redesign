@@ -1560,7 +1560,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	box-shadow:none;
 	outline:none;
 }
-iframe{
+iframe,#target-formTrigger{
 	border:unset;
 }
 .requestInfo-close-trigger.greenButton{
@@ -3233,9 +3233,6 @@ h4#formTrigger.colomat-close{
 	background-color:#fff!important;
 	color:#046B99!important;
 	border:2px solid #045b99!important;
-}
-#target-formTrigger{
-	border:unset;
 }
 #secondary h4#formTrigger.colomat-close,#secondary .widget-title{
 	display:none;

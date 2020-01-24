@@ -68,6 +68,8 @@ function gs_elms_setup() {
 		'default-image' => '',
 	) ) );
   */
+	
+	add_theme_support('responsive-embeds');
 }
 endif;
 add_action( 'after_setup_theme', 'gs_elms_setup' );
