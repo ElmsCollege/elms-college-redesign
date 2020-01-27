@@ -1553,6 +1553,14 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .parent-sidebar-menu .page_item.current_page_item>a{
 	color:#046B99
 }
+.parent-sidebar-menu .children .page_item a{
+	border-bottom:unset;
+	font-size:.7em;
+	padding-left:15px;
+}
+.parent-sidebar-menu .children li{
+	border-bottom:1px solid #dcdcdc;	
+}
 .opening-menu{
 	letter-spacing:0;
 	font-weight:700;
