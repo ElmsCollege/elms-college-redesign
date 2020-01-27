@@ -1550,7 +1550,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	width:100%;
 	border-bottom:1px solid #dcdcdc;
 }
-.parent-sidebar-menu .page_item.current_page_item a{
+.parent-sidebar-menu .page_item.current_page_item>a{
 	color:#046B99
 }
 .opening-menu{
@@ -1666,6 +1666,7 @@ table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(o
 .opening-menu.fs-dropdown .fs-dropdown-selected{
 	color:#fff;
 	box-shadow:unset;
+	text-transform:uppercase;
 }
 button.fs-dropdown-item{
 	color:#fff;
