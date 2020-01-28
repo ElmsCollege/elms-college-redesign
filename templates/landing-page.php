@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post();
 	get_template_part("template-parts/page-heading");
 ?>
       <?php if (!empty($opening_menu)) : ?>
-        <ul class="opening-menu">
+        <ul class="opening-menu ulreset spaceBetween">
           <?php
             foreach ($opening_menu as $index=>$menu_item) : 
             if ($menu_item["link_type"] == "internal" && !empty($menu_item["internal_link"])) {
@@ -43,9 +43,7 @@ while ( have_posts() ) : the_post();
               $text = $menu_item["link_text"];
             }
             ?>
-            <li class="menu-item">
-              <a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a>
-            </li>
+            <li class="menu-item"><a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a></li>
           <?php  endforeach; ?>
         </ul>
       <?php endif; ?>

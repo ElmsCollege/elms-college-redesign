@@ -26,14 +26,12 @@ get_template_part("template-parts/header-selector");
 	get_template_part("template-parts/page-heading");
 	?>
 	<?php if (!empty($top_menu)) : ?>
-		        <ul class="opening-menu">
-	            <?php foreach ($top_menu as $index=>$program) : 
+        <ul class="opening-menu ulreset spaceBetween">
+	            <?php foreach ($top_menu as $index=>$program) :
 	                $title = $program["title"];
 	                $link = $program["link"]?>
-	                <li class="menu-item">
-			          	<a class="permalink" href="<?php print $link ?>"><?php print $title ?></a>
-	                </li>
-	                <?php endforeach; ?>
+		            <li class="menu-item"><a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a></li>
+	            <?php endforeach; ?>
 		        </ul>
 	<?php endif; ?>
 

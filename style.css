@@ -1561,13 +1561,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
 }
-.opening-menu{
-	letter-spacing:0;
-	font-weight:700;
-	text-transform:uppercase;
-	box-shadow:none;
-	outline:none;
-}
 iframe,#target-formTrigger{
 	border:unset;
 }
@@ -1701,8 +1694,6 @@ button.fs-dropdown-item:hover{
 	color:#fff;
 }
 .opening-menu{
-	padding:0;
-	list-style-type:none;
 	background:#fff;
 	border-bottom:1px solid #dcdcdc;
 	display:none;
@@ -1710,7 +1701,13 @@ button.fs-dropdown-item:hover{
 	margin:0 auto;
 	text-align:center;
 	width: 100%;
+	letter-spacing:0;
+	font-weight:700;
+	text-transform:uppercase;
+	box-shadow:none;
+	outline:none;
 }
+
 .opening-menu.fs-dropdown {
 	display:block;
 	margin:10px 0;
@@ -1718,11 +1715,10 @@ button.fs-dropdown-item:hover{
 	border:none;
 }
 .opening-menu .menu-item{
-	display:inline-block;
+	flex:1 1 auto;
 	border-right:1px solid #dcdcdc;
 	transition:.25s ease-in-out all;
 	background-color:#fff;
-	vertical-align:middle;
 }
 .opening-menu .menu-item a{
 	display:block;
@@ -1744,7 +1740,7 @@ button.fs-dropdown-item:hover{
 }
 @media (min-width: 72em){
 	.opening-menu{
-		display:table
+		display:flex;
 	}
 	.opening-menu.fs-dropdown{
 		display:none
