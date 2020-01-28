@@ -235,9 +235,7 @@ a:hover,a:active{
 	text-align:right
 }
 .menu-main-nav-container>ul,.menu-special-menu-container>ul{
-	list-style:none;
 	margin:0;
-	padding-left:0;
 	vertical-align:middle;
 	text-align:center;
 	font-size:14px;
@@ -246,9 +244,8 @@ a:hover,a:active{
 .menu-main-nav-container>ul>li,.menu-special-menu-container>ul>li{
 	vertical-align:middle;
 	max-width:15.5em;
-	text-align:center;
 	position:relative;
-	display:table-cell;
+	display:inline-block;
 	transition:.365s ease-in-out background-color
 }
 .menu-main-nav-container>ul>li:after,.menu-special-menu-container>ul>li:after{
@@ -2550,25 +2547,15 @@ button.fs-dropdown-item:hover{
 	bottom:0;
 }
 #nursingPage .calls-to-action .cta-image .cta-title-container{
-	position:absolute;
-	top:0;
-	margin:0 32px;
-	left:0;
-	right:0;
+	position:inherit;
 	z-index:50;
-	display:table;
-	bottom:0;
-	table-layout:fixed;
+	margin:0 32px;
 	height:100%;
 	width:calc(100% - 64px);
-}
-#nursingPage .calls-to-action .cta-image .cta-title-container .cta-title-inner{
-	display:table-cell;
-	vertical-align:middle;
+	color:#fff;
 }
 #nursingPage .calls-to-action .cta-image .cta-title-container h3.field-title{
 	font-size:32px;
-	display:inline-block;
 	font-family:"soleil", sans-serif;
 	border-top:1px solid #fff;
 	border-bottom:1px solid #fff;
@@ -3411,6 +3398,10 @@ a.buttonLink.grouped{
 	display:flex;
 	flex-flow:row nowrap;
 	align-items:flex-start;
+}
+.flexColNowrap{
+	display:flex;
+	flex-flow:column nowrap;
 }
 .spaceBetween{
 	justify-content:space-between;
