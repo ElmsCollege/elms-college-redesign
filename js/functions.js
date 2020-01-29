@@ -136,7 +136,7 @@
 			$('ul.parent-sidebar-menu li').each(function(index) {
 				var value = $($(this).find('a').get(0)).text();
 				console.log($(this));
-				if ($(this).parent('ul').hasClass('.children')) {
+				if ($(this).closest('ul').hasClass('children')) {
 					$('<option value="' + ( index + 1 ) + ' style="padding-left:50px">' + value + '</option>').appendTo( $('select.opening-select') );
 				}else{
 					$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
