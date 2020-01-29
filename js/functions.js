@@ -133,8 +133,8 @@
       
 			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
 
-			$('ul.opening-menu li').each(function(index) {
-				var value = $(this).find('a').text();
+			$('ul.parent-sidebar-menu li').each(function(index) {
+				var value = $($(this).find('a').get(0)).text();
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});
