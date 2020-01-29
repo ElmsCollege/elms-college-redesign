@@ -135,8 +135,11 @@
 
 			$('ul.parent-sidebar-menu li').each(function(index) {
 				var value = $($(this).find('a').get(0)).text();
+				if ($(this).parent('.children').length) {
+					var padding = " style='padding-left:50px;' ";
+				}
 
-				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
+				$('<option' + padding + 'value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});
 		}
     
