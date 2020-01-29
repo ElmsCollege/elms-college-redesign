@@ -135,10 +135,7 @@
 
 			$('ul.opening-menu li').each(function(index) {
 				var value = $(this).find('a').text();
-var parent = $(this).parent('ul');
-if($(parent).hasClass('children')){
-	console.log('KIDS');
-}
+
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});
 		}
