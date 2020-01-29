@@ -133,14 +133,14 @@
       
 			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
 
-			$('ul.parent-sidebar-menu li').each(function(index) {
-				var value = $($(this).find('a').get(0)).text();
-				var parentTag = $( this ).parent().get( 0 ).tagName;
-				if($(parentTag).hasClass("children")){
-					$('<option value="' + ( index + 1 ) + '" style="padding-left:50px;">' + value + '</option>').appendTo( $('select.opening-select') );
-				}else{
-					$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
-				}
+			$('ul.opening-menu li').each(function(index) {
+				var value = $(this).find('a').text();
+var parent = $(this).parent('ul');
+console.log( parent );
+if($(parent).hasClass('children')){
+	console.log('KIDS');
+}
+				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});
 		}
     
