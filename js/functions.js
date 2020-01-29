@@ -136,7 +136,6 @@
 			$('ul.opening-menu li').each(function(index) {
 				var value = $(this).find('a').text();
 var parent = $(this).parent('ul');
-console.log( parent );
 if($(parent).hasClass('children')){
 	console.log('KIDS');
 }
