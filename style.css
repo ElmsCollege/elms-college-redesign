@@ -1738,6 +1738,7 @@ button.fs-dropdown-item:hover{
 @media (min-width: 72em){
 	.opening-menu{
 		display:flex;
+		align-items:center;
 	}
 	.opening-menu.fs-dropdown{
 		display:none
@@ -2282,13 +2283,9 @@ button.fs-dropdown-item:hover{
 }
 @media all and (min-width: 48em){
 	#libraryPage .calls-to-action-feature li{
-		vertical-align:middle;
 		display:flex;
 		text-align:center;
 		padding:0 32px;
-	}
-	#libraryPage .calls-to-action-feature li a{
-		vertical-align:middle;
 	}
 }
 @media all and (max-width: 48em){
@@ -2971,9 +2968,9 @@ button.fs-dropdown-item:hover{
 	position:relative;
 	z-index:1;
 	color:#fff;
-	width: 100%;
-	margin: 0;
-	padding: 10px 25px;
+	width:100%;
+	margin:0;
+	padding:10px 25px;
 }
 .section-heading-as-content .text-content:after{
 	content:"";
@@ -2987,7 +2984,6 @@ button.fs-dropdown-item:hover{
 }
 .section-heading-as-content .text-content h2{
 	font-size:28px;
-	margin:0 0 .5em;
 }
 .section-heading-as-content .text-content p{
 	margin-bottom:1em;

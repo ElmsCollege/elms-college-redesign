@@ -50,6 +50,7 @@ switch_to_blog(1);
         'theme_location'	=> 'primary',
         'menu_id'			=> 'primary-menu',
 		'menu_class'		=> 'ulreset',
+		'item_spacing'		=> 'discard',
     ) );
 
 switch_to_blog($current_blog_id); 
