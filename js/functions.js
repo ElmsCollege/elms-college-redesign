@@ -119,8 +119,8 @@
     else {
       finalSidebarMenu = sidebarMenu;
     }
-    console.log("ifnalsidebarmenu");
-    console.log(finalSidebarMenu);
+    //console.log("ifnalsidebarmenu");
+    //console.log(finalSidebarMenu);
 		if( finalSidebarMenu && finalSidebarMenu.length ) {
       
       $(".field-sidebar-menu-items li").each ( function (index, element) {
