@@ -138,11 +138,11 @@
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});*/
-			console.log('TEST3');
+			console.log('TEST4');
 jQuery('ul.parent-sidebar-menu li').each(function(index) {
 //var parent = jQuery(jQuery(this).parent());
-var parent = jQuery(jQuery(this).parent().attr('class'));
-	//console.log( parent );
+var parent = jQuery(jQuery(this).parent()).attr('class');
+	console.log( parent );
 var value = jQuery(jQuery(this).find('a').get(0)).text();
 //if(jQuery(parent).classList.contains("children")){
 	//if(jQuery(parent).hasClass("children")){
