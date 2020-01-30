@@ -148,7 +148,7 @@
 		//if(jQuery(parent).hasClass("children")){
 		//if (parent.classList.contains('children')) {
 		if(parent == "children"){
-	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').attr('style','padding-left:50px;').appendTo( jQuery('select.opening-select') );
+	jQuery('<option value="' + ( index + 1 ) + '"> 1-' + value + '</option>').addClass('padded').appendTo( jQuery('select.opening-select') );
 console.log('if');
 	}else{
 	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
