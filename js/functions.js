@@ -151,7 +151,7 @@
 	jQuery('select.opening-select').append(newOptionFromNav);
 			if(parent == "children"){
 				newOptionFromNav.addClass("50Lpadding");
-			};
+			}
 //		.addClass('padded').appendTo( jQuery('select.opening-select') );
 //console.log('if');
 //	}else{
