@@ -131,13 +131,23 @@
         }
       });
       
-			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
+/*			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
 
 			$('ul.parent-sidebar-menu li').each(function(index) {
 				var value = $($(this).find('a').get(0)).text();
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
-			});
+			});*/
+jQuery('ul.parent-sidebar-menu li').each(function(index) {
+var parent = jQuery(jQuery(this).parent());
+var value = jQuery(jQuery(this).find('a').get(0)).text();
+if(jQuery(parent).hasClass("children")){
+jQuery('<option value="' + ( index + 1 ) + '" style="padding-left:50px">' + value + '</option>').appendTo( jQuery('select.opening-select') );
+}else{
+jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
+}
+});
+
 		}
     
 		if( $('.opening-select').length ) {
