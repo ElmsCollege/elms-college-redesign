@@ -147,16 +147,16 @@
 	//if(jQuery(parent).classList.contains("children")){
 		//if(jQuery(parent).hasClass("children")){
 		//if (parent.classList.contains('children')) {
-		if(parent == "children"){
-	var contentToAppend = jQuery('<option value="' + ( index + 1 ) + '"> 1-' + value + '</option>');
-			jQuery('select.opening-select').append(contentToAppend);
-			contentToAppend.addClass("50Rpadding");
+	var newOptionFromNav = jQuery('<option value="' + ( index + 1 ) + '"> 1-' + value + '</option>');
+	jQuery('select.opening-select').append(newOptionFromNav);
+			if(parent == "children"){
+				newOptionFromNav.addClass("50Lpadding");
+			};
 //		.addClass('padded').appendTo( jQuery('select.opening-select') );
-console.log('if');
-	}else{
-	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
-console.log('else');
-	}
+//console.log('if');
+//	}else{
+//	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
+//console.log('else');
 	});
 
 		}
