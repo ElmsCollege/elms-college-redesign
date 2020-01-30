@@ -141,9 +141,9 @@
 			console.log('TEST');
 jQuery('ul.parent-sidebar-menu li').each(function(index) {
 var parent = jQuery(jQuery(this).parent());
-	console.log( parent );
+	//console.log( parent );
 var value = jQuery(jQuery(this).find('a').get(0)).text();
-if(jQuery(parent).hasClass("children")){
+if(jQuery(parent).classList.contains("children")){
 jQuery('<option value="' + ( index + 1 ) + '" style="padding-left:50px">' + value + '</option>').appendTo( jQuery('select.opening-select') );
 }else{
 jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
