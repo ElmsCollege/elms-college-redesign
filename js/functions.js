@@ -138,16 +138,17 @@
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});*/
-			console.log('TEST2');
+			console.log('TEST3');
 jQuery('ul.parent-sidebar-menu li').each(function(index) {
 //var parent = jQuery(jQuery(this).parent());
-var parent = jQuery(jQuery(this).parent());
+var parent = jQuery(jQuery(this).parent().attr('class'));
 	//console.log( parent );
 var value = jQuery(jQuery(this).find('a').get(0)).text();
 //if(jQuery(parent).classList.contains("children")){
 	//if(jQuery(parent).hasClass("children")){
-	if (parent.classList.contains('children')) {
-		jQuery('<option value="' + ( index + 1 ) + '" style="padding-left:50px">' + value + '</option>').appendTo( jQuery('select.opening-select') );
+	//if (parent.classList.contains('children')) {
+	if(jQuery(parent) == "children"){
+	jQuery('<option value="' + ( index + 1 ) + '" style="padding-left:50px">' + value + '</option>').appendTo( jQuery('select.opening-select') );
 }else{
 jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
 }
