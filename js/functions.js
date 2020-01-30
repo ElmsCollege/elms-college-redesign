@@ -138,7 +138,7 @@
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});*/
-			console.log('TEST6');
+			console.log('TEST7');
 	jQuery('ul.parent-sidebar-menu li').each(function(index) {
 	//var parent = jQuery(jQuery(this).parent());
 	var parent = jQuery(jQuery(this).parent()).attr('class');
@@ -148,14 +148,16 @@
 		//if(jQuery(parent).hasClass("children")){
 		//if (parent.classList.contains('children')) {
 		if(parent == "children"){
-	jQuery('<option value="' + ( index + 1 ) + '"> 1-' + value + '</option>').addClass('padded').appendTo( jQuery('select.opening-select') );
+	var contentToAppend = jQuery('<option value="' + ( index + 1 ) + '"> 1-' + value + '</option>');
+			jQuery('select.opening-select').append(contentToAppend);
+			contentToAppend.addClass("50Rpadding");
+//		.addClass('padded').appendTo( jQuery('select.opening-select') );
 console.log('if');
 	}else{
 	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
 console.log('else');
 	}
 	});
-
 
 		}
     
