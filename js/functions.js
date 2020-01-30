@@ -131,13 +131,14 @@
         }
       });
       
-/*			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
-
+			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
+/*
 			$('ul.parent-sidebar-menu li').each(function(index) {
 				var value = $($(this).find('a').get(0)).text();
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});*/
+			console.log('TEST');
 jQuery('ul.parent-sidebar-menu li').each(function(index) {
 var parent = jQuery(jQuery(this).parent());
 var value = jQuery(jQuery(this).find('a').get(0)).text();
