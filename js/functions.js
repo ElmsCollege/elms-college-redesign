@@ -138,7 +138,7 @@
 
 				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
 			});*/
-			console.log('TEST5');
+			console.log('TEST6');
 	jQuery('ul.parent-sidebar-menu li').each(function(index) {
 	//var parent = jQuery(jQuery(this).parent());
 	var parent = jQuery(jQuery(this).parent()).attr('class');
@@ -148,7 +148,7 @@
 		//if(jQuery(parent).hasClass("children")){
 		//if (parent.classList.contains('children')) {
 		if(parent == "children"){
-		jQuery('<option class="paddedOption" style="padding-left:50px" value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
+	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').attr('style','padding-left:50px;').appendTo( jQuery('select.opening-select') );
 console.log('if');
 	}else{
 	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
