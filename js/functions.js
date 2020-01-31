@@ -130,6 +130,8 @@
           finalSidebarMenu.append( $(this) );
         }
       });
+			
+			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
       
 			jQuery('ul.parent-sidebar-menu li').each(function (index) {
 			  var parent = jQuery(jQuery(this).parent()).attr('class');
@@ -142,9 +144,7 @@
 			});
 			$("select.opening-select > option").each(function () {
 			  var optionValue = jQuery(this).val();
-			  console.log(optionValue);
 			  var optionClass = jQuery(this).attr("class");
-			  console.log(optionClass);
 			  jQuery(".fs-dropdown-options button[data-value='" + optionValue + "']").addClass(optionClass);
 			});
 		}
