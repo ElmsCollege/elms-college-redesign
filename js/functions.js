@@ -131,34 +131,22 @@
         }
       });
       
-			$('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore( $('.site-main') );
-/*
-			$('ul.parent-sidebar-menu li').each(function(index) {
-				var value = $($(this).find('a').get(0)).text();
-
-				$('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( $('select.opening-select') );
-			});*/
-			console.log('TEST7');
-	jQuery('ul.parent-sidebar-menu li').each(function(index) {
-	//var parent = jQuery(jQuery(this).parent());
-	var parent = jQuery(jQuery(this).parent()).attr('class');
-		console.log( parent );
-	var value = jQuery(jQuery(this).find('a').get(0)).text();
-	//if(jQuery(parent).classList.contains("children")){
-		//if(jQuery(parent).hasClass("children")){
-		//if (parent.classList.contains('children')) {
-	var newOptionFromNav = jQuery('<option value="' + ( index + 1 ) + '"> 1-' + value + '</option>');
-	jQuery('select.opening-select').append(newOptionFromNav);
-			if(parent == "children"){
-				newOptionFromNav.addClass("50Lpadding");
-			};
-//		.addClass('padded').appendTo( jQuery('select.opening-select') );
-//console.log('if');
-//	}else{
-//	jQuery('<option value="' + ( index + 1 ) + '">' + value + '</option>').appendTo( jQuery('select.opening-select') );
-//console.log('else');
-	});
-
+			jQuery('ul.parent-sidebar-menu li').each(function (index) {
+			  var parent = jQuery(jQuery(this).parent()).attr('class');
+			  var value = jQuery(jQuery(this).find('a').get(0)).text();
+			  var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
+			  jQuery('select.opening-select').append(newOptionFromNav);
+			  if (parent == "children") {
+			    newOptionFromNav.addClass("child");
+			  }
+			});
+			$("select.opening-select > option").each(function () {
+			  var optionValue = jQuery(this).val();
+			  console.log(optionValue);
+			  var optionClass = jQuery(this).attr("class");
+			  console.log(optionClass);
+			  jQuery(".fs-dropdown-options button[data-value='" + optionValue + "']").addClass(optionClass);
+			});
 		}
     
 		if( $('.opening-select').length ) {

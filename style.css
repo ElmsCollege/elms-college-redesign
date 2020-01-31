@@ -1713,13 +1713,14 @@ button.fs-dropdown-item:hover{
 	border:none;
 }
 .opening-menu .menu-item {
-	flex: 1 1 auto;
-	border-right: 1px solid #dcdcdc;
-	transition: .25s ease-in-out all;
-	background-color: #fff;
-	align-self: stretch;
-	display: flex;
-	align-items: center;
+	flex:1 1 auto;
+	border-right:1px solid #dcdcdc;
+	transition:.25s ease-in-out all;
+	background-color:#fff;
+	align-self:stretch;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 .opening-menu .menu-item a{
 	display:block;
@@ -1738,6 +1739,9 @@ button.fs-dropdown-item:hover{
 	border:none;
 	-webkit-appearance:none;
 	box-shadow:none
+}
+.opening-menu .fs-dropdown-item.child{
+	padding-left:50px;
 }
 @media (min-width: 72em){
 	.opening-menu{
