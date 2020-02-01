@@ -56,8 +56,7 @@ function gs_elms_header_style() {
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
 	?>
-		.site-title,
-		.site-description {
+		.site-title {
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}

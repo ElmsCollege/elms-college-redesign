@@ -62,7 +62,7 @@ else {
 <?php if(!is_tax()) :?>
 
 <?php if ( !empty($generated_menu_items) ) : ?>
-<ul class="parent-sidebar-menu">
+<ul id="mainLeftMenu" class="parent-sidebar-menu">
   <?php foreach ($generated_menu_items as $item) :
 
     $text = get_the_title($item);
@@ -80,7 +80,7 @@ else {
   <?php  endforeach; ?>
 </ul>
 <?php  endif; ?>
-
+	
 <ul class="field-sidebar-menu-items">
   <?php if (!empty($sidebar_menu_items)) :
     foreach ($sidebar_menu_items as $index=>$item) :

@@ -8,7 +8,14 @@
  */
 
 get_header(); ?>
-
+<style>
+.parent-sidebar-menu,.field-sidebar_calls_to_action{
+	display:none;
+}
+.single-blog #secondary .parent-sidebar-menu{
+	display:block;
+}
+</style>
   <div class="section-heading" style=" <?php print_featured_image_style(get_the_ID()) ?>">
       <h1 class="field-title">
 	President's Blog

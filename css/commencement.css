@@ -41,7 +41,7 @@
 	width:100%;
 	border-bottom:1px solid #dcdcdc;
 }
-#secondary .menu .current_page_item a{
+#secondary .menu .current_page_item > a{
 	color:#046B99
 }
 #secondary .menu .sub-menu{

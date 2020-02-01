@@ -38,13 +38,7 @@ if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() ||
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="https://www.elms.edu/" rel="home" alt="Return to homepage">Elms College</a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-title"><a href="/" rel="home" alt="Return to homepage">Elms College</a></p>
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->

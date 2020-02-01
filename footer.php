@@ -21,25 +21,25 @@
 					Connect With Us
 				</h2>
 
-				<ul class="social-media-icons pure-g flexRowWrapStart">
+				<ul class="social-media-icons pure-g flexRowWrapStart ulreset">
 
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
+					<li class="social-media-icon">
+						<a rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
 							<img src="/wp-content/themes/gs_elms/images/icon-facebook.png" alt="Facebook logo"/>
 						</a>
 					</li>
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://twitter.com/elmscollege">
+					<li class="social-media-icon">
+						<a rel="noopener" class="social-media-icon-link" href="https://twitter.com/elmscollege">
 							<img src="/wp-content/themes/gs_elms/images/icon-twitter.png" alt="Twitter logo"/>
 						</a>
 					</li>
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.instagram.com/elmscollege/">
+					<li class="social-media-icon">
+						<a rel="noopener" class="social-media-icon-link" href="https://www.instagram.com/elmscollege/">
 							<img src="/wp-content/themes/gs_elms/images/icon-instagram.png" alt="Instagram logo"/>
 						</a>
 					</li>
-					<li class="social-media-icon pure-u-1-4">
-						<a target="_blank" rel="noopener" class="social-media-icon-link" href="https://www.youtube.com/user/ElmsCollegeVideo">
+					<li class="social-media-icon">
+						<a rel="noopener" class="social-media-icon-link" href="https://www.youtube.com/user/ElmsCollegeVideo">
 							<img src="/wp-content/themes/gs_elms/images/icon-youtube.png" alt="YouTube logo"/>
 						</a>
 					</li>
@@ -65,7 +65,7 @@
 		<div class="site-resources pure-u-1 pure-u-lg-8-24">
       <div class="footer-item-inner">
         <h3>Resources</h3>
-        <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'ulreset' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'ulreset two-column' ) ); ?>
       </div>
 		</div><!-- .site-info -->
 		

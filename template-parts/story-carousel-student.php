@@ -6,7 +6,6 @@ if (isset($fake_id)) {
   setup_postdata($post);
 }
 
-
 $student_stories_pre_title = get_field("student_stories_pre_title");
 $student_stories_title = get_field("student_stories_title");
 $student_stories = get_field("student_stories");

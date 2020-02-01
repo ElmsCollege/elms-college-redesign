@@ -21,19 +21,17 @@ $program_track_title = get_field("program_track_title");
 $program_track_description = get_field("program_track_description");
 $program_repeater = get_field("program_repeater");
 
-get_header("nursing");
+get_template_part("template-parts/header-selector");
 
 	get_template_part("template-parts/page-heading");
 	?>
 	<?php if (!empty($top_menu)) : ?>
-		        <ul class="opening-menu">
-	            <?php foreach ($top_menu as $index=>$program) : 
+        <ul class="opening-menu ulreset spaceBetween">
+	            <?php foreach ($top_menu as $index=>$program) :
 	                $title = $program["title"];
 	                $link = $program["link"]?>
-	                <li class="menu-item">
-			          	<a class="permalink" href="<?php print $link ?>"><?php print $title ?></a>
-	                </li>
-	                <?php endforeach; ?>
+		            <li class="menu-item"><a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a></li>
+	            <?php endforeach; ?>
 		        </ul>
 	<?php endif; ?>
 
@@ -49,11 +47,9 @@ get_header("nursing");
         <h2 class="field-mission_statement">
           <?php print($mission_statement) ?>
         </h2>
-        <div class="mission-statement-container">
-			<div class="mission-statement-body" id="mission-statement-pt-1">
-		          <?php echo $mission_statement_body?>
-		    </div>
-        </div>
+		<div class="field-mission_statement_body">
+	          <?php echo $mission_statement_body?>
+	    </div>
       </div>
 
 			<div class="section-heading" id="program-track-anchor">

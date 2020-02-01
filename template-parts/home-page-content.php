@@ -153,10 +153,12 @@ setup_postdata($post);
               }
               ?>
               <li class="cta pure-u-1 pure-u-md-1-3">
-                <div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
-                  <img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
-                </div>
-                <a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a>
+				  <a href="<?php echo $link ?>">
+                	<div class="cta-image" style="<?php print_acf_image_as_background_style($cta["background_new"], "large")?>">
+                  		<img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>" />
+                	</div>
+                	<span class="permalink"><?php echo $text ?></span>
+				  </a>
               </li>
             <?php endforeach; ?>
           </ul>

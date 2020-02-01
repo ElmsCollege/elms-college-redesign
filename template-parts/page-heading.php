@@ -2,18 +2,19 @@
 //call via:
 //get_template_part("template-parts/page-heading");
 
-if( get_field('featured_image_cropped') ){
+if( get_field('header_background_image') ){
+	echo '<style>#imageHeading.section-heading{background-image:url("';
+	the_field('header_background_image');
+	echo '")}</style>';
+	echo '<div id="imageHeading" class="section-heading">';
+}elseif( get_field('featured_image_cropped') ){
 	echo '<style>#imageHeading.section-heading{';
 		print_featured_image_style($post->ID);
 	echo '}</style>';
 	echo '<div id="imageHeading" class="section-heading">';
 }else{
 	echo '<div id="textHeading" class="section-heading">';
-}
-?>
-<style>
-	.languageSwitcher a,.languageSwitcher a:visited{color:white;}
-</style>
+}?>
 	<h1 class="field-title">
 		<?php 
 			echo esc_html( get_the_title() );

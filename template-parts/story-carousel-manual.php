@@ -14,33 +14,18 @@ if (!empty($stories)):
     
     <ul class="story-feature">
       <?php foreach ($stories as $index=>$story) : 
-        if ($story["link_type"] = "internal") {
+        if ($story["link_type"] == "internal") {
           $story_link = get_the_permalink($story["internal_link"]);
         }
         else {
           $story_link = $story["external_link"];
         }
-        $video_webm = $story["video_webm"];
-        $video_ogv = $story["video_ogv"];
-        $video_mp4 = $story["video_mp4"];
         ?>
         <li class="story-full">
           
           <div class="story-image-container">
             <div class="story-image" style=" <?php print_acf_image_as_background_style($story["background_new"]) ?>">
               <img src="<?php print $story["background_new"]["url"] ?>" alt="<?php print $story["background_new"]["alt"] ?>" />
-              
-              <?php if (!empty($video_webm) || !empty($video_ogv) || !empty($video_mp4)) : ?>
-                <div class="bg-wrapper">
-                  <div class="video-bg">
-                    <video autoplay="false" loop="true" muted="true" preload="true" poster="<?php print $story["background_new"]["url"] ?>">
-                      <source src="<?php print $video_mp4 ?>" type="video/mp4">
-                      <source src="<?php print $video_webm ?>" type="video/webm">
-                      <source src="<?php print $video_ogv ?>" type="video/ogg">
-                    </video>
-                  </div>
-                </div>
-              <?php endif; ?>
             </div>
           </div>
           <div class="text-content">

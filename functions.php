@@ -122,14 +122,12 @@ function gs_elms_scripts() {
 	wp_enqueue_script( 'gs_elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20160413', true );
 	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20160413', true );
 	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20160413', true );
-	wp_enqueue_script( 'gs_elms-fitie', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20160413', true );
 
 	wp_enqueue_script( 'gs_elms-dropdown-core', get_template_directory_uri() . '/js/dropdown/core.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-dropdown-touch', get_template_directory_uri() . '/js/dropdown/touch.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-dropdown-main', get_template_directory_uri() . '/js/dropdown/dropdown.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'gs_elms-what-input', get_template_directory_uri() . '/js/what-input.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'gs_elms-object-fit', get_template_directory_uri() . '/js/object-fit-videos.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-hoverintent', get_template_directory_uri() . '/js/jquery.hoverIntent.js', array(), '20151215', true );
 	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'micromodal', get_template_directory_uri() . '/js/micromodal.min.js', array(), '20190701', true );
@@ -149,7 +147,13 @@ function multisite_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'multisite_scripts', 20 );
-
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+    if ( ! is_user_logged_in() ) {
+        wp_deregister_style( 'dashicons' );
+    }
+}
 /**
  * Implement the Custom Header feature.
  */
@@ -341,12 +345,6 @@ function real_homepage_link () {
   }
   else {
     return home_url( '/' );
-  }
-}
-
-function redirect_if_homepage_cookie () {
-  if (isset($_COOKIE["homepage"]) && is_front_page()) {
-    wp_safe_redirect( $_COOKIE["homepage"] );
   }
 }
 

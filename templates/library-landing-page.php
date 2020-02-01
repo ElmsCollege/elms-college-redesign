@@ -9,7 +9,8 @@
 
 wp_enqueue_script( 'libcal', 'https://api3.libcal.com/api_hours_today.php?iid=1042&lid=0&format=js&systemTime=0&context=object', array(), '20190602', true );
 
-get_header("library"); ?>
+get_template_part("template-parts/header-selector");
+?>
       
 			<?php
 			while ( have_posts() ) : the_post();

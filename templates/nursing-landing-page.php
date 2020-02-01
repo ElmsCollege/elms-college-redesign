@@ -15,7 +15,7 @@ $short_content = get_field("short_content");
 $short_content_background = get_field("short_content_background");
 $action_columns = get_field("action_columns");
 
-get_header("nursing");
+get_template_part("template-parts/header-selector");
 
 	get_template_part("template-parts/page-heading");
 	?>
@@ -49,7 +49,7 @@ get_header("nursing");
                       <img src="<?php print $cta["background_new"]["sizes"]["large"] ?>" alt="<?php print $cta["background_new"]["alt"] ?>">
                     
                       <?php if (!empty($title)) : ?>
-                        <div class="cta-title-container">
+                        <div class="cta-title-container flexColNowrap justifyCenter">
                           <div class="cta-title-inner">
                             <h3 class="field-title"><?php print $title ?></h3>
                           </div>
