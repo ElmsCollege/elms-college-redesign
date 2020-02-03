@@ -30,7 +30,7 @@ get_template_part("template-parts/header-selector");
 	            <?php foreach ($top_menu as $index=>$program) :
 	                $title = $program["title"];
 	                $link = $program["link"]?>
-		            <li class="menu-item"><a class="permalink" href="<?php echo $link ?>"><?php echo $text ?></a></li>
+		            <li class="menu-item"><a class="permalink" href="<?php echo $link ?>"><?php echo $title ?></a></li>
 	            <?php endforeach; ?>
 		        </ul>
 	<?php endif; ?>
