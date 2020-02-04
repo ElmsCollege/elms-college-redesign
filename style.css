@@ -1565,10 +1565,11 @@ iframe{
 .requestInfo-close-trigger.greenButton{
 	cursor:pointer;
 }
-.program-page-main #info-apply-buttons{
+.program-page-main #info-apply-buttons a{
 	display:block;
+	margin:unset;
 	max-width:100%;
-	padding: 5px 0;
+	padding:10px 0;
 	width:100%;
 }
 @media (max-width:768px){
