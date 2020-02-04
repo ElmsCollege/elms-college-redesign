@@ -256,9 +256,6 @@ a:hover,a:active{
 	left:0;
 	top:10px;
 }
-li.current-menu-ancestor + li::after{
-	border:0 !important;
-}
 .menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
 	display:inline-block;
 	text-decoration:none;
@@ -580,12 +577,6 @@ li.current-menu-ancestor + li::after{
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li:hover+li:after,.menu-main-nav-container>ul>li.open+li:after,.menu-main-nav-container>ul>li.current-menu-item+li:after{
 		content:none
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor{
-		background-color:#dcdcdc
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item>a,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor>a{
-		color:#696969
 	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover{
 		background-color:#115438;
@@ -3149,17 +3140,17 @@ div.collapseomatic_content,.schema-faq-answer{
 }
 /* END styling for the collapse-o-matic accordions */
 /* BEGIN .button styles */
-.button, .buttons a{
-	background-color: #046B99;
-	margin: 5px auto;
-	display: block;
+.button,.buttons a{
+	background-color:#046B99;
+	margin:5px auto;
+	display:block;
 	padding:16px;
-	color: #fff !important;
-	text-decoration: none;
-	border-radius: 3px;
+	color:#fff !important;
+	text-decoration:none;
+	border-radius:3px;
 	text-align:center;
 	font-weight:700;
-	border:2px solid;
+	border:2px solid #046B99;
 	min-width:200px;
 	max-width:300px;
 }
