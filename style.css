@@ -1572,7 +1572,7 @@ iframe{
 	width:100%;
 }
 @media (max-width:768px){
-	.page-template-landing-page #info-apply-buttons,.page-template-nursing-secondary-landing-page #info-apply-buttons,.page-template-nursing-intermediary-landing-page #info-apply-buttons{
+	.page-template-landing-page #info-apply-buttons a,.page-template-nursing-secondary-landing-page #info-apply-buttons a,.page-template-nursing-intermediary-landing-page #info-apply-buttons a{
 		max-width: 100%;
     	width: 90%;
 	}
@@ -1581,11 +1581,11 @@ iframe{
 	.parent-sidebar-menu{
 		display:block;
 	}
-	.opening-menu,.program-page-main #info-apply-buttons{
+	.opening-menu,.program-page-main #info-apply-buttons a{
 		display:none;
 	}
 }
-.field-content #info-apply-buttons button{
+.field-content #info-apply-buttons a{
 	display:block !important;
 	max-width:300px;
 }
@@ -3152,7 +3152,6 @@ div.collapseomatic_content,.schema-faq-answer{
 	background-color: #046B99;
 	margin: 5px auto;
 	display: block;
-	width: auto;
 	padding:16px;
 	color: #fff !important;
 	text-decoration: none;
@@ -3228,7 +3227,10 @@ div.collapseomatic_content,.schema-faq-answer{
 #secondary{
 	overflow-x:hidden;
 }
-#secondary .buttonLink,aside #info-apply-buttons button{
+#main #info-apply-buttons a{
+	margin:5px
+}
+#secondary .buttonLink,aside #info-apply-buttons a{
 	display:block;
 	background-color:#c3a250;
 	width:100%;
@@ -3243,7 +3245,7 @@ div.collapseomatic_content,.schema-faq-answer{
 	cursor:pointer;
 	max-width:100%;
 	font-size:18px;
-	margin-bottom:16px;
+	margin-bottom:27px;
 }
 #secondary .buttonLink:hover{
 	background-color:#c3a250 !important;
