@@ -1559,20 +1559,20 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
 }
-iframe,#target-formTrigger{
+iframe{
 	border:unset;
 }
 .requestInfo-close-trigger.greenButton{
 	cursor:pointer;
 }
-.program-page-main .requestInfo-trigger{
+.program-page-main #info-apply-buttons{
 	display:block;
 	max-width:100%;
 	padding: 5px 0;
 	width:100%;
 }
 @media (max-width:768px){
-	.page-template-landing-page .requestInfo-trigger,.page-template-nursing-secondary-landing-page .requestInfo-trigger,.page-template-nursing-intermediary-landing-page .requestInfo-trigger{
+	.page-template-landing-page #info-apply-buttons,.page-template-nursing-secondary-landing-page #info-apply-buttons,.page-template-nursing-intermediary-landing-page #info-apply-buttons{
 		max-width: 100%;
     	width: 90%;
 	}
@@ -1581,19 +1581,19 @@ iframe,#target-formTrigger{
 	.parent-sidebar-menu{
 		display:block;
 	}
-	.opening-menu,.program-page-main .requestInfo-trigger{
+	.opening-menu,.program-page-main #info-apply-buttons{
 		display:none;
 	}
 }
-.field-content button.requestInfo-trigger{
+.field-content #info-apply-buttons button{
 	display:block !important;
 	max-width:300px;
 }
 a.text.requestInfo-trigger{
-	display:inline-block !important;
+	display:inline-block;
 	max-width:unset;
 	width:auto;
-	cursor:pointer !important;
+	cursor:pointer;
 }
 .entry-content ul,.entry-content ol{
 	margin-left:0;
@@ -3182,7 +3182,7 @@ div.collapseomatic_content,.schema-faq-answer{
 	border:2px solid #045b99 !important;
 	background-color:#fff !important;
 }
-.buttons.green a,.greenButton,h4#formTrigger,main .jotform-trigger{
+.buttons.green a,.greenButton{
 	background-color: #115438;
 	margin: 5px auto;
 	display: block;
@@ -3196,15 +3196,7 @@ div.collapseomatic_content,.schema-faq-answer{
 	min-width:200px;
 	max-width:300px;
 }
-h4#formTrigger{
-	width:49%;
-	padding:5px 0;
-	line-height:1.5556;
-}
-h4#formTrigger.colomat-close{
-	display:none;
-}
-.buttons.green a:hover,.greenButton:hover,h4#formTrigger:hover,main .jotform-trigger:hover{
+.buttons.green a:hover,.greenButton:hover{
 	background-color:#fff!important;
 	color:#115438!important;
 	border:2px solid #115438;
@@ -3230,13 +3222,13 @@ h4#formTrigger.colomat-close{
 	color:#046B99!important;
 	border:2px solid #045b99!important;
 }
-#secondary h4#formTrigger.colomat-close,#secondary .widget-title{
+#secondary .widget-title{
 	display:none;
 }
 #secondary{
 	overflow-x:hidden;
 }
-#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger{
+#secondary .buttonLink,aside #info-apply-buttons button{
 	display:block;
 	background-color:#c3a250;
 	width:100%;
@@ -3249,40 +3241,15 @@ h4#formTrigger.colomat-close{
 	padding:16px;
 	color:#fff;
 	cursor:pointer;
-}
-aside .requestInfo-trigger{
-	display:block;
-	margin-top:1.5em;
-	background-color:#c3a250;
-	width:100%;
-	border-radius:unset;
-	border:unset;
-	font-family:"soleil", sans-serif;
-	font-weight:500;
-	text-transform:uppercase;
-	text-align:center;
-	padding:16px;
-	color:#fff;
-	cursor:pointer;
-	margin:5px 0;
-	max-width:100% !important;
+	max-width:100%;
 	font-size:18px;
+	margin-bottom:16px;
 }
-aside .requestInfo-trigger:hover{
+#secondary .buttonLink:hover{
 	background-color:#c3a250 !important;
 	color:#fff !important;
 	border:unset !important;
 	box-shadow:unset !important;
-}
-a.buttonLink.grouped{
-	margin-bottom:16px;
-}
-#secondary #formTrigger:hover,#secondary a.buttonLink:hover,aside .jotform-trigger:hover{
-	background-color:#c3a250 !important;
-	color:#fff !important;
-}
-#secondary #target-formTrigger{
-	padding:unset;
 }
 /* END .button styles */
 #get-started, .greyBox {
@@ -3659,10 +3626,6 @@ th .smallText{
 
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
 .field-sidebar-content .field-sidebar-content{padding:unset;margin-bottom:unset;line-height:inherit;}
-.field-content button.requestInfo-trigger{
-	display:block !important;
-	max-width:300px;
-}
 a.text.requestInfo-trigger{
 	display:inline-block !important;
 	max-width:unset;
