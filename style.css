@@ -143,7 +143,7 @@ figure{
 	margin:1em 0
 }
 table{
-	margin:0 0 1.5em;
+	margin:0 0 .5em;
 	width:100%
 }
 h2{
@@ -1544,11 +1544,11 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 }
 .parent-sidebar-menu .children .page_item a{
 	border-bottom:unset;
-	font-size:.7em;
-	padding-left:15px;
 }
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
+	font-size:.7em;
+	padding-left:15px;
 }
 iframe{
 	border:unset;
@@ -3453,7 +3453,7 @@ div.collapseomatic_content,.schema-faq-answer{
 }
 /* END styles for the embedded directory listing with images and bios*/
 /* BEGIN generic, universal, reusable styles */
-.small{font-size:.8em;}
+.small,figcaption{font-size:.8em;}
 .small label{display:block;}
 .small a{font-size:100%;}
 .two-column {
@@ -3568,6 +3568,9 @@ th .smallText{
 }
 .wp-block-pullquote cite{
 	font-weight:300
+}
+hr.wp-block-separator{
+	background-color:#ccc;
 }
 #courses .collapseomatic{
 	padding-bottom:0;

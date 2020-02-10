@@ -16,8 +16,6 @@ setup_postdata($post);
  *
  * @package Elms_College_Redesign
  */
-$sidebar_calls_to_action = get_field("sidebar_calls_to_action", $fake_id);
-$sidebar_image = get_field("sidebar_image", $fake_id);
 $sidebar_content = get_field("sidebar_content", $fake_id);
 $sidebar_menu_items = get_field("sidebar_menu_items", $fake_id);
 
@@ -130,28 +128,6 @@ else {
   <?php endif; ?>
 </div>
 <?php endif; ?>
-<ul class="field-sidebar_calls_to_action">
-  <?php if (!empty($sidebar_calls_to_action)) :
-    foreach ($sidebar_calls_to_action as $index=>$cta) :
-    //var_dump($cta);
-    if ($cta["link_type"] == "internal" && isset($cta["internal_link"])) {
-      $link = get_the_permalink($cta["internal_link"]);
-      //var_dump($link);
-      $text = $cta["link_text"];
-      if (!$text || $text == "") {
-        $text = get_the_title($cta["internal_link"]);
-      }
-    }
-    elseif (isset($cta["external_link"])) { // external
-      $link = $cta["external_link"];
-      $text = $cta["link_text"];
-    }
-    ?>
-    <li class="menu-item">
-      <a class="permalink" href="<?php print $link ?>"><?php print $text ?></a>
-    </li>
-  <?php  endforeach; endif; ?>
-</ul>
 <?php
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
