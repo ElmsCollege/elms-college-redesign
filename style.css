@@ -575,9 +575,6 @@ a:hover,a:active{
 	display:block
 }
 @media all and (min-width: 64rem){
-	.menu-main-nav-container>ul>li:hover+li:after,.menu-main-nav-container>ul>li.open+li:after,.menu-main-nav-container>ul>li.current-menu-item+li:after{
-		content:none
-	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover{
 		background-color:#115438;
 	}
