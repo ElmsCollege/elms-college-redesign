@@ -143,7 +143,7 @@ figure{
 	margin:1em 0
 }
 table{
-	margin:0 0 1.5em;
+	margin:0 0 .5em;
 	width:100%
 }
 h2{
@@ -255,9 +255,6 @@ a:hover,a:active{
 	position:absolute;
 	left:0;
 	top:10px;
-}
-li.current-menu-ancestor + li::after{
-	border:0 !important;
 }
 .menu-main-nav-container>ul>li>a,.menu-special-menu-container>ul>li>a{
 	display:inline-block;
@@ -580,12 +577,6 @@ li.current-menu-ancestor + li::after{
 @media all and (min-width: 64rem){
 	.menu-main-nav-container>ul>li:hover+li:after,.menu-main-nav-container>ul>li.open+li:after,.menu-main-nav-container>ul>li.current-menu-item+li:after{
 		content:none
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor{
-		background-color:#dcdcdc
-	}
-	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item>a,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor>a{
-		color:#696969
 	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover{
 		background-color:#115438;
@@ -1392,12 +1383,12 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 		padding:32px 0;
 	}
 }
-.parent-sidebar-menu, .field-sidebar_calls_to_action{
+.parent-sidebar-menu{
 	padding:0;
 	margin:0;
 	list-style-type:none;
 }
-.parent-sidebar-menu ul, .field-sidebar_calls_to_action ul{
+.parent-sidebar-menu ul{
 	padding:0;
 	margin:0;
 	list-style-type:none;
@@ -1509,26 +1500,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .field-related-events.toggled ul li:not(:first-child),.field-related-events.toggled a.show-less{
 	display:block;
 }
-.field-sidebar_calls_to_action{
-	margin-top:16px;
-}
-.field-sidebar_calls_to_action .menu-item{
-	margin-bottom:16px;
-}
-.field-sidebar_calls_to_action .menu-item .permalink{
-	display:block;
-	padding:16px;
-	width:100%;
-	text-align:center;
-	text-transform:uppercase;
-	font-size:18px;
-	font-weight:500;
-	color:#fff;
-	background-color:#c3a250
-}
-.field-sidebar_calls_to_action .menu-item .permalink:hover{
-	background-color:#a78c45;
-}
 .parent-sidebar-menu{
 	padding:0;
 	list-style-type:none;
@@ -1553,26 +1524,27 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 }
 .parent-sidebar-menu .children .page_item a{
 	border-bottom:unset;
-	font-size:.7em;
-	padding-left:15px;
 }
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
+	font-size:.7em;
+	padding-left:15px;
 }
-iframe,#target-formTrigger{
+iframe{
 	border:unset;
 }
 .requestInfo-close-trigger.greenButton{
 	cursor:pointer;
 }
-.program-page-main .requestInfo-trigger{
+.program-page-main #info-apply-buttons a{
 	display:block;
+	margin:unset;
 	max-width:100%;
-	padding: 5px 0;
+	padding:10px 0;
 	width:100%;
 }
 @media (max-width:768px){
-	.page-template-landing-page .requestInfo-trigger,.page-template-nursing-secondary-landing-page .requestInfo-trigger,.page-template-nursing-intermediary-landing-page .requestInfo-trigger{
+	.page-template-landing-page #info-apply-buttons a,.page-template-nursing-secondary-landing-page #info-apply-buttons a,.page-template-nursing-intermediary-landing-page #info-apply-buttons a{
 		max-width: 100%;
     	width: 90%;
 	}
@@ -1581,19 +1553,19 @@ iframe,#target-formTrigger{
 	.parent-sidebar-menu{
 		display:block;
 	}
-	.opening-menu,.program-page-main .requestInfo-trigger{
+	.opening-menu,.program-page-main #info-apply-buttons a{
 		display:none;
 	}
 }
-.field-content button.requestInfo-trigger{
+.field-content #info-apply-buttons a{
 	display:block !important;
 	max-width:300px;
 }
 a.text.requestInfo-trigger{
-	display:inline-block !important;
+	display:inline-block;
 	max-width:unset;
 	width:auto;
-	cursor:pointer !important;
+	cursor:pointer;
 }
 .entry-content ul,.entry-content ol{
 	margin-left:0;
@@ -2096,6 +2068,9 @@ button.fs-dropdown-item:hover{
 .calls-to-action .calls-to-action-feature{
 	padding:0;
 	margin:0
+}
+.calls-to-action .calls-to-action-feature a{
+	text-decoration:none;
 }
 .calls-to-action .cta-image {
   background: gray;
@@ -3148,18 +3123,17 @@ div.collapseomatic_content,.schema-faq-answer{
 }
 /* END styling for the collapse-o-matic accordions */
 /* BEGIN .button styles */
-.button, .buttons a{
-	background-color: #046B99;
-	margin: 5px auto;
-	display: block;
-	width: auto;
+.button,.buttons a{
+	background-color:#046B99;
+	margin:5px auto;
+	display:block;
 	padding:16px;
-	color: #fff !important;
-	text-decoration: none;
-	border-radius: 3px;
+	color:#fff !important;
+	text-decoration:none;
+	border-radius:3px;
 	text-align:center;
 	font-weight:700;
-	border:2px solid;
+	border:2px solid #046B99;
 	min-width:200px;
 	max-width:300px;
 }
@@ -3182,7 +3156,7 @@ div.collapseomatic_content,.schema-faq-answer{
 	border:2px solid #045b99 !important;
 	background-color:#fff !important;
 }
-.buttons.green a,.greenButton,h4#formTrigger,main .jotform-trigger{
+.buttons.green a,.greenButton{
 	background-color: #115438;
 	margin: 5px auto;
 	display: block;
@@ -3196,15 +3170,7 @@ div.collapseomatic_content,.schema-faq-answer{
 	min-width:200px;
 	max-width:300px;
 }
-h4#formTrigger{
-	width:49%;
-	padding:5px 0;
-	line-height:1.5556;
-}
-h4#formTrigger.colomat-close{
-	display:none;
-}
-.buttons.green a:hover,.greenButton:hover,h4#formTrigger:hover,main .jotform-trigger:hover{
+.buttons.green a:hover,.greenButton:hover{
 	background-color:#fff!important;
 	color:#115438!important;
 	border:2px solid #115438;
@@ -3230,29 +3196,17 @@ h4#formTrigger.colomat-close{
 	color:#046B99!important;
 	border:2px solid #045b99!important;
 }
-#secondary h4#formTrigger.colomat-close,#secondary .widget-title{
+#secondary .widget-title{
 	display:none;
 }
 #secondary{
 	overflow-x:hidden;
 }
-#secondary #formTrigger,#secondary a.buttonLink,aside .jotform-trigger{
-	display:block;
-	background-color:#c3a250;
-	width:100%;
-	border-radius:unset;
-	border:unset;
-	font-family:"soleil", sans-serif;
-	font-weight:500;
-	text-transform:uppercase;
-	text-align:center;
-	padding:16px;
-	color:#fff;
-	cursor:pointer;
+#main #info-apply-buttons a{
+	margin:5px
 }
-aside .requestInfo-trigger{
+#secondary .buttonLink,aside #info-apply-buttons a{
 	display:block;
-	margin-top:1.5em;
 	background-color:#c3a250;
 	width:100%;
 	border-radius:unset;
@@ -3264,25 +3218,15 @@ aside .requestInfo-trigger{
 	padding:16px;
 	color:#fff;
 	cursor:pointer;
-	margin:5px 0;
-	max-width:100% !important;
+	max-width:100%;
 	font-size:18px;
+	margin-bottom:27px;
 }
-aside .requestInfo-trigger:hover{
+#secondary .buttonLink:hover{
 	background-color:#c3a250 !important;
 	color:#fff !important;
 	border:unset !important;
 	box-shadow:unset !important;
-}
-a.buttonLink.grouped{
-	margin-bottom:16px;
-}
-#secondary #formTrigger:hover,#secondary a.buttonLink:hover,aside .jotform-trigger:hover{
-	background-color:#c3a250 !important;
-	color:#fff !important;
-}
-#secondary #target-formTrigger{
-	padding:unset;
 }
 /* END .button styles */
 #get-started, .greyBox {
@@ -3492,7 +3436,7 @@ a.buttonLink.grouped{
 }
 /* END styles for the embedded directory listing with images and bios*/
 /* BEGIN generic, universal, reusable styles */
-.small{font-size:.8em;}
+.small,figcaption{font-size:.8em;}
 .small label{display:block;}
 .small a{font-size:100%;}
 .two-column {
@@ -3608,6 +3552,9 @@ th .smallText{
 .wp-block-pullquote cite{
 	font-weight:300
 }
+hr.wp-block-separator{
+	background-color:#ccc;
+}
 #courses .collapseomatic{
 	padding-bottom:0;
 }
@@ -3659,10 +3606,6 @@ th .smallText{
 
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
 .field-sidebar-content .field-sidebar-content{padding:unset;margin-bottom:unset;line-height:inherit;}
-.field-content button.requestInfo-trigger{
-	display:block !important;
-	max-width:300px;
-}
 a.text.requestInfo-trigger{
 	display:inline-block !important;
 	max-width:unset;

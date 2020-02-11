@@ -9,7 +9,7 @@
 
 get_header(); ?>
 <style>
-.parent-sidebar-menu,.field-sidebar_calls_to_action{
+.parent-sidebar-menu{
 	display:none;
 }
 .single-blog #secondary .parent-sidebar-menu{

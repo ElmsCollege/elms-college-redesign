@@ -25,14 +25,19 @@
 	}	
 }
 .program-front h2 {
+	position:absolute;
 	color: white;
 }
-.program-front,.program-back{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-  	backface-visibility: hidden;
+.program-front,.featuredImage,.program-back{
+	position:absolute;
+	width:100%;
+	height:100%;
+	border-radius:15px;
+	background-size:cover;
 	padding:5px;
+}
+.program-front,.program-back{
+  	backface-visibility: hidden;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -41,13 +46,15 @@
 }
 .program-front{
 	background-color:#c3a250;
-	background-size:cover;
+}
+.featuredImage {
+	filter:brightness(85%);
 }
 #programIconList a.program-back {
 	background-color:#115438;
 	color:#fff;
 	transform: rotateX(180deg);
-	border:3px solid #dadada;
+	border:1px solid #fff;
 }
 #programIconList a.program-back:visited,#programIconList a.program-back:active{
 	color:#fff;
@@ -61,6 +68,7 @@
 #programIconList .program:nth-child(odd) .program-back{
 	background-color:#c3a250;
 	color:#000;
+	border:1px solid #000;
 }
 #programIconList a.program-back:nth-child(odd):visited,#programIconList a.program-back:nth-child(odd):active{
 	color:#000;
