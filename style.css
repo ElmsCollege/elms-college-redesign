@@ -2069,6 +2069,9 @@ button.fs-dropdown-item:hover{
 	padding:0;
 	margin:0
 }
+.calls-to-action .calls-to-action-feature a{
+	text-decoration:none;
+}
 .calls-to-action .cta-image {
   background: gray;
   position: relative;
