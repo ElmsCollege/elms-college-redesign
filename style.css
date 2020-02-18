@@ -1098,7 +1098,7 @@ a:hover,a:active{
 	left:0;
 	right:0;
 }
-.stories .story-feature .story-full:first-child{
+.block,.stories .story-feature .story-full:first-child{
 	display:block
 }
 @media (min-width: 64em){
@@ -1819,14 +1819,12 @@ button.fs-dropdown-item:hover{
 	.page-template-landing-page .stories .story-full,.page-template-nursing-landing-page-2 .stories .story-full{
 		display:none
 	}
-	.page-template-landing-page .stories .story-full:first-child,.page-template-nursing-landing-page-2 .stories .story-full:first-child{
+	.page-template-landing-page .stories .story-full:first-child,.page-template-nursing-landing-page-2 .stories .story-full:first-child,.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
+
 		display:block
 	}
 	.page-template-landing-page .stories .show-more,.page-template-nursing-landing-page-2 .stories .show-more{
 		display:none
-	}
-	.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
-		display:block
 	}
 	.page-template-landing-page .stories .field-excerpt a,.page-template-landing-page .stories .field-permalink a,.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
 		color:#c3a250;
@@ -2687,7 +2685,8 @@ button.fs-dropdown-item:hover{
 }
 @media (max-width: 770px){
 	.page-template-nursing-secondary-landing-page .rn-item{
-		display:block;width:100%
+		display:block;
+		width:100%
 	}
 }
 .page-template-nursing-secondary-landing-page .program-track-title{

@@ -70,16 +70,16 @@ get_header();
 	});
 </script>
   <div id="pageContainer">
-<div style="position:fixed;right:15px;color:white !important;font-size:2em;text-align: center;">
-		<div style="display:block;">
+	<div class="mapNav">
+		<div class="block">
 			<i id="zoomIn" class="fas fa-plus" title="Zoom in"></i>
       		<i id="zoomOut" class="fas fa-minus" title="Zoom out"></i>
 		</div>
-		<div style="display: flex;flex-flow: row wrap;justify-content: space-around;">
-			<i id="panUp" class="fas fa-arrow-up" title="Pan up" style="flex-basis: 100%;"></i>
+		<div class="flexRowWrapStart spaceAround">
+			<i id="panUp" class="fas fa-arrow-up fullWidth" title="Pan up"></i>
 			<i id="panLeft" class="fas fa-arrow-left" title="Pan left"></i>
 			<i id="panRight" class="fas fa-arrow-right" title="Pan right"></i>
-			<i id="panDown" class="fas fa-arrow-down" title="Pan down" style="flex-basis: 100%; justify-self: unset;"></i>
+			<i id="panDown" class="fas fa-arrow-down fullWidth" title="Pan down"></i>
 		</div>
       <button id="reset">Reset Map</button>
     </div>
