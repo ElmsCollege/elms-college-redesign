@@ -70,14 +70,16 @@ get_header();
 	});
 </script>
   <div id="pageContainer">
-    <div class="flexRowWrapStart justifyEnd">
+    <div style="position:fixed;right:15px;color:white !important;">
       <button id="reset">Reset Map</button>
-      <button id="zoomIn">Zoom In</button>
-      <button id="zoomOut">Zoom Out</button>
-      <button id="panLeft">Left</button>
-      <button id="panRight">Right</button>
-      <button id="panUp">Up</button>
-      <button id="panDown">Down</button>
+		<i id="zoomIn" class="fas fa-plus"></i>
+      	<i id="zoomOut" class="fas fa-minus"></i>
+		<div>
+			<i id="panLeft" class="fas fa-arrow-left"></i>
+			<i id="panRight" class="fas fa-arrow-right"></i>
+			<i id="panUp" class="fas fa-arrow-up"></i>
+			<i id="panDown" class="fas fa-arrow-down"></i>
+		</div>
     </div>
     <div id="svg-container" class="flexRowWrapStart spaceBetween">
       <noscript>
