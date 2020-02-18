@@ -1,4 +1,4 @@
-@import '(/wp-content/plugins/a-z-listing/css/a-z-listing-default.css';
+@import '/wp-content/plugins/a-z-listing/css/a-z-listing-default.css';
 /* 
 * new CSS file that is included by the a-z plugin for the directory (/directory) pages
 * this is enqueued by a-z-listing.php
