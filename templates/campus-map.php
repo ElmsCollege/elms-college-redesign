@@ -70,22 +70,24 @@ get_header();
 	});
 </script>
   <div id="pageContainer">
-    <div style="position:fixed;right:15px;color:white !important;">
-      <button id="reset">Reset Map</button>
-		<i id="zoomIn" class="fas fa-plus"></i>
-      	<i id="zoomOut" class="fas fa-minus"></i>
-		<div>
-			<i id="panLeft" class="fas fa-arrow-left"></i>
-			<i id="panRight" class="fas fa-arrow-right"></i>
-			<i id="panUp" class="fas fa-arrow-up"></i>
-			<i id="panDown" class="fas fa-arrow-down"></i>
+<div style="position:fixed;right:15px;color:white !important;font-size:2em;text-align: center;">
+		<div style="display:block;">
+			<i id="zoomIn" class="fas fa-plus" title="Zoom in"></i>
+      		<i id="zoomOut" class="fas fa-minus" title="Zoom out"></i>
 		</div>
+		<div style="display: flex;flex-flow: row wrap;justify-content: space-around;">
+			<i id="panUp" class="fas fa-arrow-up" title="Pan up" style="flex-basis: 100%;"></i>
+			<i id="panLeft" class="fas fa-arrow-left" title="Pan left"></i>
+			<i id="panRight" class="fas fa-arrow-right" title="Pan right"></i>
+			<i id="panDown" class="fas fa-arrow-down" title="Pan down" style="flex-basis: 100%; justify-self: unset;"></i>
+		</div>
+      <button id="reset">Reset Map</button>
     </div>
-    <div id="svg-container" class="flexRowWrapStart spaceBetween">
+	  <div id="svg-container" class="flexRowWrapStart spaceBetween">
       <noscript>
       <div>
         <p>The campus map requires JavaScript to be enabled.</p>
-        <p><a href="/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">Click here to download the map as a PDF file.</a></p>
+        <p><a href="/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" rel="noopener">Click here to download the map as a PDF file.</a></p>
       </div>
       </noscript>
     </div>
