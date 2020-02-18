@@ -71,15 +71,15 @@ get_header();
 </script>
   <div id="pageContainer">
 	<div class="mapNav">
-		<div class="block">
-			<i id="zoomIn" class="fas fa-plus" title="Zoom in"></i>
-      		<i id="zoomOut" class="fas fa-minus" title="Zoom out"></i>
-		</div>
 		<div class="flexRowWrapStart spaceAround">
 			<i id="panUp" class="fas fa-arrow-up fullWidth" title="Pan up"></i>
 			<i id="panLeft" class="fas fa-arrow-left" title="Pan left"></i>
 			<i id="panRight" class="fas fa-arrow-right" title="Pan right"></i>
 			<i id="panDown" class="fas fa-arrow-down fullWidth" title="Pan down"></i>
+		</div>
+		<div class="block">
+			<i id="zoomIn" class="fas fa-plus" title="Zoom in"></i>
+      		<i id="zoomOut" class="fas fa-minus" title="Zoom out"></i>
 		</div>
       <button id="reset">Reset Map</button>
     </div>
