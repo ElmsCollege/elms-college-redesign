@@ -3537,7 +3537,7 @@ th .smallText{
 	background:unset;
 }
 #tabs .ui-tabs-panel{
-	border-width:1px;
+	border:1px solid #ddd;
 }
 /* END style overrides for jQuery UI tabs */
 .page-id-4728 .section-heading h1{
