@@ -87,6 +87,3 @@ noscript a,noscript a:hover,noscript a:visited{
 	color:#fff;
 	text-decoration:underline;
 }
-.metaslider .flexslider .flex-direction-nav li a{
-	background-image:url(/wp-content/themes/gs_elms/images/bg_direction_nav.png);
-}

@@ -15,6 +15,12 @@
 
 get_header(); ?>
 <style>
+#primary{
+	max-width:1500px;
+}
+#main{
+	width:100%;
+}
 #tuitionTable{
 	table-layout:fixed;
 }
@@ -206,11 +212,13 @@ width:100px;
 <table id="tuitionTable">
 <thead>
 	<tr>
+		<th class="acfFieldName" style="text-align:right;padding-right:10px;">&nbsp;</th>
 		<th style="text-align:right;padding-right:10px;">&nbsp;</th>
 		<th class="borderRL centerText"><?php the_field('this_fiscal_year_title'); ?></th>
 		<th class="centerText" style="width:100px;"><?php the_field('next_fiscal_year_title'); ?></th>
 	</tr>
 	<tr>
+		<th class="acfFieldName" style="text-align:right;padding-right:10px;">Field Name</th>
 		<th style="text-align:right;padding-right:10px;">Fee</th>
 		<th class="borderRL centerText"><?php the_field('this_academic_year_title'); ?></th>
 		<th class="centerText" style="width:100px;"><?php the_field('next_academic_year_title'); ?></th>
@@ -229,9 +237,10 @@ if( $fields ): ?>
 			  if( ($name != 'this_fiscal_year_title') && ($name != 'next_fiscal_year_title')):
 			    // loop through the rows of data
 			    while ( have_rows($name) ) : the_row();
-
+			        // display the name of the field
+				echo '<tr class='. $name .'><td class="acfFieldName" style="text-align:right;padding-right:10px;">'. $name .'</td>';
 			        // display a sub field value
-				echo '<tr class='. $name .'><td style="text-align:right;padding-right:10px;">';
+				echo '<td style="text-align:right;padding-right:10px;">';
 			        the_sub_field('tuition_explanation');
 				echo '</td><td class="borderRL centerText">';
 			        $thisFiscalYear = get_sub_field('this_fiscal_year');
