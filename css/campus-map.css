@@ -1,7 +1,7 @@
 /* stylesheet for the campus map page */
 footer {
-	border-top: 2px solid #115438;
-	padding-top: 25px;
+	border-top:2px solid #115438;
+	padding-top:25px;
 }
 #pageContainer{
 	position:relative;
@@ -12,8 +12,13 @@ footer {
 	background-color:#A3BC9F;
 	min-height:300px;
 }
-.flexRowWrapStart{
-	background-color:#A3BC9F;
+.mapNav{
+	margin-top:5px;
+	position:fixed;
+	right:5px;
+	color:white !important;
+	font-size:2em;
+	text-align:center;
 }
 #overlay{
 	position:absolute;
@@ -56,10 +61,10 @@ svg path:hover,svg polygon:hover{
 .visible{
 	left:0;
 	display:block;
-	-webkit-transition: right .3s ease-out;
-	-moz-transition: right .3s ease-out;
-	-o-transition: right .3s ease-out;
-	transition: right .3s ease-out;
+	-webkit-transition:right .3s ease-out;
+	-moz-transition:right .3s ease-out;
+	-o-transition:right .3s ease-out;
+	transition:right .3s ease-out;
 	top:0;
 }
 @media all and (max-width:600px){

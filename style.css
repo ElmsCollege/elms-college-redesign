@@ -1098,7 +1098,7 @@ a:hover,a:active{
 	left:0;
 	right:0;
 }
-.stories .story-feature .story-full:first-child{
+.block,.stories .story-feature .story-full:first-child{
 	display:block
 }
 @media (min-width: 64em){
@@ -1819,14 +1819,12 @@ button.fs-dropdown-item:hover{
 	.page-template-landing-page .stories .story-full,.page-template-nursing-landing-page-2 .stories .story-full{
 		display:none
 	}
-	.page-template-landing-page .stories .story-full:first-child,.page-template-nursing-landing-page-2 .stories .story-full:first-child{
+	.page-template-landing-page .stories .story-full:first-child,.page-template-nursing-landing-page-2 .stories .story-full:first-child,.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
+
 		display:block
 	}
 	.page-template-landing-page .stories .show-more,.page-template-nursing-landing-page-2 .stories .show-more{
 		display:none
-	}
-	.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
-		display:block
 	}
 	.page-template-landing-page .stories .field-excerpt a,.page-template-landing-page .stories .field-permalink a,.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
 		color:#c3a250;
@@ -2687,7 +2685,8 @@ button.fs-dropdown-item:hover{
 }
 @media (max-width: 770px){
 	.page-template-nursing-secondary-landing-page .rn-item{
-		display:block;width:100%
+		display:block;
+		width:100%
 	}
 }
 .page-template-nursing-secondary-landing-page .program-track-title{
@@ -3500,6 +3499,47 @@ th .smallText{
 	line-height:1em;
 }
 /* END generic, universal, reusable styles */
+/* BEGIN style overrides for jQuery UI tabs */
+#tabs{
+	border:unset;
+	padding-top:0;
+}
+#tabs .ui-tabs-nav{
+	padding:unset
+}
+#tabs .ui-state-active a,#tabs .ui-state-active a:link,#tabs .ui-state-active a:visited{
+	color:#000;
+}
+#tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{
+	padding:.5em 1em;
+}
+#tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover{
+	border:1px solid #ddd;
+	background:#fff;
+	color:#000;
+}
+#tabs .ui-tabs-nav .ui-tabs-anchor{
+	padding:.3em .8em;
+}
+#tabs .ui-tabs-nav li{
+	top:8px;
+	margin:1px .2em -1px 0;
+}
+#tabs .ui-tabs-nav li.ui-tabs-active{
+	top:0px;
+	border-bottom:1px solid #fff
+}
+#tabs .ui-widget.ui-widget-content{
+	border:unset;
+}
+#tabs .ui-widget-header{
+	border:unset;
+	background:unset;
+}
+#tabs .ui-tabs-panel{
+	border:1px solid #ddd;
+}
+/* END style overrides for jQuery UI tabs */
 .page-id-4728 .section-heading h1{
 	position:absolute;
 	bottom:15px;

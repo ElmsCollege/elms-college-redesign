@@ -70,47 +70,51 @@ get_header();
 	});
 </script>
   <div id="pageContainer">
-    <div class="flexRowWrapStart justifyEnd">
+	<div class="mapNav">
+		<div class="flexRowWrapStart spaceAround">
+			<i id="panUp" class="fas fa-arrow-up trace fullWidth" title="Pan up"></i>
+			<i id="panLeft" class="fas fa-arrow-left trace" title="Pan left"></i>
+			<i id="panRight" class="fas fa-arrow-right trace" title="Pan right"></i>
+			<i id="panDown" class="fas fa-arrow-down trace fullWidth" title="Pan down"></i>
+		</div>
+		<div class="block">
+			<i id="zoomIn" class="fas fa-plus trace" title="Zoom in"></i>
+      		<i id="zoomOut" class="fas fa-minus trace" title="Zoom out"></i>
+		</div>
       <button id="reset">Reset Map</button>
-      <button id="zoomIn">Zoom In</button>
-      <button id="zoomOut">Zoom Out</button>
-      <button id="panLeft">Left</button>
-      <button id="panRight">Right</button>
-      <button id="panUp">Up</button>
-      <button id="panDown">Down</button>
     </div>
-    <div id="svg-container" class="flexRowWrapStart spaceBetween">
+	  <div id="svg-container" class="flexRowWrapStart spaceBetween">
       <noscript>
       <div>
         <p>The campus map requires JavaScript to be enabled.</p>
-        <p><a href="/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" target="_blank" rel="noopener">Click here to download the map as a PDF file.</a></p>
+        <p><a href="/wp-content/uploads/2018/10/campus-map-print-2018-1.pdf" rel="noopener">Click here to download the map as a PDF file.</a></p>
       </div>
       </noscript>
     </div>
     <!-- end #svg-container -->
     <?php
     $slideshows = array(
-      //"generic name" => array("div" => "<name of layer from svg>","title" => "<title for slideshow window>","metaslidershortcode" => '<metaslider shortcode from admin>'),
-      "berchmans" => array( "div" => "berchmanshall", "title" => "Berchmans Hall", "metaslidershortcode" => '[metaslider id="38345"]', "descriptionField" => "berchmans_hall_description" ),
-      "library" => array( "div" => "alumnaelibrary", "title" => "Alumnae Library", "metaslidershortcode" => '[metaslider id="38346"]', "descriptionField" => "alumnae_library_description" ),
-      "dooley" => array( "div" => "marydooleycollegecenter", "title" => "Mary Dooley College Center", "metaslidershortcode" => '[metaslider id="38347"]', "descriptionField" => "dooley_center_description" ),
-      "rosewilliam" => array( "div" => "rosewilliamhall", "title" => "Rose William Hall", "metaslidershortcode" => '[metaslider id="38348"]', "descriptionField" => "rose_william_hall_description" ),
-      "oleary" => array( "div" => "olearyhall", "title" => "O'Leary Hall", "metaslidershortcode" => '[metaslider id="38349"]', "descriptionField" => "oleary_hall_description" ),
-      "devine" => array( "div" => "devinehall", "title" => "Devine Hall", "metaslidershortcode" => '[metaslider id="38350"]', "descriptionField" => "devine_hall_description" ),
-      "spaulding" => array( "div" => "spauldinghouse", "title" => "Spaulding House", "metaslidershortcode" => '[metaslider id="38351"]', "descriptionField" => "spaulding_house_description" ),
-      "lyons" => array( "div" => "lyonscenter", "title" => "Lyons Center for Natural and Health Sciences", "metaslidershortcode" => '[metaslider id="38352"]', "descriptionField" => "lyons_center_description" ),
-      "bluehouse" => array( "div" => "bluehouse", "title" => "Blue House (147 Grape Street)", "metaslidershortcode" => '[metaslider id="38353"]', "descriptionField" => "blue_house_description" ),
-      "brickhouse" => array( "div" => "brickhouse", "title" => "Brick House (15 Gaylord Street)", "metaslidershortcode" => '[metaslider id="38354"]', "descriptionField" => "brick_house_description" ),
-      "marian" => array( "div" => "marianhall", "title" => "Marian Hall", "metaslidershortcode" => '[metaslider id="38356"]', "descriptionField" => "marian_hall_description" ),
-      "maguire" => array( "div" => "maguirecenter", "title" => "Maguire Center", "metaslidershortcode" => '[metaslider id="38357"]', "descriptionField" => "maguire_center_description" ),
-      "gaylord" => array( "div" => "gaylord", "title" => "Gaylord Living Learning Community", "metaslidershortcode" => '[metaslider id="38510"]', "descriptionField" => "gaylord_description" ),
-      "quad" => array( "div" => "keatingquad", "title" => "Keating Quadrangle", "metaslidershortcode" => '[metaslider id="38634"]', "descriptionField" => "keating_quadrangle_description" ),
-      "condonField" => array( "div" => "cherylcondonsoftballfield", "title" => "Condon Field", "metaslidershortcode" => '[metaslider id="38950"]', "descriptionField" => "cheryl_condon_field_description" ),
-      "learyField" => array( "div" => "learyfield", "title" => "Timothy J. Leary Field", "metaslidershortcode" => '[metaslider id="38958"]', "descriptionField" => "leary_field_description" )
+      //"generic name" => array("div" => "<name of layer from svg>","titleField" => "<name of the field created in WordPress, should end with _title>","metaslidershortcode" => '<metaslider shortcode from admin>'),"descriptionField" => "<name of the field created in WordPress, should end with _description>"
+      "berchmans" => array( "div" => "berchmanshall", "titleField" => "berchmans_hall_title", "metaslidershortcode" => '[metaslider id="38345"]', "descriptionField" => "berchmans_hall_description" ),
+      "library" => array( "div" => "alumnaelibrary", "titleField" => "alumnae_library_title", "metaslidershortcode" => '[metaslider id="38346"]', "descriptionField" => "alumnae_library_description" ),
+      "dooley" => array( "div" => "marydooleycollegecenter", "titleField" => "dooley_center_title", "metaslidershortcode" => '[metaslider id="38347"]', "descriptionField" => "dooley_center_description" ),
+      "rosewilliam" => array( "div" => "rosewilliamhall", "titleField" => "rose_william_hall_title", "metaslidershortcode" => '[metaslider id="38348"]', "descriptionField" => "rose_william_hall_description" ),
+      "oleary" => array( "div" => "olearyhall", "titleField" => "oleary_hall_title", "metaslidershortcode" => '[metaslider id="38349"]', "descriptionField" => "oleary_hall_description" ),
+      "devine" => array( "div" => "devinehall", "titleField" => "devine_hall_title", "metaslidershortcode" => '[metaslider id="38350"]', "descriptionField" => "devine_hall_description" ),
+      "spaulding" => array( "div" => "spauldinghouse", "titleField" => "spaulding_house_title", "metaslidershortcode" => '[metaslider id="38351"]', "descriptionField" => "spaulding_house_description" ),
+      "lyons" => array( "div" => "lyonscenter", "titleField" => "lyons_center_title", "metaslidershortcode" => '[metaslider id="38352"]', "descriptionField" => "lyons_center_description" ),
+      "bluehouse" => array( "div" => "bluehouse", "titleField" => "blue_house_title", "metaslidershortcode" => '[metaslider id="38353"]', "descriptionField" => "blue_house_description" ),
+      "brickhouse" => array( "div" => "brickhouse", "titleField" => "brick_house_title", "metaslidershortcode" => '[metaslider id="38354"]', "descriptionField" => "brick_house_description" ),
+      "marian" => array( "div" => "marianhall", "titleField" => "marian_hall_title", "metaslidershortcode" => '[metaslider id="38356"]', "descriptionField" => "marian_hall_description" ),
+      "maguire" => array( "div" => "maguirecenter", "titleField" => "maguire_center_title", "metaslidershortcode" => '[metaslider id="38357"]', "descriptionField" => "maguire_center_description" ),
+      "gaylord" => array( "div" => "gaylord", "titleField" => "gaylord_title", "metaslidershortcode" => '[metaslider id="38510"]', "descriptionField" => "gaylord_description" ),
+      "quad" => array( "div" => "keatingquad", "titleField" => "keating_quadrangle_title", "metaslidershortcode" => '[metaslider id="38634"]', "descriptionField" => "keating_quadrangle_description" ),
+      "condonField" => array( "div" => "cherylcondonsoftballfield", "titleField" => "cheryl_condon_field_title", "metaslidershortcode" => '[metaslider id="38950"]', "descriptionField" => "cheryl_condon_field_description" ),
+      "learyField" => array( "div" => "learyfield", "titleField" => "leary_field_title", "metaslidershortcode" => '[metaslider id="38958"]', "descriptionField" => "leary_field_description" )
     );
     foreach ( $slideshows as $slide ) {
       echo '<div class="transition ' . $slide[ 'div' ] . ' slideshow">';
-      echo '<h3 class="slideshow_header">' . $slide[ 'title' ] . '</h3>';
+      echo '<h3 class="slideshow_header">' . get_field($slide['titleField']) . '</h3>';
       echo '<p class="small">'. get_field($slide['descriptionField']) .'</p>';
       echo do_shortcode( $slide[ 'metaslidershortcode' ] );
       echo '<button class="close">Close</button></div>';
