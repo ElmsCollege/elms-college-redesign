@@ -42,6 +42,10 @@ get_header(); ?>
 	border-left:2px solid #115438;
 width:100px;
 }
+.acfFieldName{
+	text-align:left;
+	font-size:.8em;
+}
 .featured_image_cropped,.sidebar_image_new{
 	display:none; /* hiding fields that shouldn't be here but Ryan can't track down */
 }
@@ -212,13 +216,13 @@ width:100px;
 <table id="tuitionTable">
 <thead>
 	<tr>
-		<th class="acfFieldName" style="text-align:right;padding-right:10px;">&nbsp;</th>
-		<th style="text-align:right;padding-right:10px;">&nbsp;</th>
+		<th class="acfFieldName">&nbsp;</th>
+		<th>&nbsp;</th>
 		<th class="borderRL centerText"><?php the_field('this_fiscal_year_title'); ?></th>
 		<th class="centerText" style="width:100px;"><?php the_field('next_fiscal_year_title'); ?></th>
 	</tr>
 	<tr>
-		<th class="acfFieldName" style="text-align:right;padding-right:10px;">Field Name</th>
+		<th class="acfFieldName">Field Name</th>
 		<th style="text-align:right;padding-right:10px;">Fee</th>
 		<th class="borderRL centerText"><?php the_field('this_academic_year_title'); ?></th>
 		<th class="centerText" style="width:100px;"><?php the_field('next_academic_year_title'); ?></th>
@@ -238,7 +242,7 @@ if( $fields ): ?>
 			    // loop through the rows of data
 			    while ( have_rows($name) ) : the_row();
 			        // display the name of the field
-				echo '<tr class='. $name .'><td class="acfFieldName" style="text-align:right;padding-right:10px;">'. $name .'</td>';
+				echo '<tr class='. $name .'><td class="acfFieldName">'. $name .'</td>';
 			        // display a sub field value
 				echo '<td style="text-align:right;padding-right:10px;">';
 			        the_sub_field('tuition_explanation');
