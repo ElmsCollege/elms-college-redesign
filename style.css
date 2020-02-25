@@ -3500,43 +3500,43 @@ th .smallText{
 }
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
-#tabs{
+#tabs,#tabs2,#tabs3{
 	border:unset;
 	padding-top:0;
 }
-#tabs .ui-tabs-nav{
+#tabs .ui-tabs-nav,#tabs2 .ui-tabs-nav,#tabs3 .ui-tabs-nav{
 	padding:unset
 }
-#tabs .ui-state-active a,#tabs .ui-state-active a:link,#tabs .ui-state-active a:visited{
+#tabs .ui-state-active a,#tabs .ui-state-active a:link,#tabs .ui-state-active a:visited,#tabs2 .ui-state-active a,#tabs2 .ui-state-active a:link,#tabs2 .ui-state-active a:visited,#tabs3 .ui-state-active a,#tabs3 .ui-state-active a:link,#tabs3 .ui-state-active a:visited{
 	color:#000;
 }
-#tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{
+#tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{
 	padding:.5em 1em;
 }
-#tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover{
+#tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover,#tabs2 .ui-state-active,#tabs2 .ui-widget-content .ui-state-active,#tabs2 .ui-widget-header .ui-state-active,#tabs2 a.ui-button:active,#tabs2 .ui-button:active,#tabs2 .ui-button.ui-state-active:hover,#tabs3 .ui-state-active,#tabs3 .ui-widget-content .ui-state-active,#tabs3 .ui-widget-header .ui-state-active,#tabs3 a.ui-button:active,#tabs3 .ui-button:active,#tabs3 .ui-button.ui-state-active:hover{
 	border:1px solid #ddd;
 	background:#fff;
 	color:#000;
 }
-#tabs .ui-tabs-nav .ui-tabs-anchor{
+#tabs .ui-tabs-nav .ui-tabs-anchor,#tabs2 .ui-tabs-nav .ui-tabs-anchor,#tabs3 .ui-tabs-nav .ui-tabs-anchor{
 	padding:.3em .8em;
 }
-#tabs .ui-tabs-nav li{
+#tabs .ui-tabs-nav li,#tabs2 .ui-tabs-nav li,#tabs3 .ui-tabs-nav li{
 	top:8px;
 	margin:1px .2em -1px 0;
 }
-#tabs .ui-tabs-nav li.ui-tabs-active{
+#tabs .ui-tabs-nav li.ui-tabs-active,#tabs2 .ui-tabs-nav li.ui-tabs-active,#tabs3 .ui-tabs-nav li.ui-tabs-active{
 	top:0px;
 	border-bottom:1px solid #fff
 }
-#tabs .ui-widget.ui-widget-content{
+#tabs .ui-widget.ui-widget-content,#tabs2 .ui-widget.ui-widget-content,#tabs3 .ui-widget.ui-widget-content{
 	border:unset;
 }
-#tabs .ui-widget-header{
+#tabs .ui-widget-header,#tabs2 .ui-widget-header,#tabs3 .ui-widget-header{
 	border:unset;
 	background:unset;
 }
-#tabs .ui-tabs-panel{
+#tabs .ui-tabs-panel,#tabs2 .ui-tabs-panel,#tabs3 .ui-tabs-panel{
 	border:1px solid #ddd;
 }
 /* END style overrides for jQuery UI tabs */
