@@ -15,9 +15,24 @@ while ( have_posts() ) : the_post();
 
   $opening_menu = get_field("opening_menu");
   
-	get_template_part("template-parts/page-heading");
+//	get_template_part("template-parts/page-heading");
 ?>
-      <?php if (!empty($opening_menu)) : ?>
+<div id="imageHeading" class="section-heading">
+	<?php
+		$image = get_field('header_background_image');
+		$size = 'full';
+		if( $image ) {
+			echo wp_get_attachment_image( $image, $size );
+		}
+	?>
+	<h1 class="field-title">
+		<?php 
+			echo esc_html( get_the_title() );
+		?>
+	</h1>
+</div>
+
+<?php if (!empty($opening_menu)) : ?>
         <ul class="opening-menu ulreset spaceBetween">
           <?php
             foreach ($opening_menu as $index=>$menu_item) : 
