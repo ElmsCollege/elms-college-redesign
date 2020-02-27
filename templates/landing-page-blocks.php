@@ -17,6 +17,10 @@ while ( have_posts() ) : the_post();
   
 //	get_template_part("template-parts/page-heading");
 ?>
+<style>
+	#imageHeading{background-color:unset;}
+	#imageHeading img{position:absolute; top:0; left:0; width:100%; height:100%;}
+</style>
 <div id="imageHeading" class="section-heading">
 	<?php
 		$image = get_field('header_background_image');
