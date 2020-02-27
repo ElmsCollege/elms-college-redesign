@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post();
 		$image = get_field('header_background_image');
 		$size = 'full';
 		if( $image ) {
-			echo wp_get_attachment_image( $image, $size );
+			echo wp_get_attachment_image( $image, $size, "", array( "role" => "presentation", "alt" => "" ) );
 		}
 	?>
 	<h1 class="field-title">
