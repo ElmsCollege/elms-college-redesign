@@ -30,7 +30,7 @@ while ( have_posts() ) : the_post();
 			echo wp_get_attachment_image( $image, $size, "", array( "role" => "presentation", "alt" => "" ) );
 		}
 	?>
-	<h1 class="field-title">
+	<h1 class="field-title trace">
 		<?php 
 			echo esc_html( get_the_title() );
 		?>

@@ -3493,7 +3493,7 @@ th .smallText{
 }
 .hidden,[hidden]{display:none !important}
 .trace{
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .wp-block-media-text .wp-block-media-text__media{
 	line-height:1em;
