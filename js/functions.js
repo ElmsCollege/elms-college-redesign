@@ -243,10 +243,9 @@
     $(".story-carousel .story-tab:first-child").addClass("active");
     $(".story-carousel .story-tab").on("click focus", function () {
       var index = $(this).getIndex() + 1;
-      console.log(index);
-      $(".story-feature .story-full").not(":nth-child(" + index + ")").css("z-index", "0").delay(400).fadeOut(1);
-      $(".story-feature .story-full:nth-child(" + index + ")").css("z-index", "1").fadeIn(400);
-
+      //console.log(index);
+      $(".story-feature .story-full").not(":nth-child(" + index + ")").css("z-index", "0");
+      $(".story-feature .story-full:nth-child(" + index + ")").css("z-index", "1");
       $(".story-carousel .story-tab").removeClass("active");
       $(this).addClass("active");
     });
