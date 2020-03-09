@@ -231,14 +231,14 @@
     $(window).resize(function (e) {
       updateMenu();
     });
-alert("cacheBuster");
+
     //preload all carousel images
-    var preloadCarousel = function () {
-      $(".story-carousel .story-image img").each(function () {
-        (new Image()).src = $(this).src;
-      });
-    };
-    preloadCarousel();
+//    var preloadCarousel = function () {
+//      $(".story-carousel .story-image img").each(function () {
+//        (new Image()).src = $(this).src;
+//      });
+//    };
+//    preloadCarousel();
     //make landingpage student carousel work.
     $(".story-carousel .story-tab:first-child").addClass("active");
     $(".story-carousel .story-tab").on("click focus", function () {
