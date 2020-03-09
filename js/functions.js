@@ -233,12 +233,12 @@
     });
 
     //preload all carousel images
-    var preloadCarousel = function () {
-      $(".story-carousel .story-image img").each(function () {
-        (new Image()).src = $(this).src;
-      });
-    };
-    preloadCarousel();
+//    var preloadCarousel = function () {
+//      $(".story-carousel .story-image img").each(function () {
+//        (new Image()).src = $(this).src;
+//      });
+//    };
+//    preloadCarousel();
     //make landingpage student carousel work.
     $(".story-carousel .story-tab:first-child").addClass("active");
     $(".story-carousel .story-tab").on("click focus", function () {
@@ -267,8 +267,8 @@
       }); //.css({height:"", position:""});
       e.preventDefault();
       $(".story-tab").removeClass("active");
-      var shouldBeUnnecessary = $(this).parent().prev().index();
-      $(".story-tab:nth-child(" + $(shouldBeUnnecessary + 1) + ")").addClass("active");
+//      var shouldBeUnnecessary = $(this).parent().prev().index();
+//      $(".story-tab:nth-child(" + $(shouldBeUnnecessary + 1) + ")").addClass("active");
     });
     $(".story-feature-nav.nav-next").click(function (e) {
       var height = $(this).parent().next().height();
@@ -287,8 +287,8 @@
       }); //.css({height:"", position:""});
       e.preventDefault();
       $(".story-tab").removeClass("active");
-      var shouldBeUnnecessary = $(this).parent().next().index();
-      $(".story-tab:nth-child(" + (shouldBeUnnecessary + 1) + ")").addClass("active");
+//      var shouldBeUnnecessary = $(this).parent().next().index();
+//      $(".story-tab:nth-child(" + (shouldBeUnnecessary + 1) + ")").addClass("active");
     });
     window.setInterval(function () {
       var visibleStory = $(".story-feature .story-full:visible");
