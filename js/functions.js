@@ -244,8 +244,8 @@
     $(".story-carousel .story-tab").on("click focus", function () {
       var index = $(this).getIndex() + 1;
       console.log(index);
-      $(".story-feature .story-full").not(":nth-child(" + index + ")").css("z-index", "0").delay(400).fadeOut(1);
-      $(".story-feature .story-full:nth-child(" + index + ")").css("z-index", "1").fadeIn(400);
+      $(".story-feature .story-full").not(":nth-child(" + index + ")").css("z-index", "0").fadeOut(1);
+      $(".story-feature .story-full:nth-child(" + index + ")").css("z-index", "1").fadeIn();
 
       $(".story-carousel .story-tab").removeClass("active");
       $(this).addClass("active");
@@ -254,12 +254,12 @@
       var height = $(this).parent().prev().height();
       $(this).parent().css({
         "z-index": 0
-      }).delay(400).fadeOut(1);
+      }).fadeOut(1);
       $(this).parent().prev().css({
         "z-index": 1,
         height: height,
         position: "absolute"
-      }).fadeIn(400, function () {
+      }).fadeIn(function () {
         $(this).css({
           height: "",
           position: ""
@@ -267,19 +267,19 @@
       }); //.css({height:"", position:""});
       e.preventDefault();
       $(".story-tab").removeClass("active");
-      var shouldBeUnnecessary = $(this).parent().prev().index();
-      $(".story-tab:nth-child(" + $(shouldBeUnnecessary + 1) + ")").addClass("active");
+//      var shouldBeUnnecessary = $(this).parent().prev().index();
+//      $(".story-tab:nth-child(" + $(shouldBeUnnecessary + 1) + ")").addClass("active");
     });
     $(".story-feature-nav.nav-next").click(function (e) {
       var height = $(this).parent().next().height();
       $(this).parent().css({
         "z-index": 0
-      }).delay(400).fadeOut(1);
+      }).fadeOut(1);
       $(this).parent().next().css({
         "z-index": 1,
         height: height,
         position: "absolute"
-      }).fadeIn(400, function () {
+      }).fadeIn(function () {
         $(this).css({
           height: "",
           position: ""
@@ -287,8 +287,8 @@
       }); //.css({height:"", position:""});
       e.preventDefault();
       $(".story-tab").removeClass("active");
-      var shouldBeUnnecessary = $(this).parent().next().index();
-      $(".story-tab:nth-child(" + (shouldBeUnnecessary + 1) + ")").addClass("active");
+//      var shouldBeUnnecessary = $(this).parent().next().index();
+ //     $(".story-tab:nth-child(" + (shouldBeUnnecessary + 1) + ")").addClass("active");
     });
     window.setInterval(function () {
       var visibleStory = $(".story-feature .story-full:visible");
