@@ -1113,7 +1113,7 @@ a:hover,a:active{
 	color:#fff
 }
 @media (min-width: 64em){
-	.stories .story-feature .story-full .text-content{
+	.stories:not(#carouselBlock) .story-feature .story-full .text-content{
 		position:absolute;
 		bottom:200px;
 		width:458px;
