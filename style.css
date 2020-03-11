@@ -1134,7 +1134,7 @@ a:hover,a:active{
 	color:#c3a250;
 	text-decoration:none
 }
-.stories .story-feature .story-full .text-content .field-permalink a{
+.stories .story-feature .story-full .text-content .field-permalink a,.text-content a.field-permalink{
 	display:inline-block;
 	text-decoration:none;
 	text-transform:uppercase;
@@ -1144,7 +1144,7 @@ a:hover,a:active{
 	padding:.8em 2em .7em;
 	font-size:16px;
 }
-.stories .story-feature .story-full .text-content .field-permalink a:hover{
+.stories .story-feature .story-full .text-content .field-permalink a:hover,.text-content a.field-permalink:hover{
 	color:#115438;
 	background:#c3a250
 }
