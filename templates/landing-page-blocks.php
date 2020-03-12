@@ -18,11 +18,11 @@ while ( have_posts() ) : the_post();
 //	get_template_part("template-parts/page-heading");
 ?>
 <style>
-	#imageHeading{background-color:unset;}
-	#imageHeading img{position:absolute; top:0; left:0; width:100%; height:100%;z-index:-1;}
-	#imageHeading h1{position:absolute; bottom:15px;}
+	#imageHeading1{background-color:unset;}
+	#imageHeading1 img{position:absolute; top:0; left:0; width:100%; height:100%;z-index:-1;}
+	#imageHeading1 h1{position:absolute; bottom:15px;}
 </style>
-<div id="imageHeading" class="section-heading">
+<div id="imageHeading1" class="section-heading">
 	<?php
 		$image = get_field('header_background_image');
 		$size = 'full';

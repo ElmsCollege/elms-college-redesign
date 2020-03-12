@@ -6,7 +6,7 @@ if( get_field('header_background_image') ){
 	echo '<style>#imageHeading.section-heading{background-image:url("';
 	the_field('header_background_image');
 	echo '")}</style>';
-	echo '<div id="imageHeading" class="section-heading newHeader">';
+	echo '<div id="imageHeading" class="section-heading">';
 }elseif( get_field('featured_image_cropped') ){
 	echo '<style>#imageHeading.section-heading{';
 		print_featured_image_style($post->ID);
