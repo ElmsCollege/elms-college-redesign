@@ -15,27 +15,8 @@ while ( have_posts() ) : the_post();
 
   $opening_menu = get_field("opening_menu");
   
-//	get_template_part("template-parts/page-heading");
+	get_template_part("template-parts/page-heading");
 ?>
-<style>
-	#imageHeading{background-color:unset;}
-	#imageHeading img{position:absolute; top:0; left:0; width:100%; height:100%;z-index:-1;}
-	#imageHeading h1{position:absolute; bottom:15px;}
-</style>
-<div id="imageHeading" class="section-heading newHeader">
-	<?php
-		$image = get_field('header_background_image');
-		$size = 'full';
-		if( $image ) {
-			echo wp_get_attachment_image( $image, $size, "", array( "role" => "presentation", "alt" => "" ) );
-		}
-	?>
-	<h1 class="field-title trace">
-		<?php 
-			echo esc_html( get_the_title() );
-		?>
-	</h1>
-</div>
 
 <?php if (!empty($opening_menu)) : ?>
         <ul class="opening-menu ulreset spaceBetween">
