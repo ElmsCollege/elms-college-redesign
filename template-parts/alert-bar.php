@@ -1,4 +1,5 @@
 <?php 
+global $blog_id;
 $current_blog_id = $blog_id;
 switch_to_blog(1);
 
