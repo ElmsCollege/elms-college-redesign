@@ -879,10 +879,25 @@ a:hover,a:active{
 	}
 }
 #imageHeading.section-heading{
-	height:540px;
 	height:32vw;
 	min-height:240px;
 	max-height:540px;
+}
+#imageHeading.usingSmartCrop{
+	background-color:unset;
+}
+#imageHeading.usingSmartCrop img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	object-fit:cover;
+}
+#imageHeading.usingSmartCrop h1{
+	position:absolute;
+	bottom:15px;
 }
 .active,html.active{
 	overflow:hidden;
@@ -1113,7 +1128,7 @@ a:hover,a:active{
 	color:#fff
 }
 @media (min-width: 64em){
-	.stories .story-feature .story-full .text-content{
+	.stories:not(#carouselBlock) .story-feature .story-full .text-content{
 		position:absolute;
 		bottom:200px;
 		width:458px;
@@ -1134,7 +1149,7 @@ a:hover,a:active{
 	color:#c3a250;
 	text-decoration:none
 }
-.stories .story-feature .story-full .text-content .field-permalink a{
+.stories .story-feature .story-full .text-content .field-permalink a,.text-content a.field-permalink{
 	display:inline-block;
 	text-decoration:none;
 	text-transform:uppercase;
@@ -1144,7 +1159,7 @@ a:hover,a:active{
 	padding:.8em 2em .7em;
 	font-size:16px;
 }
-.stories .story-feature .story-full .text-content .field-permalink a:hover{
+.stories .story-feature .story-full .text-content .field-permalink a:hover,.text-content a.field-permalink:hover{
 	color:#115438;
 	background:#c3a250
 }
@@ -1230,13 +1245,13 @@ a:hover,a:active{
 	left:0;
 	border-left:none
 }
-.stories .story-carousel{
+.story-carousel{
 	padding:0;
 	margin:0;
 	list-style-type:none;
 	display:none;
 }
-.stories .story-carousel .story-tab{
+.story-carousel .story-tab{
 	cursor:pointer;
 	display:flex;
 	flex-direction:column;
@@ -1247,11 +1262,11 @@ a:hover,a:active{
 	width:25%;
 	height:unset;
 }
-.stories .story-carousel .story-tab:focus{
+.story-carousel .story-tab:focus{
 	outline:0;
 	outline:none
 }
-.stories .story-carousel .story-tab .story-image{
+.story-carousel .story-tab .story-image{
 	display:flex;
 	display:block;
 	height:170px;
@@ -1261,10 +1276,10 @@ a:hover,a:active{
 	background-position:50%;
 	flex-grow:0
 }
-.stories .story-carousel .story-tab .story-image img{
+.story-carousel .story-tab .story-image img{
 	display:none
 }
-.stories .story-carousel .story-tab .text-content{
+.story-carousel .story-tab .text-content{
 	padding:16px 32px;
 	border-left:1px solid rgba(255,255,255,0.4);
 	font-size:21px;
@@ -1272,26 +1287,26 @@ a:hover,a:active{
 	flex-direction:column;
 	flex-grow:2
 }
-.stories .story-carousel .story-tab:last-child .text-content,.opening-menu .menu-item:last-child,.site-footer :last-child .footer-item-inner{
+.story-carousel .story-tab:last-child .text-content,.opening-menu .menu-item:last-child,.site-footer :last-child .footer-item-inner{
 	border-right:none
 }
-.stories .story-carousel .story-tab .theme{
+.story-carousel .story-tab .theme{
 	color:#c3a250;
 	font-family:"blackjack", serif
 }
-.stories .story-carousel .story-tab .field-title{
+.story-carousel .story-tab .field-title{
 	color:#fff
 }
-.stories .story-carousel .story-tab.active{
+.story-carousel .story-tab.active{
 	background:#c3a250
 }
-.stories .story-carousel .story-tab.active .text-content{
+.story-carousel .story-tab.active .text-content{
 	border-left:none
 }
-.stories .story-carousel .story-tab.active .text-content .theme{
+.story-carousel .story-tab.active .text-content .theme{
 	color:#115438
 }
-.stories .story-carousel .story-tab.active+li>.text-content{
+.story-carousel .story-tab.active+li>.text-content{
 	border-left:none
 }
 /* this deactivates the automatic carousel on small screens on the about elms page */
@@ -1301,7 +1316,7 @@ a:hover,a:active{
 	}
 }
 @media (min-width: 64em){
-	.stories .story-carousel{
+	.story-carousel{
 		display:flex;
 		background-color:#fff;
 		justify-content:center;
@@ -1378,6 +1393,9 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 		width:70%;
 		margin:0 auto;
 		padding:32px 0;
+	}
+	.post-template-default .site-main.standalone{
+		width:100%;
 	}
 }
 .parent-sidebar-menu{
@@ -3439,8 +3457,6 @@ div.collapseomatic_content,.schema-faq-answer{
 	-webkit-column-count:2;
 	-moz-column-count:2;
 	column-count:2;
-	column-fill:auto;
-	-moz-column-fill:balance;
 }
 .smallText,.nf-form-fields-required,.nf-field-description{
 	display:block;
@@ -3492,51 +3508,54 @@ th .smallText{
 	filter: grayscale(0);
 }
 .hidden,[hidden]{display:none !important}
-.trace{
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.trace,h1.trace{
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .wp-block-media-text .wp-block-media-text__media{
 	line-height:1em;
 }
+.lowercase{
+	text-transform:lowercase;
+}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
-#tabs,#tabs2,#tabs3{
+#tabs,#tabs2,#tabs3,#tabs4{
 	border:unset;
 	padding-top:0;
 }
-#tabs .ui-tabs-nav,#tabs2 .ui-tabs-nav,#tabs3 .ui-tabs-nav{
+#tabs .ui-tabs-nav,#tabs2 .ui-tabs-nav,#tabs3 .ui-tabs-nav,#tabs4 .ui-tabs-nav{
 	padding:unset
 }
-#tabs .ui-state-active a,#tabs .ui-state-active a:link,#tabs .ui-state-active a:visited,#tabs2 .ui-state-active a,#tabs2 .ui-state-active a:link,#tabs2 .ui-state-active a:visited,#tabs3 .ui-state-active a,#tabs3 .ui-state-active a:link,#tabs3 .ui-state-active a:visited{
+#tabs .ui-state-active a,#tabs .ui-state-active a:link,#tabs .ui-state-active a:visited,#tabs2 .ui-state-active a,#tabs2 .ui-state-active a:link,#tabs2 .ui-state-active a:visited,#tabs3 .ui-state-active a,#tabs3 .ui-state-active a:link,#tabs3 .ui-state-active a:visited,#tabs4 .ui-state-active a,#tabs4 .ui-state-active a:link,#tabs4 .ui-state-active a:visited{
 	color:#000;
 }
-#tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{
+#tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs4 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs4 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs4 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{
 	padding:.5em 1em;
 }
-#tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover,#tabs2 .ui-state-active,#tabs2 .ui-widget-content .ui-state-active,#tabs2 .ui-widget-header .ui-state-active,#tabs2 a.ui-button:active,#tabs2 .ui-button:active,#tabs2 .ui-button.ui-state-active:hover,#tabs3 .ui-state-active,#tabs3 .ui-widget-content .ui-state-active,#tabs3 .ui-widget-header .ui-state-active,#tabs3 a.ui-button:active,#tabs3 .ui-button:active,#tabs3 .ui-button.ui-state-active:hover{
+#tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover,#tabs2 .ui-state-active,#tabs2 .ui-widget-content .ui-state-active,#tabs2 .ui-widget-header .ui-state-active,#tabs2 a.ui-button:active,#tabs2 .ui-button:active,#tabs2 .ui-button.ui-state-active:hover,#tabs3 .ui-state-active,#tabs3 .ui-widget-content .ui-state-active,#tabs3 .ui-widget-header .ui-state-active,#tabs3 a.ui-button:active,#tabs3 .ui-button:active,#tabs3 .ui-button.ui-state-active:hover,#tabs4 .ui-state-active,#tabs4 .ui-widget-content .ui-state-active,#tabs4 .ui-widget-header .ui-state-active,#tabs4 a.ui-button:active,#tabs4 .ui-button:active,#tabs4 .ui-button.ui-state-active:hover{
 	border:1px solid #ddd;
 	background:#fff;
 	color:#000;
 }
-#tabs .ui-tabs-nav .ui-tabs-anchor,#tabs2 .ui-tabs-nav .ui-tabs-anchor,#tabs3 .ui-tabs-nav .ui-tabs-anchor{
+#tabs .ui-tabs-nav .ui-tabs-anchor,#tabs2 .ui-tabs-nav .ui-tabs-anchor,#tabs3 .ui-tabs-nav .ui-tabs-anchor,#tabs4 .ui-tabs-nav .ui-tabs-anchor{
 	padding:.3em .8em;
 }
-#tabs .ui-tabs-nav li,#tabs2 .ui-tabs-nav li,#tabs3 .ui-tabs-nav li{
+#tabs .ui-tabs-nav li,#tabs2 .ui-tabs-nav li,#tabs3 .ui-tabs-nav li,#tabs4 .ui-tabs-nav li{
 	top:8px;
 	margin:1px .2em -1px 0;
 }
-#tabs .ui-tabs-nav li.ui-tabs-active,#tabs2 .ui-tabs-nav li.ui-tabs-active,#tabs3 .ui-tabs-nav li.ui-tabs-active{
+#tabs .ui-tabs-nav li.ui-tabs-active,#tabs2 .ui-tabs-nav li.ui-tabs-active,#tabs3 .ui-tabs-nav li.ui-tabs-active,#tabs4 .ui-tabs-nav li.ui-tabs-active{
 	top:0px;
 	border-bottom:1px solid #fff
 }
-#tabs .ui-widget.ui-widget-content,#tabs2 .ui-widget.ui-widget-content,#tabs3 .ui-widget.ui-widget-content{
+#tabs .ui-widget.ui-widget-content,#tabs2 .ui-widget.ui-widget-content,#tabs3 .ui-widget.ui-widget-content,#tabs4 .ui-widget.ui-widget-content{
 	border:unset;
 }
-#tabs .ui-widget-header,#tabs2 .ui-widget-header,#tabs3 .ui-widget-header{
+#tabs .ui-widget-header,#tabs2 .ui-widget-header,#tabs3 .ui-widget-header,#tabs4 .ui-widget-header{
 	border:unset;
 	background:unset;
 }
-#tabs .ui-tabs-panel,#tabs2 .ui-tabs-panel,#tabs3 .ui-tabs-panel{
+#tabs .ui-tabs-panel,#tabs2 .ui-tabs-panel,#tabs3 .ui-tabs-panel,#tabs4 .ui-tabs-panel{
 	border:1px solid #ddd;
 }
 /* END style overrides for jQuery UI tabs */

@@ -17,7 +17,8 @@ while ( have_posts() ) : the_post();
   
 	get_template_part("template-parts/page-heading");
 ?>
-      <?php if (!empty($opening_menu)) : ?>
+
+<?php if (!empty($opening_menu)) : ?>
         <ul class="opening-menu ulreset spaceBetween">
           <?php
             foreach ($opening_menu as $index=>$menu_item) : 
