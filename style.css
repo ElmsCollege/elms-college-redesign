@@ -1559,7 +1559,7 @@ iframe{
 	width:100%;
 }
 @media (max-width:768px){
-	.page-template-landing-page #info-apply-buttons a,.page-template-nursing-secondary-landing-page #info-apply-buttons a,.page-template-nursing-intermediary-landing-page #info-apply-buttons a{
+	.page-template-nursing-secondary-landing-page #info-apply-buttons a,.page-template-nursing-intermediary-landing-page #info-apply-buttons a{
 		max-width: 100%;
     	width: 90%;
 	}
@@ -1779,27 +1779,25 @@ button.fs-dropdown-item:hover{
 .short-content .short-content-inner .short .field-body p{
 	margin:0
 }
-.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
+.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
 	display:none
 }
-.page-template-landing-page .stories .field-excerpt a,.page-template-landing-page .stories .field-permalink a,.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
+.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
 	color:#c3a250;
 	text-decoration:none
 }
-.page-template-landing-page .stories .show-more,
 .page-template-nursing-landing-page-2 .stories .show-more{
 	margin:1em 0 32px;
 	font-size:14px;
 	font-weight:500;
 	display:inline-block
 }
-.page-template-landing-page .stories .show-more a,
 .page-template-nursing-landing-page-2 .stories .show-more a{
 	text-decoration:none;
 	text-transform:uppercase;
 	color:#fff
 }
-.page-template-landing-page .stories .show-more a:after,.page-template-nursing-landing-page-2 .stories .show-more a:after {
+.page-template-nursing-landing-page-2 .stories .show-more a:after {
 	background: url("images/icon-show-more.png") no-repeat 0 0/100%;
 	content: "";
 	display: inline-block;
@@ -1808,18 +1806,14 @@ button.fs-dropdown-item:hover{
 	vertical-align: middle;
 	margin-left: 1em;
 }
-.page-template-landing-page .stories .show-more a.open:after,.page-template-nursing-landing-page-2 .stories .show-more a.open:after{
+.page-template-nursing-landing-page-2 .stories .show-more a.open:after{
 	background-image:url("images/icon-show-less.png")
 }
-.page-template-landing-page .stories .story-feature,.page-template-nursing-landing-page-2 .stories .story-feature{
+.page-template-nursing-landing-page-2 .stories .story-feature{
 	padding-bottom:0
 }
 @media (max-width: 47.999em){
-/*	.page-template-landing-page .stories .story-full,.page-template-nursing-landing-page-2 .stories .story-full{*/
-	.page-id-1651 .stories .story-full{
-		display:block;
-	}
-	.page-template-landing-page .stories .story-full .text-content:after,.page-template-nursing-landing-page-2 .stories .story-full .text-content:after{
+	.page-template-nursing-landing-page-2 .stories .story-full .text-content:after{
 		content:"";
 		border-left:30px solid transparent;
 		border-right:30px solid transparent;
@@ -1830,21 +1824,21 @@ button.fs-dropdown-item:hover{
 	}
 }
 @media (min-width: 48em){
-	.page-template-landing-page .stories .story-feature,.page-template-nursing-landing-page-2 .stories .story-feature{
+	.page-template-nursing-landing-page-2 .stories .story-feature{
 		padding-bottom:32px;
 		overflow-x:hidden;
 	}
-	.page-template-landing-page .stories .story-full,.page-template-nursing-landing-page-2 .stories .story-full{
+	.page-template-nursing-landing-page-2 .stories .story-full{
 		display:none
 	}
-	.page-template-landing-page .stories .story-full:first-child,.page-template-nursing-landing-page-2 .stories .story-full:first-child,.page-template-landing-page .stories .field-excerpt,.page-template-landing-page .stories .field-permalink,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
+	.page-template-nursing-landing-page-2 .stories .story-full:first-child,.page-template-nursing-landing-page-2 .stories .field-excerpt,.page-template-nursing-landing-page-2 .stories .field-permalink{
 
 		display:block
 	}
-	.page-template-landing-page .stories .show-more,.page-template-nursing-landing-page-2 .stories .show-more{
+	.page-template-nursing-landing-page-2 .stories .show-more{
 		display:none
 	}
-	.page-template-landing-page .stories .field-excerpt a,.page-template-landing-page .stories .field-permalink a,.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
+	.page-template-nursing-landing-page-2 .stories .field-excerpt a,.page-template-nursing-landing-page-2 .stories .field-permalink a{
 		color:#c3a250;
 		text-decoration:none
 	}
@@ -3559,10 +3553,6 @@ th .smallText{
 	border:1px solid #ddd;
 }
 /* END style overrides for jQuery UI tabs */
-.page-id-4728 .section-heading h1{
-	position:absolute;
-	bottom:15px;
-}
 .pika-table{
 	table-layout:fixed;
 }
