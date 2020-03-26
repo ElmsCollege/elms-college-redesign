@@ -3422,26 +3422,6 @@ div.collapseomatic_content,.schema-faq-answer{
 	font-size:14px;
 	padding-top:.25em;
 }
-.template.embedDirectory-image .listText{
-	width:58%;
-}
-@media only screen and (max-width: 1040px) {
-	.template.embedDirectory-image .listText{
-		width:100%;
-	}
-}
-.template.embedDirectory-image li:first-child{
-	border-top:1px solid #eee;
-	padding-top:15px;
-}
-.embedDirectory-image .collapseomatic,.normalText .collapseomatic {
-    padding:2px 20px 2px 0;
-    border:none;
-}
-.embedDirectory-image .collapseomatic_content,.normalText .collapseomatic_content {
-    border:0;
-    padding:10px 0;
-}
 /* END styles for the embedded directory listing with images and bios*/
 /* BEGIN generic, universal, reusable styles */
 .small,figcaption{font-size:.8em;}
@@ -3558,12 +3538,6 @@ th .smallText{
 }
 .pika-day{
 	text-align: center !important;
-}
-.page-template-templateslanding-page-php .body-text{
-	max-width:85%;
-	min-width:250px;
-	display:table;
-	margin:auto;
 }
 .ui-widget-content{
 	border:none;
