@@ -194,18 +194,6 @@
       jQuery(".fs-dropdown-options button[data-value='" + optionValue + "']").addClass(optionClass);
     });
 
-    //interior landing page story expander.
-    $(".page-template-landing-page .show-more a").on("click touchstart", function (e) {
-      e.preventDefault();
-      $(this).parent().parent().find(".field-excerpt, .field-permalink").slideToggle();
-      if (!$(this).hasClass("open")) {
-        $(this).text("Show Less");
-      } else {
-        $(this).text("Show More");
-      }
-      $(this).toggleClass("open");
-    });
-
     //replace search menu text with icon and add dropdown.
     $('#masthead a[href*="/search/"]').each(function () {
       $(this).on("click touchstart", function (e) {
