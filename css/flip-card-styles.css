@@ -76,4 +76,43 @@
 .program:nth-child(odd) .program-back h3{
 	color:#000
 }
+/* BEGIN the liberal arts page (/academics/liberal-arts) has a special flipcard style */
+#lac {
+	--borderWidth: 5px;
+	background:#1D1F20;
+	position:relative;
+	border-radius:var(--borderWidth);
+	width:290px;
+	left:5px;
+	height:190px;
+	top:5px;
+}
+#lac:after {
+	content:'';
+	position:absolute;
+	top:calc(-1 * var(--borderWidth));
+	left:calc(-1 * var(--borderWidth));
+	height:calc(100% + var(--borderWidth) * 2);
+	width:calc(100% + var(--borderWidth) * 2);
+	background:linear-gradient(to right, #c3a250, #115438);
+	border-radius:calc(2 * var(--borderWidth));
+	z-index:-1;
+	animation:animatedborder 4s linear alternate infinite;
+	background-size:225% 200%;
+}
+#lac .program-back{
+	border:unset !important;
+}
+@keyframes animatedborder {
+	0%{
+		background-position:0% 50%;
+	}
+	50%{
+		background-position:100% 50%;
+	}
+	100%{
+		background-position:0% 50%;
+	}
+}
+/* END the liberal arts page special flipcard style */
 /* END the flip card styles for the /academics pages */
