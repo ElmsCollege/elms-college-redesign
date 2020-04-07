@@ -569,11 +569,20 @@ function be_register_blocks() {
 	acf_register_block_type( array(
 		'name'			=> 'quick-info',
 		'title'			=> __( 'Quick Info', 'clientname' ),
-		'render_template'	=> '/template-parts/blocks/quick-info.php',
+		'render_template'	=> '/template-parts/blocks/quick-info-block.php',
 		'category'		=> 'formatting',
-		'icon'			=> 'admin-users',
+		'icon'			=> 'buddicons-activity',
 		'mode'			=> 'auto',
-		'keywords'		=> array( 'quick info' )
+		'keywords'		=> array( '' )
+	));
+	acf_register_block_type( array(
+		'name'			=> 'curriculum',
+		'title'			=> __( 'Quick Info', 'clientname' ),
+		'render_template'	=> '/template-parts/blocks/curriculum-block.php',
+		'category'		=> 'formatting',
+		'icon'			=> 'dashicons-buddicons-activity',
+		'mode'			=> 'auto',
+		'keywords'		=> array( '' )
 	));
 
 }

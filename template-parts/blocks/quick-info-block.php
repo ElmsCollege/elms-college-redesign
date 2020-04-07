@@ -5,26 +5,41 @@
  * created by Ryan Millner
 **/
 ?>
-<div id="courses">
-    <?php
-          while ( have_rows('curriculum') ) : the_row();
-              $courseID=preg_replace("/\W+/", "_", get_sub_field('curriculum_program_name'));
-              echo "<div id='" .$courseID . "' class='collapseomatic noarrow'><h4>Click to view course requirements for the " .get_sub_field('curriculum_program_name') .((get_sub_field('curriculum_major_or_minor')=='minor')?' minor':"");
-              echo ".</h4></div><div id='swap-" .$courseID . "' class='collapseomatic noarrow' style='display: none;'><h4>Click to collapse the course requirements for the " .get_sub_field('curriculum_program_name') .((get_sub_field('curriculum_major_or_minor')=='minor')?' minor':"");
-              echo ".</h4></div><div class='collapseomatic_content' id='target-" .$courseID . "'>";
-              the_sub_field("curriculum_text");
-              if( have_rows('course_requirements_table_name') ):
-                  while ( have_rows('course_requirements_table_name') ) : the_row();
-                      echo "<h4 class='noMarginBottom noMarginTop'>" .get_sub_field('course_list_table_label') ."</h4><table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
-                      if( have_rows('course-list-repeater') ):
-                          while ( have_rows('course-list-repeater') ) : the_row();
-                              echo "<tr><td>" .get_sub_field('course_number') ."</td><td>" .get_sub_field('old_course_number') ."</td><td>" .get_sub_field('course_name') ."</td><td>" .get_sub_field('number_of_credits') ."</td></tr>";
-                          endwhile;
-                      endif;
-                      echo "</tbody></table>";
-                  endwhile;
-              endif;
-              echo "</div>";
-          endwhile;
-    ?>
-</div>
+<div class="pure-g quick-info-container">
+	<p>Quick info block</p>
+  <?php if ($quick_info_image) : ?>
+    <div class="field-sidebar-image pure-u-1 pure-u-lg-1-2" style="<?php print_acf_image_as_background_style($quick_info_image) ?>">
+      <img src="<?php print $quick_info_image["url"] ?>" alt="<?php print $quick_info_image["alt"] ?>">
+    </div>
+  <?php endif; ?>
+  <div id="quickinfo" class="quick-info">
+    <h2>Quick Info</h2>
+    <div class="quick-info-inner">
+      <?php if ($required_credits): ?>
+        <div class="field-required-credits">
+          <h3 class="noMarginTop">Required Credits</h3>
+          <p class="noMargins"><?php print $required_credits ?></p>
+        </div>
+      <?php endif; ?>
+      <?php if ($degree_option): ?>
+        <div class="field-degree-option">
+          <h3 class="noMarginTop">Degree Option</h3>
+          <p class="noMargins"><?php print $degree_option ?></p>
+        </div>
+      <?php endif; ?>
+      <?php if ($program_formats): ?>
+        <div class="field-program-formats">
+          <h3 class="noMarginTop">Program Formats</h3>
+          <p class="noMargins"><?php print $program_formats ?></p>
+        </div>
+      <?php endif; ?>
+      <?php if (!empty($misc_quick_info)): ?>
+        <div class="field-misc-quick-info">
+          <p class="noMargins"><?php print $misc_quick_info ?></p>
+        </div>
+      <?php 
+          endif;
+      ?>
+    </div><!-- end quick-info-inner -->
+  </div><!-- end quickInfo/quick-info -->
+</div><!-- pure-g quick-info-container -->
