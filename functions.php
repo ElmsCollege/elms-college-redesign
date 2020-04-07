@@ -560,3 +560,21 @@ if($GLOBALS["blog_id"] == 1){
 	}
 	add_action( 'init', 'cptui_register_my_cpts_lp' );
 }
+
+function be_register_blocks() {
+	
+	if( ! function_exists( 'acf_register_block_type' ) )
+		return;
+
+	acf_register_block_type( array(
+		'name'			=> 'quick-info',
+		'title'			=> __( 'Quick Info', 'clientname' ),
+		'render_template'	=> '/template-parts/blocks/quick-info.php',
+		'category'		=> 'formatting',
+		'icon'			=> 'admin-users',
+		'mode'			=> 'auto',
+		'keywords'		=> array( 'quick info' )
+	));
+
+}
+add_action('acf/init', 'be_register_blocks' );
