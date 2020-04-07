@@ -577,7 +577,7 @@ function be_register_blocks() {
 	));
 	acf_register_block_type( array(
 		'name'			=> 'curriculum',
-		'title'			=> __( 'Quick Info', 'clientname' ),
+		'title'			=> __( 'curriculum', 'clientname' ),
 		'render_template'	=> '/template-parts/blocks/curriculum-block.php',
 		'category'		=> 'formatting',
 		'icon'			=> 'dashicons-buddicons-activity',
