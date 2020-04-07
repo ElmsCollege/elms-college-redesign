@@ -571,7 +571,7 @@ function be_register_blocks() {
 		'title'			=> __( 'Quick Info', 'clientname' ),
 		'render_template'	=> '/template-parts/blocks/quick-info-block.php',
 		'category'		=> 'formatting',
-		'icon'			=> 'buddicons-activity',
+		'icon'			=> 'dashicons-buddicons-activity',
 		'mode'			=> 'auto',
 		'keywords'		=> array( '' )
 	));
