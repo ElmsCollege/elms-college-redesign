@@ -2866,7 +2866,7 @@ button.fs-dropdown-item:hover{
   line-height: 29px;
   vertical-align: middle;
 }
-.quick-info-container.block .quick-info-inner,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
+.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	padding:10px 25px;
 }
 .field-related-majors{
@@ -3444,7 +3444,7 @@ th .smallText{
 .noMargins{
 	margin:0!important;
 }
-.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure{
+.noMarginTop,.wp-block-image{
 	margin-top:0 !important;
 }
 .noMarginBottom,.wp-block-image{
