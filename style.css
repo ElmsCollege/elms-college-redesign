@@ -2853,7 +2853,13 @@ button.fs-dropdown-item:hover{
 	margin:0;
 	vertical-align:middle
 }
-.quick-info h2:before {
+.information-block h2{
+	font-size:21px;
+	padding:16px 32px;
+	margin:0;
+	vertical-align:middle
+}
+#quick-info h2:before,.quick-info h2:before{
   background: url("images/icon-info.png") no-repeat 0 0/cover;
   content: "";
   margin-right: 16px;
@@ -3489,8 +3495,8 @@ th .smallText{
 	text-transform:lowercase;
 }
 .greenBGwhiteText{
-	background-color:#115438;
-	color:#fff;
+	background-color:#115438 !important;
+	color:#fff !important;
 }
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
@@ -3583,9 +3589,11 @@ hr.wp-block-separator{
 	border:unset;
 	color:#004731;
 	font-weight:700;
-	padding-left:25px;
 	margin-top:0;
 	padding-top:10px;
+}
+.quick-info-inner #courses h4{
+	padding-left:25px;
 }
 #courses .collapseomatic_content{
 	border:unset;
