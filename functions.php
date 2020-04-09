@@ -560,30 +560,3 @@ if($GLOBALS["blog_id"] == 1){
 	}
 	add_action( 'init', 'cptui_register_my_cpts_lp' );
 }
-
-function be_register_blocks() {
-	
-	if( ! function_exists( 'acf_register_block_type' ) )
-		return;
-
-	acf_register_block_type( array(
-		'name'			=> 'quick-info',
-		'title'			=> __( 'Quick Info', 'clientname' ),
-		'render_template'	=> '/template-parts/blocks/quick-info-block.php',
-		'category'		=> 'formatting',
-		'icon'			=> 'dashicons-buddicons-activity',
-		'mode'			=> 'auto',
-		'keywords'		=> array( '' )
-	));
-	acf_register_block_type( array(
-		'name'			=> 'curriculum',
-		'title'			=> __( 'curriculum', 'clientname' ),
-		'render_template'	=> '/template-parts/blocks/curriculum-block.php',
-		'category'		=> 'formatting',
-		'icon'			=> 'dashicons-buddicons-activity',
-		'mode'			=> 'auto',
-		'keywords'		=> array( '' )
-	));
-
-}
-add_action('acf/init', 'be_register_blocks' );

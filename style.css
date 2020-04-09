@@ -2830,10 +2830,10 @@ button.fs-dropdown-item:hover{
 .page-template-nursing-secondary-landing-page .cta:nth-child(4):hover .permalink{
 	color:#413556 !important;
 }
-.quick-info-container{
+.information-block,.quick-info-container{
 	margin:32px 0;
 }
-.quick-info .quick-info-inner{
+.information-block .inner,.quick-info .quick-info-inner{
 	background:#f7f7f7;
 	border:2px solid #dcdcdc;
 	border-top:none
@@ -2841,9 +2841,6 @@ button.fs-dropdown-item:hover{
 .quick-info .field-misc-quick-info{
 	margin-top:0;
 	color:inherit
-}
-.quick-info .field-misc-quick-info h2,.quick-info .field-misc-quick-info h3,.quick-info .field-misc-quick-info h4,.quick-info .field-misc-quick-info h5{
-	margin-top:0
 }
 .field-misc-quick-info ul {
 	margin:0;
@@ -2866,7 +2863,7 @@ button.fs-dropdown-item:hover{
   line-height: 29px;
   vertical-align: middle;
 }
-.quick-info-container.block .quick-info-inner,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
+.information-block .inner,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	padding:10px 25px;
 }
 .field-related-majors{
