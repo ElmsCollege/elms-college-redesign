@@ -3005,7 +3005,7 @@ button.fs-dropdown-item:hover{
 	width:100%;
 	position:relative;
 }
-.wp-block-lazyblock-banner-story-image img{
+.wp-block-lazyblock-banner-story-image .banner-story-image{
 	display:block;
 }
 .wp-block-lazyblock-banner-story-image .text-content{
@@ -3028,19 +3028,6 @@ button.fs-dropdown-item:hover{
 .wp-block-lazyblock-banner-story-image .text-content h2{
 	font-size:28px;
 }
-.wp-block-lazyblock-banner-story-image .text-content p{
-	margin-bottom:1em;
-}
-.wp-block-lazyblock-banner-story-image .text-content .field-body{
-	font-size:18px;
-}
-.wp-block-lazyblock-banner-story-image .text-content .field-body a{
-	color:#c3a250;
-	text-decoration:none;
-}
-.wp-block-lazyblock-banner-story-image .text-content .field-body a:hover{
-	color:#fff;
-}
 .wp-block-lazyblock-banner-story-image .text-content ul, .quick-info ul {
 	padding-left: 20px;
 }
@@ -3053,24 +3040,9 @@ button.fs-dropdown-item:hover{
 .wp-block-lazyblock-banner-story-image a.permalink{
 	padding:10px 0;
 	display:inline-block;
-	text-decoration:none;
-	position:relative;
 }
-.wp-block-lazyblock-banner-story-image a.permalink:after{
-	background: url("images/arrow-more-24px.png") no-repeat 0 0/cover;
-	content: "";
-	margin-left: 1em;
-	display: inline-block;
-	vertical-align: bottom;
-	position: relative;
-}
-@media (min-width: 48em){
-	.wp-block-lazyblock-banner-story-image a.permalink:after{
-		position:relative;
-		right:-3%;
-		top:0;
-		margin-left:0;
-	}
+.wp-block-lazyblock-banner-story-image a.img{
+	vertical-align:bottom;
 }
 .admin-bar #masthead{
 	margin-top:32px;
@@ -3567,11 +3539,11 @@ th .smallText{
 }
 .greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6,.greenBGwhiteText a,.greenBGwhiteText a:visited{
 	background-color:#115438;
-	color:#fff;
+	color:#fff !important;
 }
 .goldBGwhiteText,.goldBGwhiteText a,.goldBGwhiteText a:visited{
 	background-color:#c3a250;
-	color:#fff;
+	color:#fff !important;
 }
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
