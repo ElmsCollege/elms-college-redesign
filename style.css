@@ -3491,6 +3491,10 @@ th .smallText{
 .lowercase{
 	text-transform:lowercase;
 }
+.greenBGwhiteText{
+	background-color:#115438;
+	color:#fff;
+}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
