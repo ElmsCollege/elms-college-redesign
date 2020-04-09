@@ -3494,7 +3494,7 @@ th .smallText{
 .lowercase{
 	text-transform:lowercase;
 }
-.greenBGwhiteText{
+.greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6{
 	background-color:#115438 !important;
 	color:#fff !important;
 }
