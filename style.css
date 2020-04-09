@@ -3007,14 +3007,10 @@ button.fs-dropdown-item:hover{
 }
 .wp-block-lazyblock-banner-story-image img{
 	display:block;
-	width:100%;
-	height:auto;
 }
 .wp-block-lazyblock-banner-story-image .text-content{
-	background-color:#115438;
 	position:relative;
 	z-index:1;
-	color:#fff;
 	width:100%;
 	margin:0;
 	padding:10px 25px;
@@ -3054,8 +3050,36 @@ button.fs-dropdown-item:hover{
 		padding:0;
 	}
 }
-.wp-block-lazyblock-banner-story-image .story,a.permalink {
+.wp-block-lazyblock-banner-story-image a.permalink{
 	padding:10px 0;
+	display:inline-block;
+	text-decoration:none;
+	text-align:center;
+	position:relative;
+}
+.wp-block-lazyblock-banner-story-image a.permalink:after{
+	background: url("images/arrow-more.png") no-repeat 0 0/cover;
+	content: "";
+	width: 24px;
+	height: 24px;
+	margin-left: 1em;
+	display: inline-block;
+	position:absolute
+}
+.wp-block-lazyblock-banner-story-image a.permalink:after {
+	line-height: 24px;
+	vertical-align: bottom;
+	position: relative;
+	right: auto;
+	top: auto;
+}
+@media (min-width: 48em){
+	.wp-block-lazyblock-banner-story-image a.permalink:after{
+		position:relative;
+		right:-3%;
+		top:0;
+		margin-left:0;
+	}
 }
 .admin-bar #masthead{
 	margin-top:32px;
@@ -3550,11 +3574,11 @@ th .smallText{
 .lowercase{
 	text-transform:lowercase;
 }
-.greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6{
+.greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6,.greenBGwhiteText a,.greenBGwhiteText a:visited{
 	background-color:#115438;
 	color:#fff;
 }
-.goldBGwhiteText{
+.goldBGwhiteText,.goldBGwhiteText a,.goldBGwhiteText a:visited{
 	background-color:#c3a250;
 	color:#fff;
 }
