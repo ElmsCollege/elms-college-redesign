@@ -48,7 +48,7 @@ get_template_part("template-parts/page-heading");
 	<img src="<?php print $story_background["url"] ?>" alt="<?php print($story_background["alt"]) ?>" />              
     <?php endif;?>
     <?php if ($story_body || $story_title) : ?>
-      <div class="text-content">
+      <div class="text-content green-arrow-border-top">
           <h2 class="field-title noMarginTop">
             <?php print($story_title) ?>
           </h2>

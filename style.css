@@ -2867,7 +2867,7 @@ button.fs-dropdown-item:hover{
   line-height: 29px;
   vertical-align: middle;
 }
-.information-block .inner,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
+.inner-padding,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	padding:10px 25px;
 }
 .field-related-majors{
@@ -2964,16 +2964,6 @@ button.fs-dropdown-item:hover{
 	margin:0;
 	padding:10px 25px;
 }
-.section-heading-as-content .text-content:after{
-	content:"";
-	border-top:none;
-	border-right:30px solid transparent;
-	border-left:30px solid transparent;
-	border-bottom:40px solid #115438;
-	position:absolute;
-	right:calc(50% - 30px);
-	top:-40px;
-}
 .section-heading-as-content .text-content h2{
 	font-size:28px;
 }
@@ -2999,23 +2989,7 @@ button.fs-dropdown-item:hover{
 		padding:0;
 	}
 }
-.wp-block-lazyblock-banner-story-image{
-	margin:0 0 10px auto;
-	padding:0;
-	width:100%;
-	position:relative;
-}
-.wp-block-lazyblock-banner-story-image .banner-story-image{
-	display:block;
-}
-.wp-block-lazyblock-banner-story-image .text-content{
-	position:relative;
-	z-index:1;
-	width:100%;
-	margin:0;
-	padding:10px 25px;
-}
-.wp-block-lazyblock-banner-story-image .text-content:after{
+.green-arrow-border-top:after{
 	content:"";
 	border-top:none;
 	border-right:30px solid transparent;
@@ -3025,17 +2999,22 @@ button.fs-dropdown-item:hover{
 	right:calc(50% - 30px);
 	top:-40px;
 }
-.wp-block-lazyblock-banner-story-image .text-content h2{
+.wp-block-lazyblock-banner-story-image{
+	padding:0;
+	width:100%;
+	position:relative;
+}
+.wp-block-lazyblock-banner-story-image .banner-story-image{
+	display:block;
+}
+.wp-block-lazyblock-banner-story-image .inner-padding{
+	position:relative;
+}
+.wp-block-lazyblock-banner-story-image h2{
 	font-size:28px;
 }
-.wp-block-lazyblock-banner-story-image .text-content ul, .quick-info ul {
+.wp-block-lazyblock-banner-story-image .inner-padding ul{
 	padding-left: 20px;
-}
-@media all and (min-width: 1040px){
-	.wp-block-lazyblock-banner-story-image {
-		margin-bottom:10px;
-		padding:0;
-	}
 }
 .wp-block-lazyblock-banner-story-image a.permalink{
 	padding:10px 0;
