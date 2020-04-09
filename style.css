@@ -2856,8 +2856,6 @@ button.fs-dropdown-item:hover{
 .information-block h2{
 	font-size:21px;
 	padding:16px 32px;
-	margin:0;
-	vertical-align:middle
 }
 #quick-info h2:before,.quick-info h2:before{
   background: url("images/icon-info.png") no-repeat 0 0/cover;
@@ -2997,6 +2995,61 @@ button.fs-dropdown-item:hover{
 }
 @media all and (min-width: 1040px){
 	.section-heading-as-content {
+		margin-bottom:10px;
+		padding:0;
+	}
+}
+.wp-block-lazyblock-banner-story-image{
+	margin:0 0 10px auto;
+	padding:0;
+	width:100%;
+	position:relative;
+}
+.wp-block-lazyblock-banner-story-image img{
+	display:block;
+	width:100%;
+	height:auto;
+}
+.wp-block-lazyblock-banner-story-image .text-content{
+	background-color:#115438;
+	position:relative;
+	z-index:1;
+	color:#fff;
+	width:100%;
+	margin:0;
+	padding:10px 25px;
+}
+.wp-block-lazyblock-banner-story-image .text-content:after{
+	content:"";
+	border-top:none;
+	border-right:30px solid transparent;
+	border-left:30px solid transparent;
+	border-bottom:40px solid #115438;
+	position:absolute;
+	right:calc(50% - 30px);
+	top:-40px;
+}
+.wp-block-lazyblock-banner-story-image .text-content h2{
+	font-size:28px;
+}
+.wp-block-lazyblock-banner-story-image .text-content p{
+	margin-bottom:1em;
+}
+.wp-block-lazyblock-banner-story-image .text-content .field-body{
+	font-size:18px;
+}
+.wp-block-lazyblock-banner-story-image .text-content .field-body a{
+	color:#c3a250;
+	text-decoration:none;
+}
+.wp-block-lazyblock-banner-story-image .text-content .field-body a:hover{
+	color:#fff;
+}
+.wp-block-lazyblock-banner-story-image .text-content ul, .quick-info ul {
+	padding-left: 20px;
+}
+@media all and (min-width: 1040px){
+	.wp-block-lazyblock-banner-story-image {
 		margin-bottom:10px;
 		padding:0;
 	}
