@@ -848,7 +848,6 @@ a:hover,a:active{
 	height: auto !important;
 	max-height: unset !important;
 	min-height: unset !important;
-	background: #115438 !important;
 }
 .section-heading{
 	display:flex;
@@ -922,12 +921,10 @@ a:hover,a:active{
 .social-media .social-media-inner{
 	margin:32px 0;
 	padding:30px 0;
-	background:#115438;
 	text-align:center;
 }
 .social-media .field-social_media_title{
 	margin:0 auto .35em;
-	color:#fff
 }
 .social-media .social-media-icons{
 	margin:0 auto;
@@ -2812,7 +2809,7 @@ button.fs-dropdown-item:hover{
 .information-block,.quick-info-container{
 	margin:32px 0;
 }
-.information-block .inner,.quick-info .quick-info-inner{
+.information-block .inner-padding,.quick-info .quick-info-inner{
 	background:#f7f7f7;
 	border:2px solid #dcdcdc;
 	border-top:none

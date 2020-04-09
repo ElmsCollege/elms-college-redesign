@@ -11,7 +11,7 @@ if( get_field('header_background_image') ){
 	echo '}</style>';
 	echo '<div id="imageHeading" class="section-heading">';
 }else{
-	echo '<div id="textHeading" class="section-heading">';
+	echo '<div id="textHeading" class="section-heading greenBGwhiteText">';
 }?>
 	<h1 class="field-title trace">
 		<?php 
