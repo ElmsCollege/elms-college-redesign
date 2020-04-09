@@ -3041,7 +3041,7 @@ button.fs-dropdown-item:hover{
 	padding:10px 0;
 	display:inline-block;
 }
-.wp-block-lazyblock-banner-story-image a.img{
+.wp-block-lazyblock-banner-story-image a img{
 	vertical-align:bottom;
 }
 .admin-bar #masthead{
