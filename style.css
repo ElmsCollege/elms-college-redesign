@@ -1408,21 +1408,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	margin:0;
 	list-style-type:none;
 }
-.field-sidebar-image{
-	display:block;
-	margin-bottom:32px;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:50%;
-}
-@media (min-width: 64em){
-	.field-sidebar-image{
-		border-right:32px solid #fff;
-	}
-}
-.field-sidebar-image img{
-	opacity:0;
-}
 .field-sidebar-content{
 	padding:10px;
 	background-color:#115438;
@@ -1436,29 +1421,25 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	font-weight:700;
 	margin-bottom:.75em;
 }
-.field-sidebar-content h2,.field-sidebar-content h3,.field-sidebar-content h4,.field-related-events h3{
+.field-sidebar-content h3,.field-sidebar-content h4,.field-related-events h3{
 	font-size:14px;
 	margin-top:0;
 	margin-bottom:.25em;
 	color:#c3a250;
-	line-height:1.5em;
+
 }
 .field-sidebar-content h2{
 	font-size:21px;
 	color:#fff;
+	margin-top:0;
 	margin-bottom:.5em;
+	line-height:1.5em;
 }
-.field-sidebar-content a{
+.field-sidebar-content a,.field-sidebar-content a:hover,.field-sidebar-content a:visited{
 	text-decoration:underline;
 	color:#fff;
 	font-size:.9em;
-}
-.field-sidebar-content a:hover{
 	font-weight:700;
-	color:#fff;
-}
-.field-sidebar-content a:visited {
-	color:#fff;
 }
 .field-related-events{
 	padding:10px;
@@ -3660,7 +3641,6 @@ hr.wp-block-separator{
 }
 
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
-.field-sidebar-content .field-sidebar-content{padding:unset;margin-bottom:unset;line-height:inherit;}
 a.text.requestInfo-trigger{
 	display:inline-block !important;
 	max-width:unset;
