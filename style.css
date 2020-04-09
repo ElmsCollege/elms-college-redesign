@@ -2286,10 +2286,8 @@ button.fs-dropdown-item:hover{
 }
 #libraryPage .section-heading-as-content .text-content{
 	padding:56px 64px .1px;
-	background-color:#115438;
 	position:relative;
 	z-index:1;
-	color:#fff
 }
 @media (max-width: 47.999em){
 	#libraryPage .section-heading-as-content .text-content{
