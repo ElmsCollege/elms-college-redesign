@@ -3054,24 +3054,15 @@ button.fs-dropdown-item:hover{
 	padding:10px 0;
 	display:inline-block;
 	text-decoration:none;
-	text-align:center;
 	position:relative;
 }
 .wp-block-lazyblock-banner-story-image a.permalink:after{
-	background: url("images/arrow-more.png") no-repeat 0 0/cover;
+	background: url("images/arrow-more-24px.png") no-repeat 0 0/cover;
 	content: "";
-	width: 24px;
-	height: 24px;
 	margin-left: 1em;
 	display: inline-block;
-	position:absolute
-}
-.wp-block-lazyblock-banner-story-image a.permalink:after {
-	line-height: 24px;
 	vertical-align: bottom;
 	position: relative;
-	right: auto;
-	top: auto;
 }
 @media (min-width: 48em){
 	.wp-block-lazyblock-banner-story-image a.permalink:after{
