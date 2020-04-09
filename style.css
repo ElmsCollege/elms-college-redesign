@@ -3054,6 +3054,9 @@ button.fs-dropdown-item:hover{
 		padding:0;
 	}
 }
+.wp-block-lazyblock-banner-story-image .story,a.permalink {
+	padding:10px 0;
+}
 .admin-bar #masthead{
 	margin-top:32px;
 }
@@ -3548,8 +3551,12 @@ th .smallText{
 	text-transform:lowercase;
 }
 .greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6{
-	background-color:#115438 !important;
-	color:#fff !important;
+	background-color:#115438;
+	color:#fff;
+}
+.goldBGwhiteText{
+	background-color:#c3a250;
+	color:#fff;
 }
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
