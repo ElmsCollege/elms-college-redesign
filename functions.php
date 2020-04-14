@@ -352,11 +352,9 @@ function real_homepage_link () {
 function gs_is_active_sidebar () {
   global $post;
   $sidebar_calls_to_action = get_field("sidebar_calls_to_action");
-  $sidebar_image = get_field("sidebar_image");
-  $sidebar_content = get_field("sidebar_content");
   $sidebar_menu_items = get_field("sidebar_menu_items");
   
-  return ( ($sidebar_calls_to_action) || ($sidebar_image) || ($sidebar_content) || ($sidebar_menu_items) || $post->post_parent != 0);
+  return ( ($sidebar_calls_to_action) || ($sidebar_menu_items) || $post->post_parent != 0);
 }
 
 add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );

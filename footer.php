@@ -13,7 +13,7 @@
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer pure-g" role="contentinfo">
 		<div class="fullWidth social-media">
-			<div class="social-media-inner">
+			<div class="social-media-inner greenBGwhiteText">
 				<p class="pre-title">
 					Stay Connected
 				</p>

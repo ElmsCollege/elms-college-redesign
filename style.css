@@ -671,12 +671,10 @@ a:hover,a:active{
 	line-height:1em;
 	padding:20px 30px;
 }
-.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,
-.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
+.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
 	display:none
 }
-.mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,
-.mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
+.mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,.mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
 	position:relative;
 	margin:0;
 	padding:16px 21px;
@@ -848,7 +846,6 @@ a:hover,a:active{
 	height: auto !important;
 	max-height: unset !important;
 	min-height: unset !important;
-	background: #115438 !important;
 }
 .section-heading{
 	display:flex;
@@ -922,12 +919,10 @@ a:hover,a:active{
 .social-media .social-media-inner{
 	margin:32px 0;
 	padding:30px 0;
-	background:#115438;
 	text-align:center;
 }
 .social-media .field-social_media_title{
 	margin:0 auto .35em;
-	color:#fff
 }
 .social-media .social-media-icons{
 	margin:0 auto;
@@ -1038,27 +1033,12 @@ a:hover,a:active{
 	margin-left:auto;
 	margin-right:auto
 }
-.clear:before,.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after{
+.clear:before,.clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after{
 	content:"";
 	display:table;
 	table-layout:fixed
 }
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after{
+.clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{
 	clear:both
 }
 .widget{
@@ -1408,21 +1388,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	margin:0;
 	list-style-type:none;
 }
-.field-sidebar-image{
-	display:block;
-	margin-bottom:32px;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:50%;
-}
-@media (min-width: 64em){
-	.field-sidebar-image{
-		border-right:32px solid #fff;
-	}
-}
-.field-sidebar-image img{
-	opacity:0;
-}
 .field-sidebar-content{
 	padding:10px;
 	background-color:#115438;
@@ -1436,29 +1401,24 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	font-weight:700;
 	margin-bottom:.75em;
 }
-.field-sidebar-content h2,.field-sidebar-content h3,.field-sidebar-content h4,.field-related-events h3{
+.field-sidebar-content h3,.field-sidebar-content h4,.field-related-events h3{
 	font-size:14px;
 	margin-top:0;
 	margin-bottom:.25em;
 	color:#c3a250;
-	line-height:1.5em;
 }
 .field-sidebar-content h2{
 	font-size:21px;
 	color:#fff;
+	margin-top:0;
 	margin-bottom:.5em;
+	line-height:1.5em;
 }
-.field-sidebar-content a{
+.field-sidebar-content a,.field-sidebar-content a:hover,.field-sidebar-content a:visited{
 	text-decoration:underline;
 	color:#fff;
 	font-size:.9em;
-}
-.field-sidebar-content a:hover{
 	font-weight:700;
-	color:#fff;
-}
-.field-sidebar-content a:visited {
-	color:#fff;
 }
 .field-related-events{
 	padding:10px;
@@ -2305,10 +2265,8 @@ button.fs-dropdown-item:hover{
 }
 #libraryPage .section-heading-as-content .text-content{
 	padding:56px 64px .1px;
-	background-color:#115438;
 	position:relative;
 	z-index:1;
-	color:#fff
 }
 @media (max-width: 47.999em){
 	#libraryPage .section-heading-as-content .text-content{
@@ -2830,10 +2788,10 @@ button.fs-dropdown-item:hover{
 .page-template-nursing-secondary-landing-page .cta:nth-child(4):hover .permalink{
 	color:#413556 !important;
 }
-.quick-info-container{
+.information-block,.quick-info-container{
 	margin:32px 0;
 }
-.quick-info .quick-info-inner{
+.information-block .inner-padding,.quick-info .quick-info-inner{
 	background:#f7f7f7;
 	border:2px solid #dcdcdc;
 	border-top:none
@@ -2841,9 +2799,6 @@ button.fs-dropdown-item:hover{
 .quick-info .field-misc-quick-info{
 	margin-top:0;
 	color:inherit
-}
-.quick-info .field-misc-quick-info h2,.quick-info .field-misc-quick-info h3,.quick-info .field-misc-quick-info h4,.quick-info .field-misc-quick-info h5{
-	margin-top:0
 }
 .field-misc-quick-info ul {
 	margin:0;
@@ -2856,7 +2811,11 @@ button.fs-dropdown-item:hover{
 	margin:0;
 	vertical-align:middle
 }
-.quick-info h2:before {
+.information-block h2{
+	font-size:21px;
+	padding:16px 32px;
+}
+#quick-info h2:before,.quick-info h2:before{
   background: url("images/icon-info.png") no-repeat 0 0/cover;
   content: "";
   margin-right: 16px;
@@ -2866,7 +2825,7 @@ button.fs-dropdown-item:hover{
   line-height: 29px;
   vertical-align: middle;
 }
-.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
+.inner-padding,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
 	padding:10px 25px;
 }
 .field-related-majors{
@@ -2963,16 +2922,6 @@ button.fs-dropdown-item:hover{
 	margin:0;
 	padding:10px 25px;
 }
-.section-heading-as-content .text-content:after{
-	content:"";
-	border-top:none;
-	border-right:30px solid transparent;
-	border-left:30px solid transparent;
-	border-bottom:40px solid #115438;
-	position:absolute;
-	right:calc(50% - 30px);
-	top:-40px;
-}
 .section-heading-as-content .text-content h2{
 	font-size:28px;
 }
@@ -2997,6 +2946,40 @@ button.fs-dropdown-item:hover{
 		margin-bottom:10px;
 		padding:0;
 	}
+}
+.green-arrow-border-top:after{
+	content:"";
+	border-top:none;
+	border-right:30px solid transparent;
+	border-left:30px solid transparent;
+	border-bottom:40px solid #115438;
+	position:absolute;
+	right:calc(50% - 30px);
+	top:-40px;
+}
+.wp-block-lazyblock-banner-story-image{
+	padding:0;
+	width:100%;
+	position:relative;
+}
+.wp-block-lazyblock-banner-story-image .banner-story-image{
+	display:block;
+}
+.wp-block-lazyblock-banner-story-image .inner-padding{
+	position:relative;
+}
+.wp-block-lazyblock-banner-story-image h2{
+	font-size:28px;
+}
+.wp-block-lazyblock-banner-story-image .inner-padding ul{
+	padding-left: 20px;
+}
+.wp-block-lazyblock-banner-story-image a.permalink{
+	padding:10px 0;
+	display:inline-block;
+}
+.wp-block-lazyblock-banner-story-image a img{
+	vertical-align:bottom;
 }
 .admin-bar #masthead{
 	margin-top:32px;
@@ -3444,7 +3427,7 @@ th .smallText{
 .noMargins{
 	margin:0!important;
 }
-.noMarginTop,.wp-block-image{
+.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure{
 	margin-top:0 !important;
 }
 .noMarginBottom,.wp-block-image{
@@ -3490,6 +3473,14 @@ th .smallText{
 }
 .lowercase{
 	text-transform:lowercase;
+}
+.greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6,.greenBGwhiteText a,.greenBGwhiteText a:visited{
+	background-color:#115438;
+	color:#fff !important;
+}
+.goldBGwhiteText,.goldBGwhiteText a,.goldBGwhiteText a:visited{
+	background-color:#c3a250;
+	color:#fff !important;
 }
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
@@ -3582,9 +3573,11 @@ hr.wp-block-separator{
 	border:unset;
 	color:#004731;
 	font-weight:700;
-	padding-left:25px;
 	margin-top:0;
 	padding-top:10px;
+}
+.quick-info-inner #courses h4{
+	padding-left:25px;
 }
 #courses .collapseomatic_content{
 	border:unset;
@@ -3625,7 +3618,6 @@ hr.wp-block-separator{
 }
 
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
-.field-sidebar-content .field-sidebar-content{padding:unset;margin-bottom:unset;line-height:inherit;}
 a.text.requestInfo-trigger{
 	display:inline-block !important;
 	max-width:unset;

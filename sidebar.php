@@ -16,7 +16,6 @@ setup_postdata($post);
  *
  * @package Elms_College_Redesign
  */
-$sidebar_content = get_field("sidebar_content", $fake_id);
 $sidebar_menu_items = get_field("sidebar_menu_items", $fake_id);
 
 $event_sources = get_field("event_sources", $fake_id);
@@ -99,12 +98,6 @@ else {
     </li>
   <?php  endforeach; endif; ?>
 </ul>
-
-<?php if ($sidebar_content) : ?>
-  <div class="field-sidebar-content fromField">
-    <?php print $sidebar_content  ?>
-  </div>
-<?php endif; ?>
 
 <?php if ($events) : ?>
 <div class="field-related-events">

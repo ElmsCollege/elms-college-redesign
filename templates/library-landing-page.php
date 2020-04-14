@@ -25,7 +25,7 @@ get_template_part("template-parts/header-selector");
         <?php if (get_the_post_thumbnail_url()): ?>
           <?php the_post_thumbnail() ?>
         <?php endif;?>
-        <div class="text-content">
+        <div class="text-content greenBGwhiteText">
           <h1 class="noMargins">
             <?php the_title() ?>
           </h1>
