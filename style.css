@@ -671,12 +671,10 @@ a:hover,a:active{
 	line-height:1em;
 	padding:20px 30px;
 }
-.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,
-.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
+.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
 	display:none
 }
-.mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,
-.mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
+.mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,.mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
 	position:relative;
 	margin:0;
 	padding:16px 21px;
@@ -1035,27 +1033,12 @@ a:hover,a:active{
 	margin-left:auto;
 	margin-right:auto
 }
-.clear:before,.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after{
+.clear:before,.clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after{
 	content:"";
 	display:table;
 	table-layout:fixed
 }
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after{
+.clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{
 	clear:both
 }
 .widget{
@@ -1423,7 +1406,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	margin-top:0;
 	margin-bottom:.25em;
 	color:#c3a250;
-
 }
 .field-sidebar-content h2{
 	font-size:21px;
