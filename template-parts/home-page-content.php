@@ -96,7 +96,27 @@ setup_postdata($post);
       </div>
       
 		<div id="news" class="flexRowWrapStart spaceBetween news-events-feature">
-			<div class="news">
+			<div class="events flexHalf">
+				<h2 class="centerText noMarginTop">Events</h2>
+				<?php if( isset($events[0])) : ?>
+               		<?php display_homepage_event($events[0])?>
+           		<?php endif; ?>
+				<?php if( isset($events[1])) : ?>
+               		<?php display_homepage_event($events[1])?>
+           		<?php endif; ?>
+				<?php if( isset($events[2])) : ?>
+               		<?php display_homepage_event($events[2])?>
+           		<?php endif; ?>
+				<?php if( isset($events[3])) : ?>
+               		<?php display_homepage_event($events[3])?>
+           		<?php endif; ?>
+				<div class="more-button-container">
+					<a class="more-button" href="/events/">
+						More Events
+					</a>
+				</div>
+			</div>
+			<div class="news flexHalf listText">
 				<h2 class="centerText noMarginTop">News</h2>
 				<?php 
 					echo do_shortcode("[wbcr_snippet id='37429']");

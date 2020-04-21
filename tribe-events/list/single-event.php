@@ -88,7 +88,7 @@ $organizer = tribe_get_organizer();
 <!-- Event Content -->
 <?php do_action( 'tribe_events_before_the_content' ); ?>
 <div class="tribe-events-list-event-description tribe-events-content description entry-summary normalText">
-	<?php echo do_shortcode("[expand title='Click here to learn more' swaptitle=' ']<p>" .get_first_paragraph() ."</p><a href='" .esc_url( tribe_get_event_link() ) ."' class='tribe-events-read-more'  rel='bookmark'>Full event details <i class='fas fa-arrow-right' aria-hidden='true'></i></a>[/expand]"); ?>
+	<?php echo do_shortcode("[expand title='Click here to learn more' swaptitle=' ']" .get_first_paragraph() ."<a href='" .esc_url( tribe_get_event_link() ) ."' class='tribe-events-read-more'  rel='bookmark'>Full event details <i class='fas fa-arrow-right' aria-hidden='true'></i></a>[/expand]"); ?>
 </div><!-- .tribe-events-list-event-description -->
 <?php
 do_action( 'tribe_events_after_the_content' );
