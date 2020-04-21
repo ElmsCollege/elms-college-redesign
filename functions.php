@@ -500,13 +500,11 @@ add_filter('acf/format_value/type=text', 'do_shortcode');
 
 function get_first_paragraph(){
     global $post;
-		$str = get_the_content();
-		$str = preg_replace("/<img[^>]+>/i", " ", $str);          
-		$str = apply_filters('the_content', $str);
-		$str = str_replace(']]>', ']]>', $str);
-		$str = substr ( $str, 0, strpos( $str, '</p>' ) + 4 );
-		$str = strip_tags($str);
-		return $str;
+	$str = wpautop( get_the_content() );
+	$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+	$str = strip_tags($str, '<a><strong><em>');
+
+	return '<p>' . $str . '</p>';
 }
 
 //we only want the advertising landing page  subsite
