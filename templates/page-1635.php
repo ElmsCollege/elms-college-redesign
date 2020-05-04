@@ -1,7 +1,6 @@
 <?php
 /**
- * Template Name: Campus Map template
- * This template has been customized to display the SVG-based campus map.
+ * This template has been customized to display the SVG-based campus map (/campus-map), page-id #1635
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
