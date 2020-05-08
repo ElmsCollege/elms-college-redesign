@@ -3482,16 +3482,6 @@ th .smallText{
 	background-color:#c3a250;
 	color:#fff !important;
 }
-.alignfull {
-	margin:32px calc(50% - 50vw);
-	max-width:100vw;
-	width:100vw;
-}
-.alignwide {
-	margin: 32px calc(25% - 25vw);
-	max-width: 100vw;
-	width: 100vw;
-}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
