@@ -1,12 +1,6 @@
 <?php
 /**
- * Template Name: Tuition Page
- * This template has been customized to display the master tuition table.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * This template has been customized to display the master tuition table, page-id #35268.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

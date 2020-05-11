@@ -832,6 +832,9 @@ a:hover,a:active{
 .alert-bar.emergency{
 	background:#ca2c04;
 }
+.alert-bar.emergency a,.alert-bar.emergency a:visited{
+	color:#fff;
+}
 @keyframes colorchange{0%{background:#004731}50%{background:#335635}100%{background:#004731}}
 @-webkit-keyframes colorchange{0%{background:#004731}25%{background:#335635}100%{background:#004731}}@keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}@-webkit-keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}
 .section-heading{
@@ -3031,9 +3034,11 @@ button.fs-dropdown-item:hover{
 	right: 0;
 	padding: 10px;
 	border-bottom-left-radius: 10px;
-	opacity: .7;
 	text-align: center;
+	background-color: #115438;
+	opacity: 1;
 }
+#hero-overlay{display:none;}
 #highlight_news:hover {
 	opacity:1;
 }
@@ -3044,7 +3049,7 @@ button.fs-dropdown-item:hover{
 }
 #highlight_news_link{
 	display: block;
-	color: #046B99;
+	color: #fff;
 	font-style: italic;
 }
 #highlight_news_link a:visited{
@@ -3186,6 +3191,11 @@ div.collapseomatic_content,.schema-faq-answer{
 	background-color:#fff!important;
 	color:#046B99!important;
 	border:2px solid #045b99!important;
+}
+.is-style-outline a:hover{
+	color:#fff !important;
+	background-color:#115438 !important;
+	border:2px solid #115438 !important;
 }
 #secondary .widget-title{
 	display:none;
@@ -3427,7 +3437,7 @@ th .smallText{
 .noMargins{
 	margin:0!important;
 }
-.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure{
+.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content :first-child{
 	margin-top:0 !important;
 }
 .noMarginBottom,.wp-block-image{
@@ -3482,6 +3492,14 @@ th .smallText{
 	background-color:#c3a250;
 	color:#fff !important;
 }
+.bold{font-weight:700;}
+p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
+.c-accordion__content {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 25px;
+}
+.wp-block-lazyblock-stories-carousel{margin-bottom:25px;}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
@@ -3630,3 +3648,11 @@ a.text.requestInfo-trigger{
 .page-id-38313 #primary{background-image:url("https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg");max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438}
+
+
+@media screen and (max-width:600px){
+	#homepageAwardIcons{display:none;}
+}
+.left25 li{
+	margin-left:25px;
+}
