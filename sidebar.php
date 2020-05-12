@@ -18,12 +18,6 @@ setup_postdata($post);
  */
 $sidebar_menu_items = get_field("sidebar_menu_items", $fake_id);
 
-$event_sources = get_field("event_sources", $fake_id);
-$events = false;
-if ($event_sources) {
-  $events = get_upcoming_events(3, $event_sources);
-}
-
 $generated_menu_items = array();
 if ($post->post_parent == 0) {
   $generated_menu_items[]= $post->ID;
@@ -99,28 +93,6 @@ else {
   <?php  endforeach; endif; ?>
 </ul>
 
-<?php if ($events) : ?>
-<div class="field-related-events">
-  <h3>Events</h3>
-  <ul class="ulreset">
-    <?php foreach ($events as $index=>$event) : ?>
-      <li>
-        <div class="times">
-          <span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "M d, g:i A"))?></span> -
-          <span class="end-time"><?php print str_ireplace(tribe_get_start_date($event, false, "M d,"), "", str_ireplace(":00", "", tribe_get_end_date($event, false, "M d, g:i A"))) ?></span>
-        </div>
-        <h4 class="field-title"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h4>
-        <a class="permalink" href="<?php print get_the_permalink($event) ?>">Read More</a>
-      </li>
-
-    <?php endforeach; ?>
-  </ul>
-  <?php if (sizeof($events) > 1) : ?>
-    <a href="#" class="show-more">See More Events</a>
-    <a href="#" class="show-less">See Fewer Events</a>
-  <?php endif; ?>
-</div>
-<?php endif; ?>
 <?php
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
