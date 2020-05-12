@@ -18,11 +18,13 @@ setup_postdata($post);
  */
 $sidebar_menu_items = get_field("sidebar_menu_items", $fake_id);
 
+/*
 $event_sources = get_field("event_sources", $fake_id);
 $events = false;
 if ($event_sources) {
   $events = get_upcoming_events(3, $event_sources);
 }
+*/
 
 $generated_menu_items = array();
 if ($post->post_parent == 0) {
