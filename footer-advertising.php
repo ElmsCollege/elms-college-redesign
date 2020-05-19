@@ -26,8 +26,7 @@ $address = get_field("address", "option");
 								echo '<a href="tel:' .get_field('footer_phone_number') .'">' .get_field('footer_phone_number') .'</a>';
 							}
 						?>
-						
-						<a href="tel:4135942761">413-594-2761</a></p>
+					</p>
   		</div><!-- .site-branding -->
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
