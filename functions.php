@@ -547,17 +547,6 @@ if($GLOBALS["blog_id"] == 1){
 		"query_var" => true,
 		"menu_icon" => "dashicons-admin-page",
 		"supports" => [ "title", "editor" ],
-		'template' => array(
-		  array( 'core/image', array() ),
-		  array( 'advgb/columns', array('className' => 'site-main standalone'), array(
-			array( 'advgb/column', array(), array() ),
-			array( 'advgb/column', array(), array(
-			  array( 'core/heading', array('level' => 2,'className' => 'noMarginTop','placeholder' => 'Classes start...' ) ),
-			  array( 'core/paragraph', array('content' => 'Applying to Elms College is easier than you think, and there’s no fee to apply.') ),
-			  array( 'core/block', array('ref' => 39825) ),
-			) ),
-		  ) )
-		),
 	  ];
 	  register_post_type( "lp", $args );
 	}
