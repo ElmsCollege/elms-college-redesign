@@ -23,7 +23,7 @@
 #advertising-landing-page footer .footer-item-inner{
 	margin-bottom:0;
 }
-.display-post-types{
+.wp-block-columns,.display-post-types{
 	max-width:90%;
 	margin:auto;
 }
