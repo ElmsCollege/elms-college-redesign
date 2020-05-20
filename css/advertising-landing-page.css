@@ -30,6 +30,6 @@
 #advertising-landing-page #content .wp-block-lazyblock-landing-page-header{
 	max-width:unset !important;
 }
-p:last-child{
+#advertising-landing-page p:last-child{
 	margin-bottom:1.5em;
 }
