@@ -10,9 +10,6 @@
 	display:table;
 	margin:0 auto;
 }
-#advertising-landing-page .section-heading{
-	background-color:unset;
-}
 #advertising-landing-page footer{
 	display:table;
 	margin:0 auto;
@@ -23,7 +20,12 @@
 #advertising-landing-page footer .footer-item-inner{
 	margin-bottom:0;
 }
-.wp-block-columns,.display-post-types{
+.dpt-title{
+	font-size:25px;
+}
+#advertising-landing-page #page{
 	max-width:90%;
-	margin:auto;
+}
+#advertising-landing-page #page .wp-block-lazyblock-landing-page-header{
+	max-width:unset !important;
 }
