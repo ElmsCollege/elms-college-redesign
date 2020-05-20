@@ -23,9 +23,10 @@
 .dpt-title{
 	font-size:25px;
 }
-#advertising-landing-page #page{
+#advertising-landing-page #content>div{
 	max-width:90%;
+	margin:0 auto;
 }
-#advertising-landing-page #page .wp-block-lazyblock-landing-page-header{
+#advertising-landing-page #content .wp-block-lazyblock-landing-page-header{
 	max-width:unset !important;
 }
