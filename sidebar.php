@@ -43,13 +43,6 @@ else {
 ?>
 <aside class="page-sidebar pure-u-1 pure-u-md-5-12 pure-u-lg-1-3" role="complementary">
 
-<div id="debugger" style="display: none;">
-  event sources
-  <?php var_dump($event_sources)?>
-  events
-  <?php var_dump($events)?>
-</div>
-
 <?php if(!is_tax()) :?>
 
 <?php if ( !empty($generated_menu_items) ) : ?>
