@@ -14,7 +14,5 @@
 
 get_template_part("template-parts/header-selector");
 get_template_part("template-parts/program-page-content");
- ?>
 
-<?php
 get_footer();
