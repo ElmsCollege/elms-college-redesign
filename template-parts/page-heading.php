@@ -5,11 +5,6 @@
 if( get_field('header_background_image') ){
 	echo '<div id="imageHeading" class="section-heading usingSmartCrop">';
 	echo wp_get_attachment_image( get_field('header_background_image'), 'full', "", array( "role" => "presentation", "alt" => "" ) );
-}elseif( get_field('featured_image_cropped') ){
-	echo '<style>#imageHeading.section-heading{';
-		print_featured_image_style($post->ID);
-	echo '}</style>';
-	echo '<div id="imageHeading" class="section-heading">';
 }else{
 	echo '<div id="textHeading" class="section-heading greenBGwhiteText">';
 }?>
