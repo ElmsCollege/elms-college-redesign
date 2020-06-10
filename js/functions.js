@@ -38,10 +38,6 @@
       e.preventDefault();
     });
 
-    $(window).resize(function () {
-      $('img.js-focal-point-image').responsify();
-    });
-
     // copying special section nav (library, school of nursing, subdomains) into the mobile menu
     var specialNavItems = [];
     $("#special-section-menu > li").each(function () {
@@ -296,30 +292,6 @@
       }
     }, 5000);
 
-    //JS for the Gutenberg FAQ blocks
-    jQuery(".schema-faq-section").each(function () {
-      jQuery(".schema-faq-question img").each(function () {
-        var src = jQuery(this).attr("data-src");
-        var split = src.split("/");
-        var file = split[split.length - 1];
-        var name = file.split(".")[0];
-        jQuery(this).attr({
-          id: name
-        });
-      });
-      jQuery(".schema-faq-question").each(function (index) {
-        jQuery(this).attr({
-          class: "schema-faq-question collapseomatic noarrow",
-          id: index
-        });
-      });
-      jQuery(".schema-faq-answer").each(function (index) {
-        jQuery(this).css("display", "none").attr({
-          class: "schema-faq-answer collapseomatic_content",
-          id: "target-" + index
-        });
-      });
-    }); //end JS for the Gutenberg FAQ blocks
     jQuery('.requestInfo-close-trigger').click(function () {
       jQuery('#requestInfo').removeClass('is-open').attr("aria-hidden", "true");
     });
