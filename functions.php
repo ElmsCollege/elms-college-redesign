@@ -684,7 +684,7 @@ add_action('pre_get_posts', function($query){
     $result = $wpdb->get_results($test_query);
 
     // if no match, return default query, or if there's no parent post, this is not necessary
-    if (!($post = current($result)) || !$post->post_parent) {
+    if (!($post == current($result)) || !$post->post_parent) {
       return $original_query;
     }
 
