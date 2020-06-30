@@ -578,14 +578,136 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
-add_filter( 'register_post_type_args', 'add_hierarchy_support', 10, 2 );
-function add_hierarchy_support( $args, $post_type ){
+add_action('registered_post_type', 'make_posts_hierarchical', 10, 2 );
 
-    if ($post_type === 'post') { // <-- enter desired post type here
+// Runs after each post type is registered
+function make_posts_hierarchical($post_type, $pto){
 
-        $args['hierarchical'] = true;
-        $args['supports'] = array_merge($args['supports'], array ('page-attributes') );
+    // Return, if not post type posts
+    if ($post_type != 'post') return;
+
+    // access $wp_post_types global variable
+    global $wp_post_types;
+
+    // Set post type "post" to be hierarchical
+    $wp_post_types['post']->hierarchical = 1;
+
+    // Add page attributes to post backend
+    // This adds the box to set up parent and menu order on edit posts.
+    add_post_type_support( 'post', 'page-attributes' );
+
+}
+
+/**
+ * Get parent post slug
+ * 
+ * Helpful function to get the post name of a posts parent
+ */
+function get_parent_post_slug($post) {
+  if (!is_object($post) || !$post->post_parent) {
+    return false;
+  }
+
+  return get_post($post->post_parent)->post_name;
+}
+
+/**
+ * 
+ * Edit View of Permalink
+ * 
+ * This affects editing permalinks, and $permalink is an array [template, replacement]
+ * where replacement is the post_name and template has %postname% in it.
+ * 
+ **/
+add_filter('get_sample_permalink', function($permalink, $post_id, $title, $name, $post) {
+  if ($post->post_type != 'post' || !$post->post_parent) {
+    return $permalink;
+  }
+
+  // Deconstruct the permalink parts
+  $template_permalink = current($permalink);
+  $replacement_permalink = next($permalink);
+
+  // Find string
+  $postname_string = '/%postname%/';
+
+  // Get parent post
+  $parent_slug = get_parent_post_slug($post);
+
+  $altered_template_with_parent_slug = '/' . $parent_slug . $postname_string;
+  $new_template = str_replace($postname_string, $altered_template_with_parent_slug, $template_permalink);
+
+  $new_permalink = [$new_template, $replacement_permalink];
+
+  return $new_permalink;
+}, 99, 5);
+
+/**
+ * Alter the link to the post
+ * 
+ * This affects get_permalink, the_permalink etc. 
+ * This will be the target of the edit permalink link too.
+ * 
+ * Note: only fires on "post" post types.
+ */
+add_filter('post_link', function($post_link, $post, $leavename){
+
+  if ($post->post_type != 'post' || !$post->post_parent) {
+    return $post_link;
+  }
+
+  $parent_slug = get_parent_post_slug($post);
+  $new_post_link = str_replace($post->post_name, $parent_slug . '/' . $post->post_name, $post_link);
+
+  return $new_post_link;
+}, 99, 3);
+
+/**
+ * Before getting posts
+ * 
+ * Has to do with routing... adjusts the main query settings
+ * 
+ */
+add_action('pre_get_posts', function($query){
+  global $wpdb, $wp_query;
+
+  $original_query = $query;
+  $uri = $_SERVER['REQUEST_URI'];
+
+  // Do not do this post check all the time
+  if ( $query->is_main_query() && !is_admin()) {
+
+    // get the post_name
+    $basename = basename($uri);
+    // find out if we have a post that matches this post_name
+    $test_query = sprintf("select * from $wpdb->posts where post_type = '%s' and post_name = '%s';", 'post', $basename);
+    $result = $wpdb->get_results($test_query);
+
+    // if no match, return default query, or if there's no parent post, this is not necessary
+    if (!($post = current($result)) || !$post->post_parent) {
+      return $original_query;
     }
 
-    return $args;
-}
+    // get the parent slug
+    $parent_slug = get_parent_post_slug($post);
+    // concat the parent slug with the post_name to get most of the url
+    $hierarchal_slug = $parent_slug . '/' . $post->post_name;
+
+    // if the concat of parent-slug/post-name is not in the uri, this is not the right post.
+    if (!stristr($uri, $hierarchal_slug)) {
+      return $original_query;
+    }
+
+    // pretty high confidence that we need to override the query.
+    $query->query_vars['post_type'] = ['post'];
+    $query->is_home     = false; 
+    $query->is_page     = true;  
+    $query->is_single   = true; 
+    $query->queried_object_id = $post->ID;  
+    $query->set('page_id', $post->ID);
+
+    return $query;
+  }
+
+
+}, 1);
