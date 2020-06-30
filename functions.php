@@ -577,3 +577,15 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
+
+add_filter( 'register_post_type_args', 'add_hierarchy_support', 10, 2 );
+function add_hierarchy_support( $args, $post_type ){
+
+    if ($post_type === 'post') { // <-- enter desired post type here
+
+        $args['hierarchical'] = true;
+        $args['supports'] = array_merge($args['supports'], array ('page-attributes') );
+    }
+
+    return $args;
+}
