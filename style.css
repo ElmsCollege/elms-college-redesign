@@ -1353,13 +1353,12 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	color:#000
 }
 .page-sidebar a{
-	color:#046B99;
 	text-decoration:none
 }
 .page-sidebar a:hover{
 	color:#000
 }
-.site-main a:visited,.page-sidebar a:visited{
+.site-main a:visited{
 	color:#046B99;
 }
 
@@ -1489,24 +1488,23 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	display:none;
 	font-weight:700;
 }
-.parent-sidebar-menu .page_item a{
+.parent-sidebar-menu a{
 	display:block;
 	padding:6px;
 	color:#333;
-	text-decoration:none;
 	width:100%;
 	border-bottom:1px solid #dcdcdc;
 }
-.parent-sidebar-menu .page_item.current_page_item>a{
+.parent-sidebar-menu .current_page_item>a{
 	color:#046B99
-}
-.parent-sidebar-menu .children .page_item a{
-	border-bottom:unset;
 }
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
 	font-size:.7em;
 	padding-left:15px;
+}
+.parent-sidebar-menu .children a{
+	border-bottom:unset;
 }
 iframe{
 	border:unset;
