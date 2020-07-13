@@ -1403,7 +1403,8 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 }
 .parent-sidebar-menu .ui-state-active, .parent-sidebar-menu .ui-state-default {
 	background:none;
-	border:0 0 1px solid #dcdcdc 0;
+	border:0;
+	border-bottom:1px solid #dcdcdc;
 	border-radius:0;
 }
 .parent-sidebar-menu .ui-icon {
