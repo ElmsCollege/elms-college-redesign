@@ -1391,38 +1391,39 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	list-style-type:none;
 }
 .parent-sidebar-menu .collapsible {
-  position:relative;
+	position:relative;
 }
 .parent-sidebar-menu .collapsible a::after {
-  position:absolute;
-  right:5px;
-  line-height:1em;
+	position:absolute;
+	right:5px;
+	line-height:1em;
 }
 .parent-sidebar-menu .ui-widget {
-  font-family:inherit;
+	font-family:inherit;
 }
 .parent-sidebar-menu .ui-state-active, .parent-sidebar-menu .ui-state-default {
-  background:none;
-  border:unset;
+	background:none;
+	border:0 0 1px solid #dcdcdc 0;
+	border-radius:0;
 }
 .parent-sidebar-menu .ui-icon {
-  display:none;
+	display:none;
 }
 .parent-sidebar-menu .ui-accordion .ui-accordion-content {
-  padding:unset;
+	padding:unset;
 }
 .parent-sidebar-menu .ui-accordion .ui-accordion-header {
-  font-weight:bold;
-  padding-left:6px;
+	font-weight:bold;
+	padding-left:6px;
 }
 .parent-sidebar-menu .collapsible .children li {
-  font-size:12px;
+	font-size:12px;
 }
 .parent-sidebar-menu .collapsible a.ui-state-default::after {
-  content:"+";
+	content:"+";
 }
 .parent-sidebar-menu .collapsible a.ui-state-active::after {
-  content:"-";
+	content:"-";
 }
 .field-sidebar-content{
 	padding:10px;
