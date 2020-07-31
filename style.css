@@ -1390,42 +1390,37 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	margin:0;
 	list-style-type:none;
 }
-.parent-sidebar-menu .collapsible {
+/* BEGIN code for collapsible nav bar */
+.parent-sidebar-menu ul:not(.level-1-children){
+	padding-left:20px !important;
+	font-size:12px !important;
+	border:unset;
+}
+.inner:not(.level-1-children){
+	overflow:hidden;
+	display:none;
+	}
+.show{
+	display:block;
+}
+.current_page_item,.current_page_item:visited,.current_page_item:hover{
+	color:#046b99;
+}
+.parent-sidebar-menu .toggle::after{
+    content:"+";
+}
+.parent-sidebar-menu .toggle.minus::after {
+    content:"-";
+}
+.parent-sidebar-menu .toggle{
 	position:relative;
 }
-.parent-sidebar-menu .collapsible a::after {
-	position:absolute;
-	right:5px;
-	line-height:1em;
+.parent-sidebar-menu .toggle::after {
+    position:absolute;
+    right:5px;
+    line-height:1em;
 }
-.parent-sidebar-menu .ui-widget {
-	font-family:inherit;
-}
-.parent-sidebar-menu .ui-state-active, .parent-sidebar-menu .ui-state-default {
-	background:none;
-	border:0;
-	border-bottom:1px solid #dcdcdc;
-	border-radius:0;
-}
-.parent-sidebar-menu .ui-icon {
-	display:none;
-}
-.parent-sidebar-menu .ui-accordion .ui-accordion-content {
-	padding:unset;
-}
-.parent-sidebar-menu .ui-accordion .ui-accordion-header {
-	font-weight:bold;
-	padding-left:6px;
-}
-.parent-sidebar-menu .collapsible .children li {
-	font-size:12px;
-}
-.parent-sidebar-menu .collapsible a.ui-state-default::after {
-	content:"+";
-}
-.parent-sidebar-menu .collapsible a.ui-state-active::after {
-	content:"-";
-}
+/* END code for collapsible nav bar */
 .field-sidebar-content{
 	padding:10px;
 	background-color:#115438;
@@ -3533,6 +3528,9 @@ p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
 	margin-bottom: 25px;
 }
 .wp-block-lazyblock-stories-carousel{margin-bottom:25px;}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    max-width:100px;
+}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
