@@ -127,7 +127,7 @@
 
       $('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore($('.site-main'));
 
-      jQuery('ul.parent-sidebar-menu li:not(.toggle)').each(function (index) {
+      jQuery('ul.parent-sidebar-menu li:not(.toggle-parent)').each(function (index) {
         var parent = jQuery(jQuery(this).parent()).attr('class');
         var value = jQuery(jQuery(this).find('a').get(0)).text();
         var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
