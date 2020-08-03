@@ -3324,6 +3324,10 @@ div.collapseomatic_content,.schema-faq-answer{
 	border:unset!important;
 	z-index:10;
 }
+.fs-dropdown-options .inner {
+	display:unset;
+	padding-left:30px;
+}
 .social-media .social-media-icons a.social-media-icon-link:hover {
 	border: 2px solid #c3a250;
 }
