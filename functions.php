@@ -370,13 +370,6 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-function inject_fontawesome() {
-    ?>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <?php
-}
-add_action('wp_footer', 'inject_fontawesome');
-
 add_action('admin_head', 'hide_custom_field_on_events');
 function hide_custom_field_on_events () {
   ?> 
