@@ -132,9 +132,9 @@
         var value = jQuery(jQuery(this).find('a').get(0)).text();
         var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
         jQuery('select.opening-select').append(newOptionFromNav);
-        if (parent == "children") {
+//        if (parent == "children") {
           newOptionFromNav.addClass(parent);
-        }
+ //       }
       });
     }
     if ($('.opening-select').length) {
