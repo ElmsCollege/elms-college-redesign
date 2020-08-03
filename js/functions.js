@@ -133,7 +133,7 @@
         var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
         jQuery('select.opening-select').append(newOptionFromNav);
         if (parent == "children") {
-          newOptionFromNav.addClass("child");
+          newOptionFromNav.addClass(parent);
         }
       });
     }
@@ -151,7 +151,7 @@
 
       var realMenuSelector = ".opening-menu li";
       if ($(".parent-sidebar-menu").length) {
-        realMenuSelector = ".parent-sidebar-menu li";
+        realMenuSelector = ".parent-sidebar-menu li:not(.toggle-parent)";
       }
       $("body").on("blur change", "select.fs-dropdown-element", function (e) {
         var selectedOption = $(this).val();
