@@ -3328,9 +3328,14 @@ div.collapseomatic_content,.schema-faq-answer{
 	display:unset;
 	padding-left:30px;
 }
+.fs-dropdown-options .child-level{
+	padding-left:30px;
+}
+/*
 .fs-dropdown-options .inner.level-2-inner,.fs-dropdown-options .inner.level-3-inner{
 	padding-left:15px;
 }
+*/
 .social-media .social-media-icons a.social-media-icon-link:hover {
 	border: 2px solid #c3a250;
 }
