@@ -731,7 +731,7 @@ function hide_domain_in_permalink_on_admin () {
       echo '<ul class="level-' . $current_level . '-children">';
     } else {
       echo '<ul id="' . $parentId . '" class="inner level-' . $current_level . '-inner">';
-      echo '<li><a href="' . get_permalink( $parentId ) . '" class="' . $current_level . '-child"' . ( ( $curId == $parentId ) ? ' current_page_item' : '' ) . '">' . get_the_title( $parentId ) . '</a></li>';
+      echo '<li><a href="' . get_permalink( $parentId ) . '" class="first ' . $current_level . '-child"' . ( ( $curId == $parentId ) ? ' current_page_item' : '' ) . '">' . get_the_title( $parentId ) . '</a></li>';
     };
 
     foreach ( $children as $child ) {
