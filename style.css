@@ -1531,8 +1531,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 }
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
-	font-size:.7em;
-	padding-left:15px;
 }
 .parent-sidebar-menu .children a{
 	border-bottom:unset;
@@ -3490,7 +3488,7 @@ th .smallText{
 .noMarginLeft{
 	margin-left:0 !important;
 }
-.centerText{
+.centerText.wp-block-table figcaption{
 	text-align:center;
 	width:100%;
 }
@@ -3702,4 +3700,23 @@ a.text.requestInfo-trigger{
 }
 .left25 li{
 	margin-left:25px;
+}
+.wp-block-lazyblock-acf-curriculum-fields,.wp-block-lazyblock-quick-info,.wp-block-lazyblock-testimonial{
+	margin-top:15px;
+}
+#advertising-landing-page .dpt-title a{
+	font-size:25px;
+}
+.postid-45493 .section-heading{
+	background-image:unset !important;
+}
+.maxwidth{
+	width:100vw !important;
+}
+.ctct-form-defaults{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+.noMarginTop h4.c-accordion__title{
+	margin-top:0;
 }
