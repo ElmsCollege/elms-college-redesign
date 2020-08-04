@@ -129,10 +129,10 @@
       jQuery('ul.parent-sidebar-menu li:not(.toggle-parent)').each(function (index) {
         var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
         var value = jQuery(jQuery(this).find('a').get(0)).text();
-        var newOptionFromNav = jQuery('<option class="' + linkClass + '" value="' + (index + 1) + '">' + value + '</option>');
+        var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
         jQuery('select.opening-select').append(newOptionFromNav);
 //        if (parent == "children") {
-//          newOptionFromNav.addClass(linkClass);
+          newOptionFromNav.addClass(linkClass);
  //       }
       });
     }
