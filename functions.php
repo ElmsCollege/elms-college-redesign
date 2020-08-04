@@ -731,7 +731,7 @@ function hide_domain_in_permalink_on_admin () {
       echo '<ul class="level-' . $current_level . '-children">';
     } else {
       echo '<ul id="' . $parentId . '" class="inner level-' . $current_level . '-inner">';
-      echo '<li><a href="' . get_permalink( $parentId ) . '" class="child-level' . ( ( $curId == $parentId ) ? ' current_page_item' : '' ) . '">' . get_the_title( $parentId ) . '</a></li>';
+      echo '<li><a href="' . get_permalink( $parentId ) . '" class="' . ( ( $curId == $parentId ) ? ' current_page_item' : '' ) . '">' . get_the_title( $parentId ) . '</a></li>';
     };
 
     foreach ( $children as $child ) {
@@ -742,7 +742,7 @@ function hide_domain_in_permalink_on_admin () {
         echo '<a href="javascript:void(0);" class="toggle">' . get_the_title( $child->ID ) . '</a>';
       } else {
         echo '<li>';
-        echo '<a href="' . get_permalink( $child->ID ) . '" class="child-level ' . ( ( $curId == $child->ID ) ? ' current_page_item' : '' ) . '">' . get_the_title( $child->ID ) . '</a>';
+        echo '<a href="' . get_permalink( $child->ID ) . '" class="' . ( ( $curId == $child->ID ) ? ' current_page_item' : '' ) . '">' . get_the_title( $child->ID ) . '</a>';
       };
 
       if ( count( $next_generation ) > 0 ) {
