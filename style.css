@@ -1723,7 +1723,9 @@ button.fs-dropdown-item:hover{
 button.child-1,button.first.child-2{padding-left:15px;}
 button.child-2,button.first.child-3{padding-left:30px;}
 button.child-3,button.first.child-4{padding-left:45px;}
-button.child-4{padding-left:60px;}
+button.child-4,button.first.child-5{padding-left:60px;}
+button.child-5,button.first.child-6{padding-left:75px;}
+button.child-6{padding-left:90px;}
 @media (min-width: 72em){
 	.opening-menu{
 		display:flex;
