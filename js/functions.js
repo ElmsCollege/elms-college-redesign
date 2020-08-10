@@ -29,7 +29,6 @@
         });
       }
     });
-
     var is_iPad = (navigator != null && navigator.userAgent != null && navigator.userAgent.match(/iPad|iPhone|iPod/i) != null);
 
     // show more sidebar events 
@@ -127,14 +126,12 @@
 
       $('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore($('.site-main'));
 
-      jQuery('ul.parent-sidebar-menu li').each(function (index) {
-        var parent = jQuery(jQuery(this).parent()).attr('class');
-        var value = jQuery(jQuery(this).find('a').get(0)).text();
-        var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
-        jQuery('select.opening-select').append(newOptionFromNav);
-        if (parent == "children") {
-          newOptionFromNav.addClass("child");
-        }
+      jQuery('ul.parent-sidebar-menu li:not(.toggle-parent)').each(function (index) {
+		  var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
+		  var value = jQuery(jQuery(this).find('a').get(0)).text();
+		  var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
+		  jQuery('select.opening-select').append(newOptionFromNav);
+		  newOptionFromNav.addClass(linkClass);
       });
     }
     if ($('.opening-select').length) {
@@ -151,7 +148,7 @@
 
       var realMenuSelector = ".opening-menu li";
       if ($(".parent-sidebar-menu").length) {
-        realMenuSelector = ".parent-sidebar-menu li";
+        realMenuSelector = ".parent-sidebar-menu li:not(.toggle-parent)";
       }
       $("body").on("blur change", "select.fs-dropdown-element", function (e) {
         var selectedOption = $(this).val();
@@ -309,7 +306,34 @@
     }
     /* end extra FB tracking for specific events */
 
+	  /* BEGIN collapsible left rail nav JS code */
+		function collapsibleNav(e) {
+			e.preventDefault();
 
+			var $this = jQuery(this);
+
+			if ($this.next().hasClass('show')) {//next works because the <a> is a sibling to the ul.inner
+				$this.next().removeClass('show');
+				$this.next().slideUp(350);
+			} else {
+				$this.parent().parent().find('li .inner').removeClass('show');
+				$this.parent().parent().find('li .inner').slideUp(350);
+				$this.next().toggleClass('show');
+				$this.next().slideToggle(350);
+			}
+		}
+
+		jQuery('.toggle').click(collapsibleNav);
+		
+		jQuery('.toggle').click(function(){
+			var $this = jQuery(this);
+			
+			jQuery(".toggle").not( $this.parents().prev() ).removeClass("minus");
+			if($this.next().hasClass('show')){
+				$this.addClass("minus");
+			}
+		});
+	  /* END collapsible left rail nav JS code */
   }); //end doc.ready
 
 })(jQuery, window, document);

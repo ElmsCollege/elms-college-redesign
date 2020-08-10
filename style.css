@@ -1353,13 +1353,12 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	color:#000
 }
 .page-sidebar a{
-	color:#046B99;
 	text-decoration:none
 }
 .page-sidebar a:hover{
 	color:#000
 }
-.site-main a:visited,.page-sidebar a:visited{
+.site-main a:visited{
 	color:#046B99;
 }
 
@@ -1391,6 +1390,37 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	margin:0;
 	list-style-type:none;
 }
+/* BEGIN code for collapsible nav bar */
+.parent-sidebar-menu ul:not(.level-1-children){
+	padding-left:20px !important;
+	font-size:12px !important;
+	border:unset;
+}
+.inner:not(.level-1-children){
+	overflow:hidden;
+	display:none;
+	}
+.show{
+	display:block;
+}
+.current_page_item,.current_page_item:visited,.current_page_item:hover{
+	color:#046b99;
+}
+.parent-sidebar-menu .toggle::after{
+    content:"+";
+}
+.parent-sidebar-menu .toggle.minus::after {
+    content:"-";
+}
+.parent-sidebar-menu .toggle{
+	position:relative;
+}
+.parent-sidebar-menu .toggle::after {
+    position:absolute;
+    right:5px;
+    line-height:1em;
+}
+/* END code for collapsible nav bar */
 .field-sidebar-content{
 	padding:10px;
 	background-color:#115438;
@@ -1489,24 +1519,21 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	display:none;
 	font-weight:700;
 }
-.parent-sidebar-menu .page_item a{
+.parent-sidebar-menu a{
 	display:block;
 	padding:6px;
 	color:#333;
-	text-decoration:none;
 	width:100%;
 	border-bottom:1px solid #dcdcdc;
 }
-.parent-sidebar-menu .page_item.current_page_item>a{
+.parent-sidebar-menu .current_page_item>a{
 	color:#046B99
-}
-.parent-sidebar-menu .children .page_item a{
-	border-bottom:unset;
 }
 .parent-sidebar-menu .children li{
 	border-bottom:1px solid #dcdcdc;	
-	font-size:.7em;
-	padding-left:15px;
+}
+.parent-sidebar-menu .children a{
+	border-bottom:unset;
 }
 iframe{
 	border:unset;
@@ -1693,6 +1720,12 @@ button.fs-dropdown-item:hover{
 .opening-menu .fs-dropdown-item.child{
 	padding-left:50px;
 }
+button.child-1,button.first.child-2{padding-left:15px;}
+button.child-2,button.first.child-3{padding-left:30px;}
+button.child-3,button.first.child-4{padding-left:45px;}
+button.child-4,button.first.child-5{padding-left:60px;}
+button.child-5,button.first.child-6{padding-left:75px;}
+button.child-6{padding-left:90px;}
 @media (min-width: 72em){
 	.opening-menu{
 		display:flex;
@@ -3029,7 +3062,6 @@ button.fs-dropdown-item:hover{
 #highlight_news{
 	font-size: 23px;
 	position: absolute;
-	background-color:#fff;
 	top:0;
 	right: 0;
 	padding: 10px;
@@ -3296,6 +3328,18 @@ div.collapseomatic_content,.schema-faq-answer{
 	border:unset!important;
 	z-index:10;
 }
+.fs-dropdown-options .inner {
+	display:unset;
+	padding-left:30px;
+}
+.fs-dropdown-options .child-level{
+	padding-left:30px;
+}
+/*
+.fs-dropdown-options .inner.level-2-inner,.fs-dropdown-options .inner.level-3-inner{
+	padding-left:15px;
+}
+*/
 .social-media .social-media-icons a.social-media-icon-link:hover {
 	border: 2px solid #c3a250;
 }
@@ -3446,7 +3490,7 @@ th .smallText{
 .noMarginLeft{
 	margin-left:0 !important;
 }
-.centerText{
+.centerText.wp-block-table figcaption{
 	text-align:center;
 	width:100%;
 }
@@ -3500,6 +3544,9 @@ p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
 	margin-bottom: 25px;
 }
 .wp-block-lazyblock-stories-carousel{margin-bottom:25px;}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    max-width:100px;
+}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
@@ -3655,4 +3702,23 @@ a.text.requestInfo-trigger{
 }
 .left25 li{
 	margin-left:25px;
+}
+.wp-block-lazyblock-acf-curriculum-fields,.wp-block-lazyblock-quick-info,.wp-block-lazyblock-testimonial{
+	margin-top:15px;
+}
+#advertising-landing-page .dpt-title a{
+	font-size:25px;
+}
+.postid-45493 .section-heading{
+	background-image:unset !important;
+}
+.maxwidth{
+	width:100vw !important;
+}
+.ctct-form-defaults{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+.noMarginTop h4.c-accordion__title{
+	margin-top:0;
 }
