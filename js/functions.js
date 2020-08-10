@@ -321,7 +321,7 @@
 				$this.next().toggleClass('show');
 				$this.next().slideToggle(350);
 			}
-		};
+		}
 
 		jQuery('.toggle').click(collapsibleNav);
 		
