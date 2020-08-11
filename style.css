@@ -3547,6 +3547,9 @@ p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     max-width:100px;
 }
+.has-text-color a:visited{
+	color:inherit
+}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
