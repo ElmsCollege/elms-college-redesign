@@ -138,13 +138,6 @@ function gs_elms_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'gs_elms_scripts');
 
-function multisite_scripts() {
-	$blog_id = get_current_blog_id();
-	if( 2 == $blog_id){//commencement subsite
-	wp_enqueue_style( 'commencement', get_template_directory_uri() . '/css/commencement.css', array(), '1' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'multisite_scripts', 20 );
 // Remove dashicons in frontend for unauthenticated users
 add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
 function bs_dequeue_dashicons() {

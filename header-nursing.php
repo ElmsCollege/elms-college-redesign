@@ -8,6 +8,7 @@
  *
  * @package Elms_College_Redesign
  */
+wp_enqueue_style( 'nursing-stylesheet', get_stylesheet_directory_uri() . '/css/nursing.css', '1.0.0', 'all' );
 
 add_filter( 'body_class', function( $classes ) {
 	return array_merge( $classes, array( 'mobile-or-library' ) );
