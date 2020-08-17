@@ -26,7 +26,7 @@ get_template_part("template-parts/header-selector");
 	get_template_part("template-parts/page-heading");
 	?>
 	<?php if (!empty($top_menu)) : ?>
-        <ul class="opening-menu ulreset spaceBetween">
+        <ul class="opening-menu is-style-none spaceBetween">
 	            <?php foreach ($top_menu as $index=>$program) :
 	                $title = $program["title"];
 	                $link = $program["link"]?>
@@ -132,7 +132,7 @@ get_template_part("template-parts/header-selector");
 			</div>
 		</div>
         <div>
-            <ul class="program-list noMargins ulreset">
+            <ul class="program-list noMargins is-style-none">
               <?php foreach ($program_repeater[$x]["programs"] as $index=>$program) : 
                 $title = $program["program_title"];
                 $content = $program["program_content"];
