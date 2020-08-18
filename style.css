@@ -1594,11 +1594,11 @@ a.text.requestInfo-trigger{
 	padding:.25em;
 	border:1px solid #CCC
 }
-table:not(.tribe-events-calendar) th,.wp-block-advgb-table thead td{
+table:not(.tribe-events-calendar) th{
 	font-weight:700;
 	font-size:16px;
 }
-table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd),.wp-block-advgb-table thead td{
+table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe_events{
@@ -2192,59 +2192,6 @@ button.child-6{padding-left:90px;}
   line-height: 29px;
   vertical-align: middle;
 }
-.inner-padding,.field-required-credits,.field-degree-option,.field-program-formats,.field-misc-quick-info{
-	padding:10px 25px;
-}
-.field-related-majors{
-	position:relative;
-	text-transform:uppercase;
-	margin:-1px 0 0 auto
-}
-.field-related-majors ul{
-	background:#c3a250;
-	font-size:18px;
-	list-style-type:none;
-	display:block;
-	padding:0;
-	margin:0;
-	text-align:center;
-}
-.field-related-majors ul li:last-child{
-	border-right:none;
-	border-bottom:none;
-}
-.field-related-majors ul li a{
-	color:#fff !important;
-	display:inline-block;
-	text-decoration:none;
-	width:100%;
-	vertical-align:middle;
-	position:relative;
-}
-.field-related-majors ul li a:after,.event .permalink:after,.field-related-events ul a:after{
-	background: url("images/arrow-more.png") no-repeat 0 0/cover;
-	content: "";
-	width: 24px;
-	height: 24px;
-	margin-left: 1em;
-	display: inline-block;
-	position:absolute
-}
-.field-related-majors ul li a:after {
-	line-height: 24px;
-	vertical-align: bottom;
-	position: relative;
-	right: auto;
-	top: auto;
-}
-@media (min-width: 48em){
-	.field-related-majors ul li a:after{
-		position:relative;
-		right:-3%;
-		top:0;
-		margin-left:0;
-	}
-}
 .lower-story{
 	padding:10px 25px;
 	margin-top:10px;
@@ -2262,7 +2209,7 @@ button.child-6{padding-left:90px;}
 	font-size:24px;
 	margin:5px 0 0;
 	text-transform:capitalize;
-	line-height: 1.5em;
+	line-height:1.5em;
 	color:#fff;
 }
 .lower-story .field-lower-story-content{
