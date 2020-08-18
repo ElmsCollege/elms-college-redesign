@@ -2773,6 +2773,9 @@ th .smallText{
 	color:#fff !important;
 }
 .bold{font-weight:700;}
+.inner-padding{
+	padding:10px 25px;
+}
 p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
 .c-accordion__content {
 	padding-bottom: 10px;
