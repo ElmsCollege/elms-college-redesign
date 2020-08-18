@@ -70,14 +70,6 @@ h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:ital
 	color:#046B99;
 	text-decoration:none
 }
-body:not(.page-template-library-landing-page) main h1{
-	color:#115438;
-	font-weight:700;
-	font-size:40px
-}
-h3+.wc-shortcodes-row.wc-shortcodes-item.wc-shortcodes-clearfix{
-	margin-top:0
-}
 .site-content .pure-g [class*="pure-u"],.site-footer.pure-g [class*="pure-u"]{
 	font-family:"soleil", sans-serif
 }
@@ -564,9 +556,6 @@ a:hover,a:active{
 	left:0;
 	right:0
 }
-.nav-trigger .close-label,.nav-trigger.active .open-label{
-	display:none
-}
 .nav-trigger.active .close-label{
 	display:block
 }
@@ -667,9 +656,6 @@ a:hover,a:active{
 	line-height:1em;
 	padding:20px 30px;
 }
-.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,.mobile-or-library .menu-special-menu-container>ul>li.search-item>a{
-	display:none
-}
 .mobile-or-library .menu-main-nav-container>ul>li>ul.sub-menu,.mobile-or-library .menu-special-menu-container>ul>li>ul.sub-menu{
 	position:relative;
 	margin:0;
@@ -734,9 +720,6 @@ a:hover,a:active{
 .mobile-or-library .sub-menu{
 	font-size:14px !important;
 }
-.field-sidebar-menu-items{
-	display:none;
-}
 #interested-in-applying,#link-give{
 	width:100%;
 	height:50%;
@@ -785,9 +768,6 @@ a:hover,a:active{
 }
 .mobile-or-library #masthead.active{
 	overflow:visible
-}
-.mobile-or-library #masthead.active .site-branding{
-	display:none
 }
 #masthead .site-branding{
 	color:transparent;
@@ -1173,9 +1153,6 @@ a:hover,a:active{
 		position:absolute
 	}
 }
-.stories .story-feature .story-full .story-image img{
-	display:none
-}
 .stories .story-feature-nav{
 	display:block;
 	position:absolute;
@@ -1254,9 +1231,6 @@ a:hover,a:active{
 	background-repeat:no-repeat;
 	background-position:50%;
 	flex-grow:0
-}
-.story-carousel .story-tab .story-image img{
-	display:none
 }
 .story-carousel .story-tab .text-content{
 	padding:16px 32px;
@@ -1497,9 +1471,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	line-height:inherit;
 	width:15px;
 	vertical-align:bottom;
-}
-.field-related-events a.show-less,.field-related-events ul li:not(:first-child),.field-related-events.toggled a.show-more{
-	display:none;
 }
 .field-related-events.toggled ul li:not(:first-child),.field-related-events.toggled a.show-less{
 	display:block;
@@ -2013,9 +1984,6 @@ button.child-6{padding-left:90px;}
 		display:block
 	}
 }
-.calls-to-action .cta-image img{
-	display:none
-}
 .calls-to-action .cta{
 	background:#c3a250;
 	text-align:center;
@@ -2507,9 +2475,6 @@ div.collapseomatic_content,.schema-faq-answer{
 	background-color:#115438 !important;
 	border:2px solid #115438 !important;
 }
-#secondary .widget-title{
-	display:none;
-}
 #secondary{
 	overflow-x:hidden;
 }
@@ -2751,8 +2716,8 @@ th .smallText{
 .noMargins{
 	margin:0!important;
 }
-.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content :first-child{
-	margin-top:0 !important;
+.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content :first-child,.noMarginTop h4.c-accordion__title{
+	margin-top:0;
 }
 .noMarginBottom,.wp-block-image{
 	margin-bottom:0 !important;
@@ -2788,7 +2753,9 @@ th .smallText{
 	-ms-filter: grayscale(0);
 	filter: grayscale(0);
 }
-.hidden,[hidden]{display:none !important}
+.field-sidebar-menu-items,.nav-trigger .close-label,.nav-trigger.active .open-label,.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,.mobile-or-library .menu-special-menu-container>ul>li.search-item>a,.mobile-or-library #masthead.active .site-branding,.stories .story-feature .story-full .story-image img,.story-carousel .story-tab .story-image img,.field-related-events a.show-less,.field-related-events ul li:not(:first-child),.field-related-events.toggled a.show-more,.calls-to-action .cta-image img,#secondary .widget-title,.hidden,[hidden],.focal-image-container{
+	display:none;
+}
 .trace,h1.trace{
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -2962,13 +2929,11 @@ a.text.requestInfo-trigger{
 	width:auto;
 	cursor:pointer !important;
 }
-.focal-image-container{display:none;}
 /* END customizations from within the admin section */
 .page-id-38313 .social-media .social-media-inner{margin-top:0;}
 .page-id-38313 #primary{background-image:url("https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg");max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color:#115438}
-
 
 @media screen and (max-width:600px){
 	#homepageAwardIcons{display:none;}
@@ -2991,7 +2956,4 @@ a.text.requestInfo-trigger{
 .ctct-form-defaults{
 	padding-top:0 !important;
 	padding-bottom:0 !important;
-}
-.noMarginTop h4.c-accordion__title{
-	margin-top:0;
 }
