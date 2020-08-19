@@ -282,7 +282,7 @@ function gs_add_typekit () {
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <?php
 }
-add_action('wp_head', 'gs_add_typekit');
+add_action('wp_footer', 'gs_add_typekit');
 
 function display_homepage_event ($event) {
   ?> 
