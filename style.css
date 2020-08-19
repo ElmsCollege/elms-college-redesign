@@ -922,22 +922,22 @@ a:hover,a:active{
 .social-media-icon-link img{
 	width:50px;
 }
-.site-footer .footer-item-inner{
+.footer-item-inner{
 	padding:0 32px;
 	margin-bottom:32px
 }
 @media (min-width: 64em){
-	.site-footer .footer-item-inner{
+	.footer-item-inner{
 		min-height:14em;
 		border-right:1px solid #ddd;
 	}
 }
 @media (min-width: 64em){
-	.site-footer .site-branding{
+	.site-branding.footer-item-inner{
 		margin-left:10%
 	}
 }
-.site-footer .site-branding .site-title{
+.site-branding.footer-item-inner .site-title{
 	color:transparent;
 	background-image:url(images/logo-footer.png);
 	background-image:url(images/logo-main.svg);
