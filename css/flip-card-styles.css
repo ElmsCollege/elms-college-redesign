@@ -22,7 +22,7 @@
 @media(pointer: coarse){
 	.program:focus .program-inner {
 		transform: rotateX(180deg);
-	}	
+	}
 }
 .program-front h2 {
 	position:absolute;
