@@ -1,13 +1,4 @@
-(function ($, window, document, undefined) {
-  var $win = $(window);
-  var $doc = $(document);
-
-  $.fn.getIndex = function () {
-    var $p = $(this).parent().children();
-    return $p.index(this);
-  };
-
-  $doc.ready(function () {
+  jQuery(document).ready(function () {
 
     // mobile menu submenu toggle
     $("body").on("click", "#primary-menu .menu-item-has-children > a, #special-menu .menu-item-has-children > a", function (e) {
@@ -78,8 +69,8 @@
       $(this).toggleClass('active');
       $('header#masthead, html').toggleClass('active');
 
-      if ($win.width() < 720) {
-        $('body, .link-donate').toggleClass('active');
+      if (jQuery(window).width() < 720) {
+        jQuery('body, .link-donate').toggleClass('active');
       }
     });
     var resetMenuIfDesktopWidth = function () {
@@ -199,10 +190,7 @@
 
     // double fake mobile/library menu 
     var updateMenu = function () {
-      if (Modernizr.mq("only screen and (max-width: 64em)")
-        || (jQuery("body").is("#nursingPage"))
-        || (jQuery("body").is("#libraryPage"))
-        || (jQuery("body").is("#commencementPage"))) {
+      if (Modernizr.mq("only screen and (max-width: 64em)") || (jQuery("body").is("#nursingPage")) || (jQuery("body").is("#libraryPage")) || (jQuery("body").is("#commencementPage"))) {
         $("body").addClass("mobile-or-library");
       } else {
         $("body").removeClass("mobile-or-library");
@@ -336,8 +324,6 @@
 	  /* END collapsible left rail nav JS code */
   }); //end doc.ready
 
-})(jQuery, window, document);
-
 // Initial config for setting up modals
 MicroModal.init({
   openTrigger: 'data-custom-open',
@@ -355,22 +341,3 @@ if (selection) {
     fbq('trackCustom', 'RequestInfo');
   });
 }
-
-// Scrollspy
-var section = document.querySelectorAll(".heading");
-var sections = {};
-
-Array.prototype.forEach.call(section, function (e) {
-  sections[e.id] = e.offsetTop;
-});
-
-window.onscroll = function () {
-  var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-  for (i in sections) {
-    if (sections[i] <= scrollPosition) {
-      document.querySelector('.active').classList.remove('blue', 'fw6', 'active');
-      document.querySelector('a[href*=' + i + ']').classList.add('blue', 'fw6', 'active');
-    }
-  }
-};
