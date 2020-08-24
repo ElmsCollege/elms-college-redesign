@@ -1532,12 +1532,7 @@ a.text.requestInfo-trigger{
 	width:auto;
 	cursor:pointer;
 }
-.entry-content ul,.entry-content ol{
-	margin-left:0;
-	padding-left:1em
-}
-.field-content table:not(.tribe-events-calendar),
-.entry-content table:not(.tribe-events-calendar){
+[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
 	text-align:center;
 	max-width:100%;
 	width:100%;
@@ -1546,29 +1541,24 @@ a.text.requestInfo-trigger{
 	font-size:.875em
 }
 @media all and (max-width: 36em){
-	.field-content table:not(.tribe-events-calendar),
-	.entry-content table:not(.tribe-events-calendar){
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
 		font-size:.75em
 	}
 }
 @media all and (min-width: 48em) and (max-width: 52em){
-	.field-content table:not(.tribe-events-calendar),
-	.entry-content table:not(.tribe-events-calendar){
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
 		font-size:.75em
 	}
 }
-.field-content table:not(.tribe-events-calendar) td,
-.field-content table:not(.tribe-events-calendar) th,
-.entry-content table:not(.tribe-events-calendar) td,
-.entry-content table:not(.tribe-events-calendar) th{
+[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th,.entry-content table:not(.tribe-events-calendar) td,.entry-content table:not(.tribe-events-calendar) th{
 	padding:.25em;
 	border:1px solid #CCC
 }
-table:not(.tribe-events-calendar) th{
+[id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th{
 	font-weight:700;
 	font-size:16px;
 }
-table:not(.tribe-events-calendar) th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
+[id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe_events{
