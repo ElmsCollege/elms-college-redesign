@@ -19,7 +19,7 @@ while ( have_posts() ) : the_post();
 ?>
 
 <?php if (!empty($opening_menu)) : ?>
-        <ul class="opening-menu ulreset spaceBetween">
+        <ul class="opening-menu is-style-none spaceBetween">
           <?php
             foreach ($opening_menu as $index=>$menu_item) : 
             if ($menu_item["link_type"] == "internal" && !empty($menu_item["internal_link"])) {

@@ -5,6 +5,9 @@
 	justify-content:space-between;
 	text-align:left;
 }
+#mainLeftMenu{
+	display:none;
+}
 .speaker h4{
 	line-height: 1em;
 }

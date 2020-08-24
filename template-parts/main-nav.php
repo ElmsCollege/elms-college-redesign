@@ -8,7 +8,7 @@
 <nav id="site-navigation" class="main-navigation" role="navigation">
 
 <div class="menu-special-menu-container">
-	<ul id="special-menu" class="menu ulreset">
+	<ul id="special-menu" class="menu is-style-none">
 		<li class="menu-item menu-item-type-post_type menu-item-object-page search-item">
 			<a href="/search/">
 				<span class="search-realtext">Search</span>
@@ -49,7 +49,7 @@ switch_to_blog(1);
     wp_nav_menu( array(
         'theme_location'	=> 'primary',
         'menu_id'			=> 'primary-menu',
-		'menu_class'		=> 'ulreset',
+		'menu_class'		=> 'is-style-none',
 		'item_spacing'		=> 'discard',
     ) );
 

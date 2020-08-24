@@ -22,11 +22,12 @@
 @media(pointer: coarse){
 	.program:focus .program-inner {
 		transform: rotateX(180deg);
-	}	
+	}
 }
 .program-front h2 {
 	position:absolute;
-	color: white;
+	color:white;
+	text-align:center;
 }
 .program-front,.featuredImage,.program-back{
 	position:absolute;

@@ -8,6 +8,7 @@
  *
  * @package Elms_College_Redesign
  */
+wp_enqueue_style( 'commencement-stylesheet', get_stylesheet_directory_uri() . '/css/commencement.css', '1.0.0', 'all' );
 
 add_filter( 'body_class', function( $classes ) {
 	return array_merge( $classes, array( 'mobile-or-library' ) );
@@ -51,5 +52,5 @@ add_filter( 'body_class', function( $classes ) {
 	<div id="content" class="site-content">
     <?php get_template_part("template-parts/alert-bar")?>
     <div class="special-section-nav">
-      <?php wp_nav_menu( array( 'theme_location' => 'special-nav', 'menu_id' => 'special-section-menu', 'menu_class' => 'ulreset flexRowNowrapStart justifyCenter', 'container_class' => 'special-nav-container' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'special-nav', 'menu_id' => 'special-section-menu', 'menu_class' => 'is-style-none flexRowNowrapStart justifyCenter', 'container_class' => 'special-nav-container' ) ); ?>
     </div>
