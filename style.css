@@ -1373,7 +1373,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	display:block;
 }
 .current_page_item,.current_page_item:visited,.current_page_item:hover{
-	color:#046b99;
+	color:#046b99 !important;
 }
 .parent-sidebar-menu .toggle::after{
     content:"+";

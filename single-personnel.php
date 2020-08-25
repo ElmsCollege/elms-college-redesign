@@ -72,7 +72,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 			<div>
-				<?php echo get_the_term_list( $post->ID, 'department', '<label>Department(s):</label> ', ', ' ); ?>
+				<label>Department(s):</label> <?php echo wp_get_post_terms( $post->ID, 'department', array( 'orderby' => 'term_id' ) );?>
 			</div>
 			<div><?php echo get_the_term_list( $post->ID, 'division', $divisionLink, ', ' ); ?></div>
 		</div>
