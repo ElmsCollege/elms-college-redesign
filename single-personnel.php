@@ -72,13 +72,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 			<div>
-				<label>Department(s):</label> 
-				<?php
-					$terms = (wp_get_post_terms( $post->ID, 'department', array( 'orderby' => 'term_id' ) ));
-					foreach($terms as $term){
-						echo '<a href="/department/'.$term['slug'].'">'.$term['name'].'</a>';
-					}
-				?>
+				<?php echo get_the_term_list( $post->ID, 'department', '<label>Department(s):</label> ', ', ' ); ?>
 			</div>
 			<div><?php echo get_the_term_list( $post->ID, 'division', $divisionLink, ', ' ); ?></div>
 		</div>
