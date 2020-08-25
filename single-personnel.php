@@ -75,7 +75,7 @@ get_header(); ?>
 				<label>Department(s):</label> 
 				<?php
 					$terms = (wp_get_post_terms( $post->ID, 'department', array( 'orderby' => 'term_id' ) ));
-					foreach($term as $terms){
+					foreach($terms as $term){
 						echo '<a href="/department/'.$term['slug'].'">'.$term['name'].'</a>';
 					}
 				?>
