@@ -70,6 +70,8 @@ function gs_elms_setup() {
   */
 	add_theme_support('responsive-embeds');//allow responsive embedded files (like from YouTube)
 	//add_theme_support( 'align-wide' );//allow wide and full-width blocks
+	
+	remove_theme_support('widgets-block-editor');
 }
 endif;
 add_action( 'after_setup_theme', 'gs_elms_setup' );
