@@ -1,0 +1,119 @@
+/* BEGIN the flip card styles for the /academics pages */
+.program { 
+	background-color: transparent;
+	width: 300px;
+	height: 200px;
+	perspective: 1000px;
+}
+.program-inner {
+ 	position: relative;
+ 	width: 100%;
+ 	height: 100%;
+	transition: transform 400ms linear;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius:15px;
+}
+@media (hover) {
+	.program:hover .program-inner {
+		transform: rotateX(180deg);
+	}
+}
+@media(pointer: coarse){
+	.program:focus .program-inner {
+		transform: rotateX(180deg);
+	}
+}
+.program-front h2 {
+	position:absolute;
+	color:white;
+	text-align:center;
+}
+.program-front,.featuredImage,.program-back{
+	position:absolute;
+	width:100%;
+	height:100%;
+	border-radius:15px;
+	background-size:cover;
+	padding:5px;
+}
+.program-front,.program-back{
+  	backface-visibility: hidden;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	border-radius:15px;
+}
+.program-front{
+	background-color:#c3a250;
+}
+.featuredImage {
+	filter:brightness(85%);
+}
+#programIconList a.program-back {
+	background-color:#115438;
+	color:#fff;
+	transform: rotateX(180deg);
+	border:1px solid #fff;
+}
+#programIconList a.program-back:visited,#programIconList a.program-back:active{
+	color:#fff;
+}
+.program-back h3{
+	color:#fff;
+}
+.program:nth-child(odd) .program-front{
+	background-color:#115438;
+}
+#programIconList .program:nth-child(odd) .program-back{
+	background-color:#c3a250;
+	color:#000;
+	border:1px solid #000;
+}
+#programIconList a.program-back:nth-child(odd):visited,#programIconList a.program-back:nth-child(odd):active{
+	color:#000;
+}
+.program:nth-child(odd) .program-back h3{
+	color:#000
+}
+/* BEGIN the liberal arts page (/academics/liberal-arts) has a special flipcard style */
+#lac {
+	--borderWidth: 5px;
+	background:#1D1F20;
+	position:relative;
+	border-radius:var(--borderWidth);
+	width:290px;
+	left:5px;
+	height:190px;
+	top:5px;
+}
+#lac:after {
+	content:'';
+	position:absolute;
+	top:calc(-1 * var(--borderWidth));
+	left:calc(-1 * var(--borderWidth));
+	height:calc(100% + var(--borderWidth) * 2);
+	width:calc(100% + var(--borderWidth) * 2);
+	background:linear-gradient(to right, #c3a250, #115438);
+	border-radius:calc(2 * var(--borderWidth));
+	z-index:-1;
+	animation:animatedborder 4s linear alternate infinite;
+	background-size:225% 200%;
+}
+#lac .program-back{
+	border:unset !important;
+}
+@keyframes animatedborder {
+	0%{
+		background-position:0% 50%;
+	}
+	50%{
+		background-position:100% 50%;
+	}
+	100%{
+		background-position:0% 50%;
+	}
+}
+/* END the liberal arts page special flipcard style */
+/* END the flip card styles for the /academics pages */
