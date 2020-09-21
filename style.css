@@ -303,15 +303,15 @@ a:hover,a:active{
 	color:#fff;
 }
 .menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-main-nav-container>ul>li.open.search-item .search-icon:after,.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-special-menu-container>ul>li.open.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
-	background-image:url("images/icon-close.png");
-	background-image:url("images/icon-close.svg");
+	background-image:url("/images/icon-close.png");
+	background-image:url("/images/icon-close.svg");
 	background-size:100%;
 	background-repeat:no-repeat
 }
 @media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
 	.menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-main-nav-container>ul>li.open.search-item .search-icon:after,.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-special-menu-container>ul>li.open.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
-		background-image:url("images/icon-close@2x.png");
-		background-image:url("images/icon-close.svg");
+		background-image:url("/images/icon-close@2x.png");
+		background-image:url("/images/icon-close.svg");
 	}
 }
 .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.open>ul.sub-menu{
@@ -358,13 +358,13 @@ a:hover,a:active{
 	border-top:1px solid #dcdcdc
 }
 .menu-special-menu-container>ul>li.search-item:not(.open):hover .search-icon:after{
-	background-image:url("images/icon-search-white.png");
-	background-image:url("images/icon-search-white.svg")
+	background-image:url("/images/icon-search-white.png");
+	background-image:url("/images/icon-search-white.svg")
 }
 @media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
 	.menu-special-menu-container>ul>li.search-item:not(.open):hover .search-icon:after{
-		background-image:url("images/icon-search-white@2x.png");
-		background-image:url("images/icon-search-white.svg")
+		background-image:url("/images/icon-search-white@2x.png");
+		background-image:url("/images/icon-search-white.svg")
 	}
 }
 .menu-special-menu-container .search-item>a{
@@ -684,7 +684,7 @@ a:hover,a:active{
 	height:50px
 }
 .active .mobile-or-library .menu-item-has-children>a:after {
-  background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
+  background: url(/images/icon-menu-more.png) no-repeat 0 0/cover;
   content: "";
   width: 21px;
   height: 21px;
@@ -693,7 +693,7 @@ a:hover,a:active{
   top: calc(50% - 11px);
 }
 .active .mobile-or-library .menu-item-has-children.open>a:after{
-	background-image:url(images/icon-menu-less.png)
+	background-image:url(/images/icon-menu-less.png)
 }
 .mobile-or-library .menu-main-nav-container>ul>li,.mobile-or-library .menu-special-menu-container>ul>li{
 	-webkit-transition:-webkit-transform 200ms ease-out 220ms, opacity 200ms ease-out 220ms;
@@ -1692,7 +1692,7 @@ button.child-6{padding-left:90px;}
 	padding:0
 }
 .short-content .field-background{
-	background-image:url("images/default-header.jpg");
+	background-image:url("/images/default-header.jpg");
 	display:none;
 	background-size:100%;
 	background-size:cover
