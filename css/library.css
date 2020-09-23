@@ -200,7 +200,7 @@
 }
 #libraryPage .section-heading-as-content .todays-hours .hours-link:before{
 	content:"";
-	background-image:url("images/icon-arrow-right.png");
+	background-image:url("../images/icon-arrow-right.png");
 	background-repeat:no-repeat;
 	width:19px;
 	height:26px;
