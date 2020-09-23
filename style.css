@@ -684,7 +684,7 @@ a:hover,a:active{
 	height:50px
 }
 .active .mobile-or-library .menu-item-has-children>a:after {
-  background: url(/images/icon-menu-more.png) no-repeat 0 0/cover;
+  background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
   content: "";
   width: 21px;
   height: 21px;
