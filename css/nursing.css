@@ -110,7 +110,7 @@
 	height:58px;
 }
 #nursingPage .action-columns .widget-features .widget-image i.ico-pencil{
-	background-image:url("../images/icon-column-pencil.svg");
+	background-image:url("/images/icon-column-pencil.svg");
 }
 #nursingPage .action-columns .widget-features .widget-image i.ico-money{
 	background-image:url("../images/icon-column-money.svg");
