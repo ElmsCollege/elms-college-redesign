@@ -1,89 +1,119 @@
-@import '/wp-content/plugins/a-z-listing/css/a-z-listing-default.css';
 /* 
 * new CSS file that is included by the a-z plugin for the directory (/directory) pages
 * this is enqueued by a-z-listing.php
 */
-.az-letters li{
-	padding:6px;
-	font-size:14px;
-}
-#az-slider li{
-	margin-bottom:10px;
-	font-size:16px;
-}
-#az-slider  li {
-  /* for Chrome and Edge */
-  break-inside:avoid-column;
-  /* for Firefox */
-  display:inline-grid;
-  page-break-inside:avoid;
-}
-
+@import "utilities";
+@import "/wp-content/plugins/a-z-listing/css/a-z-listing-default.css";
 /* for Chrome and Edge */
-@supports (break-inside: avoid-column) {
-  #az-slider li  {
-    display:block;
-  }
+.az-letters {
+	li {
+		padding: 6px;
+		font-size: 14px;
+	}
 }
-#az-slider li:last-child{
-	margin-bottom:unset;
-	overflow:hidden;
+#az-slider {
+	li {
+		margin-bottom: 10px;
+		font-size: 16px;
+		break-inside: avoid-column;
+		display: inline-grid;
+		page-break-inside: avoid;
+	}
+	.contact {
+		margin-left: 15px;
+	}
+	.letter-section {
+		margin-bottom: unset;
+	}
+	.division-department {
+		li {
+			width: 48%;
+			min-width: 275px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			align-content: baseline;
+		}
+	}
 }
-#az-slider .contact{
-	margin-left:15px;
+@supports (break-inside:avoid-column) {
+	#az-slider li { display: block;
+	}
 }
-#az-slider .letter-section{
-	margin-bottom:unset;
+#az-slider {
+		li {
+			&:last-child {
+				margin-bottom: unset;
+				overflow: hidden;
+			}
+		}
+	}
+.page-id-22784 {
+	.filterList {
+		margin-bottom: 25px;
+		button {
+			display: inline-block;
+			padding: 2px 5px;
+			margin: 0 0 0 15px;
+			min-width: unset;
+			font-size: 1em;
+			line-height: 1em;
+		}
+	}
 }
-.page-id-22784 .filterList{
-	margin-bottom:25px;
+.letter-section {
+	div.back-to-top {
+		a {
+			&:before {
+				font-family: "Font Awesome 5 Free" !important;
+				content: "\f077" !important;
+				font-weight: 700;
+			}
+			&:after {
+				font-family: "Font Awesome 5 Free" !important;
+				content: "\f077" !important;
+				font-weight: 700;
+			}
+		}
+	}
 }
-.page-id-22784 .filterList button{
-	display:inline-block;
-	padding:2px 5px;
-	margin:0 0 0 15px;
-	min-width:unset;
-	font-size:1em;
-	line-height:1em;
+.division-department {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	li {
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	p {
+		margin-bottom: 0;
+		padding-left: 0 !important;
+		word-break: break-word;
+	}
 }
-.letter-section div.back-to-top a:before,.letter-section div.back-to-top a:after {
-    font-family:"Font Awesome 5 Free" !important;
-    content:"\f077" !important;
-    font-weight:700;
-}
-.division-department{
-	display:flex;
-	flex-flow:row wrap;
-	justify-content:space-between;
-}
-#az-slider .division-department li{
-	width:48%;
-	min-width:275px;
-	display:flex;
-	flex-flow:row wrap;
-	justify-content: flex-start;
-	align-content:baseline;
-}
-.division-department li img {
-	width:100px;
-	height:100px;
-}
-.division-department p {
-	margin-bottom:0;
-	padding-left:0 !important;
-	word-break:break-word;
-}
-.flexRowNowrapStart{
-	width:100%;
+.flexRowNowrapStart {
+	width: 100%;
 }
 @media only screen and (max-width:802px) {
-	#az-slider #inner-slider ul{
-		-webkit-columns:unset;
-		-moz-columns:unset;
-		columns:unset;
+	#az-slider {
+		#inner-slider {
+			ul {
+				-webkit-columns: unset;
+				-moz-columns: unset;
+				columns: unset;
+			}
+		}
+		li {
+			display: block;
+			width: 100%;
+		}
+		.division-department {
+			li {
+				display: block;
+				width: 100%;
+			}
+		}
 	}
-	#az-slider li,#az-slider .division-department li{
-		display:block;
-		width:100%;
-  }
 }
