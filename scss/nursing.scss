@@ -118,13 +118,13 @@
 					height: 58px;
 				}
 				i.ico-pencil {
-					background-image: url("images/icon-column-pencil.svg");
+					background-image:url(../images/icon-column-pencil.svg);
 				}
 				i.ico-money {
-					background-image: url("images/icon-column-money.svg");
+					background-image: url(../images/icon-column-money.svg);
 				}
 				i.ico-pin {
-					background-image: url("images/icon-column-pin.svg");
+					background-image: url(../images/icon-column-pin.svg);
 				}
 			}
 		}
@@ -203,7 +203,7 @@
 			color: #fff;
 			a {
 				&:after {
-					background-image: url(images/icon-menu-more-white.png);
+					background-image: url(../images/icon-menu-more-white.png);
 				}
 			}
 		}
@@ -362,7 +362,7 @@
 				text-transform: uppercase;
 				color: #fff;
 				&:after {
-					background: url("images/icon-show-more.png") no-repeat 0 0/100%;
+					background: url(../images/icon-show-more.png) no-repeat 0 0/100%;
 					content: "";
 					display: inline-block;
 					width: 24px;
@@ -373,7 +373,7 @@
 			}
 			a.open {
 				&:after {
-					background-image: url("images/icon-show-less.png");
+					background-image: url(../images/icon-show-less.png);
 				}
 			}
 		}
