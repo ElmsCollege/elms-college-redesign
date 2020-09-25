@@ -1,4 +1,4 @@
-/* BEGIN the flip card styles for the /academics pages */
+/*! controls the flip card styles for the /academics pages */
 @import "utilities";
 
 @keyframes "animatedborder" {
@@ -12,7 +12,7 @@
 		background-position: 0% 50%;
 	}
 }
-/* END the flip card styles for the /academics pages */
+
 .program {
 	background-color: transparent;
 	width: 300px;

@@ -1,9 +1,7 @@
 /*!
 Theme Name: Elms College Redesign
 Theme URI: http://underscores.me/
-Author: Gravity Switch
-Author URI: http://gravityswitch.com
-Description: Description
+Description: Primary stylesheet for the gs_elms theme.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -2911,7 +2909,9 @@ a.text.requestInfo-trigger{
 	cursor:pointer !important;
 }
 /* END customizations from within the admin section */
-.page-id-38313 .social-media .social-media-inner{margin-top:0;}
+.page-id-38313 .social-media .social-media-inner{
+	margin-top:0;
+} 
 .page-id-38313 #primary{background-image:url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color:$elmsgreen}
@@ -2924,9 +2924,6 @@ a.text.requestInfo-trigger{
 }
 .wp-block-lazyblock-acf-curriculum-fields,.wp-block-lazyblock-quick-info,.wp-block-lazyblock-testimonial{
 	margin-top:15px;
-}
-#advertising-landing-page .dpt-title a{
-	font-size:25px;
 }
 .postid-45493 .section-heading{
 	background-image:unset !important;
