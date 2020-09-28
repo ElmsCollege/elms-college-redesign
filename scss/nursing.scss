@@ -29,10 +29,7 @@
 				content: "";
 				background: rgba(0,0,0,0.325);
 				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
+                @include posZero;
 			}
 			.cta-title-container {
 				position: inherit;

@@ -23,7 +23,49 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	font-weight:400;
 	font-style:normal;
 }
-h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:italic}blockquote{margin:0 1.5em}address{margin:0 0 1.5em}pre{background:#eee;font-family:"Courier 10 Pitch",Courier,monospace;font-size:15px;font-size:.9375rem;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em}code,kbd,tt,var{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;font-size:15px;font-size:.9375rem}abbr,acronym{border-bottom:1px dotted #666;cursor:help}mark,ins{background:#fff9c0;text-decoration:none}big{font-size:125%}.site-main,.page-sidebar{font-size:18px;line-height:28px}
+h1,h2,h3,h4,h5,h6{
+    clear: both;
+}
+p{
+    margin-bottom: 1.5em
+}
+dfn,cite,em,i{
+    font-style: italic
+}
+blockquote{
+    margin: 0 1.5em
+}
+address{
+    margin: 0 0 1.5em
+}
+pre{
+    background: #eee;
+    font-family: "Courier 10 Pitch",Courier,monospace;
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em
+}
+code,kbd,tt,var{
+    font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+    font-size: 15px;
+    font-size: .9375rem}
+abbr,acronym{
+    border-bottom: 1px dotted #666;
+    cursor: help}
+mark,ins{
+    background: #fff9c0;
+    text-decoration: none}
+big{
+    font-size: 125%
+}
+.site-main,.page-sidebar{
+    font-size: 18px;
+    line-height: 28px;
+}
 .site-main h2,.page-sidebar h2{
 	color: $elmsgold;
 	font-size:24px;
@@ -178,7 +220,8 @@ input[type="text"],input[type="email"],input[type="url"],input[type="password"],
 	border: $lightgreyborder;
 	border-radius:3px;
 	padding:3px;
-}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus{
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus{
 	color:#111
 }
 select{
@@ -665,13 +708,12 @@ a:hover,a:active{
 	height:50px
 }
 .active .mobile-or-library .menu-item-has-children>a:after {
-  background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
-  content: "";
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  right: 32px;
-  top: calc(50% - 11px);
+    background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
+    content: "";
+    @include square(21px);
+    position: absolute;
+    right: 32px;
+    top: calc(50% - 11px);
 }
 .active .mobile-or-library .menu-item-has-children.open>a:after{
 	background-image:url(images/icon-menu-less.png)
@@ -759,22 +801,15 @@ a:hover,a:active{
 	padding:8px
 }
 #masthead .site-branding .site-title{
-	background-image:url(images/logo-main.png);
-	background-image:url(images/logo-main.svg);
-	background-position:center center;
-	background-size:100%;
-	background-size:contain;
+    @include logoBackground;
 	width:145px;
 	height:64px;
-	background-repeat:no-repeat;
-	margin:0
 }
 .mobile-or-library #masthead .site-branding .site-title{
 	height:43px;
 	width:102px
 }
 #masthead .site-branding a{
-	color:transparent;
 	position:absolute;
     @include posZero;
 }
@@ -893,9 +928,8 @@ a:hover,a:active{
 	border: $whiteborder;
 	box-sizing:border-box;
 	border-radius:9000px;
-	width:72px;
-	height:72px;
 	margin:10px 25px;
+    @include square(72px);
 }
 .social-media-icon-link img{
 	width:50px;
@@ -916,15 +950,9 @@ a:hover,a:active{
 	}
 }
 .site-branding.footer-item-inner .site-title{
-	color:transparent;
-	background-image:url(images/logo-footer.png);
-	background-image:url(images/logo-main.svg);
-	background-position:center center;
-	background-size:100%;
+    @include logoBackground;
 	width:230px;
 	height:99px;
-	background-repeat:no-repeat;
-	margin:0 0 1em;
 	position:relative
 }
 .site-footer .site-branding .site-title a{
@@ -944,9 +972,8 @@ a:hover,a:active{
 .screen-reader-text{
 	clip:rect(1px, 1px, 1px, 1px);
 	position:absolute !important;
-	height:1px;
-	width:1px;
-	overflow:hidden
+	overflow:hidden;
+    @include square(1px);
 }
 .screen-reader-text:focus{
 	background-color:#f1f1f1;
@@ -1064,7 +1091,44 @@ a:hover,a:active{
 		width:458px;
 	}
 }
-.stories .story-feature .story-full .text-content:after{position:absolute;width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;border-left:30px solid $elmsgreen;right:-29px;top:46%}@media (min-width: 64em){.stories .story-feature .story-full .text-content:after{content:""}}.stories .story-feature .story-full .text-content .year-and-theme{font-size:28px;font-family:"blackjack", serif;color: $elmsgold;line-height:1em}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .year-and-theme{font-size:1.5em;line-height:1}}.stories .story-feature .story-full .text-content .field-title{font-size:32px;margin:0 0 .25em;color:#fff;text-transform:none}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .field-title{font-size:1.5em;line-height:1}}
+.stories .story-feature .story-full .text-content:after{
+    position: absolute;
+    @include square(0);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid $elmsgreen;
+    right: -29px;
+    top: 46%
+}
+@media (min-width: 64em){
+    .stories .story-feature .story-full .text-content:after{
+        content: ""
+    }
+}
+.stories .story-feature .story-full .text-content .year-and-theme{
+    font-size: 28px;
+    font-family: "blackjack", serif;
+    color: $elmsgold;
+    line-height: 1em
+}
+@media (max-width: 47.999em){
+    .stories .story-feature .story-full .text-content .year-and-theme{
+        font-size: 1.5em;
+        line-height: 1
+    }
+}
+.stories .story-feature .story-full .text-content .field-title{
+    font-size: 32px;
+    margin: 0 0 .25em;
+    color: #fff;
+    text-transform: none
+}
+@media (max-width: 47.999em){
+    .stories .story-feature .story-full .text-content .field-title{
+        font-size: 1.5em;
+        line-height: 1
+    }
+}
 .stories .story-feature .story-full .text-content .field-excerpt{
 	font-size:18px;
 	margin-bottom:32px
@@ -1091,7 +1155,7 @@ a:hover,a:active{
 }
 .stories .story-feature .story-full .text-content .field-permalink a:hover,.text-content a.field-permalink:hover{
 	color: $elmsgreen;
-	background: $elmsgold
+	background: $elmsgold;
 }
 .stories .story-feature .story-full .story-image-container{
 	position:relative;
@@ -1128,8 +1192,7 @@ a:hover,a:active{
 	display:block;
 	position:absolute;
 	color:transparent;
-	width:64px;
-	height:64px;
+    @include square(64px);
 	background: $elmsgreen;
 	border:2px solid #fff;
 	box-sizing:border-box;
@@ -1150,8 +1213,7 @@ a:hover,a:active{
 	color:#fff;
 	display:block;
 	position:absolute;
-	width:100%;
-	height:100%;
+    @include square(100%);
 	vertical-align:center;
 	text-align:center;
 	font-size:32px;
@@ -1196,12 +1258,11 @@ a:hover,a:active{
 .story-carousel .story-tab .story-image{
 	display:flex;
 	display:block;
-	height:170px;
-	min-height:170px;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:50%;
-	flex-grow:0
+	flex-grow:0;
+    @include square(170px);
 }
 .story-carousel .story-tab .text-content{
 	padding:16px 32px;
@@ -1222,13 +1283,13 @@ a:hover,a:active{
 	color:#fff
 }
 .story-carousel .story-tab.active{
-	background: $elmsgold
+	background: $elmsgold;
 }
 .story-carousel .story-tab.active .text-content{
 	border-left:none
 }
 .story-carousel .story-tab.active .text-content .theme{
-	color: $elmsgreen
+	color: $elmsgreen;
 }
 .story-carousel .story-tab.active+li>.text-content{
 	border-left:none
@@ -1283,7 +1344,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	padding:0 32px 32px
 }
 .page-content a{
-	color: $elmsblue
+	color: $elmsblue;
 }
 .site-main a{
 	text-decoration:none;
@@ -2112,14 +2173,13 @@ button.child-6{padding-left:90px;}
 	padding:16px 32px;
 }
 #quick-info h2:before,.quick-info h2:before{
-  background: url(images/icon-info.png) no-repeat 0 0/cover;
-  content: "";
-  margin-right: 16px;
-  display: inline-block;
-  height: 29px;
-  width: 29px;
-  line-height: 29px;
-  vertical-align: middle;
+    background: url(images/icon-info.png) no-repeat 0 0/cover;
+    content: "";
+    margin-right: 16px;
+    @include square(29px);
+    display: inline-block;
+    line-height: 29px;
+    vertical-align: middle;
 }
 .lower-story{
 	padding:10px 25px;
@@ -2368,7 +2428,7 @@ div.collapseomatic_content{
 	border-radius:3px;
 	text-align:center;
 	font-weight:700;
-	border:2px solid $elmsblue;
+	border: 2px solid $elmsblue;
 	min-width:200px;
 	max-width:300px;
 }

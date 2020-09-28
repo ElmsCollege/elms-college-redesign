@@ -12,9 +12,24 @@ $elmspurple: #413556;
 $whiteborder: 1px solid #fff;
 $lightgreyborder: 1px solid #ccc;
 
+@mixin logoBackground{
+    background-image: url(images/logo-footer.png);
+	background-image: url(images/logo-main.svg);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: transparent;
+	margin: 0;
+}
+
 @mixin posZero{
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@mixin square($dimension) {
+    width: $dimension;
+    height:  $dimension;
 }
