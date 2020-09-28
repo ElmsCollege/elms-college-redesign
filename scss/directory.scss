@@ -83,8 +83,7 @@
 	justify-content: space-between;
 	li {
 		img {
-			width: 100px;
-			height: 100px;
+            @include square(100px);
 		}
 	}
 	p {

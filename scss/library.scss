@@ -220,8 +220,7 @@
 				width: 476px;
 				padding: 64px;
 				&:after {
-					width: 0;
-					height: 0;
+                    @include square(0);
 					left: auto;
 					border-top: 20px solid transparent;
 					border-bottom: 20px solid transparent;

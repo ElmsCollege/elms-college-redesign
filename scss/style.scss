@@ -878,8 +878,7 @@ a:hover,a:active{
 	position:absolute;
 	top:0;
 	left:0;
-	width:100%;
-	height:100%;
+    @include square(100%);
 	z-index:-1;
 	object-fit:cover;
 }
@@ -889,8 +888,7 @@ a:hover,a:active{
 }
 .active,html.active{
 	overflow:hidden;
-	width:100%;
-	height:100%
+    @include square(100%);
 }
 #page{
 	overflow-x:hidden;
@@ -985,13 +983,12 @@ a:hover,a:active{
 	font-size:14px;
 	font-size:.875rem;
 	font-weight:700;
-	height:auto;
+    @include square(auto);
 	left:5px;
 	line-height:normal;
 	padding:15px 23px 14px;
 	text-decoration:none;
 	top:5px;
-	width:auto;
 	z-index:100000
 }
 #content[tabindex="-1"]:focus{
@@ -1262,7 +1259,8 @@ a:hover,a:active{
 	background-repeat:no-repeat;
 	background-position:50%;
 	flex-grow:0;
-    @include square(170px);
+	height:170px;
+	min-height:170px;
 }
 .story-carousel .story-tab .text-content{
 	padding:16px 32px;
@@ -1638,8 +1636,7 @@ button.fs-dropdown-item:hover{
 
 }
 .opening-menu.fs-dropdown .fs-dropdown-selected:after{
-	height:auto;
-	width:auto;
+    @include square(auto);
 	position:absolute;
 	right:15px;
 	bottom:0;

@@ -111,8 +111,7 @@
 					background-repeat: no-repeat;
 					background-size: contain;
 					background-position: center center;
-					width: 58px;
-					height: 58px;
+                    @include square(58px);
 				}
 				i.ico-pencil {
 					background-image:url(../images/icon-column-pencil.svg);
@@ -137,8 +136,7 @@
 		background: $elmsblue !important;
 		.image-tint {
 			opacity: 0;
-			width: 100%;
-			height: 100%;
+            @include square(100%);
 			position: absolute;
 			-webkit-transition: opacity .25s ease-in-out;
 			-moz-transition: opacity .25s ease-in-out;
@@ -264,8 +262,7 @@
 		background: $elmsgreen !important;
 		.image-tint {
 			opacity: 0;
-			width: 100%;
-			height: 100%;
+            @include square(100%);
 			position: absolute;
 			-webkit-transition: opacity .25s ease-in-out;
 			-moz-transition: opacity .25s ease-in-out;
@@ -362,8 +359,7 @@
 					background: url(../images/icon-show-more.png) no-repeat 0 0/100%;
 					content: "";
 					display: inline-block;
-					width: 24px;
-					height: 24px;
+                    @include square(24px);
 					vertical-align: middle;
 					margin-left: 1em;
 				}
