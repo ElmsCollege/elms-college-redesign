@@ -89,7 +89,7 @@
 		background-color: $elmsgreen;
 		color: #fff;
 		transform: rotateX(180deg);
-		border: 1px solid #fff;
+		border: $whiteborder;
 		&:visited {
 			color: #fff;
 		}

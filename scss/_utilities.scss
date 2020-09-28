@@ -1,3 +1,19 @@
 /* Controls variables used by the rest of the SCSS files */
+
+/* Elms official color codes */
 $elmsgreen: #115438; 
 $elmsgold: #c3a250;
+
+/* unofficial colors */
+$elmsblue: #046B99;
+
+/* useful things that are used in a bunch of places */
+$whiteborder: 1px solid #fff;
+$lightgreyborder: 1px solid #ccc;
+
+@mixin posZero{
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
