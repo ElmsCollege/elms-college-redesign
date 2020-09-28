@@ -68,10 +68,10 @@
 				background: $elmsblue;
 			}
 			&:nth-child(3) {
-				background: #413556;
+				background: $elmspurple;
 				&:hover {
 					.permalink {
-						color: #413556;
+						color: $elmspurple;
 						background-color: #fff;
 					}
 				}
@@ -185,13 +185,13 @@
 			}
 		}
 		&:nth-child(3) {
-			background: #413556 !important;
+			background: $elmspurple !important;
 			&:hover {
 				.image-tint {
 					background: linear-gradient(rgba(65,53,86,0.7), rgba(65,53,86,0.7));
 				}
 				.permalink {
-					color: #413556 !important;
+					color: $elmspurple !important;
 				}
 			}
 		}
@@ -321,13 +321,13 @@
 			}
 		}
 		&:nth-child(4) {
-			background: #413556 !important;
+			background: $elmspurple !important;
 			&:hover {
 				.image-tint {
 					background: linear-gradient(rgba(65,53,86,0.7), rgba(65,53,86,0.7));
 				}
 				.permalink {
-					color: #413556 !important;
+					color: $elmspurple !important;
 				}
 			}
 		}

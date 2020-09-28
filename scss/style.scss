@@ -25,7 +25,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:italic}blockquote{margin:0 1.5em}address{margin:0 0 1.5em}pre{background:#eee;font-family:"Courier 10 Pitch",Courier,monospace;font-size:15px;font-size:.9375rem;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em}code,kbd,tt,var{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;font-size:15px;font-size:.9375rem}abbr,acronym{border-bottom:1px dotted #666;cursor:help}mark,ins{background:#fff9c0;text-decoration:none}big{font-size:125%}.site-main,.page-sidebar{font-size:18px;line-height:28px}
 .site-main h2,.page-sidebar h2{
-	color:$elmsgold;
+	color: $elmsgold;
 	font-size:24px;
 	font-weight:700;
 	margin-bottom:.66666667em
@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}dfn,cite,em,i{font-style:ital
 	font-size:16px;
 	font-weight:700;
 	text-transform:uppercase;
-	color:$elmsgreen;
+	color: $elmsgreen;
 	margin-bottom:0
 }
 .site-main p,.page-sidebar p{
@@ -128,7 +128,7 @@ h2{
 	margin:0 auto;
 	text-align:center;
 	font-size:36px;
-	color:$elmsgold;
+	color: $elmsgold;
 	line-height:1em
 }
 @media all and (max-width: 47.999em){
@@ -143,7 +143,7 @@ h2{
 	height:1px;
 	display:inline-block;
 	line-height:36px;
-	background-color:$elmsgold;
+	background-color: $elmsgold;
 	vertical-align:middle
 }
 .site-main .pre-title {
@@ -265,7 +265,7 @@ a:hover,a:active{
 	color:#696969;
 }
 .menu-main-nav-container>ul>li>ul.sub-menu>li>a:hover,.menu-main-nav-container>ul>li>ul.sub-menu>li>a:focus,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:hover,.menu-special-menu-container>ul>li>ul.sub-menu>li>a:focus,#special-section-menu>li>ul.sub-menu>li>a:hover{
-	color:$elmsgreen;
+	color: $elmsgreen;
 }
 @media screen and (min-width: 76em){
 	.menu-main-nav-container>ul>li:first-child:after,.menu-special-menu-container>ul>li:first-child:after{
@@ -273,7 +273,7 @@ a:hover,a:active{
 	}
 }
 .menu-main-nav-container>ul>li:hover,.menu-main-nav-container>ul>li.open,.menu-main-nav-container>ul>li:focus{
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	color:#fff;
 	z-index:1;
 }
@@ -332,7 +332,7 @@ a:hover,a:active{
 	}
 }
 .menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li:focus a{
-	color:$elmsgreen
+	color: $elmsgreen
 }
 .menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:#fff !important;
@@ -541,7 +541,7 @@ a:hover,a:active{
 }
 @media all and (min-width: 64rem){
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover{
-		background-color:$elmsgreen;
+		background-color: $elmsgreen;
 	}
 	body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-item:hover>a,body:not(.mobile-or-library) .main-navigation .menu-main-nav-container>ul>li.current-menu-ancestor:hover>a{
 		color:#fff
@@ -600,7 +600,7 @@ a:hover,a:active{
 }
 .mobile-or-library .menu-main-nav-container>ul>li>a{
 		font-size:21px;
-		color:$elmsgreen;
+		color: $elmsgreen;
 		text-transform:uppercase;
 		font-weight:700;
 		padding-right:3em
@@ -706,7 +706,7 @@ a:hover,a:active{
 	padding:.8em .5em;
 }
 #interested-in-applying{
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 }
 #interested-in-applying:hover{
 	background-color:#0d4435;
@@ -779,7 +779,7 @@ a:hover,a:active{
     @include posZero;
 }
 .alert-bar{
-	background:#004731;
+	background: $elmsgreen;
 	padding:1em;color:#fff;font-weight:700;text-align:center
 }
 .alert-bar.emergency{
@@ -788,11 +788,11 @@ a:hover,a:active{
 .alert-bar.emergency a,.alert-bar.emergency a:visited{
 	color:#fff;
 }
-@keyframes colorchange{0%{background:#004731}50%{background:#335635}100%{background:#004731}}
-@-webkit-keyframes colorchange{0%{background:#004731}25%{background:#335635}100%{background:#004731}}@keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}@-webkit-keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}
+@keyframes colorchange{0%{background: $elmsgreen}50%{background:#335635}100%{background: $elmsgreen}}
+@-webkit-keyframes colorchange{0%{background: $elmsgreen}25%{background:#335635}100%{background: $elmsgreen}}@keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}@-webkit-keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}
 .section-heading{
 	position:relative;
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	background-size:cover;
 	background-position:50%;
 	width:100%
@@ -934,7 +934,7 @@ a:hover,a:active{
 }
 .site-footer h3{
 	margin:0;
-	color:$elmsgreen;
+	color: $elmsgreen;
 	text-transform:uppercase;
 	font-size:16px
 }
@@ -1003,7 +1003,7 @@ a:hover,a:active{
 .stories .stories-inner{
 	position:relative;
 	padding:0;
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	margin-bottom:32px
 }
 @media (min-width: 64em){
@@ -1053,7 +1053,7 @@ a:hover,a:active{
 }
 .stories .story-feature .story-full .text-content{
 	padding:10px 25px;
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	z-index:1;
 	color:#fff
 }
@@ -1064,7 +1064,7 @@ a:hover,a:active{
 		width:458px;
 	}
 }
-.stories .story-feature .story-full .text-content:after{position:absolute;width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;border-left:30px solid $elmsgreen;right:-29px;top:46%}@media (min-width: 64em){.stories .story-feature .story-full .text-content:after{content:""}}.stories .story-feature .story-full .text-content .year-and-theme{font-size:28px;font-family:"blackjack", serif;color:$elmsgold;line-height:1em}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .year-and-theme{font-size:1.5em;line-height:1}}.stories .story-feature .story-full .text-content .field-title{font-size:32px;margin:0 0 .25em;color:#fff;text-transform:none}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .field-title{font-size:1.5em;line-height:1}}
+.stories .story-feature .story-full .text-content:after{position:absolute;width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;border-left:30px solid $elmsgreen;right:-29px;top:46%}@media (min-width: 64em){.stories .story-feature .story-full .text-content:after{content:""}}.stories .story-feature .story-full .text-content .year-and-theme{font-size:28px;font-family:"blackjack", serif;color: $elmsgold;line-height:1em}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .year-and-theme{font-size:1.5em;line-height:1}}.stories .story-feature .story-full .text-content .field-title{font-size:32px;margin:0 0 .25em;color:#fff;text-transform:none}@media (max-width: 47.999em){.stories .story-feature .story-full .text-content .field-title{font-size:1.5em;line-height:1}}
 .stories .story-feature .story-full .text-content .field-excerpt{
 	font-size:18px;
 	margin-bottom:32px
@@ -1076,7 +1076,7 @@ a:hover,a:active{
 	}
 }
 .stories .story-feature .story-full .text-content .field-excerpt a{
-	color:$elmsgold;
+	color: $elmsgold;
 	text-decoration:none
 }
 .stories .story-feature .story-full .text-content .field-permalink a,.text-content a.field-permalink{
@@ -1090,8 +1090,8 @@ a:hover,a:active{
 	font-size:16px;
 }
 .stories .story-feature .story-full .text-content .field-permalink a:hover,.text-content a.field-permalink:hover{
-	color:$elmsgreen;
-	background:$elmsgold
+	color: $elmsgreen;
+	background: $elmsgold
 }
 .stories .story-feature .story-full .story-image-container{
 	position:relative;
@@ -1130,7 +1130,7 @@ a:hover,a:active{
 	color:transparent;
 	width:64px;
 	height:64px;
-	background:$elmsgreen;
+	background: $elmsgreen;
 	border:2px solid #fff;
 	box-sizing:border-box;
 	top:25%;
@@ -1185,7 +1185,7 @@ a:hover,a:active{
 	transition:.4s ease-in-out all;
 	-webkit-transition:.4s ease-in-out all;
 	-moz-transition:.4s ease-in-out all;
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	width:25%;
 	height:unset;
 }
@@ -1215,20 +1215,20 @@ a:hover,a:active{
 	border-right:none
 }
 .story-carousel .story-tab .theme{
-	color:$elmsgold;
+	color: $elmsgold;
 	font-family:"blackjack", serif
 }
 .story-carousel .story-tab .field-title{
 	color:#fff
 }
 .story-carousel .story-tab.active{
-	background:$elmsgold
+	background: $elmsgold
 }
 .story-carousel .story-tab.active .text-content{
 	border-left:none
 }
 .story-carousel .story-tab.active .text-content .theme{
-	color:$elmsgreen
+	color: $elmsgreen
 }
 .story-carousel .story-tab.active+li>.text-content{
 	border-left:none
@@ -1254,12 +1254,12 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	margin-bottom:0;
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited,.wc-shortcodes-button.wc-shortcodes-button-success{
-	border-color:#004731;
-	background:#004731;
+	border-color: $elmsgreen;
+	background: $elmsgreen;
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited:hover,.wc-shortcodes-button.wc-shortcodes-button-success:hover{
 	border-color:#fff;
-	background:$elmsgreen;
+	background: $elmsgreen;
 }
 .wc-shortcodes-button,.wc-shortcodes-button-icon-right{
 	line-height:1.5em !important;
@@ -1364,7 +1364,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 /* END code for collapsible nav bar */
 .field-sidebar-content{
 	padding:10px;
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	color:#fff;
 	line-height:1.25em;
 	margin-bottom:16px;
@@ -1379,7 +1379,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	font-size:14px;
 	margin-top:0;
 	margin-bottom:.25em;
-	color:$elmsgold;
+	color: $elmsgold;
 }
 .field-sidebar-content h2{
 	font-size:21px;
@@ -1396,7 +1396,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 }
 .field-related-events{
 	padding:10px;
-	background-color:#413556;
+	background-color: $elmspurple;
 	color:#fff;
 	margin-bottom:16px;
 }
@@ -1629,7 +1629,7 @@ button.fs-dropdown-item:hover{
 	transition:.25s ease-in-out all;
 }
 .opening-menu .menu-item:hover{
-	background-color:$elmsgreen
+	background-color: $elmsgreen
 }
 .opening-menu .menu-item:hover a{
 	color:#fff
@@ -1711,7 +1711,7 @@ button.child-6{padding-left:90px;}
 	}
 }
 .section-mission_statement .field-mission_statement{
-	color:$elmsgreen;
+	color: $elmsgreen;
 	font-size:56px;
 	margin:0 auto 32px;
 	line-height:1em;
@@ -1740,14 +1740,14 @@ button.child-6{padding-left:90px;}
 }
 .section-statistics .statistic .statistic-inner{
 	margin:0 32px 32px;
-	background:$elmsgreen;
+	background: $elmsgreen;
 	color:#fff;
 	border:4px solid #fff;
 	padding:32px 32px 48px;
 	text-align:center
 }
 .section-statistics .statistic .field-statistic_figure{
-	color:$elmsgold;
+	color: $elmsgold;
 	font-size:56px;
 	font-weight:700;
 	margin-bottom:0
@@ -1779,7 +1779,7 @@ button.child-6{padding-left:90px;}
 .more-button-container .more-button{
 	text-decoration:none;
 	text-transform:uppercase;
-	color:$elmsgreen !important;
+	color: $elmsgreen !important;
 	border:2px solid $elmsgreen;
 	padding:.8em 2em .7em;
 	font-size:16px;
@@ -1788,8 +1788,8 @@ button.child-6{padding-left:90px;}
 }
 .more-button-container .more-button:hover{
 	color:#fff;
-	background-color:$elmsgold;
-	border-color:$elmsgold
+	background-color: $elmsgold;
+	border-color: $elmsgold;
 }
 .news-events-feature{
 	margin-top:32px;
@@ -1798,13 +1798,13 @@ button.child-6{padding-left:90px;}
 	min-width:300px
 }
 .event:nth-of-type(2n){
-	background-color:$elmsgold;
+	background-color: $elmsgold;
 }
 .event:nth-of-type(3n){
 	background-color: $elmsblue;
 }
 .event:nth-of-type(4n){
-	background-color:#413556;
+	background-color: $elmspurple;
 }
 .event{
 	display:flex;
@@ -1812,7 +1812,7 @@ button.child-6{padding-left:90px;}
 	color:#fff !important;
 	max-height:145px;
 	overflow-y:hidden;
-	background-color:#004731;
+	background-color: $elmsgreen;
 }
 .event-image{
 	height:200px;
@@ -1901,14 +1901,14 @@ button.child-6{padding-left:90px;}
 }
 @media (max-width: 63.999em){
 	.calls-to-action{
-		background-color:$elmsgreen
+		background-color: $elmsgreen;
 	}
 }
 .calls-to-action .calls-to-action-title{
 	position:relative;
 	margin:32px 0 0;
 	padding:25px 0;
-	background-color:$elmsgreen
+	background-color: $elmsgreen;
 }
 @media (min-width: 64em){
 	.calls-to-action .calls-to-action-title{
@@ -1946,12 +1946,12 @@ button.child-6{padding-left:90px;}
 	}
 }
 .calls-to-action .cta{
-	background:$elmsgold;
+	background: $elmsgold;
 	text-align:center;
 	margin:0 32px 32px
 }
 .calls-to-action .cta:hover .permalink{
-	color:$elmsgold;
+	color: $elmsgold;
 	background-color:#fff
 }
 @media (min-width: 64em){
@@ -1967,10 +1967,10 @@ button.child-6{padding-left:90px;}
 	background-color:#fff
 }
 .calls-to-action .cta:nth-child(3){
-	background:#413556
+	background: $elmspurple;
 }
 .calls-to-action .cta:nth-child(3):hover .permalink{
-	color:#413556;
+	color: $elmspurple;
 	background-color:#fff
 }
 .calls-to-action .permalink{
@@ -2067,22 +2067,22 @@ button.child-6{padding-left:90px;}
 	z-index:1;
 }
 #special-section-menu>li:hover>a, #special-section-menu>li.open>a{
-	color:$elmsgreen;
+	color: $elmsgreen;
 }
 .section-mission_statement .field-permalink a{
 	display:inline-block;
 	text-decoration:none;
 	text-transform:uppercase;
 	border:4px solid $elmsgreen;
-	color:$elmsgreen;
+	color: $elmsgreen;
 	transition:all .25s ease-in-out;
 	padding:.8em 2em .7em;
 	font-size:16px;
 	font-weight:700
 }
 .section-mission_statement .field-permalink a:hover{
-	color:$elmsgreen;
-	background:$elmsgreen
+	color: $elmsgreen;
+	background: $elmsgreen
 }
 .information-block,.quick-info-container{
 	margin:32px 0;
@@ -2102,7 +2102,7 @@ button.child-6{padding-left:90px;}
 .quick-info h2{
 	font-size:21px;
 	color:#fff !important;
-	background:$elmsgreen;
+	background: $elmsgreen;
 	padding:16px 32px;
 	margin:0;
 	vertical-align:middle
@@ -2124,7 +2124,7 @@ button.child-6{padding-left:90px;}
 .lower-story{
 	padding:10px 25px;
 	margin-top:10px;
-	background:$elmsgreen;
+	background: $elmsgreen;
 	color:#fff;
 }
 .lower-story a{
@@ -2157,7 +2157,7 @@ button.child-6{padding-left:90px;}
 	height:auto;
 }
 .section-heading-as-content .text-content{
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	position:relative;
 	z-index:1;
 	color:#fff;
@@ -2175,7 +2175,7 @@ button.child-6{padding-left:90px;}
 	font-size:18px;
 }
 .section-heading-as-content .text-content .field-body a{
-	color:$elmsgold;
+	color: $elmsgold;
 	text-decoration:none;
 }
 .section-heading-as-content .text-content .field-body a:hover{
@@ -2407,7 +2407,7 @@ div.collapseomatic_content{
 }
 .buttons.green a:hover,.greenButton:hover{
 	background-color:#fff!important;
-	color:$elmsgreen!important;
+	color: $elmsgreen!important;
 	border:2px solid $elmsgreen;
 }
 .ninja-forms-form-wrap{
@@ -2433,7 +2433,7 @@ div.collapseomatic_content{
 }
 .is-style-outline a:hover{
 	color:#fff !important;
-	background-color:$elmsgreen !important;
+	background-color: $elmsgreen !important;
 	border:2px solid $elmsgreen !important;
 }
 #secondary{
@@ -2444,7 +2444,7 @@ div.collapseomatic_content{
 }
 #secondary .buttonLink,aside #info-apply-buttons a{
 	display:block;
-	background-color:$elmsgold;
+	background-color: $elmsgold;
 	width:100%;
 	border-radius:unset;
 	border:unset;
@@ -2460,7 +2460,7 @@ div.collapseomatic_content{
 	margin-bottom:27px;
 }
 #secondary .buttonLink:hover{
-	background-color:$elmsgold !important;
+	background-color: $elmsgold !important;
 	color:#fff !important;
 	border:unset !important;
 	box-shadow:unset !important;
@@ -2714,18 +2714,17 @@ th .smallText{
 	text-transform:lowercase;
 }
 .greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6,.greenBGwhiteText a,.greenBGwhiteText a:visited{
-	background-color:$elmsgreen;
+	background-color: $elmsgreen;
 	color:#fff !important;
 }
 .goldBGwhiteText,.goldBGwhiteText a,.goldBGwhiteText a:visited{
-	background-color:$elmsgold;
+	background-color: $elmsgold;
 	color:#fff !important;
 }
 .bold{font-weight:700;}
 .inner-padding{
 	padding:10px 25px;
 }
-p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
 .c-accordion__content {
 	padding-bottom: 10px;
 	border-bottom: $lightgreyborder;
@@ -2796,22 +2795,12 @@ p.schema-faq-answer br,.c-accordion__content br{margin-bottom:27px}
 .ui-dialog-titlebar-close{
 	float:right;
 }
-.schema-faq-section{
-	margin-bottom:10px;
-	padding-bottom:5px;
-}
-.schema-faq-question img{
-	display:block;
-	margin:-130px 0 -20px;
-	padding-top:140px;
-	width:auto !important;
-}
 .wp-block-pullquote{
 	background-color:#f2f2f2 !important;
 	padding:1em 0;
 	font-weight:700;
-	color:#004731;
-	border-left:10px solid #004731;
+	color: $elmsgreen;
+	border-left:10px solid $elmsgreen;
 }
 .wp-block-pullquote p{
 	margin-bottom:.5em;
@@ -2827,7 +2816,7 @@ hr.wp-block-separator{
 }
 #courses h4{
 	border:unset;
-	color:#004731;
+	color: $elmsgreen;
 	font-weight:700;
 	margin-top:0;
 	padding-top:10px;
@@ -2886,7 +2875,7 @@ a.text.requestInfo-trigger{
 } 
 .page-id-38313 #primary{background-image:url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
-.page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color:$elmsgreen}
+.page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color: $elmsgreen}
 
 @media screen and (max-width:600px){
 	#homepageAwardIcons{display:none;}
