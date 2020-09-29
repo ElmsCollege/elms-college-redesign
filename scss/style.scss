@@ -341,9 +341,9 @@ a:hover,a:active{
 .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.open>ul.sub-menu{
 	opacity:1;
 	visibility:visible;
-	-webkit-transform:translateY(0) scaleY(1) translateZ(0px);
-	-ms-transform:translateY(0) scaleY(1) translateZ(0px);
-	transform:translateY(0) scaleY(1) translateZ(0px);
+	-webkit-transform:translateY(0) scaleY(1) translateZ(0);
+	-ms-transform:translateY(0) scaleY(1) translateZ(0);
+	transform:translateY(0) scaleY(1) translateZ(0);
 	transition:.365s ease-in-out all
 }
 .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
@@ -831,19 +831,17 @@ a:hover,a:active{
 	background-color: $elmsgreen;
 	background-size:cover;
 	background-position:50%;
-	width:100%
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-flow:column nowrap;
 }
 #textHeading.section-heading {
 	display: block !important;
 	height: auto !important;
 	max-height: unset !important;
 	min-height: unset !important;
-}
-.section-heading{
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	flex-flow:column nowrap;
 }
 .section-heading h1{
 	line-height:1.5em !important;
@@ -1523,7 +1521,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	color: $elmsblue
 }
 .parent-sidebar-menu .children li{
-	border-bottom:1px solid #dcdcdc;	
+	border-bottom:1px solid #dcdcdc;
 }
 .parent-sidebar-menu .children a{
 	border-bottom:unset;
@@ -1554,10 +1552,10 @@ iframe{
 	max-width:300px;
 }
 a.text.requestInfo-trigger{
-	display:inline-block;
+	display:inline-block !important;
 	max-width:unset;
 	width:auto;
-	cursor:pointer;
+	cursor:pointer !important;
 }
 [id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
 	text-align:center;
@@ -2300,6 +2298,7 @@ button.child-6{padding-left:90px;}
 	text-align: center;
 	color:#fff;
 	text-shadow:-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    display:none;
 }
 #hero-overlay h1{
 	color:#fff;
@@ -2330,7 +2329,6 @@ button.child-6{padding-left:90px;}
 	background-color: $elmsgreen;
 	opacity: 1;
 }
-#hero-overlay{display:none;}
 #highlight_news:hover {
 	opacity:1;
 }
@@ -2916,16 +2914,10 @@ hr.wp-block-separator{
 }
 
 .page-id-4967 #courses thead th:nth-child(1),.page-id-4967 #courses tbody td:nth-child(1),.page-id-4967 #courses thead th:nth-child(2),.page-id-4967 #courses tbody td:nth-child(2),.page-id-4976 #courses thead th:nth-child(1),.page-id-4976 #courses tbody td:nth-child(1),.page-id-4976 #courses thead th:nth-child(2),.page-id-4976 #courses tbody td:nth-child(2),.page-id-17109 #courses thead th:nth-child(1),.page-id-17109 #courses tbody td:nth-child(1),.page-id-17109 #courses thead th:nth-child(2),.page-id-17109 #courses tbody td:nth-child(2){display:none;}
-a.text.requestInfo-trigger{
-	display:inline-block !important;
-	max-width:unset;
-	width:auto;
-	cursor:pointer !important;
-}
 /* END customizations from within the admin section */
 .page-id-38313 .social-media .social-media-inner{
 	margin-top:0;
-} 
+}
 .page-id-38313 #primary{background-image:url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color: $elmsgreen}
