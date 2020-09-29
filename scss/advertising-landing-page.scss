@@ -1,0 +1,50 @@
+/* CSS Document for the advertising landing page content type */
+@import "utilities";
+.wp-block-image {
+	img {
+		display: table;
+		margin: 0 auto;
+	}
+}
+.site-main.standalone {
+	padding-top: unset;
+}
+#colophon {
+	.site-title {
+		display: table;
+		margin: 0 auto;
+	}
+}
+#advertising-landing-page {
+	footer {
+		display: table;
+		margin: 0 auto;
+		.footer-item-inner {
+			margin-bottom: 0;
+		}
+	}
+	footer.site-footer {
+		.site-branding {
+			margin-left: unset;
+		}
+	}
+	#content {
+		>div {
+			max-width: 90%;
+			margin: 0 auto;
+		}
+		.wp-block-lazyblock-landing-page-header {
+			max-width: unset !important;
+		}
+	}
+	p {
+		&:last-child {
+			margin-bottom: 1.5em;
+		}
+	}
+}
+.dpt-title {
+	a {
+		font-size: 25px;
+	}
+}

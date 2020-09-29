@@ -112,6 +112,7 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
 function gs_elms_scripts() {
 	wp_enqueue_style( 'micromodal', get_template_directory_uri() . '/css/micromodal.css', array(), '20191216');
 	wp_enqueue_style( 'jquery-ui', get_template_directory_uri() . '/css/custom-jquery-ui.min.css', array(), '20200923');
+	wp_enqueue_style( 'pure', get_template_directory_uri() . '/css/pure.0.6.0.css', array(), '20200928');
 
 	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '41' );
 
