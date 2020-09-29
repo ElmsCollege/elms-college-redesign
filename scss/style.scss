@@ -809,8 +809,9 @@ a:hover,a:active{
 	height:43px;
 	width:102px
 }
-#masthead .site-branding a{
+#masthead .site-branding a,.site-footer .site-branding .site-title a{
 	position:absolute;
+    color: transparent;
     @include posZero;
 }
 .alert-bar{
@@ -952,11 +953,6 @@ a:hover,a:active{
 	width:230px;
 	height:99px;
 	position:relative
-}
-.site-footer .site-branding .site-title a{
-	color:transparent;
-	position:absolute;
-    @include posZero;
 }
 .site-footer h3{
 	margin:0;
