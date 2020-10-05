@@ -262,7 +262,9 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
             <?php echo $this->main->module('qrcode.details', array('event'=>$event)); ?>
 
             <!-- Widgets -->
-            <?php dynamic_sidebar(); ?>
+            <div id="secondary" class="widget-area">
+                <?php dynamic_sidebar(); ?>
+            </div>
 
         </div>
         <?php else: ?>
@@ -498,7 +500,9 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
             <?php if($single->found_value('qrcode_module', $settings) == 'on') echo $this->main->module('qrcode.details', array('event'=>$event)); ?>
             
             <!-- Widgets -->
-            <?php dynamic_sidebar('mec-single-sidebar'); ?>
+            <div id="secondary" class="widget-area">
+                <?php dynamic_sidebar(); ?>
+            </div>
 
         </div>
         <?php endif; ?>

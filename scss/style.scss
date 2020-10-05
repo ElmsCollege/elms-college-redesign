@@ -1374,6 +1374,11 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 		width:100%;
 	}
 }
+.parent-sidebar-menu, .parent-sidebar-menu ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
 /* BEGIN code for collapsible nav bar */
 .parent-sidebar-menu ul:not(.level-1-children){
 	padding-left:20px !important;
