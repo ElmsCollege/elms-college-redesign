@@ -21,7 +21,7 @@ get_header(); ?>
 	President's Blog
       </h1>
   </div>
-	<div id="primary" class="content-area pure-g">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3" role="main">
 
 			<?php

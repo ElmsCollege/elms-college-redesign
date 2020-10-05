@@ -15,7 +15,7 @@ the_post();
 
 get_template_part( "template-parts/page-heading" );
 ?>
-<div id="primary" class="content-area pure-g">
+<div id="primary" class="content-area">
     <?php if ($has_sidebar) : ?>
         <?php get_sidebar(); ?>
     <?php endif; ?>

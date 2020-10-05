@@ -14,7 +14,7 @@ get_header();
 			Search Results:
 		</h1>
 	</div>
-	<section id="primary" class="content-area pure-g">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main pure-u-1 standalone" role="main">
       
       

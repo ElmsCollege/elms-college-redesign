@@ -1323,11 +1323,11 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	line-height:1.5em !important;
 }
 .content-area{
-	max-width:1200px;
-	margin:0 auto;
-	position:relative;
-	z-index:1;
-	flex-direction:initial
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+    display: flex;
 }
 .page-template-landing-page-blocks .content-area {
 	max-width: 1500px;
@@ -2929,3 +2929,7 @@ hr.wp-block-separator{
 	padding-top:0 !important;
 	padding-bottom:0 !important;
 }
+
+
+/* ancillary stylesheets */
+@import "mec-calendar";

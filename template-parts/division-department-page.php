@@ -14,7 +14,7 @@ get_header(); ?>
         <?php the_archive_title(); ?>
       </h1>
   </div>
-	<div id="primary" class="content-area pure-g">
+	<div id="primary" class="content-area">
     <?php if ($has_sidebar) : ?>
         <?php get_sidebar(); ?>
     <?php endif; ?>

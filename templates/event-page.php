@@ -23,7 +23,7 @@ if (!is_single()) :
         } ?>
       </h1>
   </div>
-	<div id="primary" class="content-area pure-g">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main pure-u-1" role="main">
 
 <article id="post-0" <?php post_class(); ?>>
