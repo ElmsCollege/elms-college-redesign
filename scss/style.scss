@@ -1329,13 +1329,8 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	z-index:1;
 	flex-direction:initial
 }
-.page-template-landing-page-blocks .content-area	{
-	max-width:1500px;
-}
-@media (min-width: 48em){
-	.content-area{
-		flex-direction:row-reverse
-	}
+.page-template-landing-page-blocks .content-area {
+	max-width: 1500px;
 }
 .page-sidebar{
 	padding:0 32px 32px
@@ -1378,16 +1373,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	.post-template-default .site-main.standalone{
 		width:100%;
 	}
-}
-.parent-sidebar-menu{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-}
-.parent-sidebar-menu ul{
-	padding:0;
-	margin:0;
-	list-style-type:none;
 }
 /* BEGIN code for collapsible nav bar */
 .parent-sidebar-menu ul:not(.level-1-children){

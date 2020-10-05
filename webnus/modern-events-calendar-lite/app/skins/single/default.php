@@ -31,61 +31,8 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
         <?php endif; ?>
         <!-- end breadcrumbs -->
 
-        <div class="col-md-8">
-            <div class="mec-events-event-image"><?php echo $event->data->thumbnails['full']; ?></div>
-            <div class="mec-event-content">
-                <?php echo $this->main->display_cancellation_reason($event, $this->display_cancellation_reason); ?>
-                <h1 class="mec-single-title"><?php the_title(); ?></h1>
-                <div class="mec-single-event-description mec-events-content"><?php the_content(); ?></div>
-            </div>
-
-            <?php do_action('mec_single_after_content', $event ); ?>
-
-            <!-- Custom Data Fields -->
-            <?php $this->display_data_fields($event); ?>
-
-            <div class="mec-event-info-mobile"></div>
-
-            <!-- Export Module -->
-            <?php echo $this->main->module('export.details', array('event'=>$event)); ?>
-
-            <!-- Countdown module -->
-            <?php if($this->main->can_show_countdown_module($event)): ?>
-            <div class="mec-events-meta-group mec-events-meta-group-countdown">
-                <?php echo $this->main->module('countdown.details', array('event'=>$this->events)); ?>
-            </div> 
-            <?php endif; ?>
-
-            <!-- Hourly Schedule -->
-            <?php $this->display_hourly_schedules_widget($event); ?>
-
-            <!-- Booking Module -->
-            <?php if ( !empty($event->date) ): if($this->main->is_sold($event) and count($event->dates) <= 1): ?>
-            <div id="mec-events-meta-group-booking-<?php echo $this->uniqueid; ?>" class="mec-sold-tickets warning-msg"><?php _e('Sold out!', 'modern-events-calendar-lite'); do_action( 'mec_booking_sold_out',$event, null,null,array($event->date) );?> </div>
-            <?php elseif($this->main->can_show_booking_module($event)): ?>
-            <?php $data_lity_class = ''; if( isset($settings['single_booking_style']) and $settings['single_booking_style'] == 'modal' ) $data_lity_class = 'lity-hide '; ?>
-            <div id="mec-events-meta-group-booking-<?php echo $this->uniqueid; ?>" class="<?php echo $data_lity_class; ?>mec-events-meta-group mec-events-meta-group-booking">
-                <?php
-                if( isset($settings['booking_user_login']) and $settings['booking_user_login'] == '1' and !is_user_logged_in() ) {
-                    echo do_shortcode('[MEC_login]');
-                } elseif ( isset($settings['booking_user_login']) and $settings['booking_user_login'] == '0' and !is_user_logged_in() and isset($booking_options['bookings_limit_for_users']) and $booking_options['bookings_limit_for_users'] == '1' ) {
-                    echo do_shortcode('[MEC_login]');
-                } else {
-                    echo $this->main->module('booking.default', array('event'=>$this->events)); 
-                }
-                ?>
-            </div>
-            <?php endif; endif; ?>
-
-            <!-- Tags -->
-            <div class="mec-events-meta-group mec-events-meta-group-tags">
-                <?php the_tags(__('Tags: ', 'modern-events-calendar-lite'), ', ', '<br />'); ?>
-            </div>
-
-        </div>
-
         <?php if(!is_active_sidebar('mec-single-sidebar')): ?>
-        <div id="event_sidebar" class="col-md-4">
+        <div class="col-md-4">
 
             <div class="mec-event-info-desktop mec-event-meta mec-color-before mec-frontbox">
                 <?php
@@ -319,7 +266,7 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
 
         </div>
         <?php else: ?>
-        <div class="col-md-4">
+        <div id="event_sidebar" class="col-md-4">
             <?php if ( $single->found_value('data_time', $settings) == 'on' || $single->found_value('local_time', $settings) == 'on' || $single->found_value('event_cost', $settings) == 'on' || $single->found_value('more_info', $settings) == 'on' || $single->found_value('event_label', $settings) == 'on' || $single->found_value('event_location', $settings) == 'on' || $single->found_value('event_categories', $settings) == 'on' || $single->found_value('event_orgnizer', $settings) == 'on' || $single->found_value('register_btn', $settings) == 'on'  ) : ?>
             <div class="mec-event-info-desktop mec-event-meta mec-color-before mec-frontbox">
                 <?php
@@ -555,6 +502,60 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
 
         </div>
         <?php endif; ?>
+
+        <div class="col-md-8">
+            <div class="mec-events-event-image"><?php echo $event->data->thumbnails['full']; ?></div>
+            <div class="mec-event-content">
+                <?php echo $this->main->display_cancellation_reason($event, $this->display_cancellation_reason); ?>
+                <h1 class="mec-single-title"><?php the_title(); ?></h1>
+                <div class="mec-single-event-description mec-events-content"><?php the_content(); ?></div>
+            </div>
+
+            <?php do_action('mec_single_after_content', $event ); ?>
+
+            <!-- Custom Data Fields -->
+            <?php $this->display_data_fields($event); ?>
+
+            <div class="mec-event-info-mobile"></div>
+
+            <!-- Export Module -->
+            <?php echo $this->main->module('export.details', array('event'=>$event)); ?>
+
+            <!-- Countdown module -->
+            <?php if($this->main->can_show_countdown_module($event)): ?>
+            <div class="mec-events-meta-group mec-events-meta-group-countdown">
+                <?php echo $this->main->module('countdown.details', array('event'=>$this->events)); ?>
+            </div> 
+            <?php endif; ?>
+
+            <!-- Hourly Schedule -->
+            <?php $this->display_hourly_schedules_widget($event); ?>
+
+            <!-- Booking Module -->
+            <?php if ( !empty($event->date) ): if($this->main->is_sold($event) and count($event->dates) <= 1): ?>
+            <div id="mec-events-meta-group-booking-<?php echo $this->uniqueid; ?>" class="mec-sold-tickets warning-msg"><?php _e('Sold out!', 'modern-events-calendar-lite'); do_action( 'mec_booking_sold_out',$event, null,null,array($event->date) );?> </div>
+            <?php elseif($this->main->can_show_booking_module($event)): ?>
+            <?php $data_lity_class = ''; if( isset($settings['single_booking_style']) and $settings['single_booking_style'] == 'modal' ) $data_lity_class = 'lity-hide '; ?>
+            <div id="mec-events-meta-group-booking-<?php echo $this->uniqueid; ?>" class="<?php echo $data_lity_class; ?>mec-events-meta-group mec-events-meta-group-booking">
+                <?php
+                if( isset($settings['booking_user_login']) and $settings['booking_user_login'] == '1' and !is_user_logged_in() ) {
+                    echo do_shortcode('[MEC_login]');
+                } elseif ( isset($settings['booking_user_login']) and $settings['booking_user_login'] == '0' and !is_user_logged_in() and isset($booking_options['bookings_limit_for_users']) and $booking_options['bookings_limit_for_users'] == '1' ) {
+                    echo do_shortcode('[MEC_login]');
+                } else {
+                    echo $this->main->module('booking.default', array('event'=>$this->events)); 
+                }
+                ?>
+            </div>
+            <?php endif; endif; ?>
+
+            <!-- Tags -->
+            <div class="mec-events-meta-group mec-events-meta-group-tags">
+                <?php the_tags(__('Tags: ', 'modern-events-calendar-lite'), ', ', '<br />'); ?>
+            </div>
+
+        </div>
+
     </article>
     <?php $this->display_related_posts_widget($event->ID); ?>
 </div>
