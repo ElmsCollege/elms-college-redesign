@@ -19,7 +19,8 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
 ?>
 <div class="mec-wrap <?php echo $event_colorskin; ?> clearfix <?php echo $this->html_class; ?>" id="mec_skin_<?php echo $this->uniqueid; ?>">
     <?php do_action('mec_top_single_event', get_the_ID()); ?>
-    <article class="row mec-single-event">
+<!--    <article class="row mec-single-event"> -->
+    <div id="primary" class="content-area">
 
         <!-- start breadcrumbs -->
         <?php
@@ -32,7 +33,8 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
         <!-- end breadcrumbs -->
 
         <?php if(!is_active_sidebar('mec-single-sidebar')): ?>
-        <div class="col-md-4">
+        <!--<div class="col-md-4">-->
+        <aside class="page-sidebar pure-u-lg-1-3" role="complementary">
 
             <div class="mec-event-info-desktop mec-event-meta mec-color-before mec-frontbox">
                 <?php
@@ -266,9 +268,11 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
                 <?php dynamic_sidebar(); ?>
             </div>
 
-        </div>
+        <!-- </div> -->
+        </aside>
         <?php else: ?>
-        <div id="event_sidebar" class="col-md-4">
+        <!--<div class="col-md-4">-->
+        <aside class="page-sidebar pure-u-lg-1-3" role="complementary">
             <?php if ( $single->found_value('data_time', $settings) == 'on' || $single->found_value('local_time', $settings) == 'on' || $single->found_value('event_cost', $settings) == 'on' || $single->found_value('more_info', $settings) == 'on' || $single->found_value('event_label', $settings) == 'on' || $single->found_value('event_location', $settings) == 'on' || $single->found_value('event_categories', $settings) == 'on' || $single->found_value('event_orgnizer', $settings) == 'on' || $single->found_value('register_btn', $settings) == 'on'  ) : ?>
             <div class="mec-event-info-desktop mec-event-meta mec-color-before mec-frontbox">
                 <?php
@@ -504,10 +508,12 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
                 <?php dynamic_sidebar(); ?>
             </div>
 
-        </div>
+        <!-- </div> -->
+        </aside>
         <?php endif; ?>
 
-        <div class="col-md-8">
+        <!-- <div class="col-md-8"> -->
+        <main id="main" class="program-page-main site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3" role="main">
             <div class="mec-events-event-image"><?php echo $event->data->thumbnails['full']; ?></div>
             <div class="mec-event-content">
                 <?php echo $this->main->display_cancellation_reason($event, $this->display_cancellation_reason); ?>
@@ -558,9 +564,11 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
                 <?php the_tags(__('Tags: ', 'modern-events-calendar-lite'), ', ', '<br />'); ?>
             </div>
 
-        </div>
+        <!-- </div> -->
+        </main>
 
-    </article>
+    </div>
+<!--    </article> -->
     <?php $this->display_related_posts_widget($event->ID); ?>
 </div>
 <?php
