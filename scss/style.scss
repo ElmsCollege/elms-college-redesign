@@ -227,7 +227,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input
 	color:#111
 }
 select{
-	border: $lightgreyborder
+	border: $lightgreyborder;
 }
 textarea{
 	width:100%
@@ -426,10 +426,10 @@ a:hover,a:active{
 		right:auto
 	}
 }
-.menu-special-menu-container .search-item form{
-	position:relative;
-	border:1px solid #969696;
-	color:#969696
+.menu-special-menu-container .search-item form {
+	position: relative;
+	border: $lightgreyborder;
+	color: $lightgrey;
 }
 .menu-special-menu-container .search-item form label{
 	min-width:90%;

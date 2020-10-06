@@ -5,12 +5,14 @@ $elmsgreen: #115438;
 $elmsgold: #c3a250;
 
 /* unofficial colors */
-$elmsblue: #046B99;
+$elmsblue: #046b99;
 $elmspurple: #413556;
+
+$lightgrey: #dcdcdc;
 
 /* useful things that are used in a bunch of places */
 $whiteborder: 1px solid #fff;
-$lightgreyborder: 1px solid #dcdcdc;
+$lightgreyborder: 1px solid $lightgrey;
 
 @mixin logoBackground{
     background-image: url(images/logo-footer.png);
@@ -31,5 +33,5 @@ $lightgreyborder: 1px solid #dcdcdc;
 
 @mixin square($dimension) {
     width: $dimension;
-    height:  $dimension;
+    height: $dimension;
 }

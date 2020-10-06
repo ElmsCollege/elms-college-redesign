@@ -2,3 +2,9 @@
 .mec-event-social-icon a{
     text-decoration: none;
 }
+.mec-single-event .mec-events-meta-group-booking, .mec-single-event .mec-frontbox, .mec-box-calendar.mec-calendar dt {
+    border: $lightgreyborder;
+}
+.mec-calendar .mec-table-nullday {
+    color: $lightgrey;
+}
