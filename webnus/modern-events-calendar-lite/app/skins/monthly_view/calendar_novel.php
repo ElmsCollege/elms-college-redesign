@@ -86,8 +86,12 @@ elseif($week_start == 5) // Friday
                     do_action('mec_schema', $event);
 
                     echo '<a class="'.((isset($event->data->meta['event_past']) and trim($event->data->meta['event_past'])) ? 'mec-past-event ' : '').'event-single-link-novel" data-event-id="'.$event->data->ID.'" href="'.$this->main->get_event_date_permalink($event, $event->date['start']['date']).'" '.$target_url.'>';
-                            //need to replace style="background" $event_color with a class based on category
-                    echo '<div style="background:'.$event_color.'" class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).'">';
+                    //need to replace style="background" $event_color with a class based on category
+                    //echo '<div style="background:'.$event_color.'" class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).'">';
+                    $wpseo_primary_term = new WPSEO_Primary_Term( 'category', $event->data->ID );
+                    $wpseo_primary_term = $wpseo_primary_term->get_primary_term();
+                    $term = get_term( $wpseo_primary_term );
+                    echo '<div class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).' '.$term.'">';
                     echo '<h4 class="mec-event-title">'.$event->data->title.'</h4>'.$this->main->get_normal_labels($event, $display_label).$this->main->display_cancellation_reason($event, $reason_for_cancellation);
                     do_action('mec_shortcode_virtual_badge', $event->data->ID );
 
