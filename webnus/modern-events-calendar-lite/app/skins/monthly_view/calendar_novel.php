@@ -88,7 +88,7 @@ elseif($week_start == 5) // Friday
                     echo '<a class="'.((isset($event->data->meta['event_past']) and trim($event->data->meta['event_past'])) ? 'mec-past-event ' : '').'event-single-link-novel" data-event-id="'.$event->data->ID.'" href="'.$this->main->get_event_date_permalink($event, $event->date['start']['date']).'" '.$target_url.'>';
                     //need to replace style="background" $event_color with a class based on category
                     //echo '<div style="background:'.$event_color.'" class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).'">';
-                    $wpseo_primary_term = new WPSEO_Primary_Term( 'category', $event->data->ID );
+                    $wpseo_primary_term = new WPSEO_Primary_Term( 'mec_category', $event->data->ID );
                     $wpseo_primary_term = $wpseo_primary_term->get_primary_term();
                     $term = get_term( $wpseo_primary_term );
                     $slug = $term->slug;
