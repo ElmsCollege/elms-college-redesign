@@ -35,3 +35,11 @@ $lightgreyborder: 1px solid $lightgrey;
     width: $dimension;
     height: $dimension;
 }
+
+@mixin hoverBGcolor($color) {
+    background-color: $color;
+
+    &:hover {
+        background-color: $color;
+    }
+}

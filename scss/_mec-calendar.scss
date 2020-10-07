@@ -9,16 +9,19 @@
     color: $lightgrey;
 }
 .undergraduate-admissions {
-    background-color: $elmsgreen;
+    @include hoverBGcolor($elmsgreen);
 }
 .graduate-admissions {
-    background-color: $elmsblue;
+    @include hoverBGcolor($elmsblue);
 }
 .continuing-education-admissions {
-    background-color: $elmspurple;
+    @include hoverBGcolor($elmspurple);
 }
 .commencement {
-    background-color: $elmsgold;
+    @include hoverBGcolor($elmsgold);
+}
+.public_event {
+    @include hoverBGcolor(#e93f3f);
 }
 
 
