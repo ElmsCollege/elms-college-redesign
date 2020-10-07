@@ -1,4 +1,20 @@
 /* Style overrides for the MEC Calendar plugin */
+/* MEC calendar specific mixins */
+@mixin mecHoverStyle($color) {
+    background-color: $color;
+    border: 1px solid $color;
+
+    &:hover {
+        background-color: $color;
+        border: 1px solid $color;
+
+        h4 {
+            color: $color !important;
+        }
+    }
+}
+
+
 .mec-event-social-icon a{
     text-decoration: none;
 }
@@ -9,19 +25,19 @@
     color: $lightgrey;
 }
 .undergraduate-admissions {
-    @include hoverBGcolor($elmsgreen);
+    @include mecHoverStyle($elmsgreen);
 }
 .graduate-admissions {
-    @include hoverBGcolor($elmsblue);
+    @include mecHoverStyle($elmsblue);
 }
 .continuing-education-admissions {
-    @include hoverBGcolor($elmspurple);
+    @include mecHoverStyle($elmspurple);
 }
 .commencement {
-    @include hoverBGcolor($elmsgold);
+    @include mecHoverStyle($elmsgold);
 }
 .public_event {
-    @include hoverBGcolor(#e93f3f);
+    @include mecHoverStyle(#e93f3f);
 }
 
 
