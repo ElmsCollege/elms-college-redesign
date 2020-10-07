@@ -41,5 +41,9 @@ $lightgreyborder: 1px solid $lightgrey;
 
     &:hover {
         background-color: $color;
+        border: $color;
+        a {
+            color: $color;
+        }
     }
 }
