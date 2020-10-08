@@ -2,11 +2,9 @@
 /* MEC calendar specific mixins */
 @mixin mecHoverStyle($color) {
     background-color: $color;
-    border: 1px solid $color;
 
     &:hover {
-        background-color: $color;
-        border: 1px solid $color;
+        background: rgba($color, .2);
 
         h4 {
             color: $color !important;
@@ -14,7 +12,9 @@
     }
 }
 
-
+.mec-wrap.colorskin-custom .mec-calendar.mec-event-calendar-classic dt.mec-selected-day:hover {
+    color: #fff;
+}
 .mec-event-social-icon a{
     text-decoration: none;
 }
@@ -24,6 +24,8 @@
 .mec-calendar .mec-table-nullday {
     color: $lightgrey;
 }
+
+/* BEGIN styling the different categories on the calendar */
 .undergraduate-admissions {
     @include mecHoverStyle($elmsgreen);
 }
@@ -36,8 +38,8 @@
 .commencement {
     @include mecHoverStyle($elmsgold);
 }
-.public_event {
+.public-event {
     @include mecHoverStyle(#e93f3f);
 }
-
+/* END styling the different categories on the calendar */
 

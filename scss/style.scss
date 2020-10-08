@@ -940,15 +940,13 @@ a:hover,a:active{
 	padding:0 32px;
 	margin-bottom:32px
 }
-@media (min-width: 64em){
-	.footer-item-inner{
-		min-height:14em;
-		border-right:1px solid #ddd;
+@media (min-width: 64em) {
+	.footer-item-inner {
+		min-height: 14em;
+		border-right: $lightgreyborder;
 	}
-}
-@media (min-width: 64em){
 	.site-branding.footer-item-inner{
-		margin-left:10%
+		margin-left: 10%
 	}
 }
 .site-branding.footer-item-inner .site-title{
@@ -1576,7 +1574,7 @@ a.text.requestInfo-trigger{
 	background-color:#eee;
 }
 .tribe-events-list .type-tribe_events{
-	border-bottom:1px solid #ddd;
+	border-bottom: $lightgreyborder;
 }
 .opening-menu.fs-dropdown .fs-dropdown-item{
 	border:none;
@@ -2646,7 +2644,7 @@ div.collapseomatic_content{
 	flex-flow: row wrap;
 	align-items: flex-start;
 	padding-bottom: 15px;
-	border-bottom: 1px solid #eee;
+	border-bottom: $lightgreyborder;
     &:last-child {
         margin-bottom: unset;
         padding-bottom: unset;
@@ -2792,7 +2790,7 @@ th .smallText{
 	padding:.5em 1em;
 }
 #tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover,#tabs2 .ui-state-active,#tabs2 .ui-widget-content .ui-state-active,#tabs2 .ui-widget-header .ui-state-active,#tabs2 a.ui-button:active,#tabs2 .ui-button:active,#tabs2 .ui-button.ui-state-active:hover,#tabs3 .ui-state-active,#tabs3 .ui-widget-content .ui-state-active,#tabs3 .ui-widget-header .ui-state-active,#tabs3 a.ui-button:active,#tabs3 .ui-button:active,#tabs3 .ui-button.ui-state-active:hover,#tabs4 .ui-state-active,#tabs4 .ui-widget-content .ui-state-active,#tabs4 .ui-widget-header .ui-state-active,#tabs4 a.ui-button:active,#tabs4 .ui-button:active,#tabs4 .ui-button.ui-state-active:hover{
-	border:1px solid #ddd;
+	border: $lightgreyborder;
 	background:#fff;
 	color:#000;
 }
@@ -2815,7 +2813,7 @@ th .smallText{
 	background:unset;
 }
 #tabs .ui-tabs-panel,#tabs2 .ui-tabs-panel,#tabs3 .ui-tabs-panel,#tabs4 .ui-tabs-panel{
-	border:1px solid #ddd;
+	border: $lightgreyborder;
 }
 /* END style overrides for jQuery UI tabs */
 .pika-table{
@@ -2847,8 +2845,8 @@ th .smallText{
 .wp-block-pullquote cite{
 	font-weight:300
 }
-hr.wp-block-separator{
-	background-color:#ccc;
+hr.wp-block-separator {
+	background-color: $lightgrey;
 }
 #courses .collapseomatic{
 	padding-bottom:0;
@@ -2868,8 +2866,8 @@ hr.wp-block-separator{
 	padding-top:unset;
 	border-bottom: $lightgreyborder;
 }
-#courses table,#courses th,#courses td{
-	border:1px solid grey;
+#courses table, #courses th, #courses td{
+	border: $lightgreyborder;
 	font-size:16px;
 }
 #courses td{

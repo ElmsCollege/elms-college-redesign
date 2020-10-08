@@ -115,7 +115,7 @@
         }
       });
 
-      jQuery('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore(jQuery('.site-main'));
+      jQuery('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertAfter('#primary');
 
       jQuery('ul.parent-sidebar-menu li:not(.toggle-parent)').each(function (index) {
 		  var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
