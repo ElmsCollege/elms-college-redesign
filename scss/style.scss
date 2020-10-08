@@ -1320,12 +1320,18 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .wc-shortcodes-button,.wc-shortcodes-button-icon-right{
 	line-height:1.5em !important;
 }
-.content-area{
+.content-area {
 	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
     display: flex;
+    flex-flow: row wrap;
+}
+@media (max-width: 47.999em){
+    .page-sidebar {
+        order: 2;
+    }
 }
 .page-template-landing-page-blocks .content-area {
 	max-width: 1500px;
@@ -1526,13 +1532,16 @@ iframe{
 	padding:10px 0;
 	width:100%;
 }
-@media (min-width: 1040px){
-	.parent-sidebar-menu{
-		display:block;
+@media (min-width: 1040px) {
+	.parent-sidebar-menu {
+		display: block;
 	}
-	.opening-menu,.program-page-main #info-apply-buttons a{
-		display:none;
+	.opening-menu, .program-page-main #info-apply-buttons a {
+		display: none;
 	}
+    .page-sidebar {
+        margin-top: -27px;
+    }
 }
 .field-content #info-apply-buttons a{
 	display:block !important;
