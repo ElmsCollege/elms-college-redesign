@@ -62,15 +62,16 @@ mark,ins{
 big{
     font-size: 125%
 }
-.site-main,.page-sidebar{
+.site-main, .page-sidebar {
+    flex-grow: 1;
     font-size: 18px;
     line-height: 28px;
 }
-.site-main h2,.page-sidebar h2{
+.site-main h2, .page-sidebar h2{
 	color: $elmsgold;
-	font-size:24px;
-	font-weight:700;
-	margin-bottom:.66666667em
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: .66666667em
 }
 @media (max-width: 47.999em){
 	.site-main h2, .page-sidebar h2 {
@@ -1328,9 +1329,14 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
     display: flex;
     flex-flow: row wrap;
 }
-@media (max-width: 47.999em){
+@media (max-width: 47.999em) {
     .page-sidebar {
         order: 2;
+    }
+}
+@media (min-width: 48em) and (max-width: 1040px) {
+    .page-sidebar {
+        margin-top: -27px;
     }
 }
 .page-template-landing-page-blocks .content-area {
@@ -1363,7 +1369,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .site-main .wc-shortcodes-accordion-trigger a{
 	background-image:none
 }
-@media (max-width: 47.999em){
+@media (max-width: 47.999em) {
 	.site-main{
 		padding:32px;
 	}
@@ -1539,9 +1545,6 @@ iframe{
 	.opening-menu, .program-page-main #info-apply-buttons a {
 		display: none;
 	}
-    .page-sidebar {
-        margin-top: -27px;
-    }
 }
 .field-content #info-apply-buttons a{
 	display:block !important;
