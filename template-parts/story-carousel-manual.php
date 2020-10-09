@@ -49,7 +49,7 @@ if (!empty($stories)):
     </ul>
     
     <?php if (sizeof($stories) > 1) : ?>
-    <ul class="story-carousel pure-g">
+    <ul class="story-carousel">
       <?php foreach ($stories as $index=>$story) : 
         ?>
         <li class="story-tab pure-u-1 pure-u-md-1-4" tabindex="0">

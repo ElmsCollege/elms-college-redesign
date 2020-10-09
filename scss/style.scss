@@ -1245,7 +1245,6 @@ a:hover,a:active{
 	height:unset;
 }
 .story-carousel .story-tab:focus{
-	outline:0;
 	outline:none
 }
 .story-carousel .story-tab .story-image{
@@ -1282,7 +1281,7 @@ a:hover,a:active{
 .story-carousel .story-tab.active .text-content{
 	border-left:none
 }
-.story-carousel .story-tab.active .text-content .theme{
+.story-carousel .story-tab.active .theme {
 	color: $elmsgreen;
 }
 .story-carousel .story-tab.active+li>.text-content{
@@ -1424,6 +1423,9 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	color:#fff;
 	line-height:1.25em;
 	margin-bottom:16px;
+    p {
+        @extend .greenBGwhiteText;
+    }
     a, a:hover, a:visited {
 	    text-decoration: underline;
 	    color: #fff;
@@ -1436,12 +1438,14 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
         margin-top: 0;
         margin-bottom: .5em;
         line-height: 1.5em;
+        font-weight: bold; /* needed to override a mec style */
     }
     h3, h4, h3 {
         font-size: 14px;
         margin-top: 0;
         margin-bottom: .25em;
         color: $elmsgold;
+        font-weight: bold; /* needed to override a mec style */
     }
 }
 .field-related-events {
