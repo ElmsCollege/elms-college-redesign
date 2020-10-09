@@ -75,6 +75,7 @@ svg {
 	-moz-transition: right .3s ease-out;
 	-o-transition: right .3s ease-out;
 	transition: right .3s ease-out;
+    @include transition($property: right, $duration: 3s, $timing: ease-out);
 	top: 0;
 }
 noscript {

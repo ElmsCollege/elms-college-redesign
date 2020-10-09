@@ -138,19 +138,13 @@
 			opacity: 0;
             @include square(100%);
 			position: absolute;
-			-webkit-transition: opacity .25s ease-in-out;
-			-moz-transition: opacity .25s ease-in-out;
-			-ms-transition: opacity .25s ease-in-out;
-			-o-transition: opacity .25s ease-in-out;
+            @include transition($property: opacity);
 		}
 		&:hover {
 			.image-tint {
 				background: linear-gradient(rgba(39,134,172,0.7), rgba(39,134,172,0.7));
 				z-index: 10;
-				-webkit-transition: opacity .25s ease-in-out;
-				-moz-transition: opacity .25s ease-in-out;
-				-ms-transition: opacity .25s ease-in-out;
-				-o-transition: opacity .25s ease-in-out;
+                @include transition($property: opacity);
 				opacity: 1;
 			}
 			.permalink {
@@ -264,19 +258,13 @@
 			opacity: 0;
             @include square(100%);
 			position: absolute;
-			-webkit-transition: opacity .25s ease-in-out;
-			-moz-transition: opacity .25s ease-in-out;
-			-ms-transition: opacity .25s ease-in-out;
-			-o-transition: opacity .25s ease-in-out;
+            @include transition($property: opacity);
 		}
 		&:hover {
 			.image-tint {
 				background: linear-gradient(rgba(17,84,56,0.7), rgba(17,84,56,0.7));
 				z-index: 1;
-				-webkit-transition: opacity .25s ease-in-out;
-				-moz-transition: opacity .25s ease-in-out;
-				-ms-transition: opacity .25s ease-in-out;
-				-o-transition: opacity .25s ease-in-out;
+                @include transition($property: opacity);
 				opacity: 1;
 			}
 			.permalink {

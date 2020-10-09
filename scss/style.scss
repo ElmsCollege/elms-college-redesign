@@ -98,8 +98,8 @@ big{
 .site-content .pure-g [class*="pure-u"],.site-footer.pure-g [class*="pure-u"]{
 	font-family:"soleil", sans-serif
 }
-a{
-	transition:all .25s ease-in-out
+a {
+    @include transition;
 }
 html{
 	max-width:100%;
@@ -200,8 +200,7 @@ h2{
 	text-shadow: 2px 2px $elmsgold;
 }
 button:not[class^="pika-"],input[type="button"],input[type="reset"],input[type="submit"]{
-	border:1px solid;
-	border-color:#ccc #ccc #bbb;
+	border: $lightgreyborder;
 	border-radius:5px;
 	background:#e6e6e6;
 	color:rgba(0,0,0,0.8);
@@ -214,7 +213,8 @@ button:not[class^="pika-"],input[type="button"],input[type="reset"],input[type="
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{
 	border-color:#ccc #bbb #aaa;
 	box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)
-}button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus{
+}
+button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus{
 	border-color:#aaa #bbb #bbb;
 	box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)
 }
@@ -255,12 +255,12 @@ a:hover,a:active{
 	font-size:14px;
 	text-transform:uppercase
 }
-.menu-main-nav-container>ul>li,.menu-special-menu-container>ul>li{
-	vertical-align:middle;
-	max-width:15.5em;
-	position:relative;
-	display:inline-block;
-	transition:.365s ease-in-out background-color
+.menu-main-nav-container>ul>li, .menu-special-menu-container>ul>li {
+	vertical-align: middle;
+	max-width: 15.5em;
+	position: relative;
+	display: inline-block;
+    @include transition($property: background-color, $duration: .365s);
 }
 .menu-main-nav-container>ul>li:after,.menu-special-menu-container>ul>li:after{
 	border-left: $lightgreyborder;
@@ -347,7 +347,7 @@ a:hover,a:active{
 	-webkit-transform:translateY(0) scaleY(1) translateZ(0);
 	-ms-transform:translateY(0) scaleY(1) translateZ(0);
 	transform:translateY(0) scaleY(1) translateZ(0);
-	transition:.365s ease-in-out all
+    @include transition($duration: .365s);
 }
 .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 	top:79px;
@@ -439,21 +439,21 @@ a:hover,a:active{
 	opacity:1;
 	flex-grow:1
 }
-.menu-special-menu-container .search-item form .search-field{
-	line-height:48px;
-	height:48px;
-	border:none;
-	margin-left:16px;
-	background-color:transparent;
-	width:90%;
-	transition:all ease-in-out .5s;
-	border-radius:0;
-	padding:0;
-	-webkit-appearance:none;
-	-moz-appearance:none
-}
-.menu-special-menu-container .search-item form .search-field:focus{
-	outline:none
+.menu-special-menu-container .search-item form .search-field {
+	line-height: 48px;
+	height: 48px;
+	border: none;
+	margin-left: 16px;
+	background-color: transparent;
+	width: 90%;
+    @include transition($duration: .5s);
+	border-radius: 0;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    &:focus {
+        outline: none;
+    }
 }
 .menu-special-menu-container .search-item form .search-submit{
 	border:none;
@@ -1144,7 +1144,7 @@ a:hover,a:active{
 	text-transform:uppercase;
 	border: $whiteborder;
 	color:#fff;
-	transition:all .25s ease-in-out;
+	@include transition;
 	padding:.8em 2em .7em;
 	font-size:16px;
 }
@@ -1239,9 +1239,7 @@ a:hover,a:active{
 	cursor:pointer;
 	display:flex;
 	flex-direction:column;
-	transition:.4s ease-in-out all;
-	-webkit-transition:.4s ease-in-out all;
-	-moz-transition:.4s ease-in-out all;
+    @include transition($duration: .5s);
 	background-color: $elmsgreen;
 	width:25%;
 	height:unset;
@@ -1665,7 +1663,7 @@ button.fs-dropdown-item:hover{
 .opening-menu .menu-item {
 	flex:1 1 auto;
 	border-right: $lightgreyborder;
-	transition:.25s ease-in-out all;
+    @include transition;
 	background-color:#fff;
 	align-self:stretch;
 	display:flex;
@@ -1677,7 +1675,7 @@ button.fs-dropdown-item:hover{
 	padding:15px 10px;
 	color:#333;
 	text-decoration:none;
-	transition:.25s ease-in-out all;
+    @include transition;
 }
 .opening-menu .menu-item:hover{
 	background-color: $elmsgreen
@@ -1833,7 +1831,7 @@ button.child-6{padding-left:90px;}
 	border:2px solid $elmsgreen;
 	padding:.8em 2em .7em;
 	font-size:16px;
-	transition:all .25s ease-in-out;
+	@include transition;
 	display:inline-block
 }
 .more-button-container .more-button:hover{
@@ -2033,7 +2031,7 @@ button.child-6{padding-left:90px;}
 	font-size:16px;
 	font-weight:700;
 	width:13em;
-	transition:all .25s ease-in-out
+	@include transition;
 }
 @media (min-width: 64em){
 	.calls-to-action .permalink{
@@ -2125,7 +2123,7 @@ button.child-6{padding-left:90px;}
 	text-transform:uppercase;
 	border:4px solid $elmsgreen;
 	color: $elmsgreen;
-	transition:all .25s ease-in-out;
+	@include transition;
 	padding:.8em 2em .7em;
 	font-size:16px;
 	font-weight:700
@@ -2524,7 +2522,7 @@ div.collapseomatic_content{
 	margin:auto auto 20px;
 	padding:2px 16px 20px 10px;
 	box-shadow:0 4px 8px 0 rgba(0,0,0,.2);
-	transition:.3s;
+    @include transition($duration: .5s);
 }
 .wp-block-lazyblock-shadowify:hover{
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);

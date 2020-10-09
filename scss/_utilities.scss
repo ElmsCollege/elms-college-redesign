@@ -14,7 +14,7 @@ $lightgrey: #dcdcdc;
 $whiteborder: 1px solid #fff;
 $lightgreyborder: 1px solid $lightgrey;
 
-@mixin logoBackground{
+@mixin logoBackground {
     background-image: url(images/logo-footer.png);
 	background-image: url(images/logo-main.svg);
 	background-position: center center;
@@ -24,7 +24,7 @@ $lightgreyborder: 1px solid $lightgrey;
 	margin: 0;
 }
 
-@mixin posZero{
+@mixin posZero {
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -34,4 +34,12 @@ $lightgreyborder: 1px solid $lightgrey;
 @mixin square($dimension) {
     width: $dimension;
     height: $dimension;
+}
+
+@mixin transition($property: all, $duration: .25s, $timing: ease-in-out) {
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+    -o-transition: $property $duration $timing;
+    -ms-transition: $property $duration $timing;
+    transition: $property $duration $timing;
 }
