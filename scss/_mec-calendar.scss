@@ -25,21 +25,23 @@
     color: $lightgrey;
 }
 
-/* BEGIN styling the different categories on the calendar */
-.undergraduate-admissions {
-    @include mecHoverStyle($elmsgreen);
+/* BEGIN styling the different categories on the calendar, only applies to the novel skin */
+.event-single-link-novel {
+    .undergraduate-admissions {
+        @include mecHoverStyle($elmsgreen);
+    }
+    .graduate-admissions {
+        @include mecHoverStyle($elmsblue);
+    }
+    .continuing-education-admissions {
+        @include mecHoverStyle($elmspurple);
+    }
+    .commencement {
+        @include mecHoverStyle($elmsgold);
+    }
+    .public-event {
+        @include mecHoverStyle(#e93f3f);
+    }
 }
-.graduate-admissions {
-    @include mecHoverStyle($elmsblue);
-}
-.continuing-education-admissions {
-    @include mecHoverStyle($elmspurple);
-}
-.commencement {
-    @include mecHoverStyle($elmsgold);
-}
-.public-event {
-    @include mecHoverStyle(#e93f3f);
-}
-/* END styling the different categories on the calendar */
+/* END styling the different categories on the calendar, only applies to the novel skin */
 
