@@ -155,29 +155,6 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
                         $this->show_other_locations($event); // Show Additional Locations
                     }
                 ?>
-
-                <?php
-                    // Event Categories
-                    if(isset($event->data->categories) and !empty($event->data->categories))
-                    {
-                        ?>
-                        <div class="mec-single-event-category">
-                            <i class="mec-sl-folder"></i>
-                            <dt><?php echo $this->main->m('taxonomy_categories', __('Category', 'modern-events-calendar-lite')); ?></dt>
-                            <?php
-                            foreach($event->data->categories as $category)
-                            {
-                                $icon = get_metadata('term', $category['id'], 'mec_cat_icon', true);
-                                $icon = isset($icon) && $icon != '' ? '<i class="'.$icon.' mec-color"></i>' : '<i class="mec-fa-angle-right"></i>';
-                                echo '<dd class="mec-events-event-categories">
-                                <a href="'.get_term_link($category['id'], 'mec_category').'" class="mec-color-hover" rel="tag">'.$icon . $category['name'] .'</a></dd>';
-                            }
-                            ?>
-                        </div>
-                        <?php
-                    }
-                ?>
-                <?php do_action('mec_single_event_under_category', $event); ?>
                 <?php
                     // Event Organizer
                     if(isset($event->data->organizers[$event->data->meta['mec_organizer_id']]) && !empty($event->data->organizers[$event->data->meta['mec_organizer_id']]))
@@ -390,29 +367,6 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
                     $this->show_other_locations($event); // Show Additional Locations
                 }
                 ?>
-
-                <?php
-                // Event Categories
-                if(isset($event->data->categories) and !empty($event->data->categories) and $single->found_value('event_categories', $settings) == 'on')
-                {
-                    ?>
-                    <div class="mec-single-event-category">
-                        <i class="mec-sl-folder"></i>
-                        <dt><?php echo $this->main->m('taxonomy_categories', __('Category', 'modern-events-calendar-lite')); ?></dt>
-                        <?php
-                        foreach($event->data->categories as $category)
-                        {
-                            $icon = get_metadata('term', $category['id'], 'mec_cat_icon', true);
-                            $icon = isset($icon) && $icon != '' ? '<i class="'.$icon.' mec-color"></i>' : '<i class="mec-fa-angle-right"></i>';
-                            echo '<dd class="mec-events-event-categories">
-                            <a href="'.get_term_link($category['id'], 'mec_category').'" class="mec-color-hover" rel="tag">'.$icon . $category['name'] .'</a></dd>';
-                        }
-                        ?>
-                    </div>
-                    <?php
-                }
-                ?>
-                <?php do_action('mec_single_event_under_category', $event); ?>
                 <?php
                 // Event Organizer
                 if(isset($event->data->organizers[$event->data->meta['mec_organizer_id']]) && !empty($event->data->organizers[$event->data->meta['mec_organizer_id']]) and $single->found_value('event_orgnizer', $settings) == 'on')
