@@ -507,7 +507,7 @@ $bookings_limit_for_users = isset($booking_options['bookings_limit_for_users']) 
         </aside>
         <?php endif; ?>
 
-        <main id="main" class="program-page-main site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3 col-md-8"
+        <main id="main" class="program-page-main site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3 col-md-8">
             <div class="mec-events-event-image"><?php echo $event->data->thumbnails['full']; ?></div>
             <div class="mec-event-content">
                 <?php echo $this->main->display_cancellation_reason($event, $this->display_cancellation_reason); ?>
