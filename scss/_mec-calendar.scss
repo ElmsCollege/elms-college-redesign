@@ -36,9 +36,8 @@
     }
 }
 @media (max-width: 768px) {
-    .mec-container .mec-calendar-side {
+    .mec-wrap .mec-calendar-side {
         min-width: unset !important;
-        overflow-x: scroll;
     }
 }
 /* BEGIN styling the different categories on the calendar, only applies to the novel skin */
