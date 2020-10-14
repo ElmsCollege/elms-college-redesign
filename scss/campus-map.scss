@@ -71,10 +71,6 @@ svg {
 .visible {
 	left: 0;
 	display: block;
-	-webkit-transition: right .3s ease-out;
-	-moz-transition: right .3s ease-out;
-	-o-transition: right .3s ease-out;
-	transition: right .3s ease-out;
     @include transition($property: right, $duration: 3s, $timing: ease-out);
 	top: 0;
 }

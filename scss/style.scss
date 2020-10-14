@@ -168,13 +168,11 @@ h2{
 		line-height:1
 	}
 }
-.pre-title{
-	font-family:"blackjack", serif;
-	margin:0 auto;
-	text-align:center;
-	font-size:36px;
-	color: $elmsgold;
-	line-height:1em
+.pre-title {
+    @include scriptFont;
+    margin: 0 auto;
+	text-align: center;
+	font-size: 36px;
 }
 @media all and (max-width: 47.999em){
 	.pre-title{
@@ -621,7 +619,7 @@ a:hover,a:active{
 		transform:translateX(0) translateZ(0);
 		opacity:1;
 		visibility:visible;
-		transition:.365s transform
+        @include transition($property: transform, $duration: .365s);
 }
 .mobile-or-library #masthead.active .main-navigation>div>ul>li{
 		-webkit-transform:translateX(0) translateZ(0);
@@ -1100,11 +1098,9 @@ a:hover,a:active{
         content: ""
     }
 }
-.stories .story-feature .story-full .text-content .year-and-theme{
+.stories .story-feature .story-full .text-content .year-and-theme {
+    @include scriptFont;
     font-size: 28px;
-    font-family: "blackjack", serif;
-    color: $elmsgold;
-    line-height: 1em
 }
 @media (max-width: 47.999em){
     .stories .story-feature .story-full .text-content .year-and-theme{
@@ -1269,8 +1265,7 @@ a:hover,a:active{
 	border-right:none
 }
 .story-carousel .story-tab .theme{
-	color: $elmsgold;
-	font-family:"blackjack", serif
+    @include scriptFont;
 }
 .story-carousel .story-tab .field-title{
 	color:#fff
@@ -1417,12 +1412,15 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
     line-height:1em;
 }
 /* END code for collapsible nav bar */
-.field-sidebar-content{
-	padding:10px;
+.field-sidebar-content {
+	padding: 10px;
 	background-color: $elmsgreen;
-	color:#fff;
-	line-height:1.25em;
-	margin-bottom:16px;
+	color: #fff;
+	line-height: 1.25em;
+	margin-bottom: 16px;
+    p {
+        font-size: 15px;
+    }
     a, a:hover, a:visited {
 	    text-decoration: underline;
 	    color: #fff;
@@ -1587,35 +1585,30 @@ a.text.requestInfo-trigger{
 .tribe-events-list .type-tribe_events{
 	border-bottom: $lightgreyborder;
 }
-.opening-menu.fs-dropdown .fs-dropdown-item{
-	border:none;
-	-webkit-appearance:none;
-	box-shadow:unset !important;
-	letter-spacing:0;
-	font-family:"soleil", sans-serif
+.opening-menu.fs-dropdown .fs-dropdown-item {
+	border: none;
+	-webkit-appearance: none;
+	box-shadow: unset !important;
+	letter-spacing: 0;
+	font-family: "soleil", sans-serif;
+	outline: none;
+	text-transform: uppercase;
 }
 .opening-menu.fs-dropdown .as-dropdown-selected{
-	border-radius:0;
-	letter-spacing:0;
-	text-transform:uppercase;
-	outline:none;
-	font-family:"soleil", sans-serif
+	border-radius: 0;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	outline: none;
+	font-family: "soleil", sans-serif;
+	color: #fff;
+	box-shadow: unset;
+	text-transform: uppercase;
 }
 .opening-menu.fs-dropdown .fs-dropdown-options{
 	border:2px solid #d7d7d7;
 	border-top:none;
 	border-radius:0;
 	box-shadow:none
-}
-.opening-menu.fs-dropdown .fs-dropdown-item{
-	outline:none;
-	text-transform:uppercase;
-	font-family:"soleil", sans-serif
-}
-.opening-menu.fs-dropdown .fs-dropdown-selected{
-	color:#fff;
-	box-shadow:unset;
-	text-transform:uppercase;
 }
 button.fs-dropdown-item{
 	color:#fff;

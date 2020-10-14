@@ -23,19 +23,16 @@ $lightgreyborder: 1px solid $lightgrey;
 	color: transparent;
 	margin: 0;
 }
-
 @mixin posZero {
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 }
-
 @mixin square($dimension) {
     width: $dimension;
     height: $dimension;
 }
-
 @mixin transition($property: all, $duration: .25s, $timing: ease-in-out) {
     -webkit-transition: $property $duration $timing;
     -moz-transition: $property $duration $timing;
@@ -43,3 +40,9 @@ $lightgreyborder: 1px solid $lightgrey;
     -ms-transition: $property $duration $timing;
     transition: $property $duration $timing;
 }
+@mixin scriptFont {
+    color: $elmsgold;
+    font-family: "blackjack", serif;
+    line-height: 1em;
+}
+

@@ -16,17 +16,24 @@
 .mec-single-event {
     @extend #primary;
 }
-.mec-wrap.colorskin-custom .mec-calendar.mec-event-calendar-classic dt.mec-selected-day:hover {
-    color: #fff;
+.mec-wrap.colorskin-custom .mec-calendar  dt.mec-selected-day:hover {
+    color: #115438;
+    background-attachment: $lightgrey;
 }
 .mec-event-social-icon a{
     text-decoration: none;
 }
-.mec-single-event .mec-events-meta-group-booking, .mec-single-event .mec-frontbox, .mec-box-calendar.mec-calendar dt {
+.mec-single-event .mec-frontbox, .mec-single-event .mec-events-meta-group, .mec-box-calendar.mec-calendar dt {
     border: $lightgreyborder;
 }
 .mec-calendar .mec-table-nullday {
     color: $lightgrey;
+}
+.mec-wrap p {
+    color: inherit;
+    font-weight: inherit;
+    font-size: 18px;
+    font-family: inherit;
 }
 @media only screen and (max-width:479px) {
     .mec-container {
