@@ -115,6 +115,9 @@ setup_postdata($post);
 						More Events
 					</a>
 				</div>
+                <?php
+                    echo do_shortcode('[MEC id="46683"]');
+                ?>
 			</div>
 			<div class="news flexHalf listText">
 				<h2 class="centerText noMarginTop">News</h2>
