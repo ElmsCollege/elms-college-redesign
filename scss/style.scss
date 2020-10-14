@@ -1389,9 +1389,10 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	overflow:hidden;
 	display:none;
 	}
-.show{
-	display:block;
+.show {
+	display: block;
 }
+
 .current_page_item,.current_page_item:visited,.current_page_item:hover{
 	color: $elmsblue !important;
 }
@@ -1592,7 +1593,7 @@ a.text.requestInfo-trigger{
 	outline: none;
 	text-transform: uppercase;
 }
-.opening-menu.fs-dropdown .as-dropdown-selected{
+.opening-menu.fs-dropdown .as-dropdown-selected {
 	border-radius: 0;
 	letter-spacing: 0;
 	text-transform: uppercase;
@@ -1600,7 +1601,6 @@ a.text.requestInfo-trigger{
 	font-family: "soleil", sans-serif;
 	color: #fff;
 	box-shadow: unset;
-	text-transform: uppercase;
 }
 .opening-menu.fs-dropdown .fs-dropdown-options{
 	border:2px solid #d7d7d7;
@@ -2371,8 +2371,8 @@ button.child-6{padding-left:90px;}
 }
 @media screen and (max-width:600px){
 	#homepageAwardIcons{
-		display:none;
-	}
+        display: none;
+    }
 }
 /* END homepage video styling */
 /* BEGIN styling for the collapse-o-matic accordions */
@@ -2741,7 +2741,7 @@ th .smallText{
 	filter: grayscale(0);
 }
 .field-sidebar-menu-items,.nav-trigger .close-label,.nav-trigger.active .open-label,.mobile-or-library .menu-main-nav-container>ul>li.search-item>a,.mobile-or-library .menu-special-menu-container>ul>li.search-item>a,.mobile-or-library #masthead.active .site-branding,.stories .story-feature .story-full .story-image img,.story-carousel .story-tab .story-image img,.field-related-events a.show-less,.field-related-events ul li:not(:first-child),.field-related-events.toggled a.show-more,.calls-to-action .cta-image img,#secondary .widget-title,.hidden,[hidden],.focal-image-container{
-	display:none;
+	@extend %hide;
 }
 .trace,h1.trace{
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -2910,9 +2910,6 @@ hr.wp-block-separator {
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
 .page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color: $elmsgreen}
 
-@media screen and (max-width:600px){
-	#homepageAwardIcons{display:none;}
-}
 .left25 li{
 	margin-left:25px;
 }

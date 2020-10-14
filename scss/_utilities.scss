@@ -17,6 +17,12 @@ $lightgreyborder: 1px solid $lightgrey;
 $mastheadDesktop: 86px;
 $mastheadMobile: 56px;
 
+/* extensions */
+%hide {
+    display: none;
+}
+
+
 
 @mixin logoBackground {
     background-image: url(images/logo-footer.png);
