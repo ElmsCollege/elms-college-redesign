@@ -4,7 +4,7 @@
 .modal_overlay {
 	position:fixed;
     @include posZero;
-	background:rgba(0,0,0,.6);
+	background: rgba(#000, .6);
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -28,7 +28,7 @@
 .modal_btn {
 	font-size:.875rem;
 	background-color:#e6e6e6;
-	color:rgba(0,0,0,.8);
+	color: rgba(#000, .8);
 	border-radius:.25rem;
 	border-style:none;
 	border-width:0;
@@ -55,8 +55,8 @@
 	transform:scale(1.05);
 }
 .modal_btn-primary {
-	background-color:#00449e;
-	color:#fff;
+	background-color: $elmsblue;
+	color: #fff;
 }
 .modal_footer {
 	text-align:center;

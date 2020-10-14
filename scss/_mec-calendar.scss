@@ -20,10 +20,10 @@
     @extend #primary;
 }
 .mec-wrap.colorskin-custom .mec-calendar  dt.mec-selected-day:hover {
-    color: #115438;
+    color: $elmsgreen;
     background-color: $lightgrey;
 }
-.mec-event-social-icon a{
+.mec-event-social-icon a {
     text-decoration: none;
 }
 .mec-single-event .mec-frontbox, .mec-single-event .mec-events-meta-group, .mec-box-calendar.mec-calendar dt {
@@ -40,7 +40,7 @@
 }
 @media only screen and (max-width:479px) {
     .mec-container {
-        width:unset;
+        width: unset;
     }
 }
 @media only screen and (min-width:480px) and (max-width:767px) {

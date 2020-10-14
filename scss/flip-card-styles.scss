@@ -34,7 +34,7 @@
     @include square(100%);
     @include transition($property: transform, $duration: 400ms, $timing: linear);
 	transform-style: preserve-3d;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 4px 8px 0 rgba(#000, .2);
 	border-radius: 15px;
 }
 .program-front {
@@ -112,7 +112,7 @@
 /* BEGIN the liberal arts page (/academics/liberal-arts) has a special flipcard style */
 #lac {
 	--borderwidth: 5px;
-	background: #1D1F20;
+	background: $elmsgreen;
 	position: relative;
 	border-radius: var(--borderWidth);
 	width: 290px;
