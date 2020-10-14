@@ -317,8 +317,7 @@ a:hover, a:active {
 	}
 }
 .menu-main-nav-container>ul>li:hover,.menu-main-nav-container>ul>li.open,.menu-main-nav-container>ul>li:focus{
-	background-color: $elmsgreen;
-	color:#fff;
+	@include white-on-green;
 	z-index:1;
 }
 .menu-main-nav-container>ul>li:hover:after,.menu-main-nav-container>ul>li.open:after,.menu-main-nav-container>ul>li:focus:after{
@@ -811,9 +810,8 @@ a:hover, a:active {
     @include posZero;
 }
 .alert-bar{
-	background: $elmsgreen;
+	@include white-on-green;
 	padding: 1em;
-    color: #fff;
     font-weight: 700;
     text-align: center;
     &.emergency {
@@ -1067,10 +1065,9 @@ a:hover, a:active {
 	}
 }
 .stories .story-feature .story-full .text-content{
+    @include white-on-green;
 	padding:10px 25px;
-	background-color: $elmsgreen;
 	z-index:1;
-	color:#fff
 }
 @media (min-width: 64em){
 	.stories:not(#carouselBlock) .story-feature .story-full .text-content{
@@ -1302,8 +1299,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	background: $elmsgreen;
 }
 .wc-shortcodes-button.wc-shortcodes-button-success:visited:hover,.wc-shortcodes-button.wc-shortcodes-button-success:hover{
-	border-color:#fff;
-	background: $elmsgreen;
+	@include white-on-green;
 }
 .wc-shortcodes-button,.wc-shortcodes-button-icon-right{
 	line-height:1.5em !important;
@@ -1407,9 +1403,8 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 }
 /* END code for collapsible nav bar */
 .field-sidebar-content {
+    @include white-on-green;
 	padding: 10px;
-	background-color: $elmsgreen;
-	color: #fff;
 	line-height: 1.25em;
 	margin-bottom: 16px;
     p {
@@ -1583,65 +1578,63 @@ a.text.requestInfo-trigger{
 	margin: 10px 0;
 	padding: 0 32px;
 	width: 100%;
-	display:block;
-	border:none;
-}
-.opening-menu.fs-dropdown .fs-dropdown-item {
+	display: block;
 	border: none;
-	-webkit-appearance: none;
-	box-shadow: unset !important;
-	letter-spacing: 0;
-	font-family: "soleil", sans-serif;
-	outline: none;
-	text-transform: uppercase;
-}
-.opening-menu.fs-dropdown .fs-dropdown-selected {
-	border-radius: 0;
-	letter-spacing: 0;
-	text-transform: uppercase;
-	outline: none;
-	font-family: "soleil", sans-serif;
-	color: #fff;
-	box-shadow: unset;
-}
-.opening-menu.fs-dropdown .fs-dropdown-options {
-	border-top: none;
-	border-radius: 0;
-	box-shadow: none;
-	margin: 0 32px;
-	width: calc(100% - 64px);
-	border: unset!important;
-	z-index: 10;
-}
-.fs-dropdown-options .inner {
-	display:unset;
-	padding-left:30px;
-}
-.fs-dropdown-options .child-level{
-	padding-left:30px;
+    .fs-dropdown-item {
+        border: none;
+        -webkit-appearance: none;
+        box-shadow: unset !important;
+        letter-spacing: 0;
+        font-family: "soleil", sans-serif;
+        outline: none;
+        text-transform: uppercase;
+    }
+    .fs-dropdown-selected {
+        border-radius: 0;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        outline: none;
+        font-family: "soleil", sans-serif;
+        color: #fff;
+        box-shadow: unset;
+        &:after{
+            @include square(auto);
+            position:absolute;
+            right:15px;
+            bottom:0;
+            border-left:none;
+            border-right:none;
+            border-top:none;
+            content:"\f078";
+            font-family:"Font Awesome 5 Free";
+            font-size:20px;
+            color:#fff;
+        }
+    }
+    .fs-dropdown-options {
+        border-top: none;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0 32px;
+        width: calc(100% - 64px);
+        border: unset!important;
+        z-index: 10;
+        .inner {
+            display: unset;
+            padding-left: 30px;
+        }
+        .child-level {
+            padding-left: 30px;
+        }
+    }
 }
 button.fs-dropdown-item{
 	color:#fff;
 	box-shadow:unset;
 	border-radius:unset;
-}
-button.fs-dropdown-item:hover{
-	color: $elmsblue !important;
-	background-color:#fff !important;
-
-}
-.opening-menu.fs-dropdown .fs-dropdown-selected:after{
-    @include square(auto);
-	position:absolute;
-	right:15px;
-	bottom:0;
-	border-left:none;
-	border-right:none;
-	border-top:none;
-	content:"\f078";
-	font-family:"Font Awesome 5 Free";
-	font-size:20px;
-	color:#fff;
+    &:hover{
+        @include blue-on-white;
+    }
 }
 .opening-menu{
 	background:#fff;
@@ -1782,8 +1775,7 @@ button.child-6{padding-left:90px;}
 }
 .section-statistics .statistic .statistic-inner{
 	margin:0 32px 32px;
-	background: $elmsgreen;
-	color:#fff;
+	@include white-on-green;
 	border:4px solid #fff;
 	padding:32px 32px 48px;
 	text-align:center
@@ -1937,6 +1929,7 @@ button.child-6{padding-left:90px;}
 .newsContainer{
 	position:relative;
 	padding:5px 0;
+    font-size: 16px;
 }
 .newsContainer:first-of-type{
 	padding-top:0;
@@ -2007,8 +2000,7 @@ button.child-6{padding-left:90px;}
 	background: $elmsblue
 }
 .calls-to-action .cta:nth-child(2):hover .permalink{
-	color: $elmsblue;
-	background-color:#fff
+    @include blue-on-white;
 }
 .calls-to-action .cta:nth-child(3){
 	background: $elmspurple;
@@ -2125,8 +2117,7 @@ button.child-6{padding-left:90px;}
 	font-weight:700
 }
 .section-mission_statement .field-permalink a:hover{
-	color: $elmsgreen;
-	background: $elmsgreen
+    @include white-on-green;
 }
 .information-block,.quick-info-container{
 	margin:32px 0;
@@ -2145,8 +2136,7 @@ button.child-6{padding-left:90px;}
 }
 .quick-info h2{
 	font-size:21px;
-	color:#fff !important;
-	background: $elmsgreen;
+	@include white-on-green;
 	padding:16px 32px;
 	margin:0;
 	vertical-align:middle
@@ -2165,10 +2155,9 @@ button.child-6{padding-left:90px;}
     vertical-align: middle;
 }
 .lower-story{
-	padding:10px 25px;
 	margin-top:10px;
-	background: $elmsgreen;
-	color:#fff;
+    padding:10px 25px;
+	@include white-on-green;
 }
 .lower-story a{
 	color:#fff !important;
@@ -2200,10 +2189,9 @@ button.child-6{padding-left:90px;}
 	height:auto;
 }
 .section-heading-as-content .text-content{
-	background-color: $elmsgreen;
+	@include white-on-green;
 	position:relative;
 	z-index:1;
-	color:#fff;
 	width:100%;
 	margin:0;
 	padding:10px 25px;
@@ -2402,11 +2390,10 @@ div.collapseomatic_content{
 /* END styling for the collapse-o-matic accordions */
 /* BEGIN .button styles */
 .button,.buttons a{
-	background-color: $elmsblue;
+	@include white-on-blue;
 	margin:5px auto;
 	display:block;
 	padding:16px;
-	color:#fff !important;
 	text-decoration:none;
 	border-radius:3px;
 	text-align:center;
@@ -2416,13 +2403,11 @@ div.collapseomatic_content{
 	max-width:300px;
 }
 .buttons a:hover,.button:hover{
-	background-color:#fff!important;
-	color: $elmsblue!important;
+	@include blue-on-white;
 	border:2px solid #045b99;
 }
 .buttons.blue a,button.wpep_submit_payment,.fs-dropdown button{
-	background-color: $elmsblue !important;
-	color: #fff !important;
+    @include white-on-blue;
 	border:2px solid $elmsblue;
 	min-width:200px;
 }
@@ -2430,16 +2415,14 @@ div.collapseomatic_content{
 	padding:5px 0;
 }
 .buttons.blue a:hover{
-	color: $elmsblue !important;
+	@include blue-on-white;
 	border:2px solid #045b99 !important;
-	background-color:#fff !important;
 }
 .buttons.green a,.greenButton{
-	background-color: $elmsgreen;
+    @include white-on-green;
 	margin: 5px auto;
 	display: block;
 	padding:16px;
-	color: #fff !important;
 	text-decoration: none;
 	border-radius: 3px;
 	text-align:center;
@@ -2449,8 +2432,7 @@ div.collapseomatic_content{
 	max-width:300px;
 }
 .buttons.green a:hover,.greenButton:hover{
-	background-color:#fff!important;
-	color: $elmsgreen!important;
+    @include green-on-white;
 	border:2px solid $elmsgreen;
 }
 .ninja-forms-form-wrap{
@@ -2460,8 +2442,7 @@ div.collapseomatic_content{
 	display:block;
 	margin:5px auto!important;
 	background:none!important;
-	background-color: $elmsblue!important;
-	color:#fff!important;
+    @include white-on-blue;
 	text-decoration: none!important;
 	border:2px solid $elmsblue!important;
 	border-radius: 5px!important;
@@ -2470,13 +2451,11 @@ div.collapseomatic_content{
 	font-size:18px!important;
 }
 .ninjaSubmit:hover{
-	background-color:#fff!important;
-	color: $elmsblue!important;
+    @include blue-on-white;
 	border:2px solid #045b99!important;
 }
 .is-style-outline a:hover{
-	color:#fff !important;
-	background-color: $elmsgreen !important;
+	@include white-on-green;
 	border:2px solid $elmsgreen !important;
 }
 #secondary{
@@ -2736,8 +2715,7 @@ th .smallText{
 	text-transform:lowercase;
 }
 .greenBGwhiteText,.greenBGwhiteText h1,.greenBGwhiteText h2,.greenBGwhiteText h3,.greenBGwhiteText h4,.greenBGwhiteText h5,.greenBGwhiteText h6,.greenBGwhiteText a,.greenBGwhiteText a:visited{
-	background-color: $elmsgreen;
-	color:#fff !important;
+	@include white-on-green;
 }
 .goldBGwhiteText,.goldBGwhiteText a,.goldBGwhiteText a:visited{
 	background-color: $elmsgold;

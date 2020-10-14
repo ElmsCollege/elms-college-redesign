@@ -80,8 +80,7 @@
 }
 #programIconList {
 	a.program-back {
-		background-color: $elmsgreen;
-		color: #fff;
+        @include white-on-green;
 		transform: rotateX(180deg);
 		border: $whiteborder;
 		&:visited {

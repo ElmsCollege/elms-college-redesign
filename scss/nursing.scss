@@ -79,8 +79,7 @@
 		&:nth-child(2) {
 			&:hover {
 				.permalink {
-					color: $elmsblue;
-					background-color: #fff;
+                    @include blue-on-white;
 				}
 			}
 		}

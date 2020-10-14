@@ -22,8 +22,7 @@
 .modal_header {
 	display:flex;
 	justify-content:center;
-	background-color: $elmsgreen;
-	color:#fff;
+	@include white-on-green;
 }
 .modal_btn {
 	font-size:.875rem;
@@ -55,8 +54,7 @@
 	transform:scale(1.05);
 }
 .modal_btn-primary {
-	background-color: $elmsblue;
-	color: #fff;
+	@include white-on-blue;
 }
 .modal_footer {
 	text-align:center;

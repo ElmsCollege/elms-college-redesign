@@ -55,4 +55,19 @@ $mastheadMobile: 56px;
     font-family: "blackjack", serif;
     line-height: 1em;
 }
-
+@mixin white-on-green {
+    color: #fff;
+    background-color: $elmsgreen;
+}
+@mixin green-on-white {
+    color: $elmsgreen;
+    background-color: #fff;
+}
+@mixin blue-on-white {
+	color: $elmsblue;
+	background-color:#fff;
+}
+@mixin white-on-blue {
+    color: #fff;
+    background-color: $elmsblue;
+}
