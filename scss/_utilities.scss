@@ -14,6 +14,10 @@ $lightgrey: #dcdcdc;
 $whiteborder: 1px solid #fff;
 $lightgreyborder: 1px solid $lightgrey;
 
+$mastheadDesktop: 86px;
+$mastheadMobile: 56px;
+
+
 @mixin logoBackground {
     background-image: url(images/logo-footer.png);
 	background-image: url(images/logo-main.svg);

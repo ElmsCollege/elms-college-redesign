@@ -201,20 +201,20 @@ button:not[class^="pika-"],input[type="button"],input[type="reset"],input[type="
 	border: $lightgreyborder;
 	border-radius:5px;
 	background:#e6e6e6;
-	color:rgba(0,0,0,0.8);
+	color:rgba(#000, .8);
 	font-size:12px;
 	font-size:.75rem;
 	line-height:1;
 	padding:.6em 1em .4em;
-	text-shadow:0 1px 0 rgba(255,255,255,0.8)
+	text-shadow:0 1px 0 rgba(#fff, .8)
 }
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{
 	border-color:#ccc #bbb #aaa;
-	box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)
+	box-shadow:inset 0 1px 0 rgba(#fff, .8),inset 0 15px 17px rgba(#fff, .8),inset 0 -5px 12px rgba(#fff, .02)
 }
 button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus{
 	border-color:#aaa #bbb #bbb;
-	box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)
+	box-shadow:inset 0 -1px 0 rgba(#fff, .5),inset 0 2px 5px rgba(#000, .15)
 }
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea{
 	color:#666;
@@ -231,11 +231,11 @@ select{
 textarea{
 	width:100%
 }
-a:focus{
-	outline:4px dashed rgba(0,0,0,0.4)
+a:focus {
+	outline: 4px dashed rgba(#000, .4);
 }
-a:hover,a:active{
-	outline:0
+a:hover, a:active {
+	outline: 0;
 }
 .main-navigation{
 	clear:both;
@@ -773,42 +773,40 @@ a:hover,a:active{
 	text-align:right;
 	width:50%
 }
-#masthead{
-	position:fixed;
-	z-index:51;
-	width:100%;
-	left:0;
-	right:0;
-	top:0;
-	box-shadow:0 0 4px rgba(0,0,0,0.2);
-	text-align:center;
-	height:86px;
-	background:#fff
+#masthead {
+	position: fixed;
+	z-index: 51;
+	width: 100%;
+    @include posZero;
+	box-shadow: 0 0 4px rgba(#000,.2);
+	text-align: center;
+	height: $mastheadDesktop;
+	background: #fff;
+    .site-branding {
+        color: transparent;
+        position: absolute;
+        margin: 0;
+        padding: 12px;
+        .site-title {
+            @include logoBackground;
+            width: 145px;
+            height: 64px;
+        }
+    }
 }
-.mobile-or-library #masthead{
-	height:56px;
-	overflow:hidden
-}
-.mobile-or-library #masthead.active{
-	overflow:visible
-}
-#masthead .site-branding{
-	color:transparent;
-	position:absolute;
-	margin:0;
-	padding:12px
-}
-.mobile-or-library #masthead .site-branding{
-	padding:8px
-}
-#masthead .site-branding .site-title{
-    @include logoBackground;
-	width:145px;
-	height:64px;
-}
-.mobile-or-library #masthead .site-branding .site-title{
-	height:43px;
-	width:102px
+.mobile-or-library #masthead {
+	height: $mastheadMobile;
+	overflow: hidden;
+    &.active {
+        overflow: visible
+    }
+    .site-branding {
+        padding: 8px;
+        .site-title {
+            height: 43px;
+            width: 102px;
+        }
+    }
 }
 #masthead .site-branding a,.site-footer .site-branding .site-title a{
 	position:absolute;
@@ -893,16 +891,16 @@ a:hover,a:active{
 	overflow:hidden;
     @include square(100%);
 }
-#page{
-	overflow-x:hidden;
-	overflow-y:visible
+#page {
+	overflow-x: hidden;
+	overflow-y: visible;
 }
-.site-content{
-	padding-top:86px
+.site-content {
+	padding-top: $mastheadDesktop;
 }
-@media all and (max-width: 64rem){
-	.site-content{
-		padding-top:56px
+@media all and (max-width: 64rem) {
+	.site-content {
+		padding-top: $mastheadMobile;
 	}
 }
 .social-media {
@@ -972,7 +970,7 @@ a:hover,a:active{
 .screen-reader-text:focus{
 	background-color:#f1f1f1;
 	border-radius:3px;
-	box-shadow:0 0 2px 2px rgba(0,0,0,0.6);
+	box-shadow:0 0 2px 2px rgba(#000, .6);
 	clip:auto !important;
 	color:#21759b;
 	display:block;
@@ -1255,7 +1253,7 @@ a:hover,a:active{
 }
 .story-carousel .story-tab .text-content{
 	padding:16px 32px;
-	border-left:1px solid rgba(255,255,255,0.4);
+	border-left:1px solid rgba(#fff, .4);
 	font-size:21px;
 	display:flex;
 	flex-direction:column;
@@ -1502,7 +1500,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	border: $lightgreyborder;
 	border-bottom:none;
 	margin:0 auto 16px;
-	box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	box-shadow:0 1px 2px rgba(#000, .1);
 	display:none;
 	font-weight:700;
 }
@@ -2065,7 +2063,7 @@ button.child-6{padding-left:90px;}
 	font-size:1.1em;
 }
 .mobile-or-library .site-content{
-	padding-top:56px
+	padding-top: $mastheadMobile;
 }
 .special-section-nav .special-nav-container{
 	position:relative;
@@ -2515,11 +2513,11 @@ div.collapseomatic_content{
 .wp-block-lazyblock-shadowify{
 	margin:auto auto 20px;
 	padding:2px 16px 20px 10px;
-	box-shadow:0 4px 8px 0 rgba(0,0,0,.2);
+	box-shadow:0 4px 8px 0 rgba(#000, .2);
     @include transition($duration: .5s);
 }
 .wp-block-lazyblock-shadowify:hover{
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 8px 16px 0 rgba(#000, .2);
 }
 /* BEGIN changes for the 2018 revision to program pages */
 #primary {
