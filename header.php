@@ -18,10 +18,14 @@
 <link rel="preconnect" href="https://elms.elluciancrmrecruit.com/">
 
 <?php 
-if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type()) && !is_singular( )) :
+    if (function_exists('tribe_is_event')){
+        if ((tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type()) && !is_singular( )) :
 ?>
-<meta name="description" content="<?php the_field("event_description", "option")?>">
-<?php endif; ?>
+            <meta name="description" content="<?php the_field("event_description", "option")?>">
+<?php 
+        endif;
+    }
+?>
 
 <?php wp_head(); ?>
 <?php the_field("head_code", "option") ?>
