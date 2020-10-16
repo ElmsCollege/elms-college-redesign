@@ -8,12 +8,12 @@
       if (pWidth * 0.85 < x && jQuery("body").hasClass("mobile-or-library")) {
         e.preventDefault();
         e.stopPropagation();
-        jQuery(jQuery(e.target).parent()).toggleClass("open");
+        jQuery(jQuery(e.target).parent()).toggleClass("minus");
       }
     });
 
     // ensure ada compliance border outline only appears on keyboard focus not mouse focus
-    jQuery("body").on("mousedown", "*", function (e) {
+      jQuery("body").on("mousedown", "*", function (e) {
       if ((jQuery(this).is(":focus") || jQuery(this).is(e.target)) && jQuery(this).css("outline-style") == "none") {
         jQuery(this).css("outline", "none").on("blur", function () {
           jQuery(this).off("blur").css("outline", "");
@@ -118,11 +118,11 @@
       jQuery('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore('#primary');
 
       jQuery('ul.parent-sidebar-menu li:not(.toggle-parent)').each(function (index) {
-		  var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
-		  var value = jQuery(jQuery(this).find('a').get(0)).text();
-		  var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
-		  jQuery('select.opening-select').append(newOptionFromNav);
-		  newOptionFromNav.addClass(linkClass);
+        var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
+        var value = jQuery(jQuery(this).find('a').get(0)).text();
+        var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
+        jQuery('select.opening-select').append(newOptionFromNav);
+        newOptionFromNav.addClass(linkClass);
       });
     }
     if (jQuery('.opening-select').length) {
@@ -294,50 +294,50 @@
     }
     /* end extra FB tracking for specific events */
 
-	  /* BEGIN collapsible left rail nav JS code */
-		function collapsibleNav(e) {
-			e.preventDefault();
+    /* BEGIN collapsible left rail nav JS code */
+    function collapsibleNav(e) {
+      e.preventDefault();
 
-			var $this = jQuery(this);
+      var $this = jQuery(this);
 
-			if ($this.next().hasClass('show')) {//next works because the <a> is a sibling to the ul.inner
-				$this.next().removeClass('show');
-				$this.next().slideUp(350);
-			} else {
-				$this.parent().parent().find('li .inner').removeClass('show');
-				$this.parent().parent().find('li .inner').slideUp(350);
-				$this.next().toggleClass('show');
-				$this.next().slideToggle(350);
-			}
-		}
+      if ($this.next().hasClass('show')) { //next works because the <a> is a sibling to the ul.inner
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+      } else {
+        $this.parent().parent().find('li .inner').removeClass('show');
+        $this.parent().parent().find('li .inner').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+      }
+    }
 
-		jQuery('.toggle').click(collapsibleNav);
-		
-		jQuery('.toggle').click(function(){
-			var $this = jQuery(this);
-			
-			jQuery(".toggle").not( $this.parents().prev() ).removeClass("minus");
-			if($this.next().hasClass('show')){
-				$this.addClass("minus");
-			}
-		});
-	  /* END collapsible left rail nav JS code */
+    jQuery('.toggle').click(collapsibleNav);
+
+    jQuery('.toggle').click(function () {
+      var $this = jQuery(this);
+
+      jQuery(".toggle").not($this.parents().prev()).removeClass("minus");
+      if ($this.next().hasClass('show')) {
+        $this.addClass("minus");
+      }
+    });
+    /* END collapsible left rail nav JS code */
   }); //end doc.ready
 
-// Initial config for setting up modals
-MicroModal.init({
-  openTrigger: 'data-custom-open',
-  closeTrigger: 'data-custom-close',
-  disableScroll: false,
-  awaitCloseAnimation: true
-});
-
-// Programmatically show modal
-var selection = document.querySelector('.requestInfo-trigger') !== null;
-if (selection) {
-  document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
-    "use strict";
-    MicroModal.show('requestInfo');
-    fbq('trackCustom', 'RequestInfo');
+  // Initial config for setting up modals
+  MicroModal.init({
+    openTrigger: 'data-custom-open',
+    closeTrigger: 'data-custom-close',
+    disableScroll: false,
+    awaitCloseAnimation: true
   });
-}
+
+  // Programmatically show modal
+  var selection = document.querySelector('.requestInfo-trigger') !== null;
+  if (selection) {
+    document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
+      "use strict";
+      MicroModal.show('requestInfo');
+      fbq('trackCustom', 'RequestInfo');
+    });
+  }
