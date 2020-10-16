@@ -1,0 +1,98 @@
+/* Style overrides for the Tribe Events plugin */
+.tribe-events-sub-nav li a,.tribe-events-sub-nav li a:hover,.tribe-events-sub-nav li a:visited{
+	color: $elmsblue;
+	text-decoration:none
+}
+.tribe-events-list .type-tribe_events{
+	border-bottom: $lightgreyborder;
+}
+.event {
+	display: flex;
+	margin-bottom: 20px;
+	color: #fff !important;
+	max-height: 145px;
+	overflow-y: hidden;
+	background-color: $elmsgreen;
+    &:nth-of-type(2n) {
+        background-color: $elmsgold;
+    }
+    &:nth-of-type(3n) {
+        background-color: $elmsblue;
+    }
+    &:nth-of-type(4n) {
+        background-color: $elmspurple;
+    }
+}
+.event-image{
+	height:200px;
+}
+.main-event-content{
+	display:flex;
+	justify-content:space-between;
+	position: relative;
+	align-self:flex-start;
+	width:45%;
+	background-color:inherit;
+	padding-left:10px;
+}
+.start-date{
+	position:absolute;
+	left:-70px;
+	background-color:inherit;
+	padding:5px 10px 10px;
+	font-size:1.5em;
+	width:75px;
+	font-weight:700;
+	align-self:inherit;
+	text-align:center;
+}
+.eventDetails{
+	display:table;
+	margin:0 auto;
+	padding-top:10%;
+}
+.event h3{
+	color:#fff;
+	padding:5px 0;
+}
+.event .permalink{
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:14px;
+	font-weight:500;
+	vertical-align:top;
+	line-height:1.5em
+}
+@media (max-width:1024px){
+	.eventDetails{
+		padding-top:8%;
+	}
+}
+@media (max-width:550px){
+	.event{
+		display:block;
+		max-height:unset;
+		max-width:80%;
+	}
+	.event-image{
+		width:100%;
+		height:auto;
+		background-color:#fff;
+	}
+	.event-image img{
+		display:table;
+		margin:0 auto;
+	}
+	.main-event-content{
+		width:100%;
+	}
+	.eventDetails{
+		padding-top:unset;
+	}
+	.start-date{
+		left:0;
+		top:-70px;
+	}
+}
+
+

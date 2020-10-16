@@ -91,12 +91,9 @@ big{
 	margin-top:0;
 	line-height:1.5;
 }
-.site-footer a,.site-footer a:hover,.site-footer a:visited,.tribe-events-sub-nav li a,.tribe-events-sub-nav li a:hover,.tribe-events-sub-nav li a:visited{
+.site-footer a, .site-footer a:hover, .site-footer a:visited {
 	color: $elmsblue;
-	text-decoration:none
-}
-.site-content .pure-g [class*="pure-u"],.site-footer.pure-g [class*="pure-u"]{
-	//font-family:"soleil", sans-serif
+	text-decoration: none;
 }
 a {
     @include transition;
@@ -375,7 +372,7 @@ a:hover, a:active {
 	}
 }
 .menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li:focus a{
-	color: $elmsgreen
+	color: $elmsgreen;
 }
 .menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.open>ul.sub-menu{
 	background:#fff !important;
@@ -1224,13 +1221,13 @@ a:hover, a:active {
 	display:none;
 }
 .story-carousel .story-tab{
-	cursor:pointer;
 	display:flex;
 	flex-direction:column;
     @include transition($duration: .5s);
 	background-color: $elmsgreen;
 	width:25%;
 	height:unset;
+    @extend %pointer;
 }
 .story-carousel .story-tab:focus{
 	outline:none
@@ -1515,7 +1512,7 @@ iframe{
 	border:unset;
 }
 .requestInfo-close-trigger.greenButton{
-	cursor:pointer;
+	@extend %pointer;
 }
 .program-page-main #info-apply-buttons a{
 	display:block;
@@ -1540,7 +1537,7 @@ a.text.requestInfo-trigger{
 	display:inline-block !important;
 	max-width:unset;
 	width:auto;
-	cursor:pointer !important;
+    @extend %pointer;
 }
 [id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
 	text-align:center;
@@ -1570,9 +1567,6 @@ a.text.requestInfo-trigger{
 }
 [id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
-}
-.tribe-events-list .type-tribe_events{
-	border-bottom: $lightgreyborder;
 }
 .opening-menu.fs-dropdown {
 	margin: 10px 0;
@@ -1831,99 +1825,15 @@ button.child-6{padding-left:90px;}
 .news-events-feature .flexHalf{
 	min-width:300px
 }
-.event {
-	display: flex;
-	margin-bottom: 20px;
-	color: #fff !important;
-	max-height: 145px;
-	overflow-y: hidden;
-	background-color: $elmsgreen;
-    &:nth-of-type(2n) {
-        background-color: $elmsgold;
-    }
-    &:nth-of-type(3n) {
-        background-color: $elmsblue;
-    }
-    &:nth-of-type(4n) {
-        background-color: $elmspurple;
-    }
-}
-.event-image{
-	height:200px;
-}
-.main-event-content{
-	display:flex;
-	justify-content:space-between;
-	position: relative;
-	align-self:flex-start;
-	width:45%;
-	background-color:inherit;
-	padding-left:10px;
-}
-.start-date{
-	position:absolute;
-	left:-70px;
-	background-color:inherit;
-	padding:5px 10px 10px;
-	font-size:1.5em;
-	width:75px;
-	font-weight:700;
-	align-self:inherit;
-	text-align:center;
-}
-.eventDetails{
-	display:table;
-	margin:0 auto;
-	padding-top:10%;
-}
-.event h3{
-	color:#fff;
-	padding:5px 0;
-}
-.event .permalink{
-	text-decoration:none;
-	text-transform:uppercase;
-	font-size:14px;
-	font-weight:500;
-	vertical-align:top;
-	line-height:1.5em
-}
 @media (max-width:1024px){
 	.news-events-feature .flexHalf{
 		flex-basis:100%;
 		padding:0 32px;
 	}
-	.eventDetails{
-		padding-top:8%;
-	}
 }
 @media (max-width:550px){
 	.news-events-feature .flexHalf{
 		padding:0;
-	}
-	.event{
-		display:block;
-		max-height:unset;
-		max-width:80%;
-	}
-	.event-image{
-		width:100%;
-		height:auto;
-		background-color:#fff;
-	}
-	.event-image img{
-		display:table;
-		margin:0 auto;
-	}
-	.main-event-content{
-		width:100%;
-	}
-	.eventDetails{
-		padding-top:unset;
-	}
-	.start-date{
-		left:0;
-		top:-70px;
 	}
 }
 .newsContainer{
@@ -2373,11 +2283,11 @@ h4.collapseomatic{
 	background:none;
 	display:block;
 	padding:10px 20px;
-	cursor:pointer;
 	color: $elmsblue;
 	font-weight:400;
 	border: $lightgreyborder;
 	margin:4px 0 -1px;
+    @extend %pointer;
 }
 h4.collapseomatic:hover{
 	color:#000;
@@ -2403,9 +2313,9 @@ div.collapseomatic_content{
 	min-width: 200px;
 	max-width: 300px;
 }
-.buttons a:hover, .button:hover, a.button:hover {
+.button:hover, .buttons a:hover, a.button:hover {
 	@include blue-on-white;
-	border: 2px solid #045b99;
+	border: 2px solid $elmsblue;
 }
 .buttons.blue a,button.wpep_submit_payment,.fs-dropdown button{
     @include white-on-blue;
@@ -2471,9 +2381,9 @@ div.collapseomatic_content{
 	font-weight: 500;
 	text-transform: uppercase;
 	color: #fff;
-	cursor: pointer;
 	max-width: 100%;
 	margin-bottom: 27px;
+    @extend %pointer;
 }
 #secondary .buttonLink:hover{
 	background-color: $elmsgold !important;
@@ -2849,7 +2759,9 @@ hr.wp-block-separator {
 	}
 }
 /* BEGIN customizations from within the admin section */
-.nav-trigger, .pointer, .menu-item a{cursor:pointer;}
+.nav-trigger, .pointer, .menu-item a {
+    @extend %pointer;
+}
 #menu-item-21808 a, #menu-item-21806 a {
 	padding-top:0 !important;
 	padding-bottom:0 !important;
@@ -2884,4 +2796,5 @@ hr.wp-block-separator {
 
 
 /* ancillary stylesheets */
+@import "tribe-events";
 @import "mec-calendar";

@@ -31,7 +31,6 @@
 	border-radius:.25rem;
 	border-style:none;
 	border-width:0;
-	cursor:pointer;
 	-moz-appearance:button;
 	-webkit-appearance:button;
 	text-transform:none;
@@ -47,6 +46,7 @@
 	transform:translateZ(0);
     @include transition($property: transform, $timing: ease-out);
 	padding:.5rem 1rem;
+    @extend %pointer;
 }
 .modal_btn:focus,.modal_btn:hover {
 	-webkit-transform:scale(1.05);

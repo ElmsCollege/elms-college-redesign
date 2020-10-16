@@ -21,7 +21,9 @@ $mastheadMobile: 56px;
 %hide {
     display: none;
 }
-
+%pointer {
+    cursor: pointer;
+}
 
 
 @mixin logoBackground {

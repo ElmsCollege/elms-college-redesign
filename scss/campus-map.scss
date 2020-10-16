@@ -1,5 +1,6 @@
 /* stylesheet for the campus map page */
 @import "utilities";
+
 footer {
 	border-top: 2px solid $elmsgreen;
 	padding-top: 25px;
@@ -34,7 +35,7 @@ svg {
 	path {
 		pointer-events: visiblePainted;
 		&:hover {
-			cursor: pointer;
+            @extend %pointer;
 		}
 	}
 	polyon {
@@ -42,7 +43,7 @@ svg {
 	}
 	polygon {
 		&:hover {
-			cursor: pointer;
+            @extend %pointer;
 		}
 	}
 }
@@ -56,7 +57,7 @@ svg {
 	top: 9%;
 	background-color: #fff;
 	z-index: 10;
-	border: 2px solid #dedede;
+	border: 2px solid $lightgrey;
 	border-radius: 5px;
 	p {
 		max-width: 700px;

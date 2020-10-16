@@ -32,6 +32,12 @@
 .mec-calendar .mec-table-nullday {
     color: $lightgrey;
 }
+.mec-calendar-header {
+    @extend .noMarginTop;
+    h2 {
+        @extend .noMarginTop;
+    }
+}
 .mec-wrap p {
     color: inherit;
     font-weight: inherit;
