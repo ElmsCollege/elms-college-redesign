@@ -1498,6 +1498,7 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 	color:#333;
 	width:100%;
 	border-bottom: $lightgreyborder;
+    text-decoration: none;
 }
 .parent-sidebar-menu .current_page_item>a{
 	color: $elmsblue
@@ -2300,7 +2301,7 @@ div.collapseomatic_content{
 }
 /* END styling for the collapse-o-matic accordions */
 /* BEGIN .button styles */
-.button, .buttons a, a.button {
+.button, .buttons a, a.button, a.button:visited {
 	@include white-on-blue;
 	margin: 5px auto;
 	display: block;
@@ -2374,6 +2375,7 @@ div.collapseomatic_content{
     width: 100%;
 }
 #secondary .buttonLink, aside #info-apply-buttons a {
+    display: block;
 	background-color: $elmsgold;
 	width: 100%;
 	border-radius: unset;
@@ -2383,6 +2385,9 @@ div.collapseomatic_content{
 	color: #fff;
 	max-width: 100%;
 	margin-bottom: 27px;
+    text-align: center;
+    padding: 16px;
+    text-transform: none;
     @extend %pointer;
 }
 #secondary .buttonLink:hover{
