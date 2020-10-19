@@ -73,3 +73,16 @@ $mastheadMobile: 56px;
     color: #fff;
     background-color: $elmsblue;
 }
+@mixin toggleIndicator {
+	position: relative;
+    &::after {
+        content: "+";
+        position: absolute;
+        right: 5px;
+        line-height: 1em;
+    }
+    &.minus::after {
+        content:"-";
+    }
+}
+

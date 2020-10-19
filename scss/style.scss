@@ -23,8 +23,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	font-weight:400;
 	font-style:normal;
 }
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6{
     clear: both;
+    font-weight: 700;
 }
 p{
     margin-bottom: 1.5em
@@ -70,7 +71,6 @@ big{
 .site-main h2, .page-sidebar h2{
 	color: $elmsgold;
 	font-size: 24px;
-	font-weight: 700;
 	margin-bottom: .66666667em
 }
 @media (max-width: 47.999em){
@@ -82,7 +82,6 @@ big{
 }
 .site-main h3,.page-sidebar h3{
 	font-size:16px;
-	font-weight:700;
 	text-transform:uppercase;
 	color: $elmsgreen;
 	margin-bottom:0
@@ -625,7 +624,7 @@ a:hover, a:active {
 		-moz-opacity:1;
 		opacity:1
 }
-.mobile-or-library .menu-main-nav-container,.mobile-or-library .menu-special-menu-container{
+.mobile-or-library .menu-main-nav-container, .mobile-or-library .menu-special-menu-container{
 		float:none;
 		text-align:left;
 		position:relative;
@@ -705,16 +704,8 @@ a:hover, a:active {
 .mobile-or-library .menu-main-nav-container>ul>li #menu-item-search,.mobile-or-library .menu-special-menu-container>ul>li #menu-item-search{
 	height:50px
 }
-.active .mobile-or-library .menu-item-has-children>a:after {
-    background: url(images/icon-menu-more.png) no-repeat 0 0/cover;
-    content: "";
-    @include square(21px);
-    position: absolute;
-    right: 32px;
-    top: calc(50% - 11px);
-}
-.active .mobile-or-library .menu-item-has-children.open>a:after{
-	background-image:url(images/icon-menu-less.png)
+.active .mobile-or-library .menu-item-has-children a {
+    @include toggleIndicator;
 }
 .mobile-or-library .menu-special-menu-container>ul>li>a{
 	text-align:center;
@@ -1171,7 +1162,7 @@ a:hover, a:active {
 .stories .story-feature-nav{
 	display:block;
 	position:absolute;
-	color:transparent;
+	color: transparent;
     @include square(64px);
 	background: $elmsgreen;
 	border:2px solid #fff;
@@ -1214,62 +1205,62 @@ a:hover, a:active {
 	left:0;
 	border-left:none
 }
-.story-carousel{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-	display:none;
-}
-.story-carousel .story-tab{
-	display:flex;
-	flex-direction:column;
-    @include transition($duration: .5s);
-	background-color: $elmsgreen;
-	width:25%;
-	height:unset;
-    @extend %pointer;
-}
-.story-carousel .story-tab:focus{
-	outline:none
-}
-.story-carousel .story-tab .story-image{
-	display:flex;
-	display:block;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:50%;
-	flex-grow:0;
-	height:170px;
-	min-height:170px;
-}
-.story-carousel .story-tab .text-content{
-	padding:16px 32px;
-	border-left:1px solid rgba(#fff, .4);
-	font-size:21px;
-	display:flex;
-	flex-direction:column;
-	flex-grow:2
+.story-carousel {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: none;
+    .story-tab {
+        display: flex;
+        flex-direction: column;
+        @include transition($duration: .5s);
+        background-color: $elmsgreen;
+        width: 25%;
+        height: unset;
+        @extend %pointer;
+        &:focus {
+            outline: none;
+        }
+        .story-image {
+            display: flex;
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            flex-grow: 0;
+            height: 170px;
+            min-height: 170px;
+        }
+        .text-content {
+            padding: 16px 32px;
+            border-left: 1px solid rgba(#fff, .4);
+            font-size: 21px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }
+        .theme {
+            @include scriptFont;
+        }
+        .field-title {
+            color: #fff;
+        }
+    }
 }
 .story-carousel .story-tab:last-child .text-content,.opening-menu .menu-item:last-child,.site-footer :last-child .footer-item-inner{
 	border-right:none
 }
-.story-carousel .story-tab .theme{
-    @include scriptFont;
-}
-.story-carousel .story-tab .field-title{
-	color:#fff
-}
-.story-carousel .story-tab.active{
+.story-carousel .story-tab.active {
 	background: $elmsgold;
-}
-.story-carousel .story-tab.active .text-content{
-	border-left:none
-}
-.story-carousel .story-tab.active .theme {
-	color: $elmsgreen;
-}
-.story-carousel .story-tab.active+li>.text-content{
-	border-left:none
+    .text-content {
+        border-left: none;
+    }
+    .theme {
+        color: $elmsgreen;
+    }
+    &+li>.text-content{
+        border-left:none
+    }
 }
 /* this deactivates the automatic carousel on small screens on the about elms page */
 @media (max-width: 64em){
@@ -1386,17 +1377,8 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
 .current_page_item,.current_page_item:visited,.current_page_item:hover{
 	color: $elmsblue !important;
 }
-.parent-sidebar-menu .toggle{
-	position: relative;
-    &::after {
-        content: "+";
-        position: absolute;
-        right: 5px;
-        line-height: 1em;
-    }
-    &.minus::after {
-        content:"-";
-    }
+.parent-sidebar-menu .toggle {
+    @include toggleIndicator;
 }
 /* END code for collapsible nav bar */
 .field-sidebar-content {
@@ -2726,7 +2708,6 @@ hr.wp-block-separator {
 #courses h4{
 	border:unset;
 	color: $elmsgreen;
-	font-weight:700;
 	margin-top:0;
 	padding-top:10px;
 }
