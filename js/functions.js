@@ -201,6 +201,7 @@
       updateMenu();
     });
 
+/*
     //preload all carousel images
     var preloadCarousel = function () {
       jQuery(".story-carousel .story-image img").each(function () {
@@ -208,6 +209,7 @@
       });
     };
     preloadCarousel();
+*/
     //make landingpage student carousel work.
     jQuery(".story-carousel .story-tab:first-child").addClass("active");
     jQuery(".story-carousel .story-tab").on("click focus", function () {
