@@ -426,11 +426,9 @@ a:hover, a:active {
 	color: $lightgrey;
 }
 .menu-special-menu-container .search-item form label{
-	min-width:90%;
 	overflow:visible;
 	visibility:visible;
 	opacity:1;
-	flex-grow:1
 }
 .menu-special-menu-container .search-item form .search-field {
 	line-height: 48px;
@@ -465,13 +463,6 @@ a:hover, a:active {
 }
 .menu-special-menu-container>ul>li:last-child{
 	width:8.5em
-}
-@media all and (min-width: 80em){
-	.menu-special-menu-container>ul>li:last-child{
-		-ms-transform:translateY(-1px);
-		-webkit-transform:translateY(-1px);
-		transform:translateY(-1px);
-	}
 }
 .menu-special-menu-container>ul>li:last-child a,.languageSwitcher a,.languageSwitcher a:visited{
 	color:#fff
@@ -2369,7 +2360,6 @@ div.collapseomatic_content{
 	margin-bottom: 27px;
     text-align: center;
     padding: 16px;
-    text-transform: none;
     @extend %pointer;
 }
 #secondary .buttonLink:hover{
@@ -2405,20 +2395,13 @@ div.collapseomatic_content{
 .section-heading-as-content .text-content h2.field-title {
 	color: #fff;
 }
-.section-heading-as-content .field-related-majors {
-	width: 100%;
-	margin: 0;
-}
-.section-heading-as-content .field-related-majors ul li a {
-	padding: 10px 0;
-}
 /* END changes for the 2018 revision to program pages */
 @media only screen and (max-width: 1024px) {
 	ul.sub-menu {
-		font-size:18px;
+		font-size: 18px;
 	}
 }
-.site-main h2,.field-content h2{
+.site-main h2, .field-content h2 {
 	color: $elmsgreen;
 }
 .social-media .social-media-icons a.social-media-icon-link:hover {
