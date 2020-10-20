@@ -695,7 +695,7 @@ a:hover, a:active {
 .mobile-or-library .menu-main-nav-container>ul>li #menu-item-search,.mobile-or-library .menu-special-menu-container>ul>li #menu-item-search{
 	height:50px
 }
-.active .mobile-or-library .menu-item-has-children a {
+.active .mobile-or-library .menu-item-has-children>a {
     @include toggleIndicator;
 }
 .mobile-or-library .menu-special-menu-container>ul>li>a{
@@ -2351,6 +2351,7 @@ div.collapseomatic_content{
 	border: unset;
 	font-weight: 500;
 	text-transform: uppercase;
+    text-decoration: none;
 	color: #fff;
 	max-width: 100%;
 	margin-bottom: 27px;
