@@ -47,8 +47,8 @@
     jQuery("#primary-menu > .menu-item > a, #special-section-menu  > .menu-item > a").focus(function (e) {
       console.log(whatInput.ask());
       if (whatInput.ask() === 'keyboard') {
-        jQuery("#primary-menu > .menu-item, #special-section-menu > .menu-item").removeClass("open");
-        jQuery(this).parent().addClass("open");
+        jQuery("#primary-menu > .menu-item, #special-section-menu > .menu-item").removeClass("minus");
+        //jQuery(this).parent().addClass("open");
       }
     });
     jQuery("#primary-menu > .menu-item > a, #special-section-menu > .menu-item > a").blur(function (e) {
@@ -57,7 +57,7 @@
         if (children.length) {
           jQuery(children.get(0)).focus();
         } else {
-          jQuery(this).parent().removeClass("open");
+          jQuery(this).parent().removeClass("minus");
         }
       }
     });
@@ -76,7 +76,7 @@
     var resetMenuIfDesktopWidth = function () {
       if (Modernizr.mq("only screen and (min-width: 64em)") && !jQuery("body").hasClass("page-template-library-landing-page") && !jQuery("body").hasClass("page-template-library-interior-page")) {
         jQuery("body, header#masthead, html, .nav-trigger, .link-donate").removeClass("active");
-        jQuery(".main-navigation li").removeClass("open");
+        //jQuery(".main-navigation li").removeClass("open");
       }
     };
     //resetMenuIfDesktopWidth();
