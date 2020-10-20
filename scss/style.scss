@@ -683,11 +683,11 @@ a:hover, a:active {
 	opacity:1;
 	display:none
 }
-.mobile-or-library .menu-main-nav-container>ul>li.minus>ul.sub-menu,.mobile-or-library .menu-main-nav-container>ul>li.search-item>ul.sub-menu.for-search,.mobile-or-library .menu-special-menu-container>ul>li.minus>ul.sub-menu,.mobile-or-library .menu-special-menu-container>ul>li.search-item>ul.sub-menu.for-search{
-	display:block;
-	background-color:#f5f5f5;
-	border-bottom:0;
-	top:0
+.mobile-or-library .minus + .sub-menu {
+	display: block;
+	background-color: #f5f5f5;
+	border-bottom: 0;
+	top: 0;
 }
 .mobile-or-library .menu-main-nav-container>ul>li.search-item>ul.sub-menu.for-search,.mobile-or-library .menu-special-menu-container>ul>li.search-item>ul.sub-menu.for-search{
 	background-color:#fff
