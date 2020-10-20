@@ -8,7 +8,7 @@
       if (pWidth * 0.85 < x && jQuery("body").hasClass("mobile-or-library")) {
         e.preventDefault();
         e.stopPropagation();
-        jQuery(jQuery(e.target).parent()).toggleClass("minus");
+        jQuery(jQuery(e.target)).toggleClass("minus");
       }
     });
 
@@ -103,9 +103,8 @@
     } else {
       finalSidebarMenu = sidebarMenu;
     }
-    //console.log("ifnalsidebarmenu");
-    //console.log(finalSidebarMenu);
-    if (finalSidebarMenu && finalSidebarMenu.length) {
+
+      if (finalSidebarMenu && finalSidebarMenu.length) {
 
       jQuery(".field-sidebar-menu-items li").each(function (index, element) {
         var link = jQuery(this).find("a");
