@@ -273,7 +273,9 @@ a:hover, a:active {
 .menu-special-menu-container>ul>li>a{
 	padding:15px 1em;
 }
-.menu-main-nav-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li>ul.sub-menu,#special-section-menu>li>ul.sub-menu{
+.menu-main-nav-container>ul>li>ul.sub-menu,
+.menu-special-menu-container>ul>li>ul.sub-menu,
+#special-section-menu>li>ul.sub-menu {
 	visibility:hidden;
 	list-style:none;
 	margin:7px 0 0;
@@ -322,19 +324,24 @@ a:hover, a:active {
 .menu-main-nav-container>ul>li:hover>a,.menu-main-nav-container>ul>li.open>a,.menu-main-nav-container>ul>li:focus>a{
 	color:#fff;
 }
-.menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-main-nav-container>ul>li.open.search-item .search-icon:after,.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-special-menu-container>ul>li.minus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
-	background-image:url(images/icon-close.png);
-	background-image:url(images/icon-close.svg);
-	background-size:100%;
-	background-repeat:no-repeat
+.menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,
+.menu-main-nav-container>ul>li.open.search-item .search-icon:after,
+.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,
+.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,
+.menu-special-menu-container>ul>li.minus.search-item .search-icon:after,
+.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
+	background-image: url(images/icon-close@2x.png);
+	background-image: url(images/icon-close.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
-@media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-	.menu-main-nav-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-main-nav-container>ul>li.open.search-item .search-icon:after,.menu-main-nav-container>ul>li:not(.search-item):focus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):hover.search-item .search-icon:after,.menu-special-menu-container>ul>li.minus.search-item .search-icon:after,.menu-special-menu-container>ul>li:not(.search-item):focus.search-item .search-icon:after{
-		background-image:url(images/icon-close@2x.png);
-		background-image:url(images/icon-close.svg);
-	}
-}
-.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.minus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.minus>ul.sub-menu{
+.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
+.menu-main-nav-container>ul>li.open>ul.sub-menu,
+.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
+.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
+.menu-special-menu-container>ul>li.minus>ul.sub-menu,
+.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,
+#special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.minus>ul.sub-menu{
 	opacity:1;
 	visibility:visible;
 	-webkit-transform:translateY(0) scaleY(1) translateZ(0);
@@ -342,11 +349,21 @@ a:hover, a:active {
 	transform:translateY(0) scaleY(1) translateZ(0);
     @include transition($duration: .365s);
 }
-.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.minus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
+.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
+.menu-main-nav-container>ul>li.open>ul.sub-menu,
+.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
+.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
+.menu-special-menu-container>ul>li.minus>ul.sub-menu,
+.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 	top:79px;
 }
 @media all and (max-width: 64rem){
-	.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-main-nav-container>ul>li.open>ul.sub-menu,.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,.menu-special-menu-container>ul>li.minus>ul.sub-menu,.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
+	.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
+    .menu-main-nav-container>ul>li.open>ul.sub-menu,
+    .menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
+    .menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
+    .menu-special-menu-container>ul>li.minus>ul.sub-menu,
+    .menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 		top:0;
 		-webkit-transform:none;
 		-ms-transform:none;
@@ -667,7 +684,7 @@ a:hover, a:active {
 	line-height:1em;
 	padding:20px 30px;
 }
-.mobile-or-library {
+.active .mobile-or-library {
     .sub-menu {
         position: relative;
         margin: 0;
