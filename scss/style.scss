@@ -301,17 +301,19 @@ a:hover, a:active {
 	min-width:18em;
 	background:#fff;
 }
-.menu-main-nav-container>ul>li>ul.sub-menu>li>a,.menu-special-menu-container>ul>li>ul.sub-menu>li>a,#special-section-menu>li>ul.sub-menu>li>a{
+:not(.active) .menu-main-nav-container>ul>li>ul.sub-menu>li>a,
+:not(.active) .menu-special-menu-container>ul>li>ul.sub-menu>li>a,
+:not(.active) #special-section-menu>li>ul.sub-menu>li>a{
 	display:block;
 	padding:.5em 0;
 	text-decoration:none;
 	color:#696969;
 }
-.menu-main-nav-container>ul>li>ul.sub-menu>li>a:hover,
-.menu-main-nav-container>ul>li>ul.sub-menu>li>a:focus,
-.menu-special-menu-container>ul>li>ul.sub-menu>li>a:hover,
-.menu-special-menu-container>ul>li>ul.sub-menu>li>a:focus,
-#special-section-menu>li>ul.sub-menu>li>a:hover{
+:not(.active) .menu-main-nav-container>ul>li>ul.sub-menu>li>a:hover,
+:not(.active) .menu-main-nav-container>ul>li>ul.sub-menu>li>a:focus,
+:not(.active) .menu-special-menu-container>ul>li>ul.sub-menu>li>a:hover,
+:not(.active) .menu-special-menu-container>ul>li>ul.sub-menu>li>a:focus,
+:not(.active) #special-section-menu>li>ul.sub-menu>li>a:hover{
 	color: $elmsgreen;
 }
 @media screen and (min-width: 76em){
@@ -340,12 +342,12 @@ a:hover, a:active {
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
-.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
-.menu-main-nav-container>ul>li.open>ul.sub-menu,
-.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
-.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
-.menu-special-menu-container>ul>li.minus>ul.sub-menu,
-.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,
+:not(.active) .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
+:not(.active) .menu-main-nav-container>ul>li.open>ul.sub-menu,
+:not(.active) .menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li.minus>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu,
 #special-section-menu>li:hover>ul.sub-menu,#special-section-menu>li.minus>ul.sub-menu{
 	opacity:1;
 	visibility:visible;
@@ -354,21 +356,21 @@ a:hover, a:active {
 	transform:translateY(0) scaleY(1) translateZ(0);
     @include transition($duration: .365s);
 }
-.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
-.menu-main-nav-container>ul>li.open>ul.sub-menu,
-.menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
-.menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
-.menu-special-menu-container>ul>li.minus>ul.sub-menu,
-.menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
+:not(.active) .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
+:not(.active) .menu-main-nav-container>ul>li.open>ul.sub-menu,
+:not(.active) .menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li.minus>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 	top:79px;
 }
 @media all and (max-width: 64rem){
-	.menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
-    .menu-main-nav-container>ul>li.open>ul.sub-menu,
-    .menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
-    .menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
-    .menu-special-menu-container>ul>li.minus>ul.sub-menu,
-    .menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
+	:not(.active) .menu-main-nav-container>ul>li:not(.search-item):hover>ul.sub-menu,
+    :not(.active) .menu-main-nav-container>ul>li.open>ul.sub-menu,
+    :not(.active) .menu-main-nav-container>ul>li:not(.search-item):focus>ul.sub-menu,
+    :not(.active) .menu-special-menu-container>ul>li:not(.search-item):hover>ul.sub-menu,
+    :not(.active) .menu-special-menu-container>ul>li.minus>ul.sub-menu,
+    :not(.active) .menu-special-menu-container>ul>li:not(.search-item):focus>ul.sub-menu{
 		top:0;
 		-webkit-transform:none;
 		-ms-transform:none;
@@ -395,19 +397,14 @@ a:hover, a:active {
 .menu-special-menu-container>ul>li>a:hover,.menu-special-menu-container>ul>li:hover>a,.menu-special-menu-container>ul>li:focus a{
 	color: $elmsgreen;
 }
-.menu-special-menu-container>ul>li>ul.sub-menu,.menu-special-menu-container>ul>li.minus>ul.sub-menu{
+:not(.active) .menu-special-menu-container>ul>li>ul.sub-menu,
+:not(.active) .menu-special-menu-container>ul>li.minus>ul.sub-menu{
 	background:#fff !important;
 	border-top: $lightgreyborder;
 }
 .menu-special-menu-container>ul>li.search-item:not(.open):hover .search-icon:after{
-	background-image:url(images/icon-search-white.png);
+	background-image:url(images/icon-search-white@2x.png);
 	background-image:url(images/icon-search-white.svg)
-}
-@media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-	.menu-special-menu-container>ul>li.search-item:not(.open):hover .search-icon:after{
-		background-image:url(images/icon-search-white@2x.png);
-		background-image:url(images/icon-search-white.svg)
-	}
 }
 .menu-special-menu-container .search-item>a{
 	padding:19px 1em
