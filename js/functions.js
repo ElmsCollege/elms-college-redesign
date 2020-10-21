@@ -67,7 +67,7 @@
       event.preventDefault();
 
       jQuery(this).toggleClass('active');
-      jQuery('header#masthead, html').toggleClass('active');
+      jQuery('#masthead, html').toggleClass('active');
 
       if (jQuery(window).width() < 720) {
         jQuery('body, .link-donate').toggleClass('active');
@@ -75,7 +75,7 @@
     });
     var resetMenuIfDesktopWidth = function () {
       if (Modernizr.mq("only screen and (min-width: 64em)") && !jQuery("body").hasClass("page-template-library-landing-page") && !jQuery("body").hasClass("page-template-library-interior-page")) {
-        jQuery("body, header#masthead, html, .nav-trigger, .link-donate").removeClass("active");
+        jQuery("body, #masthead, html, .nav-trigger, .link-donate").removeClass("active");
         //jQuery(".main-navigation li").removeClass("open");
       }
     };
