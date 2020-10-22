@@ -16,21 +16,14 @@
 					<i class="fas fa-search" aria-hidden="true"></i>
 				</span>
 			</a>
-			<ul class="sub-menu for-search">
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-search">
-					<div id="menu-search-dropdown">
-						<form role="search" method="get" class="search-form" action="/?">
-							<label>
-								<span class="screen-reader-text">Search for:</span>
-								<input type="search" class="search-field" placeholder="What are you looking for?" value="" name="s" title="Search for:">
-							</label>
-							<button type="submit" class="search-submit" value="Search" aria-label="Search form submit button">
-								<i class="fas fa-search" aria-hidden="true"></i>
-							</button>
-						</form>
-					</div>
-				</li>
-			</ul>
+			<div id="menu-item-search" class="sub-menu for-search">
+                <form id="menu-search-dropdown" role="search" method="get" class="search-form" action="/?">
+                    <label> <span class="screen-reader-text">Search for:</span>
+                      <input type="search" class="search-field" placeholder="What are you looking for?" value="" name="s" title="Search for:" />
+                    </label>
+                    <button type="submit" class="search-submit" value="Search" aria-label="Search form submit button"> <i class="fas fa-search" aria-hidden="true"></i> </button>
+                </form>
+			</div>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764">
 			<a id="interested-in-applying" href="https://elms.elluciancrmrecruit.com/Apply/Account/Login">Apply</a>

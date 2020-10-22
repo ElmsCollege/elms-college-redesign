@@ -81,6 +81,11 @@
         background-image: url(images/icon-search-white.svg);
     }
 }
+#special-menu .menu-item-search {
+    max-width: unset;
+    width: 100%;
+    
+}
 @media all and (max-width: 64rem) {
 	#special-menu li{
 		display: block;
@@ -119,11 +124,6 @@
         position: relative;
         border: $lightgreyborder;
         color: $lightgrey;
-        label {
-            overflow: visible;
-            visibility: visible;
-            opacity: 1;
-        }
         .search-field {
             line-height: 48px;
             height: 48px;
@@ -444,15 +444,21 @@
 }
 #primary-menu {
     a {
-        padding: 15px 1em;
+        padding: 32px 1em 33px;
     }
     li:not(:last-child):after {
         height: 60px;
     }
+    li:hover{
+        background-color: $elmsgreen;
+    }
+    li:hover>a {
+        color: #fff;
+    }
 }
 #special-section-menu {
     a {
-        padding: 32px 1em 33px;
+        padding: 15px 1em;
     }
     li:not(:last-child):after {
         height: 26px;
