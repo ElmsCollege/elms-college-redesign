@@ -458,7 +458,7 @@
 		display:none
 	}
 }
-#special-section-menu {
+#special-section-menu, #primary-menu {
 	margin: 0 auto;
 	text-transform: uppercase;
 	z-index: 2;
@@ -530,7 +530,7 @@
             color: #696969 !important;
             &:hover {
                 color: $elmsgreen !important;
-                background-color: 
+                background-color: transparent;
             }
         }
     }
