@@ -31,7 +31,7 @@
     // copying special section nav (library, school of nursing, subdomains) into the mobile menu
     var specialNavItems = [];
     jQuery("#special-section-menu > li").each(function () {
-      console.log(jQuery(this));
+      //console.log(jQuery(this));
       var clone = jQuery(this).clone();
       clone = jQuery(clone);
       clone.removeAttr("id");

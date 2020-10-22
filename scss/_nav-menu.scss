@@ -67,8 +67,10 @@
 #special-section-menu .sub-menu {
 	top: 39px;
 }
+#primary-menu>li, #special-menu>li {
+    height: 87px;
+}
 #special-menu li{
-	height: 87px;
     &:hover, &:focus {
     	color: $elmsgreen;    
     }
@@ -449,8 +451,11 @@
     li:not(:last-child):after {
         height: 60px;
     }
-    li:hover{
+    li:hover {
         background-color: $elmsgreen;
+    }
+    li:hover:after {
+        border-left: unset;
     }
     li:hover>a {
         color: #fff;
