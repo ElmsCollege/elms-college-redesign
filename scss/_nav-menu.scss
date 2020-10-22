@@ -81,7 +81,7 @@
         }
     }
 }
-#primary-menu li, #special-menu li{
+#masthead:not(.active) #primary-menu li, #masthead:not(.active) #special-menu li{
     &:hover, &:focus{
         @include white-on-green;
         z-index: 1;
@@ -352,7 +352,6 @@
 		-webkit-transform: translateX(0) translateZ(0);
 		-ms-transform: translateX(0) translateZ(0);
 		transform: translateX(0) translateZ(0);
-		opacity: 1;
 		visibility: visible;
         @include transition($property: transform, $duration: .365s);
         &>div>ul>li {
@@ -401,9 +400,6 @@
             line-height: 1.2em;
             display: block;
             height: auto;
-            -webkit-transform: translateX(50%) translateZ(0);
-            -ms-transform: translateX(50%) translateZ(0);
-            transform: translateX(50%) translateZ(0);
             -webkit-transition: -webkit-transform 200ms ease-out 220ms, opacity 200ms ease-out 220ms;
             transition: transform 200ms ease-out 220ms, opacity 200ms ease-out 220ms;
             &:after {
@@ -416,32 +412,6 @@
                 line-height: 1em;
                 padding: 20px 30px;
             }
-        }
-    }
-}
-.active .mobile-or-library {
-    #primary-menu, #special-section-menu {
-        .sub-menu {
-            position: relative;
-            margin: 0;
-            padding: 16px 21px;
-            border: none;
-            background: #fff;
-            max-width: 100%;
-            -webkit-transform: none;
-            -ms-transform: none;
-            transform: none;
-            z-index: 9 !important;
-            width: auto;
-            visibility: visible;
-            opacity: 1;
-            display: none;
-        }
-        .minus + .sub-menu {
-            display: block;
-            background-color: #f5f5f5;
-            border-bottom: 0;
-            top: 0;
         }
     }
 }
@@ -464,12 +434,12 @@
 .mobile-or-library #primary-menu>li.minus,.mobile-or-library #primary-menu>li:hover{
 	background-color:inherit;
 }
-.mobile-or-library #special-menu>li:last-child{
-	order:-2;
-	margin:32px;
-	width:80%;
-	width:calc(100% - 68px - 64px);
-	max-width:204px;
+.mobile-or-library #special-menu li:last-child {
+	order: -2;
+	margin: 32px;
+	width: 80%;
+	width: calc(100% - 68px - 64px);
+	max-width: 204px;
 }
 .mobile-or-library .menu li a{
 	padding-top:15px;
@@ -520,6 +490,32 @@
 }
 
 /* below this line is completely refactored, from-scratch nav bar styling code */
+.active .mobile-or-library {
+    #primary-menu, #special-section-menu {
+        .sub-menu {
+            position: relative;
+            margin: 0;
+            padding: 16px 21px;
+            border: none;
+            background: #fff;
+            max-width: 100%;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            z-index: 9 !important;
+            width: auto;
+            visibility: visible;
+            opacity: 1;
+            display: none;
+        }
+        .minus + .sub-menu {
+            display: block;
+            background-color: #f5f5f5;
+            border-bottom: 0;
+            top: 0;
+        }
+    }
+}
 #special-menu {
     a {
         color: #69696 !important;
@@ -528,8 +524,17 @@
         color: #fff !important;
     }
 }
-#masthead.active #primary-menu .sub-menu {
-    a {
-        color: #696969;
+.active {
+    #primary-menu .sub-menu {
+        a {
+            color: #696969 !important;
+            &:hover {
+                color: $elmsgreen !important;
+                background-color: 
+            }
+        }
+    }
+    #special-menu a:hover {
+        color: $elmsgreen !important;
     }
 }
