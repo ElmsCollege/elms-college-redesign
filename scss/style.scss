@@ -319,10 +319,13 @@ a:hover, a:active {
         }
     }
 }
-#primary-menu, #special-menu li{
+#primary-menu li, #special-menu li{
     &:hover, &:focus{
         @include white-on-green;
         z-index: 1;
+        a {
+            color: #fff;
+        }
     }
 }
 #primary-menu, #special-menu, #special-section-menu {
@@ -374,6 +377,7 @@ a:hover, a:active {
 #special-menu .search-item {
     a {
 	    padding: 19px 1em;
+        color: #696969;
     }
     .search-realtext {
         display: block;
@@ -1962,7 +1966,7 @@ button.child-6{padding-left:90px;}
 	margin: 0 auto;
 	text-transform: uppercase;
 	z-index: 2;
-     > li {
+     &>li {
         position: relative;
         &:after {
             border-left: $lightgreyborder;
@@ -1975,7 +1979,7 @@ button.child-6{padding-left:90px;}
         &:hover > a, &.minus > a {
             color: $elmsgreen;
         }
-        > a {
+        &>a {
             display: inline-block;
             text-decoration: none;
             color: #696969;
