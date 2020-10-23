@@ -28,10 +28,10 @@ switch_to_blog($current_blog_id);
         <ul id="special-menu" class="menu is-style-none">
             <li class="menu-item menu-item-type-post_type menu-item-object-page search-item">
                 <a href="/search/">
-                    <span class="search-realtext">Search</span>
                     <span class="search-icon">
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </span>
+                    <span class="search-realtext">Search</span>
                 </a>
                 <div id="menu-item-search" class="sub-menu for-search">
                     <form id="menu-search-dropdown" role="search" method="get" class="search-form" action="/?">
