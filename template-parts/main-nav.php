@@ -7,31 +7,6 @@
 </div>
 <nav id="site-navigation" class="main-navigation" role="navigation">
 
-<div class="menu-special-menu-container">
-	<ul id="special-menu" class="menu is-style-none">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page search-item">
-			<a href="/search/">
-				<span class="search-realtext">Search</span>
-				<span class="search-icon">
-					<i class="fas fa-search" aria-hidden="true"></i>
-				</span>
-			</a>
-			<div id="menu-item-search" class="sub-menu for-search">
-                <form id="menu-search-dropdown" role="search" method="get" class="search-form" action="/?">
-                    <label> <span class="screen-reader-text">Search for:</span>
-                      <input type="search" class="search-field" placeholder="What are you looking for?" value="" name="s" title="Search for:" />
-                    </label>
-                    <button type="submit" class="search-submit" value="Search" aria-label="Search form submit button"> <i class="fas fa-search" aria-hidden="true"></i> </button>
-                </form>
-			</div>
-		</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764">
-			<a id="interested-in-applying" href="https://elms.elluciancrmrecruit.com/Apply/Account/Login">Apply</a>
-			<a id="link-give" href="https://www.elms.edu/alumni/support-elms/make-a-gift/">Give</a>
-		</li>
-	</ul>
-</div>
-
 <?php	
 /* We are switching to global blog menu for local,
  * it will be easy for admin to add or delete menu which apply across to the site
@@ -48,5 +23,30 @@ switch_to_blog(1);
 
 switch_to_blog($current_blog_id); 
 ?>
-  
+
+    <div class="menu-special-menu-container">
+        <ul id="special-menu" class="menu is-style-none">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page search-item">
+                <a href="/search/">
+                    <span class="search-realtext">Search</span>
+                    <span class="search-icon">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                </a>
+                <div id="menu-item-search" class="sub-menu for-search">
+                    <form id="menu-search-dropdown" role="search" method="get" class="search-form" action="/?">
+                        <label> <span class="screen-reader-text">Search for:</span>
+                          <input type="search" class="search-field" placeholder="What are you looking for?" value="" name="s" title="Search for:" />
+                        </label>
+                        <button type="submit" class="search-submit" value="Search" aria-label="Search form submit button"> <i class="fas fa-search" aria-hidden="true"></i> </button>
+                    </form>
+                </div>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764">
+                <a id="interested-in-applying" href="https://elms.elluciancrmrecruit.com/Apply/Account/Login">Apply</a>
+                <a id="link-give" href="https://www.elms.edu/alumni/support-elms/make-a-gift/">Give</a>
+            </li>
+        </ul>
+    </div>
+
 </nav><!-- #site-navigation -->

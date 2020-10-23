@@ -1,4 +1,5 @@
 /* this file breaks out the styling rules for the nav bar, special section (nursing, library, etc) and small-screen menu button */
+/*
 .main-navigation {
 	clear: both;
 	display: block;
@@ -167,7 +168,7 @@
 #special-menu > li:last-child {
 	width: 8.5em;
 }
-#special-menu .menu-item-9764 {/* this reduces the font size of the apply/give buttons */
+#special-menu .menu-item-9764 {// this reduces the font size of the apply/give buttons
 	font-size: 14px !important;
 	border: unset;
 }
@@ -361,7 +362,6 @@
                 position: relative;
                 letter-spacing: 0;
                 line-height: 1em;
-                padding: 20px 30px;
             }
         }
         .sub-menu.for-search {
@@ -371,7 +371,7 @@
 }
 .active {
     #special-menu {
-        li {
+        > li {
             display: none;
             background: #F5F5F5;
             border-bottom: $lightgreyborder !important;
@@ -383,7 +383,7 @@
                 max-width: 204px;
             }
             a {
-                text-align: center;
+                padding: 20px 30px;
             }
         }
     }
@@ -420,7 +420,7 @@
     @extend %hide;
 }
 
-/* below this line is completely refactored, from-scratch nav bar styling code */
+// below this line is completely refactored, from-scratch nav bar styling code
 #special-section-menu, #primary-menu {
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -467,7 +467,7 @@
     a {
         padding: 15px 1em;
     }
-    li:not(:last-child):after {
+    > li:not(:last-child):after {
         height: 26px;
     }
 }
@@ -521,7 +521,59 @@
             }
         }
     }
-    #special-menu a:hover {
+    #special-menu a:hover, #primary-menu a:hover {
         color: $elmsgreen !important;
     }
+}
+*/
+#site-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    text-transform: uppercase;
+}
+.menu-main-nav-container {
+    margin: 0 auto;
+}
+.sub-menu {
+    visibility: hidden;
+    list-style: none;
+    margin: 7px 0 0;
+    padding: 10px 20px;
+    position: absolute;
+    border-top: 8px solid $elmsgreen;
+    opacity: 0;
+    min-width: 18em;
+    background: #fff;        
+    & > li > a {
+        display: block;
+        padding: .5em 0;
+        text-decoration: none;
+        color: $navlinkgrey;
+        &:hover, &:focus {
+            color: $elmsgreen;
+        }
+    }
+}
+#primary-menu li:not(:last-child)::after {
+    border-left: $lightgreyborder;
+    content: "";
+    top: 11px;
+    position: absolute;
+    right: 0;
+    height: 60px;
+}
+#primary-menu > li:hover {
+    background-color: $elmsgreen;
+}
+#primary-menu > li:hover a {
+    color: #fff;
+}
+#special-section-menu:not(:last-child)::after {
+    border-left: $lightgreyborder;
+    content: "";
+    top: 11px;
+    position: absolute;
+    right: 0;
+    height: 26px;
 }
