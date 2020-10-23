@@ -1,7 +1,5 @@
 <div class="nav-trigger" aria-controls="primary-menu" aria-expanded="false">
   <span></span>
-  <span></span>
-  <span></span>
   <div class="open-label">Menu</div>
   <div class="close-label">Close</div>
 </div>
@@ -17,7 +15,7 @@ switch_to_blog(1);
     wp_nav_menu( array(
         'theme_location'	=> 'primary',
         'menu_id'			=> 'primary-menu',
-		'menu_class'		=> 'is-style-none',
+		'menu_class'		=> '',
 		'item_spacing'		=> 'discard',
     ) );
 
@@ -25,7 +23,7 @@ switch_to_blog($current_blog_id);
 ?>
 
     <div class="menu-special-menu-container">
-        <ul id="special-menu" class="menu is-style-none">
+        <ul id="special-menu" class="menu">
             <li class="menu-item menu-item-type-post_type menu-item-object-page search-item">
                 <a href="/search/">
                     <span class="search-icon">
