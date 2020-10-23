@@ -555,7 +555,7 @@
     min-width: 18em;
     background: #fff;
     text-align: left !important;
-    padding-left: 0px;
+    padding-left: 10px;
     li {
         
     }
@@ -571,11 +571,12 @@
 }
 li:hover > .sub-menu {
     visibility: visible;
+    z-index: 10;
 }
 #primary-menu {
     display: flex;
     list-style: none;
-    li {
+    > li {
         padding: 32px 1em 33px;
         position: relative;
         text-align: center;
@@ -590,6 +591,9 @@ li:hover > .sub-menu {
         display: inline-block;
         vertical-align: middle;
         @include square(100%);
+    }
+    .sub-menu {
+        margin-left: -1em;
     }
 }
 #primary-menu, #special-section-menu, #special-menu {
@@ -608,7 +612,7 @@ li:hover > .sub-menu {
 }
 #special-menu {
     display: flex;
-    li {
+    > li {
         display: flex;
         flex-flow: column nowrap;
         position: relative;
@@ -617,21 +621,29 @@ li:hover > .sub-menu {
         display: block;
         @include square(100%);
     }
-}
-.menu-item-9764 { //apply/give buttons
-    a {
+    #interested-in-applying, #link-give {
         color: #fff;
-        text-decoration: none;
+        padding: .6em .5em;
     }
 }
 #special-section-menu {
     li {
         padding: 15px 1em;
     }
+    a {
+        display: block;
+        @include square(100%);
+    }
 }
+.search-icon {
+    display: block;
+    font-weight: 800;
+    font-size: 32px;
+}
+
 .mobile-or-library {
     .menu-main-nav-container, .menu-special-menu-container {
-        display: none;
+        @extend %hide;
     }
     .nav-trigger {
         display: block;
@@ -640,9 +652,18 @@ li:hover > .sub-menu {
         }
         span {
         	font-family:"Font Awesome 5 Free";
-	        font-weight:800;
+	        font-weight: 800;
             font-size: 32px;
             content: "\f0c9";
+        }
+    }
+    .active {
+        overflow-y: visible;
+        background-color: #fff;
+        height: 100%;
+        .menu-main-nav-container, .menu-special-menu-container {
+            display: flex;
+            flex-flow: column nowrap;
         }
     }
 }

@@ -688,17 +688,17 @@ a:hover, a:active {
 .stories .story-feature-nav.nav-prev:hover,.stories .story-feature-nav.nav-next:hover{
 	color:transparent
 }
-.stories .story-feature-nav:after{
-	font-family:"Font Awesome 5 Free";
-	font-weight:800;
-	color:#fff;
-	display:block;
-	position:absolute;
+.stories .story-feature-nav:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 800;
+	color: #fff;
+	display: block;
+	position: absolute;
     @include square(100%);
-	vertical-align:center;
-	text-align:center;
-	font-size:32px;
-	top:6px
+	vertical-align: center;
+	text-align: center;
+	font-size: 32px;
+	top: 6px
 }
 .stories .story-feature-nav.nav-prev:after{
 	content:"\f060";
