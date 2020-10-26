@@ -607,17 +607,18 @@ li:hover > .sub-menu {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
+    align-items: center;
     > li {
         position: relative;
         &:not(:last-child):after {
-            border-left: $lightgreyborder;
+            border-right: $lightgreyborder;
             content: "";
             position: absolute;
             right: 0;
             height: 100%;
         }
         &:hover:not(:last-child):after {
-            border-left: unset;
+            border-right: unset;
         }
 	}
 }
@@ -642,17 +643,21 @@ li:hover > .sub-menu {
     }
 }
 #special-section-menu {
-    position: relative;
     > li {
-        padding: 15px 1em;
+        padding: 12px 1em;
     }
     a {
         display: block;
         @include square(100%);
     }
 }
+.search-form {
+    @extend .sub-menu;
+    top: 4em;
+    right: 0;
+}
 .search-item {
-    margin-right: 20px;
+    padding-right: 20px;
     label {
         width: 100%;
         position: relative;
@@ -662,6 +667,9 @@ li:hover > .sub-menu {
     display: block;
     font-weight: 800;
     font-size: 32px;
+}
+.search-field {
+    width: 100%;
 }
 .menu-item-search {
 	position: absolute;
@@ -681,14 +689,18 @@ li:hover > .sub-menu {
     }
     .nav-trigger {
         display: block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 800;
+        font-size: 28px;
+        padding: 0 !important;
+        margin-bottom: -10px;
         .open-label:before {
-        	font-family:"Font Awesome 5 Free";
-	        font-weight: 800;
-            font-size: 32px;
-            content: "\f0c9";            
+            display: block;
+            content: "\f0c9";
         }
         .close-label {
             display: none;
+            content: "\f00d";
         }
     }
     .active {
@@ -699,5 +711,23 @@ li:hover > .sub-menu {
             display: flex;
             flex-flow: column nowrap;
         }
+        #masthead {
+            height: 100%;
+        }
+        #primary-menu, #special-menu {
+            flex-direction: column;
+        }
+    }
+}
+.active #site-navigation {
+    flex-direction: column;
+}
+.active .nav-trigger {
+    .open-label {
+        display: none;
+    }
+    .close-label {
+        display: block;
+        order: 2;
     }
 }

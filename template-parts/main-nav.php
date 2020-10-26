@@ -1,6 +1,6 @@
 <div class="nav-trigger" aria-controls="primary-menu" aria-expanded="false">
-  <div class="open-label">Menu</div>
-  <div class="close-label">Close</div>
+  <div class="open-label"><span>Menu</span></div>
+  <div class="close-label"><span>Close</span></div>
 </div>
 <nav id="site-navigation" class="main-navigation" role="navigation">
 
