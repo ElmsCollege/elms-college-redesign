@@ -32,9 +32,10 @@ switch_to_blog($current_blog_id);
                 </a>
                 <form id="menu-item-search" role="search" method="get" class="search-form" action="/?">
                     <label> <span class="screen-reader-text">Search for:</span>
-                      <input type="search" class="search-field" placeholder="What are you looking for?" value="" name="s" title="Search for:" />
+                        <input type="search" class="search-field" placeholder="What are you looking for?" value="" name="s" title="Search for:" />
+                        <button type="submit" class="search-submit" value="Search" aria-label="Search form submit button"> <i class="fas fa-search" aria-hidden="true"></i> </button>
                     </label>
-                    <button type="submit" class="search-submit" value="Search" aria-label="Search form submit button"> <i class="fas fa-search" aria-hidden="true"></i> </button>
+
                 </form>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764">
