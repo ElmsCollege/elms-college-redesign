@@ -539,6 +539,7 @@
     a, a:visited {
         color: $navlinkgrey;
         text-decoration: none;
+        transition: unset;
     }
 }
 .menu-main-nav-container {
@@ -587,7 +588,7 @@ li:hover > .sub-menu {
             color: #fff;
         }
     }
-    > li > a {
+    a {
         display: inline-block;
         vertical-align: middle;
         @include square(100%);
@@ -606,6 +607,19 @@ li:hover > .sub-menu {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
+    > li {
+        position: relative;
+        &:not(:last-child):after {
+            border-left: $lightgreyborder;
+            content: "";
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+        &:hover:not(:last-child):after {
+            border-left: unset;
+        }
+	}
 }
 .special-section-nav {
     height: 3em;
@@ -616,6 +630,7 @@ li:hover > .sub-menu {
         display: flex;
         flex-flow: column nowrap;
         position: relative;
+        align-self: center;
     }
     a {
         display: block;
@@ -623,11 +638,12 @@ li:hover > .sub-menu {
     }
     #interested-in-applying, #link-give {
         color: #fff;
-        padding: .6em .5em;
+        padding: .6em 2em;
     }
 }
 #special-section-menu {
-    li {
+    position: relative;
+    > li {
         padding: 15px 1em;
     }
     a {
@@ -635,26 +651,44 @@ li:hover > .sub-menu {
         @include square(100%);
     }
 }
+.search-item {
+    margin-right: 20px;
+    label {
+        width: 100%;
+        position: relative;
+    }
+}
 .search-icon {
     display: block;
     font-weight: 800;
     font-size: 32px;
 }
-
+.menu-item-search {
+	position: absolute;
+	top: 5.3em;
+    right: 25px;
+}
+.search-submit {
+    position: absolute;
+}
 .mobile-or-library {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
     .menu-main-nav-container, .menu-special-menu-container {
         @extend %hide;
     }
     .nav-trigger {
         display: block;
-        .close-label {
-            display: none;
-        }
-        span {
+        .open-label:before {
         	font-family:"Font Awesome 5 Free";
 	        font-weight: 800;
             font-size: 32px;
-            content: "\f0c9";
+            content: "\f0c9";            
+        }
+        .close-label {
+            display: none;
         }
     }
     .active {
