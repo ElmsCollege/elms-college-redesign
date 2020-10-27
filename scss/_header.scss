@@ -390,9 +390,6 @@
     #menu-item-search {
         height: 50px;
     }
-    .mobile-or-library .menu-item-has-children>a {
-        @include toggleIndicator;
-    }
 } 
 .mobile-or-library {
     #primary-menu>li.minus, #primary-menu>li:hover {
@@ -545,27 +542,12 @@
             width: 145px;
             height: 64px;
         }
-    }
-}
-.mobile-or-library #masthead {
-	height: $mastheadMobile;
-	overflow: hidden;
-    &.active {
-        overflow: visible;
-        height: 100%;
-    }
-    .site-branding {
-        padding: 8px;
-        .site-title {
-            height: 43px;
-            width: 102px;
+        a {
+            position: absolute;
+            color: transparent;
+            @include posZero;
         }
     }
-}
-#masthead .site-branding a,.site-footer .site-branding .site-title a{
-	position:absolute;
-    color: transparent;
-    @include posZero;
 }
 .alert-bar{
 	@include white-on-green;
@@ -665,6 +647,8 @@ li:hover > .sub-menu {
     text-align: center;
     align-items: center;
     > li {
+        display: flex;
+        align-items: center;
         position: relative;
         &:not(:last-child):after {
             border-right: $lightgreyborder;
@@ -672,8 +656,7 @@ li:hover > .sub-menu {
             position: absolute;
             right: 0;
             height: 55%;
-            display: flex;
-            align-items: center;
+            align-self: center;
         }
 	}
     .sub-menu {
@@ -767,8 +750,6 @@ li:hover > .sub-menu {
     }
     .nav-trigger {
         display: block;
-//        padding: 0 !important;
-//        margin-bottom: -10px;
         .open-label:before, .close-label:before {
             font-family: "Font Awesome 5 Free";
             font-weight: 800;
@@ -793,8 +774,42 @@ li:hover > .sub-menu {
             display: flex;
             flex-flow: column nowrap;
         }
+        .mobile-or-library .menu-item-has-children>a {
+            @include toggleIndicator;
+        }
         #primary-menu, #special-menu {
             flex-direction: column;
+            li {
+                padding: unset;
+                &:not(:last-child):after {
+                    border-left: unset;
+                }
+            }
+            .sub-menu {
+                position: relative;
+                top: 0;
+            }
+        }
+        li:hover {
+            background-color: transparent;
+        }
+        li:hover > .sub-menu {
+            display: block;
+        }
+    }
+    #masthead {
+        height: $mastheadMobile;
+        overflow: hidden;
+        &.active {
+            overflow: visible;
+            height: 100%;
+        }
+        .site-branding {
+            padding: 8px;
+            .site-title {
+                height: 43px;
+                width: 102px;
+            }
         }
     }
 }
@@ -809,7 +824,7 @@ li:hover > .sub-menu {
         display: block;
         order: 2;
     }
-    #specialsectionlink {
+    .specialsectionlink {
         display: none;
     }
 }

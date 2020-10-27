@@ -90,6 +90,11 @@ big{
 	margin-top:0;
 	line-height:1.5;
 }
+.site-footer .site-branding .site-title a {
+	position: absolute;
+    color: transparent;
+    @include posZero;
+}
 .site-footer a, .site-footer a:hover, .site-footer a:visited {
 	color: $elmsblue;
 	text-decoration: none;
