@@ -585,13 +585,12 @@
     visibility: hidden;
     list-style: none;
     margin: 7px 0 0;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 10px;
     position: absolute;
     border-top: 8px solid $elmsgreen;
     min-width: 18em;
     background: #fff;
     text-align: left !important;
-    padding-left: 10px;
     li {
         
     }
@@ -771,6 +770,7 @@ li:hover > .sub-menu {
     .active {
         display: flex;
         flex-flow: column nowrap;
+        justify-content: flex-start;
         overflow-y: visible;
         background-color: #fff;
         height: 100%;
@@ -780,6 +780,7 @@ li:hover > .sub-menu {
         .menu-main-nav-container, .menu-special-menu-container {
             display: flex;
             flex-flow: column nowrap;
+            width: 100%;
         }
         .menu-special-menu-container, .menu-item-9764 {
             order: -1;
@@ -789,20 +790,34 @@ li:hover > .sub-menu {
         }
         #primary-menu, #special-menu {
             flex-direction: column;
+            padding-left: 40px;
+            > li {
+                border-top: 1px solid $lightgrey;
+                padding: 5px 0;
+            }
             li {
                 padding: unset;
                 flex-direction: column;
+                width: 100%;
+                text-align: left;
                 &:not(:last-child):after {
                     border-right: unset;
+                }
+                &:first-child {
+                    border-top: unset;
                 }
             }
         }
         .sub-menu {
             display: none;
             position: relative;
-            top: unset;
+            top: unset !important;
+            border-top: unset;
+            width: 100%;
+            border-left: 8px solid $elmsgreen;
+            padding-left: 50px;
         }
-        li:hover > .sub-menu {
+        .minus > .sub-menu {
             display: block;
         }
         #primary-menu > li:hover {
@@ -810,6 +825,14 @@ li:hover > .sub-menu {
         }
         #primary-menu > li:hover a {
             color: $elmsgreen;
+        }
+        .search-item {
+            a {
+                display: none;
+            }
+            form {
+                display: block;
+            }
         }
     }
     #masthead {
