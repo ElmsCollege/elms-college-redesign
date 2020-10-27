@@ -755,13 +755,17 @@ li:hover > .sub-menu {
             font-weight: 800;
             font-size: 28px;
         }
-        .open-label:before {
+        .open-label{
             display: block;
-            content: "\f0c9";
+            &:before {
+                content: "\f0c9";
+            }
         }
-        .close-label:before {
+        .close-label{
             display: none;
-            content: "\f00d";
+            &:before {
+                content: "\f00d";
+            }
         }
     }
     .active {
@@ -780,7 +784,7 @@ li:hover > .sub-menu {
         .menu-special-menu-container, .menu-item-9764 {
             order: -1;
         }
-        .mobile-or-library .menu-item-has-children>a {
+        .menu-item-has-children > a {
             @include toggleIndicator;
         }
         #primary-menu, #special-menu {
@@ -792,17 +796,20 @@ li:hover > .sub-menu {
                     border-right: unset;
                 }
             }
-            .sub-menu {
-                display: none;
-                position: relative;
-                top: unset;
-            }
         }
-        li:hover {
-            background-color: transparent;
+        .sub-menu {
+            display: none;
+            position: relative;
+            top: unset;
         }
         li:hover > .sub-menu {
             display: block;
+        }
+        #primary-menu > li:hover {
+            background-color: transparent;
+        }
+        #primary-menu > li:hover a {
+            color: $elmsgreen;
         }
     }
     #masthead {
@@ -830,6 +837,8 @@ li:hover > .sub-menu {
     }
     .close-label {
         display: block;
-        order: 2;
+    }
+    &.active {
+        height: 40px;
     }
 }
