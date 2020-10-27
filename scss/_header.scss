@@ -524,17 +524,17 @@
 }
 */
 #masthead {
+    @include posZero;
+    display: flex;
 	position: fixed;
 	z-index: 51;
 	width: 100%;
-    @include posZero;
 	box-shadow: 0 0 4px rgba(#000,.2);
 	text-align: center;
 	height: $mastheadDesktop;
 	background: #fff;
     .site-branding {
         color: transparent;
-        position: absolute;
         margin: 0;
         padding: 12px;
         .site-title {
@@ -543,9 +543,9 @@
             height: 64px;
         }
         a {
+            @include posZero;
             position: absolute;
             color: transparent;
-            @include posZero;
         }
     }
 }
@@ -568,6 +568,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
+    margin-left: auto;
     text-transform: uppercase;
 }
 #site-navigation, #special-section-menu {
@@ -626,9 +627,9 @@ li:hover > .sub-menu {
         }
     }
     a {
+        @include square(100%);
         display: inline-block;
         vertical-align: middle;
-        @include square(100%);
     }
     .sub-menu {
         margin-left: -1em;
@@ -674,8 +675,8 @@ li:hover > .sub-menu {
         align-self: center;
     }
     a {
-        display: block;
         @include square(100%);
+        display: block;
     }
     #interested-in-applying, #link-give {
 	    width: 100%;
@@ -701,8 +702,8 @@ li:hover > .sub-menu {
         padding: 12px 1em;
     }
     a {
-        display: block;
         @include square(100%);
+        display: block;
     }
     .sub-menu {
     	top: 2em;
@@ -793,6 +794,11 @@ li:hover > .sub-menu {
         .menu-item-has-children > a {
             @include toggleIndicator;
         }
+        #site-navigation {
+            display: flex;
+            flex-direction: column;
+            margin: unset;
+        }
         #primary-menu, #special-menu {
             flex-direction: column;
             padding-left: 40px;
@@ -842,6 +848,17 @@ li:hover > .sub-menu {
                 visibility: visible;
             }
         }
+        .nav-trigger {
+            .open-label {
+                display: none;
+            }
+            .close-label {
+                display: block;
+            }
+            &.active {
+                height: auto;
+            }
+        }
     }
     #masthead {
         height: $mastheadMobile;
@@ -858,21 +875,5 @@ li:hover > .sub-menu {
                 width: 102px;
             }
         }
-    }
-}
-.active #site-navigation {
-    display: flex;
-    flex-direction: column;
-    margin: unset;
-}
-.active .nav-trigger {
-    .open-label {
-        display: none;
-    }
-    .close-label {
-        display: block;
-    }
-    &.active {
-        height: auto;
     }
 }
