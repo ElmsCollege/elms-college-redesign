@@ -537,7 +537,6 @@
         display: flex;
         justify-content: flex-start;
     }
-
     .site-branding {
         color: transparent;
         margin: 0;
@@ -570,6 +569,45 @@
     @extend %hide;
     z-index: 100;
     padding: 10px;
+    .mobile-or-library & {
+        display: block;
+        margin-left: auto;
+        z-index: 100;
+    }
+    .active & {
+        position: absolute;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+}
+.nav-trigger div:before {//the div allows us to use this style for the .open-label and .close-label with a simpler rule
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 28px;
+    display: block;
+}
+.open-label {
+    .mobile-or-library & {
+         display: block;
+         &:before {
+             content: "\f0c9";
+         }        
+    }
+    .active & {
+        display: none;
+    }
+}
+.close-label {
+    .mobile-or-library & {
+         display: none;
+         &:before {
+             content: "\f00d";
+         }        
+    }
+    .active & {
+        display: block;
+    }
 }
 #site-navigation {
     display: flex;
@@ -759,29 +797,6 @@ li:hover > .sub-menu {
     .menu-main-nav-container, .menu-special-menu-container {
         @extend %hide;
     }
-    .nav-trigger {
-        display: block;
-        margin-left: auto;
-        z-index: 100;
-        .open-label:before, .close-label:before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 800;
-            font-size: 28px;
-            display: block;
-        }
-        .open-label{
-            display: block;
-            &:before {
-                content: "\f0c9";
-            }
-        }
-        .close-label{
-            display: none;
-            &:before {
-                content: "\f00d";
-            }
-        }
-    }
     .active {
         display: flex;
         flex-flow: column nowrap;
@@ -799,11 +814,10 @@ li:hover > .sub-menu {
         }
         .menu-special-menu-container, .menu-item-9764 {
             order: -1;
-            width: 12%;
         }
         .menu-item-9764 {
-            width: 150px;
-            text-align: center;
+            width: 150px !important;
+            text-align: center !important;
             margin-right: auto;
             padding-bottom: 10px;
         }
@@ -859,19 +873,6 @@ li:hover > .sub-menu {
             form {
                 display: block;
                 visibility: visible;
-            }
-        }
-        .nav-trigger {
-            position: absolute;
-            right: 0;
-            .open-label {
-                display: none;
-            }
-            .close-label {
-                display: block;
-            }
-            &.active {
-                height: auto;
             }
         }
     }
