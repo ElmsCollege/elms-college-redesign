@@ -533,6 +533,11 @@
 	text-align: center;
 	height: $mastheadDesktop;
 	background: #fff;
+    .mobile-or-library & {
+        display: flex;
+        justify-content: flex-start;
+    }
+
     .site-branding {
         color: transparent;
         margin: 0;
@@ -563,6 +568,8 @@
 }
 .nav-trigger {
     @extend %hide;
+    z-index: 100;
+    padding: 10px;
 }
 #site-navigation {
     display: flex;
@@ -570,6 +577,14 @@
     align-items: stretch;
     margin-left: auto;
     text-transform: uppercase;
+    .mobile-or-library & {
+        display: none;
+    }
+    .active & {
+        display: flex;
+        flex-direction: column;
+        margin: unset;
+    }
 }
 #site-navigation, #special-section-menu {
     a, a:visited {
@@ -741,19 +756,13 @@ li:hover > .sub-menu {
 	top: -3px;
 }
 .mobile-or-library {
-    header {
-        display: flex;
-        justify-content: flex-start;
-    }
-    #site-navigation {
-        display: none;
-    }
     .menu-main-nav-container, .menu-special-menu-container {
         @extend %hide;
     }
     .nav-trigger {
         display: block;
         margin-left: auto;
+        z-index: 100;
         .open-label:before, .close-label:before {
             font-family: "Font Awesome 5 Free";
             font-weight: 800;
@@ -790,18 +799,20 @@ li:hover > .sub-menu {
         }
         .menu-special-menu-container, .menu-item-9764 {
             order: -1;
+            width: 12%;
+        }
+        .menu-item-9764 {
+            width: 150px;
+            text-align: center;
+            margin-right: auto;
+            padding-bottom: 10px;
         }
         .menu-item-has-children > a {
             @include toggleIndicator;
         }
-        #site-navigation {
-            display: flex;
-            flex-direction: column;
-            margin: unset;
-        }
         #primary-menu, #special-menu {
             flex-direction: column;
-            padding-left: 40px;
+            padding-left: 0;
             > li {
                 border-top: 1px solid $lightgrey;
                 padding: 5px 0;
@@ -819,6 +830,9 @@ li:hover > .sub-menu {
                 }
             }
         }
+        #primary-menu .sub-menu {
+            margin-left: unset;
+        }
         .sub-menu {
             display: none;
             position: relative;
@@ -826,7 +840,6 @@ li:hover > .sub-menu {
             border-top: unset;
             width: 100%;
             border-left: 8px solid $elmsgreen;
-            padding-left: 50px;
         }
         .minus + .sub-menu {
             display: block;
@@ -849,6 +862,8 @@ li:hover > .sub-menu {
             }
         }
         .nav-trigger {
+            position: absolute;
+            right: 0;
             .open-label {
                 display: none;
             }
