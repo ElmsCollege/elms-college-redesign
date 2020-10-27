@@ -742,17 +742,22 @@ li:hover > .sub-menu {
 .mobile-or-library {
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+    }
+    #site-navigation {
+        display: none;
     }
     .menu-main-nav-container, .menu-special-menu-container {
         @extend %hide;
     }
     .nav-trigger {
         display: block;
+        margin-left: auto;
         .open-label:before, .close-label:before {
             font-family: "Font Awesome 5 Free";
             font-weight: 800;
             font-size: 28px;
+            display: block;
         }
         .open-label{
             display: block;
@@ -819,6 +824,7 @@ li:hover > .sub-menu {
         }
         .minus + .sub-menu {
             display: block;
+            visibility: visible;
         }
         #primary-menu > li:hover {
             background-color: transparent;
@@ -833,6 +839,7 @@ li:hover > .sub-menu {
             }
             form {
                 display: block;
+                visibility: visible;
             }
         }
     }
@@ -842,6 +849,7 @@ li:hover > .sub-menu {
         &.active {
             overflow: visible;
             height: 100%;
+            justify-content: flex-start;
         }
         .site-branding {
             padding: 8px;
@@ -853,7 +861,9 @@ li:hover > .sub-menu {
     }
 }
 .active #site-navigation {
+    display: flex;
     flex-direction: column;
+    margin: unset;
 }
 .active .nav-trigger {
     .open-label {
@@ -863,6 +873,6 @@ li:hover > .sub-menu {
         display: block;
     }
     &.active {
-        height: 40px;
+        height: auto;
     }
 }
