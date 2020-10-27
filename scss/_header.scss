@@ -817,7 +817,7 @@ li:hover > .sub-menu {
             border-left: 8px solid $elmsgreen;
             padding-left: 50px;
         }
-        .minus > .sub-menu {
+        .minus + .sub-menu {
             display: block;
         }
         #primary-menu > li:hover {
@@ -826,7 +826,8 @@ li:hover > .sub-menu {
         #primary-menu > li:hover a {
             color: $elmsgreen;
         }
-        .search-item {
+        #special-menu .search-item {
+            border-left: unset;
             a {
                 display: none;
             }
