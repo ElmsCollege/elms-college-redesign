@@ -770,9 +770,15 @@ li:hover > .sub-menu {
         overflow-y: visible;
         background-color: #fff;
         height: 100%;
+        .specialsectionlink {
+            display: none;
+        }
         .menu-main-nav-container, .menu-special-menu-container {
             display: flex;
             flex-flow: column nowrap;
+        }
+        .menu-special-menu-container, .menu-item-9764 {
+            order: -1;
         }
         .mobile-or-library .menu-item-has-children>a {
             @include toggleIndicator;
@@ -781,13 +787,15 @@ li:hover > .sub-menu {
             flex-direction: column;
             li {
                 padding: unset;
+                flex-direction: column;
                 &:not(:last-child):after {
-                    border-left: unset;
+                    border-right: unset;
                 }
             }
             .sub-menu {
+                display: none;
                 position: relative;
-                top: 0;
+                top: unset;
             }
         }
         li:hover {
@@ -823,8 +831,5 @@ li:hover > .sub-menu {
     .close-label {
         display: block;
         order: 2;
-    }
-    .specialsectionlink {
-        display: none;
     }
 }

@@ -70,12 +70,12 @@
       jQuery('#masthead, html').toggleClass('active');
 
       if (jQuery(window).width() < 720) {
-        jQuery('body, .link-donate').toggleClass('active');
+        jQuery('body').toggleClass('active');
       }
     });
     var resetMenuIfDesktopWidth = function () {
       if (Modernizr.mq("only screen and (min-width: 64em)") && !jQuery("body").hasClass("page-template-library-landing-page") && !jQuery("body").hasClass("page-template-library-interior-page")) {
-        jQuery("body, #masthead, html, .nav-trigger, .link-donate").removeClass("active");
+        jQuery("body, #masthead, html, .nav-trigger").removeClass("active");
         //jQuery(".main-navigation li").removeClass("open");
       }
     };
