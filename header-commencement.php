@@ -32,8 +32,8 @@ add_filter( 'body_class', function( $classes ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div style="margin-right:auto;">
-			<div class="site-branding">
+        <div class="homepagelinks">
+            <div class="site-branding">
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

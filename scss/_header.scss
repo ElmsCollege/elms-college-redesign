@@ -347,6 +347,7 @@ $thickgreen: 8px solid $elmsgreen;
         overflow: hidden;
     }
     .active & {
+        flex-direction: column;
         overflow: visible;
         height: 100%;
         justify-content: flex-start;
@@ -602,6 +603,7 @@ li:hover > .sub-menu {
     color: #fff;
     padding: .6em 2em;
     font-size: 16px;
+    text-decoration: none;
 }
 #interested-in-applying {
     background-color: $elmsgreen;
