@@ -353,7 +353,7 @@ $thickgreen: 8px solid $elmsgreen;
         justify-content: flex-start;
     }
     .site-branding {
-        margin: 0;
+        margin-right: auto;
         padding: 12px;
         float: left;
         .mobile-or-library & {
@@ -377,7 +377,14 @@ $thickgreen: 8px solid $elmsgreen;
             color: transparent;
         }
     }
+    a, a:visited {
+        color: $navlinkgrey;
+        text-decoration: none;
+        transition: unset;
+        line-height: 1em;
+    }
 }
+
 .alert-bar{
 	@include white-on-green;
 	padding: 1em;
@@ -438,7 +445,6 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
-    margin-left: auto;
     text-transform: uppercase;
     .mobile-or-library & {
         display: none;
@@ -449,17 +455,20 @@ nav {
         margin: unset;
     }
 }
-nav, .search-item, #special-section-menu {
-    a, a:visited {
-        color: $navlinkgrey;
-        text-decoration: none;
-        transition: unset;
-        line-height: 1em;
-    }
-}
+//nav, .search-item, #special-section-menu, #special-menu {
+//    a, a:visited {
+//        color: $navlinkgrey;
+//        text-decoration: none;
+//        transition: unset;
+//        line-height: 1em;
+//    }
+//}
 .menu-main-nav-container {
     margin: 0 auto;
     display: flex;
+}
+.menu-special-menu-container {
+    margin-left: auto;
 }
 .menu-main-nav-container, .menu-special-menu-container {
     .mobile-or-library & {
@@ -493,8 +502,8 @@ nav, .search-item, #special-section-menu {
     a {
         display: block;
         padding: .5em 0;
-        text-decoration: none;
-        color: $navlinkgrey !important;
+//        text-decoration: none;
+//        color: $navlinkgrey !important;
         &:hover, &:focus {
             color: $elmsgreen !important;
         }
@@ -523,8 +532,8 @@ li:hover > .sub-menu {
     }
     a {
         @include square(100%);
-        display: inline-block;
-        vertical-align: middle;
+//        display: inline-block;
+//        vertical-align: middle;
     }
     .sub-menu {
         margin-left: -1em;
@@ -538,7 +547,7 @@ li:hover > .sub-menu {
     display: flex;
     list-style: none;
     text-transform: uppercase;
-    text-decoration: none;
+//    text-decoration: none;
     text-align: center;
     align-items: center;
     > li {
