@@ -1,335 +1,7 @@
 /* this file breaks out the styling rules for the header - everything about the content in the templates */
 
 $thickgreen: 8px solid $elmsgreen;
-/*
-#primary-menu, #special-menu {
-	margin: 0;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 14px;
-	text-transform: uppercase;
-    li {
-        vertical-align: middle;
-        max-width: 15.5em;
-        position: relative;
-        display: inline-block;
-        @include transition($property: background-color, $duration: .365s);
-    }
-    a {
-        display: inline-block;
-        text-decoration: none;
-        color: $navlinkgrey;
-    }
-    .sub-menu {
-        top: 80px;
-    }
-}
-#special-section-menu .sub-menu {
-	top: 39px;
-}
-#primary-menu>li, #special-menu>li {
-    height: 87px;
-}
-#special-menu li{
-    &:hover, &:focus {
-    	color: $elmsgreen;    
-    }
-    & > ul.sub-menu {
-        background: #fff !important;
-        border-top: $lightgreyborder;
-    }
-    & > li.search-item:not(.open):hover .search-icon:after {
-        background-image: url(images/icon-search-white@2x.png);
-        background-image: url(images/icon-search-white.svg);
-    }
-}
-#special-menu .menu-item-search {
-    max-width: unset;
-    width: 100%;
-}
-@media all and (max-width: 64rem) {
-	#special-menu li{
-		display: block;
-	}
-}
-#special-menu .search-item {
-    a {
-	    padding: 19px 1em;
-        color: $navlinkgrey;
-    }
-    .search-realtext {
-        display: block;
-        position: absolute;
-        bottom: 1em;
-        left: 0;
-        width: 100%;
-    }
-    .search-icon {
-        font-size: 28px;
-        line-height: 14px;
-        width: 2em;
-        display: inline-block;
-        .fas {
-            padding-bottom: 14px;
-        }
-    }
-    .sub-menu {
-        opacity: 1;
-        visibility: visible;
-        border-top: $lightgreyborder;
-        border-bottom: $lightgreyborder;
-        right: 0;
-        width: 48em;
-    }
-    form {
-        position: relative;
-        border: $lightgreyborder;
-        color: $lightgrey;
-        .search-field {
-            line-height: 48px;
-            height: 48px;
-            border: none;
-            margin-left: 16px;
-            background-color: transparent;
-            width: 90%;
-            @include transition($duration: .5s);
-            border-radius: 0;
-            padding: 0;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            &:focus {
-                outline: none;
-            }
-        }
-        .search-submit {
-            border: none;
-            line-height: 24px;
-            border-radius: 0;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            box-shadow: none;
-            padding: 0;
-            position: absolute;
-            right: 8px;
-            top: 12px;
-            text-shadow: none;
-            font-size: 26px;
-            background-color: unset;
-        }
-    }
-}
-@media all and (max-width: 64rem){
-	#special-menu .search-item .sub-menu{
-		width:100%;
-		right:auto;
-	}
-}
-#special-menu > li:last-child {
-	width: 8.5em;
-}
-#special-menu .menu-item-9764 {// this reduces the font size of the apply/give buttons
-	font-size: 14px !important;
-	border: unset;
-}
-@media screen and (min-width: 76em) {
-	.menu-special-menu-container {
-		position: absolute;
-		right: 0;
-	}
-	.menu-main-nav-container {
-		float: none;
-		margin: 0 auto;
-		display: inline-block;
-	}
-}
-@media screen and (min-width: 37.5em){
-	.menu-toggle{
-		display:none
-	}
-}
-@media all and (min-width: 64rem) {
-	#primary-menu>li {
-        &.current-menu-item:hover, &.current-menu-ancestor:hover {
-		    background-color: $elmsgreen;
-            &>a {
-                color: #fff;
-            }
-        }
-	}
-	#primary-menu .current-menu-item+li:after {
-		content: none;
-	}
-}
-.mobile-or-library {
-    .nav-trigger {
-        display: inline-block;
-    }
-}
-.mobile-or-library {
-    .menu-main-nav-container, .menu-special-menu-container {
-        float: none;
-        text-align: left;
-        position: relative;
-        right: auto;
-        margin: 0;
-        display: block;
-    }
-}
-.active #primary-menu {
-    & > li {
-	    max-width: none;
-	    text-align: left;
-	    display: block;
-        & > a {
-            font-size: 21px;
-            color: $elmsgreen;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding-right: 3em;
-        }
-    }
-}
-.active {
-    #primary-menu, #special-menu {
-        height: auto;
-		display: flex;
-		flex-direction: column;
-        li {
-            max-width: none;
-            text-align: left;
-            border: 1px solid #f5f5f5;
-            line-height: 1.2em;
-            display: block;
-            height: auto;
-            -webkit-transition: -webkit-transform 200ms ease-out 220ms, opacity 200ms ease-out 220ms;
-            transition: transform 200ms ease-out 220ms, opacity 200ms ease-out 220ms;
-            &:after {
-                content: none;
-            }
-            &>a {
-                display: block;
-                position: relative;
-                letter-spacing: 0;
-                line-height: 1em;
-            }
-        }
-        .sub-menu.for-search {
-            background-color: #fff;
-        }
-    }
-}
-.active {
-    #special-menu {
-        > li {
-            display: none;
-            background: #F5F5F5;
-            border-bottom: $lightgreyborder !important;
-            font-size: 21px;
-            &:last-child{
-                order: -2;
-                margin: 32px;
-                width: calc(100% - 68px - 64px);
-                max-width: 204px;
-            }
-            a {
-                padding: 20px 30px;
-            }
-        }
-    }
-    #menu-item-search {
-        height: 50px;
-    }
-} 
-.mobile-or-library {
-    #primary-menu>li.minus, #primary-menu>li:hover {
-        background-color: inherit;
-    }
-    .menu li a {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .sub-menu {
-        font-size:14px !important;
-    }
-}
-.special-section-nav .special-nav-container {
-	position: relative;
-	z-index: 50;
-	background-color: rgba($lightgrey, .25);
-}
-.nav-trigger .close-label,.nav-trigger.active .open-label,.mobile-or-library #primary-menu>li.search-item>a,.mobile-or-library #special-menu>li.search-item>a {
-    @extend %hide;
-}
 
-// below this line is completely refactored, from-scratch nav bar styling code
-#special-section-menu, #primary-menu {
-	margin: 0 auto;
-	text-transform: uppercase;
-	z-index: 2;
-    li {
-        position: relative;
-        &:not(:last-child):after {
-            border-left: $lightgreyborder;
-            content: "";
-            top: 11px;
-            position: absolute;
-            right: 0;
-        }
-        &:hover > a, &.minus > a {
-            color: $elmsgreen;
-        }
-    }
-    a {
-        display: inline-block;
-        text-decoration: none;
-        color: $navlinkgrey;
-        vertical-align: middle;
-        line-height: 1em;
-    }
-}
-#primary-menu {
-    a {
-        padding: 32px 1em 33px;
-    }
-    li:not(:last-child):after {
-        height: 60px;
-    }
-    > li:hover {
-        background-color: $elmsgreen;
-    }
-    > li:hover:after {
-        border-left: unset;
-    }
-    li:hover>a {
-        color: #fff;
-    }
-}
-#special-section-menu {
-    a {
-        padding: 15px 1em;
-    }
-    > li:not(:last-child):after {
-        height: 26px;
-    }
-}
-.active {
-    #primary-menu .sub-menu {
-        li:hover {
-            color: unset;
-        }
-        a {
-            color: $navlinkgrey !important;
-            &:hover {
-                color: $elmsgreen !important;
-                background-color: #f5f5f5;
-            }
-        }
-    }
-    #special-menu a:hover, #primary-menu a:hover {
-        color: $elmsgreen !important;
-    }
-}
-*/
 #masthead {
     @include posZero;
     display: flex;
@@ -376,12 +48,6 @@ $thickgreen: 8px solid $elmsgreen;
             display: inline-block;
             color: transparent;
         }
-    }
-    a, a:visited {
-        color: $navlinkgrey;
-        text-decoration: none;
-        transition: unset;
-        line-height: 1em;
     }
 }
 
@@ -454,15 +120,14 @@ nav {
         flex-direction: column;
         margin: unset;
     }
+    a, a:visited {
+        color: $navlinkgrey;
+        text-decoration: none;
+        transition: unset;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
 }
-//nav, .search-item, #special-section-menu, #special-menu {
-//    a, a:visited {
-//        color: $navlinkgrey;
-//        text-decoration: none;
-//        transition: unset;
-//        line-height: 1em;
-//    }
-//}
 .menu-main-nav-container {
     margin: 0 auto;
     display: flex;
@@ -502,8 +167,6 @@ nav {
     a {
         display: block;
         padding: .5em 0;
-//        text-decoration: none;
-//        color: $navlinkgrey !important;
         &:hover, &:focus {
             color: $elmsgreen !important;
         }
@@ -532,11 +195,12 @@ li:hover > .sub-menu {
     }
     a {
         @include square(100%);
-//        display: inline-block;
-//        vertical-align: middle;
     }
     .sub-menu {
         margin-left: -1em;
+        .active & {
+            margin-left: unset;
+        }
     }
 }
 #primary-menu, #special-section-menu, #special-menu {
@@ -546,8 +210,6 @@ li:hover > .sub-menu {
     padding-left: 0;
     display: flex;
     list-style: none;
-    text-transform: uppercase;
-//    text-decoration: none;
     text-align: center;
     align-items: center;
     > li {
@@ -568,7 +230,6 @@ li:hover > .sub-menu {
     }
 }
 .special-section-nav {
-    //height: auto;
     background-color: #ebebeb;
 }
 @media all and (max-width: 48rem) {
@@ -651,6 +312,16 @@ li:hover > .sub-menu {
         width: 100%;
         position: relative;
     }
+    .active & {
+        border-left: unset;
+        a {
+            display: none;
+        }
+        form {
+            display: block;
+            visibility: visible;
+        }
+    }
 }
 .search-icon {
     display: block;
@@ -719,9 +390,6 @@ li:hover > .sub-menu {
                 border-left: $thickgreen;
             }
         }
-        #primary-menu .sub-menu {
-            margin-left: unset;
-        }
         .minus + .sub-menu {
             display: block;
             visibility: visible;
@@ -731,16 +399,6 @@ li:hover > .sub-menu {
         }
         #primary-menu > li:hover a {
             color: $elmsgreen;
-        }
-        #special-menu .search-item {
-            border-left: unset;
-            a {
-                display: none;
-            }
-            form {
-                display: block;
-                visibility: visible;
-            }
         }
     }
 }
