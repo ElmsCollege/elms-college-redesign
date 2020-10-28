@@ -66,7 +66,6 @@
     jQuery('.nav-trigger').on('click touchstart', function (event) {
       event.preventDefault();
 
-      jQuery(this).toggleClass('active');
       jQuery('#masthead, html').toggleClass('active');
 
       if (jQuery(window).width() < 720) {
@@ -75,7 +74,7 @@
     });
     var resetMenuIfDesktopWidth = function () {
       if (Modernizr.mq("only screen and (min-width: 64em)") && !jQuery("body").hasClass("page-template-library-landing-page") && !jQuery("body").hasClass("page-template-library-interior-page")) {
-        jQuery("body, #masthead, html, .nav-trigger").removeClass("active");
+        jQuery("body, #masthead, html").removeClass("active");
         //jQuery(".main-navigation li").removeClass("open");
       }
     };
