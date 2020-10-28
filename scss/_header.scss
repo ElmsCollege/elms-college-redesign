@@ -1,4 +1,6 @@
 /* this file breaks out the styling rules for the header - everything about the content in the templates */
+
+$thickgreen: 8px solid $elmsgreen;
 /*
 #primary-menu, #special-menu {
 	margin: 0;
@@ -20,40 +22,6 @@
     }
     .sub-menu {
         top: 80px;
-    }
-}
-#primary-menu, #special-menu, #special-section-menu {
-    li:hover>.sub-menu {
-        opacity:1 ;
-        visibility: visible;
-        -webkit-transform: translateY(0) scaleY(1) translateZ(0);
-        -ms-transform: translateY(0) scaleY(1) translateZ(0);
-        transform: translateY(0) scaleY(1) translateZ(0);
-        @include transition($duration: .365s);        
-    }
-    .sub-menu {
-        visibility: hidden;
-        list-style: none;
-        margin: 7px 0 0;
-        padding: 10px 20px;
-        position: absolute;
-        border-top: 8px solid $elmsgreen;
-        -webkit-transform: translateY(-50%) scaleY(0) translateZ(-90px);
-        -ms-transform: translateY(-50%) scaleY(0) translateZ(-90px);
-        transform: translateY(-50%) scaleY(0) translateZ(-90px);
-        text-align: left;
-        opacity: 0;
-        min-width: 18em;
-        background: #fff;        
-        &>li>a {
-            display: block;
-            padding: .5em 0;
-            text-decoration: none;
-            color: $navlinkgrey;
-            &:hover, &:focus {
-                color: $elmsgreen;
-            }
-        }
     }
 }
 #special-section-menu .sub-menu {
@@ -289,11 +257,6 @@
 	z-index: 50;
 	background-color: rgba($lightgrey, .25);
 }
-@media all and (max-width: 48rem){
-.special-section-nav .special-nav-container{
-		display:none
-	}
-}
 .nav-trigger .close-label,.nav-trigger.active .open-label,.mobile-or-library #primary-menu>li.search-item>a,.mobile-or-library #special-menu>li.search-item>a {
     @extend %hide;
 }
@@ -395,6 +358,9 @@
         .mobile-or-library & {
             padding: 8px;
         }
+        .active & {
+            @extend %hide;
+        }
         .site-title {
             @include logoBackground;
             width: 145px;
@@ -467,7 +433,7 @@
         display: block;
     }
 }
-#site-navigation {
+nav {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
@@ -482,16 +448,27 @@
         margin: unset;
     }
 }
-#site-navigation, #special-section-menu {
+nav, .search-item, #special-section-menu {
     a, a:visited {
         color: $navlinkgrey;
         text-decoration: none;
         transition: unset;
+        line-height: 1em;
     }
 }
 .menu-main-nav-container {
     margin: 0 auto;
     display: flex;
+}
+.menu-main-nav-container, .menu-special-menu-container {
+    .mobile-or-library & {
+        @extend %hide;
+    }
+    .active & {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
 }
 .sub-menu {
     visibility: hidden;
@@ -499,17 +476,18 @@
     margin: 7px 0 0;
     padding: 10px 20px 10px 10px;
     position: absolute;
-    border-top: 8px solid $elmsgreen;
+    border-top: $thickgreen;
     min-width: 18em;
     background: #fff;
     text-align: left !important;
     .active & {
         display: none;
+        margin-top: 0px;
         position: relative;
         top: unset !important;
         border-top: unset;
         width: 100%;
-        border-left: 8px solid $elmsgreen;
+        border-left: $thickgreen;
     }
     a {
         display: block;
@@ -580,9 +558,15 @@ li:hover > .sub-menu {
     }
 }
 .special-section-nav {
-    height: 3em;
+    //height: auto;
     background-color: #ebebeb;
 }
+@media all and (max-width: 48rem) {
+    .special-section-nav {
+	    	display: none
+	    }
+}
+
 .specialsectionlink {
 	float: left;
 	margin-top: 11px;
@@ -676,9 +660,6 @@ li:hover > .sub-menu {
 	top: -3px;
 }
 .mobile-or-library {
-    .menu-main-nav-container, .menu-special-menu-container {
-        @extend %hide;
-    }
     .active {
         display: flex;
         flex-flow: column nowrap;
@@ -686,11 +667,6 @@ li:hover > .sub-menu {
         overflow-y: visible;
         background-color: #fff;
         height: 100%;
-        .menu-main-nav-container, .menu-special-menu-container {
-            display: flex;
-            flex-flow: column nowrap;
-            width: 100%;
-        }
         .menu-special-menu-container, .menu-item-9764 {
             order: -1;
         }
@@ -727,6 +703,9 @@ li:hover > .sub-menu {
                 &:first-child {
                     border-top: unset;
                 }
+            }
+            .minus {
+                border-left: $thickgreen;
             }
         }
         #primary-menu .sub-menu {
