@@ -2069,11 +2069,11 @@ th .smallText{
 	float:right;
 }
 .wp-block-pullquote{
-	background-color:#f2f2f2 !important;
+	background-color:#f2f2f2 !important;//!important is needed here to override a default WordPress style
 	padding:1em 0;
 	font-weight:700;
 	color: $elmsgreen;
-	border-left:10px solid $elmsgreen;
+	border-left: $thickgreen;
 }
 .wp-block-pullquote p{
 	margin-bottom:.5em;

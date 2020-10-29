@@ -1,7 +1,5 @@
 /* this file breaks out the styling rules for the header - everything about the content in the templates */
 
-$thickgreen: 8px solid $elmsgreen;
-
 #masthead {
     @include posZero;
     display: flex;
@@ -84,6 +82,7 @@ $thickgreen: 8px solid $elmsgreen;
     font-weight: 800;
     font-size: 28px;
     display: block;
+    color: $navlinkgrey;
 }
 .open-label {
     .mobile-or-library & {
@@ -107,6 +106,15 @@ $thickgreen: 8px solid $elmsgreen;
         display: block;
     }
 }
+header, #special-section-menu {
+    a, a:visited {
+        color: $navlinkgrey;
+        text-decoration: none;
+        transition: unset;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+}
 nav {
     display: flex;
     justify-content: flex-end;
@@ -119,13 +127,6 @@ nav {
         display: flex;
         flex-direction: column;
         margin: unset;
-    }
-    a, a:visited {
-        color: $navlinkgrey;
-        text-decoration: none;
-        transition: unset;
-        line-height: 1em;
-        text-transform: uppercase;
     }
 }
 .menu-main-nav-container {
@@ -180,27 +181,23 @@ li:hover > .sub-menu {
     display: flex;
     list-style: none;
     > li {
-        padding: 32px 1em 33px;
         position: relative;
         text-align: center;
+        > a {
+            padding: 32px 1em 33px;
+        }
     }
     > li:hover {
         background-color: $elmsgreen;
         &:not(:last-child):after {
             border-right: unset;
         }
-        a {
+        > a {
             color: #fff;
         }
     }
     a {
         @include square(100%);
-    }
-    .sub-menu {
-        margin-left: -1em;
-        .active & {
-            margin-left: unset;
-        }
     }
 }
 #primary-menu, #special-section-menu, #special-menu {
@@ -226,11 +223,11 @@ li:hover > .sub-menu {
         }
 	}
     .sub-menu {
-    	top: 5em;
+    	top: 4.3em;
     }
 }
 .special-section-nav {
-    background-color: #ebebeb;
+    background-color: #f2f2f2;
 }
 @media all and (max-width: 48rem) {
     .special-section-nav {
@@ -244,10 +241,8 @@ li:hover > .sub-menu {
 	border-left: $lightgreyborder;
 	padding: 5px 0;
     a, a:visited {
-        color: $navlinkgrey;
-        text-decoration: none;
         padding-left: 10px;
-        font-size: 1.1em;
+        text-transform: unset;
     }
     .active & {
             display: none;
@@ -261,10 +256,6 @@ li:hover > .sub-menu {
         flex-flow: column nowrap;
         position: relative;
         align-self: center;
-    }
-    a {
-        @include square(100%);
-        display: block;
     }
 }
 #interested-in-applying, #link-give {
@@ -320,6 +311,7 @@ li:hover > .sub-menu {
         form {
             display: block;
             visibility: visible;
+            border-left: unset;
         }
     }
 }
