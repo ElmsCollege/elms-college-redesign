@@ -119,12 +119,10 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
-    text-transform: uppercase;
     .mobile-or-library & {
         display: none;
     }
     .active & {
-        display: flex;
         flex-direction: column;
         margin: unset;
     }
@@ -135,6 +133,7 @@ nav {
 }
 .menu-special-menu-container {
     margin-left: auto;
+    align-self: center;
 }
 .menu-main-nav-container, .menu-special-menu-container {
     .mobile-or-library & {
@@ -152,7 +151,7 @@ nav {
     margin: 7px 0 0;
     padding: 10px 20px 10px 10px;
     position: absolute;
-    border-top: $thickgreen;
+    border-top: $thickgreenborder;
     min-width: 18em;
     background: #fff;
     text-align: left !important;
@@ -163,7 +162,7 @@ nav {
         top: unset !important;
         border-top: unset;
         width: 100%;
-        border-left: $thickgreen;
+        border-left: $thickgreenborder;
     }
     a {
         display: block;
@@ -260,11 +259,10 @@ li:hover > .sub-menu {
 }
 #interested-in-applying, #link-give {
     width: 100%;
-	height: 50%;
+	height: 43px;
     color: #fff;
-    padding: .6em 2em;
+    padding: 12% 2em;
     font-size: 16px;
-    text-decoration: none;
 }
 #interested-in-applying {
     background-color: $elmsgreen;
@@ -280,11 +278,8 @@ li:hover > .sub-menu {
 }
 
 #special-section-menu {
-    > li {
+    > li > a {
         padding: 12px 1em;
-    }
-    a {
-        @include square(100%);
         display: block;
     }
     .sub-menu {
@@ -379,7 +374,7 @@ li:hover > .sub-menu {
                 }
             }
             .minus {
-                border-left: $thickgreen;
+                border-left: $thickgreenborder;
             }
         }
         .minus + .sub-menu {
