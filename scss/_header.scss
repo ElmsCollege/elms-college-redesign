@@ -203,13 +203,14 @@ li:hover > .sub-menu {
         @include square(100%);
     }
 }
-.active #primary-menu > li:hover {
-    background-color: transparent;
+.active #primary-menu {
+    > li:hover {
+        background-color: transparent;
+    }
+    > li:hover a {
+        color: $elmsgreen;
+    }
 }
-.active #primary-menu > li:hover a {
-    color: $elmsgreen;
-}
-
 #primary-menu, #special-section-menu, #special-menu {
     margin-bottom: 0;
 }
@@ -244,9 +245,11 @@ li:hover > .sub-menu {
 	    	display: none
 	    }
 }
+.homepagelinks {
+    display: flex;
+    flex-flow: row nowrap;
+}
 .specialsectionlink {
-	float: left;
-	margin-top: 11px;
 	border-left: $lightgreyborder;
 	padding: 5px 0;
     a, a:visited {
@@ -266,12 +269,34 @@ li:hover > .sub-menu {
         align-self: center;
     }
 }
+.active #special-menu li:not(:nth-child(n+7)) {
+    background-color: #f2f2f2;
+}
+.active #primary-menu, .active #special-menu {
+    width: 96%;
+    flex-direction: column;
+    padding-left: 0;
+    > li {
+        border-top: 1px solid $lightgrey;
+        > a {
+            font-size: 18px;
+            line-height: 2em;
+            padding: 10px 0;
+        }
+    }
+    li {
+        &:not(:last-child):after {
+            border-right: unset;
+        }
+        &:first-child {
+            border-top: unset;
+        }
+    }
+}
+
 #interested-in-applying, #link-give {
     color: #fff;
     padding: 13.5px 2em;
-    .active & a {
-        margin-left: unset;
-    }
 }
 #interested-in-applying {
     background-color: $elmsgreen;
@@ -341,30 +366,8 @@ li:hover > .sub-menu {
     background-color: unset;
 }
 .active {
-    #primary-menu, #special-menu {
-        width: 96%;
-        flex-direction: column;
-        padding-left: 0;
-        > li {
-            border-top: 1px solid $lightgrey;
-            margin-left: 30px;
-            > a {
-                font-size: 18px;
-                line-height: 2em;
-                padding: 10px 0;
-            }
-        }
-        li {
-            &:not(:last-child):after {
-                border-right: unset;
-            }
-            &:first-child {
-                border-top: unset;
-            }
-        }
-        .minus {
-            border-left: $thickgreenborder;
-        }
+    .minus {
+        border-left: $thickgreenborder;
     }
     .menu-item-9764 {
         width: 150px !important;
@@ -375,9 +378,9 @@ li:hover > .sub-menu {
     }
     .menu-item-has-children > a {
         @include toggleIndicator;
-        font-size: 2em;
         &:after {
             font-size:2em;
+            margin-top: -2px;
         }
     }
     .minus + .sub-menu {
