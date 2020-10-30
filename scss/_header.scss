@@ -123,6 +123,7 @@ nav {
         display: none;
     }
     .active & {
+        display: flex; //need a display rule here to counteract the .mobile-or-library above it
         flex-direction: column;
         margin: unset;
     }
@@ -263,6 +264,9 @@ li:hover > .sub-menu {
     color: #fff;
     padding: 12% 2em;
     font-size: 16px;
+    .active & a {
+        margin-left: unset;
+    }
 }
 #interested-in-applying {
     background-color: $elmsgreen;
@@ -354,11 +358,11 @@ li:hover > .sub-menu {
             padding-left: 0;
             > li {
                 border-top: 1px solid $lightgrey;
-                padding: 5px 0;
+                margin-left: 30px;
                 > a {
                     font-size: 18px;
                     line-height: 2em;
-                    padding-left: 30px;
+                    padding: 10px 0;
                 }
             }
             li {
