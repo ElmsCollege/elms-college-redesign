@@ -1,9 +1,10 @@
 /* this file breaks out the styling rules for the header - everything about the content in the templates */
 
-#masthead {
+header {
     @include posZero;
     display: flex;
 	position: fixed;
+    flex-flow: row nowrap;
 	z-index: 51;
 	width: 100%;
 	box-shadow: 0 0 4px rgba(#000,.2);
@@ -11,44 +12,43 @@
 	height: $mastheadDesktop;
 	background: #fff;
     .mobile-or-library & {
-        display: flex;
         justify-content: flex-start;
         height: $mastheadMobile;
         overflow: hidden;
     }
     .active & {
-        flex-direction: column;
-        overflow: visible;
-        height: 100%;
+        flex-flow: column nowrap;
         justify-content: flex-start;
+        overflow-y: scroll;
+        background-color: #fff;
+        height: 100%;
     }
-    .site-branding {
-        margin-right: auto;
-        padding: 12px;
-        float: left;
+    .site-title {
+        @include logoBackground;
+        width: 145px;
+        height: 64px;
         .mobile-or-library & {
-            padding: 8px;
-        }
-        .active & {
-            @extend %hide;
-        }
-        .site-title {
-            @include logoBackground;
-            width: 145px;
-            height: 64px;
-            .mobile-or-library & {
-                height: 43px;
-                width: 102px;
-            }
-        }
-        a {
-            @include square(100%);
-            display: inline-block;
-            color: transparent;
+            height: 43px;
+            width: 102px;
         }
     }
 }
-
+.site-branding {
+    margin-right: auto;
+    padding: 12px;
+    float: left;
+    .mobile-or-library & {
+        padding: 8px;
+    }
+    .active & {
+        @extend %hide;
+    }
+    a {
+        @include square(100%);
+        display: inline-block;
+        color: transparent;
+    }
+}
 .alert-bar{
 	@include white-on-green;
 	padding: 1em;
@@ -76,13 +76,13 @@
         width: auto;
         height: auto;
     }
-}
-.nav-trigger div:before {//the div allows us to use this style for the .open-label and .close-label with a simpler rule
-    font-family: "Font Awesome 5 Free";
-    font-weight: 800;
-    font-size: 28px;
-    display: block;
-    color: $navlinkgrey;
+    div:before {//the div allows us to use this style for the .open-label and .close-label with a simpler rule
+        font-family: "Font Awesome 5 Free";
+        font-weight: 800;
+        font-size: 28px;
+        display: block;
+        color: $navlinkgrey;
+    }
 }
 .open-label {
     .mobile-or-library & {
@@ -135,6 +135,9 @@ nav {
 .menu-special-menu-container {
     margin-left: auto;
     align-self: center;
+    .active & {
+        order: -1;
+    }
 }
 .menu-main-nav-container, .menu-special-menu-container {
     .mobile-or-library & {
@@ -200,6 +203,13 @@ li:hover > .sub-menu {
         @include square(100%);
     }
 }
+.active #primary-menu > li:hover {
+    background-color: transparent;
+}
+.active #primary-menu > li:hover a {
+    color: $elmsgreen;
+}
+
 #primary-menu, #special-section-menu, #special-menu {
     margin-bottom: 0;
 }
@@ -234,7 +244,6 @@ li:hover > .sub-menu {
 	    	display: none
 	    }
 }
-
 .specialsectionlink {
 	float: left;
 	margin-top: 11px;
@@ -248,7 +257,6 @@ li:hover > .sub-menu {
             display: none;
     }
 }
-
 #special-menu {
     display: flex;
     > li {
@@ -259,11 +267,8 @@ li:hover > .sub-menu {
     }
 }
 #interested-in-applying, #link-give {
-//    width: 100%;
-//	height: 43px;
     color: #fff;
     padding: 13.5px 2em;
-//    font-size: 16px;
     .active & a {
         margin-left: unset;
     }
@@ -335,64 +340,48 @@ li:hover > .sub-menu {
     border: unset;
     background-color: unset;
 }
-.mobile-or-library {
-    .active {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        overflow-y: visible;
-        background-color: #fff;
-        height: 100%;
-        .menu-special-menu-container, .menu-item-9764 {
-            order: -1;
-        }
-        .menu-item-9764 {
-            width: 150px !important;
-            text-align: center !important;
-            margin-right: auto;
-            padding-bottom: 10px !important;
-        }
-        .menu-item-has-children > a {
-            @include toggleIndicator;
-            font-size: 2em;
-            &:after {
-                font-size:2em;
+.active {
+    #primary-menu, #special-menu {
+        width: 96%;
+        flex-direction: column;
+        padding-left: 0;
+        > li {
+            border-top: 1px solid $lightgrey;
+            margin-left: 30px;
+            > a {
+                font-size: 18px;
+                line-height: 2em;
+                padding: 10px 0;
             }
         }
-        #primary-menu, #special-menu {
-            width: 96%;
-            flex-direction: column;
-            padding-left: 0;
-            > li {
-                border-top: 1px solid $lightgrey;
-                margin-left: 30px;
-                > a {
-                    font-size: 18px;
-                    line-height: 2em;
-                    padding: 10px 0;
-                }
+        li {
+            &:not(:last-child):after {
+                border-right: unset;
             }
-            li {
-                &:not(:last-child):after {
-                    border-right: unset;
-                }
-                &:first-child {
-                    border-top: unset;
-                }
-            }
-            .minus {
-                border-left: $thickgreenborder;
+            &:first-child {
+                border-top: unset;
             }
         }
-        .minus + .sub-menu {
-            display: block;
-            visibility: visible;
+        .minus {
+            border-left: $thickgreenborder;
         }
-        #primary-menu > li:hover {
-            background-color: transparent;
+    }
+    .menu-item-9764 {
+        width: 150px !important;
+        text-align: center !important;
+        margin-right: auto;
+        padding-bottom: 10px !important;
+        order: -1;
+    }
+    .menu-item-has-children > a {
+        @include toggleIndicator;
+        font-size: 2em;
+        &:after {
+            font-size:2em;
         }
-        #primary-menu > li:hover a {
-            color: $elmsgreen;
-        }
+    }
+    .minus + .sub-menu {
+        display: block;
+        visibility: visible;
     }
 }
