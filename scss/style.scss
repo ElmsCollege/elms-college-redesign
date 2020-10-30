@@ -1875,25 +1875,28 @@ div.collapseomatic_content{
 }
 
 /* BEGIN styles for the embedded directory listing with images and bios*/
-.embedDirectory-image li {
-	margin-bottom:15px;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: flex-start;
-	padding-bottom: 15px;
-	border-bottom: $lightgreyborder;
-    &:last-child {
-        margin-bottom: unset;
-        padding-bottom: unset;
-        border-bottom: 0;
-    }
-    &:nth-child(odd) img {
-        order: 3;
-        margin-left: 15px;
-    }
-    &:nth-child(even) img {
-        order: 1;
-        margin-right: 15px;
+.embedDirectory-image {
+    padding-left: 0;
+    li {
+        margin-bottom:15px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        padding-bottom: 15px;
+        border-bottom: $lightgreyborder;
+        &:last-child {
+            margin-bottom: unset;
+            padding-bottom: unset;
+            border-bottom: 0;
+        }
+        &:nth-child(odd) img {
+            order: 3;
+            margin-left: 15px;
+        }
+        &:nth-child(even) img {
+            order: 1;
+            margin-right: 15px;
+        }
     }
 }
 @media only screen and (max-width: 1040px) {
