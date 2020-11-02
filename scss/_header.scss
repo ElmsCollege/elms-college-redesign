@@ -1,0 +1,400 @@
+/* this file breaks out the styling rules for the header - everything about the content in the templates */
+
+header {
+    @include posZero;
+    display: flex;
+	position: fixed;
+    flex-flow: row nowrap;
+	z-index: 51;
+	width: 100%;
+	box-shadow: 0 0 4px rgba(#000,.2);
+	text-align: center;
+	height: $mastheadDesktop;
+	background: #fff;
+    .mobile-or-library & {
+        justify-content: flex-start;
+        height: $mastheadMobile;
+        overflow: hidden;
+    }
+    .active & {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        background-color: #fff;
+        height: 100%;
+    }
+    .site-title {
+        @include logoBackground;
+        width: 145px;
+        height: 64px;
+        .mobile-or-library & {
+            height: 43px;
+            width: 102px;
+        }
+    }
+}
+.site-branding {
+    margin-right: auto;
+    padding: 12px;
+    float: left;
+    .mobile-or-library & {
+        padding: 8px;
+    }
+    .active & {
+        @extend %hide;
+    }
+    a {
+        @include square(100%);
+        display: inline-block;
+        color: transparent;
+    }
+}
+.alert-bar{
+	@include white-on-green;
+	padding: 1em;
+    font-weight: 700;
+    text-align: center;
+    &.emergency {
+        background: #ca2c04;
+        a, a:visited{
+        	color: #fff;
+        }
+    }
+}
+.nav-trigger {
+    @extend %hide;
+    z-index: 100;
+    padding: 10px;
+    .mobile-or-library & {
+        display: block;
+        margin-left: auto;
+        z-index: 100;
+    }
+    .active & {
+        position: absolute;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+    div:before {//the div allows us to use this style for the .open-label and .close-label with a simpler rule
+        font-family: "Font Awesome 5 Free";
+        font-weight: 800;
+        font-size: 28px;
+        display: block;
+        color: $navlinkgrey;
+    }
+}
+.open-label {
+    .mobile-or-library & {
+         display: block;
+         &:before {
+             content: "\f0c9";
+         }
+    }
+    .active & {
+        display: none;
+    }
+}
+.close-label {
+    .mobile-or-library & {
+         display: none;
+         &:before {
+             content: "\f00d";
+         }
+    }
+    .active & {
+        display: block;
+    }
+}
+header, #special-section-menu {
+    a, a:visited {
+        color: $navlinkgrey;
+        text-decoration: none;
+        transition: unset;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    .mobile-or-library & {
+        display: none;
+    }
+    .active & {
+        display: flex; //need a display rule here to counteract the .mobile-or-library above it
+        flex-direction: column;
+        margin: unset;
+    }
+}
+.menu-main-nav-container {
+    margin: 0 auto;
+    display: flex;
+}
+.menu-special-menu-container {
+    margin-left: auto;
+    align-self: center;
+    .active & {
+        order: -1;
+    }
+}
+.menu-main-nav-container, .menu-special-menu-container {
+    .mobile-or-library & {
+        @extend %hide;
+    }
+    .active & {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+}
+.sub-menu {
+    visibility: hidden;
+    list-style: none;
+    margin: 7px 0 0;
+    padding: 10px 20px 10px 10px;
+    position: absolute;
+    border-top: $thickgreenborder;
+    min-width: 18em;
+    background: #fff;
+    text-align: left !important;
+    .active & {
+        display: none;
+        margin-top: 0;
+        position: relative;
+        top: unset !important;
+        border-top: unset;
+        width: 100%;
+        border-left: $thickgreenborder;
+        padding: unset;
+    }
+    a {
+        display: block;
+        padding: .5em 0;
+        &:hover, &:focus {
+            color: $elmsgreen !important;
+        }
+    }
+}
+li:hover > .sub-menu {
+    visibility: visible;
+    z-index: 10;
+}
+#primary-menu {
+    display: flex;
+    list-style: none;
+    > li {
+        position: relative;
+        text-align: center;
+        > a {
+            padding: 32px 1em 33px;
+        }
+    }
+    > li:hover {
+        background-color: $elmsgreen;
+        &:not(:last-child):after {
+            border-right: unset;
+        }
+        > a {
+            color: #fff;
+        }
+    }
+    a {
+        @include square(100%);
+    }
+}
+.active #primary-menu {
+    > li:hover {
+        background-color: transparent;
+        > a {
+            color: $elmsgreen;
+        }
+    }
+}
+#primary-menu, #special-section-menu, #special-menu {
+    display: flex;
+    margin-bottom: 0;
+}
+#primary-menu, #special-section-menu {
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    > li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:not(:last-child):after {
+            border-right: $lightgreyborder;
+            content: "";
+            position: absolute;
+            right: 0;
+            height: 55%;
+            align-self: center;
+        }
+	}
+    .sub-menu {
+    	top: 4.3em;
+    }
+}
+.special-section-nav {
+    background-color: #f2f2f2;
+}
+@media all and (max-width: 48rem) {
+    .special-section-nav {
+	    	display: none
+	    }
+}
+.homepagelinks {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.specialsectionlink {
+	border-left: $lightgreyborder;
+	padding: 5px 0;
+    a, a:visited {
+        padding-left: 10px;
+        text-transform: unset;
+    }
+    .active & {
+            display: none;
+    }
+}
+.active #primary-menu, #special-menu > li{
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+        align-self: center;
+}
+.active #special-menu > li:not(:nth-child(n+7)) {
+    background-color: #f2f2f2;
+}
+.active #primary-menu, .active #special-menu {
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+    > li {
+        display: flex;
+        flex-flow: column nowrap;
+        border-top: 1px solid $lightgrey;
+        width: 100%;
+        > a {
+            font-size: 18px;
+            line-height: 2em;
+            padding: 10px 0;
+        }
+    }
+    li {
+        &:not(:last-child):after {
+            border-right: unset;
+        }
+        &:first-child {
+            border-top: unset;
+        }
+    }
+}
+
+#interested-in-applying, #link-give {
+    color: #fff;
+    padding: 13.5px 2em;
+}
+#interested-in-applying {
+    background-color: $elmsgreen;
+    &:hover {
+        background-color: #0d4435;
+    }
+}
+#link-give {
+    background-color: $elmsgold;
+    &:hover {
+        background-color: #a78c45;
+    }
+}
+
+#special-section-menu {
+    > li > a {
+        padding: 12px 1em;
+        display: block;
+    }
+    .sub-menu {
+    	top: 1.6em;
+	    left: 0;
+    }
+}
+.search-form {
+    @extend .sub-menu;
+    top: 4em;
+    right: 0;
+    margin-top: 4px;
+    .active & {
+        display: block;
+        visibility: visible;
+        border-left: unset;
+        width: 95%;
+        margin: 15px auto;
+    }
+}
+.search-item {
+    padding-right: 20px;
+    label {
+        width: 100%;
+        position: relative;
+    }
+    .active & {
+        border-left: unset;
+        a {
+            display: none;
+        }
+    }
+}
+.search-icon {
+    display: block;
+    font-weight: 800;
+    font-size: 32px;
+}
+.search-field {
+    width: 100%;
+    .active & {
+        border: 4px solid $lightgrey;
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+.menu-item-search {
+	position: absolute;
+	top: 5.3em;
+    right: 25px;
+}
+.search-submit {
+	position: absolute;
+	right: 1px;
+	top: 0;
+    border: unset;
+    background-color: unset;
+    color: $lightgrey;
+}
+.active {
+    .minus {
+        border-left: $thickgreenborder;
+    }
+    .menu-item-9764 {
+        width: 150px !important;
+        text-align: center !important;
+        margin-right: auto;
+        padding-bottom: 10px !important;
+        order: -1;
+    }
+    .menu-item-has-children > a {
+        @include toggleIndicator;
+        &:after {
+            font-size:2em;
+            margin-top: -2px;
+        }
+    }
+    .minus + .sub-menu {
+        display: block;
+        visibility: visible;
+    }
+}

@@ -31,7 +31,7 @@
     // copying special section nav (library, school of nursing, subdomains) into the mobile menu
     var specialNavItems = [];
     jQuery("#special-section-menu > li").each(function () {
-      console.log(jQuery(this));
+      //console.log(jQuery(this));
       var clone = jQuery(this).clone();
       clone = jQuery(clone);
       clone.removeAttr("id");
@@ -66,17 +66,15 @@
     jQuery('.nav-trigger').on('click touchstart', function (event) {
       event.preventDefault();
 
-      jQuery(this).toggleClass('active');
-      jQuery('header#masthead, html').toggleClass('active');
+      jQuery('#masthead, html').toggleClass('active');
 
       if (jQuery(window).width() < 720) {
-        jQuery('body, .link-donate').toggleClass('active');
+        jQuery('body').toggleClass('active');
       }
     });
     var resetMenuIfDesktopWidth = function () {
       if (Modernizr.mq("only screen and (min-width: 64em)") && !jQuery("body").hasClass("page-template-library-landing-page") && !jQuery("body").hasClass("page-template-library-interior-page")) {
-        jQuery("body, header#masthead, html, .nav-trigger, .link-donate").removeClass("active");
-        //jQuery(".main-navigation li").removeClass("open");
+        jQuery("body, #masthead, html").removeClass("active");
       }
     };
     //resetMenuIfDesktopWidth();
