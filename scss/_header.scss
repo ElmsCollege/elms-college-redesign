@@ -89,7 +89,7 @@ header {
          display: block;
          &:before {
              content: "\f0c9";
-         }        
+         }
     }
     .active & {
         display: none;
@@ -100,7 +100,7 @@ header {
          display: none;
          &:before {
              content: "\f00d";
-         }        
+         }
     }
     .active & {
         display: block;
@@ -161,7 +161,7 @@ nav {
     text-align: left !important;
     .active & {
         display: none;
-        margin-top: 0px;
+        margin-top: 0;
         position: relative;
         top: unset !important;
         border-top: unset;
@@ -333,7 +333,7 @@ li:hover > .sub-menu {
         visibility: visible;
         border-left: unset;
         width: 95%;
-        margin: 15px auto;    
+        margin: 15px auto;
     }
 }
 .search-item {
