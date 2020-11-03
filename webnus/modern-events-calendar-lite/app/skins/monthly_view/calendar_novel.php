@@ -92,7 +92,7 @@ elseif($week_start == 5) // Friday
                     $wpseo_primary_term = $wpseo_primary_term->get_primary_term();
                     $term = get_term( $wpseo_primary_term );
                     $slug = $term->slug;
-                    $if($slug == "") {
+                    $if(empty($slug)) {
                         $slug = 'public_event'
                     };
                     echo '<div class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).' '.$slug.'">';
