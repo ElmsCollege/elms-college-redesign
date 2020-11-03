@@ -985,15 +985,15 @@ a.text.requestInfo-trigger{
 		font-size:.75em
 	}
 }
-[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th,.entry-content table:not(.tribe-events-calendar) td,.entry-content table:not(.tribe-events-calendar) th{
+[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table:not(.tribe-events-calendar) td,.entry-content table:not(.tribe-events-calendar) th{
 	padding:.25em;
 	border: $lightgreyborder
 }
-[id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th{
+[id^="thisYear"] table th,[id^="nextYear"] table th{
 	font-weight:700;
 	font-size:16px;
 }
-[id^="thisYear"] table th,[id^="nextYear"] table th, .wp-block-table table th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
+[id^="thisYear"] table th,[id^="nextYear"] table th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
 .opening-menu.fs-dropdown {

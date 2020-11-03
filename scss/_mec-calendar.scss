@@ -23,7 +23,7 @@
     color: $elmsgreen;
     background-color: $lightgrey;
 }
-.mec-event-social-icon a {
+.mec-event-social-icon a, .event-single-link-novel {
     text-decoration: none;
 }
 .mec-single-event .mec-frontbox, .mec-single-event .mec-events-meta-group, .mec-box-calendar.mec-calendar dt {
@@ -68,6 +68,9 @@
         @include mecHoverStyle($elmsblue);
     }
     .continuing-education-admissions {
+        @include mecHoverStyle(rgb(128,0,0));
+    }
+    .liturgical-services {
         @include mecHoverStyle($elmspurple);
     }
     .commencement {
