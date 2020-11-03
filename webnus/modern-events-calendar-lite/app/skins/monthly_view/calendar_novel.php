@@ -92,7 +92,7 @@ elseif($week_start == 5) // Friday
                     $wpseo_primary_term = $wpseo_primary_term->get_primary_term();
                     $term = get_term( $wpseo_primary_term );
                     $slug = $term->slug;
-                    echo '<div class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).' '.$if(empty($slug)) {$slug}.'">';
+                    echo '<div class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).' '.$slug.'">';
                     echo '<h4 class="mec-event-title">'.$event->data->title.'</h4>'.$this->main->get_normal_labels($event, $display_label).$this->main->display_cancellation_reason($event, $reason_for_cancellation);
                     do_action('mec_shortcode_virtual_badge', $event->data->ID );
 
