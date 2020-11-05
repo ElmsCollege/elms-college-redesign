@@ -1,11 +1,11 @@
 /* Style overrides for the MEC Calendar plugin */
-/* MEC calendar specific mixins */
+/* MEC calendar specific variables and mixins */
+$calendarOpacity: .25;
+
 @mixin mecHoverStyle($color) {
-    background-color: $color;
-
+    background: $color;
     &:hover {
-        background: rgba($color, .25);
-
+        background: rgba($color, $calendarOpacity);
         h4 {
             color: $color !important;
         }
@@ -78,6 +78,24 @@
     }
     .public-event {
         @include mecHoverStyle(#e93f3f);
+    }
+    .academic-calendar {
+        background: linear-gradient(135deg, $elmsgreen 50%, $elmsgold 100%);
+        &:hover {
+            background: linear-gradient(135deg, rgba($elmsgreen, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
+            h4 {
+                color: #fff !important;
+            }
+        }
+    }
+    .final-exam-schedule {
+        background: linear-gradient(135deg, $elmsblue 50%, $elmsgold 100%);
+        &:hover {
+            background: linear-gradient(135deg, rgba($elmsblue, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
+            h4 {
+                color: #fff !important;
+            }
+        }
     }
 }
 /* END styling the different categories on the calendar, only applies to the novel skin */

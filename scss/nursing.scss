@@ -141,7 +141,7 @@
 		}
 		&:hover {
 			.image-tint {
-				background: linear-gradient(rgba(39,134,172,0.7), rgba(39,134,172,0.7));
+				background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
 				z-index: 10;
                 @include transition($property: opacity);
 				opacity: 1;
@@ -165,7 +165,7 @@
 			background: $elmsgold !important;
 			&:hover {
 				.image-tint {
-					background: linear-gradient(rgba(195,162,80,0.7), rgba(195,162,80,0.7));
+					background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
 				}
 				.permalink {
 					color: $elmsgold !important;
@@ -176,7 +176,7 @@
 			background: $elmspurple !important;
 			&:hover {
 				.image-tint {
-					background: linear-gradient(rgba(65,53,86,0.7), rgba(65,53,86,0.7));
+					background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
 				}
 				.permalink {
 					color: $elmspurple !important;
@@ -283,7 +283,7 @@
 			background: $elmsgold !important;
 			&:hover {
 				.image-tint {
-					background: linear-gradient(rgba(195,162,80,0.7), rgba(195,162,80,0.7));
+					background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
 				}
 				.permalink {
 					color: $elmsgold !important;
@@ -294,7 +294,7 @@
 			background: $elmsblue !important;
 			&:hover {
 				.image-tint {
-					background: linear-gradient(rgba(39,134,172,0.7), rgba(39,134,172,0.7));
+					background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
 				}
 				.permalink {
 					color: $elmsblue !important;
@@ -305,7 +305,7 @@
 			background: $elmspurple !important;
 			&:hover {
 				.image-tint {
-					background: linear-gradient(rgba(65,53,86,0.7), rgba(65,53,86,0.7));
+					background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
 				}
 				.permalink {
 					color: $elmspurple !important;
