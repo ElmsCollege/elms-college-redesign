@@ -84,7 +84,7 @@ $calendarOpacity: .25;
         &:hover {
             background: linear-gradient(135deg, rgba($elmsgreen, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
             h4 {
-                color: #fff !important;
+                color: #000 !important;
             }
         }
     }
@@ -93,7 +93,7 @@ $calendarOpacity: .25;
         &:hover {
             background: linear-gradient(135deg, rgba($elmsblue, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
             h4 {
-                color: #fff !important;
+                color: #000 !important;
             }
         }
     }
