@@ -81,6 +81,9 @@ $calendarOpacity: .25;
     }
     .academic-calendar {
         background: linear-gradient(135deg, $elmsgreen 50%, $elmsgold 100%);
+        h4 {
+            color: #fff !important;
+        }
         &:hover {
             background: linear-gradient(135deg, rgba($elmsgreen, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
             h4 {
@@ -90,6 +93,9 @@ $calendarOpacity: .25;
     }
     .final-exam-schedule {
         background: linear-gradient(135deg, $elmsblue 50%, $elmsgold 100%);
+        h4 {
+            color: #fff !important;
+        }
         &:hover {
             background: linear-gradient(135deg, rgba($elmsblue, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
             h4 {
