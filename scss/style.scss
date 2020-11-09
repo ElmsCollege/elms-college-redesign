@@ -123,12 +123,14 @@ blockquote,q{
 blockquote:before,blockquote:after,q:before,q:after{
 	content:""
 }
+/*
 hr{
 	background-color:#ccc;
 	border:0;
 	height:1px;
 	margin-bottom:1.5em
 }
+*/
 ul,ol{
 	margin:0 0 1.5em
 }
@@ -2083,9 +2085,6 @@ th .smallText{
 }
 .wp-block-pullquote cite{
 	font-weight:300
-}
-hr.wp-block-separator {
-	background-color: $lightgrey;
 }
 #courses .collapseomatic{
 	padding-bottom:0;
