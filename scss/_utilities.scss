@@ -61,11 +61,11 @@ $mastheadMobile: 56px;
     line-height: 1em;
 }
 @mixin white-on-green {
-    color: #fff;
+    color: #fff !important;
     background-color: $elmsgreen;
 }
 @mixin green-on-white {
-    color: $elmsgreen;
+    color: $elmsgreen !important;
     background-color: #fff;
 }
 @mixin blue-on-white {
