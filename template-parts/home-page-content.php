@@ -116,7 +116,7 @@ setup_postdata($post);
 					</a>
 				</div>
                 <?php
-                    echo do_shortcode('[MEC id="46683"]');
+                    // echo do_shortcode('[MEC id="46683"]');
                 ?>
 			</div>
 			<div class="news flexHalf listText">
