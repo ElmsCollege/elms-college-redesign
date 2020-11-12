@@ -8,12 +8,12 @@
       if (pWidth * 0.85 < x && jQuery("body").hasClass("mobile-or-library")) {
         e.preventDefault();
         e.stopPropagation();
-        jQuery(jQuery(e.target).parent()).toggleClass("open");
+        jQuery(jQuery(e.target)).toggleClass("minus");
       }
     });
 
     // ensure ada compliance border outline only appears on keyboard focus not mouse focus
-    jQuery("body").on("mousedown", "*", function (e) {
+      jQuery("body").on("mousedown", "*", function (e) {
       if ((jQuery(this).is(":focus") || jQuery(this).is(e.target)) && jQuery(this).css("outline-style") == "none") {
         jQuery(this).css("outline", "none").on("blur", function () {
           jQuery(this).off("blur").css("outline", "");
@@ -31,7 +31,7 @@
     // copying special section nav (library, school of nursing, subdomains) into the mobile menu
     var specialNavItems = [];
     jQuery("#special-section-menu > li").each(function () {
-      console.log(jQuery(this));
+      //console.log(jQuery(this));
       var clone = jQuery(this).clone();
       clone = jQuery(clone);
       clone.removeAttr("id");
@@ -47,8 +47,8 @@
     jQuery("#primary-menu > .menu-item > a, #special-section-menu  > .menu-item > a").focus(function (e) {
       console.log(whatInput.ask());
       if (whatInput.ask() === 'keyboard') {
-        jQuery("#primary-menu > .menu-item, #special-section-menu > .menu-item").removeClass("open");
-        jQuery(this).parent().addClass("open");
+        jQuery("#primary-menu > .menu-item, #special-section-menu > .menu-item").removeClass("minus");
+        //jQuery(this).parent().addClass("open");
       }
     });
     jQuery("#primary-menu > .menu-item > a, #special-section-menu > .menu-item > a").blur(function (e) {
@@ -57,7 +57,7 @@
         if (children.length) {
           jQuery(children.get(0)).focus();
         } else {
-          jQuery(this).parent().removeClass("open");
+          jQuery(this).parent().removeClass("minus");
         }
       }
     });
@@ -66,17 +66,15 @@
     jQuery('.nav-trigger').on('click touchstart', function (event) {
       event.preventDefault();
 
-      jQuery(this).toggleClass('active');
-      jQuery('header#masthead, html').toggleClass('active');
+      jQuery('#masthead, html').toggleClass('active');
 
       if (jQuery(window).width() < 720) {
-        jQuery('body, .link-donate').toggleClass('active');
+        jQuery('body').toggleClass('active');
       }
     });
     var resetMenuIfDesktopWidth = function () {
       if (Modernizr.mq("only screen and (min-width: 64em)") && !jQuery("body").hasClass("page-template-library-landing-page") && !jQuery("body").hasClass("page-template-library-interior-page")) {
-        jQuery("body, header#masthead, html, .nav-trigger, .link-donate").removeClass("active");
-        jQuery(".main-navigation li").removeClass("open");
+        jQuery("body, #masthead, html").removeClass("active");
       }
     };
     //resetMenuIfDesktopWidth();
@@ -103,9 +101,8 @@
     } else {
       finalSidebarMenu = sidebarMenu;
     }
-    //console.log("ifnalsidebarmenu");
-    //console.log(finalSidebarMenu);
-    if (finalSidebarMenu && finalSidebarMenu.length) {
+
+      if (finalSidebarMenu && finalSidebarMenu.length) {
 
       jQuery(".field-sidebar-menu-items li").each(function (index, element) {
         var link = jQuery(this).find("a");
@@ -115,14 +112,14 @@
         }
       });
 
-      jQuery('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore(jQuery('.site-main'));
+      jQuery('<select class="opening-select" aria-label="Left rail navigation options"></select>').insertBefore('#primary');
 
       jQuery('ul.parent-sidebar-menu li:not(.toggle-parent)').each(function (index) {
-		  var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
-		  var value = jQuery(jQuery(this).find('a').get(0)).text();
-		  var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
-		  jQuery('select.opening-select').append(newOptionFromNav);
-		  newOptionFromNav.addClass(linkClass);
+        var linkClass = jQuery(jQuery(this).find('a').get(0)).attr('class');
+        var value = jQuery(jQuery(this).find('a').get(0)).text();
+        var newOptionFromNav = jQuery('<option value="' + (index + 1) + '">' + value + '</option>');
+        jQuery('select.opening-select').append(newOptionFromNav);
+        newOptionFromNav.addClass(linkClass);
       });
     }
     if (jQuery('.opening-select').length) {
@@ -287,50 +284,50 @@
     }
     /* end extra FB tracking for specific events */
 
-	  /* BEGIN collapsible left rail nav JS code */
-		function collapsibleNav(e) {
-			e.preventDefault();
+    /* BEGIN collapsible left rail nav JS code */
+    function collapsibleNav(e) {
+      e.preventDefault();
 
-			var $this = jQuery(this);
+      var $this = jQuery(this);
 
-			if ($this.next().hasClass('show')) {//next works because the <a> is a sibling to the ul.inner
-				$this.next().removeClass('show');
-				$this.next().slideUp(350);
-			} else {
-				$this.parent().parent().find('li .inner').removeClass('show');
-				$this.parent().parent().find('li .inner').slideUp(350);
-				$this.next().toggleClass('show');
-				$this.next().slideToggle(350);
-			}
-		}
+      if ($this.next().hasClass('show')) { //next works because the <a> is a sibling to the ul.inner
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+      } else {
+        $this.parent().parent().find('li .inner').removeClass('show');
+        $this.parent().parent().find('li .inner').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+      }
+    }
 
-		jQuery('.toggle').click(collapsibleNav);
-		
-		jQuery('.toggle').click(function(){
-			var $this = jQuery(this);
-			
-			jQuery(".toggle").not( $this.parents().prev() ).removeClass("minus");
-			if($this.next().hasClass('show')){
-				$this.addClass("minus");
-			}
-		});
-	  /* END collapsible left rail nav JS code */
+    jQuery('.toggle').click(collapsibleNav);
+
+    jQuery('.toggle').click(function () {
+      var $this = jQuery(this);
+
+      jQuery(".toggle").not($this.parents().prev()).removeClass("minus");
+      if ($this.next().hasClass('show')) {
+        $this.addClass("minus");
+      }
+    });
+    /* END collapsible left rail nav JS code */
   }); //end doc.ready
 
-// Initial config for setting up modals
-MicroModal.init({
-  openTrigger: 'data-custom-open',
-  closeTrigger: 'data-custom-close',
-  disableScroll: false,
-  awaitCloseAnimation: true
-});
-
-// Programmatically show modal
-var selection = document.querySelector('.requestInfo-trigger') !== null;
-if (selection) {
-  document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
-    "use strict";
-    MicroModal.show('requestInfo');
-    fbq('trackCustom', 'RequestInfo');
+  // Initial config for setting up modals
+  MicroModal.init({
+    openTrigger: 'data-custom-open',
+    closeTrigger: 'data-custom-close',
+    disableScroll: false,
+    awaitCloseAnimation: true
   });
-}
+
+  // Programmatically show modal
+  var selection = document.querySelector('.requestInfo-trigger') !== null;
+  if (selection) {
+    document.querySelector('.requestInfo-trigger').addEventListener('click', function () {
+      "use strict";
+      MicroModal.show('requestInfo');
+      fbq('trackCustom', 'RequestInfo');
+    });
+  }

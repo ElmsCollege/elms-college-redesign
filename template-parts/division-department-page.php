@@ -14,7 +14,11 @@ get_header(); ?>
         <?php the_archive_title(); ?>
       </h1>
   </div>
-	<div id="primary" class="content-area pure-g">
+	<div id="primary" class="content-area">
+    <?php if ($has_sidebar) : ?>
+        <?php get_sidebar(); ?>
+    <?php endif; ?>
+
 		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 <a href="/directory/">
 	<i class="fas fa-chevron-left" aria-hidden="true"></i><i class="fas fa-chevron-left" aria-hidden="true"></i> Back to the directory
@@ -45,10 +49,6 @@ get_header(); ?>
 	the_a_z_listing($al_tax_post_args);
 ?>
 		</main><!-- #main -->
-    <?php if ($has_sidebar) : ?>
-        <?php get_sidebar(); ?>
-    <?php endif; ?>
-
 	</div><!-- #primary -->
 
 <?php

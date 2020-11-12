@@ -4,7 +4,7 @@
 */
 @import "utilities";
 @import "/wp-content/plugins/a-z-listing/css/a-z-listing-default.css";
-/* for Chrome and Edge */
+
 .az-letters {
 	li {
 		padding: 6px;
@@ -18,7 +18,11 @@
 		break-inside: avoid-column;
 		display: inline-grid;
 		page-break-inside: avoid;
-	}
+		&:last-child {
+            margin-bottom: unset;
+			overflow: hidden;
+        }
+    }
 	.contact {
 		margin-left: 15px;
 	}
@@ -37,17 +41,10 @@
 	}
 }
 @supports (break-inside:avoid-column) {
-	#az-slider li { display: block;
+	#az-slider li {
+        display: block;
 	}
 }
-#az-slider {
-		li {
-			&:last-child {
-				margin-bottom: unset;
-				overflow: hidden;
-			}
-		}
-	}
 .page-id-22784 {
 	.filterList {
 		margin-bottom: 25px;
@@ -64,15 +61,10 @@
 .letter-section {
 	div.back-to-top {
 		a {
-			&:before {
+			&:before,&:after {
 				font-family: "Font Awesome 5 Free" !important;
 				content: "\f077" !important;
-				font-weight: 700;
-			}
-			&:after {
-				font-family: "Font Awesome 5 Free" !important;
-				content: "\f077" !important;
-				font-weight: 700;
+				font-weight: 800;
 			}
 		}
 	}

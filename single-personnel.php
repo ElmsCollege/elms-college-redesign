@@ -49,8 +49,12 @@ get_header(); ?>
 		get_template_part("template-parts/page-heading");
 	?>
 
-	<div id="primary" class="content-area pure-g">
-		<main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
+	<div id="primary" class="content-area">
+    <?php if ($has_sidebar) : ?>
+        <?php get_sidebar(); ?>
+    <?php endif; ?>
+
+        <main id="main" class="site-main pure-u-1 <?php echo ($has_sidebar ? "pure-u-md-7-12 pure-u-lg-2-3" : "standalone") ; ?>" role="main">
 
 	<div id="photoInfo">
 		<?php if( get_field('directory_image') ): ?>
@@ -112,11 +116,7 @@ get_header(); ?>
 	?>
 <?php } ?>
 
-		</main><!-- #main -->
-    <?php if ($has_sidebar) : ?>
-        <?php get_sidebar(); ?>
-    <?php endif; ?>
-    
+		</main><!-- #main -->    
 	</div><!-- #primary -->
 
 <?php

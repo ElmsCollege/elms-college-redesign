@@ -33,7 +33,7 @@ add_filter( 'body_class', function( $classes ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div style="margin-right:auto;">
+        <div class="homepagelinks">
 			<div class="site-branding">
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
@@ -51,5 +51,5 @@ add_filter( 'body_class', function( $classes ) {
 	<div id="content" class="site-content">
     <?php get_template_part("template-parts/alert-bar")?>
     <div class="special-section-nav">
-      <?php wp_nav_menu( array( 'theme_location' => 'library', 'menu_id' => 'special-section-menu', 'menu_class' => 'is-style-none flexRowNowrapStart justifyCenter', 'container_class' => 'special-nav-container' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'library', 'menu_id' => 'special-section-menu', 'menu_class' => 'flexRowNowrapStart justifyCenter', 'container_class' => 'special-nav-container' ) ); ?>
     </div>

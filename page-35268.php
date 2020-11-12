@@ -48,7 +48,7 @@ width:100px;
 <?php
 	get_template_part("template-parts/page-heading");
 ?>
-<div id="primary" class="content-area pure-g">
+<div id="primary" class="content-area">
 
 		<main id="main" class="site-main pure-u-1 standalone" role="main">
 

@@ -5,14 +5,31 @@ $elmsgreen: #115438;
 $elmsgold: #c3a250;
 
 /* unofficial colors */
-$elmsblue: #046B99;
+$elmsblue: #046b99;
 $elmspurple: #413556;
 
-/* useful things that are used in a bunch of places */
-$whiteborder: 1px solid #fff;
-$lightgreyborder: 1px solid #ccc;
+$lightgrey: #dcdcdc;
+$navlinkgrey: #696969;
 
-@mixin logoBackground{
+/* useful things that are used in a bunch of places */
+/* borders */
+$whiteborder: 1px solid #fff;
+$lightgreyborder: 1px solid $lightgrey;
+$thickgreenborder: 8px solid $elmsgreen;
+
+$mastheadDesktop: 86px;
+$mastheadMobile: 56px;
+
+/* extensions */
+%hide {
+    display: none;
+}
+%pointer {
+    cursor: pointer;
+}
+
+
+@mixin logoBackground {
     background-image: url(images/logo-footer.png);
 	background-image: url(images/logo-main.svg);
 	background-position: center center;
@@ -21,15 +38,54 @@ $lightgreyborder: 1px solid #ccc;
 	color: transparent;
 	margin: 0;
 }
-
-@mixin posZero{
+@mixin posZero {
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 }
-
 @mixin square($dimension) {
     width: $dimension;
-    height:  $dimension;
+    height: $dimension;
 }
+@mixin transition($property: all, $duration: .25s, $timing: ease-in-out) {
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+    -o-transition: $property $duration $timing;
+    -ms-transition: $property $duration $timing;
+    transition: $property $duration $timing;
+}
+@mixin scriptFont {
+    color: $elmsgold;
+    font-family: "blackjack", serif;
+    line-height: 1em;
+}
+@mixin white-on-green {
+    color: #fff !important;
+    background-color: $elmsgreen;
+}
+@mixin green-on-white {
+    color: $elmsgreen !important;
+    background-color: #fff;
+}
+@mixin blue-on-white {
+	color: $elmsblue;
+	background-color: #fff;
+}
+@mixin white-on-blue {
+    color: #fff;
+    background-color: $elmsblue;
+}
+@mixin toggleIndicator {
+	position: relative;
+    &::after {
+        content: "+";
+        position: absolute;
+        right: 5px;
+        line-height: 1em;
+    }
+    &.minus::after {
+        content:"-";
+    }
+}
+

@@ -22,27 +22,20 @@
 		.program-front {
 			background-color: $elmsgreen;
 		}
-		.program-back {
-			h3 {
-				color: #000;
-			}
+		.program-back h3 {
+            color: #000;
 		}
 	}
 }
 .program-inner {
 	position: relative;
     @include square(100%);
-	transition: transform 400ms linear;
+    @include transition($property: transform, $duration: 400ms, $timing: linear);
 	transform-style: preserve-3d;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 4px 8px 0 rgba(#000, .2);
 	border-radius: 15px;
 }
 .program-front {
-	h2 {
-		position: absolute;
-		color: white;
-		text-align: center;
-	}
 	position: absolute;
     @include square(100%);
 	border-radius: 15px;
@@ -54,6 +47,11 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $elmsgold;
+	h2 {
+		position: absolute;
+		color: white;
+		text-align: center;
+	}
 }
 .featuredImage {
 	position: absolute;
@@ -80,8 +78,7 @@
 }
 #programIconList {
 	a.program-back {
-		background-color: $elmsgreen;
-		color: #fff;
+        @include white-on-green;
 		transform: rotateX(180deg);
 		border: $whiteborder;
 		&:visited {
@@ -111,10 +108,9 @@
 }
 /* BEGIN the liberal arts page (/academics/liberal-arts) has a special flipcard style */
 #lac {
-	--borderwidth: 5px;
-	background: #1D1F20;
+	background: $elmsgreen;
 	position: relative;
-	border-radius: var(--borderWidth);
+	border-radius: 5px;
 	width: 290px;
 	left: 5px;
 	height: 190px;
@@ -122,12 +118,12 @@
 	&:after {
 		content: '';
 		position: absolute;
-		top: calc(-1 * var(--borderWidth));
-		left: calc(-1 * var(--borderWidth));
-		height: calc(100% + var(--borderWidth) * 2);
-		width: calc(100% + var(--borderWidth) * 2);
+		top: calc(-1 * 5px);
+		left: calc(-1 * 5px);
+		height: calc(100% + 5px * 2);
+		width: calc(100% + 5px * 2);
 		background: linear-gradient(to right, $elmsgold, $elmsgreen);
-		border-radius: calc(2 * var(--borderWidth));
+		border-radius: calc(2 * 5px);
 		z-index: -1;
 		animation: animatedborder 4s linear alternate infinite;
 		background-size: 225% 200%;
@@ -138,20 +134,16 @@
 }
 /* END the liberal arts page special flipcard style */
 @media (hover) {
-	.program {
-		&:hover {
-			.program-inner {
-				transform: rotateX(180deg);
-			}
+	.program:hover {
+		.program-inner {
+		    transform: rotateX(180deg);
 		}
 	}
 }
 @media (pointer: coarse) {
-	.program {
-		&:focus {
-			.program-inner {
-				transform: rotateX(180deg);
-			}
+	.program:focus {
+        .program-inner {
+            transform: rotateX(180deg);
 		}
 	}
 }

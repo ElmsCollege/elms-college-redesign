@@ -49,7 +49,7 @@ if (!empty($student_stories)):
       <?php endforeach; ?>
     </ul>
     <?php if (sizeof($student_stories) > 1) : ?>
-      <ul class="story-carousel pure-g">
+      <ul class="story-carousel">
         <?php foreach ($student_stories as $index=>$story) : 
             $theme = get_field("theme", $story);
           ?>

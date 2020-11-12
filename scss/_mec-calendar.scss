@@ -1,0 +1,108 @@
+/* Style overrides for the MEC Calendar plugin */
+/* MEC calendar specific variables and mixins */
+$calendarOpacity: .25;
+
+@mixin mecHoverStyle($color) {
+    background: $color;
+    &:hover {
+        background: rgba($color, $calendarOpacity);
+        h4 {
+            color: $color !important;
+        }
+    }
+}
+
+/* MEC calendar specific styles */
+.event-color {
+    @extend %hide;
+}
+.mec-single-event {
+    @extend #primary;
+}
+.mec-wrap.colorskin-custom .mec-calendar  dt.mec-selected-day:hover {
+    color: $elmsgreen;
+    background-color: $lightgrey;
+}
+.mec-event-social-icon a, .event-single-link-novel {
+    text-decoration: none;
+}
+.mec-single-event .mec-frontbox, .mec-single-event .mec-events-meta-group, .mec-box-calendar.mec-calendar dt {
+    border: $lightgreyborder;
+}
+.mec-calendar .mec-table-nullday {
+    color: $lightgrey;
+}
+.mec-calendar-header {
+    @extend .noMarginTop;
+    h2 {
+        @extend .noMarginTop;
+    }
+}
+.mec-wrap p {
+    color: inherit;
+    font-weight: inherit;
+    font-size: 18px;
+    font-family: inherit;
+}
+@media only screen and (max-width:479px) {
+    .mec-container {
+        width: unset;
+    }
+}
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .mec-container {
+        width: unset;
+    }
+}
+@media (max-width: 768px) {
+    .mec-wrap .mec-calendar-side {
+        min-width: unset !important;
+    }
+}
+/* BEGIN styling the different categories on the calendar, only applies to the novel skin */
+.event-single-link-novel {
+    .undergraduate-admissions {
+        @include mecHoverStyle($elmsgreen);
+    }
+    .graduate-admissions {
+        @include mecHoverStyle($elmsblue);
+    }
+    .continuing-education-admissions {
+        @include mecHoverStyle(rgb(128,0,0));
+    }
+    .liturgical-services {
+        @include mecHoverStyle($elmspurple);
+    }
+    .commencement {
+        @include mecHoverStyle($elmsgold);
+    }
+    .public-event {
+        @include mecHoverStyle(#e93f3f);
+    }
+    .academic-calendar {
+        background: linear-gradient(135deg, $elmsgreen 50%, $elmsgold 100%);
+        h4 {
+            color: #fff !important;
+        }
+        &:hover {
+            background: linear-gradient(135deg, rgba($elmsgreen, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
+            h4 {
+                color: #000 !important;
+            }
+        }
+    }
+    .final-exam-schedule {
+        background: linear-gradient(135deg, $elmsblue 50%, $elmsgold 100%);
+        h4 {
+            color: #fff !important;
+        }
+        &:hover {
+            background: linear-gradient(135deg, rgba($elmsblue, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
+            h4 {
+                color: #000 !important;
+            }
+        }
+    }
+}
+/* END styling the different categories on the calendar, only applies to the novel skin */
+

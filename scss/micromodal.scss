@@ -4,7 +4,7 @@
 .modal_overlay {
 	position:fixed;
     @include posZero;
-	background:rgba(0,0,0,.6);
+	background: rgba(#000, .6);
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -22,17 +22,15 @@
 .modal_header {
 	display:flex;
 	justify-content:center;
-	background-color: $elmsgreen;
-	color:#fff;
+	@include white-on-green;
 }
 .modal_btn {
 	font-size:.875rem;
 	background-color:#e6e6e6;
-	color:rgba(0,0,0,.8);
+	color: rgba(#000, .8);
 	border-radius:.25rem;
 	border-style:none;
 	border-width:0;
-	cursor:pointer;
 	-moz-appearance:button;
 	-webkit-appearance:button;
 	text-transform:none;
@@ -46,10 +44,9 @@
 	-ms-transform:translateZ(0);
 	-webkit-transform:translateZ(0);
 	transform:translateZ(0);
-	transition:-webkit-transform .25s ease-out;
-	transition:transform .25s ease-out;
-	transition:transform .25s ease-out,-webkit-transform .25s ease-out;
+    @include transition($property: transform, $timing: ease-out);
 	padding:.5rem 1rem;
+    @extend %pointer;
 }
 .modal_btn:focus,.modal_btn:hover {
 	-webkit-transform:scale(1.05);
@@ -57,8 +54,7 @@
 	transform:scale(1.05);
 }
 .modal_btn-primary {
-	background-color:#00449e;
-	color:#fff;
+	@include white-on-blue;
 }
 .modal_footer {
 	text-align:center;
