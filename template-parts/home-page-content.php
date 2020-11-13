@@ -97,26 +97,8 @@ setup_postdata($post);
       
 		<div id="news" class="flexRowWrapStart spaceBetween news-events-feature">
 			<div class="events flexHalf">
-				<h2 class="centerText noMarginTop">Events</h2>
-				<?php if( isset($events[0])) : ?>
-               		<?php display_homepage_event($events[0])?>
-           		<?php endif; ?>
-				<?php if( isset($events[1])) : ?>
-               		<?php display_homepage_event($events[1])?>
-           		<?php endif; ?>
-				<?php if( isset($events[2])) : ?>
-               		<?php display_homepage_event($events[2])?>
-           		<?php endif; ?>
-				<?php if( isset($events[3])) : ?>
-               		<?php display_homepage_event($events[3])?>
-           		<?php endif; ?>
-				<div class="more-button-container">
-					<a class="more-button" href="/events/">
-						More Events
-					</a>
-				</div>
                 <?php
-                    // echo do_shortcode('[MEC id="46683"]');
+                    echo do_shortcode('[MEC id="47288"]');
                 ?>
 			</div>
 			<div class="news flexHalf listText">
