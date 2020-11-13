@@ -16,8 +16,14 @@ $calendarOpacity: .25;
 .event-color {
     @extend %hide;
 }
+.single-mec-events .applynowbutton { //this can be done better
+    font-size: 18px;
+}
 .mec-single-event {
     @extend #primary;
+    .mec-event-social ul {
+        padding-left: 0;
+    }
 }
 .mec-wrap.colorskin-custom .mec-calendar  dt.mec-selected-day:hover {
     color: $elmsgreen;
