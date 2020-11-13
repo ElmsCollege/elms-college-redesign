@@ -22,12 +22,6 @@
     });
     var is_iPad = (navigator != null && navigator.userAgent != null && navigator.userAgent.match(/iPad|iPhone|iPod/i) != null);
 
-    // show more sidebar events 
-    jQuery("body").on("click", ".field-related-events .show-more, .field-related-events .show-less", function (e) {
-      jQuery(".field-related-events").toggleClass("toggled");
-      e.preventDefault();
-    });
-
     // copying special section nav (library, school of nursing, subdomains) into the mobile menu
     var specialNavItems = [];
     jQuery("#special-section-menu > li").each(function () {
