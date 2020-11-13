@@ -174,70 +174,6 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
-function get_event_start_date($event) {
-  return strtotime(get_post_meta($event->ID, "_EventStartDate", true));
-}
-
-function get_upcoming_events( $count = 2, $taxonomy = null ) {
-  //$queried_object = get_queried_object();
-  
-  $args = array(
-    'post_type' => 'tribe_events',
-    "posts_per_page" => -1,
-    //"tribe_events_cat" => "featured",
-    /*
-    "tax_query" => array(
-			'taxonomy' => 'tribe_events_cat',
-			'field'    => 'term_id',
-			'terms'    => "103",
-    )
-    */
-    
-  );
-  
-  
-  if ($taxonomy) {
-    $tax_query_array = array("relation" => "OR");
-    foreach ($taxonomy as $tax) {
-      $tax_query_array []= array(
-      			'taxonomy' => 'tribe_events_cat',
-      			'field'    => 'term_id',
-      			'terms'    => $tax,
-      		);
-    }
-    $args['tax_query'] = $tax_query_array;
-  }
-  //echo $args['category'].$args["category_name"];
-  
-  
-  
-  $all_related_events = get_posts($args);
-  //echo var_dump($all_related_events);
-
-  $upcoming_events = array();
-  foreach ($all_related_events as &$event) {
-    $event->real_start_time = get_event_start_date($event);
-    $raw_start_date = get_post_meta($event->ID, "_EventEndDate", true);
-    if (time() <= $event->real_start_time || ($raw_start_date != false && time() <= strtotime($raw_start_date)) ) {
-      $upcoming_events[] = $event;
-    }
-  }
-
-  function sort_upcoming_events_by_time($a, $b)
-  {
-      if ($a->real_start_time == $b->real_start_time) {
-          return 0;
-      }
-      return ($a->real_start_time < $b->real_start_time) ? -1 : 1;
-  }
-  usort($upcoming_events, "sort_upcoming_events_by_time");
-
-  $most_recent_upcoming_events = array_slice($upcoming_events, 0, $count);
-
-  return $most_recent_upcoming_events;
-}
-
-
 function wpb_imagelink_setup() {
 	$image_set = get_option( 'image_default_link_type' );
 	
@@ -287,48 +223,6 @@ function gs_add_typekit () {
 }
 add_action('wp_footer', 'gs_add_typekit');
 
-function display_homepage_event ($event) {
-  ?> 
-  <a class="event" href="<?php print get_the_permalink($event) ?>">
-    <div class="event-image">
-		<?php
-			if ( has_post_thumbnail($event->ID) ) {
-				print get_the_post_thumbnail($event->ID, "medium", array( "class" => "grey-to-color" ));
-			}else{
-				echo "<img class='grey-to-color' src='/wp-content/uploads/2018/10/Elms-Campus_aerial-view-300x169.jpg' alt='Photo of Elms College campus'>";
-			};
-		?>
-    </div>
-    
-    <div class="main-event-content">
-		<div class="start-date">
-			<div class="day">
-			  <?php 
-			  if (tribe_get_start_date($event, false, "ymd") < date("ymd")) { // if we're in the middle of a multiday event
-				print date("j"); //print today's date
-			  }
-			  else {
-				print tribe_get_start_date($event, false, "j");
-			  }
-			  ?>
-			</div>
-			<div class="month"><?php print tribe_get_start_date($event, false, "M")?></div>
-		  </div>
-		<div class="eventDetails">
-		  <div class="times">
-			<span class="start-time"><?php print str_ireplace(":00", "", tribe_get_start_date($event, false, "g:i A"))?></span> - 
-			<span class="end-time2"><?php print str_ireplace(":00", "", tribe_get_end_date($event, false, "g:i A"))?></span>
-		  </div>
-		  <span class="permalink">
-			<h3 class="field-title noMarginTop"><?php print mb_strimwidth($event->post_title, 0, 50, '...') ?></h3>
-			Read More
-		  </span>
-			</div>
-		</div>
-  	</a>
-  <?php
-}
-
 // a homepage link that factors in the cookie
 function real_homepage_link () {
   if (isset($_COOKIE["homepage"])) {
@@ -362,17 +256,6 @@ function remove_menus(){
   remove_menu_page( 'edit-comments.php' );          //Comments
 }
 add_action( 'admin_menu', 'remove_menus' );
-
-add_action('admin_head', 'hide_custom_field_on_events');
-function hide_custom_field_on_events () {
-  ?> 
-  <style>
-    body.wp-admin.events-cal #postcustom {
-        display: none;
-    }
-  </style>
-  <?php
-}
 
 add_action('admin_head', 'hide_domain_in_permalink_on_admin');
 function hide_domain_in_permalink_on_admin () {
@@ -450,30 +333,6 @@ function hide_domain_in_permalink_on_admin () {
 
   function add_optimize_require() {
     echo "ga('require', 'GTM-T3ZX2GB');";
-  }
-
-  /* Tribe, add event date to Yoast Seo title */
-  function tribe_add_date_to_title( $title ) {
-
-    if ( !class_exists( 'Tribe__Events__Main' ) || !is_singular( Tribe__Events__Main::POSTTYPE ) ) {
-      return $title;
-    }
-
-    // tribe_get_start_time docs https://theeventscalendar.com/function/tribe_get_start_time/ 
-    return tribe_get_start_date( null ) . " " . $title;
-  }
-
-  add_filter( 'wpseo_title', 'tribe_add_date_to_title' );
-
-  add_filter( 'the_content', 'specific_no_wpautop', 9 );
-
-  function specific_no_wpautop( $content ) {
-    if ( is_page( array( '10133', '10245', '16684' ) ) ) { // or whatever other condition you like
-      remove_filter( 'the_content', 'wpautop' );
-      return $content;
-    } else {
-      return $content;
-    }
   }
 
   function excerpt_readmore( $more ) {
