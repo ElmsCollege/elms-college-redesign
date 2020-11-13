@@ -97,6 +97,7 @@ setup_postdata($post);
       
 		<div id="news" class="flexRowWrapStart spaceBetween news-events-feature">
 			<div class="events flexHalf">
+				<h2 class="centerText noMarginTop">Events</h2>
                 <?php
                     echo do_shortcode('[MEC id="47288"]');
                 ?>
