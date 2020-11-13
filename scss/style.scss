@@ -858,58 +858,6 @@ p:last-child,.section-heading-as-content .text-content .field-body *:last-child{
         font-weight: bold; /* needed to override a mec style */
     }
 }
-.field-related-events {
-	padding: 10px;
-	background-color: $elmspurple;
-	color: #fff;
-	margin-bottom: 16px;
-    ul {
-        margin-bottom: 0;
-        h4.field-title {
-        	margin: 0 0 8px;
-	        font-size: 21px;
-        }
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 500;
-            vertical-align: top;
-            line-height: 1.5em;
-            &:hover{
-                color:#fff;
-            }
-        }
-    }
-    .times {
-        font-size: 16px;
-        color: #b3aebb;
-    }
-}
-.field-related-events a.show-more,.field-related-events a.show-more:visited,.field-related-events a.show-less,.field-related-events a.show-less:visited{
-	display:block;
-	color:#fff;
-	text-transform:uppercase;
-	font-weight:400;
-	border-top: $whiteborder;
-	padding-top:15px;
-	position:relative
-}
-.field-related-events a.show-more:before,.field-related-events a.show-more:visited:before,.field-related-events a.show-less:before,.field-related-events a.show-less:visited:before{
-	font-family:"Font Awesome 5 Free";
-	font-weight:800;
-	font-size:30px;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-	content:"\f105";
-	line-height:inherit;
-	width:15px;
-	vertical-align:bottom;
-}
-.field-related-events.toggled ul li:not(:first-child),.field-related-events.toggled a.show-less{
-	display:block;
-}
 .parent-sidebar-menu{
 	padding:0;
 	list-style-type:none;
@@ -969,7 +917,7 @@ a.text.requestInfo-trigger{
 	width:auto;
     @extend %pointer;
 }
-[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
+[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table{
 	text-align:center;
 	max-width:100%;
 	width:100%;
@@ -978,16 +926,16 @@ a.text.requestInfo-trigger{
 	font-size:.875em
 }
 @media all and (max-width: 36em){
-	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table{
 		font-size:.75em
 	}
 }
 @media all and (min-width: 48em) and (max-width: 52em){
-	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table:not(.tribe-events-calendar){
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table{
 		font-size:.75em
 	}
 }
-[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table:not(.tribe-events-calendar) td,.entry-content table:not(.tribe-events-calendar) th{
+[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table td,.entry-content table th{
 	padding:.25em;
 	border: $lightgreyborder
 }
@@ -1978,7 +1926,7 @@ th .smallText{
 	-ms-filter: grayscale(0);
 	filter: grayscale(0);
 }
-.field-sidebar-menu-items,.stories .story-feature .story-full .story-image img,.story-carousel .story-tab .story-image img,.field-related-events a.show-less,.field-related-events ul li:not(:first-child),.field-related-events.toggled a.show-more,.calls-to-action .cta-image img,#secondary .widget-title,.hidden,[hidden],.focal-image-container{
+.field-sidebar-menu-items,.stories .story-feature .story-full .story-image img,.story-carousel .story-tab .story-image img,.calls-to-action .cta-image img,#secondary .widget-title,.hidden,[hidden],.focal-image-container{
 	@extend %hide;
 }
 .trace,h1.trace{

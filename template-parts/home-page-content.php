@@ -26,11 +26,6 @@ setup_postdata($post);
         $statistics = get_field("statistics", $fake_id);
         $statistics_background = get_field("statistics_background_new", $fake_id);
         
-        $news_events_pre_title = get_field("news_events_pre_title", $fake_id);
-        $news_events_title = get_field("news_events_title", $fake_id);
-        $event_sources = get_field("event_sources", $fake_id);
-        $events = get_upcoming_events(4, $event_sources);
-        
         $calls_to_action_pre_title = get_field("calls_to_action_pre_title", $fake_id);
         $calls_to_action_title = get_field("calls_to_action_title", $fake_id);
         $calls_to_action = get_field("calls_to_action", $fake_id);
