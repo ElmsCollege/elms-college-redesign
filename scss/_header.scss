@@ -133,6 +133,7 @@ nav {
     display: flex;
 }
 .menu-special-menu-container {
+    height: 100%;
     margin-left: auto;
     align-self: center;
     .active & {
@@ -144,6 +145,7 @@ nav {
         @extend %hide;
     }
     .active & {
+        height: unset;
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
@@ -238,6 +240,9 @@ li:hover > .sub-menu {
     	top: 4.3em;
     }
 }
+#special-menu {
+    align-self: center;
+}
 .special-section-nav {
     background-color: #f2f2f2;
 }
@@ -325,7 +330,7 @@ li:hover > .sub-menu {
 }
 .search-form {
     @extend .sub-menu;
-    top: 4em;
+    top: 3.5em;
     right: 0;
     margin-top: 4px;
     .active & {
