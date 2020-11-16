@@ -133,6 +133,7 @@ nav {
     display: flex;
 }
 .menu-special-menu-container {
+    height: 100%;
     margin-left: auto;
     align-self: center;
     .active & {
@@ -144,6 +145,7 @@ nav {
         @extend %hide;
     }
     .active & {
+        height: unset;
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
@@ -238,6 +240,10 @@ li:hover > .sub-menu {
     	top: 4.3em;
     }
 }
+#special-menu {
+    height: 100%;
+    align-self: center;
+}
 .special-section-nav {
     background-color: #f2f2f2;
 }
@@ -268,8 +274,11 @@ li:hover > .sub-menu {
         position: relative;
         align-self: center;
 }
-.active #special-menu > li:not(:nth-child(n+7)) {
+.active #special-menu li {
     background-color: #f2f2f2;
+}
+.active #special-menu .search-item, .active #special-menu .menu-item-9764 {
+    background-color: unset;
 }
 .active #primary-menu, .active #special-menu {
     flex-direction: column;
@@ -325,7 +334,7 @@ li:hover > .sub-menu {
 }
 .search-form {
     @extend .sub-menu;
-    top: 4em;
+    top: 4.65em;
     right: 0;
     margin-top: 4px;
     .active & {
@@ -337,6 +346,8 @@ li:hover > .sub-menu {
     }
 }
 .search-item {
+    height: 100%;
+    justify-content: center;
     padding-right: 20px;
     label {
         width: 100%;
