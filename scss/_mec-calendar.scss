@@ -114,6 +114,18 @@ $calendarOpacity: .25;
             }
         }
     }
+    .center-for-student-success {
+        background: repeating-linear-gradient(180deg, #f90, #f90 20px, #f10 10px, #f10 25px)
+        h4 {
+            color: #000 !important;
+        }
+        &:hover {
+            background: repeating-linear-gradient(180deg, rgba(#f90, $calendarOpacity), rgba(#f90, $calendarOpacity) 20px, rgba(#f10, $calendarOpacity) 10px, rgba(#f10, $calendarOpacity) 25px);
+            h4 {
+                color: #000 !important;
+            }
+        }
+    }
 }
 /* END styling the different categories on the calendar, only applies to the novel skin */
 
