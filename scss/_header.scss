@@ -274,8 +274,11 @@ li:hover > .sub-menu {
         position: relative;
         align-self: center;
 }
-.active #special-menu > li:not(:nth-child(n+7)) {
+.active #special-menu li {
     background-color: #f2f2f2;
+}
+.active #special-menu .search-item, .active #special-menu .menu-item-9764 {
+    background-color: unset;
 }
 .active #primary-menu, .active #special-menu {
     flex-direction: column;
