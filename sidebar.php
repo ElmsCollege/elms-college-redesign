@@ -97,4 +97,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 endif; ?>
 <div id="secondary" class="widget-area">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</div>
 </aside><!-- #secondary -->
