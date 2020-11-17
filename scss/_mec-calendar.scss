@@ -125,13 +125,13 @@ $stcc:  #caad68;
 
     $mec180Gradient: (
         //event slug (background color, line color, text color, hover text color)
-        center-for-student-success: ("bg":#f90, "accent":#f10, "text":#000, "hover":#000),
-        acc: ("bg":$ce-events, "accent":$acc, "text":#000, "hover":#000),
-        bcc: ("bg":$ce-events, "accent":$bcc, "text":#000, "hover":#000),
-        hcc: ("bg":$ce-events, "accent":$hcc, "text":#000, "hover":#000),
-        gcc: ("bg":$ce-events, "accent":$gcc, "text":#000, "hover":#000),
-        mwcc: ("bg":$ce-events, "accent":$mwcc, "text":#000, "hover":#000),
-        stcc: ("bg":$ce-events, "accent":$stcc, "text":#000, "hover":#000)
+        center-for-student-success: ("bg":#f90, "accent":#f10, "text":#fff, "hover":#000),
+        acc: ("bg":$ce-events, "accent":$acc, "text":#fff, "hover":#000),
+        bcc: ("bg":$ce-events, "accent":$bcc, "text":#fff, "hover":#000),
+        hcc: ("bg":$ce-events, "accent":$hcc, "text":#fff, "hover":#000),
+        gcc: ("bg":$ce-events, "accent":$gcc, "text":#fff, "hover":#000),
+        mwcc: ("bg":$ce-events, "accent":$mwcc, "text":#fff, "hover":#000),
+        stcc: ("bg":$ce-events, "accent":$stcc, "text":#fff, "hover":#000)
     );
 
     @each $class, $attr in $mec180Gradient {
