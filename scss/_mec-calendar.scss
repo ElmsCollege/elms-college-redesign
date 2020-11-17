@@ -2,6 +2,17 @@
 /* MEC calendar specific variables and mixins */
 $calendarOpacity: .25;
 
+$ce-events: rgb(128,0,0);
+
+/* BEGIN community college colors */
+$acc:   #3399cc;
+$bcc:   #005199;
+$hcc:   #00af40;
+$gcc:   #0b6256;
+$mwcc:  #003358;
+$stcc:  #caad68;
+/* END community college colors */
+
 @mixin mecHoverStyle($color) {
     background: $color;
     &:hover {
@@ -11,6 +22,17 @@ $calendarOpacity: .25;
         }
     }
 }
+
+$mecBottomLine: (
+    //event slug (background color, line color, text color, hover text color)
+    center-for-student-success: ("bg":#f90, "line":#f10, "text":#000, "hover":#000),
+    acc: ("bg":$ce-events, "line":$acc, "text":#000, "hover":#000),
+    bcc: ("bg":$ce-events, "line":$bcc, "text":#000, "hover":#000),
+    hcc: ("bg":$ce-events, "line":$hcc, "text":#000, "hover":#000),
+    gcc: ("bg":$ce-events, "line":$gcc, "text":#000, "hover":#000),
+    mwcc: ("bg":$ce-events, "line":$mwcc, "text":#000, "hover":#000),
+    stcc: ("bg":$ce-events, "line":$stcc, "text":#000, "hover":#000)
+);
 
 /* MEC calendar specific styles */
 .event-color {
@@ -79,7 +101,7 @@ $calendarOpacity: .25;
         @include mecHoverStyle($elmsblue);
     }
     .continuing-education-admissions {
-        @include mecHoverStyle(rgb(128,0,0));
+        @include mecHoverStyle($ce-events);
     }
     .liturgical-services {
         @include mecHoverStyle($elmspurple);
@@ -114,15 +136,18 @@ $calendarOpacity: .25;
             }
         }
     }
-    .center-for-student-success {
-        background: repeating-linear-gradient(180deg, #f90, #f90 20px, #f10 10px, #f10 25px)
-        h4 {
-            color: #000 !important;
-        }
-        &:hover {
-            background: repeating-linear-gradient(180deg, rgba(#f90, $calendarOpacity), rgba(#f90, $calendarOpacity) 20px, rgba(#f10, $calendarOpacity) 10px, rgba(#f10, $calendarOpacity) 25px);
+
+    @each $class, $attr in $mecBottomLine {
+        .#{$class} {
+            background: linear-gradient(180deg, map-get(map-get($mecBottomLine, $class), "bg"), map-get(map-get($mecBottomLine, $class), "bg") 20px, map-get(map-get($mecBottomLine, $class), "line") 10px, map-get(map-get($mecBottomLine, $class), "line") 25px);
             h4 {
-                color: #000 !important;
+                color: map-get(map-get($mecBottomLine, $class), "text") !important;
+            }
+            &:hover {
+                background: linear-gradient(180deg, rgba(map-get(map-get($mecBottomLine, $class), "bg"), $calendarOpacity), rgba(map-get(map-get($mecBottomLine, $class), "bg"), $calendarOpacity) 20px, rgba(map-get(map-get($mecBottomLine, $class), "line"), $calendarOpacity) 10px, rgba(map-get(map-get($mecBottomLine, $class), "line"), $calendarOpacity) 25px);
+                h4 {
+                    color: map-get(map-get($mecBottomLine, $class), "hover") !important;
+                }
             }
         }
     }
