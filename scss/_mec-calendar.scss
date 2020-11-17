@@ -23,17 +23,6 @@ $stcc:  #caad68;
     }
 }
 
-$mecBottomLine: (
-    //event slug (background color, line color, text color, hover text color)
-    center-for-student-success: ("bg":#f90, "line":#f10, "text":#000, "hover":#000),
-    acc: ("bg":$ce-events, "line":$acc, "text":#000, "hover":#000),
-    bcc: ("bg":$ce-events, "line":$bcc, "text":#000, "hover":#000),
-    hcc: ("bg":$ce-events, "line":$hcc, "text":#000, "hover":#000),
-    gcc: ("bg":$ce-events, "line":$gcc, "text":#000, "hover":#000),
-    mwcc: ("bg":$ce-events, "line":$mwcc, "text":#000, "hover":#000),
-    stcc: ("bg":$ce-events, "line":$stcc, "text":#000, "hover":#000)
-);
-
 /* MEC calendar specific styles */
 .event-color {
     @extend %hide;
@@ -112,41 +101,53 @@ $mecBottomLine: (
     .public-event {
         @include mecHoverStyle(#e93f3f);
     }
-    .academic-calendar {
-        background: linear-gradient(135deg, $elmsgreen 50%, $elmsgold 100%);
-        h4 {
-            color: #fff !important;
-        }
-        &:hover {
-            background: linear-gradient(135deg, rgba($elmsgreen, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
-            h4 {
-                color: #000 !important;
-            }
-        }
+    
+    @function mec-array-get ($map, $attribute) {
+        @return map-get(map-get($map, $class), $attribute)
     }
-    .final-exam-schedule {
-        background: linear-gradient(135deg, $elmsblue 50%, $elmsgold 100%);
-        h4 {
-            color: #fff !important;
-        }
-        &:hover {
-            background: linear-gradient(135deg, rgba($elmsblue, $calendarOpacity) 50%, rgba($elmsgold, $calendarOpacity) 100%);
+    
+    $mec135Gradient: (
+        //event slug (background color, line color, text color, hover text color)
+        academic-calendar: ("bg":$elmsgreen, "accent":$elmsgold, "text":#fff, "hover":#000),
+        final-exam-schedule: ("bg":$elmsblue, "accent":$elmsgold, "text":#fff, "hover":#000)
+    );
+
+    @each $class, $attr in $mec135Gradient {
+        .#{$class} {
+            background: linear-gradient(135deg, mec-array-get($mec135Gradient, "bg") 50%, mec-array-get($mec135Gradient, "accent") 100%);
             h4 {
-                color: #000 !important;
+                color: mec-array-get($mec135Gradient, "text") !important;
+            }
+            &:hover {
+                background: linear-gradient(135deg, rgba(mec-array-get($mec135Gradient, "bg"), $calendarOpacity) 50%, rgba(mec-array-get($mec135Gradient, "accent"), $calendarOpacity) 100%);
+                h4 {
+                    color: mec-array-get($mec135Gradient, "hover") !important;
+                }
             }
         }
     }
 
-    @each $class, $attr in $mecBottomLine {
+    $mec180Gradient: (
+        //event slug (background color, line color, text color, hover text color)
+        center-for-student-success: ("bg":#f90, "accent":#f10, "text":#000, "hover":#000),
+        acc: ("bg":$ce-events, "accent":$acc, "text":#000, "hover":#000),
+        bcc: ("bg":$ce-events, "accent":$bcc, "text":#000, "hover":#000),
+        hcc: ("bg":$ce-events, "accent":$hcc, "text":#000, "hover":#000),
+        gcc: ("bg":$ce-events, "accent":$gcc, "text":#000, "hover":#000),
+        mwcc: ("bg":$ce-events, "accent":$mwcc, "text":#000, "hover":#000),
+        stcc: ("bg":$ce-events, "accent":$stcc, "text":#000, "hover":#000)
+    );
+
+    @each $class, $attr in $mec180Gradient {
         .#{$class} {
-            background: linear-gradient(180deg, map-get(map-get($mecBottomLine, $class), "bg"), map-get(map-get($mecBottomLine, $class), "bg") 20px, map-get(map-get($mecBottomLine, $class), "line") 10px, map-get(map-get($mecBottomLine, $class), "line") 25px);
+            background: linear-gradient(180deg, mec-array-get($mec180Gradient, "bg"), mec-array-get($mec180Gradient, "bg") 20px, mec-array-get($mec180Gradient, "accent") 10px, mec-array-get($mec180Gradient,  "accent") 25px);
             h4 {
-                color: map-get(map-get($mecBottomLine, $class), "text") !important;
+                color: mec-array-get($mec180Gradient, "text") !important;
             }
             &:hover {
-                background: linear-gradient(180deg, rgba(map-get(map-get($mecBottomLine, $class), "bg"), $calendarOpacity), rgba(map-get(map-get($mecBottomLine, $class), "bg"), $calendarOpacity) 20px, rgba(map-get(map-get($mecBottomLine, $class), "line"), $calendarOpacity) 10px, rgba(map-get(map-get($mecBottomLine, $class), "line"), $calendarOpacity) 25px);
+                background: linear-gradient(180deg, rgba(mec-array-get($mec180Gradient, "bg"), $calendarOpacity), rgba(mec-array-get($mec180Gradient, "bg"), $calendarOpacity) 20px, rgba(mec-array-get($mec180Gradient, "accent"), $calendarOpacity) 10px, rgba(mec-array-get($mec180Gradient, "accent"), $calendarOpacity) 25px);
                 h4 {
-                    color: map-get(map-get($mecBottomLine, $class), "hover") !important;
+                    color: mec-array-get($mec180Gradient, "hover") !important;
                 }
             }
         }
