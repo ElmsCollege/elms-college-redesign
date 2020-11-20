@@ -335,10 +335,12 @@ function hide_domain_in_permalink_on_admin () {
     echo "ga('require', 'GTM-T3ZX2GB');";
   }
 
+/*
   function excerpt_readmore( $more ) {
     return '... <a href="' . get_permalink( $post->ID ) . '" class="readmore">read more</a>';
   }
   add_filter( 'excerpt_more', 'excerpt_readmore' );
+  */
 
   add_filter( 'acf/format_value/type=text', 'do_shortcode' );
 
