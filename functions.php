@@ -616,4 +616,10 @@ function hide_domain_in_permalink_on_admin () {
     };
     echo '</ul>';
   };
-  
+
+function addNullToArray($n) {    
+    if($n=='')
+        return('0');
+    else
+        return($n);
+};
