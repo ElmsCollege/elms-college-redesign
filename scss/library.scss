@@ -79,7 +79,6 @@
 //				border-right: 30px solid transparent;
 //				border-left: 30px solid transparent;
 //				border-bottom: 40px solid $elmsgreen;
-                @include triangle(right, orange, 30px);
 				position: absolute;
 				left: calc(50% - 30px);
 				top: -40px;
@@ -216,10 +215,11 @@
 				&:after {
                     @include square(0);
 					left: auto;
-					border-top: 20px solid transparent;
-					border-bottom: 20px solid transparent;
-					border-left: 30px solid $elmsgreen;
-					border-right: none;
+                    @include border-arrow(right, $elmsgreen, 30px);
+//					border-top: 20px solid transparent;
+//					border-bottom: 20px solid transparent;
+//					border-left: 30px solid $elmsgreen;
+//					border-right: none;
 					right: -29px;
 					top: 40%;
 				}

@@ -515,12 +515,10 @@ a:hover, a:active {
 }
 .stories .story-feature .story-full .text-content:after{
     position: absolute;
-    @include square(0);
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 30px solid $elmsgreen;
     right: -29px;
-    top: 46%
+    top: 46%;
+    @include square(0);
+    @include border-arrow(right, $elmsgreen, 30px);
 }
 @media (min-width: 64em){
     .stories .story-feature .story-full .text-content:after{
