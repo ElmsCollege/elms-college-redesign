@@ -75,10 +75,11 @@
 			z-index: 1;
 			&:after {
 				content: "";
-				border-top: none;
-				border-right: 30px solid transparent;
-				border-left: 30px solid transparent;
-				border-bottom: 40px solid $elmsgreen;
+//				border-top: none;
+//				border-right: 30px solid transparent;
+//				border-left: 30px solid transparent;
+//				border-bottom: 40px solid $elmsgreen;
+                @include triangle(right, orange, 30px);
 				position: absolute;
 				left: calc(50% - 30px);
 				top: -40px;
