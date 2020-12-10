@@ -1969,7 +1969,7 @@ th .smallText{
 	    column-count: 2;
     }
     ul {
-        display: inline-block;//needed because 
+        display: inline-block;//needed because Firefox doesn't support break-inside: avoid-column
     }
 }
 /* END generic, universal, reusable styles */
