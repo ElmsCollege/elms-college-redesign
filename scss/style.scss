@@ -1961,6 +1961,17 @@ th .smallText{
 .has-text-color a:visited{
 	color:inherit
 }
+.column-container{
+    -webkit-column-break-inside: avoid-column;
+    page-break-inside: avoid-column;
+    break-inside: avoid-column;
+    &.two {
+	    column-count: 2;
+    }
+    ul {
+        display: inline-block;//needed because Firefox doesn't support break-inside: avoid-column
+    }
+}
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
