@@ -29,15 +29,14 @@
 }
 .program-inner {
 	position: relative;
-    @include square(100%);
-    @include transition($property: transform, $duration: 400ms, $timing: linear);
 	transform-style: preserve-3d;
 	box-shadow: 0 4px 8px 0 rgba(#000, .2);
 	border-radius: 15px;
+    @include square(100%);
+    @include transition($property: transform, $duration: 400ms, $timing: linear);
 }
 .program-front {
 	position: absolute;
-    @include square(100%);
 	border-radius: 15px;
 	background-size: cover;
 	padding: 5px;
@@ -47,6 +46,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $elmsgold;
+    @include square(100%);
 	h2 {
 		position: absolute;
 		color: white;
@@ -55,15 +55,14 @@
 }
 .featuredImage {
 	position: absolute;
-    @include square(100%);
 	border-radius: 15px;
 	background-size: cover;
 	padding: 5px;
 	filter: brightness(85%);
+    @include square(100%);
 }
 .program-back {
 	position: absolute;
-    @include square(100%);
 	border-radius: 15px;
 	background-size: cover;
 	padding: 5px;
@@ -72,15 +71,17 @@
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: center;
+    @include square(100%);
 	h3 {
 		color: #fff;
+        text-align: center;
 	}
 }
 #programIconList {
 	a.program-back {
-        @include white-on-green;
 		transform: rotateX(180deg);
 		border: $whiteborder;
+        @include white-on-green;
 		&:visited {
 			color: #fff;
 		}
@@ -100,7 +101,7 @@
 		&:nth-child(odd) {
 			.program-back {
 				background-color: $elmsgold;
-				color: #000;
+				color: #000 !important;
 				border: 1px solid #000;
 			}
 		}
@@ -110,7 +111,7 @@
 #lac {
 	background: $elmsgreen;
 	position: relative;
-	border-radius: 5px;
+	border-radius: 20px;
 	width: 290px;
 	left: 5px;
 	height: 190px;
@@ -120,8 +121,8 @@
 		position: absolute;
 		top: calc(-1 * 5px);
 		left: calc(-1 * 5px);
-		height: calc(100% + 5px * 2);
-		width: calc(100% + 5px * 2);
+		height: calc(100% + 5px * 2);//can't use @include square here because it mixes units
+		width: calc(100% + 5px * 2);//can't use @include square here because it mixes units
 		background: linear-gradient(to right, $elmsgold, $elmsgreen);
 		border-radius: calc(2 * 5px);
 		z-index: -1;
@@ -138,6 +139,9 @@
 		.program-inner {
 		    transform: rotateX(180deg);
 		}
+        .program-front{
+            z-index: -1;
+        }
 	}
 }
 @media (pointer: coarse) {
