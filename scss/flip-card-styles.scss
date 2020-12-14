@@ -1,6 +1,17 @@
 /* controls the flip card styles for the /academics pages */
 @import "utilities";
 
+@mixin mediaHoverStyles {
+	.program:hover {
+		.program-inner {
+		    transform: rotateX(180deg);
+		}
+        .program-front{
+            z-index: -1;
+        }
+	}
+}
+
 @keyframes "animatedborder" {
 	0% {
 		background-position: 0% 50%;
@@ -33,7 +44,7 @@
 	box-shadow: 0 4px 8px 0 rgba(#000, .2);
 	border-radius: 15px;
     @include square(100%);
-    @include transition($property: transform, $duration: 400ms, $timing: linear);
+    @include transition($property: transform, $duration: 200ms, $timing: linear);
 }
 .program-front {
 	position: absolute;
@@ -82,17 +93,11 @@
 		transform: rotateX(180deg);
 		border: $whiteborder;
         @include white-on-green;
-		&:visited {
-			color: #fff;
-		}
-		&:active {
+		&:visited, &:active {
 			color: #fff;
 		}
 		&:nth-child(odd) {
-			&:visited {
-				color: #000;
-			}
-			&:active {
+    		&:visited, &:active {
 				color: #000;
 			}
 		}
@@ -135,19 +140,41 @@
 }
 /* END the liberal arts page special flipcard style */
 @media (hover) {
-	.program:hover {
-		.program-inner {
-		    transform: rotateX(180deg);
-		}
-        .program-front{
-            z-index: -1;
-        }
-	}
+    @include mediaHoverStyles;
 }
 @media (pointer: coarse) {
-	.program:focus {
-        .program-inner {
-            transform: rotateX(180deg);
-		}
-	}
+    @include mediaHoverStyles;
+}
+
+//Flip card take 2
+.card-wrapper {
+    display: inline-block;
+    perspective: 1000px;
+    .card {
+        position: relative;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transform-style: preserve-3d;
+        .front, .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform: rotateX(0deg);
+        }
+        .front {
+            z-index: 2;
+        }
+        .back {
+            transform: rotateY(-180deg);
+        }
+    }
+    &:hover {
+        .card {
+            transform: rotateY(-180deg);
+        }
+    }
 }
