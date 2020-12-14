@@ -147,10 +147,10 @@
 }
 
 //Flip card take 2
-.card-wrapper {
+.flipcard-wrapper {
     display: inline-block;
     perspective: 1000px;
-    .card {
+    .flipcard {
         position: relative;
         cursor: pointer;
         transition-duration: 0.2s;
@@ -173,8 +173,36 @@
         }
     }
     &:hover {
-        .card {
+        .flipcard {
             transform: rotateY(-180deg);
         }
     }
+}
+.flipcard-wrapper, .flipcard {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.flipcard {
+  .front, .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+//    border: 1px solid @cardBorderColor;
+    border-radius: 4px;
+  }
+  
+  .front {
+//    color: @cardFrontForegroundColor;
+//    background: @cardFrontBackgroundColor;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  
+  .back {
+    font-size: 1.5rem;
+//    color: @cardBackForegroundColor;
+//    background: @cardBackBackgroundColor;
+  }
 }
