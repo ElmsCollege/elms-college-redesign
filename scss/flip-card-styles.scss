@@ -147,19 +147,24 @@
 }
 
 //Flip card take 2
+.flipcard-wrapper, .flipcard {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
 .flipcard-wrapper {
     display: inline-block;
     perspective: 1000px;
-	&:nth-child(odd) {
-        background-color: $elmsgold;
-        color: #000;
-    }
     .flipcard {
         position: relative;
         cursor: pointer;
         transition-duration: 0.2s;
         transition-timing-function: ease-in-out;
         transform-style: preserve-3d;
+    	&:nth-child(odd) {
+            background-color: $elmsgold;
+            color: #000;
+        }
         .front, .back {
             position: absolute;
             top: 0;
@@ -185,7 +190,7 @@
         .back {
             display: flex;
             flex-flow: column nowrap;
-            transform: rotateY(-180deg);
+            transform: rotateX(-180deg);
             background-color: $elmsgreen;
             color: #fff;
             h3 {
@@ -195,12 +200,7 @@
     }
     &:hover {
         .flipcard {
-            transform: rotateY(-180deg);
+            transform: rotateX(-180deg);
         }
     }
-}
-.flipcard-wrapper, .flipcard {
-  width: 300px;
-  height: 200px;
-  margin: 10px;
 }
