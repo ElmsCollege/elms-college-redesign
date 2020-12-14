@@ -164,12 +164,30 @@
             height: 200px;
             backface-visibility: hidden;
             transform: rotateX(0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
         }
         .front {
+            font-weight: 700;
+            font-size: 1rem;
             z-index: 2;
+            h2 {
+                z-index: 10;
+                color: #fff;
+            }
         }
         .back {
+            display: flex;
+            flex-flow: column nowrap;
             transform: rotateY(-180deg);
+            background-color: $elmsgreen;
+            color: #fff;
+            &:nth-child(odd) {
+                background-color: $elmsgold;
+                color: #000;
+            }
         }
     }
     &:hover {
@@ -179,30 +197,7 @@
     }
 }
 .flipcard-wrapper, .flipcard {
-  width: 200px;
+  width: 300px;
   height: 200px;
   margin: 10px;
-}
-
-.flipcard {
-  .front, .back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-//    border: 1px solid @cardBorderColor;
-    border-radius: 4px;
-  }
-  
-  .front {
-//    color: @cardFrontForegroundColor;
-//    background: @cardFrontBackgroundColor;
-    font-weight: 700;
-    font-size: 1rem;
-  }
-  
-  .back {
-    font-size: 1.5rem;
-//    color: @cardBackForegroundColor;
-//    background: @cardBackBackgroundColor;
-  }
 }
