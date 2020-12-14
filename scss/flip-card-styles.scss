@@ -150,6 +150,10 @@
 .flipcard-wrapper {
     display: inline-block;
     perspective: 1000px;
+	&:nth-child(odd) {
+        background-color: $elmsgold;
+        color: #000;
+    }
     .flipcard {
         position: relative;
         cursor: pointer;
@@ -167,11 +171,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 4px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 10px;
         }
         .front {
-            font-weight: 700;
-            font-size: 1rem;
             z-index: 2;
             h2 {
                 z-index: 10;
@@ -184,9 +188,8 @@
             transform: rotateY(-180deg);
             background-color: $elmsgreen;
             color: #fff;
-            &:nth-child(odd) {
-                background-color: $elmsgold;
-                color: #000;
+            h3 {
+                color: #fff;
             }
         }
     }
