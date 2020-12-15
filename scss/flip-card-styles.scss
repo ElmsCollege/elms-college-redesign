@@ -161,10 +161,6 @@
         transition-duration: 0.3s;
         transition-timing-function: ease-in-out;
         transform-style: preserve-3d;
-    	&:nth-child(odd) {
-            background-color: $elmsgold;
-            color: #000;
-        }
         .front, .back {
             position: absolute;
             top: 0;
@@ -193,8 +189,15 @@
             transform: rotateX(-180deg);
             background-color: $elmsgreen;
             color: #fff;
+            &:nth-child(odd) {
+                background-color: $elmsgold;
+                color: #000;
+            }
             h3 {
                 color: #fff;
+                &:nth-child(odd) {
+                    color: #000;
+                }
             }
         }
     }
