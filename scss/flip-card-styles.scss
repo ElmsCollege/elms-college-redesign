@@ -193,17 +193,17 @@
                 color: #fff;
             }
         }
-        &:nth-child(odd) .back {
-            background-color: $elmsgold;
-            color: #000;
-            h3 {
-                color: #000;
-            }
-        }
     }
     &:hover {
         .flipcard {
             transform: rotateX(-180deg);
+        }
+    }
+    &:nth-child(odd) .back {
+        background-color: $elmsgold;
+        color: #000;
+        h3 {
+            color: #000;
         }
     }
 }
