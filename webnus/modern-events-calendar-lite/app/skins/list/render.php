@@ -85,14 +85,20 @@ $map_events = array();
                     <?php do_action('mec_list_classic_after_location', $event); ?>
                     <?php echo $this->booking_button($event); ?>
                 <?php elseif($this->style == 'minimal'): ?>
-                    <div class="col-md-9 col-sm-9">
+                    <?php if(isset($this->skin_options['sed_method']) && $this->skin_options['sed_method'] == "no"): ?>
+                        <div>
+                    <?php else: ?>
+                        <div class="col-md-9 col-sm-9">
+                    <?php endif; ?>
                         <div class="mec-event-date mec-bg-color"><span><?php echo $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['start']['date'])); ?></span><?php echo $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date'])); ?></div>
                         <?php if($this->include_events_times) echo $this->main->display_time($start_time, $end_time); ?>
                         <h4 class="mec-event-title"><?php echo $this->display_link($event); ?><?php echo $this->main->get_flags($event).$event_color.$this->main->get_normal_labels($event, $display_label).$this->main->display_cancellation_reason($event, $reason_for_cancellation); ?><?php do_action('mec_shortcode_virtual_badge', $event->data->ID ); ?></h4>
                         <div class="mec-event-detail"><?php echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])); ?><?php echo (isset($location['name']) ? ', <span class="mec-event-loc-place">' . $location['name'] .'</span>' : ''); ?> <?php if($this->localtime) echo $this->main->module('local-time.type2', array('event'=>$event)); ?> </div>
                         <?php echo $this->booking_button($event); ?>
                     </div>
-                    <div class="col-md-3 col-sm-3 btn-wrapper"><?php do_action('before_mec_list_minimal_button', $event); ?><?php echo $this->display_link($event, $this->main->m('event_detail', __('EVENT DETAIL', 'modern-events-calendar-lite')), 'mec-detail-button'); ?></div>
+                    <?php if(isset($this->skin_options['sed_method']) && $this->skin_options['sed_method'] == "no"): ?>
+                        <div class="col-md-3 col-sm-3 btn-wrapper"><?php do_action('before_mec_list_minimal_button', $event); ?><?php echo $this->display_link($event, $this->main->m('event_detail', __('EVENT DETAIL', 'modern-events-calendar-lite')), 'mec-detail-button'); ?></div>
+                    <?php endif; ?>
                 <?php elseif($this->style == 'standard'): ?>
                     <?php
                         $excerpt = trim($event->data->post->post_excerpt) ? $event->data->post->post_excerpt : '';
