@@ -85,6 +85,10 @@ $map_events = array();
                     <?php do_action('mec_list_classic_after_location', $event); ?>
                     <?php echo $this->booking_button($event); ?>
                 <?php elseif($this->style == 'minimal'): ?>
+                    <?php 
+                        $sed_method = $this->sed_method;
+                        echo $sed_method;
+                    ?>
                     <?php if(isset($event->skin_options['sed_method']) && $this->skin_options['sed_method'] == "no"): ?>
                     <div>
                     <?php else: ?>
