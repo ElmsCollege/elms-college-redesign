@@ -86,10 +86,8 @@ $map_events = array();
                     <?php echo $this->booking_button($event); ?>
                 <?php elseif($this->style == 'minimal'): ?>
                     <?php 
-                        $sed_method = $this->sed_method;
-                        echo $sed_method;
+                        if($this->sed_method == "no"):
                     ?>
-                    <?php if(isset($event->skin_options['sed_method']) && $this->skin_options['sed_method'] == "no"): ?>
                     <div>
                     <?php else: ?>
                     <div class="col-md-9 col-sm-9">
@@ -100,7 +98,7 @@ $map_events = array();
                         <div class="mec-event-detail"><?php echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])); ?><?php echo (isset($location['name']) ? ', <span class="mec-event-loc-place">' . $location['name'] .'</span>' : ''); ?> <?php if($this->localtime) echo $this->main->module('local-time.type2', array('event'=>$event)); ?> </div>
                         <?php //echo $event->booking_button($event); ?>
                     </div>
-                    <?php if(isset($this->skin_options['sed_method']) && $this->skin_options['sed_method'] == "no"): ?>
+                    <?php if($this->sed_method != "no"): ?>
                         <div class="col-md-3 col-sm-3 btn-wrapper"><?php do_action('before_mec_list_minimal_button', $event); ?><?php echo $this->display_link($event, $this->main->m('event_detail', __('EVENT DETAIL', 'modern-events-calendar-lite')), 'mec-detail-button'); ?></div>
                     <?php endif; ?>
                 <?php elseif($this->style == 'standard'): ?>
