@@ -81,6 +81,17 @@ $stcc:  #caad68;
         min-width: unset !important;
     }
 }
+.mec-event-list-minimal {
+    .mec-event-article {
+        padding: 5px 0;
+    }
+    .mec-event-title {
+        padding-top: 0;
+        h6 {
+            font-weight: 700;
+        }
+    }
+}
 /* BEGIN styling the different categories on the calendar, only applies to the novel skin */
 .event-single-link-novel {
     .undergraduate-admissions {
