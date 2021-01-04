@@ -88,7 +88,7 @@ $map_events = array();
                     <?php 
                         if($this->sed_method == "no"):
                     ?>
-                    <div class="flexRowNowrapStart">
+                    <div class="flexRowNowrapCenter">
                     <?php else: ?>
                     <div class="col-md-9 col-sm-9">
                     <?php endif; ?>
