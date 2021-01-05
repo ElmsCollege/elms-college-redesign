@@ -82,8 +82,11 @@ $stcc:  #caad68;
     }
 }
 .mec-event-list-minimal {
-    .mec-event-date, .mec-event-date::after {
+    .mec-event-date {
         width: auto;
+        &::after{
+            width: 100%;
+        }
     }
     .mec-event-article {
         padding: 5px 0;

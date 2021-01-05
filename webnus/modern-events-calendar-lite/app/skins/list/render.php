@@ -97,10 +97,13 @@ $map_events = array();
                             <span>
                                 <?php echo $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['start']['date'])); ?>
                                 <?php if($event->date['start']['date'] != $event->date['end']['date']){
-                                    echo '-' . $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['end']['date']));
+                                    echo '- ' . $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['end']['date']));
                                 }?>
                             </span>
                             <?php echo $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date'])); ?>
+                                <?php if($event->date['start']['date'] != $event->date['end']['date']){
+                                    echo '- ' . $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['end']['date']));
+                                }?>
                         </div>
                         <div class="mec-event-title">
                             <h6>
@@ -108,7 +111,7 @@ $map_events = array();
                                 <?php echo $this->main->get_flags($event).$event_color.$this->main->get_normal_labels($event, $display_label).$this->main->display_cancellation_reason($event, $reason_for_cancellation); ?>
                                 <?php do_action('mec_shortcode_virtual_badge', $event->data->ID ); ?>
                             </h6>
-                            <div class="mec-time-details">
+                            <div class="event-details">
                                 <?php if($this->include_events_times) echo $this->main->display_time($start_time, $end_time); ?>
                                 <?php echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])); ?>
                                 <?php echo (isset($location['name']) ? ', <span class="mec-event-loc-place">' . $location['name'] .'</span>' : ''); ?>
