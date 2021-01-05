@@ -120,8 +120,8 @@ $map_events = array();
                             </h6>
                             <div class="event-details">
                                 <?php
-                                    if($this->include_events_times) echo $this->main->display_time($start_time, $end_time);
-                                    echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])) . ' ';
+                                    if($this->include_events_times) echo $this->main->display_time($start_time, $end_time) . ' ';
+                                    echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date']));
                                     if($event->date['start']['date'] != $event->date['end']['date']):
                                         echo '- ' . $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['end']['date']));
                                     endif;
