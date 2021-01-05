@@ -102,12 +102,12 @@ $map_events = array();
                             </span>
                             <?php echo $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date'])); ?>
                             <?php 
-                    echo $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date']));
-                    echo '-';
+                                $startMonth = $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date']));
+                                $endMonth = $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['end']['date']));
+                                if($startMonth != $endMonth){
+                                    echo '- ' . $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['end']['date']));
+                                }
                             ?>
-                                <?php //if($this->date_format_minimal_2, strtotime($event->date['start']['date']) != $this->date_format_minimal_2, strtotime($event->date['end']['date'])){
-                                    //echo '- ' . $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['end']['date']));
-                                //}?>
                         </div>
                         <div class="mec-event-title">
                             <h6>

@@ -97,6 +97,13 @@ $stcc:  #caad68;
             font-weight: 700;
         }
     }
+    .event-details {
+        font-weight: 300;
+        font-size: 15px;
+    }
+    .mec-time-details {
+        display: inline-block;
+    }
 }
 /* BEGIN styling the different categories on the calendar, only applies to the novel skin */
 .event-single-link-novel {
