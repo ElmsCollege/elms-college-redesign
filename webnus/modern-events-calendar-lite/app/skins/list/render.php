@@ -84,6 +84,7 @@ $map_events = array();
                     <?php echo $this->display_categories($event); ?>
                     <?php do_action('mec_list_classic_after_location', $event); ?>
                     <?php echo $this->booking_button($event); ?>
+                <!-- BEGIN Elms customizations --->
                 <?php elseif($this->style == 'minimal'): ?>
                     <?php 
                         if($this->sed_method == "no"):
@@ -92,18 +93,35 @@ $map_events = array();
                     <?php else: ?>
                     <div class="col-md-9 col-sm-9">
                     <?php endif; ?>
-                        <div class="mec-event-date mec-bg-color"><span><?php echo $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['start']['date'])); ?></span><?php echo $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date'])); ?></div>
-                        <?php if($this->include_events_times) echo $this->main->display_time($start_time, $end_time); ?>
+                        <div class="mec-event-date mec-bg-color">
+                            <span>
+                                <?php echo $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['start']['date'])); ?>
+                                <?php if($event->date['start']['date'] != $event->date['end']['date']){
+                                    echo '-' . $this->main->date_i18n($this->date_format_minimal_1, strtotime($event->date['end']['date']));
+                                }?>
+                            </span>
+                            <?php echo $this->main->date_i18n($this->date_format_minimal_2, strtotime($event->date['start']['date'])); ?>
+                        </div>
                         <div class="mec-event-title">
-                            <h6><?php echo $this->display_link($event); ?><?php echo $this->main->get_flags($event).$event_color.$this->main->get_normal_labels($event, $display_label).$this->main->display_cancellation_reason($event, $reason_for_cancellation); ?><?php do_action('mec_shortcode_virtual_badge', $event->data->ID ); ?></h6>
-                            <div class="mec-event-detail"><?php echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])); ?><?php echo (isset($location['name']) ? ', <span class="mec-event-loc-place">' . $location['name'] .'</span>' : ''); ?> <?php if($this->localtime) echo $this->main->module('local-time.type2', array('event'=>$event)); ?> </div>
+                            <h6>
+                                <?php echo $this->display_link($event); ?>
+                                <?php echo $this->main->get_flags($event).$event_color.$this->main->get_normal_labels($event, $display_label).$this->main->display_cancellation_reason($event, $reason_for_cancellation); ?>
+                                <?php do_action('mec_shortcode_virtual_badge', $event->data->ID ); ?>
+                            </h6>
+                            <div class="mec-time-details">
+                                <?php if($this->include_events_times) echo $this->main->display_time($start_time, $end_time); ?>
+                                <?php echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])); ?>
+                                <?php echo (isset($location['name']) ? ', <span class="mec-event-loc-place">' . $location['name'] .'</span>' : ''); ?>
+                                <?php if($this->localtime) echo $this->main->module('local-time.type2', array('event'=>$event)); ?>
+                            </div>
                         </div>
                         <?php //echo $event->booking_button($event); ?>
                     </div>
                     <?php if($this->sed_method != "no"): ?>
                         <div class="col-md-3 col-sm-3 btn-wrapper"><?php do_action('before_mec_list_minimal_button', $event); ?><?php echo $this->display_link($event, $this->main->m('event_detail', __('EVENT DETAIL', 'modern-events-calendar-lite')), 'mec-detail-button'); ?></div>
                     <?php endif; ?>
-                <?php elseif($this->style == 'standard'): ?>
+                <!-- END Elms customizations --->
+                    <?php elseif($this->style == 'standard'): ?>
                     <?php
                         $excerpt = trim($event->data->post->post_excerpt) ? $event->data->post->post_excerpt : '';
                         
