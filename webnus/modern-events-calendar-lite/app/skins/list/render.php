@@ -118,6 +118,9 @@ $map_events = array();
                             <div class="event-details">
                                 <?php if($this->include_events_times) echo $this->main->display_time($start_time, $end_time); ?>
                                 <?php echo $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['start']['date'])); ?>
+                                <?php if($event->date['start']['date'] != $event->date['end']['date']){
+                                    echo '- ' . $this->main->date_i18n($this->date_format_minimal_3, strtotime($event->date['end']['date']));
+                                }?>
                                 <?php echo (isset($location['name']) ? ', <span class="mec-event-loc-place">' . $location['name'] .'</span>' : ''); ?>
                                 <?php if($this->localtime) echo $this->main->module('local-time.type2', array('event'=>$event)); ?>
                             </div>

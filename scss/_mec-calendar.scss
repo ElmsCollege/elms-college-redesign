@@ -98,11 +98,13 @@ $stcc:  #caad68;
         }
     }
     .event-details {
-        font-weight: 300;
+        font-weight: 500;
         font-size: 15px;
+        text-transform: capitalize;
     }
     .mec-time-details {
         display: inline-block;
+        color: #000;
     }
 }
 /* BEGIN styling the different categories on the calendar, only applies to the novel skin */
