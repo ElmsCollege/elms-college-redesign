@@ -84,6 +84,8 @@ $stcc:  #caad68;
 .mec-event-list-minimal {
     .mec-event-date {
         width: auto;
+        padding-right: 8px;
+        padding-left: 8px;
         &::after{
             width: 100%;
         }
@@ -113,6 +115,8 @@ $stcc:  #caad68;
     .mec-event-list-minimal {
         .mec-event-date {
             min-width: 54px;
+            padding-right: 0px;
+            padding-left: 0px;
             span {
                 display: inline-block;
                 width: 100%;
