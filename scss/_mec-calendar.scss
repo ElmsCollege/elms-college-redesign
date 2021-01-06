@@ -111,11 +111,14 @@ $stcc:  #caad68;
 }
 @media only screen and (max-width:479px) {
     .mec-event-list-minimal {
-        .mec-event-date span {
-            display: inline-block;
-            width: 100%;
-            padding-right: unset;
-            margin-right: unset;
+        .mec-event-date {
+            min-width: 54px;
+            span {
+                display: inline-block;
+                width: 100%;
+                padding-right: unset;
+                margin-right: unset;
+            }
         }
     }
 }
