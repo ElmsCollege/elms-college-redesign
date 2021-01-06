@@ -109,6 +109,17 @@ $stcc:  #caad68;
         font-weight: 500;
     }
 }
+@media only screen and (max-width:479px) {
+    .mec-event-list-minimal {
+        .mec-event-date span {
+            display: inline-block;
+            width: 100%;
+            padding-right: unset;
+            margin-right: unset;
+        }
+    }
+}
+
 /* BEGIN styling the different categories on the calendar, only applies to the novel skin */
 .event-single-link-novel {
     .undergraduate-admissions {
