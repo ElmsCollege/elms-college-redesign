@@ -24,6 +24,9 @@ $stcc:  #caad68;
 }
 
 /* MEC calendar specific styles */
+main > .mec-event-content h1 {
+    @extend .noMarginTop;
+}
 .event-color {
     @extend %hide;
 }
@@ -60,11 +63,16 @@ $stcc:  #caad68;
         @extend .noMarginTop;
     }
 }
-.mec-wrap p {
-    color: inherit;
-    font-weight: inherit;
-    font-size: 18px;
-    font-family: inherit;
+.mec-wrap {
+    h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+    p {
+        color: inherit;
+        font-weight: inherit;
+        font-size: 18px;
+        font-family: inherit;
+    }
 }
 @media only screen and (max-width:479px) {
     .mec-container {
