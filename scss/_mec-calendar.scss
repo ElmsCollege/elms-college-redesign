@@ -24,9 +24,6 @@ $stcc:  #caad68;
 }
 
 /* MEC calendar specific styles */
-main > .mec-event-content {
-    padding-top: 0;
-}
 .event-color {
     @extend %hide;
 }
@@ -40,6 +37,9 @@ main > .mec-event-content {
 }
 .mec-single-event {
     @extend #primary;
+    main > .mec-event-content {
+        padding-top: 0;
+    }
     .mec-event-social ul {
         padding-left: 0;
     }
