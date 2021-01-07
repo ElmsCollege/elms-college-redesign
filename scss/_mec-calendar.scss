@@ -156,22 +156,22 @@ main > .mec-event-content h1 {
         @include mecHoverStyle(#e93f3f);
     }
     
-    $mec135Gradient: (
-        //event slug (background color, line color, text color, hover text color)
+    $mecRadGradient: (
         academic-calendar: ("bg":$elmsgreen, "accent":$elmsgold, "text":#fff, "hover":#000),
         final-exam-schedule: ("bg":$elmsblue, "accent":$elmsgold, "text":#fff, "hover":#000)
     );
 
-    @each $class, $attr in $mec135Gradient {
+    @each $class, $attr in $mecRadGradient {
         .#{$class} {
-            background: linear-gradient(135deg, map-get(map-get($mec135Gradient, $class), "bg") 50%, map-get(map-get($mec135Gradient, $class), "accent") 100%);
+            //radial-gradient(#115438 55%,#c3a250 85%)
+            background: radial-gradient(map-get(map-get($mecRadGradient, $class), "bg") 40%, map-get(map-get($mecRadGradient, $class), "accent") 75%);
             h4 {
-                color: map-get(map-get($mec135Gradient, $class), "text") !important;
+                color: map-get(map-get($mecRadGradient, $class), "text") !important;
             }
             &:hover {
-                background: linear-gradient(135deg, rgba(map-get(map-get($mec135Gradient, $class), "bg"), $calendarOpacity) 50%, rgba(map-get(map-get($mec135Gradient, $class), "accent"), $calendarOpacity) 100%);
+                background: radial-gradient(rgba(map-get(map-get($mecRadGradient, $class), "bg"), $calendarOpacity) 40%, rgba(map-get(map-get($mecRadGradient, $class), "accent"), $calendarOpacity) 75%);
                 h4 {
-                    color: map-get(map-get($mec135Gradient, $class), "hover") !important;
+                    color: map-get(map-get($mecRadGradient, $class), "hover") !important;
                 }
             }
         }
