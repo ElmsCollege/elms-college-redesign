@@ -24,7 +24,7 @@ $stcc:  #caad68;
 }
 
 /* MEC calendar specific styles */
-main > .mec-event-content h1 {
+main > .mec-event-content {
     @extend .noMarginTop;
 }
 .event-color {
