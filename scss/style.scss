@@ -918,7 +918,7 @@ a.text.requestInfo-trigger{
     @extend %pointer;
 }
 //this table stuff needs to be sassed
-[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable table {
+[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable {
 	text-align: center;
 	max-width: 100%;
 	width: 100%;
@@ -927,24 +927,22 @@ a.text.requestInfo-trigger{
 	font-size: .875em
 }
 @media all and (max-width: 36em){
-	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable table {
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable {
 		font-size: .75em
 	}
 }
 @media all and (min-width: 48em) and (max-width: 52em){
-	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable table {
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable {
 		font-size: .75em
 	}
 }
-[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table td,.entry-content table th, .tuitionTable table th, .tuitionTable table td{
+[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table td,.entry-content table th, .tuitionTable th, .tuitionTable td{
 	padding: .25em;
 	border: $lightgreyborder
 }
-[id^="thisYear"] table th,[id^="nextYear"] table th, .tuitionTable table th{
+[id^="thisYear"] table th,[id^="nextYear"] table th, .tuitionTable th{
 	font-weight: 700;
 	font-size: 16px;
-}
-[id^="thisYear"] table th,[id^="nextYear"] table th, .tuitionTable table th {
 	background-color: #eee;
 }
 .opening-menu.fs-dropdown {

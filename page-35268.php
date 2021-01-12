@@ -39,10 +39,7 @@ get_header(); ?>
 #tuitionTable tbody tr:nth-child(odd){
 	background-color:#eee;
 }
-greyRow {
-	background-color:#eee;
-}
-    .acfFieldName{
+.acfFieldName{
 	text-align:left;
 	font-size:.8em;
 }
