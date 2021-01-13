@@ -34,7 +34,10 @@ get_header(); ?>
 #tuitionTable .borderRL{
 	border-right:2px solid #115438;
 	border-left:2px solid #115438;
-width:100px;
+    width:100px;
+}
+#tuitionTable tbody tr:nth-child(odd){
+	background-color:#eee;
 }
 .acfFieldName{
 	text-align:left;

@@ -317,87 +317,11 @@
 		text-shadow: 2px 2px 2px #000;
 	}
 }
-.page-template-nursing-landing-page-2 {
-	.stories {
-		.field-excerpt {
-			display: none;
-			a {
-				color: $elmsgold;
-				text-decoration: none;
-			}
-		}
-		.field-permalink {
-			display: none;
-			a {
-				color: $elmsgold;
-				text-decoration: none;
-			}
-		}
-		.show-more {
-			margin: 1em 0 32px;
-			font-size: 14px;
-			font-weight: 500;
-			display: inline-block;
-			a {
-				text-decoration: none;
-				text-transform: uppercase;
-				color: #fff;
-				&:after {
-					background: url(../images/icon-show-more.png) no-repeat 0 0/100%;
-					content: "";
-					display: inline-block;
-                    @include square(24px);
-					vertical-align: middle;
-					margin-left: 1em;
-				}
-			}
-			a.open {
-				&:after {
-					background-image: url(../images/icon-show-less.png);
-				}
-			}
-		}
-		.story-feature {
-			padding-bottom: 0;
-		}
-	}
-}
 @media (min-width: 48em) {
 	#nursingPage {
 		.calls-to-action {
 			.calls-to-action-title {
 				margin: 32px 32px 0;
-			}
-		}
-	}
-	.page-template-nursing-landing-page-2 {
-		.stories {
-			.story-feature {
-				padding-bottom: 32px;
-				overflow-x: hidden;
-			}
-			.story-full {
-				display: none;
-				&:first-child {
-					display: block;
-				}
-			}
-			.field-excerpt {
-				display: block;
-				a {
-					color: $elmsgold;
-					text-decoration: none;
-				}
-			}
-			.field-permalink {
-				display: block;
-				a {
-					color: $elmsgold;
-					text-decoration: none;
-				}
-			}
-			.show-more {
-				display: none;
 			}
 		}
 	}
@@ -482,25 +406,6 @@
 			a {
 				max-width: 100%;
 				width: 90%;
-			}
-		}
-	}
-}
-@media (max-width: 47.999em) {
-	.page-template-nursing-landing-page-2 {
-		.stories {
-			.story-full {
-				.text-content {
-					&:after {
-						content: "";
-						border-left: 30px solid transparent;
-						border-right: 30px solid transparent;
-						border-bottom: 40px solid $elmsgreen;
-						left: calc(50% - 40px);
-						top: 90px;
-						top: calc(140px + 32vw - 60px);
-					}
-				}
 			}
 		}
 	}

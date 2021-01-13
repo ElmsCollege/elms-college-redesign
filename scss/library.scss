@@ -75,10 +75,10 @@
 			z-index: 1;
 			&:after {
 				content: "";
-				border-top: none;
-				border-right: 30px solid transparent;
-				border-left: 30px solid transparent;
-				border-bottom: 40px solid $elmsgreen;
+//				border-top: none;
+//				border-right: 30px solid transparent;
+//				border-left: 30px solid transparent;
+//				border-bottom: 40px solid $elmsgreen;
 				position: absolute;
 				left: calc(50% - 30px);
 				top: -40px;
@@ -213,12 +213,13 @@
 				width: 476px;
 				padding: 64px;
 				&:after {
-                    @include square(0);
+//                    @include square(0);
 					left: auto;
-					border-top: 20px solid transparent;
-					border-bottom: 20px solid transparent;
-					border-left: 30px solid $elmsgreen;
-					border-right: none;
+                    @include border-arrow(right, $elmsgreen, 30px);
+//					border-top: 20px solid transparent;
+//					border-bottom: 20px solid transparent;
+//					border-left: 30px solid $elmsgreen;
+//					border-right: none;
 					right: -29px;
 					top: 40%;
 				}

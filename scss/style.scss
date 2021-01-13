@@ -39,21 +39,23 @@ blockquote{
 address{
     margin: 0 0 1.5em
 }
-pre{
-    background: #eee;
+.monospace {
     font-family: "Courier 10 Pitch",Courier,monospace;
     font-size: 15px;
     font-size: .9375rem;
+}
+pre{
+    background: #eee;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
     overflow: auto;
-    padding: 1.6em
+    padding: 1.6em;
+    @extend .monospace;
 }
 code,kbd,tt,var{
-    font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
-    font-size: 15px;
-    font-size: .9375rem}
+    @extend .monospace;
+}
 abbr,acronym{
     border-bottom: 1px dotted #666;
     cursor: help}
@@ -513,12 +515,10 @@ a:hover, a:active {
 }
 .stories .story-feature .story-full .text-content:after{
     position: absolute;
-    @include square(0);
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 30px solid $elmsgreen;
     right: -29px;
-    top: 46%
+    top: 46%;
+    @include square(0);
+    @include border-arrow(right, $elmsgreen, 30px);
 }
 @media (min-width: 64em){
     .stories .story-feature .story-full .text-content:after{
@@ -917,34 +917,33 @@ a.text.requestInfo-trigger{
 	width:auto;
     @extend %pointer;
 }
-[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table{
-	text-align:center;
-	max-width:100%;
-	width:100%;
-	border-collapse:collapse;
-	table-layout:fixed;
-	font-size:.875em
+//this table stuff needs to be sassed
+[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable {
+	text-align: center;
+	max-width: 100%;
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-size: .875em
 }
 @media all and (max-width: 36em){
-	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table{
-		font-size:.75em
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable {
+		font-size: .75em
 	}
 }
 @media all and (min-width: 48em) and (max-width: 52em){
-	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table{
-		font-size:.75em
+	[id^="thisYear"] table,[id^="nextYear"] table, .wp-block-table table,.entry-content table, .tuitionTable {
+		font-size: .75em
 	}
 }
-[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table td,.entry-content table th{
-	padding:.25em;
+[id^="thisYear"] table td,[id^="nextYear"] table td, .wp-block-table table td,[id^="thisYear"] table th,[id^="nextYear"] table th,.entry-content table td,.entry-content table th, .tuitionTable th, .tuitionTable td{
+	padding: .25em;
 	border: $lightgreyborder
 }
-[id^="thisYear"] table th,[id^="nextYear"] table th{
-	font-weight:700;
-	font-size:16px;
-}
-[id^="thisYear"] table th,[id^="nextYear"] table th,.greyRow,#tuitionTable tbody tr:nth-child(odd){
-	background-color:#eee;
+[id^="thisYear"] table th,[id^="nextYear"] table th, .tuitionTable th{
+	font-weight: 700;
+	font-size: 16px;
+	background-color: #eee;
 }
 .opening-menu.fs-dropdown {
 	margin: 10px 0;
@@ -1788,14 +1787,19 @@ div.collapseomatic_content{
 	font-weight:700;
 }
 .flexRowWrapStart{
-	display:flex;
-	flex-flow:row wrap;
-	align-items:flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
 }
 .flexRowNowrapStart{
 	display:flex;
 	flex-flow:row nowrap;
 	align-items:flex-start;
+}
+.flexRowNowrapCenter{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
 }
 .flexColNowrap{
 	display:flex;

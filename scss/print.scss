@@ -2,22 +2,22 @@
 @import "utilities";
 
 header,footer{
-	display:none !important;
+	display: none !important;
 }
 #primary{
-	display:block !important;
-	overflow:visible !important;
+	display: block !important;
+	overflow: visible !important;
 }
 main,aside{
-	width:100% !important;
-	padding:0 20px !important;
-	height:auto !important;
-	overflow:visible !important;
-	display:block !important;
+	width: 100% !important;
+	padding: 0 20px !important;
+	height: auto !important;
+	overflow: visible !important;
+	display: block !important;
 }
 aside{
-	margin-top:20px;
+	margin-top: 20px;
 }
 .site-content{
-	padding-top:unset;
+	padding-top: unset;
 }

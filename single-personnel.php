@@ -68,12 +68,13 @@ get_header(); ?>
 			?>
 			<div>
 				<label>Contact Info:</label>
-				<?php if( get_field('email_suffix') ): ?> 
-					<a href="mailto:<?php echo $email .$emailSuffix ;?>"><?php echo $email .$emailSuffix;?></a><?php echo $phone;?>
-
-				<?php else: ?>
-					<a href="mailto:<?php echo $email ;?>@elms.edu"><?php echo $email ;?>@elms.edu</a><?php echo $phone;?>
-				<?php endif; ?>
+				<?php
+                if( get_field('email_suffix') ){
+                    echo do_shortcode('[encode]'.$email .$emailSuffix .'[/encode]');
+                } else {
+                    echo do_shortcode('[encode]'.$email .'@elms.edu[/encode]');
+                }
+                ?>
 			</div>
 			<div>
 				<?php echo get_the_term_list( $post->ID, 'department', '<label>Department(s):</label> ', ', ' ); ?>

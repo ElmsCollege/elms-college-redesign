@@ -37,6 +37,9 @@ $stcc:  #caad68;
 }
 .mec-single-event {
     @extend #primary;
+    main > .mec-event-content {
+        padding-top: 0;
+    }
     .mec-event-social ul {
         padding-left: 0;
     }
@@ -60,11 +63,16 @@ $stcc:  #caad68;
         @extend .noMarginTop;
     }
 }
-.mec-wrap p {
-    color: inherit;
-    font-weight: inherit;
-    font-size: 18px;
-    font-family: inherit;
+.mec-wrap {
+    h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+    p {
+        color: inherit;
+        font-weight: inherit;
+        font-size: 18px;
+        font-family: inherit;
+    }
 }
 @media only screen and (max-width:479px) {
     .mec-container {
@@ -81,6 +89,52 @@ $stcc:  #caad68;
         min-width: unset !important;
     }
 }
+.mec-event-list-minimal {
+    .mec-event-date {
+        width: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        &::after{
+            width: 100%;
+        }
+    }
+    .mec-event-article {
+        padding: 5px 0;
+    }
+    .mec-event-title {
+        padding-top: 0;
+        h6 {
+            font-weight: 700;
+        }
+    }
+    .event-details {
+        font-weight: 500;
+        font-size: 15px;
+        color: #000;
+        text-transform: capitalize;
+    }
+    .mec-time-details {
+        display: inline-block;
+        color: #000;
+        font-weight: 500;
+    }
+}
+@media only screen and (max-width:479px) {
+    .mec-event-list-minimal {
+        .mec-event-date {
+            min-width: 54px;
+            padding-right: 0;
+            padding-left: 0;
+            span {
+                display: inline-block;
+                width: 100%;
+                padding-right: unset;
+                margin-right: unset;
+            }
+        }
+    }
+}
+
 /* BEGIN styling the different categories on the calendar, only applies to the novel skin */
 .event-single-link-novel {
     .undergraduate-admissions {
@@ -102,22 +156,22 @@ $stcc:  #caad68;
         @include mecHoverStyle(#e93f3f);
     }
     
-    $mec135Gradient: (
-        //event slug (background color, line color, text color, hover text color)
+    $mecRadGradient: (
         academic-calendar: ("bg":$elmsgreen, "accent":$elmsgold, "text":#fff, "hover":#000),
         final-exam-schedule: ("bg":$elmsblue, "accent":$elmsgold, "text":#fff, "hover":#000)
     );
 
-    @each $class, $attr in $mec135Gradient {
+    @each $class, $attr in $mecRadGradient {
         .#{$class} {
-            background: linear-gradient(135deg, map-get(map-get($mec135Gradient, $class), "bg") 50%, map-get(map-get($mec135Gradient, $class), "accent") 100%);
+            //radial-gradient(#115438 55%,#c3a250 85%)
+            background: radial-gradient(map-get(map-get($mecRadGradient, $class), "bg") 40%, map-get(map-get($mecRadGradient, $class), "accent") 75%);
             h4 {
-                color: map-get(map-get($mec135Gradient, $class), "text") !important;
+                color: map-get(map-get($mecRadGradient, $class), "text") !important;
             }
             &:hover {
-                background: linear-gradient(135deg, rgba(map-get(map-get($mec135Gradient, $class), "bg"), $calendarOpacity) 50%, rgba(map-get(map-get($mec135Gradient, $class), "accent"), $calendarOpacity) 100%);
+                background: radial-gradient(rgba(map-get(map-get($mecRadGradient, $class), "bg"), $calendarOpacity) 40%, rgba(map-get(map-get($mecRadGradient, $class), "accent"), $calendarOpacity) 75%);
                 h4 {
-                    color: map-get(map-get($mec135Gradient, $class), "hover") !important;
+                    color: map-get(map-get($mecRadGradient, $class), "hover") !important;
                 }
             }
         }
