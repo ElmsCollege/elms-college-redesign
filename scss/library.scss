@@ -213,7 +213,7 @@
 				width: 476px;
 				padding: 64px;
 				&:after {
-                    @include square(0);
+//                    @include square(0);
 					left: auto;
                     @include border-arrow(right, $elmsgreen, 30px);
 //					border-top: 20px solid transparent;

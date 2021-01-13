@@ -91,7 +91,7 @@ $mastheadMobile: 56px;
 
 /// Triangle helper mixin from CSS-Tricks (https://css-tricks.com/snippets/sass/css-triangle-mixin/)
 /// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
-/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Color} $color [currentcolor] - Triangle color
 /// @param {Length} $size [1em] - Triangle size
 @mixin border-arrow($direction, $color: currentcolor, $size: 1em) {
   @if not index(top right bottom left, $direction) {
