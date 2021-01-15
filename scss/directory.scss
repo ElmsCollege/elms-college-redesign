@@ -13,11 +13,11 @@
 }
 #az-slider {
 	li {
-		display: inline-grid;
 		margin-bottom: 10px;
 		font-size: 16px;
 		break-inside: avoid-column;
 		page-break-inside: avoid;
+		min-width: 48%;
 		&:last-child {
             margin-bottom: unset;
 			overflow: hidden;

@@ -17,9 +17,11 @@ $library_footer_info = get_field("library_footer_info", "option");
 		<div class="site-identity pure-u-lg-7-24">
   			<div class="site-branding footer-item-inner">
   				<p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					291 Springfield Street<br>
-					Chicopee, MA 01013-2839<br>
-					<a href="tel:4135942761">413-594-2761</a>
+					<p class="contact">
+						291 Springfield Street<br>
+						Chicopee, MA 01013-2839<br>
+						<?php echo do_shortcode('[encode link="tel:4135942761"]413-594-2761[/encode]'); ?>
+					</p>
 			</div><!-- .site-branding -->
 		</div><!-- .site-info -->
 		<div class="site-info pure-u-lg-9-24">

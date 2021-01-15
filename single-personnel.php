@@ -21,7 +21,8 @@ if( get_field("office") ){
 	$office = '<div><label>Office: </label> ' .get_field("office") .'</div>';
 };
 if( get_field("phone_number") ){
-	$phone = ' | <a href="tel:' .get_field("phone_number") .'">' .get_field("phone_number") .'</a>' ;
+	$phoneNum = get_field("phone_number");
+	$phone = ' | '.do_shortcode('[encode link="tel:'.get_field("phone_number").'"]'.get_field("phone_number").'[/encode]');
 };
 $email = get_field("email_address");
 $emailSuffix = get_field("email_suffix");
@@ -70,9 +71,9 @@ get_header(); ?>
 				<label>Contact Info:</label>
 				<?php
                 if( get_field('email_suffix') ){
-                    echo do_shortcode('[encode]'.$email .$emailSuffix .'[/encode]');
+                    echo do_shortcode('[encode link="mailto:'.$email.$emailSuffix .'"]'.$email.$emailSuffix .'[/encode]').$phone;
                 } else {
-                    echo do_shortcode('[encode]'.$email .'@elms.edu[/encode]');
+                    echo do_shortcode('[encode link="mailto:'.$email.'@elms.edu"]'.$email.'@elms.edu[/encode]').$phone;
                 }
                 ?>
 			</div>
