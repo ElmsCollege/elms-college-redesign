@@ -132,9 +132,11 @@ get_header();
       <p class="site-title"><a href="<?php echo esc_url( real_homepage_link() ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
         </a></p>
-		  291 Springfield Street<br>
-		  Chicopee, MA 01013-2839<br>
-		  <?php echo do_shortcode('[encode link="tel:4135942761"]413-594-2761[/encode]'); ?>
+		<p class="contact">
+			  291 Springfield Street<br>
+			  Chicopee, MA 01013-2839<br>
+			  <?php echo do_shortcode('[encode link="tel:4135942761"]413-594-2761[/encode]'); ?>
+		</p>
 	  </div>
     <!-- .site-branding --> 
   </div>

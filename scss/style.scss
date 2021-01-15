@@ -97,7 +97,7 @@ big{
     color: transparent;
     @include posZero;
 }
-.site-footer a, .site-footer a:hover, .site-footer a:visited {
+.site-footer a, .site-footer a:hover, .site-footer a:visited, .site-footer .contact a {
 	color: $elmsblue;
 	text-decoration: none;
 }
