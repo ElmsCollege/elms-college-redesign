@@ -23,7 +23,7 @@ $address = get_field("address", "option");
 					<p>291 Springfield Street<br />Chicopee, MA 01013-2839<br />
 						<?php 
 							if(get_field('footer_phone_number')) {
-								echo '<a href="tel:' .get_field('footer_phone_number') .'">' .get_field('footer_phone_number') .'</a>';
+								echo do_shortcode('[encode link="tel:'.get_field("footer_phone_number").'"]'.get_field("footer_phone_number").'[/encode]');
 							}
 						?>
 					</p>

@@ -54,7 +54,7 @@
                 <p>
 					291 Springfield Street<br>
 					Chicopee, MA 01013-2839<br>
-					<a href="tel:4135942761">413-594-2761</a>
+					<?php echo do_shortcode('[encode link="tel:4135942761"]413-594-2761[/encode]'); ?>
                 </p>
 			</div><!-- .site-branding -->
 		</div><!-- .site-info -->
