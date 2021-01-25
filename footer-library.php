@@ -27,7 +27,7 @@ $library_footer_info = get_field("library_footer_info", "option");
 		<div class="site-info pure-u-lg-9-24">
 			<div class="footer-item-inner">
 				<h3>College of Our Lady of the Elms</h3>
-				<p>We are a private Catholic coeducational liberal arts college founded in 1928 by the Sisters of St. Joseph of Springfield, Massachusetts. Elms College is located in Chicopee, Massachusetts, and grants associate’s, bachelor’s, master’s, and doctoral degrees.</p>
+				<p>We are a private, Catholic, coeducational liberal arts college founded in 1928 by the Sisters of St. Joseph of Springfield, Massachusetts. Elms College is located in Chicopee, Massachusetts, and grants associate’s, bachelor’s, master’s, and doctor of nursing practice degrees. Elms College is committed to ensuring that all educational and personnel actions are administered on a non-discriminatory basis, and also identifies and removes any barriers to equal access and equal treatment for all members of its community. <a href="https://www.elms.edu/about-elms/administrative-offices/human-resources/equal-opportunity-policy/">Equal Opportunity Policy</a></p>
 			</div>
 		</div> <!-- .site-info -->
 		<div class="site-resources pure-u-lg-7-24">

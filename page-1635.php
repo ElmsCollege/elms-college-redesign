@@ -12,7 +12,7 @@ wp_enqueue_script( 'SVGPanZoom', get_template_directory_uri() . '/js/SVGPanZoom.
 
 get_header();
 ?>
-<main id="main" class="pure-u-1" role="main"> 
+<main id="main" class="pure-u-1" role="main">
   <script>
 	jQuery(document).ready(function(){
 		jQuery("#svg-container").load("/wp-content/themes/gs_elms/images/Elms-campus3d-final.svg", function(){
@@ -120,7 +120,7 @@ get_header();
     }
     ?>
   </div>
-  <!-- end pageContainer--> 
+  <!-- end pageContainer-->
 </main>
 <!-- #main -->
 
@@ -138,13 +138,13 @@ get_header();
 			  <?php echo do_shortcode('[encode link="tel:4135942761"]413-594-2761[/encode]'); ?>
 		</p>
 	  </div>
-    <!-- .site-branding --> 
+    <!-- .site-branding -->
   </div>
   <!-- .site-info -->
   <div class="site-info pure-u-lg-9-24">
     <div class="footer-item-inner">
       <h3>College of Our Lady of the Elms</h3>
-      <p>We are a private Catholic coeducational liberal arts college founded in 1928 by the Sisters of St. Joseph of Springfield, Massachusetts. Elms College is located in Chicopee, Massachusetts, and grants associate’s, bachelor’s, master’s, and doctoral degrees.</p>
+				<p>We are a private, Catholic, coeducational liberal arts college founded in 1928 by the Sisters of St. Joseph of Springfield, Massachusetts. Elms College is located in Chicopee, Massachusetts, and grants associate’s, bachelor’s, master’s, and doctor of nursing practice degrees. Elms College is committed to ensuring that all educational and personnel actions are administered on a non-discriminatory basis, and also identifies and removes any barriers to equal access and equal treatment for all members of its community. <a href="https://www.elms.edu/about-elms/administrative-offices/human-resources/equal-opportunity-policy/">Equal Opportunity Policy</a></p>
     </div>
   </div>
   <!-- .site-info -->
@@ -154,8 +154,8 @@ get_header();
       <?php wp_nav_menu( array( 'theme_location' => 'utility', 'menu_id' => 'utility-menu', 'menu_class' => 'is-style-none two-column' ) ); ?>
     </div>
   </div>
-  <!-- .site-info --> 
-  
+  <!-- .site-info -->
+
 </footer>
 <!-- #colophon -->
 </div>
