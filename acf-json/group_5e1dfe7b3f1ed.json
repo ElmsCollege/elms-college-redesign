@@ -1,0 +1,514 @@
+{
+    "key": "group_5e1dfe7b3f1ed",
+    "title": "Curriculum fields",
+    "fields": [
+        {
+            "key": "field_5e1dfe7ba7405",
+            "label": "Curriculum",
+            "name": "curriculum",
+            "type": "repeater",
+            "instructions": "This holds the collapsible fields that hold the course\/degree requirements for the program. This can be used for majors and minors.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add another major or minor",
+            "sub_fields": [
+                {
+                    "key": "field_5e1dfe7ba93f3",
+                    "label": "Major or minor",
+                    "name": "curriculum_major_or_minor",
+                    "type": "radio",
+                    "instructions": "Is this a major or is it a minor? This defaults to major",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "major": "Major",
+                        "minor": "Minor"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "Major",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5e1dfe7ba9436",
+                    "label": "Curriculum Level",
+                    "name": "curriculum_level",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "19",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "undergraduate": "Undergraduate",
+                        "graduate": "Graduate"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_5e1dfe7ba9475",
+                    "label": "Resulting Degree",
+                    "name": "resulting_degree",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "19",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "A.A.": "A.A.",
+                        "A.B.": "A.B.",
+                        "A.S.": "A.S.",
+                        "certificate": "certificate",
+                        "": "",
+                        "B.A.": "B.A.",
+                        "B.S.": "B.S.",
+                        "B.Acy.": "B.Acy.",
+                        "B.Acc.": "B.Acc.",
+                        "B.An.Vet.Bio.Sc.": "B.An.Vet.Bio.Sc.",
+                        "B.App.Sc.": "B.App.Sc.",
+                        "B.Arch.": "B.Arch.",
+                        "B.A.Sc.": "B.A.Sc.",
+                        "BAH": "BAH",
+                        "BBA": "BBA",
+                        "BCE": "BCE",
+                        "B.Comm.": "B.Comm.",
+                        "BCA": "BCA",
+                        "BDH": "BDH",
+                        "BDM": "BDM",
+                        "BDSc": "BDSc",
+                        "BDS": "BDS",
+                        "B.Dent.": "B.Dent.",
+                        "B.Des.": "B.Des.",
+                        "B.Des.Comp.": "B.Des.Comp.",
+                        "B.Des.Arch.": "B.Des.Arch.",
+                        "B.Ed.": "B.Ed.",
+                        "B.Eng. or B.E.": "B.Eng. or B.E.",
+                        "BEC": "BEC",
+                        "BEE": "BEE",
+                        "BFA": "BFA",
+                        "B.Hlth.Sci": "B.Hlth.Sci",
+                        "BIT": "BIT",
+                        "BIGS": "BIGS",
+                        "LLB": "LLB",
+                        "BLAS": "BLAS",
+                        "B.Lib. or BLS": "B.Lib. or BLS",
+                        "B.Lit.": "B.Lit.",
+                        "B.Math.": "B.Math.",
+                        "BME": "BME",
+                        "B.Med.Sc.": "B.Med.Sc.",
+                        "M.B.": "M.B.",
+                        "B.M.": "B.M.",
+                        "B.Mus.Studies": "B.Mus.Studies",
+                        "B.Pharm.": "B.Pharm.",
+                        "BPESS": "BPESS",
+                        "B.Res.Ec.": "B.Res.Ec.",
+                        "B.Sc.": "B.Sc.",
+                        "BSDH": "BSDH",
+                        "BS.EOH": "BS.EOH",
+                        "BSN": "BSN",
+                        "BSLS": "BSLS",
+                        "B.Tech.": "B.Tech.",
+                        "B.V.Sc.": "B.V.Sc.",
+                        "BVA": "BVA",
+                        "M.A.": "M.A.",
+                        "M.Acc.": "M.Acc.",
+                        "MALA": "MALA",
+                        "MBA": "MBA",
+                        "M.Com.": "M.Com.",
+                        "MCA": "MCA",
+                        "M.Div.": "M.Div.",
+                        "M.Ed.": "M.Ed.",
+                        "M.S.Ed.": "M.S.Ed.",
+                        "MAE": "MAE",
+                        "MAT": "MAT",
+                        "MAAT": "MAAT",
+                        "MEM": "MEM",
+                        "MEDM": "MEDM",
+                        "MFA": "MFA",
+                        "MIA": "MIA",
+                        "MIS": "MIS",
+                        "LLM": "LLM",
+                        "MLS": "MLS",
+                        "MLA": "MLA",
+                        "MLIS": "MLIS",
+                        "M.M.": "M.M.",
+                        "MPS": "MPS",
+                        "MPA": "MPA",
+                        "MPH": "MPH",
+                        "M.S.": "M.S.",
+                        "M.Sc.": "M.Sc.",
+                        "M.Sc.IM": "M.Sc.IM",
+                        "MSA": "MSA",
+                        "MSE": "MSE",
+                        "MSF": "MSF",
+                        "MSLS": "MSLS",
+                        "MSN": "MSN",
+                        "MSW": "MSW",
+                        "M.S.S.": "M.S.S.",
+                        "MTS": "MTS",
+                        "M.Tech.": "M.Tech.",
+                        "Th.M.": "Th.M.",
+                        "Au.D.": "Au.D.",
+                        "D.C.": "D.C.",
+                        "DDS": "DDS",
+                        "D.D.": "D.D.",
+                        "Ed.D.": "Ed.D.",
+                        "J.D.": "J.D.",
+                        "DLP": "DLP",
+                        "DMD": "DMD",
+                        "M.D.": "M.D.",
+                        "D.Min.": "D.Min.",
+                        "Dr. mph.": "Dr. mph.",
+                        "DMA": "DMA",
+                        "N.D.": "N.D.",
+                        "DNP": "DNP",
+                        "O.D.": "O.D.",
+                        "D.O.": "D.O.",
+                        "Pharm.D.": "Pharm.D.",
+                        "Ph.D.": "Ph.D.",
+                        "D.Phil.": "D.Phil.",
+                        "D.Ph.": "D.Ph.",
+                        "DPT": "DPT",
+                        "Psy.D.": "Psy.D.",
+                        "DrPH": "DrPH",
+                        "DRS": "DRS",
+                        "D.Sc.": "D.Sc.",
+                        "Sc.D.": "Sc.D.",
+                        "D.Th.": "D.Th.",
+                        "Th.D.": "Th.D.",
+                        "DVM": "DVM",
+                        "RN": "RN",
+                        "CAGS": "CAGS",
+                        "STB": "STB",
+                        "STD": "STD",
+                        "STL": "STL"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e1dfe7ba94b3",
+                    "label": "Program Location",
+                    "name": "program_location",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "19",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "elms": "Elms Main Campus",
+                        "online": "Online",
+                        "offcampus": "Off Campus Partner"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [
+                        "elms"
+                    ],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_5e1dfe7ba94ed",
+                    "label": "Off Campus Location",
+                    "name": "off_campus_location",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e1dfe7ba94b3",
+                                "operator": "==",
+                                "value": "offcampus"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "19",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "ACC": "ACC",
+                        "BCC": "BCC",
+                        "GCC": "GCC",
+                        "HCC": "HCC",
+                        "MWCC": "MWCC",
+                        "QCC": "QCC",
+                        "STCC": "STCC",
+                        "BHS": "BHS"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_5e1dfe7ba9525",
+                    "label": "Program Name",
+                    "name": "curriculum_program_name",
+                    "type": "text",
+                    "instructions": "A simplified name for the program. \r\nThis will be used to show\/hide the curriculum fields. \"Click to view course requirements for the XXXX.\" If the \"minor\" checkbox is selected, that will be automatically appended: \"Click to view course requirements for the XXXX minor.\"\r\n\"Click to view course requirements for the\" and the period at the end of the sentence will be automatically added.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e1dfe7ba955e",
+                    "label": "Description Academics Page",
+                    "name": "curriculum_description",
+                    "type": "text",
+                    "instructions": "This field is used on the academic pages as the description of the program. This should be a very concise statement. This is less important for undergraduate minors than undergraduate majors or graduate programs. This should be under 200 characters.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e1dfe7ba9596",
+                    "label": "Text",
+                    "name": "curriculum_text",
+                    "type": "wysiwyg",
+                    "instructions": "Use this to display any text to go at the top of the collapsed content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5e1dfe7ba95d4",
+                    "label": "Course Requirements Repeater",
+                    "name": "course_requirements_table_name",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add another table",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e1dfe7bbed9b",
+                            "label": "Course List Table Label",
+                            "name": "course_list_table_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e1dfe7bbee12",
+                            "label": "Course-List-Repeater",
+                            "name": "course-list-repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add another course",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5e1dfe7bc6204",
+                                    "label": "Course #",
+                                    "name": "course_number",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5e1dfe7bc6247",
+                                    "label": "Formerly Course #",
+                                    "name": "old_course_number",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5e1dfe7bc6286",
+                                    "label": "Course Name",
+                                    "name": "course_name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "30",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5e1dfe7bc62c4",
+                                    "label": "Number of Credits",
+                                    "name": "number_of_credits",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 3,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "35268"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1611856240
+}
