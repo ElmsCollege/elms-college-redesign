@@ -418,25 +418,6 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5e1dfe7bc6247",
-                                    "label": "Formerly Course #",
-                                    "name": "old_course_number",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
                                     "key": "field_5e1dfe7bc6286",
                                     "label": "Course Name",
                                     "name": "course_name",
