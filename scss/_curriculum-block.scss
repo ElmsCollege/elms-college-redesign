@@ -38,3 +38,14 @@
 		padding: 0 0 20px;
 	}
 }
+/*
+	DNP programs don't use course numbers so we hide the first column on those pages
+	id 4967 is the FNP page
+	id 4976 is the AGACNP page
+	id 17109 is the HSIL page
+*/
+.page-id-4967, .page-id-4976, .page-id-17109 {
+	& #courses thead th:nth-child(1) {
+		display:none;
+	}
+}
