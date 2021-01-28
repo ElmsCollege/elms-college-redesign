@@ -1007,7 +1007,8 @@ button.fs-dropdown-item{
 	&.current_page_item {
 		color: #fff !important;
 		&:hover {
-			@include white-on-blue;
+			color: $elmsblue !important;
+			background-color: #fff !important;
 		}
 	}
 }
