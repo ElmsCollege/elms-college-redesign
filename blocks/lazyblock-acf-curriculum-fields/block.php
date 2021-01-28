@@ -22,7 +22,7 @@
             $courses = $table['course-list-repeater'];
             if($courses){
               foreach($courses as $course){
-                echo "<tr><td>" . $course['course_number'] . "</td><td>" . $course['course_name'] . "</td><td>" . $course['number_of_credits'] ."</td></tr>";
+                echo "<tr><td class='has-text-align-left' data-align='left'>" . $course['course_number'] . "</td><td class='has-text-align-left' data-align='left'>" . $course['course_name'] . "</td><td class='has-text-align-center' data-align='center'>" . $course['number_of_credits'] ."</td></tr>";
               }
             echo "</tbody></table>";
             }

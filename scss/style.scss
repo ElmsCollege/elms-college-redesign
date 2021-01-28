@@ -2047,48 +2047,6 @@ th .smallText{
 .wp-block-pullquote cite{
 	font-weight:300
 }
-#courses .collapseomatic{
-	padding-bottom:0;
-}
-#courses h4{
-	border:unset;
-	color: $elmsgreen;
-	margin-top:0;
-	padding-top:10px;
-}
-.quick-info-inner #courses h4{
-	padding-left:25px;
-}
-#courses .collapseomatic_content{
-	border:unset;
-	padding-top:unset;
-	border-bottom: $lightgreyborder;
-}
-#courses table, #courses th, #courses td{
-	border: $lightgreyborder;
-	font-size:16px;
-}
-#courses td{
-	padding:0 5px;
-	text-align:left;
-}
-#courses tbody tr:nth-child(odd){
-	background-color:#fff;
-}
-#courses tbody tr:nth-child(even){
-	background-color:#f7f7f7;
-}
-#courses tbody td:nth-child(4){
-	text-align:center;
-}
-#courses .collapseomatic_content h4{
-	padding-left:unset;
-}
-@media all and (max-width: 445px) {
-	#courses .collapseomatic_content{
-		padding:0 0 20px;
-	}
-}
 /* BEGIN customizations from within the admin section */
 .nav-trigger, .pointer, .menu-item a {
     @extend %pointer;
@@ -2129,3 +2087,4 @@ th .smallText{
 /* ancillary stylesheets */
 @import "header";
 @import "mec-calendar";
+@import "curriculum-block";

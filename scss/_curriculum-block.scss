@@ -1,0 +1,40 @@
+//controls the ACF/LazyBlock curriculum block 
+.quick-info-inner #courses h4 {
+	padding-left: 25px;
+}
+#courses {
+	h4 {
+		border: unset;
+		color: $elmsgreen;
+		margin-top: 0;
+		padding-top: 10px;
+	}
+	.collapseomatic {
+		padding-bottom: 0;
+	}
+	.collapseomatic_content {
+		border: unset;
+		padding-top: unset;
+		h4 {
+			padding-left: unset;
+		}
+	}
+	table, th, td {
+		border: $lightgreyborder;
+		font-size: 16px;
+		padding: 0 5px;
+	}
+	tbody {
+		tr:nth-child(odd) {
+			background-color: #fff;
+		}
+		tr:nth-child(even) {
+			background-color: #f7f7f7;
+		}
+	}
+}
+@media all and (max-width: 445px) {
+	#courses .collapseomatic_content {
+		padding: 0 0 20px;
+	}
+}
