@@ -18,7 +18,7 @@
         $tables = $row['course_requirements_table_name'];
         if($tables){
           foreach($tables as $table){
-            echo "<h4 class='noMarginBottom noMarginTop'>" . $table['course_list_table_label'] ."</h4><table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th># of Credit Hours</th></tr></thead><tbody>";
+            echo "<h4 class='noMarginBottom noMarginTop'>" . $table['course_list_table_label'] ."</h4><table><thead><tr><th>Course #</th><th>Formerly</th><th>Course Name</th><th>Credits</th></tr></thead><tbody>";
             $courses = $table['course-list-repeater'];
             if($courses){
               foreach($courses as $course){
