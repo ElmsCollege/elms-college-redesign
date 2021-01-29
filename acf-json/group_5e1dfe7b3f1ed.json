@@ -407,7 +407,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "12",
                                         "class": "",
                                         "id": ""
                                     },
@@ -426,7 +426,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "30",
+                                        "width": "",
                                         "class": "",
                                         "id": ""
                                     },
@@ -445,7 +445,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "15",
                                         "class": "",
                                         "id": ""
                                     },
@@ -491,5 +491,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1611856240
+    "modified": 1611930835
 }
