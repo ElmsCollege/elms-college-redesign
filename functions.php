@@ -623,3 +623,5 @@ function addNullToArray($n) {
     else
         return($n);
 };
+// ACF Developer Mode
+define('ACFE_dev', true);
