@@ -1,0 +1,571 @@
+  {
+    "key": "group_58584cced2428",
+    "title": "Home Page Fields",
+    "fields": [{
+        "key": "field_5bec3274a271b",
+        "label": "Hero Video-desktop",
+        "name": "hero_video_desktop",
+        "type": "file",
+        "instructions": "This field is for the video on the homepage.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "url",
+        "library": "all",
+        "min_size": "",
+        "max_size": "",
+        "mime_types": "mp4"
+      },
+      {
+        "key": "field_5bed8918bf38e",
+        "label": "Hero Video-mobile",
+        "name": "hero_video_mobile",
+        "type": "file",
+        "instructions": "This field is for the video on the homepage that will be served to mobile devices. If there is not a smaller version of the video, then the file from \"Hero Video-desktop\" will be used.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "url",
+        "library": "all",
+        "min_size": "",
+        "max_size": "",
+        "mime_types": "mp4"
+      },
+      {
+        "key": "field_5bec3527816fa",
+        "label": "Hero Poster",
+        "name": "hero_poster",
+        "type": "image",
+        "instructions": "This field controls the still image at the start of the homepage video.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "url",
+        "preview_size": "medium",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": ""
+      },
+      {
+        "key": "field_5bec313cbcb30",
+        "label": "Hero Overlay",
+        "name": "hero_overlay",
+        "type": "wysiwyg",
+        "instructions": "This controls the text and links that overlay the video on the homepage.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 0,
+        "delay": 0
+      },
+      {
+        "key": "field_5beefa17c8ed9",
+        "label": "Highlight News Text",
+        "name": "highlight_news_text",
+        "type": "text",
+        "instructions": "This field is for the text of the important news that will be highlighted below the homepage video. \r\nNOTE: \"Important News\" will be automatically added before the news item, adding that text to this field will cause it to be duplicated.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5bef07ed71988",
+        "label": "Highlight News Link",
+        "name": "highlight_news_link",
+        "type": "text",
+        "instructions": "This field is for the link to the important news being highlighted below the homepage video. Please only post the URL to the page, for example, to post a link to the School Nursing, just use: &#47;school-of-nursing&#47;",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5c8a5d034a657",
+        "label": "Highlight News Link Text",
+        "name": "highlight_news_link_text",
+        "type": "text",
+        "instructions": "This is the clickable link text that shows up in the corner of the video.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_586289e1489e4",
+        "label": "Mission Statement Pre-Title",
+        "name": "mission_statement_pre_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_5858589a52dd2",
+        "label": "Mission Statement Title",
+        "name": "mission_statement",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_585858ff52dd3",
+        "label": "Mission Statement Body",
+        "name": "mission_statement_body",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "default_value": "",
+        "delay": 0
+      },
+      {
+        "key": "field_5858591052dd4",
+        "label": "Statistics",
+        "name": "statistics",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "min": 0,
+        "max": 0,
+        "layout": "table",
+        "button_label": "",
+        "collapsed": "",
+        "sub_fields": [{
+            "key": "field_5858593252dd5",
+            "label": "Figure",
+            "name": "figure",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+          },
+          {
+            "key": "field_5858593952dd6",
+            "label": "Explanation",
+            "name": "explanation",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+          }
+        ]
+      },
+      {
+        "key": "field_58b615b4497b9",
+        "label": "Statistics Background",
+        "name": "statistics_background_new",
+        "type": "focal_point",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "save_format": "object",
+        "image_size": "medium",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_58628a08489e5",
+        "label": "Student Stories Pre-Title",
+        "name": "student_stories_pre_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_58628a20489e6",
+        "label": "Student Stories Title",
+        "name": "student_stories_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_58591ee5710e3",
+        "label": "Student Stories",
+        "name": "student_stories",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "post_type": [
+          "student_story"
+        ],
+        "taxonomy": [],
+        "allow_null": 0,
+        "multiple": 1,
+        "return_format": "object",
+        "ui": 1
+      },
+      {
+        "key": "field_58628a60489e9",
+        "label": "Calls to Action Pre-Title",
+        "name": "calls_to_action_pre_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_58628a76489ea",
+        "label": "Calls to Action Title",
+        "name": "calls_to_action_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_58592685db167",
+        "label": "Calls to Action",
+        "name": "calls_to_action",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "min": 0,
+        "max": 3,
+        "layout": "block",
+        "button_label": "",
+        "collapsed": "",
+        "sub_fields": [{
+            "key": "field_58592685db16a",
+            "label": "Link Text",
+            "name": "link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "33",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+          },
+          {
+            "key": "field_58592685db16b",
+            "label": "Link Type",
+            "name": "link_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "33",
+              "class": "",
+              "id": ""
+            },
+            "layout": "horizontal",
+            "choices": {
+              "internal": "Wordpress Content",
+              "external": "External URL"
+            },
+            "default_value": "",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
+          },
+          {
+            "key": "field_58592685db16c",
+            "label": "Internal Link",
+            "name": "internal_link",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+              [{
+                "field": "field_58592685db16b",
+                "operator": "==",
+                "value": "internal"
+              }]
+            ],
+            "wrapper": {
+              "width": "33",
+              "class": "",
+              "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+          },
+          {
+            "key": "field_58592685db16d",
+            "label": "External Link",
+            "name": "external_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+              [{
+                "field": "field_58592685db16b",
+                "operator": "==",
+                "value": "external"
+              }]
+            ],
+            "wrapper": {
+              "width": "33",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+          },
+          {
+            "key": "field_5862cb5efef3d",
+            "label": "Background",
+            "name": "background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+          },
+          {
+            "key": "field_58b615f0497ba",
+            "label": "Background (New)",
+            "name": "background_new",
+            "type": "focal_point",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "save_format": "object",
+            "preview_size": "hero-story-preview",
+            "image_size": "hero-story"
+          }
+        ]
+      },
+      {
+        "key": "field_58a311a080f94",
+        "label": "Current Students Page",
+        "name": "current_students_page",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "post_type": [],
+        "taxonomy": [],
+        "allow_null": 0,
+        "multiple": 0,
+        "return_format": "id",
+        "ui": 1
+      }
+    ],
+    "location": [
+      [{
+        "param": "page_type",
+        "operator": "==",
+        "value": "front_page"
+      }]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": "",
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": ""
+  }
