@@ -1,0 +1,78 @@
+{
+    "key": "group_5c8baaaa68ab8",
+    "title": "Advertising Landing page",
+    "fields": [
+        {
+            "key": "field_5ec4125f583c6",
+            "label": "Footer Phone Number",
+            "name": "footer_phone_number",
+            "type": "select",
+            "instructions": "This controls the phone number in the footer of the advertising landing pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": {
+                "413-265-2336": "413-265-2336 (Continuing Education Admissions)",
+                "413-265-2456": "413-265-2456 (Graduate Admissions)",
+                "413-592-3189": "413-592-3189 (Undergraduate Admissions)",
+                "413-594-2761": "413-594-2761 (General Campus Line)"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "",
+            "ajax": 0
+        },
+        {
+            "key": "field_5c9bc19a96a45",
+            "label": "Tracking Pixel",
+            "name": "advertising_tracking_pixel",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "acfe_textarea_code": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "lp"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": "",
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": ""
+}
