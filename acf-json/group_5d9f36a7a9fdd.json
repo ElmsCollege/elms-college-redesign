@@ -1,0 +1,637 @@
+{
+    "key": "group_5d9f36a7a9fdd",
+    "title": "Campus Map Descriptions",
+    "fields": [
+        {
+            "key": "field_5e4bfaacedb74",
+            "label": "Berchmans Hall title",
+            "name": "berchmans_hall_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f36bd0ee32",
+            "label": "Berchmans Hall description",
+            "name": "berchmans_hall_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb1fedb75",
+            "label": "Alumnae Library title",
+            "name": "alumnae_library_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f36f50ee33",
+            "label": "Alumnae Library description",
+            "name": "alumnae_library_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": -1,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb2aedb76",
+            "label": "Dooley Center title",
+            "name": "dooley_center_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37050ee34",
+            "label": "Dooley Center description",
+            "name": "dooley_center_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfdaaedb83",
+            "label": "Maguire Center title",
+            "name": "maguire_center_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37180ee35",
+            "label": "Maguire Center description",
+            "name": "maguire_center_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": -3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfd93edb82",
+            "label": "Lyons Center title",
+            "name": "lyons_center_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f374b0ee36",
+            "label": "Lyons Center description",
+            "name": "lyons_center_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfd22edb81",
+            "label": "Keating Quadrangle title",
+            "name": "keating_quadrangle_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37570ee37",
+            "label": "Keating Quadrangle description",
+            "name": "keating_quadrangle_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfcededb80",
+            "label": "O'Leary Hall title",
+            "name": "oleary_hall_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37660ee38",
+            "label": "O’Leary Hall description",
+            "name": "oleary_hall_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb38edb77",
+            "label": "Rose William Hall title",
+            "name": "rose_william_hall_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37830ee39",
+            "label": "Rose William Hall description",
+            "name": "rose_william_hall_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb49edb78",
+            "label": "Gaylord title",
+            "name": "gaylord_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37970ee3a",
+            "label": "Gaylord description",
+            "name": "gaylord_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb4fedb7e",
+            "label": "Devine Hall title",
+            "name": "devine_hall_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37b10ee3b",
+            "label": "Devine Hall description",
+            "name": "devine_hall_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb4fedb7d",
+            "label": "Marian Hall title",
+            "name": "marian_hall_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37c50ee3c",
+            "label": "Marian Hall description",
+            "name": "marian_hall_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb4eedb7c",
+            "label": "Spaulding House title",
+            "name": "spaulding_house_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37ce0ee3d",
+            "label": "Spaulding House description",
+            "name": "spaulding_house_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb4eedb7b",
+            "label": "Blue House title",
+            "name": "blue_house_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37e10ee3e",
+            "label": "Blue House description",
+            "name": "blue_house_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfc11edb7f",
+            "label": "Brick House title",
+            "name": "brick_house_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37ed0ee3f",
+            "label": "Brick House description",
+            "name": "brick_house_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb4dedb7a",
+            "label": "Cheryl Condon title",
+            "name": "cheryl_condon_field_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f37f90ee40",
+            "label": "Cheryl Condon Field description",
+            "name": "cheryl_condon_field_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4bfb4cedb79",
+            "label": "Leary Field title",
+            "name": "leary_field_title",
+            "type": "text",
+            "instructions": "This field controls the name at the top of the popup window with the slideshow on the campus map.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f38100ee41",
+            "label": "Leary Field description",
+            "name": "leary_field_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "1635"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "These fields control the titles and descriptions in the popups on the interactive campus map.",
+    "acfe_display_title": "",
+    "acfe_autosync": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": ""
+}

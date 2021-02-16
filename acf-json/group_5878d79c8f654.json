@@ -1,0 +1,85 @@
+{
+    "key": "group_5878d79c8f654",
+    "title": "Alert Bar Options",
+    "fields": [
+        {
+            "key": "field_5878d88925d5f",
+            "label": "Show Alert Bar",
+            "name": "show_alert_bar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5878d89525d60",
+            "label": "Alert Bar",
+            "name": "alert_bar",
+            "type": "text",
+            "instructions": "Sample alerts:<br \/>\r\nDELAY: Classes on the main Chicopee campus will start at [time] today, [day of week], [month] [date]. Classes on satellite campuses will follow the protocol of their respective sites.<br \/>\r\nCLOSING EARLY: Elms College will close at [time] today, [day of week], [month] [date], due to inclement weather. For information about satellite campuses, please check their respective websites.<br \/>\r\nFULL CLOSURE: Elms College will be closed today, [day of week], [month] [date], due to inclement weather. For information about satellite campuses, please check their respective websites.<br \/><br \/>\r\nIMPORTANT NOTE: If you're putting a link in this it has to be proper HTML (a href=\"\" with the proper < or > brackets) and it has to be the full path: https:\/\/elms-staging.r6a5yukd-liquidwebsites.com\/. This is because this alert gets piped to the commencement subsite and we relative links (\/page) will not work.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad4e583dfc37",
+            "label": "Style",
+            "name": "alert_bar_style",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "normal": "Normal",
+                "alert": "Alert"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}

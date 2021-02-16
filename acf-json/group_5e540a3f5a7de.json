@@ -1,0 +1,6492 @@
+{
+  "key": "group_5e540a3f5a7de",
+  "title": "Tuition page fields",
+  "fields": [{
+      "key": "field_5d42fb6ba9f4a",
+      "label": "Show next fiscal year",
+      "name": "show_next_fiscal_year",
+      "type": "radio",
+      "instructions": "If a new school year is starting we might have the tuition\/fee information for the year that is starting (this fiscalyear) but not have information for the year after (next fiscal year). Setting this to \"Hide next fiscal year\" will let us update the tuition\/fee information so that it displays the correct information without displaying potentially incorrect information about the year after.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "hide": "Hide next fiscal year",
+        "show": "Show next fiscal year"
+      },
+      "allow_null": 0,
+      "other_choice": 0,
+      "default_value": "hide",
+      "layout": "vertical",
+      "return_format": "value",
+      "save_other_choice": 0
+    },
+    {
+      "key": "field_5c5ae85a4e786",
+      "label": "This fiscal year",
+      "name": "this_fiscal_year_title",
+      "type": "text",
+      "instructions": "This is the label that will appear at the top of the column for this fiscal year.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "49",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5c5ae88e4e787",
+      "label": "Next fiscal year",
+      "name": "next_fiscal_year_title",
+      "type": "text",
+      "instructions": "This is the label that will appear at the top of the column for this fiscal year.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "49",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5d430f9fad14c",
+      "label": "This academic year",
+      "name": "this_academic_year_title",
+      "type": "text",
+      "instructions": "This is the label that will appear at the top of the column for this fiscal year.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "49",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5d430fcfad14d",
+      "label": "Next academic year",
+      "name": "next_academic_year_title",
+      "type": "text",
+      "instructions": "This is the label that will appear at the top of the column for this fiscal year.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "49",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5c8160dd9e272",
+      "label": "Full Time Undergraduate Tuition",
+      "name": "full_time_undergraduate_tuition",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c816a2641283",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8161519e273",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c81643256e51",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82837007c98",
+      "label": "Part-time on campus tuition",
+      "name": "traditional_on_campus_tuition",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c82837007c99",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c82837007c9a",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c82837007c9b",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c81767c81728",
+      "label": "Community College per credit (non-RN)",
+      "name": "community_college_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c81767c81729",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c81767c8172a",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c81767c8172b",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8177368173c",
+      "label": "Online per credit (non-RN)",
+      "name": "online_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8177368173d",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8177368173e",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8177368173f",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c817802eb13e",
+      "label": "Special Summer Course Rate",
+      "name": "special_summer_course_rate",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c817802eb13f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c817802eb140",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c817802eb141",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82782df5356",
+      "label": "MAT per credit tuition",
+      "name": "mat_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c82782df5357",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c82782df5358",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c82782df5359",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c827861f535a",
+      "label": "MED per credit tuition",
+      "name": "med_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c827861f535b",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c827861f535c",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c827861f535d",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c827873f535e",
+      "label": "CAGS per credit tuition",
+      "name": "cags_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c827873f535f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c827873f5360",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c827873f5361",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c818858fc154",
+      "label": "MAAT per credit tuition",
+      "name": "maat_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c818858fc155",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c818858fc156",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c818858fc157",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82788ef5362",
+      "label": "MSN per credit tuition (regular)",
+      "name": "msn_per_credit_regular",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c82788ef5363",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c82788ef5364",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c82788ef5365",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8278b1f5366",
+      "label": "MSN per credit tuition (school nurse)",
+      "name": "msn_per_credit_school_nurse",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8278b1f5367",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8278b1f5368",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8278b1f5369",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c827945f5376",
+      "label": "PPS (Post Bac) per credit",
+      "name": "pps_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c827945f5377",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c827945f5378",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c827945f5379",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c827979f537a",
+      "label": "MS Biomedical per credit",
+      "name": "ms_biomed_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c827979f537b",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c827979f537c",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c827979f537d",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c827990f537e",
+      "label": "MBA per credit tuition",
+      "name": "mba_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c827990f537f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c827990f5380",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c827990f5381",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8284ef68233",
+      "label": "MBA for FTUG (50%)",
+      "name": "mba_per_credit_ftug",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8284ef68234",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8284ef68235",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8284ef68236",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5d9cb1dee6a36",
+      "label": "MSW at SLU per credit tuition",
+      "name": "msw_at_slu_per_credit_tuition",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5d9cb1dfe6a37",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5d9cb1dfe6a38",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5d9cb1dfe6a39",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82879d0c570",
+      "label": "MSF per credit tuition",
+      "name": "msf_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c82879d0c571",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c82879d0c572",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c82879d0c573",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8287cf0c574",
+      "label": "MS in ABA\/ASD per credit",
+      "name": "ms_aba_asd_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8287cf0c575",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8287cf0c576",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8287cf0c577",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82895e594d3",
+      "label": "APA - CPA certificate fee",
+      "name": "apa_cpa_certificate_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c82895e594d4",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c82895e594d5",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c82895e594d6",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c828985594d7",
+      "label": "Offsite course fee",
+      "name": "offsite_course_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c828985594d8",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c828985594d9",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c828985594da",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8289a7594db",
+      "label": "ITPS non-credit fee",
+      "name": "itps_non_credit_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8289a8594dc",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8289a8594dd",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8289a8594de",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8289be594df",
+      "label": "ED2GO non-credit fee",
+      "name": "ed2go_non_credit_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8289be594e0",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8289be594e1",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8289be594e2",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8681e9a9037",
+      "label": "CIP Summer Program",
+      "name": "cip_summer_program",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8681e9a9038",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8681e9a9039",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8681e9a903a",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8176a68172c",
+      "label": "Community College per credit RN to BSN",
+      "name": "rn_to_bsn_community_college_per_credit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8176a68172d",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8176a68172e",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8176a68172f",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8176cd81730",
+      "label": "RN to BSN @ Elms",
+      "name": "rn_to_bsn_at_elms",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8176cd81731",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8176cd81732",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8176cd81733",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8176e381734",
+      "label": "RN to BSN @ BHS (new students)",
+      "name": "rn_to_bsn_at_bhs_new",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8176e381735",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8176e381736",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8176e381737",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c81771981738",
+      "label": "RN to BSN @ BHS (returning students)",
+      "name": "rn_to_bsn_at_bhs_returning",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c81771981739",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8177198173a",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8177198173b",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8278c4f536a",
+      "label": "RN to BSN-MSN (bridge courses)",
+      "name": "rn_to_bsn_msn_bridge_courses",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8278c4f536b",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8278c4f536c",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8278c4f536d",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5d7f8a490988c",
+      "label": "Graduate program admission deposit",
+      "name": "graduate_admission_deposit",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5d7f8a490988d",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5d7f8a490988e",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5d7f8a490988f",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c816e32b66bc",
+      "label": "Room and Board",
+      "name": "full_time_undergraduate_room_board",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c816e32b66bd",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c816e32b66be",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c816e32b66bf",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8170ca6259a",
+      "label": "Private Room",
+      "name": "full_time_undergraduate_private_room",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8170ca6259b",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8170ca6259c",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8170ca6259d",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e44090748049",
+      "label": "Double Room buyout",
+      "name": "full_time_undergraduate_double_room_buyout",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e4409074804a",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5e4409074804b",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e4409074804c",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e4414d3b413e",
+      "label": "Gaylord shared room fee",
+      "name": "gaylord_shared_room_fee",
+      "type": "repeater",
+      "instructions": "This is the monthly cost based on a 10 month lease",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e4414d4b413f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5e4414d4b4140",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e4414d4b4141",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e4414feb4142",
+      "label": "Gaylord private room fee",
+      "name": "gaylord_private_room_fee",
+      "type": "repeater",
+      "instructions": "This is the monthly cost based on a 10 month lease",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e4414feb4143",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5e4414feb4144",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e4414feb4145",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5db7127f14150",
+      "label": "Grant Street housing fee (small)",
+      "name": "grant_street_housing_fee_low",
+      "type": "repeater",
+      "instructions": "This is the monthly cost based on a 10 month lease",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5db7127f14151",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5db7127f14152",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5db7127f14153",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e44132d9bf11",
+      "label": "Grant Street housing fee (medium)",
+      "name": "grant_street_housing_fee_medium",
+      "type": "repeater",
+      "instructions": "This is the monthly cost based on a 10 month lease",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e44132d9bf12",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5e44132d9bf13",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e44132d9bf14",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5db712be14154",
+      "label": "Grant Street housing fee (large)",
+      "name": "grant_street_housing_fee_high",
+      "type": "repeater",
+      "instructions": "This is the monthly cost based on a 10 month lease",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5db712be14155",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5db712be14156",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5db712be14157",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5db7130114158",
+      "label": "Casino Street housing fee",
+      "name": "casino_street_housing_fee",
+      "type": "repeater",
+      "instructions": "This is the monthly cost based on a 10 month lease",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5db7130114159",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5db713011415a",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5db713011415b",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8170ec6259e",
+      "label": "Undergraduate Resident Comprehensive\/Tech Fee",
+      "name": "undergraduate_resident_comprehensive_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8170ec6259f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8170ec625a0",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8170ec625a1",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8171c7ed26b",
+      "label": "Undergraduate Commuter Comprehensive\/Tech Fee",
+      "name": "undergraduate_commuter_comprehensive_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8171c7ed26c",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8171c7ed26d",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8171c7ed26e",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c817267ed26f",
+      "label": "Part Time Registration fee",
+      "name": "part_time_registration_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c817267ed270",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c817267ed271",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c817267ed272",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8172cced273",
+      "label": "Part Time Tech fee (except MBA)",
+      "name": "part_time_tech_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8172cced274",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8172cced275",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8172cced276",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e5042278d850",
+      "label": "Graduate Tech and Reg Fee",
+      "name": "graduate_tech_and_reg_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e5042278d851",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e5042278d852",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e5042278d853",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e5042558d854",
+      "label": "MBA and MSN\/MBA comp fee",
+      "name": "mba_msnmba_comp_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e5042558d855",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e5042558d856",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e5042558d857",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c8172e6ed277",
+      "label": "Graduation Fee",
+      "name": "graduation_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c8172e6ed278",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c8172e6ed279",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c8172e6ed27a",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c868f912ec7c",
+      "label": "PostBac Comprehensive Fee",
+      "name": "postbac_comprehensive_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c868f912ec7d",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c868f912ec7e",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c868f912ec7f",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82850fc584e",
+      "label": "MBA Comprehensive Fee",
+      "name": "mba_comprehensive_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c828510c584f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c828510c5850",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c828510c5851",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5c82871b083b6",
+      "label": "MBA Tech Free",
+      "name": "mba_tech_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5c82871b083b7",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5c82871b083b8",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5c82871b083b9",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e503fd93111e",
+      "label": "Post Bac Lab Fee",
+      "name": "post_bac_lab_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e503fd93111f",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e503fd931120",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e503fd931121",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5d88eac49c231",
+      "label": "DNP application fee",
+      "name": "dnp_application_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5d88eac49c232",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5d88eac49c233",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5d88eac49c234",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5de96e8bd475b",
+      "label": "Undergraduate Orientation Fee",
+      "name": "undergraduate_orientation_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5de96e8bd475c",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5de96e8bd475d",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5de96e8bd475e",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e5923106c5ef",
+      "label": "Undergraduate First Year Seminar fee",
+      "name": "undergraduate_first_year_seminar_fee",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e5923116c5f0",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e5923116c5f1",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e5923116c5f2",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e5407aa97dd6",
+      "label": "BSN Fall Sophomore fees",
+      "name": "bsn_fall_sophomore_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e5407aa97dd7",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e5407aa97dd8",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e5407aa97dd9",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e5407ee97dda",
+      "label": "BSN Spring Sophomore fees",
+      "name": "bsn_spring_sophomore_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e5407ee97ddb",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e5407ee97ddc",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e5407ee97ddd",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54080097dde",
+      "label": "BSN Fall Junior fees",
+      "name": "bsn_fall_junior_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54080097ddf",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54080097de0",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54080097de1",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54081697de2",
+      "label": "BSN Spring Junior fees",
+      "name": "bsn_spring_junior_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54081697de3",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54081697de4",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54081697de5",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54082c97de6",
+      "label": "BSN Fall Senior fees",
+      "name": "bsn_fall_senior_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54082c97de7",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54082c97de8",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54082c97de9",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54083897dea",
+      "label": "BSN Spring Senior fees",
+      "name": "bsn_spring_senior_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54083897deb",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54083897dec",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54083897ded",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54085497dee",
+      "label": "BSN ATI fees",
+      "name": "bsn_ati_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54085497def",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54085497df0",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54085497df1",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54086c97df2",
+      "label": "Accelerated BSN Year 1 Fall",
+      "name": "accelerated_bsn_year_1_fall",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54086c97df3",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54086c97df4",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54086c97df5",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54091297df6",
+      "label": "Accelerated BSN Year 1 Spring",
+      "name": "accelerated_bsn_year_1_spring",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54091297df7",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54091297df8",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54091297df9",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54091e97dfa",
+      "label": "Accelerated BSN Year 1 Summer",
+      "name": "accelerated_bsn_year_1_summer",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54091e97dfb",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54091e97dfc",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54091e97dfd",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e54093497dfe",
+      "label": "Accelerated BSN Year 2 Fall",
+      "name": "accelerated_bsn_year_2_fall",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e54093497dff",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e54093497e00",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e54093497e01",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e540d63b7dcf",
+      "label": "Accelerated BSN Year 2 Spring",
+      "name": "accelerated_bsn_year_2_spring",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e540d63b7dd0",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e540d63b7dd1",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e540d63b7dd2",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e540db98e9d4",
+      "label": "Accelerated BSN ATI fees",
+      "name": "accelerated_bsn_ati_fees",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e540db98e9d5",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e540db98e9d6",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e540db98e9d7",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e33c8945",
+      "label": "DNP AGACNP Year 1",
+      "name": "dnp_agacnp_year_1",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e33c8946",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e33c8947",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e33c8948",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e4ec8949",
+      "label": "DNP AGACNP Year 2",
+      "name": "dnp_agacnp_year_2",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e4ec894a",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e4ec894b",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e4ec894c",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e52c894d",
+      "label": "DNP AGACNP Year 3",
+      "name": "dnp_agacnp_year_3",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e52c894e",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e52c894f",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e52c8950",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e54c8951",
+      "label": "DNP FNP Year 1",
+      "name": "dnp_fnp_year_1",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e54c8952",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e54c8953",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e54c8954",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e67c8955",
+      "label": "DNP FNP Year 2",
+      "name": "dnp_fnp_year_2",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e67c8956",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e67c8957",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e67c8958",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e6ac8959",
+      "label": "DNP FNP Year 3",
+      "name": "dnp_fnp_year_3",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e6ac895a",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e6ac895b",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e6ac895c",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e79c895d",
+      "label": "DNP HSIL Year 1",
+      "name": "dnp_hsil_year_1",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e79c895e",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e79c895f",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e79c8960",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e552e8dc8961",
+      "label": "DNP HSIL Year 2",
+      "name": "dnp_hsil_year_2",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e552e8dc8962",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e552e8dc8963",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e552e8dc8964",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e5969f7738e5",
+      "label": "DNP Foundation Core",
+      "name": "dnp_foundation_core",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e5969f7738e6",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e5969f7738e7",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e5969f7738e8",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e596a1e738e9",
+      "label": "DNP Clinical Core Advanced Practice",
+      "name": "dnp_clinical_core_advanced_practice",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e596a1f738ea",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e596a1f738eb",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e596a1f738ec",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e596a37738ed",
+      "label": "DNP Advanced Practice Specialty Core",
+      "name": "dnp_advanced_practice_specialty_core",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e596a37738ee",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e596a37738ef",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e596a37738f0",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e596a42738f1",
+      "label": "DNP NP Theory Core",
+      "name": "dnp_np_theory_core",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e596a42738f2",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e596a42738f3",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e596a42738f4",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e596a51738f5",
+      "label": "DNP HSIL Theory Core",
+      "name": "dnp_hsil_theory_core",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "acfe_permissions": "",
+      "acfe_repeater_stylised_button": 0,
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e596a51738f6",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "",
+          "acfe_textarea_code": 0
+        },
+        {
+          "key": "field_5e596a51738f7",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e596a51738f8",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "acfe_permissions": "",
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5e721fc7a7db7",
+      "label": "Resident Meal Plan (ultimate)",
+      "name": "resident_meal_plan_ultimate",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 1,
+      "max": 1,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [{
+          "key": "field_5e721fc7a7db8",
+          "label": "Label",
+          "name": "tuition_explanation",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_5e721fc7a7db9",
+          "label": "Cost This Year",
+          "name": "this_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the tuition for this fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5e721fc7a7dba",
+          "label": "Cost Next Year",
+          "name": "next_fiscal_year",
+          "type": "text",
+          "instructions": "Whats the rate for next fiscal year?",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    [{
+      "param": "page",
+      "operator": "==",
+      "value": "35268"
+    }]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content"
+  ],
+  "active": true,
+  "description": "This controls the master list of tuition prices.",
+  "acfe_display_title": "",
+  "acfe_autosync": "",
+  "acfe_form": 0,
+  "acfe_meta": "",
+  "acfe_note": ""
+}

@@ -1,0 +1,65 @@
+{
+    "key": "group_58542a93705b1",
+    "title": "Extra Code",
+    "fields": [
+        {
+            "key": "field_58542b0e15f02",
+            "label": "Head Code",
+            "name": "head_code",
+            "type": "textarea",
+            "instructions": "A space for any extra code that needs to appear site-wide in the HTML <head> section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58542aa7e50b3",
+            "label": "Body Code",
+            "name": "body_code",
+            "type": "textarea",
+            "instructions": "A space for any extra code that needs to appear site-wide in the HTML <body> section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 9,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}

@@ -1,0 +1,47 @@
+    {
+        "key": "group_5d25f76223fca",
+        "title": "Hide request info checkbox",
+        "fields": [
+            {
+                "key": "field_5d25f76ac18ac",
+                "label": "Control Request Info Button",
+                "name": "control_request_info_button",
+                "type": "radio",
+                "instructions": "When the embedded Ellucian CRM popup was added to the website's templates, it was made to show up everywhere. Setting this to \"Hide Request Info Button\" will hide the request info button.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "show": "Show Request Info Button",
+                    "hide": "Hide Request Info Button"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "default_value": "show",
+                "layout": "vertical",
+                "return_format": "value",
+                "save_other_choice": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
