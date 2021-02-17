@@ -23,7 +23,7 @@ function gs_elms_setup() {
 	 * If you're building a theme based on Elms College Redesign, use a find and replace
 	 * to change 'gs_elms' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'gs_elms', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'elms-college-redesign', get_template_directory() . '/languages' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -42,11 +42,11 @@ function gs_elms_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary (Main)', 'gs_elms' ),
-    'utility' => esc_html__( 'Utility (Footer)', 'gs_elms' ),
-    'library' => esc_html__( 'Library', 'gs_elms' ),
-    'nursing' => esc_html__( 'Nursing', 'gs_elms' ),
-    'special-nav' => esc_html__( 'Special Nav', 'gs_elms' )
+		'primary' => esc_html__( 'Primary (Main)', 'elms-college-redesign' ),
+    'utility' => esc_html__( 'Utility (Footer)', 'elms-college-redesign' ),
+    'library' => esc_html__( 'Library', 'elms-college-redesign' ),
+    'nursing' => esc_html__( 'Nursing', 'elms-college-redesign' ),
+    'special-nav' => esc_html__( 'Special Nav', 'elms-college-redesign' )
 	) );
 
 	/*
@@ -95,9 +95,9 @@ add_action( 'after_setup_theme', 'gs_elms_content_width', 0 );
  */
 function gs_elms_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'gs_elms' ),
+		'name'          => esc_html__( 'Sidebar', 'elms-college-redesign' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'gs_elms' ),
+		'description'   => esc_html__( 'Add widgets here.', 'elms-college-redesign' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -109,34 +109,34 @@ add_action( 'widgets_init', 'gs_elms_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function gs_elms_scripts() {
+function elms_scripts() {
 	wp_enqueue_style( 'micromodal', get_template_directory_uri() . '/css/micromodal.css', array(), '20191216');
 	wp_enqueue_style( 'jquery-ui', get_template_directory_uri() . '/css/custom-jquery-ui.min.css', array(), '20200923');
 	wp_enqueue_style( 'pure', get_template_directory_uri() . '/css/pure.0.6.0.css', array(), '20200928');
 
-	wp_enqueue_style( 'gs_elms-style', get_stylesheet_uri(), array(), '41' );
+	wp_enqueue_style( 'elms-style', get_stylesheet_uri(), array(), '41' );
 
-	wp_enqueue_script( 'gs_elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );
+	wp_enqueue_script( 'elms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161220', true );
 
-	wp_enqueue_script( 'gs_elms-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20161215', true );
+	wp_enqueue_script( 'elms-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20161215', true );
 
-	wp_enqueue_script( 'gs_elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array(), '20200820', true );
-	wp_enqueue_script( 'gs_elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'elms-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array(), '20200820', true );
+	wp_enqueue_script( 'elms-velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'gs_elms-dropdown-core', get_template_directory_uri() . '/js/dropdown/core.js', array(), '20151215', true );
-	wp_enqueue_script( 'gs_elms-dropdown-touch', get_template_directory_uri() . '/js/dropdown/touch.js', array(), '20151215', true );
-	wp_enqueue_script( 'gs_elms-dropdown-main', get_template_directory_uri() . '/js/dropdown/dropdown.js', array(), '20151215', true );
+	wp_enqueue_script( 'elms-dropdown-core', get_template_directory_uri() . '/js/dropdown/core.js', array(), '20151215', true );
+	wp_enqueue_script( 'elms-dropdown-touch', get_template_directory_uri() . '/js/dropdown/touch.js', array(), '20151215', true );
+	wp_enqueue_script( 'elms-dropdown-main', get_template_directory_uri() . '/js/dropdown/dropdown.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'gs_elms-what-input', get_template_directory_uri() . '/js/what-input.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'elms-what-input', get_template_directory_uri() . '/js/what-input.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'micromodal', get_template_directory_uri() . '/js/micromodal.min.js', array(), '20190701', true );
 	
-	wp_enqueue_script( 'gs_elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
+	wp_enqueue_script( 'elms-functions', get_template_directory_uri() . '/js/functions.js', array(), '36', true );
     wp_enqueue_style('print-styles', get_template_directory_uri() . '/css/print.css', array(), '20191216', 'print' );
 //	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 //		wp_enqueue_script( 'comment-reply' );
 //	}
 }
-add_action( 'wp_enqueue_scripts', 'gs_elms_scripts');
+add_action( 'wp_enqueue_scripts', 'elms_scripts');
 
 // Remove dashicons in frontend for unauthenticated users
 add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
