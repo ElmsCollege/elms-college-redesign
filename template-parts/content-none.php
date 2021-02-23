@@ -15,11 +15,11 @@
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'gs_elms' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'elms-college-redesign' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p class="centerText"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'gs_elms' ); ?></p>
+			<p class="centerText"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'elms-college-redesign' ); ?></p>
 <p>
 	<form role="search" method="get" class="search-form" action="/?">
 		<label>
@@ -34,7 +34,7 @@
 
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'gs_elms' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'elms-college-redesign' ); ?></p>
 			<?php
 
 

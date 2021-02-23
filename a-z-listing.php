@@ -101,7 +101,7 @@ function build_select_list( $taxonomies, $args ) {
 							$in_department = join( " ", $department_links );
 							?>
 
-							<li class="<?php printf( esc_html__( '%s','textdomain' ), esc_html( $in_department ) ); ?>">
+							<li class="<?php printf( esc_html__( '%s','elms-college-redesign' ), esc_html( $in_department ) ); ?>">
 						<?php else: ?>
 							<li>
 						<?php endif; ?>
