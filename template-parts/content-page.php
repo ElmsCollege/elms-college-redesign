@@ -27,7 +27,7 @@ setup_postdata($post);
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gs_elms' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'elms-college-redesign' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -39,7 +39,7 @@ setup_postdata($post);
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'gs_elms' ),
+						esc_html__( 'Edit %s', 'elms-college-redesign' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
