@@ -24,6 +24,6 @@
 <body id="advertising-landing-page">
 <?php the_field("body_code", "option") ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gs_elms' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elms-college-redesign' ); ?></a>
   
 	<div id="content" class="site-content" style="padding-top:0;">

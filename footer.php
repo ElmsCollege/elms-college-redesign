@@ -25,22 +25,22 @@
 
 					<li class="social-media-icon">
 						<a rel="noopener" class="social-media-icon-link" href="https://www.facebook.com/ElmsCollege/">
-							<img src="/wp-content/themes/gs_elms/images/icon-facebook.png" alt="Facebook logo"/>
+							<img src="/wp-content/themes/elms-college-redesign/images/icon-facebook.png" alt="Facebook logo"/>
 						</a>
 					</li>
 					<li class="social-media-icon">
 						<a rel="noopener" class="social-media-icon-link" href="https://twitter.com/elmscollege">
-							<img src="/wp-content/themes/gs_elms/images/icon-twitter.png" alt="Twitter logo"/>
+							<img src="/wp-content/themes/elms-college-redesign/images/icon-twitter.png" alt="Twitter logo"/>
 						</a>
 					</li>
 					<li class="social-media-icon">
 						<a rel="noopener" class="social-media-icon-link" href="https://www.instagram.com/elmscollege/">
-							<img src="/wp-content/themes/gs_elms/images/icon-instagram.png" alt="Instagram logo"/>
+							<img src="/wp-content/themes/elms-college-redesign/images/icon-instagram.png" alt="Instagram logo"/>
 						</a>
 					</li>
 					<li class="social-media-icon">
 						<a rel="noopener" class="social-media-icon-link" href="https://www.youtube.com/user/ElmsCollegeVideo">
-							<img src="/wp-content/themes/gs_elms/images/icon-youtube.png" alt="YouTube logo"/>
+							<img src="/wp-content/themes/elms-college-redesign/images/icon-youtube.png" alt="YouTube logo"/>
 						</a>
 					</li>
 
