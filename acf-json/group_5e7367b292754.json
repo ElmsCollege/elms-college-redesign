@@ -48,17 +48,17 @@
     [{
       "param": "post_type",
       "operator": "==",
-      "value": "tribe_events"
-    }],
-    [{
-      "param": "post_type",
-      "operator": "==",
       "value": "post"
     }],
     [{
       "param": "post_type",
       "operator": "==",
       "value": "blog"
+    }],
+    [{
+      "param": "post_type",
+      "operator": "==",
+      "value": "lp"
     }]
   ],
   "menu_order": 0,

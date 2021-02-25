@@ -129,6 +129,13 @@
                 "operator": "==",
                 "value": "templates\/landing-page-blocks.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "lp"
+            }
         ]
     ],
     "menu_order": 0,
