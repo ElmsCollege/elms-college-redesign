@@ -81,7 +81,9 @@
 			height: 460px;
 			display: block;
 			img {
-				display: none;
+				display: block !important;
+				height: 100%;
+				width: auto;
 			}
 			&:after {
 				display: block;
