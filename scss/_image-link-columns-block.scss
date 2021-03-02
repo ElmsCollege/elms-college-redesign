@@ -65,3 +65,81 @@
 		}
 	}
 }
+	.calls-to-action {
+		.calls-to-action-title {
+			position: relative;
+			margin: 32px 0 0;
+			padding: 64px 0 48px;
+			background-color: $elmsgreen;
+		}
+		.cta-image {
+			background-color: gray;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			position: relative;
+			height: 460px;
+			display: block;
+			img {
+				display: none;
+			}
+			&:after {
+				display: block;
+				content: "";
+				background: rgba(#000, .325);
+				position: absolute;
+                @include posZero;
+			}
+			.cta-title-container {
+				position: inherit;
+				z-index: 50;
+				margin: 0 32px;
+				height: 100%;
+				width: calc(100% - 64px);
+				color: #fff;
+				h3.field-title {
+					font-size: 32px;
+					font-family: "soleil", sans-serif;
+					border-top: $whiteborder;
+					border-bottom: $whiteborder;
+					padding: .5em 0;
+					font-weight: 200;
+					text-transform: uppercase;
+					color: #fff;
+					margin-bottom: 1em;
+					text-shadow: 2px 2px 6px rgba(#000, .2);
+				}
+			}
+		}
+		.cta {
+			background: $elmsgold;
+			margin: 0;
+			&:hover {
+				.permalink {
+					color: $elmsgold;
+					background-color: #fff;
+				}
+			}
+			&:nth-child(2) {
+				background: $elmsblue;
+			}
+			&:nth-child(3) {
+				background: $elmspurple;
+				&:hover {
+					.permalink {
+						color: $elmspurple;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.cta {
+		&:nth-child(2) {
+			&:hover {
+				.permalink {
+                    @include blue-on-white;
+				}
+			}
+		}
+	}
