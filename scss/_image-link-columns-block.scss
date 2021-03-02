@@ -1,7 +1,12 @@
 //controls the block with images, buttons, and hover links (needs a better name)
 #imageLinkColumns {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
 	.cta {
 		background: $elmsgreen !important;
+		flex: 1;
+	}
 		.image-tint {
 			opacity: 0;
             @include square(100%);
@@ -63,8 +68,6 @@
 				}
 			}
 		}
-	}
-}
 	.calls-to-action {
 		.calls-to-action-title {
 			position: relative;
@@ -90,7 +93,7 @@
 				content: "";
 				background: rgba(#000, .325);
 				position: absolute;
-                @include posZero;
+				@include posZero;
 			}
 			.cta-title-container {
 				position: inherit;
@@ -140,8 +143,9 @@
 		&:nth-child(2) {
 			&:hover {
 				.permalink {
-                    @include blue-on-white;
+					@include blue-on-white;
 				}
 			}
 		}
 	}
+}
