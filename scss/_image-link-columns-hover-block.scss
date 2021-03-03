@@ -12,6 +12,8 @@
 			@include transition($property: opacity);
 		}
 		.permalink {
+			display: table;
+			margin: 1.4em auto;
 			width: auto;
 			max-width: 90%;
 			padding: 1em;
@@ -37,6 +39,22 @@
 			&:hover {
 				.image-tint {
 					background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
+				}
+			}
+		}
+		&:nth-child(3) {
+			background-color: $elmsgold;
+			&:hover {
+				.image-tint {
+					background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
+				}
+			}
+		}
+		&:nth-child(4) {
+			background-color: $elmspurple;
+			&:hover {
+				.image-tint {
+					background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
 				}
 			}
 		}

@@ -1,17 +1,21 @@
 <div id="imageLinkColumns" class="calls-to-action">
-  <?php foreach( $attributes['column'] as $inner ): ?>
-  <div class="column">
-    <div class="cta-top-div"> <a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a> </div>
-    <div style="position: relative"> <a href="<?php echo esc_url( $inner['button-target'] ); ?>">
-      <div class="image-tint">
-        <p><?php echo $inner['hover-text']; ?></p>
-      </div>
-      <?php
-      if ( isset( $inner[ 'image' ][ 'id' ] ) ) {
-        echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'cta-image' ] );
-      }
-      ?>
-      </a> </div>
+	<?php foreach( $attributes['column'] as $inner ): ?>
+	<div class="column">
+		<div class="cta-top-div">
+			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
+		</div>
+		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
+		<div style="position: relative">
+			<a href="<?php echo esc_url( $inner['button-target'] ); ?>">
+				<div class="image-tint">
+					<?php if($inner['hover-text']) : ?>
+						<p><?php echo $inner['hover-text']; ?></p>
+					<?php endif; ?>
+				</div>
+				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'cta-image' ] ); ?>
+			</a>
+		</div>
+		<?php endif; ?>
   </div>
   <?php endforeach; ?>
 </div>
