@@ -1,4 +1,4 @@
-<div class="linkColumns calls-to-action">
+<div class="linkColumns">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
 		<div class="column-header">
