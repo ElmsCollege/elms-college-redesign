@@ -1,4 +1,4 @@
-<div id="imageLinkColumnsHover" class="calls-to-action">
+<div class="linkColumns">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
 		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
