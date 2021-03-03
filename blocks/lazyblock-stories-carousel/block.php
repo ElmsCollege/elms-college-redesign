@@ -1,4 +1,4 @@
-<div id="carouselBlock" class="stories manual" <?php if(isset($attributes['block-background-color'])){echo 'style="background-color:"'.$attributes['block-background-color'].'"';};?>>
+<div id="carouselBlock" class="stories manual" <?php if(isset($attributes['block-background-color'])){echo 'style="background-color:'.$attributes['block-background-color'].'"';};?>>
     <h2 class="field-student_stories_title trace"><?php echo $attributes['stories-title']; ?></h2>
     <ul class="story-feature ulreset">
       <?php foreach( $attributes['stories'] as $index=>$inner ): ?>
