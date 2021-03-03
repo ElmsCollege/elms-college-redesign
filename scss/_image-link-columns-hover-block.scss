@@ -3,71 +3,71 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-evenly;
-	.cta {
+	.column {
 		background: $elmsgreen !important;
 		flex: 1;
 	}
-		.image-tint {
-			opacity: 0;
-            @include square(100%);
-			position: absolute;
+    .image-tint {
+        opacity: 0;
+        @include square(100%);
+        position: absolute;
+        @include transition($property: opacity);
+    }
+    &:hover {
+        .image-tint {
+            background: linear-gradient(rgba($elmsgreen, 0.7), rgba($elmsgreen, 0.7));
+            z-index: 10;
             @include transition($property: opacity);
-		}
-		&:hover {
-			.image-tint {
-				background: linear-gradient(rgba($elmsgreen, 0.7), rgba($elmsgreen, 0.7));
-				z-index: 10;
-                @include transition($property: opacity);
-				opacity: 1;
-			}
-			.permalink {
-				color: $elmsgreen !important;
-			}
-		}
-		p {
-			color: #fff;
-			margin-top: 20%;
-			width: 70%;
-			margin-left: 15%;
-		}
-		.permalink {
-			width: auto;
-			max-width: 90%;
-			padding: 1em;
-		}
-		&:nth-child(2) {
-			background: $elmsgold !important;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
-				}
-				.permalink {
-					color: $elmsgold !important;
-				}
-			}
-		}
-		&:nth-child(3) {
-			background: $elmsblue !important;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
-				}
-				.permalink {
-					color: $elmsblue !important;
-				}
-			}
-		}
-		&:nth-child(4) {
-			background: $elmspurple !important;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
-				}
-				.permalink {
-					color: $elmspurple !important;
-				}
-			}
-		}
+            opacity: 1;
+        }
+        .permalink {
+            color: $elmsgreen !important;
+        }
+    }
+    p {
+        color: #fff;
+        margin-top: 20%;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .permalink {
+        width: auto;
+        max-width: 90%;
+        padding: 1em;
+    }
+    &:nth-child(2) {
+        background: $elmsgold !important;
+        &:hover {
+            .image-tint {
+                background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
+            }
+            .permalink {
+                color: $elmsgold !important;
+            }
+        }
+    }
+    &:nth-child(3) {
+        background: $elmsblue !important;
+        &:hover {
+            .image-tint {
+                background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
+            }
+            .permalink {
+                color: $elmsblue !important;
+            }
+        }
+    }
+    &:nth-child(4) {
+        background: $elmspurple !important;
+        &:hover {
+            .image-tint {
+                background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
+            }
+            .permalink {
+                color: $elmspurple !important;
+            }
+        }
+    }
 	.calls-to-action {
 		.calls-to-action-title {
 			position: relative;
