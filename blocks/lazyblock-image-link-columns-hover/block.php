@@ -1,7 +1,7 @@
 <div id="imageLinkColumns" class="calls-to-action">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
-		<div class="cta-top-div">
+		<div class="column-header">
 			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
 		</div>
 		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
@@ -12,7 +12,7 @@
 						<p><?php echo $inner['hover-text']; ?></p>
 					<?php endif; ?>
 				</div>
-				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'cta-image' ] ); ?>
+				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
 			</a>
 		</div>
 		<?php endif; ?>
@@ -24,7 +24,7 @@
 	  window.onload = setHeights;
 		window.onresize = setHeights;
 		function setHeights() {
-		  var items = document.getElementsByClassName("cta-top-div")
+		  var items = document.getElementsByClassName("column-header")
 			var max = 0;
 			var marginTop;
 				
