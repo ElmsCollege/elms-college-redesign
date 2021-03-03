@@ -5,70 +5,39 @@
 	justify-content: space-evenly;
 	.column {
 		flex: 1;
-		.image-tint {
-			position: absolute;
-			opacity: 0;
-			@include square(100%);
-			@include transition($property: opacity);
-		}
 		.permalink {
 			width: auto;
 			max-width: 90%;
 			padding: 1em;
 			color: #fff;
 		}			
+		.image-tint {
+			position: absolute;
+			opacity: 0;
+			@include square(100%);
+			@include transition($property: opacity);
+		}
 		&:hover {
+			.permalink {
+				background-color: #fff;
+			}
 			.image-tint {
 				z-index: 10;
 				@include transition($property: opacity);
 				opacity: 1;
-				.permalink {
-					background-color: #fff;
-				}
 			}
 		}
-		
-		&:nth-child(1) {
-			background-color: $elmsgreen;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmsgreen, 0.7), rgba($elmsgreen, 0.7));
-				}
-				.permalink {
-					color: $elmsgreen;
-				}
-			}
-		}
-		&:nth-child(2) {
-			background-color: $elmsblue;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
-				}
-				.permalink {
-					color: $elmsblue;
-				}
-			}
-		}
-		&:nth-child(3) {
-			background-color: $elmsgold;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
-				}
-				.permalink {
-					color: $elmsgold;
-				}
-			}
-		}
-		&:nth-child(4) {
-			background-color: $elmspurple;
-			&:hover {
-				.image-tint {
-					background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
-				}
-				.permalink {
-					color: $elmspurple;
+		$columns: ("1": $elmsgreen, "2": $elmsblue, "3": $elmsgold, "4": $elmspurple);
+		@each $number, $color in $columns {
+			&:nth-child(#{$number}) {
+				background-color: $color;
+				&:hover {
+					.permalink {
+						color: $color;
+					}
+					.image-tint {
+						background: linear-gradient(rgba($color, 0.7), rgba($color, 0.7));
+					}
 				}
 			}
 		}
@@ -79,7 +48,6 @@
 			position: relative;
 			height: 460px;
 			display: block;
-			height: 100%;
 			width: auto;
 		}
 	}//end column
