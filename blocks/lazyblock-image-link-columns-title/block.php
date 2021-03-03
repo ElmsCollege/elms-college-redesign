@@ -1,14 +1,14 @@
 <div class="linkColumns">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
-		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
-			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
-			<div class="cta-title-container flexColNowrap justifyCenter">
-				<div class="cta-title-inner">
+		<div>
+			<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
+				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
+				<div class="cta-title-container">
 					<h3 class="field-title"><?php echo $inner['title-text'] ?></h3>
 				</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>
+		</div>
 		<div class="column-header">
 			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
 		</div>
