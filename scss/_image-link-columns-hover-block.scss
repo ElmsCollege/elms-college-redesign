@@ -12,8 +12,8 @@
 			@include transition($property: opacity);
 		}
 		.permalink {
-			display: table;
-			margin: 1.4em auto;
+//			display: table;
+//			margin: 1.4em auto;
 			width: auto;
 			max-width: 90%;
 			padding: 1em;
@@ -32,6 +32,10 @@
 				.image-tint {
 					background: linear-gradient(rgba($elmsgreen, 0.7), rgba($elmsgreen, 0.7));
 				}
+				.permalink {
+					background-color: #fff;
+					color: $elmsgreen;
+				}
 			}
 		}
 		&:nth-child(2) {
@@ -39,6 +43,10 @@
 			&:hover {
 				.image-tint {
 					background: linear-gradient(rgba($elmsblue, 0.7), rgba($elmsblue, 0.7));
+				}
+				.permalink {
+					background-color: #fff;
+					color: $elmsblue;
 				}
 			}
 		}
@@ -48,6 +56,10 @@
 				.image-tint {
 					background: linear-gradient(rgba($elmsgold, 0.7), rgba($elmsgold, 0.7));
 				}
+				.permalink {
+					background-color: #fff;
+					color: $elmsgold;
+				}
 			}
 		}
 		&:nth-child(4) {
@@ -55,6 +67,10 @@
 			&:hover {
 				.image-tint {
 					background: linear-gradient(rgba($elmspurple, 0.7), rgba($elmspurple, 0.7));
+				}
+				.permalink {
+					background-color: #fff;
+					color: $elmspurple;
 				}
 			}
 		}
@@ -66,6 +82,7 @@
         width: 70%;
         margin-left: 15%;
     }
+/*	
     &:nth-child(2) {
         background: $elmsgold !important;
         &:hover {
@@ -99,6 +116,7 @@
             }
         }
     }
+*/
 	.calls-to-action {
 		.calls-to-action-title {
 			position: relative;
