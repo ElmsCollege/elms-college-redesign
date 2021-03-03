@@ -1,16 +1,27 @@
 //controls the block with images, buttons, and hover links (needs a better name)
-#imageLinkColumns {
+.linkColumns {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-evenly;
 	.column {
 		flex: 1;
 		.permalink {
+			display: inline-block;
 			width: auto;
+			width: 13em;
 			max-width: 90%;
 			padding: 1em;
 			color: #fff;
-		}			
+			text-decoration: none;
+			text-transform: uppercase;
+			margin: 1.4em auto;
+			font-size: 16px;
+			font-weight: 700;
+			@include transition;
+			&:visited {
+				color: #fff;
+			}
+		}
 		.image-tint {
 			position: absolute;
 			opacity: 0;
@@ -57,4 +68,14 @@
         width: 70%;
         margin-left: 15%;
     }
+}
+@media (min-width: 64em) {
+	.linkColumns .permalink {
+		border: 2px solid #fff;
+	}
+}
+@media (max-width: 47.999em) {
+	.linkColumns .permalink {
+		padding: 0;
+	}
 }
