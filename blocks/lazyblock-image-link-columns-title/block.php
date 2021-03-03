@@ -1,13 +1,11 @@
-<div class="linkColumns">
+<div class="linkColumns titles">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
-		<div>
-			<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
-				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
-				<div class="cta-title-container">
-					<h3 class="field-title"><?php echo $inner['title-text'] ?></h3>
-				</div>
-			<?php endif; ?>
+		<div style="position: relative;">
+			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
+			<div class="cta-title-container">
+				<h3 class="field-title"><?php echo $inner['title-text'] ?></h3>
+			</div>
 		</div>
 		<div class="column-header">
 			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>

@@ -88,6 +88,15 @@
 			}
 		}
 	}//end column
+	.title {
+		.column-image {
+			max-width: unset;
+		}
+		.cta-title-container {
+			position: absolute;
+			top: 50%;
+		}
+	}
 }
 @media (min-width: 64em) {
 	.linkColumns .permalink {

@@ -1,4 +1,4 @@
-<div class="linkColumns">
+<div class="linkColumns hover">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
 		<div class="column-header">
