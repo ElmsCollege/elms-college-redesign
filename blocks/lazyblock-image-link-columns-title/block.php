@@ -7,7 +7,7 @@
 				<h3 class="field-title"><?php echo $inner['title-text'] ?></h3>
 			</div>
 		</div>
-		<div class="column-header">
+		<div class="column-endcap">
 			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
 		</div>
   </div>
@@ -18,7 +18,7 @@
 	  window.onload = setHeights;
 		window.onresize = setHeights;
 		function setHeights() {
-		  var items = document.getElementsByClassName("column-header")
+		  var items = document.getElementsByClassName("column-endcap")
 			var max = 0;
 			var marginTop;
 				

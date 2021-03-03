@@ -1,7 +1,7 @@
 <div class="linkColumns hover">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
-		<div class="column-header">
+		<div class="column-endcap">
 			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
 		</div>
 		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
@@ -24,7 +24,7 @@
 	  window.onload = setHeights;
 		window.onresize = setHeights;
 		function setHeights() {
-		  var items = document.getElementsByClassName("column-header")
+		  var items = document.getElementsByClassName("column-endcap")
 			var max = 0;
 			var marginTop;
 				

@@ -51,7 +51,7 @@
 				}
 			}
 		}
-		.column-header {
+		.column-endcap {
 			text-align: center;
 		}
 		.column-image {
@@ -75,20 +75,18 @@
 			position: absolute;
 			top: 50%;
 			z-index: 50;
-			margin: 0 32px;
-			width: calc(100% - 64px);
 			color: #fff;
 			text-align: center;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			h3.field-title {
 				font-size: 32px;
-				font-family: "soleil", sans-serif;
 				border-top: $whiteborder;
 				border-bottom: $whiteborder;
 				padding: .5em 0;
 				font-weight: 200;
 				text-transform: uppercase;
 				color: #fff;
-				margin-bottom: 1em;
 				text-shadow: 2px 2px 6px rgba(#000, .2);
 			}
 		}

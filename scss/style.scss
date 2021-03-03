@@ -1987,17 +1987,11 @@ th .smallText{
     }
 }
 .alignfull {
-	width: 100vw;
-	margin: 2rem calc(50% - 50vw);
 }
 .alignwide {
-	width: 100vw;
-	margin: 2rem calc(50% - 50vw);
 }
 @media (min-width: 960px) {
 	.alignwide {
-		width: calc(100% + 20vw);
-		margin: 2rem -10vw;
 	}
 }
 /* END generic, universal, reusable styles */
