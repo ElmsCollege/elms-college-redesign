@@ -1,4 +1,4 @@
-<div class="linkColumns titles">
+<div class="linkColumns title">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
 		<div style="position: relative;">

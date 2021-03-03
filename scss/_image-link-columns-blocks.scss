@@ -66,9 +66,14 @@
 			width: 70%;
 			margin-left: 15%;
 		}
-		//specific to the -title variation
+	}//end column
+	&.title {
+		.column-image {
+			max-width: unset;
+		}
 		.cta-title-container {
-			position: inherit;
+			position: absolute;
+			top: 50%;
 			z-index: 50;
 			margin: 0 32px;
 			width: calc(100% - 64px);
@@ -86,15 +91,6 @@
 				margin-bottom: 1em;
 				text-shadow: 2px 2px 6px rgba(#000, .2);
 			}
-		}
-	}//end column
-	&.title {
-		.column-image {
-			max-width: unset;
-		}
-		.cta-title-container {
-			position: absolute;
-			top: 50%;
 		}
 	}
 }
