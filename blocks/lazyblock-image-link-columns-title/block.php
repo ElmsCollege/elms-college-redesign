@@ -2,6 +2,7 @@
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<div class="column">
 		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
+			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
 			<div class="cta-title-container flexColNowrap justifyCenter">
 				<div class="cta-title-inner">
 					<h3 class="field-title"><?php echo $inner['title-text'] ?></h3>
