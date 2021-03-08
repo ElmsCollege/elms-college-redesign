@@ -1,22 +1,20 @@
 <div class="linkColumns hover">
 	<?php foreach( $attributes['column'] as $inner ): ?>
-	<div class="column">
+	<a href="<?php echo esc_url( $inner['button-target'] ); ?>" class="column">
 		<div class="column-endcap">
-			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
+			<div class="permalink"><?php echo $inner['button-text']; ?></div>
 		</div>
 		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
 		<div style="position: relative">
-			<a href="<?php echo esc_url( $inner['button-target'] ); ?>">
-				<div class="image-tint">
-					<?php if($inner['hover-text']) : ?>
-						<p><?php echo $inner['hover-text']; ?></p>
-					<?php endif; ?>
-				</div>
-				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
-			</a>
+			<div class="image-tint">
+				<?php if($inner['hover-text']) : ?>
+					<p><?php echo $inner['hover-text']; ?></p>
+				<?php endif; ?>
+			</div>
+			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
 		</div>
 		<?php endif; ?>
-  </div>
+  </a>
   <?php endforeach; ?>
 </div>
 <script>

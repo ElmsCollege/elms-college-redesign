@@ -98,7 +98,10 @@
 	}
 }
 @media (max-width: 47.999em) {
-	.linkColumns .permalink {
-		padding: 0;
+	.linkColumns {
+		flex-direction: column;
+		.permalink {
+			padding: 0;
+		}
 	}
 }

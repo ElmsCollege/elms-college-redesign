@@ -1,6 +1,6 @@
 <div class="linkColumns title">
 	<?php foreach( $attributes['column'] as $inner ): ?>
-	<div class="column">
+	<a href="<?php echo esc_url( $inner['button-target'] ); ?>"> class="column">
 		<div style="position: relative;">
 			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
 			<div class="cta-title-container">
@@ -8,9 +8,9 @@
 			</div>
 		</div>
 		<div class="column-endcap">
-			<a class="permalink" href="<?php echo esc_url( $inner['button-target'] ); ?>"><?php echo $inner['button-text']; ?></a>
+			<div class="permalink"><?php echo $inner['button-text']; ?></div>
 		</div>
-  </div>
+  </a>
   <?php endforeach; ?>
 </div>
 <script>
