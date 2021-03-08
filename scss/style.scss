@@ -130,14 +130,6 @@ blockquote,q{
 blockquote:before,blockquote:after,q:before,q:after{
 	content:""
 }
-/*
-hr{
-	background-color:#ccc;
-	border:0;
-	height:1px;
-	margin-bottom:1.5em
-}
-*/
 ul,ol{
 	margin:0 0 1.5em
 }
@@ -183,29 +175,29 @@ h2{
     margin: 0 auto;
 	text-align: center;
 	font-size: 36px;
+	&:before, &:after {
+		content: "";
+		width: 2em;
+		height: 1px;
+		display: inline-block;
+		line-height: 36px;
+		background-color: $elmsgold;
+		vertical-align: middle;
+	}
+	.site-main & {
+		color: $elmsgreen;
+		text-shadow: 1px 2px $elmsgold;
+	}
+	.social-media & {
+		color: #fff;
+		text-shadow: 2px 2px $elmsgold;
+	}
 }
 @media all and (max-width: 47.999em){
 	.pre-title{
 		font-size:1.3em;
 		line-height:1
 	}
-}
-.pre-title:before,.pre-title:after{
-	content:"";
-	width:2em;
-	height:1px;
-	display:inline-block;
-	line-height:36px;
-	background-color: $elmsgold;
-	vertical-align:middle
-}
-.site-main .pre-title {
-	color: $elmsgreen;
-	text-shadow: 1px 2px $elmsgold;
-}
-.social-media .pre-title {
-	color: #fff;
-	text-shadow: 2px 2px $elmsgold;
 }
 button:not[class^="pika-"],input[type="button"],input[type="reset"],input[type="submit"]{
 	border: $lightgreyborder;
@@ -631,16 +623,17 @@ a:hover, a:active {
 	color:transparent
 }
 .stories .story-feature-nav:after {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 800;
+	//font-family: "Font Awesome 5 Free";
+	//font-weight: 800;
 	color: #fff;
 	display: block;
 	position: absolute;
     @include square(100%);
 	vertical-align: center;
 	text-align: center;
-	font-size: 32px;
-	top: 6px
+	//font-size: 32px;
+	top: 6px;
+	font: 800 32px "Font Awesome 5 Free";
 }
 .stories .story-feature-nav.nav-prev:after{
 	content:"\f060";
@@ -1462,15 +1455,11 @@ button.child-6{padding-left:90px;}
 		padding:0;
 	}
 }
-.green-arrow-border-top:after{
-	content:"";
-	border-top:none;
-	border-right:30px solid transparent;
-	border-left:30px solid transparent;
-	border-bottom:40px solid $elmsgreen;
-	position:absolute;
-	right:calc(50% - 30px);
-	top:-40px;
+.green-arrow-border-top:after {
+	@include border-arrow(top, $elmsgreen, 30px);
+	position: absolute;
+	right: calc(50% - 30px);
+	top: -40px;
 }
 .admin-bar #masthead{
 	margin-top:32px;
