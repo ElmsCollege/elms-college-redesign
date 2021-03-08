@@ -3,8 +3,8 @@
 	<a href="<?php echo esc_url( $inner['button-target'] ); ?>" class="column">
 		<div style="position: relative;">
 			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
-			<div class="cta-title-container">
-				<h3 class="field-title"><?php echo $inner['title-text'] ?></h3>
+			<div class="title-container">
+				<h2><?php echo $inner['title-text'] ?></h2>
 			</div>
 		</div>
 		<div class="column-endcap">
