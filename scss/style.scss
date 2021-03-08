@@ -362,9 +362,9 @@ a:hover, a:active {
         }
     }
 }
-.footer-item-inner{
-	padding:0 32px;
-	margin-bottom:32px
+.footer-item-inner {
+	padding: 0 32px;
+	margin-bottom: 32px
 }
 @media (min-width: 64em) {
 	.footer-item-inner {
@@ -623,15 +623,12 @@ a:hover, a:active {
 	color:transparent
 }
 .stories .story-feature-nav:after {
-	//font-family: "Font Awesome 5 Free";
-	//font-weight: 800;
 	color: #fff;
 	display: block;
 	position: absolute;
     @include square(100%);
 	vertical-align: center;
 	text-align: center;
-	//font-size: 32px;
 	top: 6px;
 	font: 800 32px "Font Awesome 5 Free";
 }
@@ -1870,8 +1867,8 @@ th .smallText{
 .noMargins{
 	margin:0!important;
 }
-.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content :first-child,.noMarginTop h4.c-accordion__title{
-	margin-top:0;
+.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content>:first-child,.noMarginTop h4.c-accordion__title{
+	margin-top: 0;
 }
 .noMarginBottom,.wp-block-image{
 	margin-bottom:0 !important;

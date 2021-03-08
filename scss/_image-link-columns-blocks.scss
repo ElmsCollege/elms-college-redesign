@@ -97,16 +97,12 @@
 		}
 	}
 }
-@media (min-width: 64em) {
-	.linkColumns .permalink {
-		border: 2px solid #fff;
-	}
-}
 @media (max-width: 47.999em) {
 	.linkColumns {
 		flex-direction: column;
 		.column {
 			flex: unset;
+			height: 400px;
 		}
 		.permalink {
 			padding: 0;
