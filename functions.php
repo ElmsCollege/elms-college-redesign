@@ -69,7 +69,7 @@ function gs_elms_setup() {
 	) ) );
   */
 	add_theme_support('responsive-embeds');//allow responsive embedded files (like from YouTube)
-	add_theme_support( 'align-wide' );//allow wide and full-width blocks
+//	add_theme_support( 'align-wide' );//allow wide and full-width blocks -> this still doesn't work quite right and should not be re-enabled until the styles are figured out
 	
 	remove_theme_support('widgets-block-editor');
 }

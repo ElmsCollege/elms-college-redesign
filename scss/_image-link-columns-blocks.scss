@@ -100,8 +100,20 @@
 @media (max-width: 47.999em) {
 	.linkColumns {
 		flex-direction: column;
+		.column {
+			flex: unset;
+		}
 		.permalink {
 			padding: 0;
+		}
+		.column-image {
+			width: 100%;
+			height: auto;
+		}
+		&.title {
+			.column-image {
+				max-width: 100%;
+			}
 		}
 	}
 }
