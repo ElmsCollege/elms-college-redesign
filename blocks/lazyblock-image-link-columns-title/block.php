@@ -1,6 +1,11 @@
 <div class="linkColumns title">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<a href="<?php echo esc_url( $inner['button-target'] ); ?>" class="column">
+		<?php
+			echo wp_get_attachment_image($inner['image']['url']);
+			echo 'url above, no get_attachement_image below';
+		echo $inner['image']['url'];
+		?>
 		<div class="bgImage test" style="background-image: url('<?php echo wp_get_attachment_image($inner['image']['url']); ?>')">
 			<div class="title-container">
 				<h2><?php echo $inner['title-text'] ?></h2>
