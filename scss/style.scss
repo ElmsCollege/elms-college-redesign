@@ -258,16 +258,15 @@ a:hover, a:active {
 @keyframes colorchange{0%{background: $elmsgreen}50%{background:#335635}100%{background: $elmsgreen}}
 @-webkit-keyframes colorchange{0%{background: $elmsgreen}25%{background:#335635}100%{background: $elmsgreen}}@keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}@-webkit-keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}
 .section-heading {
+	@extend .flexColNowrap;
+	@extend .justifyCenter;
+	align-items: center;
 	position: relative;
 	background-color: $elmsgreen;
 	background-size: cover;
 	background-position: 50%;
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
     text-align: center;
-	flex-flow: column nowrap;
     h1 {
         line-height: 1.5em !important;
         padding: 10px 0 !important;
@@ -1067,6 +1066,7 @@ button.child-6{padding-left:90px;}
 		display: none
 	}
 }
+/* BEGIN MOVED TO _two-column-cutous-block */
 .short-content {
 	position: relative;
 	max-width: 1200px;
@@ -1104,6 +1104,7 @@ button.child-6{padding-left:90px;}
         }
 	}
 }
+/* END MOVED TO _two-column-cutous-block */
 .section-mission_statement{
 	margin:25px 32px
 }

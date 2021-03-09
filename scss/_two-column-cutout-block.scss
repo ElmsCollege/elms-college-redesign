@@ -1,0 +1,37 @@
+.short-content {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+    .field-background {
+        background-image: url(images/default-header.jpg);
+        display: none;
+        background-size: 100%;
+        background-size: cover;
+    }
+    .short-content-inner {
+	    background: #fff;
+        .short {
+            padding: 16px;
+            h3 {
+                font-size: 24px;
+                margin: 0;
+            }
+        }
+    }
+}
+@media (min-width: 64em){
+	.short-content {
+		margin: 64px auto 32px;
+		padding: 64px 384px 64px 32px;
+        .field-background {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+	}
+}
