@@ -2,7 +2,7 @@
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<a href="<?php echo esc_url( $inner['button-target'] ); ?>" class="column">
 		<?php $bgImage = wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large'); ?>
-		<div class="bgImage" style="background-image: <?php echo $bgImage[0]; ?>">
+		<div class="bgImage" style="background-image: url('<?php echo $bgImage[0]; ?>')">
 			<div class="title-container">
 				<h2><?php echo $inner['title-text'] ?></h2>
 			</div>
