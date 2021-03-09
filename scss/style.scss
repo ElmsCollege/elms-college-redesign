@@ -1761,17 +1761,17 @@ div.collapseomatic_content{
 	font-weight:700;
 }
 //the .flexXXXX styles get extended in other places and should not be changed
-.flexRowWrapStart{
+.flexRowWrapStart {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
 }
-.flexRowNowrapStart{
-	display:flex;
-	flex-flow:row nowrap;
-	align-items:flex-start;
+.flexRowNowrapStart {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
 }
-.flexRowNowrapCenter{
+.flexRowNowrapCenter {
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
@@ -1780,25 +1780,25 @@ div.collapseomatic_content{
 	display: flex;
 	flex-flow: column nowrap;
 }
-.spaceBetween{
-	justify-content:space-between;
+.spaceBetween {
+	justify-content: space-between;
 }
-.spaceEvenly{
-	justify-content:space-evenly;
+.spaceEvenly {
+	justify-content: space-evenly;
 }
-.spaceAround{
-	justify-content:space-around;
+.spaceAround {
+	justify-content: space-around;
 }
 .justifyCenter {
 	justify-content: center;
 }
-.justifyEnd{
-	justify-content:end;
+.justifyEnd {
+	justify-content: end;
 }
-.flex-column{
-	min-width:300px;
-	max-width:48%;
-	margin-bottom:15px;
+.flex-column {
+	min-width: 300px;
+	max-width: 48%;
+	margin-bottom: 15px;
 }
 
 /* BEGIN styles for the embedded directory listing with images and bios*/
