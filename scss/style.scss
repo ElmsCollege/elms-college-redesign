@@ -1760,6 +1760,7 @@ div.collapseomatic_content{
 	min-width:60px;
 	font-weight:700;
 }
+//the .flexXXXX styles get extended in other places and should not be changed
 .flexRowWrapStart{
 	display: flex;
 	flex-flow: row wrap;
@@ -1775,9 +1776,9 @@ div.collapseomatic_content{
 	flex-flow: row nowrap;
 	align-items: center;
 }
-.flexColNowrap{
-	display:flex;
-	flex-flow:column nowrap;
+.flexColNowrap {
+	display: flex;
+	flex-flow: column nowrap;
 }
 .spaceBetween{
 	justify-content:space-between;
@@ -1788,8 +1789,8 @@ div.collapseomatic_content{
 .spaceAround{
 	justify-content:space-around;
 }
-.justifyCenter{
-	justify-content:center;
+.justifyCenter {
+	justify-content: center;
 }
 .justifyEnd{
 	justify-content:end;

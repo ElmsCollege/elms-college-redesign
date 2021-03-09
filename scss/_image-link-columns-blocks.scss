@@ -1,5 +1,7 @@
 //controls the block with images, buttons, and hover links (needs a better name)
 .linkColumns {
+	@extend .flexRowNowrapStart;
+	@extend .spaceEvenly;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-evenly;
@@ -47,22 +49,22 @@
 			color: #fff;
 		}
 	}
+	.column-endcap {
+		text-align: center;
+	}
 	.image-tint {
-		position: absolute;
 		opacity: 0;
 		@include square(100%);
 		@include transition($property: opacity);
 	}
-	.column-endcap {
-		text-align: center;
-	}
 	.bgImage {
+		height: 460px;
+	}
+	.bgImage, .image-tint {
+		@extend .flexColNowrap;
+		@extend .justifyCenter;
 		position: relative;
 		background-size: cover;
-		height: 460px;
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
 		text-align: center;
 		align-items: center;
 	}
@@ -78,9 +80,6 @@
 		}	
 	}
 	&.title {
-		.column-image {
-			max-width: unset;
-		}
 		h2 {
 			border-top: $whiteborder;
 			border-bottom: $whiteborder;
@@ -98,11 +97,6 @@
 		flex-direction: column;
 		.column {
 			flex: unset;
-		}
-		.column-image {
-			width: 100%;
-			height: auto;
-			max-height: 500px;
 		}
 		&.title {
 			.column-image {
