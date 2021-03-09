@@ -96,7 +96,15 @@
 			}
 		}
 	}
-}
+	//trying out background images
+	&.title {
+		.bgImage {
+			position: relative;
+			background-size: cover;
+			height: 460px;
+		}
+	}
+}//end .linkColumns
 @media (max-width: 47.999em) {
 	.linkColumns {
 		flex-direction: column;

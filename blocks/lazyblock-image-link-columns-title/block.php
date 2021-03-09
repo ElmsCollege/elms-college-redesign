@@ -1,8 +1,8 @@
 <div class="linkColumns title">
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<a href="<?php echo esc_url( $inner['button-target'] ); ?>" class="column">
-		<div style="position: relative;">
-			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
+		<div class="bgImage" style="position: relative;" style="background-image: <?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large'); ?>">
+			<?php //echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
 			<div class="title-container">
 				<h2><?php echo $inner['title-text'] ?></h2>
 			</div>
