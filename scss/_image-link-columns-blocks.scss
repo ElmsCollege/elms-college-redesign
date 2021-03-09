@@ -64,6 +64,7 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		text-align: center;
+		align-items: center;
 	}
 	p {
 		color: #fff;
@@ -88,6 +89,7 @@
 			text-transform: uppercase;
 			color: #fff;
 			text-shadow: 2px 2px 6px rgba(#000, .2);
+			max-width: 80%;
 		}
 	}
 }//end .linkColumns
