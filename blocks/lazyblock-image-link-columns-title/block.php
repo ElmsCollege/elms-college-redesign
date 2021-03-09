@@ -2,9 +2,7 @@
 	<?php foreach( $attributes['column'] as $inner ): ?>
 	<a href="<?php echo esc_url( $inner['button-target'] ); ?>" class="column">
 		<div class="bgImage" style="background-image: url('<?php echo $inner['image']['url']; ?>')">
-			<div class="title-container">
-				<h2><?php echo $inner['title-text'] ?></h2>
-			</div>
+			<h2><?php echo $inner['title-text'] ?></h2>
 		</div>
 		<div class="column-endcap">
 			<div class="permalink"><?php echo $inner['button-text']; ?></div>

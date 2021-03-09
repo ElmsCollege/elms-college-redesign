@@ -5,14 +5,14 @@
 			<div class="permalink"><?php echo $inner['button-text']; ?></div>
 		</div>
 		<?php if ( isset( $inner[ 'image' ][ 'id' ] ) ) : ?>
-		<div style="position: relative">
-			<div class="image-tint">
-				<?php if($inner['hover-text']) : ?>
-					<p><?php echo $inner['hover-text']; ?></p>
-				<?php endif; ?>
+			<div class="bgImage" style="background-image: url('<?php echo $inner['image']['url']; ?>')">
+				<div class="image-tint">
+					<?php if($inner['hover-text']) : ?>
+						<p><?php echo $inner['hover-text']; ?></p>
+					<?php endif; ?>
+				</div>
+				<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
 			</div>
-			<?php echo wp_get_attachment_image( $inner[ 'image' ][ 'id' ], 'large', '', [ 'class' => 'column-image' ] ); ?>
-		</div>
 		<?php endif; ?>
 	</a>
   <?php endforeach; ?>

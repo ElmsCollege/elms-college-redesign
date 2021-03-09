@@ -56,11 +56,14 @@
 	.column-endcap {
 		text-align: center;
 	}
-	.column-image {
+	.bgImage {
 		position: relative;
+		background-size: cover;
 		height: 460px;
-		display: block;
-		width: auto;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		text-align: center;
 	}
 	p {
 		color: #fff;
@@ -77,31 +80,14 @@
 		.column-image {
 			max-width: unset;
 		}
-		.title-container {
-			position: absolute;
-			top: 50%;
-			z-index: 50;
+		h2 {
+			border-top: $whiteborder;
+			border-bottom: $whiteborder;
+			padding: .5em 0;
+			font-weight: 200;
+			text-transform: uppercase;
 			color: #fff;
-			text-align: center;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			h2 {
-				border-top: $whiteborder;
-				border-bottom: $whiteborder;
-				padding: .5em 0;
-				font-weight: 200;
-				text-transform: uppercase;
-				color: #fff;
-				text-shadow: 2px 2px 6px rgba(#000, .2);
-			}
-		}
-	}
-	//trying out background images
-	&.title {
-		.bgImage {
-			position: relative;
-			background-size: cover;
-			height: 460px;
+			text-shadow: 2px 2px 6px rgba(#000, .2);
 		}
 	}
 }//end .linkColumns
