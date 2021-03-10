@@ -286,7 +286,7 @@ a:hover, a:active {
 	max-height: unset !important;
 	min-height: unset !important;
 }
-.section-heading h1, h2.field-student_stories_title, h2.field-social_media_title{
+.section-heading h1, h2.field-student_stories_title, h2.field-social_media_title, h2.addShadow {
 	text-shadow: 2px 2px 2px #000;
 }
 @media all and (max-width:505px){
