@@ -17,3 +17,14 @@
 
 //controls the two column block where the right side blends into the image
 @import "two-column-cutout-block";
+
+//this is done in js so the changes appear in the editor and doesn't have a block.php file
+.wp-block-lazyblock-elms-button {
+	margin: 0 auto;
+	display: table;
+	padding: 15px;
+	.elms-block-button {
+		margin: 0 auto;
+		padding: 15px;
+	}
+}
