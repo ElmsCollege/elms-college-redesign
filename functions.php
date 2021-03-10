@@ -556,5 +556,22 @@ function addNullToArray($n) {
     else
         return($n);
 };
-// ACF Developer Mode
-define('ACFE_dev', true);
+
+//the array below will autocomplete in the advanced add class section of the edit screen
+function editorskit_add_custom_classnames( $classes ){
+	$theme_classes = array(
+		'noMargins',
+		'noMarginTop',
+		'noMarginRight',
+		'noMarginBottom',
+		'noMarginLeft',
+		'addShadow',
+		'has-text-align-center',
+		'has-small-font-size',
+		'has-large-font-size',
+	);
+	$classes = array_merge( $classes, $theme_classes );
+	return $classes;
+}
+
+add_filter( 'editorskit_block_editor_classnames', 'editorskit_add_custom_classnames', 10, 3 );
