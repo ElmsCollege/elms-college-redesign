@@ -27,9 +27,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	font-weight:400;
 	font-style:normal;
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     clear: both;
     font-weight: 700;
+	line-height: 1em;
 }
 p{
     margin-bottom: 1.5em
