@@ -77,12 +77,10 @@ big{
 }
 .site-main h2, .page-sidebar h2{
 	color: $elmsgold;
-	font-size: 24px;
 	margin-bottom: .66666667em
 }
 @media (max-width: 47.999em){
 	.site-main h2, .page-sidebar h2 {
-		font-size: 1.666666667em;
         line-height: 1;
         margin-top: 0;
 	}
