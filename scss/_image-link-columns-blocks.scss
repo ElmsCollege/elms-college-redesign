@@ -84,6 +84,9 @@
 .wp-block-lazyblock-image-link-columns-title {
 	@extend .alignfull;
 	margin-top: 0;
+	#primary > #main > .body-text > & {
+		margin-top: -20px;
+	}
 }
 @media (max-width: 47.999em) {
 	.linkColumns {
