@@ -18,6 +18,7 @@
 //controls the two column block where the right side blends into the image
 @import "two-column-cutout-block";
 
+//the styles below belong to lazy blocks block that don't have a template here
 //this is done in js so the changes appear in the editor and doesn't have a block.php file
 .wp-block-lazyblock-elms-button {
 	margin: 0 auto;
@@ -26,5 +27,13 @@
 	.elms-block-button {
 		margin: 0 auto;
 		padding: 15px;
+	}
+}
+.wp-block-lazyblock-acf-curriculum-fields, .wp-block-lazyblock-quick-info, .wp-block-lazyblock-testimonial {
+	margin-top: 15px;
+}
+.wp-block-lazyblock-testimonial {
+	h2, h4 {
+		font-size: 24px;
 	}
 }

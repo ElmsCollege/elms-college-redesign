@@ -651,7 +651,6 @@ a:hover, a:active {
 	list-style-type: none;
 	display: none;
     .story-tab {
-        display: flex;
         flex-direction: column;
         @include transition($duration: .5s);
         background-color: $elmsgreen;
@@ -1118,7 +1117,6 @@ button.child-6{padding-left:90px;}
 }
 .section-mission_statement .field-mission_statement{
 	color: $elmsgreen;
-	font-size:56px;
 	margin:0 auto 32px;
 	line-height:1em;
 }
@@ -1993,7 +1991,6 @@ th .smallText{
 	width: 100%;
 	text-align: center;
 }
-/* BEGIN customizations from within the admin section */
 .nav-trigger, .pointer, .menu-item a {
     @extend %pointer;
 }
@@ -2002,19 +1999,28 @@ th .smallText{
 	padding-bottom:0 !important;
 	height:auto;
 }
-/* END customizations from within the admin section */
-.page-id-38313 .social-media .social-media-inner{
-	margin-top:0;
-}
-.page-id-38313 #primary{background-image:url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
-.page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
-.page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color: $elmsgreen}
 
+//page-id-38313 is /info and it has different styling than the rest of the site
+.page-id-38313 {
+	.social-media .social-media-inner {
+		margin-top: 0;
+	}
+	#primary {
+		background-image: url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);
+		max-height: 775px;
+		max-width: unset;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	:not(.mobile-or-library) .current-menu-ancestor {
+		background-color: unset !important;
+		&:hover {
+			background-color: $elmsgreen;
+		}
+	}
+}
 .left25 li{
 	margin-left:25px;
-}
-.wp-block-lazyblock-acf-curriculum-fields,.wp-block-lazyblock-quick-info,.wp-block-lazyblock-testimonial{
-	margin-top:15px;
 }
 .postid-45493 .section-heading{
 	background-image:unset !important;

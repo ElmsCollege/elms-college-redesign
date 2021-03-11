@@ -58,10 +58,11 @@
 	justify-content: center;
 	background-color: $elmsgold;
     @include square(100%);
-	h2 {
+	h2, h4 {
 		position: absolute;
 		color: white;
 		text-align: center;
+		font-size: 24px;
 	}
 }
 .featuredImage {
