@@ -23,7 +23,6 @@
 		background-position: 0% 50%;
 	}
 }
-
 .program {
 	background-color: transparent;
 	width: 300px;
@@ -58,10 +57,11 @@
 	justify-content: center;
 	background-color: $elmsgold;
     @include square(100%);
-	h2 {
+	h2, h4 {
 		position: absolute;
 		color: white;
 		text-align: center;
+		font-size: 24px;
 	}
 }
 .featuredImage {
@@ -144,66 +144,4 @@
 }
 @media (pointer: coarse) {
     @include mediaHoverStyles;
-}
-
-//Flip card take 2
-.flipcard-wrapper, .flipcard {
-    width: 300px;
-    height: 200px;
-    border-radius: 15px;
-}
-.flipcard-wrapper {
-    display: inline-block;
-    perspective: 1000px;
-    .flipcard {
-        position: relative;
-        cursor: pointer;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in-out;
-        transform-style: preserve-3d;
-        .front, .back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 300px;
-            height: 200px;
-            backface-visibility: hidden;
-            transform: rotateX(0deg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            text-align: center;
-            padding: 10px;
-        }
-        .front {
-            z-index: 2;
-            h2 {
-                z-index: 10;
-                color: #fff;
-            }
-        }
-        .back {
-            display: flex;
-            flex-flow: column nowrap;
-            transform: rotateX(-180deg);
-            background-color: $elmsgreen;
-            color: #fff;
-            h3 {
-                color: #fff;
-            }
-        }
-    }
-    &:hover {
-        .flipcard {
-            transform: rotateX(-180deg);
-        }
-    }
-    &:nth-child(odd) .back {
-        background-color: $elmsgold;
-        color: #000;
-        h3 {
-            color: #000;
-        }
-    }
 }

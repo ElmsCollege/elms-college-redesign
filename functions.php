@@ -69,7 +69,7 @@ function gs_elms_setup() {
 	) ) );
   */
 	add_theme_support('responsive-embeds');//allow responsive embedded files (like from YouTube)
-	//add_theme_support( 'align-wide' );//allow wide and full-width blocks
+//	add_theme_support( 'align-wide' );//allow wide and full-width blocks -> this still doesn't work quite right and should not be re-enabled until the styles are figured out
 	
 	remove_theme_support('widgets-block-editor');
 }
@@ -556,5 +556,32 @@ function addNullToArray($n) {
     else
         return($n);
 };
-// ACF Developer Mode
-define('ACFE_dev', true);
+
+//the array below will autocomplete in the advanced add class section of the edit screen
+function editorskit_add_custom_classnames( $classes ){
+	$theme_classes = array(
+		'noMargins',
+		'noMarginTop',
+		'noMarginRight',
+		'noMarginBottom',
+		'noMarginLeft',
+		'addShadow',
+		'has-text-align-center',
+		'has-small-font-size',
+		'has-large-font-size',
+	);
+	$classes = array_merge( $classes, $theme_classes );
+	return $classes;
+}
+
+add_filter( 'editorskit_block_editor_classnames', 'editorskit_add_custom_classnames', 10, 3 );
+
+/**
+ * Reusable Blocks accessible in backend
+ * @link https://www.billerickson.net/reusable-blocks-accessible-in-wordpress-admin-area
+ *
+ */
+function be_reusable_blocks_admin_menu() {
+    add_menu_page( 'Reusable Blocks', 'Reusable Blocks', 'edit_posts', 'edit.php?post_type=wp_block', '', 'dashicons-editor-table', 22 );
+}
+add_action( 'admin_menu', 'be_reusable_blocks_admin_menu' );

@@ -1,0 +1,44 @@
+/* BEGIN styles for the embedded directory listing with images and bios*/
+.embedDirectory-image {
+    padding-left: 0;
+    li {
+		@extend .flexRowWrapStart;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: $lightgreyborder;
+        &:last-child {
+            margin-bottom: unset;
+            padding-bottom: unset;
+            border-bottom: 0;
+        }
+        &:nth-child(odd) img {
+            order: 3;
+            margin-left: 15px;
+        }
+        &:nth-child(even) img {
+            order: 1;
+            margin-right: 15px;
+        }
+    }
+}
+@media only screen and (max-width: 1040px) {
+	.embedDirectory-image li img{
+		order:1 !important;
+		margin-top:10px !important;
+		margin-left:0 !important;
+	}
+}
+.listText{
+	order:2;
+	width:75%;
+}
+@media only screen and (max-width: 1040px) {
+	.listText{
+		width:100%;
+	}
+}
+.listText p{
+	font-size:14px;
+	padding-top:.25em;
+}
+/* END styles for the embedded directory listing with images and bios*/

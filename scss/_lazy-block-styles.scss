@@ -1,0 +1,39 @@
+//controls styles for the custom blocks created through Lazy Blocks
+
+//controls the ACF/LazyBlock curriculum block
+@import "curriculum-block";
+
+//controls the blocks with multiple columns of images with buttons
+@import "image-link-columns-blocks";
+
+//controls the carousel block
+@import "stories-carousel-block";
+
+//controls the banner image story block
+@import "banner-story-image-block";
+
+//controls the styling on the faculty block
+@import "faculty-block";
+
+//controls the two column block where the right side blends into the image
+@import "two-column-cutout-block";
+
+//the styles below belong to lazy blocks block that don't have a template here
+//this is done in js so the changes appear in the editor and doesn't have a block.php file
+.wp-block-lazyblock-elms-button {
+	margin: 0 auto;
+	display: table;
+	padding: 15px;
+	.elms-block-button {
+		margin: 0 auto;
+		padding: 15px;
+	}
+}
+.wp-block-lazyblock-acf-curriculum-fields, .wp-block-lazyblock-quick-info, .wp-block-lazyblock-testimonial {
+	margin-top: 15px;
+}
+.wp-block-lazyblock-testimonial {
+	h2, h4 {
+		font-size: 24px;
+	}
+}

@@ -27,9 +27,22 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	font-weight:400;
 	font-style:normal;
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     clear: both;
     font-weight: 700;
+	line-height: 1em;
+}
+h2 {
+	font-size: 56px;
+}
+@media all and (max-width: 47.999em){
+	h2 {
+		font-size: 2.5em;
+		line-height: 1
+	}
+}
+.page-template-default h2, .page-template-no-special-fields-blocks h2 {
+	font-size: 40px;
 }
 p{
     margin-bottom: 1.5em
@@ -73,15 +86,14 @@ big{
     flex-grow: 1;
     font-size: 18px;
     line-height: 28px;
+	max-width: 100%;
 }
 .site-main h2, .page-sidebar h2{
 	color: $elmsgold;
-	font-size: 24px;
 	margin-bottom: .66666667em
 }
 @media (max-width: 47.999em){
 	.site-main h2, .page-sidebar h2 {
-		font-size: 1.666666667em;
         line-height: 1;
         margin-top: 0;
 	}
@@ -129,14 +141,6 @@ blockquote,q{
 blockquote:before,blockquote:after,q:before,q:after{
 	content:""
 }
-/*
-hr{
-	background-color:#ccc;
-	border:0;
-	height:1px;
-	margin-bottom:1.5em
-}
-*/
 ul,ol{
 	margin:0 0 1.5em
 }
@@ -168,43 +172,34 @@ table{
 	margin:0 0 .5em;
 	width:100%
 }
-h2{
-	font-size:56px
-}
-@media all and (max-width: 47.999em){
-	h2{
-		font-size:2.5em;
-		line-height:1
-	}
-}
 .pre-title {
     @include scriptFont;
     margin: 0 auto;
 	text-align: center;
 	font-size: 36px;
+	&:before, &:after {
+		content: "";
+		width: 2em;
+		height: 1px;
+		display: inline-block;
+		line-height: 36px;
+		background-color: $elmsgold;
+		vertical-align: middle;
+	}
+	.site-main & {
+		color: $elmsgreen;
+		text-shadow: 1px 2px $elmsgold;
+	}
+	.social-media & {
+		color: #fff;
+		text-shadow: 2px 2px $elmsgold;
+	}
 }
 @media all and (max-width: 47.999em){
 	.pre-title{
 		font-size:1.3em;
 		line-height:1
 	}
-}
-.pre-title:before,.pre-title:after{
-	content:"";
-	width:2em;
-	height:1px;
-	display:inline-block;
-	line-height:36px;
-	background-color: $elmsgold;
-	vertical-align:middle
-}
-.site-main .pre-title {
-	color: $elmsgreen;
-	text-shadow: 1px 2px $elmsgold;
-}
-.social-media .pre-title {
-	color: #fff;
-	text-shadow: 2px 2px $elmsgold;
 }
 button:not[class^="pika-"],input[type="button"],input[type="reset"],input[type="submit"]{
 	border: $lightgreyborder;
@@ -265,16 +260,15 @@ a:hover, a:active {
 @keyframes colorchange{0%{background: $elmsgreen}50%{background:#335635}100%{background: $elmsgreen}}
 @-webkit-keyframes colorchange{0%{background: $elmsgreen}25%{background:#335635}100%{background: $elmsgreen}}@keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}@-webkit-keyframes colorchangealert{0%{background:red}50%{background:#ff6414}100%{background:red}}
 .section-heading {
+	@extend .flexColNowrap;
+	@extend .justifyCenter;
+	align-items: center;
 	position: relative;
 	background-color: $elmsgreen;
 	background-size: cover;
 	background-position: 50%;
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
     text-align: center;
-	flex-flow: column nowrap;
     h1 {
         line-height: 1.5em !important;
         padding: 10px 0 !important;
@@ -295,7 +289,7 @@ a:hover, a:active {
 	max-height: unset !important;
 	min-height: unset !important;
 }
-.section-heading h1, h2.field-student_stories_title, h2.field-social_media_title{
+.section-heading h1, h2.field-student_stories_title, h2.field-social_media_title, h2.addShadow {
 	text-shadow: 2px 2px 2px #000;
 }
 @media all and (max-width:505px){
@@ -369,9 +363,9 @@ a:hover, a:active {
         }
     }
 }
-.footer-item-inner{
-	padding:0 32px;
-	margin-bottom:32px
+.footer-item-inner {
+	padding: 0 32px;
+	margin-bottom: 32px
 }
 @media (min-width: 64em) {
 	.footer-item-inner {
@@ -541,7 +535,6 @@ a:hover, a:active {
 }
 .stories .story-feature .story-full .text-content .field-title{
     font-size: 32px;
-    margin: 0 0 .25em;
     color: #fff;
     text-transform: none
 }
@@ -630,16 +623,14 @@ a:hover, a:active {
 	color:transparent
 }
 .stories .story-feature-nav:after {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 800;
 	color: #fff;
 	display: block;
 	position: absolute;
     @include square(100%);
 	vertical-align: center;
 	text-align: center;
-	font-size: 32px;
-	top: 6px
+	top: 6px;
+	font: 800 32px "Font Awesome 5 Free";
 }
 .stories .story-feature-nav.nav-prev:after{
 	content:"\f060";
@@ -662,7 +653,6 @@ a:hover, a:active {
 	list-style-type: none;
 	display: none;
     .story-tab {
-        display: flex;
         flex-direction: column;
         @include transition($duration: .5s);
         background-color: $elmsgreen;
@@ -1076,6 +1066,7 @@ button.child-6{padding-left:90px;}
 		display: none
 	}
 }
+/* BEGIN MOVED TO _two-column-cutous-block */
 .short-content {
 	position: relative;
 	max-width: 1200px;
@@ -1113,6 +1104,7 @@ button.child-6{padding-left:90px;}
         }
 	}
 }
+/* END MOVED TO _two-column-cutous-block */
 .section-mission_statement{
 	margin:25px 32px
 }
@@ -1127,7 +1119,6 @@ button.child-6{padding-left:90px;}
 }
 .section-mission_statement .field-mission_statement{
 	color: $elmsgreen;
-	font-size:56px;
 	margin:0 auto 32px;
 	line-height:1em;
 }
@@ -1461,39 +1452,11 @@ button.child-6{padding-left:90px;}
 		padding:0;
 	}
 }
-.green-arrow-border-top:after{
-	content:"";
-	border-top:none;
-	border-right:30px solid transparent;
-	border-left:30px solid transparent;
-	border-bottom:40px solid $elmsgreen;
-	position:absolute;
-	right:calc(50% - 30px);
-	top:-40px;
-}
-.wp-block-lazyblock-banner-story-image{
-	padding:0;
-	width:100%;
-	position:relative;
-}
-.wp-block-lazyblock-banner-story-image .banner-story-image{
-	display:block;
-}
-.wp-block-lazyblock-banner-story-image .inner-padding{
-	position:relative;
-}
-.wp-block-lazyblock-banner-story-image h2{
-	font-size:28px;
-}
-.wp-block-lazyblock-banner-story-image .inner-padding ul{
-	padding-left: 20px;
-}
-.wp-block-lazyblock-banner-story-image a.permalink{
-	padding:10px 0;
-	display:inline-block;
-}
-.wp-block-lazyblock-banner-story-image a img{
-	vertical-align:bottom;
+.green-arrow-border-top:after {
+	@include border-arrow(top, $elmsgreen, 30px);
+	position: absolute;
+	right: calc(50% - 30px);
+	top: -40px;
 }
 .admin-bar #masthead{
 	margin-top:32px;
@@ -1797,92 +1760,47 @@ div.collapseomatic_content{
 	min-width:60px;
 	font-weight:700;
 }
-.flexRowWrapStart{
+//the .flexXXXX styles get extended in other places and should not be changed
+.flexRowWrapStart {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
 }
-.flexRowNowrapStart{
-	display:flex;
-	flex-flow:row nowrap;
-	align-items:flex-start;
+.flexRowNowrapStart {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
 }
-.flexRowNowrapCenter{
+.flexRowNowrapCenter {
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 }
-.flexColNowrap{
-	display:flex;
-	flex-flow:column nowrap;
+.flexColNowrap {
+	display: flex;
+	flex-flow: column nowrap;
 }
-.spaceBetween{
-	justify-content:space-between;
+.spaceBetween {
+	justify-content: space-between;
 }
-.spaceEvenly{
-	justify-content:space-evenly;
+.spaceEvenly {
+	justify-content: space-evenly;
 }
-.spaceAround{
-	justify-content:space-around;
+.spaceAround {
+	justify-content: space-around;
 }
-.justifyCenter{
-	justify-content:center;
+.justifyCenter {
+	justify-content: center;
 }
-.justifyEnd{
-	justify-content:end;
+.justifyEnd {
+	justify-content: end;
 }
-.flex-column{
-	min-width:300px;
-	max-width:48%;
-	margin-bottom:15px;
+.flex-column {
+	min-width: 300px;
+	max-width: 48%;
+	margin-bottom: 15px;
 }
 
-/* BEGIN styles for the embedded directory listing with images and bios*/
-.embedDirectory-image {
-    padding-left: 0;
-    li {
-        margin-bottom:15px;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        padding-bottom: 15px;
-        border-bottom: $lightgreyborder;
-        &:last-child {
-            margin-bottom: unset;
-            padding-bottom: unset;
-            border-bottom: 0;
-        }
-        &:nth-child(odd) img {
-            order: 3;
-            margin-left: 15px;
-        }
-        &:nth-child(even) img {
-            order: 1;
-            margin-right: 15px;
-        }
-    }
-}
-@media only screen and (max-width: 1040px) {
-	.embedDirectory-image li img{
-		order:1 !important;
-		margin-top:10px !important;
-		margin-left:0 !important;
-	}
-}
-.listText{
-	order:2;
-	width:75%;
-}
-@media only screen and (max-width: 1040px) {
-	.listText{
-		width:100%;
-	}
-}
-.listText p{
-	font-size:14px;
-	padding-top:.25em;
-}
-/* END styles for the embedded directory listing with images and bios*/
 /* BEGIN generic, universal, reusable styles */
 .small,figcaption{font-size:.8em;}
 .small label{display:block;}
@@ -1904,8 +1822,8 @@ th .smallText{
 .noMargins{
 	margin:0!important;
 }
-.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content :first-child,.noMarginTop h4.c-accordion__title{
-	margin-top:0;
+.noMarginTop,.wp-block-image,.lower-story.block .wp-block-image figure,.wp-block-pb-accordion-item.noMarginTop h3,.field-content>:first-child,.noMarginTop h4.c-accordion__title{
+	margin-top: 0;
 }
 .noMarginBottom,.wp-block-image{
 	margin-bottom:0 !important;
@@ -1969,7 +1887,6 @@ th .smallText{
 	border-bottom: $lightgreyborder;
 	margin-bottom: 25px;
 }
-.wp-block-lazyblock-stories-carousel{margin-bottom:25px;}
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     max-width:100px;
 }
@@ -1987,46 +1904,65 @@ th .smallText{
         display: inline-block;//needed because Firefox doesn't support break-inside: avoid-column
     }
 }
+.alignfull {
+	width: 100vw;
+	margin: 2rem calc(50% - 50vw);
+}
+/* align wide is used on /academics ad these styles don't quite work with that template
+.alignwide {
+	width: 100vw;
+	margin: 2rem calc(50% - 50vw);
+}
+@media (min-width: 960px) {
+	.alignwide {
+		width: calc(100% + 20vw);
+		margin: 2rem -10vw;
+	}
+}
+*/
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
-#tabs,#tabs2,#tabs3,#tabs4{
-	border:unset;
-	padding-top:0;
-}
-#tabs .ui-tabs-nav,#tabs2 .ui-tabs-nav,#tabs3 .ui-tabs-nav,#tabs4 .ui-tabs-nav{
-	padding:unset
-}
-#tabs .ui-state-active a,#tabs .ui-state-active a:link,#tabs .ui-state-active a:visited,#tabs2 .ui-state-active a,#tabs2 .ui-state-active a:link,#tabs2 .ui-state-active a:visited,#tabs3 .ui-state-active a,#tabs3 .ui-state-active a:link,#tabs3 .ui-state-active a:visited,#tabs4 .ui-state-active a,#tabs4 .ui-state-active a:link,#tabs4 .ui-state-active a:visited{
-	color:#000;
-}
-#tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs2 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs3 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor,#tabs4 .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,#tabs4 .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,#tabs4 .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{
-	padding:.5em 1em;
-}
-#tabs .ui-state-active,#tabs .ui-widget-content .ui-state-active,#tabs .ui-widget-header .ui-state-active,#tabs a.ui-button:active,#tabs .ui-button:active,#tabs .ui-button.ui-state-active:hover,#tabs2 .ui-state-active,#tabs2 .ui-widget-content .ui-state-active,#tabs2 .ui-widget-header .ui-state-active,#tabs2 a.ui-button:active,#tabs2 .ui-button:active,#tabs2 .ui-button.ui-state-active:hover,#tabs3 .ui-state-active,#tabs3 .ui-widget-content .ui-state-active,#tabs3 .ui-widget-header .ui-state-active,#tabs3 a.ui-button:active,#tabs3 .ui-button:active,#tabs3 .ui-button.ui-state-active:hover,#tabs4 .ui-state-active,#tabs4 .ui-widget-content .ui-state-active,#tabs4 .ui-widget-header .ui-state-active,#tabs4 a.ui-button:active,#tabs4 .ui-button:active,#tabs4 .ui-button.ui-state-active:hover{
-	border: $lightgreyborder;
-	background:#fff;
-	color:#000;
-}
-#tabs .ui-tabs-nav .ui-tabs-anchor,#tabs2 .ui-tabs-nav .ui-tabs-anchor,#tabs3 .ui-tabs-nav .ui-tabs-anchor,#tabs4 .ui-tabs-nav .ui-tabs-anchor{
-	padding:.3em .8em;
-}
-#tabs .ui-tabs-nav li,#tabs2 .ui-tabs-nav li,#tabs3 .ui-tabs-nav li,#tabs4 .ui-tabs-nav li{
-	top:8px;
-	margin:1px .2em -1px 0;
-}
-#tabs .ui-tabs-nav li.ui-tabs-active,#tabs2 .ui-tabs-nav li.ui-tabs-active,#tabs3 .ui-tabs-nav li.ui-tabs-active,#tabs4 .ui-tabs-nav li.ui-tabs-active{
-	top:0;
-	border-bottom: $whiteborder;
-}
-#tabs .ui-widget.ui-widget-content,#tabs2 .ui-widget.ui-widget-content,#tabs3 .ui-widget.ui-widget-content,#tabs4 .ui-widget.ui-widget-content{
-	border:unset;
-}
-#tabs .ui-widget-header,#tabs2 .ui-widget-header,#tabs3 .ui-widget-header,#tabs4 .ui-widget-header{
-	border:unset;
-	background:unset;
-}
-#tabs .ui-tabs-panel,#tabs2 .ui-tabs-panel,#tabs3 .ui-tabs-panel,#tabs4 .ui-tabs-panel{
-	border: $lightgreyborder;
+#tabs, #tabs2, #tabs3, #tabs4 {
+	border: unset;
+	padding-top: 0;
+	.ui-tabs-nav {
+		padding: unset
+	}
+	.ui-state-active a {
+		color: #000;
+		&:link, &:visited {
+			color: #000;		
+		}
+	}
+	.ui-tabs-nav li {
+		top: 8px;
+		margin: 1px .2em -1px 0;
+		&.ui-tabs-active .ui-tabs-anchor, &.ui-state-disabled .ui-tabs-anchor, &.ui-tabs-loading .ui-tabs-anchor {
+			padding: .5em 1em;
+		}
+		&.ui-tabs-active {
+			top: 0;
+			border-bottom: $whiteborder;		
+		}
+	}
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
+		border: $lightgreyborder;
+		background: #fff;
+		color: #000;
+	}
+	.ui-tabs-nav .ui-tabs-anchor {
+		padding: .3em .8em;
+	}
+	.ui-widget.ui-widget-content {
+		border: unset;
+	}
+	.ui-widget-header {
+		border: unset;
+		background: unset;
+	}
+	.ui-tabs-panel {
+		border: $lightgreyborder;
+	}
 }
 /* END style overrides for jQuery UI tabs */
 .pika-table{
@@ -2045,20 +1981,23 @@ th .smallText{
 .ui-dialog-titlebar-close{
 	float:right;
 }
-.wp-block-pullquote{
-	background-color:#f2f2f2 !important;//!important is needed here to override a default WordPress style
-	padding:1em 0;
-	font-weight:700;
+.wp-block-pullquote {
+	background-color: #f2f2f2 !important;//!important is needed here to override a default WordPress style
+	padding: 1em 0;
+	font-weight: 700;
 	color: $elmsgreen;
 	border-left: $thickgreenborder;
+	p {
+		margin-bottom: .5em;
+	}
+	cite {
+		font-weight: 300
+	}
 }
-.wp-block-pullquote p{
-	margin-bottom:.5em;
+.wp-block-group__inner-container > .fas {
+	width: 100%;
+	text-align: center;
 }
-.wp-block-pullquote cite{
-	font-weight:300
-}
-/* BEGIN customizations from within the admin section */
 .nav-trigger, .pointer, .menu-item a {
     @extend %pointer;
 }
@@ -2067,19 +2006,28 @@ th .smallText{
 	padding-bottom:0 !important;
 	height:auto;
 }
-/* END customizations from within the admin section */
-.page-id-38313 .social-media .social-media-inner{
-	margin-top:0;
-}
-.page-id-38313 #primary{background-image:url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);max-height:775px;max-width:unset;background-repeat:no-repeat;background-size:cover;}
-.page-id-38313 :not(.mobile-or-library) .current-menu-ancestor{background-color:unset !important}
-.page-id-38313 :not(.mobile-or-library) .current-menu-ancestor:hover{background-color: $elmsgreen}
 
+//page-id-38313 is /info and it has different styling than the rest of the site
+.page-id-38313 {
+	.social-media .social-media-inner {
+		margin-top: 0;
+	}
+	#primary {
+		background-image: url(https://www.elms.edu/wp-content/uploads/2018/06/berchmans-spring-18.jpg);
+		max-height: 775px;
+		max-width: unset;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	:not(.mobile-or-library) .current-menu-ancestor {
+		background-color: unset !important;
+		&:hover {
+			background-color: $elmsgreen;
+		}
+	}
+}
 .left25 li{
 	margin-left:25px;
-}
-.wp-block-lazyblock-acf-curriculum-fields,.wp-block-lazyblock-quick-info,.wp-block-lazyblock-testimonial{
-	margin-top:15px;
 }
 .postid-45493 .section-heading{
 	background-image:unset !important;
@@ -2096,4 +2044,4 @@ th .smallText{
 /* ancillary stylesheets */
 @import "header";
 @import "mec-calendar";
-@import "curriculum-block";
+@import "lazy-block-styles";
