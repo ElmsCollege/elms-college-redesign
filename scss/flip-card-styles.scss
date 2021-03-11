@@ -23,7 +23,7 @@
 		background-position: 0% 50%;
 	}
 }
-
+//this should not be in use anymore, probably can remove the entire .program nest
 .program {
 	background-color: transparent;
 	width: 300px;
@@ -181,7 +181,8 @@
             z-index: 2;
             h2 {
                 z-index: 10;
-                color: #fff;
+				color: #fff;
+				font-size: 24px;
             }
         }
         .back {
