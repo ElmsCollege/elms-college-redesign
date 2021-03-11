@@ -1906,6 +1906,7 @@ th .smallText{
 	width: 100vw;
 	margin: 2rem calc(50% - 50vw);
 }
+/* align wide is used on /academics ad these styles don't quite work with that template
 .alignwide {
 	width: 100vw;
 	margin: 2rem calc(50% - 50vw);
@@ -1916,6 +1917,7 @@ th .smallText{
 		margin: 2rem -10vw;
 	}
 }
+*/
 /* END generic, universal, reusable styles */
 /* BEGIN style overrides for jQuery UI tabs */
 #tabs,#tabs2,#tabs3,#tabs4{
