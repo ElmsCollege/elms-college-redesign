@@ -32,6 +32,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 	line-height: 1em;
 }
+h2 {
+	font-size:56 px
+}
+@media all and (max-width: 47.999em){
+	h2 {
+		font-size: 2.5em;
+		line-height: 1
+	}
+}
+.page-template-default h2, .page-template-no-special-fields-blocks h2 {
+	font-size: 40px;
+}
 p{
     margin-bottom: 1.5em
 }
@@ -159,15 +171,6 @@ figure{
 table{
 	margin:0 0 .5em;
 	width:100%
-}
-h2{
-	font-size:56px
-}
-@media all and (max-width: 47.999em){
-	h2{
-		font-size:2.5em;
-		line-height:1
-	}
 }
 .pre-title {
     @include scriptFont;
@@ -532,7 +535,6 @@ a:hover, a:active {
 }
 .stories .story-feature .story-full .text-content .field-title{
     font-size: 32px;
-    margin: 0 0 .25em;
     color: #fff;
     text-transform: none
 }
