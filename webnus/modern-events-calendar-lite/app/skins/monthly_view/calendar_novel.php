@@ -85,7 +85,7 @@ elseif($week_start == 5) // Friday
                     // MEC Schema
                     do_action('mec_schema', $event);
 
-                    echo '<a class="'.((isset($event->data->meta['event_past']) and trim($event->data->meta['event_past'])) ? 'mec-past-event ' : '').'event-single-link-novel" data-event-id="'.$event->data->ID.'" href="'.$this->main->get_event_date_permalink($event, $event->date['start']['date']).'" '.$target_url.' title="'.$event->data->title.' in '.$this->get_event_classes($event).' '.$name.'">';
+                    echo '<a class="'.((isset($event->data->meta['event_past']) and trim($event->data->meta['event_past'])) ? 'mec-past-event ' : '').'event-single-link-novel" data-event-id="'.$event->data->ID.'" href="'.$this->main->get_event_date_permalink($event, $event->date['start']['date']).'" '.$target_url.' title="'.$event->data->title.' in '.$event->data->category['name'}.'">';
                     //need to replace style="background" $event_color with a class based on category
                     //echo '<div style="background:'.$event_color.'" class="mec-single-event-novel mec-event-article '.$this->get_event_classes($event).'">';
                     $wpseo_primary_term = new WPSEO_Primary_Term( 'mec_category', $event->data->ID );
