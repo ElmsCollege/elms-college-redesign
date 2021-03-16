@@ -24,6 +24,11 @@ $stcc:  #caad68;
 }
 
 /* MEC calendar specific styles */
+@media only screen and (min-width:1200px) {
+	.mec-container {
+		width: 1500px;
+	}
+}
 .event-color {
     @extend %hide;
 }
