@@ -20,7 +20,7 @@ get_template_part("template-parts/header-selector");
         
       ?>
 	<?php $bgImage = wp_get_attachment_image_src( get_field('header_background_image'), "full"); ?>
-	<div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php $bgImage[0] ?>')">
+	<div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php echo $bgImage[0] ?>')">
         <?php if (get_the_post_thumbnail_url()): ?>
           <?php the_post_thumbnail() ?>
         <?php endif;?>
