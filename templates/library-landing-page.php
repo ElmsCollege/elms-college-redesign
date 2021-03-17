@@ -19,7 +19,9 @@ get_template_part("template-parts/header-selector");
         $hours_link = get_field("hours_link");
         
       ?>
-      
+      <?php
+echo get_field('header_background_image');
+		?>
       <div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php wp_get_attachment_image_src( get_field('header_background_image'), "full") ?>')">
         <?php if (get_the_post_thumbnail_url()): ?>
           <?php the_post_thumbnail() ?>
