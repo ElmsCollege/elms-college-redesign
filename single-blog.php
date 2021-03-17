@@ -6,22 +6,23 @@
  *
  * Created in March 2019 by Ryan Millner
  */
+$has_sidebar = gs_is_active_sidebar();
+if ( is_active_sidebar( 'sidebar-1' ) ) {
+  $has_sidebar = 1;
+}
 
 get_header(); ?>
-<style>
-.parent-sidebar-menu{
-	display:none;
-}
-.single-blog #secondary .parent-sidebar-menu{
-	display:block;
-}
-</style>
-  <div class="section-heading" style=" <?php print_featured_image_style(get_the_ID()) ?>">
+
+<div class="section-heading">
       <h1 class="field-title">
 	President's Blog
       </h1>
   </div>
 	<div id="primary" class="content-area">
+		<?php if ($has_sidebar) : ?>
+			<?php get_sidebar(); ?>
+		<?php endif; ?>
+
 		<main id="main" class="site-main pure-u-1 pure-u-md-7-12 pure-u-lg-2-3" role="main">
 
 			<?php
@@ -40,11 +41,7 @@ President of Elms College<br />
 <span class="smallText"><?php $post_date = get_the_date( 'l, F j, Y' ); echo $post_date; ?></span></p>
 
 
-		</main><!-- #main -->
-	<?php if ( is_dynamic_sidebar() ) : ?>
-        <?php get_sidebar(); ?>
-    <?php endif; ?>
-    
+		</main><!-- #main -->    
 	</div><!-- #primary -->
 
 <?php
