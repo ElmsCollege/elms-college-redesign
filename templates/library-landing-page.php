@@ -20,8 +20,7 @@ get_template_part("template-parts/header-selector");
         
       ?>
       
-      
-      <div class="section-heading-as-content noMarginBottom" style=" <?php print_featured_image_style(get_the_ID()) ?>">
+      <div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php wp_get_attachment_image_src( get_field('header_background_image'), "full") ?>')">
         <?php if (get_the_post_thumbnail_url()): ?>
           <?php the_post_thumbnail() ?>
         <?php endif;?>
