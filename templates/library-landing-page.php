@@ -19,17 +19,8 @@ get_template_part("template-parts/header-selector");
         $hours_link = get_field("hours_link");
         
       ?>
-      <?php
-echo get_field('header_background_image');
-echo '<br>';
-print_r( wp_get_attachment_image_src( get_field('header_background_image'),'full') );
-echo '<br>';
-echo wp_get_attachment_image_src( get_field('header_background_image')[0]);
-		?>
-	<?php 
-		$bgImage = wp_get_attachment_image_src( get_field('header_background_image'),'full');
-	?>
-      <div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php wp_get_attachment_image_src( get_field('header_background_image'), "full") ?>')">
+
+	<div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php wp_get_attachment_image_src( get_field('header_background_image'), "full")[0] ?>')">
         <?php if (get_the_post_thumbnail_url()): ?>
           <?php the_post_thumbnail() ?>
         <?php endif;?>
