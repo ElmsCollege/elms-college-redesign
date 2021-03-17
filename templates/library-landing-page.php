@@ -22,7 +22,9 @@ get_template_part("template-parts/header-selector");
       <?php
 echo get_field('header_background_image');
 echo '<br>';
-echo wp_get_attachment_image_src( get_field('header_background_image'));
+print_r( wp_get_attachment_image_src( get_field('header_background_image')) );
+echo '<br>';
+echo wp_get_attachment_image_src( get_field('header_background_image')[1]);
 		?>
       <div class="section-heading-as-content noMarginBottom" style="background-image: url('<?php wp_get_attachment_image_src( get_field('header_background_image'), "full") ?>')">
         <?php if (get_the_post_thumbnail_url()): ?>
